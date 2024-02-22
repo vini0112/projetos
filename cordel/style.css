@@ -2,15 +2,17 @@
 
 body{
     margin: 0px;
+    
 }
 header{
+   
     height: 250px;
     padding-top: 1px;
     background-color: black;
 }
 header > h1{
     color: white;
-    padding-top: 40px;
+    padding-top: 15px;
     text-align: center;
     font-size: 4em;
 }
@@ -31,22 +33,24 @@ header > p > a{
 a:hover{
     text-decoration: underline;
 }
-#container{
-    padding-left: 30px;
-    padding-top: 50px;
-    
-}
-#conteudo{
 
-    padding: 5px;
-    max-width: 450px;
-    max-height: 300px;
-    font-size: 3.5em;
-    
+article{
+    padding-left: 30px;
 }
-.conteudo > p{
+
+section{
+    max-width: 550px; 
+    width: 100%;
+    
+
+
+}
+section > p{ 
+    font-size: 3.5em;
     text-align: justify;
-    
-    
-    
+}
+
+.sombra{
+   background-color: rgba(224, 220, 220, 0.671);
+   padding: 10px;
 }
