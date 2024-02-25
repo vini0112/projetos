@@ -1,7 +1,16 @@
+@import url('https://fonts.googleapis.com/css2?family=Sriracha&display=swap');
 
+ :root{
+    --font1: Verdana, Geneva, Tahoma, sans-serif;
+    --font2: "Sriracha", cursive;
+       
+
+}
 
 body{
     margin: 0px;
+    min-height: 100vh;
+    background-color: darkgray;
     
 }
 header{
@@ -12,9 +21,10 @@ header{
 }
 header > h1{
     color: white;
-    padding-top: 15px;
+    padding-top: 50px;
     text-align: center;
-    font-size: 4em;
+    text-transform: uppercase;
+    font-size: 3em;
 }
 header > p{
     text-align: center;
@@ -33,24 +43,44 @@ header > p > a{
 a:hover{
     text-decoration: underline;
 }
-
-article{
-    padding-left: 30px;
-}
-
 section{
-    max-width: 550px; 
-    width: 100%;
-    
+    padding-top: 10vh;
+    padding-bottom: 10vh;
+    line-height: 2em;
+    letter-spacing: 2px;
+    padding-left: 30px;
+    font-family: var(--font2);
+    font-size: 3vw;
+
+}
+.normal{
+    background-color: white;
 
 
 }
-section > p{ 
-    font-size: 3.5em;
-    text-align: justify;
+.imagem{
+    background-color: cyan;
+    color: white;
+}
+.imagem > p{
+    display: inline-block;
+    padding: 5px;
+    background-color: rgba(0, 0, 0, 0.637);
+}
+#joaninha{
+    background-image: url('imagens/background001.jpg');
+    background-position: center center;
+}
+#folha{
+    background-image: url('imagens/background002.jpg');
+    background-position: center center;
 }
 
-.sombra{
-   background-color: rgba(224, 220, 220, 0.671);
-   padding: 10px;
+footer{
+    background-color: black;
+    color: white;
+    text-align: center;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    font-size: 2em;
 }
