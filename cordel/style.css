@@ -51,36 +51,42 @@ section{
     padding-left: 30px;
     font-family: var(--font2);
     font-size: 3vw;
-
 }
+
 .normal{
     background-color: white;
 
 
 }
 .imagem{
-    background-color: cyan;
     color: white;
+    box-shadow: inset 6px 6px 13px 0px rgba(0, 0, 0, 0.582);
+    background-size: cover;
+    background-attachment: fixed;
+    
 }
 .imagem > p{
     display: inline-block;
     padding: 5px;
-    background-color: rgba(0, 0, 0, 0.637);
+    background-color: rgba(0, 0, 0, 0.301);
+    text-shadow: 2px 2px 1px black;
 }
 #joaninha{
     background-image: url('imagens/background001.jpg');
     background-position: center center;
+    
 }
 #folha{
     background-image: url('imagens/background002.jpg');
     background-position: center center;
+    
 }
 
 footer{
     background-color: black;
     color: white;
     text-align: center;
-    padding-top: 10px;
-    padding-bottom: 10px;
+    padding-top: 5px;
+    padding-bottom: 5px;
     font-size: 2em;
 }
