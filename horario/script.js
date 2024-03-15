@@ -10,7 +10,6 @@ function carregar(){
 
     texto.innerHTML = `A hora é ${hora}:${minutos}`
     
-    var hora = 19
     if(hora > 3 && hora < 12){
         texto.innerHTML = `Bom dia! São ${hora}:${minutos}`
         photo.src='images/manha.jpg'
@@ -27,7 +26,7 @@ function carregar(){
         document.body.style.backgroundColor='#BF772F'
 
     } else if(hora >= 18 && hora <= 23){
-        texto.innerHTML = `Boa noite! São ${hora}:${minutos}.`
+        texto.innerHTML = `Boa noite! São ${hora}:${minutos}`
         photo.src='images/noite.jpg'
         document.body.style.backgroundColor='#2B343B'
 

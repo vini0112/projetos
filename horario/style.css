@@ -16,12 +16,15 @@ section#comeco{
 }
 section > h1{
     text-align: center;
+    font-size: 2.5em;
+    text-decoration: underline;
 
 }
 div#texto{
     text-align: center;
     padding: 10px;
     padding-bottom: 30px;
+    font-size: 1.5em;
 }
 img#photo{
     display: block;
