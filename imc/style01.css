@@ -1,0 +1,83 @@
+body{
+    background-color: black;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+header{
+    text-align: center;
+    font-weight: bolder;
+    color: white;
+
+}
+section{
+    max-width: 600px;
+    background-color: rgba(255, 255, 255, 0.068);
+    margin: auto;
+    padding: 10px;
+    text-align: center;
+    border-radius: 20px;
+}
+section, div, h1{
+    color: white;
+}
+.sex{
+    font-size: 1.3em;
+}
+.subt{
+    font-size: 1.3em;
+    font-weight: bold;
+    
+}
+#pesoid{
+    max-width: 250px;
+    padding: 20px;
+    margin-top: 5px;
+    border-radius: 10px;
+    width: 100%;
+    font-size: 1em;
+    font-weight: bold;
+    text-align: center;
+
+}
+#alturaid{
+    max-width: 250px;
+    width: 100%;
+    padding: 20px;
+    margin-top: 5px;
+    border-radius: 10px;
+    font-size: 1em;
+    font-weight: bold;
+    text-align: center;
+}
+.botao{
+    max-width: 250px;
+    width: 100%;
+    padding: 15px;
+    margin-top: 10px;
+    border-radius: 10px;
+    font-weight: bold;
+    font-size: 1em;
+    background-color: green;
+    color: white;
+}
+.botao:hover{
+    background-color: rgb(3, 94, 3);
+    color: white;
+}
+
+#res{
+    margin: auto;
+    max-width: 300px;
+    width: 100%;
+    color: darkgreen;
+    border-radius: 10px;
+    font-size: 1.4em;
+    font-weight: 600;
+}
+.hidden{
+    display: none;
+}
+
+.verd{
+    color: green;
+}

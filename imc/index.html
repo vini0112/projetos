@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+    <link rel="stylesheet" href="style01.css">
+</head>
+<body>
+    <header><h1 class="verd">Indise de Massa Muscular (IMC)</h1></header>
+    <section>
+        <div>
+            <h1 class="verd">Calculadora - IMC</h1>
+            <p class="sex">Sexo: 
+                <input type="radio" name="tsexo" id="mascid" checked>
+                <label for="mascid">Masculino</label>
+
+                <input type="radio" name="tsexo" id="femid">
+                <label for="femid">Feminino</label>
+
+            </p>
+            
+            <p>
+                <span class="subt">Peso em Kg</span> <br>
+                <input type="number" name="num" id="pesoid" placeholder="Ex: 50">
+            </p>
+            <p>
+                <span class="subt">Altura em Metro</span> <br>
+                <input type="number" name="num" id="alturaid" placeholder="Ex: 1.50">
+            </p>
+            
+            <p><input type="button" value="Calcular" onclick="calcular()" class="botao"></p>
+        </div>
+
+        <div>
+            <p id="res" class="hidden"></p>
+            <p><input type="button" value="Limpar" onclick="limpar()" class="botao"></p>
+        </div>
+
+    </section>
+
+
+    <script src="ex01.js"></script>
+    
+</body>
+</html>
