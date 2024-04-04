@@ -10,7 +10,7 @@ let res = document.querySelector('#res')
 
 function calcular(){
     res.innerHTML = ''
-    if(sexom.checked && ispeso(peso.value) && isaltura(altura.value)){
+    if(ispeso(peso.value) && isaltura(altura.value)){
         let imc = peso.value / (altura.value * 2)
         
         document.getElementById('res').classList.remove('hidden');
@@ -31,26 +31,6 @@ function calcular(){
             res.innerHTML += `<p>Você está no grau crítico de obesidade! </p>`
         }
     }
-    else if(sexof.checked && ispeso(peso.value) && isaltura(altura.value)){
-
-        let imc = peso.value / (altura.value * 2)
-        if(imc < 19){
-            res.innerHTML = `<p>Seu IMC é ${imc.toFixed(2)} <br></p>`
-            res.innerHTML += `<p>Você está abaixo do peso!</p>`
-        }else if(imc >= 19 && imc < 24){
-            res.innerHTML = `<p>Seu IMC é ${imc.toFixed(2)} <br></p>`
-            res.innerHTML += `<p>Você está com o peso normal!</p>`
-        }else if(imc >= 24 && imc < 29){
-            res.innerHTML = `<p>Seu IMC é ${imc.toFixed(2)} <br></p>`
-            res.innerHTML += `<p>Você está com começo de obesidade!</p>`
-        }else if(imc >= 29 && imc < 39){
-            res.innerHTML = `<p>Seu IMC é ${imc.toFixed(2)} <br></p>`
-            res.innerHTML += `<p>Você está no segundo nível de obesidade!</p>`
-        }else if(imc >= 39){
-            res.innerHTML = `<p>Seu IMC é ${imc.toFixed(2)} <br></p>`
-            res.innerHTML += `<p>Você está no grau crítico de obesidade!</p>`
-        }
-    }   
 }
 
 function ispeso(p){
