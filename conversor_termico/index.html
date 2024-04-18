@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <main class="container">
+        <section class="conteudo">
+            <div class="box">
+                <h1 class="title">Conversor Termico</h1>
+            </div>
+
+            <div class="box">
+                <button onclick="limpar()" class="btn">Zerar</button>
+
+                <button class="btn" onclick="definir()">Definir °C</button>
+            </div>
+
+            <div class="form">
+                <div class="inside_form">
+                    <span>Celsius</span>
+                    <input type="number" name="cnum" id="cnum" disabled value="0" onblur="validarnumero(this.value)"> °C
+                </div>
+                <div class="inside_form">
+                    <span>-273.00</span>
+                    <input type="range" name="crange" id="crange" min="-273" max="100" step="1" onchange="atuac(); atuaf(); atuak()">
+                    <span>100.00</span>
+                </div>
+            </div>
+
+            <div class="form">
+                <div class="inside_form">
+                    <span>Fahrenheit</span>
+                    <input type="number" name="fnum" id="fnum" value="32" disabled> °F
+                </div>
+                <div class="inside_form">
+                    <span>-459.40</span>
+                    <input type="range" name="frange" id="frange" min="-459.40" max="212" step="1">
+                    <span>212.00</span>
+                </div>
+            </div>
+
+            <div class="form">
+                <div class="inside_form">
+                    <span>Kelvin</span>
+                    <input type="number" name="knum" id="knum" value="273" disabled> °K
+                </div>
+                <div class="inside_form">
+                    <span>0.00</span>
+                    <input type="range" name="krange" id="krange" min="0" max="373" step="1">
+                    <span>373.00</span>
+                </div>
+
+            </div>
+
+            <div class="box">
+                <button class="convert" onclick="calcular()">Converter</button>
+            </div>
+            
+        </section>
+    </main>
+    <script src="script.js"></script>
+    
+</body>
+</html>

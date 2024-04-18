@@ -1,0 +1,92 @@
+*{
+    padding: 0%;
+    margin: 0%;
+}
+body{
+    background-image: url('photo/watch.jpg');
+    background-position: center center;
+    background-repeat: no-repeat;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.container{
+    max-width: 600px;
+    margin: auto;
+    margin-top: 20px;
+    padding: 20px; 
+}
+.conteudo{
+    display: flex;
+    flex-direction: column;
+    align-items: center; 
+    background-color: rgba(222, 184, 135, 0.678);
+    padding: 10px;
+    border-radius: 20px;
+}
+.form{
+    border: 1px solid black;
+    margin: 10px;
+    font-size: 1.1rem;
+}
+.box{
+    margin: 10px;
+}
+.title{
+    color: cornsilk;
+    font-size: 2rem;
+}
+.btn{
+    padding: 5px;
+    border-radius: 5px;
+    font-size: 1rem;
+    font-weight: bold;
+    background-color: burlywood;
+    color: cornsilk;
+    border: 3px solid #a5975e;
+
+}
+.inside_form{
+    font-size: 1.2rem;
+    background-color: cornsilk;
+    padding: 10px;
+    text-align: center;
+}
+#cnum{
+    padding: 5px;
+    width: 100px;
+    text-align: right;
+    font-size: 1rem;
+    font-weight: bold;
+    color: black;
+    cursor: not-allowed;
+    
+}
+#fnum{
+    padding: 5px;
+    width: 100px;
+    text-align: right;
+    font-size: 1rem;
+    font-weight: bold;
+    color: black;
+    cursor: not-allowed;
+}
+#knum{
+    padding: 5px;
+    width: 100px;
+    text-align: right;
+    font-size: 1rem;
+    font-weight: bold;
+    color: black;
+    cursor: not-allowed;
+}
+
+.convert{
+    padding: 5px;
+    border-radius: 5px;
+    font-size: 1rem;
+    font-weight: bold;
+    background-color: burlywood;
+    color: cornsilk;
+    border: 3px solid #a5975e;
+    display: none;
+}
