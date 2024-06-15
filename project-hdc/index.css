@@ -186,3 +186,19 @@ div.container-fluid{
     margin-top: 20px;
 
 }
+
+/* parte do integrantes da empresa */
+#lista-inte{
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+#card-inte{
+    padding: 0%;
+}
+#img-inte{
+    width: 100%;
+}
+.card-body{
+    text-align: center;
+}
