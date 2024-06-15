@@ -1,0 +1,188 @@
+*{
+    padding: 0%;
+    margin: 0%;
+    box-sizing: border-box;
+}
+@font-face {
+    font-family: 'roboto-light';
+    src: url('font/Roboto-Light.ttf');
+}
+
+body{
+    font-family: 'roboto-light', sans-serif;
+}
+/* class row do bootstrap */
+.row{
+    margin: 0;
+}
+
+.container{
+    padding: 70px 0;
+}
+
+/* paragrafos e li */
+p, li{
+    color: #444;
+    font-size: 14px;
+}
+
+/* barra de navegação */
+.cabecalho, .navbar{
+    background-color: #353d41;
+}
+
+#nav-container{
+    padding-top: 0;
+    padding-bottom: 0;
+}
+
+#logo{
+    width: 75px;
+}
+
+.navbar-brand{
+    padding: 0%;
+    color: white;
+}
+/* cor do txt do lado do logo  */
+.txt_logo{
+    color: #ffffff;
+}
+.navbar-brand:hover{
+    color: white;
+}
+/* os links */
+#navbar-links a{
+    color: white;
+    font-size: 1.1rem;
+    font-weight: bold;
+
+}
+
+.navbar-expand-lg .navbar-nav .nav-link{
+    padding: 1rem .8rem;
+}
+
+
+/* parte do carousel */
+
+div.container-fluid{
+    padding: 0%;
+}
+
+/* imgs do carousel  */
+#mainSlider .carousel-inner, #mainSlider .carousel-item{
+    height: 90vh;
+    
+}
+
+#mainSlider .carousel-caption{
+    top: 30%;
+}
+#mainSlider .carousel-caption h2{
+    font-size: 50px;
+    margin-bottom: 30px;
+}
+#mainSlider .carousel-caption p{
+    font-size: 22px;
+    color: cornsilk;
+    font-weight: 300;
+    margin-bottom: 100px;
+}
+#mainSlider .carousel-caption a{
+    text-decoration: none;
+    font-size: 1.3rem;
+    font-weight: bold;
+    width: 300px;
+    padding: 10px 20px;
+    margin-bottom: 20px;
+    height: 60px;
+
+    color: white;
+    background-color: #008cff;
+    border-radius: 30px;
+    transition: 0.5s ease-in-out;
+}
+#mainSlider .carousel-caption a:hover{
+    color: #008cff;
+    background-color: transparent;
+    border: 2px solid white;
+    text-decoration: underline;
+}
+
+/* btn de acesso ao portifolio */
+.main-btn{
+    position: absolute;
+    top: 65%;
+    left: 35%;
+}
+/* sobre a hdc agency */
+
+.col-12 h3{
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+#about-list{
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    row-gap: 0.8rem;
+    font-size: 1.1rem;
+}
+#about-list i{
+    margin-right: 10px;
+    color: #00c3ff;
+    font-size: 1.1rem;
+}
+#about-list li{
+    font-size: 1rem;
+}
+
+
+/* especializacoes da empresa */
+.assunto{
+    text-align: center;
+    margin-bottom: 50px;
+    font-family: 'Times New Roman', Arial, Helvetica, sans-serif;
+}
+
+#about-title{
+    font-family: 'Times New Roman', Times, serif;
+    margin-bottom: 10px;
+}
+
+.col-md-4{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 50px;
+}
+.col-md-4 i{
+    margin-bottom: 20px;
+}
+
+.col-md-4:hover > i, .col-md-4:hover > h4{
+    color: #00c3ff;
+}
+
+/* parte de dados da empresa */
+.title-dados{
+    text-align: center;
+    color: white;
+    margin-bottom: 60px;
+}
+.circle-box div{
+    padding: 0 40px;
+}
+.progressbar-text{
+    font-weight: bold;
+    font-size: 32px;
+}
+#data-area p{
+    color: white;
+    text-align: center;
+    font-size: 1.5rem;
+    margin-top: 20px;
+
+}
