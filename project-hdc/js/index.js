@@ -1,4 +1,5 @@
 
+alert('Pagina em manutenção!')
 
 $(document).ready(function(){
     // progress bar
@@ -92,6 +93,8 @@ $(document).ready(function(){
     setTimeout(function(){
 
         $('#data-area').parallax({imageSrc: 'photos/cidadeparallax.png'})
+
+        $('.apply-area').parallax({imageSrc: 'photos/pattern.png'})
     }, 250)
 
 
