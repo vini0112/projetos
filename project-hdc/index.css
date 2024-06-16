@@ -104,6 +104,7 @@ body{
     .carousel-caption{
         display: none;
     }
+    
 }
 
 @media (max-height: 450px) and (orientation: Landscape){
@@ -112,6 +113,9 @@ body{
     }
     .carousel-caption{
         display: none;
+    }
+    #carousel-img{
+        height: 110vh;
     }
 }
 
