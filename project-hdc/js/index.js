@@ -1,5 +1,5 @@
 
-alert('Pagina em manutenção!')
+//alert('Pagina em manutenção!')
 
 $(document).ready(function(){
     // progress bar
