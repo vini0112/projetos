@@ -1,5 +1,5 @@
 
-alert('Pagina em manutenção!')
+//alert('Pagina em manutenção!')
 
 $(document).ready(function(){
     // progress bar
@@ -94,7 +94,7 @@ $(document).ready(function(){
 
         $('#data-area').parallax({imageSrc: 'photos/cidadeparallax.png'})
 
-        $('.apply-area').parallax({imageSrc: 'photos/pattern.png'})
+        $('#pattern-img').parallax({imageSrc: 'photos/pattern.png'})
     }, 250)
 
 
