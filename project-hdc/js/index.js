@@ -1,6 +1,7 @@
 
-alert('Pagina em manutenção!')
+('Pagina em manutenção!')
 
+// usando jquery
 $(document).ready(function(){
     // progress bar
     let containerA = document.getElementById('circleA')
@@ -97,8 +98,52 @@ $(document).ready(function(){
         $('#pattern-img').parallax({imageSrc: 'photos/pattern.png'})
     }, 250)
 
+    // parte do portifolio
 
-    
+    $('.filter-btn').on('click', function(){
+
+        // identificar os ids dos btns 
+        let type = $(this).attr('id')
+
+        // identificar caixas
+        let boxes = $('.project-box')
+
+        // remover funcao active 
+        $('.btn-portifolio').removeClass('active')
+
+        // o btn clicado receberá o active
+        $(this).addClass('active')
+
+        // verificar qual id foi selecionado
+        if(type == 'btn-dev'){
+            eachBoxes('dev', boxes)
+        }
+        if(type == 'btn-all'){
+            eachBoxes(type, boxes)
+        }
+        if(type == 'btn-design'){
+            eachBoxes('design', boxes)
+        }
+        if(type == 'btn-seo'){
+            eachBoxes('seo', boxes)
+        }
+
+        
+    })
+
+function eachBoxes(type, boxes){
+    if(type == "btn-all"){
+        $(boxes).fadeIn()
+    }else{
+        $(boxes).each(function(){
+            if(!$(this).hasClass(type)){
+                $(this).fadeOut('slow')
+            }else{
+                $(this).fadeIn()
+            }
+        })
+    }
+}
 
 
 })

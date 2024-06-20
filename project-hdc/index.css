@@ -236,15 +236,8 @@ body{
     height: 500px;
 }
 .apply-area .container-fluid, .apply-area .row{
-    height: 100%;
     width: 100%;
-}
-.apply-area .apply-box{
-    text-align: center;
-    padding: 70px 60px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+    height: 100%;
 }
 .apply-area .apply-box p{
     color: white;
@@ -253,21 +246,74 @@ body{
 .apply-area .apply-box h4{
     color: white;
     margin-bottom: 30px;
+    margin-top: 60px;
 }
+
 #company-img{
     background-image: url('photos/empresa.jpg');
     background-size: cover;
     height: 100%;
 }
+#pattern-img{
+    transform: none;
 
-@media (max-width: 815px){
-    #pattern-img{
-        width: 100vw;
+    
+}
+.col-md-6.apply-box.segunda{
+    text-align: center;
+}
+
+
+
+@media (max-width: 770px){
+    #company-img{
+        display: none;
     }
 }
 @media (max-width: 390px){
     .btn-empresa{
-        display: none;
+        display: non;
     }
 }
 
+/* Portifolio de projetos */
+
+#btns-portifolio{
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    margin-bottom: 50px;
+}
+.btn-portifolio{
+    border: none;
+    background-color: #00c3ff;
+    font-weight: bold;
+    font-size: 1rem;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 20px;
+}
+.btn-portifolio.active{
+    background-color: #083ff5;
+    color: white;
+}
+
+@media (max-width: 470px){
+    #btns-portifolio{
+        display: flex;
+        gap: 0;
+    }
+}
+@media (max-width: 480px){
+    #btns-portifolio{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        row-gap: 1rem;
+    }
+    .btn-portifolio{
+        width: 250px;
+        display: block;
+        margin: auto;
+    }
+}
