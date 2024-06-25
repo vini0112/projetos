@@ -366,6 +366,8 @@ body{
     justify-content: center;
     align-items: center;
     gap: 1.5rem;
+    padding-top: 50px;
+    padding-bottom: 50px;
 }
 #container-call-action p{
     font-size: 1.5rem;
@@ -389,3 +391,84 @@ body{
     background-color: transparent;
     color: white;
 }
+
+/* parte dos contatos */
+.text-blue{
+    color: #01c4ff;
+    font-weight: bold;
+}
+
+
+#msg-box{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#msg-box p{
+    font-size: 1.2rem;
+}
+.btn-enviar-mensagem{
+    border: none;
+    padding: 10px;
+    border-radius: 15px;
+    background-color: #01c4ff;
+    color: white;
+    font-weight: bold;
+    font-size: 1.1rem;
+    
+    width: 120px;
+    margin: auto;
+    
+}
+.btn-enviar-mensagem:hover{
+    background-color: white;
+    color: #01c4ff;
+    border: 2px solid #008cff;
+}
+
+#linha{
+    border-bottom: 2px solid #008cff;
+    padding-bottom: 50px;
+    padding-bottom: 50px;
+}
+#linha i{
+    border: 1px solid black;
+    border-radius: 50%;
+    height: 55px;
+    width: 55px;
+    line-height: 55px;
+    text-align: center;
+}
+
+#contact-form input[type='text'], #contact-form input[type='email'], #contact-form textarea{
+    margin-bottom: 15px;
+    border-radius: 0%;
+}
+
+/* info desenvolvedor */
+#info-desenv{
+    text-align: center;
+    font-size: 1.1rem;
+    
+}
+#info-desenv a{
+    text-decoration: none;
+    font-weight: bold;
+    color: black;
+}
+#info-desenv a:hover{
+    text-decoration: underline;
+}
+
+/* copy area  */
+
+#container-desenv{
+    background-color: #ebe8e8;
+    padding-top: 15px;
+    padding-bottom: 15px;
+
+}
+
+
+
+
