@@ -33,14 +33,14 @@
             <nav class="navbar navbar-expand-lg fixed-top">
 
                 <!-- imagem do logo e texto  -->
-                <a href="#" class="navbar-brand">
+                <a href="#" class="navbar-brand" id="box-logo">
                     <img src="photos/hdcagency_logo.svg" alt="hdc agency" id="logo">
 
                     <span class="txt_logo">HDC Agency </span>
                 </a>
 
                 <!-- menu amburger -->
-                <button class="navbar-toggler"type="button" data-bs-toggle="collapse" data-bs-target="#navbar-links" aria-controls="navbar-links" aria-expanded="false" aria-label="toggle navigation">
+                <button class="navbar-toggler"type="button" data-bs-toggle="collapse" data-bs-target="#navbar-links" aria-controls="navbar-links" aria-expanded="false" aria-label="toggle navigation" id="btn-menu-mobile">
                     <span class="navbar-toggler-icon"></span>
 
                 </button>
@@ -144,8 +144,9 @@
                     <div class="col-12">
                         <h3>Sobre a HDC Agency</h3>
                     </div>
-                    <div class="col-md-6">
-                        <img src="photos/agencia.jpg" alt="agencia hdc" class="img-fluid">
+                    <div class="col-md-6" id="box-empresa">
+                        <img src="photos/agencia.jpg" alt="agencia hdc" class="img-fluid"
+                        id="img-agencia">
                     </div>
 
                     <div class="col-md-6">
@@ -216,7 +217,7 @@
             <!-- area de dados da empresa  -->
             <div id="data-area">
                 <div class="container">
-                    <div class="row">
+                    <div class="row" id="row-dados">
                         <div class="col-12">
                             <h2 class="title-dados">Informações Adicionais da Empresa</h2>
                         </div>
@@ -315,7 +316,7 @@
                         <div class="col-md-12" id="btns-portifolio">
                             <button type="button" id="btn-all" class="btn-portifolio filter-btn active">Todos</button>
                             
-                            <button id="btn-dev" class="btn-portifolio filter-btn" type="button">Desenvolvimento</button>
+                            <button id="btn-dev" class="btn-portifolio filter-btn" type="button">Develop</button>
 
                             <button id="btn-design" class="btn-portifolio filter-btn" type="button">Design</button>
 
@@ -378,12 +379,11 @@
             <footer>
                 <div class="container" id="area-contatos">
                     <div class="row">
-
-
                         
                         <div class="col-md-12">
                             <h2 class="assunto">Entre em contato conosco</h2>
                         </div>
+                        
                         <div class="col-md-4" id="linha">
                             <span><i class="fa-solid fa-phone-flip fa-2x"></i></span>
                             <p><span class="text-blue">Ligue para: </span>(84) 9 99933800</p>
