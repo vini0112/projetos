@@ -33,6 +33,7 @@ body{
 #nav-container{
     padding-top: 0;
     padding-bottom: 0;
+    
 }
 
 #logo{
@@ -59,7 +60,7 @@ body{
 }
 
 .navbar-expand-lg .navbar-nav .nav-link{
-    padding: 1rem .8rem;
+    padding: 1rem 0.8rem;
 }
 #box-logo{
     margin-left: 10px;
@@ -419,7 +420,13 @@ body{
     padding-bottom: 15px;
 
 }
-/* @media (min-width: 678px) and (max-width: 980) */
+
+/* corrigindo a imagem da empresa  */
+@media (max-width:991px){
+    #box-empresa{
+        margin-top: 20%;
+    }
+}
 
 /* adpatacao para tablet */
 
@@ -446,9 +453,10 @@ body{
         height: 60%;
     }
 
-    /* sobre a hdc agency */
-    
-
+    /* sobre a empresa */
+    #box-empresa{
+        margin-top: 15%;
+    }
 
     /* area de dados  */
     .circle-box div{
@@ -484,12 +492,21 @@ body{
 
     /* dados da empresa  */
     
-    .circle-box div{
-        padding: 30px;
+    /* dados */
+    #data-area{
+        margin: 0%;
+        width: 100vw;
     }
-    .circle-box p{
-        margin: 0px;
+    .estru-circle{
+        width: 60%;
+        margin: auto;
     }
+    
+    #circles{
+        width: 50%;
+
+    }
+    
     
     /* team  */
     #lista-inte{
@@ -504,14 +521,65 @@ body{
         display: none;
     }
 
-    /* trabalhe conosco */
     #pattern-img{
         width: 100vw;
         padding: 0;
     }
+    
 
     /* footer  */
     #linha{
         border-bottom: 0;
+    }
+}
+
+/* landscape  */
+@media (max-height:450px) and (orientation: landscape){
+    /* navbar  */
+    #nav-all{
+        padding: 0;
+    }
+    #logo{
+        width: 30px;
+    }
+
+    #btn-menu-mobile{
+        padding: 0%;
+    }
+
+    /* carousel  */
+    .carousel-indicators{
+        display: none;
+    }
+    .carousel-caption{
+        display: none;
+    }
+    .txt_logo{
+        font-size: 1rem;
+    }
+
+    /* sobre a empresa  */
+    #box-empresa{
+        margin-top: 15%;
+    }
+
+
+    /* dados */
+    #data-area{
+        margin: 0%;
+        width: 100vw;
+    }
+    .estru-circle{
+        width: 60%;
+        margin: auto;
+    }
+    #circles{
+        width: 50%;
+
+    }
+
+    /* team  */
+    #card-inte{
+        width: 50%;
     }
 }
