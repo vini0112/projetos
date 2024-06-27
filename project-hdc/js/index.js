@@ -95,7 +95,7 @@ $(document).ready(function(){
 
         $('#data-area').parallax({imageSrc: 'photos/cidadeparallax.png'})
 
-        $('#pattern-img').parallax({imageSrc: 'photos/pattern.png'})
+        // $('#pattern-img').parallax({imageSrc: 'photos/pattern.png'})
     }, 250)
 
     // parte do portifolio

@@ -30,7 +30,7 @@
     <header class="cabecalho">
         <!-- comeco do navbar  -->
         <div class="container" id="nav-container">
-            <nav class="navbar navbar-expand-lg fixed-top">
+            <nav class="navbar navbar-expand-lg fixed-top" id="nav-all">
 
                 <!-- imagem do logo e texto  -->
                 <a href="#" class="navbar-brand" id="box-logo">
@@ -50,17 +50,17 @@
 
                     <!-- links do navbar -->
                     <div class="navbar-nav">
-                        <a class="nav-item nav-link" id="home-menu">Home</a>
+                        <a class="nav-item nav-link" id="home-menu" href="#voltar-home">Home</a>
+                        
+                        <a class="nav-item nav-link" id="about-menu" href="#ir-agencia" type="button">Agência</a>
 
-                        <a class="nav-item nav-link" id="about-menu">Agência</a>
+                        <a class="nav-item nav-link" id="services-menu" href="#especialidades-empresa" type="button">Services</a>
 
-                        <a class="nav-item nav-link" id="services-menu">Services</a>
+                        <a class="nav-item nav-link" id="team-menu" href="#area-integrantes">Team</a>
 
-                        <a class="nav-item nav-link" id="team-menu">Team</a>
+                        <a class="nav-item nav-link" id="Portifolio-menu" href="#portifolio">Projects</a>
 
-                        <a class="nav-item nav-link" id="Portifolio-menu">Projects</a>
-
-                        <a class="nav-item nav-link" id="contact">Contact</a>
+                        <a class="nav-item nav-link" id="contact" href="#ir-contacts">Contact</a>
                     </div>
                 </div>
             </nav>
@@ -69,7 +69,7 @@
 
     <!-- comeco do corpo  -->
     <main>
-        <div class="container-fluid p-0">
+        <div class="container-fluid p-0" id="voltar-home">
             <div id="mainSlider" class="carousel slide" data-ride="carousel">
 
                 <!-- parte dos btns indicadores -->
@@ -142,7 +142,7 @@
             <div class="container">
                 <div class="row">
                     <div class="col-12">
-                        <h3>Sobre a HDC Agency</h3>
+                        <h3 id="ir-agencia">Sobre a HDC Agency</h3>
                     </div>
                     <div class="col-md-6" id="box-empresa">
                         <img src="photos/agencia.jpg" alt="agencia hdc" class="img-fluid"
@@ -176,7 +176,7 @@
             <div class="container">
                 <div class="row">
                     <div class="col-12">
-                        <h2 class="assunto">Nossas especialidades</h2>
+                        <h2 class="assunto" id="especialidades-empresa">Nossas especialidades</h2>
                     </div>
                     
                     <div class="col-md-4 service-box fa-2x">
@@ -288,9 +288,9 @@
             <!-- Trabalhe conosco  -->
             <div class="apply-area">
                 <div class="container-fluid p-0">
-                    <div class="row" id="row-box">
+                    <div class="row" id="">
 
-                        <div class="col-md-6 apply-box p-0" id="company-img"> 
+                        <div class="col-md-6 apply-box" id="company-img">
                         </div>
 
                         <div class="col-md-6 apply-box segunda" id="pattern-img">
@@ -376,7 +376,7 @@
             </div>
 
             <!-- footer - contatos -->
-            <footer>
+            <footer id="ir-contacts">
                 <div class="container" id="area-contatos">
                     <div class="row">
                         

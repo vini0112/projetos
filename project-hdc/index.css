@@ -7,9 +7,13 @@
     font-family: 'roboto-light';
     src: url('font/Roboto-Light.ttf');
 }
-
+html{
+    scroll-behavior: smooth;
+    scroll-padding-top: 8rem;
+}
 body{
     font-family: 'roboto-light', sans-serif;
+    
 }
 /* class row do bootstrap */
 .row{
@@ -212,6 +216,7 @@ body{
 .apply-area .container-fluid, .apply-area .row{
     width: 100%;
     height: 100%;
+    margin: 0%;
 }
 .apply-area .apply-box p{
     color: white;
@@ -227,11 +232,13 @@ body{
     background-image: url('photos/empresa.jpg');
     background-size: cover;
     height: 100%;
+    
 }
 #pattern-img{
-    transform: none;
-
-    
+    background-image: url('photos/pattern.png');
+    background-size: cover;
+    background-attachment: fixed;
+    overflow: hidden;
 }
 .col-md-6.apply-box.segunda{
     text-align: center;
