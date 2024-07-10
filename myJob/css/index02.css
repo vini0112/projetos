@@ -57,3 +57,21 @@
 
 
 
+@media (max-width: 768px) {
+    #row-terminais .card{
+        width: 50%;
+    }
+    #btn-offcanvas{
+        font-size: 1rem;
+    }
+    
+}
+
+/* tamanho da font do btn para mobile */
+@media (max-width: 480px) {
+    
+    #btn-offcanvas button{
+        font-size: 1rem;
+    }
+    
+}
