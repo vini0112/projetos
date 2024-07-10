@@ -1,0 +1,59 @@
+
+
+
+:root{
+    --lightBlue: #8bf6fc;
+    --darkBlue: #4ac4ca;
+    --marcas: purple;
+}
+
+
+
+/* SISTEMA DE DIRECAO */
+#row-header-sistemaDirecao{
+    height: 250px;
+}
+#estrutura-title{
+    display: flex;
+    height: 100%;
+    align-items: center;
+    
+}
+
+#btn-offcanvas button{
+    max-width: 350px;
+    width: 100%;
+    height: 50px;
+    background-color: var(--darkBlue);
+    color: white;
+    font-weight: bold;
+    border: 1px solid black;
+    font-size: 1.1rem;
+    text-shadow: 2px 2px 2px black;
+    
+}
+
+
+/* TERMINAIS DE DIRECAO */
+#row-terminais{
+    display: flex;
+    justify-content: space-around;
+}
+#row-terminais .card{
+    margin-bottom: 20px;
+}
+
+
+/* modal footer dos terminais */
+#modalFooterDirecao{
+    display: flex;
+    justify-content: space-between;
+}
+.marcas{
+    color: var(--marcas);
+    font-size: 1.1rem;
+    font-weight: bold;
+} 
+
+
+

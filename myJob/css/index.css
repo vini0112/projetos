@@ -1,0 +1,425 @@
+*{
+    padding: 0%;
+    margin: 0%;
+    box-sizing: border-box;
+}
+
+/* palheta cores  */
+:root{
+    --cor1: #85ebf2;
+    --cor2: #00ccbe;
+    --cor3: #bcebee;
+    --cor4: #1b58b3;
+    --cor5: #35528b;
+    --corDropdown:#06bbaf;
+    --corBtnActive: #2e7e7e;
+    --corMontadoras: #06aaf6;
+}
+
+/* stylos globals */
+.container{
+    padding: 60px 20px;
+}
+.titles-sessoes{
+    text-align: center;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+.card-title{
+    text-align: center;
+}
+.card-text{
+    text-align: center;
+}
+
+.dropdown-menu{
+    background-color: var(--corDropdown);
+    text-align: center;
+}
+.dropdown-menu .dropdown-item a{
+    color: black;
+    text-decoration: none;
+}
+
+.design-btn{
+    max-width: 120px;
+    width: 100%;
+    height: 40px;
+    border: none;
+    border-radius: 20px;
+    background-color: gray;
+    color: white;
+    font-weight: bold;
+    font-size: 1.1rem;
+    margin-top: 30px;
+    margin-bottom: 15px;
+}
+
+
+/* cabecalho */
+#navbar{
+    background-color: var(--cor2);
+    padding: 25px 0px;
+}
+
+#title-princ{
+    margin-left: 15px;
+    color: white;
+    font-weight: bold;
+}
+#collapsee{
+    margin-right: 15px;
+    
+}
+#collapsee a{
+    color: white;
+    font-weight: bold;
+}
+
+#corpo-dropdown{
+    background-color: var(--cor2);
+}
+#corpo-dropdown a{
+    text-align: center;
+}
+
+/* fast search */
+#estrutura-fast-src{
+    display: flex;
+    list-style: none;
+    justify-content: space-around;
+    margin: 0px;
+    padding: 10px 0px;
+    background-color: #06bbaf;
+    
+}
+
+#estrutura-fast-src li{
+    color: white;
+    font-weight: bold;
+    font-size: 1rem;
+    cursor: pointer;
+}
+
+.drop-mobile{
+    display: none;
+}
+
+
+/* carousel */
+
+#img-carousel{
+    height: 75vh;
+}
+
+
+.carousel-caption{
+    display: flex;
+    flex-direction: column;
+    height: 45%;
+    
+}
+.carousel-caption p{
+    font-size: 1rem;
+    font-weight: bold;
+}
+
+.carousel-caption #btn-caption{
+    max-width: 120px;
+    width: 100%;
+    height: 40px;
+    margin: auto;
+    border: none;
+    background-color: gray;
+    color: white;
+    font-weight: bold;
+    border-radius: 20px;
+}
+.carousel-caption #btn-caption:hover{
+    background-color: transparent;
+    color: white;
+    border: 2px solid white;
+}
+
+/* sessão de oleos */
+#row-oleos{
+    display: flex;
+    justify-content: space-around;
+    
+}
+#row-oleos .col-md-3{
+    margin-bottom: 20px;
+}
+#estrutura-card{
+    display: flex;
+}
+
+#BoxBtnsDoFiltro{
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 15px;
+    margin-top: 50px;
+}
+
+.BtnActive{
+    background-color: var(--corBtnActive);
+}
+
+/* sessao filtros */
+#area-filtros{
+    display: none;
+}
+#row-filtros{
+    display: flex;
+    justify-content: space-around;
+    
+    
+}
+#row-filtros .col-md-3{
+    margin-bottom: 20px;
+}
+
+#estrutra-btn-filtro-oleo{
+    display: flex;
+    justify-content: space-around;
+}
+
+.FiltroOleoActive{
+    background-color: var(--corBtnActive);
+}
+
+/* filtros pesados */
+#row-filtros-pesados{
+    display: flex;
+    justify-content: space-around;
+}
+#btn-filtros-pesados{
+    display: flex;
+    justify-content: space-around;
+}
+#row-filtros-pesados .col-md-3{
+    margin-bottom: 20px;
+}
+.pesadoActive{
+    background-color: var(--corBtnActive);
+}
+
+/* SESSAO FLUIDO FREIO */
+#area-oleo-freio{
+    display: none;
+}
+
+/* sessao bateria */
+#row-baterias{
+    display: flex;
+    justify-content: space-around;
+}
+#row-baterias .col-md-3{
+    margin-bottom: 20px;
+}
+
+/* SESSAO FLUIDO FREIO */
+#row-fluido-oleo{
+    display: flex;
+    justify-content: space-around;
+}
+
+
+
+/* MODAIS */
+.card-body{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.padraoBtn{
+    border: none;
+    padding: 0.5rem 1rem;
+    background-color: gray;
+    color: white;
+    font-weight: bold;
+    font-size: 1rem;
+    border-radius: 5px;
+}
+.modal-body h5{
+    display: flex;
+    justify-content: center;
+}
+
+#lista-aplicacoes{
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    row-gap: 1rem;
+    
+}
+#lista-aplicacoes li{
+    font-size: 1.1rem;
+}
+.montadora{
+    font-weight: bold;
+    font-size: 1.1rem;
+    color: var(--corMontadoras);
+}
+.carro{
+    font-weight: bold;
+    font-size: 1.1rem;
+}
+
+/* FILTROS COMBUSTIVEL simples */
+.active{
+    background-color: var(--corBtnActive);
+}
+#area-filtro-combus{
+    display: none;
+}
+
+#row-filtro-combus-simples{
+    display: flex;
+    justify-content: space-around;
+}
+#row-filtro-combus-simples .card{
+    margin-bottom: 20px;
+}
+#all-btns-combust-simples{
+    display: flex;
+    justify-content: space-around;
+}
+
+/* FILTROS COMBUSTIVEL pesados*/
+#row-filtro-combus{
+    display: flex;
+    justify-content: space-around;
+}
+#row-filtro-combus .card{
+    margin-bottom: 20px;
+}
+#all-btns-combust-pesado{
+    display: flex;
+    justify-content: space-around;
+}
+
+/* FILTROS DE AR */
+#area-filtro-ar{
+    display: none;
+}
+#row-filtros-ar-motor{
+    display: flex;
+    justify-content: space-around;
+}
+#row-filtros-ar-motor .card{
+    margin-bottom: 20px;
+}
+#all-btns-filtro-ar-motor{
+    display: flex;
+    justify-content: space-around;
+}
+
+/* FILTROS AR DE CABINE */
+#row-filtros-ar-cabine{
+    display: flex;
+    justify-content: space-around;
+}
+#row-filtros-ar-cabine .card{
+    margin-bottom: 20px;
+}
+
+    /* MEDIAS QUERIES */
+
+
+@media (max-width: 768px){
+    /* BTNS  DO OLEO*/
+    #BoxBtnsDoFiltro{
+        display: flex;
+        flex-wrap: wrap;    
+    }
+    .design-btn{
+        margin: 0;
+        margin-bottom: 0.8rem;
+    }
+
+    /* CARDS OLEOS */
+    #row-oleos .card{
+        width: 50%;
+    }
+    #row-oleos .card img{
+        width: 100%;
+    }
+    /* FLUIDOS DE FREIO  */
+    #row-fluido-oleo .card{
+        width: 50%;
+    }
+
+    /* FILTROS SIMPLES */
+    #estrutra-btn-filtro-oleo{
+        display: flex;
+        flex-wrap: wrap;
+    }
+    #row-filtros .card{
+        width: 50%;
+    }
+
+    /* FILTROS PESADOS */
+    #btn-filtros-pesados{
+        display: flex;
+        flex-wrap: wrap;
+    }
+    #row-filtros-pesados .card{
+        width: 50%;
+    }
+    /* FILTROS COMBUSTIVEL SIMPLES */
+    #row-filtro-combus-simples .card{
+        width: 50%;
+    }
+    #all-btns-combust-simples{
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    /* FILTROS COMBUSTIVEL PESADO */
+    #row-filtro-combus .card{
+        width: 50%;
+    }
+    
+    #all-btns-combust-pesado{
+        display: flex;
+        flex-wrap: wrap;
+    }
+    /* FILTROS DE AR */
+    #row-filtros-ar-motor .card{
+        width: 50%;
+    }
+    #row-filtros-ar-cabine .card{
+        width: 50%;
+    }
+
+    #all-btns-filtro-ar-motor{
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    /* BATERIAS */
+    #row-baterias .card{
+        width: 50%;
+    }
+}
+
+
+@media (max-width: 600px){
+    /* NAVBAR */
+    #drop-oleo{
+        display: none;
+    }
+    #link-bateria{
+        display: none;
+    }
+    .drop-mobile{
+        display: block;
+    }
+
+
+
+}
+
+
