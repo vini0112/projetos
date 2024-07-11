@@ -7,6 +7,10 @@
     --marcas: purple;
 }
 
+.espacamento-title{
+    margin: 80px 0px;
+}
+
 
 
 /* SISTEMA DE DIRECAO */
@@ -56,13 +60,32 @@
 } 
 
 
+/* pivos de suspensao */
+#row-pivos{
+    display: flex;
+    justify-content: space-around;
+}
+#row-pivos .card{
+    margin-bottom: 20px;
+}
+
 
 @media (max-width: 768px) {
+    /* terminais de direcao */
     #row-terminais .card{
         width: 50%;
     }
     #btn-offcanvas{
         font-size: 1rem;
+    }
+    #btns-terminais{
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    /* pivos */
+    #row-pivos .card{
+        width: 50%;
     }
     
 }
