@@ -2,6 +2,7 @@
 // onload 
 document.addEventListener('DOMContentLoaded', () =>{
 
+    alert(`Projetos ainda em manutenção`)
     // FUCAO AO CLICAR NO TITULO PRINCIPAL
     let onloadTitlePrinc = document.querySelector('#title-princ')
     onloadTitlePrinc.addEventListener('click', () =>{
@@ -28,6 +29,9 @@ document.addEventListener('DOMContentLoaded', () =>{
 
     // fucao filtrando pesquisa dos terminais de direcao
     filtroTerminais()
+
+    //fucao filtrando pesquisa dos pivos suspensao
+    filtroPivos()
 
 
     // funcoes do fast-search para mostrar pagina
@@ -988,5 +992,102 @@ function filtroTerminais(){
 
 }
         
-        
+// funcao filtrar pesquisa dos pivos
+function filtroPivos(){
+
+    let allBtns = document.querySelectorAll("#btns-pivos button")
+    //console.log(allBtns)
+
+    let allCards = document.querySelectorAll('#row-pivos .card')
+    //console.log(allCards)
+
+
+    // BTN TODOS
+    allBtns[0].addEventListener('click', () =>{
+        for(let c = 0;c < allCards.length;c++){
+            allCards[c].style.display='block'
+        }
+
+        for(let b = 0;b < allBtns.length;b++){
+            if(allBtns[0]){
+                allBtns[b].classList.remove('active')
+                allBtns[0].classList.add('active')
+            }
+        }
+    })
+
+    // BTN fiat
+    allBtns[1].addEventListener('click', () =>{
+        for(let c = 0;c < allCards.length;c++){
+            allCards[c].style.display='block'
+
+            if(!(allCards[c].classList.contains('fiat'))){
+                allCards[c].style.display='none'
+            }
+        } 
+
+        for(let b = 0;b < allBtns.length;b++){
+            if(allBtns[1]){
+                allBtns[b].classList.remove('active')
+                allBtns[1].classList.add('active')
+            }
+        }
+    })
+
+    // BTN vws
+    allBtns[2].addEventListener('click', () =>{
+        for(let c = 0;c < allCards.length;c++){
+            allCards[c].style.display='block'
+
+            if(!(allCards[c].classList.contains('vws'))){
+                allCards[c].style.display='none'
+            }
+        } 
+
+        for(let b = 0;b < allBtns.length;b++){
+            if(allBtns[2]){
+                allBtns[b].classList.remove('active')
+                allBtns[2].classList.add('active')
+            }
+        }
+    })
+
+    // BTN GM
+    allBtns[3].addEventListener('click', () =>{
+        for(let c = 0;c < allCards.length;c++){
+            allCards[c].style.display='block'
+
+            if(!(allCards[c].classList.contains('gm'))){
+                allCards[c].style.display='none'
+            }
+        } 
+
+        for(let b = 0;b < allBtns.length;b++){
+            if(allBtns[3]){
+                allBtns[b].classList.remove('active')
+                allBtns[3].classList.add('active')
+            }
+        }
+    })
+
+    // BTN Ford
+    allBtns[4].addEventListener('click', () =>{
+        for(let c = 0;c < allCards.length;c++){
+            allCards[c].style.display='block'
+
+            if(!(allCards[c].classList.contains('ford'))){
+                allCards[c].style.display='none'
+            }
+        } 
+
+        for(let b = 0;b < allBtns.length;b++){
+            if(allBtns[4]){
+                allBtns[b].classList.remove('active')
+                allBtns[4].classList.add('active')
+            }
+        }
+    })
+
+
+}
         

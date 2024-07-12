@@ -87,6 +87,10 @@
     #row-pivos .card{
         width: 50%;
     }
+    #btns-pivos{
+        display: flex;
+        flex-wrap: wrap;
+    }
     
 }
 
