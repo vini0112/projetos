@@ -2,7 +2,7 @@
 // onload 
 document.addEventListener('DOMContentLoaded', () =>{
 
-    alert(`Projetos ainda em manutenção`)
+    //alert(`Projetos ainda em manutenção`)
     // FUCAO AO CLICAR NO TITULO PRINCIPAL
     let onloadTitlePrinc = document.querySelector('#title-princ')
     onloadTitlePrinc.addEventListener('click', () =>{
@@ -33,11 +33,16 @@ document.addEventListener('DOMContentLoaded', () =>{
     //fucao filtrando pesquisa dos pivos suspensao
     filtroPivos()
 
+    // fucao filtrando pesquisa das barras axiais
+    filtroBarras()
+
 
     // funcoes do fast-search para mostrar pagina
     mostrarInfoFastSearch()
 
+    // DROP-TODOS DEPARTAMENTOS MOBILE
     allDepart()
+
 })
 
 
@@ -478,8 +483,13 @@ function mostrarInfoFastSearch(){
     //console.log(estruturasNAV)
 
 
+    // DROPS-DOWN
     let allLinkDrop = document.querySelectorAll(`.dropdown-menu .dropdown-link`)
     //console.log(allLinkDrop)
+
+    // DROPS de todos os departamento
+    let allDepart = document.querySelectorAll('.dropdown-menu .no-mobile')
+    //console.log(allDepart)
 
 
 
@@ -540,6 +550,13 @@ function mostrarInfoFastSearch(){
     })
 
     
+    //ACAO DOS LINKS DA PARTE - TODOS OS DEPARTAMENTOS
+    allDepart[0].addEventListener('click', () =>{
+        for(let c = 0;c < allSessoes.length;c++){
+            allSessoes[c].style.display='none'
+            allSessoes[6].style.display='block'
+        }
+    })
     
 
     
@@ -1090,4 +1107,122 @@ function filtroPivos(){
 
 
 }
-        
+
+// fucao filtrando pesquisa das barras axiais
+function filtroBarras(){
+
+    let allBtns = document.querySelectorAll("#row-axiais #sistema-btns button")
+    //console.log(allBtns)
+
+    let allCards = document.querySelectorAll('#row-axiais .card')
+    //console.log(allCards)
+
+
+    // BTN TODOS
+    allBtns[0].addEventListener('click', () =>{
+        for(let c = 0;c < allCards.length;c++){
+            allCards[c].style.display='block'
+        }
+
+        for(let b = 0;b < allBtns.length;b++){
+            if(allBtns[0]){
+                allBtns[b].classList.remove('active')
+                allBtns[0].classList.add('active')
+            }
+        }
+    })
+
+    // BTN fiat
+    allBtns[1].addEventListener('click', () =>{
+        for(let c = 0;c < allCards.length;c++){
+            allCards[c].style.display='block'
+
+            if(!(allCards[c].classList.contains('fiat'))){
+                allCards[c].style.display='none'
+            }
+        } 
+
+        for(let b = 0;b < allBtns.length;b++){
+            if(allBtns[1]){
+                allBtns[b].classList.remove('active')
+                allBtns[1].classList.add('active')
+            }
+        }
+    })
+
+    // BTN vws
+    allBtns[2].addEventListener('click', () =>{
+        for(let c = 0;c < allCards.length;c++){
+            allCards[c].style.display='block'
+
+            if(!(allCards[c].classList.contains('vws'))){
+                allCards[c].style.display='none'
+            }
+        } 
+
+        for(let b = 0;b < allBtns.length;b++){
+            if(allBtns[2]){
+                allBtns[b].classList.remove('active')
+                allBtns[2].classList.add('active')
+            }
+        }
+    })
+
+    // BTN GM
+    allBtns[3].addEventListener('click', () =>{
+        for(let c = 0;c < allCards.length;c++){
+            allCards[c].style.display='block'
+
+            if(!(allCards[c].classList.contains('gm'))){
+                allCards[c].style.display='none'
+            }
+        } 
+
+        for(let b = 0;b < allBtns.length;b++){
+            if(allBtns[3]){
+                allBtns[b].classList.remove('active')
+                allBtns[3].classList.add('active')
+            }
+        }
+    })
+
+    // BTN Ford
+    allBtns[4].addEventListener('click', () =>{
+        for(let c = 0;c < allCards.length;c++){
+            allCards[c].style.display='block'
+
+            if(!(allCards[c].classList.contains('ford'))){
+                allCards[c].style.display='none'
+            }
+        } 
+
+        for(let b = 0;b < allBtns.length;b++){
+            if(allBtns[4]){
+                allBtns[b].classList.remove('active')
+                allBtns[4].classList.add('active')
+            }
+        }
+    })
+}
+
+
+// logica offcanvas 
+document.addEventListener('DOMContentLoaded', () =>{
+
+    let myOffCanvas = document.querySelector('#myOffCanvas')
+
+    let bsOffCanvas = new bootstrap.Offcanvas(myOffCanvas);
+
+    document.getElementById('btn-open-offcanvas').addEventListener('click', (e) =>{
+        e.preventDefault();
+        e.stopPropagation();
+        bsOffCanvas.toggle();
+    })
+
+
+
+
+})
+
+
+

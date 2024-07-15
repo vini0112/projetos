@@ -72,6 +72,11 @@
                             <li class="dropdown-item drop-mobile"><a href="#area-oleo-freio" class="mobile">Óleo Freio</a></li>
                             
                             <li class="dropdown-item drop-mobile"><a href="#area-bateria" class="mobile">Batéria</a></li>
+
+
+                            <!-- DROPS NO-MOBILE -->
+                            <li class="dropdown-item"><a href="#row-header-sistemaDirecao" class="no-mobile">Sistema Direção</a></li>
+                            
                         </ul>
                         
                     </li>
@@ -110,6 +115,7 @@
             </div>
 
         </div>
+
     </header>
 
 
@@ -152,6 +158,7 @@
         </div>
 
 
+        <!-- 0 -->
         <!-- sessao de oleos -->
         <div id="oleos" class="sessao">
             <div class="container">
@@ -265,6 +272,7 @@
         </div>
 
 
+        <!-- 1 -->
         <!-- SESSAO FLUIDO FREIO -->
         <div id="area-oleo-freio" class="sessao">
             <div class="container">
@@ -282,8 +290,9 @@
                 </div>
             </div>
         </div>
+        
 
-
+        <!-- 2 -->
         <!-- sessao filtros oleo  -->
         <div id="area-filtros" class="sessao">
             <div class="container">
@@ -587,6 +596,7 @@
         </div>
 
 
+        <!-- 3 -->
         <!-- sessao filtros combustivel -->
         <div id="area-filtro-combus" class="sessao">
             <div class="container">
@@ -762,6 +772,7 @@
         </div>
 
 
+        <!-- 4 -->
             <!-- sessao filtros de ar -->
         <div id="area-filtro-ar" class="sessao">
             <div class="container">
@@ -920,7 +931,8 @@
             </div>
         </div>
 
-        
+
+        <!-- 5 -->
         <!-- sessao baterias -->
         <div id="area-bateria" class="sessao">
             <div class="container">
@@ -988,374 +1000,503 @@
         </div>
 
 
-            <!-- sessao do sistema de direcao -->
-            <div id="area-sistema-direcao" class="sessao">
-                <div class="container">
+        <!-- 6 -->
+        <!-- sessao do sistema de direcao -->
+        <div id="area-sistema-direcao" class="sessao">
+            <div class="container">
 
-                    <!-- parte do header do sistema  -->
-                    <div class="row" id="row-header-sistemaDirecao">
+                <!-- parte do header do sistema  -->
+                <div class="row" id="row-header-sistemaDirecao">
 
-                        <div class="col-12" id="estrutura-title">
+                    <div class="col-12" id="estrutura-title">
 
-                            <div class="col-md-6">
-                                <h2 class="titles-sessoes">Sistema de Direção</h2>
-                            </div>
-                            <div class="col-md-6" id="btn-offcanvas">
-                                <button data-bs-toggle="offcanvas" data-bs-target="#allSessoesPesquisa" type="button" aria-controls="allSessoesPesquisa">Ver todos os departamentos</button>
-                            </div>
-                            
+                        <div class="col-md-6">
+                            <h2 class="titles-sessoes">Sistema de Direção</h2>
+                        </div>
+                        <div class="col-md-6" id="btn-offcanvas">
+                            <button  data-bs-target="#allSessoesPesquisa" type="button" aria-controls="allSessoesPesquisa" id="btn-open-offcanvas">Ver todos os departamentos</button>
+                        </div>
+                        
+                    </div>
+
+                    <!-- Estrutura do OFFCANVAS  -->
+
+                    <div class="offcanvas offcanvas-top" tabindex="-1" id="myOffCanvas" >
+
+                        <div class="offcanvas-header">
+
+                            <h5 class="offcanvas-title" id="offCanvasTitle">Partes do Sistema de Direção</h5>
                         </div>
 
-                        <!-- Estrutura do OFFCANVAS  -->
+                        <div class="offcanvas-body">
+                            <ul>
+                                <li><a href="#row-terminais">Terminais de Direção</a></li>
+                                <li><a href="#row-pivos">Pivôs de Suspensão</a></li>
+                                <li><a href="#row-axiais">Barras Axiais</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
 
-                        <div class="offcanvas offcanvas-top" id="allSessoesPesquisa" aria-labelledby="offcanvasTopLabel">
 
-                            <div class="offcanvas-header">
-                                <h5 class="offcanvas-title">Todas Peças</h5>
-                            </div>
-                            <div class="offcanvas-body">
-                                <ul>
-                                    <li>Terminais de Direção</li>
-                                    <li>Pivôs de Suspensão</li>
-                                    <li>Barras Axiais</li>
-                                </ul>
-                            </div>
+
+                <!-- TERMINAIS DE DIREÇÃO  -->
+                <div class="row" id="row-terminais">
+                    <div class="col-12">
+                        <h2 class="titles-sessoes" style="margin-bottom: 50px;">Terminais de Direção</h2>
+                    </div>
+
+                    <!-- btns dos terminais  -->
+                        <div class="col-12 d-flex justify-content-around" id="btns-terminais">
+                        <button class="design-btn active">Todos</button>
+                        <button class="design-btn">Fiat</button>
+                        <button class="design-btn">Volskwage</button>
+                        <button class="design-btn">GM</button>
+                        <button class="design-btn">Nissan</button>
+                        </div>
+
+                    <!-- FIAT  -->
+                    <div class="col-md-3 card fiat">
+                        <img src="photos/sist-direcao/terminais/tdi1003.png" alt="tdi1003" class="img-fluid">
+                        <div class="card-body">
+                            <h5 class="card-title">Terminal TDI-1003</h5>
+                            <p class="card-text">Linha Fiat - Lado Direito</p>
+
+                            <button type="button" class="padraoBtn" data-bs-toggle="modal" data-bs-target="#tdi1003">Aplicações</button>
                         </div>
                     </div>
 
+                    <div class="col-md-3 card fiat">
+                        <img src="photos/sist-direcao/terminais/tdi1002.png" alt="tdi1002" class="img-fluid">
+                        <div class="card-body">
+                            <h5 class="card-title">Terminal TDI-1002</h5>
+                            <p class="card-text">Linha Fiat - Lado Direito/Esquerdo</p>
 
-                    <!-- TERMINAIS DE DIREÇÃO  -->
-                    <div class="row" id="row-terminais">
-                        <div class="col-12">
-                            <h2 class="titles-sessoes" style="margin-bottom: 50px;">Terminais de Direção</h2>
+                            <button type="button" class="padraoBtn" data-bs-toggle="modal" data-bs-target="#tdi1002">Aplicações</button>
                         </div>
-
-                        <!-- btns dos terminais  -->
-                         <div class="col-12 d-flex justify-content-around" id="btns-terminais">
-                            <button class="design-btn active">Todos</button>
-                            <button class="design-btn">Fiat</button>
-                            <button class="design-btn">Volskwage</button>
-                            <button class="design-btn">GM</button>
-                            <button class="design-btn">Nissan</button>
-                         </div>
-
-                        <!-- FIAT  -->
-                        <div class="col-md-3 card fiat">
-                            <img src="photos/sist-direcao/terminais/tdi1003.png" alt="tdi1003" class="img-fluid">
-                            <div class="card-body">
-                                <h5 class="card-title">Terminal TDI-1003</h5>
-                                <p class="card-text">Linha Fiat - Lado Direito</p>
-
-                                <button type="button" class="padraoBtn" data-bs-toggle="modal" data-bs-target="#tdi1003">Aplicações</button>
-                            </div>
-                        </div>
-
-                        <div class="col-md-3 card fiat">
-                            <img src="photos/sist-direcao/terminais/tdi1002.png" alt="tdi1002" class="img-fluid">
-                            <div class="card-body">
-                                <h5 class="card-title">Terminal TDI-1002</h5>
-                                <p class="card-text">Linha Fiat - Lado Direito/Esquerdo</p>
-
-                                <button type="button" class="padraoBtn" data-bs-toggle="modal" data-bs-target="#tdi1002">Aplicações</button>
-                            </div>
-                        </div>
-
-                        <div class="col-md-3 card fiat">
-                            <img src="photos/sist-direcao/terminais/amortex.jpg" alt="amortex-33295" class="img-fluid">
-                            <div class="card-body">
-                                <h5 class="card-title">Terminal Amortex-33295</h5>
-                                <p class="card-text">Linha Fiat - Lado Esquerdo</p>
-
-                                <button type="button" class="padraoBtn" data-bs-toggle="modal" data-bs-target="#33295">Aplicações</button>
-                            </div>
-                        </div>
-
-                        <div class="col-md-3 card fiat">
-                            <img src="photos/sist-direcao/terminais/viemar335433.png" alt="viemar-335433" class="img-fluid">
-                            <div class="card-body">
-                                <h5 class="card-title">Terminal Viemar-335433</h5>
-                                <p class="card-text">Linha Fiat - Lado Direito</p>
-
-                                <button type="button" class="padraoBtn" data-bs-toggle="modal" data-bs-target="#335433">Aplicações</button>
-                            </div>
-                        </div>
-
-                        <div class="col-md-3 card fiat">
-                            <img src="photos/sist-direcao/terminais/tdi0149.png" alt="tdi0149" class="img-fluid">
-                            <div class="card-body">
-                                <h5 class="card-title">Terminal TDI-0149</h5>
-                                <p class="card-text">Linha Fiat - Lado Esquerdo - Rosca Grossa</p>
-
-                                <button type="button" class="padraoBtn" data-bs-toggle="modal" data-bs-target="#tdi0149">Aplicações</button>
-                            </div>
-                        </div>
-
-                        <div class="col-md-3 card fiat">
-                            <img src="photos/sist-direcao/terminais/n6012.png" alt="N-6012" class="img-fluid">
-                            <div class="card-body">
-                                <h5 class="card-title">Terminal N-6012</h5>
-                                <p class="card-text">Linha Fiat - Lado Esquerdo/Direito</p>
-
-                                <button type="button" class="padraoBtn" data-bs-toggle="modal" data-bs-target="#n6012">Aplicações</button>
-                            </div>
-                        </div>
-
-                        <!-- GM -->
-
-                        <div class="col-md-3 card gm">
-                            <img src="photos/sist-direcao/terminais/tdi1083.png" alt="tdi1083" class="img-fluid">
-                            <div class="card-body">
-                                <h5 class="card-title">Terminal TDI-1083</h5>
-                                <p class="card-text">Linha GM - Lado Esquerdo/Direito</p>
-
-                                <button type="button" class="padraoBtn" data-bs-toggle="modal" data-bs-target="#tdi1083">Aplicações</button>
-                            </div>
-                        </div>
-
-                        <div class="col-md-3 card gm">
-                            <img src="photos/sist-direcao/terminais/amortex63302.png" alt="633302" class="img-fluid">
-                            <div class="card-body">
-                                <h5 class="card-title">Terminal Amortex-633302</h5>
-                                <p class="card-text">Linha GM - Lado Esquerdo/Direito</p>
-
-                                <button type="button" class="padraoBtn" data-bs-toggle="modal" data-bs-target="#63302">Aplicações</button>
-                            </div>
-                        </div>
-
-                        <div class="col-md-3 card gm">
-                            <img src="photos/sist-direcao/terminais/amortex33604.png" alt="33604" class="img-fluid">
-                            <div class="card-body">
-                                <h5 class="card-title">Terminal Amortex-33604</h5>
-                                <p class="card-text">Linha GM - Lado Esquerdo/Direito</p>
-
-                                <button type="button" class="padraoBtn" data-bs-toggle="modal" data-bs-target="#33604">Aplicações</button>
-                            </div>
-                        </div>
-
-                        <div class="col-md-3 card gm">
-                            <img src="photos/sist-direcao/terminais/n302.png" alt="n302" class="img-fluid">
-                            <div class="card-body">
-                                <h5 class="card-title">Terminal N-302</h5>
-                                <p class="card-text">Linha GM - Lado Esquerdo/Direito</p>
-
-                                <button type="button" class="padraoBtn" data-bs-toggle="modal" data-bs-target="#n302">Aplicações</button>
-                            </div>
-                        </div>
-
-                        <div class="col-md-3 card gm">
-                            <img src="photos/sist-direcao/terminais/n336.png" alt="n336" class="img-fluid">
-                            <div class="card-body">
-                                <h5 class="card-title">Terminal N-336</h5>
-                                <p class="card-text">Linha GM - Lado Esquerdo/Direito</p>
-
-                                <button type="button" class="padraoBtn" data-bs-toggle="modal" data-bs-target="#n336">Aplicações</button>
-                            </div>
-                        </div>
-
-                        <div class="col-md-3 card gm">
-                            <img src="photos/sist-direcao/terminais/amortex633074.png" alt="amortex633074" class="img-fluid">
-                            <div class="card-body">
-                                <h5 class="card-title">Terminal Amortex-633074</h5>
-                                <p class="card-text">Linha GM - Lado Esquerdo/Direito</p>
-
-                                <button type="button" class="padraoBtn" data-bs-toggle="modal" data-bs-target="#633074">Aplicações</button>
-                            </div>
-                        </div>
-
-                        <!-- VWS  -->
-                        <div class="col-md-3 card vws">
-                            <img src="photos/sist-direcao/terminais/nakata1027.png" alt="nakata1027" class="img-fluid">
-                            <div class="card-body">
-                                <h5 class="card-title">Terminal Nakata-1027</h5>
-                                <p class="card-text">Linha Volskwage - Lado Esquerdo/Direito</p>
-
-                                <button type="button" class="padraoBtn" data-bs-toggle="modal" data-bs-target="#1027">Aplicações</button>
-                            </div>
-                        </div>
-
-                        <div class="col-md-3 card vws">
-                            <img src="photos/sist-direcao/terminais/amortex33168.png" alt="amortex-33168" class="img-fluid">
-                            <div class="card-body">
-                                <h5 class="card-title">Terminal Amortex-33168</h5>
-                                <p class="card-text">Linha Volskwage - Lado Esquerdo/Direito</p>
-
-                                <button type="button" class="padraoBtn" data-bs-toggle="modal" data-bs-target="#33168">Aplicações</button>
-                            </div>
-                        </div>
-
-                        <div class="col-md-3 card vws">
-                            <img src="photos/sist-direcao/terminais/amortex33001.png" alt="amortex-33001" class="img-fluid">
-                            <div class="card-body">
-                                <h5 class="card-title">Terminal Amortex-33001</h5>
-                                <p class="card-text">Linha Volskwage - Lado Direito</p>
-
-                                <button type="button" class="padraoBtn" data-bs-toggle="modal" data-bs-target="#33001">Aplicações</button>
-                            </div>
-                        </div>
-
-                        <div class="col-md-3 card vws">
-                            <img src="photos/sist-direcao/terminais/tdi1088.png" alt="tdi1088" class="img-fluid">
-                            <div class="card-body">
-                                <h5 class="card-title">Terminal TDI-1088</h5>
-                                <p class="card-text">Linha Volskwage - Lado Direito</p>
-
-                                <button type="button" class="padraoBtn" data-bs-toggle="modal" data-bs-target="#tdi1088">Aplicações</button>
-                            </div>
-                        </div>
-
-                        <!-- NISSAN -->
-                        <div class="col-md-3 card nissan">
-                            <img src="photos/sist-direcao/terminais/viemar335585.png" alt="viemar335585" class="img-fluid">
-                            <div class="card-body">
-                                <h5 class="card-title">Terminal Viemar-335585</h5>
-                                <p class="card-text">Linha Nissan - Lado Esquerdo</p>
-
-                                <button type="button" class="padraoBtn" data-bs-toggle="modal" data-bs-target="#335585">Aplicações</button>
-                            </div>
-                        </div>
-
                     </div>
 
+                    <div class="col-md-3 card fiat">
+                        <img src="photos/sist-direcao/terminais/amortex.jpg" alt="amortex-33295" class="img-fluid">
+                        <div class="card-body">
+                            <h5 class="card-title">Terminal Amortex-33295</h5>
+                            <p class="card-text">Linha Fiat - Lado Esquerdo</p>
 
-                    <!-- PIVOS DE SUSPENSAO -->
-                     <div class="row" id="row-pivos">
-                        <div class="col-12">
-                            <h2 class="titles-sessoes espacamento-title">Pivos de Suspensão</h2>
+                            <button type="button" class="padraoBtn" data-bs-toggle="modal" data-bs-target="#33295">Aplicações</button>
                         </div>
+                    </div>
 
-                        <!-- btns dos terminais  -->
-                        <div class="col-12 d-flex justify-content-around" id="btns-pivos">
-                            <button class="design-btn active">Todos</button>
-                            <button class="design-btn">Fiat</button>
-                            <button class="design-btn">Volskwage</button>
-                            <button class="design-btn">GM</button>
-                            <button class="design-btn">Ford</button>
-                         </div>
+                    <div class="col-md-3 card fiat">
+                        <img src="photos/sist-direcao/terminais/viemar335433.png" alt="viemar-335433" class="img-fluid">
+                        <div class="card-body">
+                            <h5 class="card-title">Terminal Viemar-335433</h5>
+                            <p class="card-text">Linha Fiat - Lado Direito</p>
 
-
-                        <!-- fiat  -->
-                        <div class="col-md-3 card fiat">
-                            <img src="photos/sist-direcao/pivos/pvi1031.png" alt="tdi1031" class="img-fluid">
-                            <div class="card-body">
-                                <h5 class="card-title">Pivô TDI-1031</h5>
-                                <p class="card-text">Linha Fiat - Lado Direito/Esquerdo</p>
-
-                                <button type="button" class="padraoBtn" data-bs-toggle="modal" data-bs-target="#pvi1031">Aplicações</button>
-                            </div>
+                            <button type="button" class="padraoBtn" data-bs-toggle="modal" data-bs-target="#335433">Aplicações</button>
                         </div>
+                    </div>
 
-                        <div class="col-md-3 card fiat">
-                            <img src="photos/sist-direcao/pivos/amortex653110.png" alt="amortex653110" class="img-fluid">
-                            <div class="card-body">
-                                <h5 class="card-title">Pivô Amortex-653110</h5>
-                                <p class="card-text">Linha Fiat - Lado Direito/Esquerdo</p>
+                    <div class="col-md-3 card fiat">
+                        <img src="photos/sist-direcao/terminais/tdi0149.png" alt="tdi0149" class="img-fluid">
+                        <div class="card-body">
+                            <h5 class="card-title">Terminal TDI-0149</h5>
+                            <p class="card-text">Linha Fiat - Lado Esquerdo - Rosca Grossa</p>
 
-                                <button type="button" class="padraoBtn" data-bs-toggle="modal" data-bs-target="#653110">Aplicações</button>
-                            </div>
+                            <button type="button" class="padraoBtn" data-bs-toggle="modal" data-bs-target="#tdi0149">Aplicações</button>
                         </div>
+                    </div>
 
-                        <div class="col-md-3 card fiat">
-                            <img src="photos/sist-direcao/pivos/pvi1023.png" alt="bps16020" class="img-fluid">
-                            <div class="card-body">
-                                <h5 class="card-title">Pivô BSP-16020</h5>
-                                <p class="card-text">Linha Fiat - Lado Direito/Esquerdo - Inferior</p>
+                    <div class="col-md-3 card fiat">
+                        <img src="photos/sist-direcao/terminais/n6012.png" alt="N-6012" class="img-fluid">
+                        <div class="card-body">
+                            <h5 class="card-title">Terminal N-6012</h5>
+                            <p class="card-text">Linha Fiat - Lado Esquerdo/Direito</p>
 
-                                <button type="button" class="padraoBtn" data-bs-toggle="modal" data-bs-target="#bps16020">Aplicações</button>
-                            </div>
+                            <button type="button" class="padraoBtn" data-bs-toggle="modal" data-bs-target="#n6012">Aplicações</button>
                         </div>
+                    </div>
 
-                        <!--gm-->
+                    <!-- GM -->
 
-                        <div class="col-md-3 card gm">
-                            <img src="photos/sist-direcao/pivos/pvi1023.png" alt="pvi1023" class="img-fluid">
-                            <div class="card-body">
-                                <h5 class="card-title">Pivô PVI-1023</h5>
-                                <p class="card-text">Linha GM - Lado Direito/Esquerdo - Inferio</p>
+                    <div class="col-md-3 card gm">
+                        <img src="photos/sist-direcao/terminais/tdi1083.png" alt="tdi1083" class="img-fluid">
+                        <div class="card-body">
+                            <h5 class="card-title">Terminal TDI-1083</h5>
+                            <p class="card-text">Linha GM - Lado Esquerdo/Direito</p>
 
-                                <button type="button" class="padraoBtn" data-bs-toggle="modal" data-bs-target="#pvi1023">Aplicações</button>
-                            </div>
+                            <button type="button" class="padraoBtn" data-bs-toggle="modal" data-bs-target="#tdi1083">Aplicações</button>
                         </div>
+                    </div>
 
-                        <div class="col-md-3 card gm">
-                            <img src="photos/sist-direcao/pivos/pvs1023.png" alt="pvs1023" class="img-fluid">
-                            <div class="card-body">
-                                <h5 class="card-title">Pivô PVS-1023</h5>
-                                <p class="card-text">Linha GM - Lado Direito/Esquerdo - Superior</p>
+                    <div class="col-md-3 card gm">
+                        <img src="photos/sist-direcao/terminais/amortex63302.png" alt="633302" class="img-fluid">
+                        <div class="card-body">
+                            <h5 class="card-title">Terminal Amortex-633302</h5>
+                            <p class="card-text">Linha GM - Lado Esquerdo/Direito</p>
 
-                                <button type="button" class="padraoBtn" data-bs-toggle="modal" data-bs-target="#pvs1023">Aplicações</button>
-                            </div>
+                            <button type="button" class="padraoBtn" data-bs-toggle="modal" data-bs-target="#63302">Aplicações</button>
                         </div>
+                    </div>
 
-                        <div class="col-md-3 card gm">
-                            <img src="photos/sist-direcao/pivos/bsp12045.png" alt="bsp12045" class="img-fluid">
-                            <div class="card-body">
-                                <h5 class="card-title">Pivô BSP-12045</h5>
-                                <p class="card-text">Linha GM - Lado Direito/Esquerdo - Superior</p>
+                    <div class="col-md-3 card gm">
+                        <img src="photos/sist-direcao/terminais/amortex33604.png" alt="33604" class="img-fluid">
+                        <div class="card-body">
+                            <h5 class="card-title">Terminal Amortex-33604</h5>
+                            <p class="card-text">Linha GM - Lado Esquerdo/Direito</p>
 
-                                <button type="button" class="padraoBtn" data-bs-toggle="modal" data-bs-target="#bsp12045">Aplicações</button>
-                            </div>
+                            <button type="button" class="padraoBtn" data-bs-toggle="modal" data-bs-target="#33604">Aplicações</button>
                         </div>
+                    </div>
 
-                        <!-- vws  -->
+                    <div class="col-md-3 card gm">
+                        <img src="photos/sist-direcao/terminais/n302.png" alt="n302" class="img-fluid">
+                        <div class="card-body">
+                            <h5 class="card-title">Terminal N-302</h5>
+                            <p class="card-text">Linha GM - Lado Esquerdo/Direito</p>
 
-                        <div class="col-md-3 card vws">
-                            <img src="photos/sist-direcao/pivos/viemar503192.png" alt="viemar503192" class="img-fluid">
-                            <div class="card-body">
-                                <h5 class="card-title">Pivô Viemar-503192</h5>
-                                <p class="card-text">Linha Volskwage - Lado Direito</p>
-
-                                <button type="button" class="padraoBtn" data-bs-toggle="modal" data-bs-target="#503192">Aplicações</button>
-                            </div>
+                            <button type="button" class="padraoBtn" data-bs-toggle="modal" data-bs-target="#n302">Aplicações</button>
                         </div>
+                    </div>
 
-                        <div class="col-md-3 card vws">
-                            <img src="photos/sist-direcao/pivos/pvi1056.png" alt="pvi1056" class="img-fluid">
-                            <div class="card-body">
-                                <h5 class="card-title">Pivô PVI-1056</h5>
-                                <p class="card-text">Linha Volskwage - Lado Direito</p>
+                    <div class="col-md-3 card gm">
+                        <img src="photos/sist-direcao/terminais/n336.png" alt="n336" class="img-fluid">
+                        <div class="card-body">
+                            <h5 class="card-title">Terminal N-336</h5>
+                            <p class="card-text">Linha GM - Lado Esquerdo/Direito</p>
 
-                                <button type="button" class="padraoBtn" data-bs-toggle="modal" data-bs-target="#pvi1056">Aplicações</button>
-                            </div>
+                            <button type="button" class="padraoBtn" data-bs-toggle="modal" data-bs-target="#n336">Aplicações</button>
                         </div>
+                    </div>
 
-                        <div class="col-md-3 card vws">
-                            <img src="photos/sist-direcao/pivos/pvi1006.png" alt="pvi1006" class="img-fluid">
-                            <div class="card-body">
-                                <h5 class="card-title">Pivô PVI-1006</h5>
-                                <p class="card-text">Linha Volskwage - Lado Direito</p>
+                    <div class="col-md-3 card gm">
+                        <img src="photos/sist-direcao/terminais/amortex633074.png" alt="amortex633074" class="img-fluid">
+                        <div class="card-body">
+                            <h5 class="card-title">Terminal Amortex-633074</h5>
+                            <p class="card-text">Linha GM - Lado Esquerdo/Direito</p>
 
-                                <button type="button" class="padraoBtn" data-bs-toggle="modal" data-bs-target="#pvi1006">Aplicações</button>
-                            </div>
+                            <button type="button" class="padraoBtn" data-bs-toggle="modal" data-bs-target="#633074">Aplicações</button>
                         </div>
+                    </div>
 
-                        <!-- FORD -->
-                        <div class="col-md-3 card ford">
-                            <img src="photos/sist-direcao/pivos/amortex53084.png" alt="amortex53084" class="img-fluid">
-                            <div class="card-body">
-                                <h5 class="card-title">Pivô Amortex-53084</h5>
-                                <p class="card-text">Linha Ford - Lado Direito/Esquerdo</p>
+                    <!-- VWS  -->
+                    <div class="col-md-3 card vws">
+                        <img src="photos/sist-direcao/terminais/nakata1027.png" alt="nakata1027" class="img-fluid">
+                        <div class="card-body">
+                            <h5 class="card-title">Terminal Nakata-1027</h5>
+                            <p class="card-text">Linha Volskwage - Lado Esquerdo/Direito</p>
 
-                                <button type="button" class="padraoBtn" data-bs-toggle="modal" data-bs-target="#53084">Aplicações</button>
-                            </div>
+                            <button type="button" class="padraoBtn" data-bs-toggle="modal" data-bs-target="#1027">Aplicações</button>
                         </div>
+                    </div>
 
-                        <div class="col-md-3 card ford">
-                            <img src="photos/sist-direcao/pivos/amortex53083.png" alt="amortex53083" class="img-fluid">
-                            <div class="card-body">
-                                <h5 class="card-title">Pivô Amortex-53083</h5>
-                                <p class="card-text">Linha Ford - Lado Direito/Esquerdo</p>
+                    <div class="col-md-3 card vws">
+                        <img src="photos/sist-direcao/terminais/amortex33168.png" alt="amortex-33168" class="img-fluid">
+                        <div class="card-body">
+                            <h5 class="card-title">Terminal Amortex-33168</h5>
+                            <p class="card-text">Linha Volskwage - Lado Esquerdo/Direito</p>
 
-                                <button type="button" class="padraoBtn" data-bs-toggle="modal" data-bs-target="#53083">Aplicações</button>
-                            </div>
+                            <button type="button" class="padraoBtn" data-bs-toggle="modal" data-bs-target="#33168">Aplicações</button>
                         </div>
+                    </div>
 
+                    <div class="col-md-3 card vws">
+                        <img src="photos/sist-direcao/terminais/amortex33001.png" alt="amortex-33001" class="img-fluid">
+                        <div class="card-body">
+                            <h5 class="card-title">Terminal Amortex-33001</h5>
+                            <p class="card-text">Linha Volskwage - Lado Direito</p>
 
-                     </div>
+                            <button type="button" class="padraoBtn" data-bs-toggle="modal" data-bs-target="#33001">Aplicações</button>
+                        </div>
+                    </div>
 
-                    
+                    <div class="col-md-3 card vws">
+                        <img src="photos/sist-direcao/terminais/tdi1088.png" alt="tdi1088" class="img-fluid">
+                        <div class="card-body">
+                            <h5 class="card-title">Terminal TDI-1088</h5>
+                            <p class="card-text">Linha Volskwage - Lado Direito</p>
+
+                            <button type="button" class="padraoBtn" data-bs-toggle="modal" data-bs-target="#tdi1088">Aplicações</button>
+                        </div>
+                    </div>
+
+                    <!-- NISSAN -->
+                    <div class="col-md-3 card nissan">
+                        <img src="photos/sist-direcao/terminais/viemar335585.png" alt="viemar335585" class="img-fluid">
+                        <div class="card-body">
+                            <h5 class="card-title">Terminal Viemar-335585</h5>
+                            <p class="card-text">Linha Nissan - Lado Esquerdo</p>
+
+                            <button type="button" class="padraoBtn" data-bs-toggle="modal" data-bs-target="#335585">Aplicações</button>
+                        </div>
+                    </div>
+
+                    <!-- toyota -->
+                    <div class="col-md-3 card toy">
+                        <img src="photos/sist-direcao/terminais/amortex33079.png" alt="amortex33079" class="img-fluid">
+                        <div class="card-body">
+                            <h5 class="card-title">Terminal Amortex-33079</h5>
+                            <p class="card-text">Linha Toyota - Lado Direito/Esquerdo</p>
+
+                            <button type="button" class="padraoBtn" data-bs-toggle="modal" data-bs-target="#33079">Aplicações</button>
+                        </div>
+                    </div>
 
                 </div>
+
+
+                <!-- PIVOS DE SUSPENSAO -->
+                    <div class="row" id="row-pivos">
+                    <div class="col-12">
+                        <h2 class="titles-sessoes espacamento-title">Pivos de Suspensão</h2>
+                    </div>
+
+                    <!-- btns dos terminais  -->
+                    <div class="col-12 d-flex justify-content-around" id="btns-pivos">
+                        <button class="design-btn active">Todos</button>
+                        <button class="design-btn">Fiat</button>
+                        <button class="design-btn">Volskwage</button>
+                        <button class="design-btn">GM</button>
+                        <button class="design-btn">Ford</button>
+                        </div>
+
+
+                    <!-- fiat  -->
+                    <div class="col-md-3 card fiat">
+                        <img src="photos/sist-direcao/pivos/pvi1031.png" alt="tdi1031" class="img-fluid">
+                        <div class="card-body">
+                            <h5 class="card-title">Pivô TDI-1031</h5>
+                            <p class="card-text">Linha Fiat - Lado Direito/Esquerdo</p>
+
+                            <button type="button" class="padraoBtn" data-bs-toggle="modal" data-bs-target="#pvi1031">Aplicações</button>
+                        </div>
+                    </div>
+
+                    <div class="col-md-3 card fiat">
+                        <img src="photos/sist-direcao/pivos/amortex653110.png" alt="amortex653110" class="img-fluid">
+                        <div class="card-body">
+                            <h5 class="card-title">Pivô Amortex-653110</h5>
+                            <p class="card-text">Linha Fiat - Lado Direito/Esquerdo</p>
+
+                            <button type="button" class="padraoBtn" data-bs-toggle="modal" data-bs-target="#653110">Aplicações</button>
+                        </div>
+                    </div>
+
+                    <div class="col-md-3 card fiat">
+                        <img src="photos/sist-direcao/pivos/pvi1023.png" alt="bps16020" class="img-fluid">
+                        <div class="card-body">
+                            <h5 class="card-title">Pivô BSP-16020</h5>
+                            <p class="card-text">Linha Fiat - Lado Direito/Esquerdo - Inferior</p>
+
+                            <button type="button" class="padraoBtn" data-bs-toggle="modal" data-bs-target="#bps16020">Aplicações</button>
+                        </div>
+                    </div>
+
+                    <!--gm-->
+
+                    <div class="col-md-3 card gm">
+                        <img src="photos/sist-direcao/pivos/pvi1023.png" alt="pvi1023" class="img-fluid">
+                        <div class="card-body">
+                            <h5 class="card-title">Pivô PVI-1023</h5>
+                            <p class="card-text">Linha GM - Lado Direito/Esquerdo - Inferio</p>
+
+                            <button type="button" class="padraoBtn" data-bs-toggle="modal" data-bs-target="#pvi1023">Aplicações</button>
+                        </div>
+                    </div>
+
+                    <div class="col-md-3 card gm">
+                        <img src="photos/sist-direcao/pivos/pvs1023.png" alt="pvs1023" class="img-fluid">
+                        <div class="card-body">
+                            <h5 class="card-title">Pivô PVS-1023</h5>
+                            <p class="card-text">Linha GM - Lado Direito/Esquerdo - Superior</p>
+
+                            <button type="button" class="padraoBtn" data-bs-toggle="modal" data-bs-target="#pvs1023">Aplicações</button>
+                        </div>
+                    </div>
+
+                    <div class="col-md-3 card gm">
+                        <img src="photos/sist-direcao/pivos/bsp12045.png" alt="bsp12045" class="img-fluid">
+                        <div class="card-body">
+                            <h5 class="card-title">Pivô BSP-12045</h5>
+                            <p class="card-text">Linha GM - Lado Direito/Esquerdo - Superior</p>
+
+                            <button type="button" class="padraoBtn" data-bs-toggle="modal" data-bs-target="#bsp12045">Aplicações</button>
+                        </div>
+                    </div>
+
+                    <!-- vws  -->
+
+                    <div class="col-md-3 card vws">
+                        <img src="photos/sist-direcao/pivos/viemar503192.png" alt="viemar503192" class="img-fluid">
+                        <div class="card-body">
+                            <h5 class="card-title">Pivô Viemar-503192</h5>
+                            <p class="card-text">Linha Volskwage - Lado Direito</p>
+
+                            <button type="button" class="padraoBtn" data-bs-toggle="modal" data-bs-target="#503192">Aplicações</button>
+                        </div>
+                    </div>
+
+                    <div class="col-md-3 card vws">
+                        <img src="photos/sist-direcao/pivos/pvi1056.png" alt="pvi1056" class="img-fluid">
+                        <div class="card-body">
+                            <h5 class="card-title">Pivô PVI-1056</h5>
+                            <p class="card-text">Linha Volskwage - Lado Direito</p>
+
+                            <button type="button" class="padraoBtn" data-bs-toggle="modal" data-bs-target="#pvi1056">Aplicações</button>
+                        </div>
+                    </div>
+
+                    <div class="col-md-3 card vws">
+                        <img src="photos/sist-direcao/pivos/pvi1006.png" alt="pvi1006" class="img-fluid">
+                        <div class="card-body">
+                            <h5 class="card-title">Pivô PVI-1006</h5>
+                            <p class="card-text">Linha Volskwage - Lado Direito</p>
+
+                            <button type="button" class="padraoBtn" data-bs-toggle="modal" data-bs-target="#pvi1006">Aplicações</button>
+                        </div>
+                    </div>
+
+                    <!-- FORD -->
+                    <div class="col-md-3 card ford">
+                        <img src="photos/sist-direcao/pivos/amortex53084.png" alt="amortex53084" class="img-fluid">
+                        <div class="card-body">
+                            <h5 class="card-title">Pivô Amortex-53084</h5>
+                            <p class="card-text">Linha Ford - Lado Direito/Esquerdo</p>
+
+                            <button type="button" class="padraoBtn" data-bs-toggle="modal" data-bs-target="#53084">Aplicações</button>
+                        </div>
+                    </div>
+
+                    <div class="col-md-3 card ford">
+                        <img src="photos/sist-direcao/pivos/amortex53083.png" alt="amortex53083" class="img-fluid">
+                        <div class="card-body">
+                            <h5 class="card-title">Pivô Amortex-53083</h5>
+                            <p class="card-text">Linha Ford - Lado Direito/Esquerdo</p>
+
+                            <button type="button" class="padraoBtn" data-bs-toggle="modal" data-bs-target="#53083">Aplicações</button>
+                        </div>
+                    </div>
+
+
+                    </div>
+
+
+                    <!-- BARRAS AXIAIS -->
+                    <div class="row" id="row-axiais">
+
+                    <div class="col-12">
+                        <h2 class="titles-sessoes espacamento-title">Barras Axiais</h2>
+                    </div>
+
+                    <!-- btns das barras  -->
+                    <div class="col-12 d-flex justify-content-around" id="sistema-btns">
+                        <button class="design-btn active">Todos</button>
+                        <button class="design-btn">Fiat</button>
+                        <button class="design-btn">Volskwage</button>
+                        <button class="design-btn">GM</button>
+                        <button class="design-btn">Ford</button>
+                        </div>
+
+                    <!-- fiat  -->
+                    <div class="col-md-3 card fiat">
+                        <img src="photos/sist-direcao/barras/axial63542.png" alt="axial63542" class="img-fluid">
+                        <div class="card-body">
+                            <h5 class="card-title">Barra Axial 63542</h5>
+                            <p class="card-text">Sistema Hidráulico</p>
+                            <p class="card-text">Linha Fiat</p>
+
+                            <button type="button" class="padraoBtn" data-bs-toggle="modal" data-bs-target="#63542">Aplicações</button>
+                        </div>
+                    </div>
+
+                    <div class="col-md-3 card fiat">
+                        <img src="photos/sist-direcao/barras/axial68002.png" alt="axial68002" class="img-fluid">
+                        <div class="card-body">
+                            <h5 class="card-title">Barra Axial 68002</h5>
+                            <p class="card-text">Sistema Hidráulico e Mecânico</p>
+                            <p class="card-text">Linha Fiat</p>
+
+                            <button type="button" class="padraoBtn" data-bs-toggle="modal" data-bs-target="#68002">Aplicações</button>
+                        </div>
+                    </div>
+
+                    <div class="col-md-3 card fiat">
+                        <img src="photos/sist-direcao/barras/amortex68077.png" alt="amortex68077" class="img-fluid">
+                        <div class="card-body">
+                            <h5 class="card-title">Barra Axial 68077</h5>
+                            <p class="card-text">Sistema Hidráulico</p>
+                            <p class="card-text">Linha Fiat/Citroen/Peugeot</p>
+
+                            <button type="button" class="padraoBtn" data-bs-toggle="modal" data-bs-target="#68077">Aplicações</button>
+                        </div>
+                    </div>
+
+                    <!-- GM  -->
+                    <div class="col-md-3 card gm ford">
+                        <img src="photos/sist-direcao/barras/axial68011.png" alt="axial68011" class="img-fluid">
+                        <div class="card-body">
+                            <h5 class="card-title">Barra Axial 68011</h5>
+                            <p class="card-text">Sistema Hidráulico e Mecânico</p>
+                            <p class="card-text">Linha GM/Ford</p>
+
+                            <button type="button" class="padraoBtn" data-bs-toggle="modal" data-bs-target="#68011">Aplicações</button>
+                        </div>
+                    </div>
+
+                    <div class="col-md-3 card gm">
+                        <img src="photos/sist-direcao/barras/ax012.png" alt="ax012" class="img-fluid">
+                        <div class="card-body">
+                            <h5 class="card-title">Barra Axial AX-012</h5>
+                            <p class="card-text">Sistema Hidráulico e Mecânico</p>
+                            <p class="card-text">Linha GM</p>
+
+                            <button type="button" class="padraoBtn" data-bs-toggle="modal" data-bs-target="#ax012">Aplicações</button>
+                        </div>
+                    </div>
+
+                    <!-- vws  -->
+                    <div class="col-md-3 card vws">
+                        <img src="photos/sist-direcao/barras/amortex68192.png" alt="amortex68192" class="img-fluid">
+                        <div class="card-body">
+                            <h5 class="card-title">Barra Axial Amortex-68192</h5>
+                            <p class="card-text">Sistema Hidráulico</p>
+                            <p class="card-text">Linha Volskwage</p>
+
+                            <button type="button" class="padraoBtn" data-bs-toggle="modal" data-bs-target="#68192">Aplicações</button>
+                        </div>
+                    </div>
+
+                    <div class="col-md-3 card vws">
+                        <img src="photos/sist-direcao/barras/amortex68032.png" alt="amortex68032" class="img-fluid">
+                        <div class="card-body">
+                            <h5 class="card-title">Barra Axial Amortex-68032</h5>
+                            <p class="card-text">Sistema Hidráulico</p>
+                            <p class="card-text">Linha Volskwage</p>
+
+                            <button type="button" class="padraoBtn" data-bs-toggle="modal" data-bs-target="#68032">Aplicações</button>
+                        </div>
+                    </div>
+                    
+                    <!-- ford  -->
+                    <div class="col-md-3 card ford">
+                        <img src="photos/sist-direcao/barras/amortex68184.png" alt="amortex68184" class="img-fluid">
+                        <div class="card-body">
+                            <h5 class="card-title">Barra Axial Amortex-68184</h5>
+                            <p class="card-text">Sistema Hidráulico</p>
+                            <p class="card-text">Linha Ford</p>
+
+                            <button type="button" class="padraoBtn" data-bs-toggle="modal" data-bs-target="#68184">Aplicações</button>
+                        </div>
+                    </div>
+
+
+                    </div>
+                
             </div>
+        </div>
+
+
+
+
 
     </main>
 
@@ -3434,6 +3575,34 @@
     </div>
 </div>
 
+<!-- toyota -->
+
+<!-- amortex33079 -->
+<div class="modal fade" id="33079" aria-hidden="true" aria-labelledby="modal-filtro-label" tabindex="-1" >
+    <div class="modal-dialog modal-dialog-scrollable">
+
+        <div class="modal-content" id="modal-content">
+
+            <div class="modal-header">
+                <h2>Aplicações</h2>
+                <button class="btn-close" type="button" data-bs-dismiss="modal" aria-label="close"></button>
+            </div>
+                <div class="modal-body">
+                <h5>Amortex-33079</h5>
+                <ul id="lista-aplicacoes">
+                    <li class="montadora">TOYOTA:</li>
+                    <li><span class="carro">Hilux:</span> 1995-2004</li>
+                    <li><span class="carro">Hilux-SW4:</span> 1995-2004</li>
+                </ul>
+            </div>
+
+            <div class="modal-footer" id="modalFooterDirecao">
+                <p><span class="carro">Marca:</span> <span class="marcas">Amortex</span></p>
+                <p class="carro">C-1692</p>
+            </div>
+        </div>
+    </div>
+</div>
 </div>
 
 
@@ -3797,6 +3966,291 @@
 </div>
 
  </div>
+
+<!-- MODAIS DAS BARRAS AXIAIS -->
+ <div>
+
+    <!-- esqueleto base -->
+<div class="modal fade" id="" aria-hidden="true" aria-labelledby="modal-filtro-label" tabindex="-1" >
+    <div class="modal-dialog modal-dialog-scrollable">
+
+        <div class="modal-content" id="modal-content">
+
+            <div class="modal-header">
+                <h2>Aplicações</h2>
+                <button class="btn-close" type="button" data-bs-dismiss="modal" aria-label="close"></button>
+            </div>
+                <div class="modal-body">
+                <h5></h5>
+                <ul id="lista-aplicacoes">
+                    <li class="montadora"></li>
+                    <li><span class="carro"></span></li>
+
+
+                </ul>
+            </div>
+
+            <div class="modal-footer" id="modalFooterDirecao">
+                <p><span class="carro">Marca:</span> <span class="marcas"></span></p>
+                <p class="carro">C-</p>
+            </div>
+        </div>
+    </div>
+</div>
+
+    <!-- axial63542 -->
+<div class="modal fade" id="63542" aria-hidden="true" aria-labelledby="modal-filtro-label" tabindex="-1" >
+    <div class="modal-dialog modal-dialog-scrollable">
+
+        <div class="modal-content" id="modal-content">
+
+            <div class="modal-header">
+                <h2>Aplicações</h2>
+                <button class="btn-close" type="button" data-bs-dismiss="modal" aria-label="close"></button>
+            </div>
+                <div class="modal-body">
+                <h5>Barra Axial - 63542</h5>
+                <ul id="lista-aplicacoes">
+                    <li class="montadora">FIAT:</li>
+                    <li><span class="carro">Fiorino:</span> 2013..</li>
+                    <li><span class="carro">Uno-Vivace:</span> 2010</li>
+
+
+                </ul>
+            </div>
+
+            <div class="modal-footer" id="modalFooterDirecao">
+                <p><span class="carro">Marca:</span> <span class="marcas">Amortex</span></p>
+                <p class="carro">C-1241</p>
+            </div>
+        </div>
+    </div>
+</div>
+
+    <!-- axial68002 -->
+<div class="modal fade" id="68002" aria-hidden="true" aria-labelledby="modal-filtro-label" tabindex="-1" >
+    <div class="modal-dialog modal-dialog-scrollable">
+
+        <div class="modal-content" id="modal-content">
+
+            <div class="modal-header">
+                <h2>Aplicações</h2>
+                <button class="btn-close" type="button" data-bs-dismiss="modal" aria-label="close"></button>
+            </div>
+                <div class="modal-body">
+                <h5>Barra Axial - 68002</h5>
+                <ul id="lista-aplicacoes">
+                    <li class="montadora">FIAT:</li>
+                    <li><span class="carro">147:</span> 1976-1986</li>
+                    <li><span class="carro">Elba:</span> 1986-1996</li>
+                    <li><span class="carro">Fiorino:</span> 1981-2004</li>
+                    <li><span class="carro">OGGI:</span> 1983-1985</li>
+                    <li><span class="carro">Panorama:</span> 1980-1986</li>
+                    <li><span class="carro">Premio:</span> 1985-1994</li>
+                    <li><span class="carro">Uno:</span> 1984-2004</li>
+                </ul>
+            </div>
+
+            <div class="modal-footer" id="modalFooterDirecao">
+                <p><span class="carro">Marca:</span> <span class="marcas">Amortex</span></p>
+                <p class="carro">C-1238</p>
+            </div>
+        </div>
+    </div>
+</div>
+
+    <!-- axial68011 -->
+<div class="modal fade" id="68011" aria-hidden="true" aria-labelledby="modal-filtro-label" tabindex="-1" >
+    <div class="modal-dialog modal-dialog-scrollable">
+
+        <div class="modal-content" id="modal-content">
+
+            <div class="modal-header">
+                <h2>Aplicações</h2>
+                <button class="btn-close" type="button" data-bs-dismiss="modal" aria-label="close"></button>
+            </div>
+                <div class="modal-body">
+                <h5>Barra Axial - 68011</h5>
+                <ul id="lista-aplicacoes">
+                    <li class="montadora">GM:</li>
+                    <li><span class="carro">Corsa:</span> 1994-2002</li>
+
+                    <li class="montadora">FORD:</li>
+                    <li><span class="carro">Courier:</span> 1997-2013</li>
+                    <li><span class="carro">Escort:</span> 1993-2003</li>
+                    <li><span class="carro">Fiesta:</span> 1996-2014</li>
+                    <li><span class="carro">Verona:</span> 1990-1992</li>
+                </ul>
+            </div>
+
+            <div class="modal-footer" id="modalFooterDirecao">
+                <p><span class="carro">Marca:</span> <span class="marcas">Amortex</span></p>
+                <p class="carro">C-1683</p>
+            </div>
+        </div>
+    </div>
+</div>
+
+    <!-- ax012 -->
+<div class="modal fade" id="ax012" aria-hidden="true" aria-labelledby="modal-filtro-label" tabindex="-1" >
+    <div class="modal-dialog modal-dialog-scrollable">
+
+        <div class="modal-content" id="modal-content">
+
+            <div class="modal-header">
+                <h2>Aplicações</h2>
+                <button class="btn-close" type="button" data-bs-dismiss="modal" aria-label="close"></button>
+            </div>
+                <div class="modal-body">
+                <h5>Barra Axial - AX-012</h5>
+                <ul id="lista-aplicacoes">
+                    <li class="montadora">GM:</li>
+                    <li><span class="carro">Celta:</span> 2005-2006</li>
+                    <li><span class="carro">Corsa:</span> 2005-2009</li>
+                    <li><span class="carro">Classic:</span> 2006-2008</li>
+                    <li><span class="carro">Prisma:</span> 2006-2013</li>
+                    <li><span class="carro">Tigra:</span> 1997-1998</li>
+                </ul>
+            </div>
+
+            <div class="modal-footer" id="modalFooterDirecao">
+                <p><span class="carro">Marca:</span> <span class="marcas">Volda</span></p>
+                <p class="carro">C-3123</p>
+            </div>
+        </div>
+    </div>
+</div>
+
+    <!-- amortex68077 -->
+<div class="modal fade" id="68077" aria-hidden="true" aria-labelledby="modal-filtro-label" tabindex="-1" >
+    <div class="modal-dialog modal-dialog-scrollable">
+
+        <div class="modal-content" id="modal-content">
+
+            <div class="modal-header">
+                <h2>Aplicações</h2>
+                <button class="btn-close" type="button" data-bs-dismiss="modal" aria-label="close"></button>
+            </div>
+                <div class="modal-body">
+                <h5>Barra Axial 68077</h5>
+                <ul id="lista-aplicacoes">
+                    <li class="montadora">FIAT:</li>
+                    <li><span class="carro">Ducato:</span> 1998-2015</li>
+
+                    <li class="montadora">CITROEN:</li>
+                    <li><span class="carro">Jumper:</span> 1995-2006</li>
+
+                    <li class="montadora">PEUGEOT:</li>
+                    <li><span class="carro">Boxer:</span> 1998-2006</li>
+
+                </ul>
+            </div>
+
+            <div class="modal-footer" id="modalFooterDirecao">
+                <p><span class="carro">Marca:</span> <span class="marcas">Amortex</span></p>
+                <p class="carro">C-3432</p>
+            </div>
+        </div>
+    </div>
+</div>
+
+    <!-- amortex68192 -->
+<div class="modal fade" id="68192" aria-hidden="true" aria-labelledby="modal-filtro-label" tabindex="-1" >
+    <div class="modal-dialog modal-dialog-scrollable">
+
+        <div class="modal-content" id="modal-content">
+
+            <div class="modal-header">
+                <h2>Aplicações</h2>
+                <button class="btn-close" type="button" data-bs-dismiss="modal" aria-label="close"></button>
+            </div>
+                <div class="modal-body">
+                <h5>Barra Axial 68192</h5>
+                <ul id="lista-aplicacoes">
+                    <li class="montadora">Volskwage:</li>
+                    <li><span class="carro">CrossFox:</span> 2005-2009</li>
+                    <li><span class="carro">Fox:</span> 2003-2009</li>
+                    <li><span class="carro">Gol:</span> 2008-2015</li>
+                    <li><span class="carro">Polo:</span> 2002-2009</li>
+                    <li><span class="carro">Saveiro:</span> 2009-2013</li>
+                    <li><span class="carro">SpaceFox:</span> 2006-2009</li>
+                    <li><span class="carro">Voyage:</span> 2008-2019</li>
+
+                </ul>
+            </div>
+
+            <div class="modal-footer" id="modalFooterDirecao">
+                <p><span class="carro">Marca:</span> <span class="marcas">Amortex</span></p>
+                <p class="carro">C-1349</p>
+            </div>
+        </div>
+    </div>
+</div>
+
+    <!-- amortex68032 -->
+<div class="modal fade" id="68032" aria-hidden="true" aria-labelledby="modal-filtro-label" tabindex="-1" >
+    <div class="modal-dialog modal-dialog-scrollable">
+
+        <div class="modal-content" id="modal-content">
+
+            <div class="modal-header">
+                <h2>Aplicações</h2>
+                <button class="btn-close" type="button" data-bs-dismiss="modal" aria-label="close"></button>
+            </div>
+                <div class="modal-body">
+                <h5>Barra Axial 68032</h5>
+                <ul id="lista-aplicacoes">
+                    <li class="montadora">Volskwage:</li>
+                    <li><span class="carro">Golf:</span> 1990-1999</li>
+                </ul>
+            </div>
+
+            <div class="modal-footer" id="modalFooterDirecao">
+                <p><span class="carro">Marca:</span> <span class="marcas">Amortex</span></p>
+                <p class="carro">C-1693</p>
+            </div>
+        </div>
+    </div>
+</div>
+
+    <!-- amortex68184 -->
+<div class="modal fade" id="68184" aria-hidden="true" aria-labelledby="modal-filtro-label" tabindex="-1" >
+    <div class="modal-dialog modal-dialog-scrollable">
+
+        <div class="modal-content" id="modal-content">
+
+            <div class="modal-header">
+                <h2>Aplicações</h2>
+                <button class="btn-close" type="button" data-bs-dismiss="modal" aria-label="close"></button>
+            </div>
+                <div class="modal-body">
+                <h5>Barra Axial 68184</h5>
+                <ul id="lista-aplicacoes">
+                    <li class="montadora">FORD:</li>
+                    <li><span class="carro">Ecosport:</span> 2003-2012</li>
+                    <li><span class="carro">Fiesta:</span> 2002-2014</li>
+                    <li><span class="carro">Ka:</span> 2008-2014</li>
+                </ul>
+            </div>
+
+            <div class="modal-footer" id="modalFooterDirecao">
+                <p><span class="carro">Marca:</span> <span class="marcas">Amortex</span></p>
+                <p class="carro">C-1684</p>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+ </div>
+
+
+
+
+
+
+
+
 
 </body>
 </html>
