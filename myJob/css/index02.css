@@ -47,7 +47,7 @@
 
 /* SISTEMA DE DIRECAO */
 #area-sistema-direcao{
-    display: non;
+    display: none;
 }
 #row-header-sistemaDirecao{
     height: 250px;
