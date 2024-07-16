@@ -1209,18 +1209,38 @@ function filtroBarras(){
 // logica offcanvas 
 document.addEventListener('DOMContentLoaded', () =>{
 
-    let myOffCanvas = document.querySelector('#myOffCanvas')
+    let myOffCanvas = document.querySelectorAll('.myOffCanvas')
+    //console.log(myOffCanvas)
 
-    let bsOffCanvas = new bootstrap.Offcanvas(myOffCanvas);
+    let bsOffCanvas = new bootstrap.Offcanvas(myOffCanvas[0]);
+    let bsOffCanvas2 = new bootstrap.Offcanvas(myOffCanvas[1]);
 
-    document.getElementById('btn-open-offcanvas').addEventListener('click', (e) =>{
-        e.preventDefault();
-        e.stopPropagation();
-        bsOffCanvas.toggle();
+    let allBtnOff = document.querySelectorAll('.btn-open-offcanvas')
+    //console.log(allBtnOff)
+
+
+    // terminais 
+    allBtnOff[0].addEventListener('click', (e) =>{
+        e.preventDefault()
+        e.stopPropagation()
+        bsOffCanvas.toggle()
+    })
+
+    // Suspensao
+    allBtnOff[1].addEventListener('click', (e) =>{
+        e.preventDefault()
+        e.stopPropagation()
+        bsOffCanvas2.toggle()
     })
 
 
+    
 
+    // document.querySelector('.btn-open-offcanvas').addEventListener('click', (e) =>{
+    //     e.preventDefault();
+    //     e.stopPropagation();
+    //     bsOffCanvas.toggle();
+    // })
 
 })
 

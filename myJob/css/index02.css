@@ -13,7 +13,7 @@
 
 
 /* STYLO DO OFFCANVAS */
-#offCanvasTitle{
+.offCanvasTitle{
     width: 100%;
     display: flex;
     justify-content: center;
@@ -21,7 +21,7 @@
     font-size: 1.8rem;
     text-shadow: 2px 2px 1px black;
 }
-#myOffCanvas ul{
+.myOffCanvas ul{
     padding: 0%;
     margin: 0%;
     list-style: none;
@@ -31,7 +31,7 @@
     align-items: center;
 }
 
-#myOffCanvas ul li a{
+.myOffCanvas ul li a{
     text-decoration: none ;
     font-size: 1.1rem;
     font-weight: bold;
@@ -48,7 +48,7 @@
     padding: 0%;
 }
 
-#aviso-offcanvas{
+.aviso-offcanvas{
     text-align: center;
     margin: 0;
     font-weight: bold;
@@ -56,23 +56,7 @@
     display: none;
 }
 
-
-/* SISTEMA DE DIRECAO */
-#area-sistema-direcao{
-    display: none;
-}
-#row-header-sistemaDirecao{
-    height: 250px;
-}
-#estrutura-title{
-    display: flex;
-    height: 100%;
-    align-items: center;
-    justify-content: space-around;
-    
-}
-
-#btn-offcanvas button{
+.btn-offcanvas button{
     max-width: 350px;
     width: 100%;
     height: 50px;
@@ -84,6 +68,21 @@
     text-shadow: 2px 2px 2px black;
     
 }
+
+#area-sistema-direcao{
+    display: none;
+}
+.espacamento-header{
+    height: 250px;
+}
+.estrutura-title{
+    display: flex;
+    height: 100%;
+    align-items: center;
+    justify-content: space-around;
+    
+}
+
 
 
 /* TERMINAIS DE DIRECAO */
@@ -126,6 +125,21 @@
     margin-bottom: 20px;
 }
 
+/* SISTEMA DE SUSPENSAO */
+#area-sistema-suspensao{
+    display: none;
+}
+
+
+/* BATEDORES */
+#row-batedores{
+    display: flex;
+    justify-content: space-around;
+}
+#row-batedores .card{
+    margin-bottom: 20px;
+}
+
 
 
 
@@ -134,10 +148,13 @@
 /* MEDIA QUERIES */
 
 @media (orientation: landscape) and (max-height: 350px){
-    #myOffCanvas ul{
+    .offCanvasTitle{
         display: none;
     }
-    #aviso-offcanvas{
+    .myOffCanvas ul{
+        display: none;
+    }
+    .aviso-offcanvas{
         display: block;
     }
 }
@@ -178,7 +195,7 @@
 @media (max-width: 570px){
 
     /* BTNS do OFFCANVAS  */
-    #offCanvasTitle{
+    .offCanvasTitle{
         width: 100%;
         display: flex;
         justify-content: center;
@@ -193,7 +210,7 @@
         
     }
 
-    #myOffCanvas ul{
+    .myOffCanvas ul{
         margin: 0%;
         padding: 0%;
         list-style: none;
@@ -203,7 +220,7 @@
         align-items: center;
     }
 
-    #myOffCanvas ul li a{
+    .myOffCanvas ul li a{
         text-decoration: none ;
         font-size: 0.7rem;
         font-weight: bold;
@@ -222,7 +239,7 @@
 /* tamanho da font do btn para mobile */
 @media (max-width: 480px) {
     
-    #btn-offcanvas button{
+    .btn-offcanvas button{
         font-size: 1rem;
     }
     
@@ -231,7 +248,7 @@
 @media (max-width: 370px){
 
     /* BTN OFFCANVAS  */
-    #myOffCanvas ul li a{
+    .myOffCanvas ul li a{
         text-decoration: none ;
         font-size: 0.5rem;
         font-weight: bold;
