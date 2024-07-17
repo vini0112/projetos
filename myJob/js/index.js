@@ -551,10 +551,20 @@ function mostrarInfoFastSearch(){
 
     
     //ACAO DOS LINKS DA PARTE - TODOS OS DEPARTAMENTOS
+
+    // mostrando sistema de direção
     allDepart[0].addEventListener('click', () =>{
         for(let c = 0;c < allSessoes.length;c++){
             allSessoes[c].style.display='none'
             allSessoes[6].style.display='block'
+        }
+    })
+
+    // mostrando sistema de suspensão
+    allDepart[1].addEventListener('click', () =>{
+        for(let c = 0;c < allSessoes.length;c++){
+            allSessoes[c].style.display='none'
+            allSessoes[7].style.display='block'
         }
     })
     

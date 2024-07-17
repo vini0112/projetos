@@ -160,10 +160,14 @@
 }
 
 @media (max-width: 768px) {
-    /* terminais de direcao */
-    #row-terminais .card{
+
+    /* Stylo global dos cards mobile  */
+    .espaco-card .card{
         width: 50%;
     }
+
+
+    /* terminais de direcao */
     #btn-offcanvas{
         font-size: 1rem;
     }
@@ -173,9 +177,7 @@
     }
 
     /* pivos */
-    #row-pivos .card{
-        width: 50%;
-    }
+    
     #btns-pivos{
         display: flex;
         flex-wrap: wrap;
@@ -184,9 +186,6 @@
     #sistema-btns{
         display: flex;
         flex-wrap: wrap;
-    }
-    #row-axiais .card{
-        width: 50%;
     }
     
 }

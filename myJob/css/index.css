@@ -330,25 +330,20 @@
 
 @media (max-width: 768px){
     /* BTNS  DO OLEO*/
-    #BoxBtnsDoFiltro{
+    .btns-flex-wrap{
         display: flex;
-        flex-wrap: wrap;    
+        flex-wrap: wrap;  
     }
+    
     .design-btn{
         margin: 0;
         margin-bottom: 0.8rem;
     }
 
     /* CARDS OLEOS */
-    #row-oleos .card{
-        width: 50%;
-    }
+    
     #row-oleos .card img{
         width: 100%;
-    }
-    /* FLUIDOS DE FREIO  */
-    #row-fluido-oleo .card{
-        width: 50%;
     }
 
     /* FILTROS SIMPLES */
@@ -356,53 +351,32 @@
         display: flex;
         flex-wrap: wrap;
     }
-    #row-filtros .card{
-        width: 50%;
-    }
+    
 
     /* FILTROS PESADOS */
     #btn-filtros-pesados{
         display: flex;
         flex-wrap: wrap;
     }
-    #row-filtros-pesados .card{
-        width: 50%;
-    }
     /* FILTROS COMBUSTIVEL SIMPLES */
-    #row-filtro-combus-simples .card{
-        width: 50%;
-    }
+    
     #all-btns-combust-simples{
         display: flex;
         flex-wrap: wrap;
     }
 
     /* FILTROS COMBUSTIVEL PESADO */
-    #row-filtro-combus .card{
-        width: 50%;
-    }
     
     #all-btns-combust-pesado{
         display: flex;
         flex-wrap: wrap;
     }
-    /* FILTROS DE AR */
-    #row-filtros-ar-motor .card{
-        width: 50%;
-    }
-    #row-filtros-ar-cabine .card{
-        width: 50%;
-    }
-
+    
     #all-btns-filtro-ar-motor{
         display: flex;
         flex-wrap: wrap;
     }
 
-    /* BATERIAS */
-    #row-baterias .card{
-        width: 50%;
-    }
 }
 
 
@@ -417,7 +391,6 @@
     .drop-mobile{
         display: block;
     }
-
 
 
 }

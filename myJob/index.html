@@ -77,6 +77,8 @@
 
                             <!-- DROPS NO-MOBILE -->
                             <li class="dropdown-item"><a href="#area-sistema-direcao" class="no-mobile">Sistema Direção</a></li>
+
+                            <li class="dropdown-item"><a href="#area-sistema-suspensao" class="no-mobile">Sistema Suspensão</a></li>
                             
                         </ul>
                         
@@ -163,13 +165,13 @@
         <!-- sessao de oleos -->
         <div id="oleos" class="sessao">
             <div class="container">
-                <div class="row" id="row-oleos">
+                <div class="row espaco-card" id="row-oleos">
                     <!-- title -->
                     <div class="col-md-12">
                         <h2 class="titles-sessoes">Óleos</h2>
                     </div>
                     <!-- btns filtro  -->
-                    <div class="col-12" id="BoxBtnsDoFiltro">
+                    <div class="col-12 btns-flex-wrap" id="BoxBtnsDoFiltro">
                         <button class="design-btn btn-filtro BtnActive">Todos</button>
                         <button class="design-btn btn-filtro">Lubrax</button>
                         <button class="design-btn btn-filtro">Selenia</button>
@@ -278,7 +280,7 @@
         <div id="area-oleo-freio" class="sessao">
             <div class="container">
 
-                <div class="row" id="row-fluido-oleo">
+                <div class="row espaco-card" id="row-fluido-oleo">
 
 
                     <div class="col-12">
@@ -299,7 +301,7 @@
             <div class="container">
 
                 <!-- filtros simples  -->
-                <div class="row" id="row-filtros">
+                <div class="row espaco-card" id="row-filtros">
                     <div class="col-md-12">
                         <h2 class="titles-sessoes">Filtros de Óleo</h2>
                     </div>
@@ -476,7 +478,7 @@
                 </div>
 
                 <!-- filtros pesados  -->
-                <div class="row" id="row-filtros-pesados">
+                <div class="row espaco-card" id="row-filtros-pesados">
 
                     <div class="col-md-12" style="margin: 40px 0px;">
                         <h2 class="titles-sessoes">Filtros Pesados</h2>
@@ -603,7 +605,7 @@
             <div class="container">
 
                 <!-- SIMPLES -->
-                <div class="row" id="row-filtro-combus-simples">
+                <div class="row espaco-card" id="row-filtro-combus-simples">
                     <div class="col-12">
                         <h2 class="titles-sessoes" style="margin-bottom: 60px;">Filtros de combustível (simples)</h2>
                     </div>
@@ -674,7 +676,7 @@
 
 
                 <!-- PESADOS  -->
-                <div class="row" id="row-filtro-combus">
+                <div class="row espaco-card" id="row-filtro-combus">
                     <div class="col-12">
                         <h2 class="titles-sessoes" style="margin-bottom: 60px; margin-top: 30px;">Filtros de Combustível (Pesados)</h2>
                     </div>
@@ -779,7 +781,7 @@
             <div class="container">
 
                 <!-- FILTROS DE AR DO MOTOR -->
-                <div class="row" id="row-filtros-ar-motor">
+                <div class="row espaco-card" id="row-filtros-ar-motor">
                     <div class="col-12">
                         <h2 class="titles-sessoes" style="margin-bottom: 60px;">Filtros de Ar do Motor</h2>
                     </div>
@@ -898,7 +900,7 @@
 
 
                 <!-- FILTROS DE AR DE CABINE -->
-                <div class="row" id="row-filtros-ar-cabine">
+                <div class="row espaco-card" id="row-filtros-ar-cabine">
                     <div class="col-12">
                         <h2 class="titles-sessoes" style="margin-bottom: 60px; margin-top: 30px;">Filtros de Ar de Cabine</h2>
                     </div>
@@ -937,7 +939,7 @@
         <!-- sessao baterias -->
         <div id="area-bateria" class="sessao">
             <div class="container">
-                <div class="row" id="row-baterias">
+                <div class="row espaco-card" id="row-baterias">
 
                     <div class="col-md-12">
                         <h2 class="titles-sessoes" style="margin-bottom: 55px;">Batérias</h2>
@@ -1034,7 +1036,6 @@
                         <div class="offcanvas-body" id="offcanvas-body">
                             <ul>
                                 <li><a href="#row-terminais">Terminais de Direção</a></li>
-                                <li><a href="#row-pivos">Pivôs de Suspensão</a></li>
                                 <li><a href="#row-axiais">Barras Axiais</a></li>
                             </ul>
 
@@ -1046,7 +1047,7 @@
 
 
                 <!-- TERMINAIS DE DIREÇÃO  -->
-                <div class="row" id="row-terminais">
+                <div class="row espaco-card" id="row-terminais">
                     <div class="col-12">
                         <h2 class="titles-sessoes" style="margin-bottom: 50px;">Terminais de Direção</h2>
                     </div>
@@ -1249,8 +1250,274 @@
                 </div>
 
 
+
+                <!-- BARRAS AXIAIS -->
+                <div class="row espaco-card" id="row-axiais">
+
+                <div class="col-12">
+                    <h2 class="titles-sessoes espacamento-title">Barras Axiais</h2>
+                </div>
+
+                <!-- btns das barras  -->
+                <div class="col-12 d-flex justify-content-around" id="sistema-btns">
+                    <button class="design-btn active">Todos</button>
+                    <button class="design-btn">Fiat</button>
+                    <button class="design-btn">Volskwage</button>
+                    <button class="design-btn">GM</button>
+                    <button class="design-btn">Ford</button>
+                    </div>
+
+                <!-- fiat  -->
+                <div class="col-md-3 card fiat">
+                    <img src="photos/sist-direcao/barras/axial63542.png" alt="axial63542" class="img-fluid">
+                    <div class="card-body">
+                        <h5 class="card-title">Barra Axial 63542</h5>
+                        <p class="card-text">Sistema Hidráulico</p>
+                        <p class="card-text">Linha Fiat</p>
+
+                        <button type="button" class="padraoBtn" data-bs-toggle="modal" data-bs-target="#63542">Aplicações</button>
+                    </div>
+                </div>
+
+                <div class="col-md-3 card fiat">
+                    <img src="photos/sist-direcao/barras/axial68002.png" alt="axial68002" class="img-fluid">
+                    <div class="card-body">
+                        <h5 class="card-title">Barra Axial 68002</h5>
+                        <p class="card-text">Sistema Hidráulico e Mecânico</p>
+                        <p class="card-text">Linha Fiat</p>
+
+                        <button type="button" class="padraoBtn" data-bs-toggle="modal" data-bs-target="#68002">Aplicações</button>
+                    </div>
+                </div>
+
+                <div class="col-md-3 card fiat">
+                    <img src="photos/sist-direcao/barras/amortex68077.png" alt="amortex68077" class="img-fluid">
+                    <div class="card-body">
+                        <h5 class="card-title">Barra Axial 68077</h5>
+                        <p class="card-text">Sistema Hidráulico</p>
+                        <p class="card-text">Linha Fiat/Citroen/Peugeot</p>
+
+                        <button type="button" class="padraoBtn" data-bs-toggle="modal" data-bs-target="#68077">Aplicações</button>
+                    </div>
+                </div>
+
+                <!-- GM  -->
+                <div class="col-md-3 card gm ford">
+                    <img src="photos/sist-direcao/barras/axial68011.png" alt="axial68011" class="img-fluid">
+                    <div class="card-body">
+                        <h5 class="card-title">Barra Axial 68011</h5>
+                        <p class="card-text">Sistema Hidráulico e Mecânico</p>
+                        <p class="card-text">Linha GM/Ford</p>
+
+                        <button type="button" class="padraoBtn" data-bs-toggle="modal" data-bs-target="#68011">Aplicações</button>
+                    </div>
+                </div>
+
+                <div class="col-md-3 card gm">
+                    <img src="photos/sist-direcao/barras/ax012.png" alt="ax012" class="img-fluid">
+                    <div class="card-body">
+                        <h5 class="card-title">Barra Axial AX-012</h5>
+                        <p class="card-text">Sistema Hidráulico e Mecânico</p>
+                        <p class="card-text">Linha GM</p>
+
+                        <button type="button" class="padraoBtn" data-bs-toggle="modal" data-bs-target="#ax012">Aplicações</button>
+                    </div>
+                </div>
+
+                <!-- vws  -->
+                <div class="col-md-3 card vws">
+                    <img src="photos/sist-direcao/barras/amortex68192.png" alt="amortex68192" class="img-fluid">
+                    <div class="card-body">
+                        <h5 class="card-title">Barra Axial Amortex-68192</h5>
+                        <p class="card-text">Sistema Hidráulico</p>
+                        <p class="card-text">Linha Volskwage</p>
+
+                        <button type="button" class="padraoBtn" data-bs-toggle="modal" data-bs-target="#68192">Aplicações</button>
+                    </div>
+                </div>
+
+                <div class="col-md-3 card vws">
+                    <img src="photos/sist-direcao/barras/amortex68032.png" alt="amortex68032" class="img-fluid">
+                    <div class="card-body">
+                        <h5 class="card-title">Barra Axial Amortex-68032</h5>
+                        <p class="card-text">Sistema Hidráulico</p>
+                        <p class="card-text">Linha Volskwage</p>
+
+                        <button type="button" class="padraoBtn" data-bs-toggle="modal" data-bs-target="#68032">Aplicações</button>
+                    </div>
+                </div>
+                
+                <!-- ford  -->
+                <div class="col-md-3 card ford">
+                    <img src="photos/sist-direcao/barras/amortex68184.png" alt="amortex68184" class="img-fluid">
+                    <div class="card-body">
+                        <h5 class="card-title">Barra Axial Amortex-68184</h5>
+                        <p class="card-text">Sistema Hidráulico</p>
+                        <p class="card-text">Linha Ford</p>
+
+                        <button type="button" class="padraoBtn" data-bs-toggle="modal" data-bs-target="#68184">Aplicações</button>
+                    </div>
+                </div>
+
+
+                </div>
+                
+            </div>
+        </div>
+
+
+        <!-- 7 -->
+         <!-- sessao do sistema de suspensao -->
+        <div id="area-sistema-suspensao" class="sessao">
+            <div class="container">
+
+
+                <!-- parte do header  -->
+                <div class="col-12">
+                    <div class="row espacamento-header">
+
+                        
+                        <div class="col-12 estrutura-title">
+
+                            <div class="col-md-6">
+                                <h2 class="titles-sessoes">Sistema de Suspensão</h2>
+                            </div>
+
+                            <div class="col-md-6 btn-offcanvas">
+                                <button  data-bs-target="#allSessoesPesquisa" type="button" aria-controls="allSessoesPesquisa" class="btn-open-offcanvas">Ver todos os departamentos</button>
+                            </div>
+
+                        </div>
+
+                        <!-- parte do offcanvas  -->
+                        <div class="offcanvas offcanvas-top myOffCanvas" tabindex="-1" >
+
+                            <div class="offcanvas-header">
+
+                                <h5 class="offCanvasTitle">Partes do Sistema de Suspensão </h5>
+                                <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+
+                            </div>
+
+                            <div class="offcanvas-body" id="offcanvas-body">
+                                <ul>
+                                    <li><a href="#row-batedores">Batedores</a></li>
+                                    <li><a href="#row-pivos">Pivôs</a></li>
+                                    <li><a href="#"></a></li>
+                                </ul>
+
+                                <p class="aviso-offcanvas">Botões não disponiveis nesse formato de tela! Porfavor, desvire o celular! </p>
+                            </div>
+
+                        </div>
+
+                    </div>
+               
+
+                </div>
+
+
+                <!-- Batedores -->
+                <div class="row espaco-card" id="row-batedores">
+
+                    <div class="col-12">
+                        <h2 class="titles-sessoes" style="margin-bottom: 50px;">Batedores</h2>
+                    </div>
+
+                    <!--  GM  -->
+                    <div class="col-md-3 card gm">
+                        <img src="photos/sist-suspensao/batedores/batedor400.png" alt="batedorGm" class="img-fluid">
+                        <div class="card-body">
+                            <h5 class="card-title">Kit Batedor Dianteiro</h5>
+                            <p class="card-text">Linha GM</p>
+
+                            <button type="button" class="padraoBtn" data-bs-toggle="modal" data-bs-target="#batedor400">Aplicações</button>
+                        </div>
+                    </div>
+
+                    <div class="col-md-3 card gm">
+                        <img src="photos/sist-suspensao/batedores/ksc04205s.png" alt="ksc04205s" class="img-fluid">
+                        <div class="card-body">
+                            <h5 class="card-title">Batente</h5>
+                            <p class="card-text">Linha GM</p>
+
+                            <button type="button" class="padraoBtn" data-bs-toggle="modal" data-bs-target="#ksc04205s">Aplicações</button>
+                        </div>
+                    </div>
+
+
+                    <!--  fiat  -->
+                    <div class="col-md-3 card fiat">
+                        <img src="photos/sist-suspensao/batedores/batedor500.png" alt="batedor500" class="img-fluid">
+                        <div class="card-body">
+                            <h5 class="card-title">Kit Batedor Dianteiro</h5>
+                            <p class="card-text">Linha Fiat</p>
+
+                            <button type="button" class="padraoBtn" data-bs-toggle="modal" data-bs-target="#batedor500">Aplicações</button>
+                        </div>
+                    </div>
+
+                    <div class="col-md-3 card fiat">
+                        <img src="photos/sist-suspensao/batedores/batedor501.png" alt="batedor500" class="img-fluid">
+                        <div class="card-body">
+                            <h5 class="card-title">Kit Batedor Dianteiro</h5>
+                            <p class="card-text">Linha Fiat</p>
+
+                            <button type="button" class="padraoBtn" data-bs-toggle="modal" data-bs-target="#batedor501">Aplicações</button>
+                        </div>
+                    </div>
+
+                    <div class="col-md-3 card fiat">
+                        <img src="photos/sist-suspensao/batedores/ksc03116s.png" alt="ksc03116s" class="img-fluid">
+                        <div class="card-body">
+                            <h5 class="card-title">Kit Batedor Dianteiro</h5>
+                            <p class="card-text">Linha Fiat</p>
+
+                            <button type="button" class="padraoBtn" data-bs-toggle="modal" data-bs-target="#ksc03116s">Aplicações</button>
+                        </div>
+                    </div>
+
+                    <div class="col-md-3 card fiat">
+                        <img src="photos/sist-suspensao/batedores/sk117s.png" alt="sk117s" class="img-fluid">
+                        <div class="card-body">
+                            <h5 class="card-title">Kit Batedor Traseiro</h5>
+                            <p class="card-text">Linha Fiat</p>
+
+                            <button type="button" class="padraoBtn" data-bs-toggle="modal" data-bs-target="#sk117s">Aplicações</button>
+                        </div>
+                    </div>
+
+                    <!-- vws  -->
+                    
+                    <div class="col-md-3 card fiat">
+                        <img src="photos/sist-suspensao/batedores/batedor200.png" alt="batedor200" class="img-fluid">
+                        <div class="card-body">
+                            <h5 class="card-title">Kit Batedor Dianteiro</h5>
+                            <p class="card-text">Linha Volskwage</p>
+
+                            <button type="button" class="padraoBtn" data-bs-toggle="modal" data-bs-target="#batedor200">Aplicações</button>
+                        </div>
+                    </div>
+
+                    <div class="col-md-3 card fiat">
+                        <img src="photos/sist-suspensao/batedores/amortex35254.png" alt="amortex35254" class="img-fluid">
+                        <div class="card-body">
+                            <h5 class="card-title">Kit Batedor Dianteiro</h5>
+                            <p class="card-text">Linha Volskwage</p>
+
+                            <button type="button" class="padraoBtn" data-bs-toggle="modal" data-bs-target="#amortex35254">Aplicações</button>
+                        </div>
+                    </div>
+
+
+
+
+
+                </div>
+
+
                 <!-- PIVOS DE SUSPENSAO -->
-                    <div class="row" id="row-pivos">
+                <div class="row espaco-card" id="row-pivos">
                     <div class="col-12">
                         <h2 class="titles-sessoes espacamento-title">Pivos de Suspensão</h2>
                     </div>
@@ -1380,211 +1647,6 @@
                             <button type="button" class="padraoBtn" data-bs-toggle="modal" data-bs-target="#53083">Aplicações</button>
                         </div>
                     </div>
-
-
-                    </div>
-
-
-                    <!-- BARRAS AXIAIS -->
-                    <div class="row" id="row-axiais">
-
-                    <div class="col-12">
-                        <h2 class="titles-sessoes espacamento-title">Barras Axiais</h2>
-                    </div>
-
-                    <!-- btns das barras  -->
-                    <div class="col-12 d-flex justify-content-around" id="sistema-btns">
-                        <button class="design-btn active">Todos</button>
-                        <button class="design-btn">Fiat</button>
-                        <button class="design-btn">Volskwage</button>
-                        <button class="design-btn">GM</button>
-                        <button class="design-btn">Ford</button>
-                        </div>
-
-                    <!-- fiat  -->
-                    <div class="col-md-3 card fiat">
-                        <img src="photos/sist-direcao/barras/axial63542.png" alt="axial63542" class="img-fluid">
-                        <div class="card-body">
-                            <h5 class="card-title">Barra Axial 63542</h5>
-                            <p class="card-text">Sistema Hidráulico</p>
-                            <p class="card-text">Linha Fiat</p>
-
-                            <button type="button" class="padraoBtn" data-bs-toggle="modal" data-bs-target="#63542">Aplicações</button>
-                        </div>
-                    </div>
-
-                    <div class="col-md-3 card fiat">
-                        <img src="photos/sist-direcao/barras/axial68002.png" alt="axial68002" class="img-fluid">
-                        <div class="card-body">
-                            <h5 class="card-title">Barra Axial 68002</h5>
-                            <p class="card-text">Sistema Hidráulico e Mecânico</p>
-                            <p class="card-text">Linha Fiat</p>
-
-                            <button type="button" class="padraoBtn" data-bs-toggle="modal" data-bs-target="#68002">Aplicações</button>
-                        </div>
-                    </div>
-
-                    <div class="col-md-3 card fiat">
-                        <img src="photos/sist-direcao/barras/amortex68077.png" alt="amortex68077" class="img-fluid">
-                        <div class="card-body">
-                            <h5 class="card-title">Barra Axial 68077</h5>
-                            <p class="card-text">Sistema Hidráulico</p>
-                            <p class="card-text">Linha Fiat/Citroen/Peugeot</p>
-
-                            <button type="button" class="padraoBtn" data-bs-toggle="modal" data-bs-target="#68077">Aplicações</button>
-                        </div>
-                    </div>
-
-                    <!-- GM  -->
-                    <div class="col-md-3 card gm ford">
-                        <img src="photos/sist-direcao/barras/axial68011.png" alt="axial68011" class="img-fluid">
-                        <div class="card-body">
-                            <h5 class="card-title">Barra Axial 68011</h5>
-                            <p class="card-text">Sistema Hidráulico e Mecânico</p>
-                            <p class="card-text">Linha GM/Ford</p>
-
-                            <button type="button" class="padraoBtn" data-bs-toggle="modal" data-bs-target="#68011">Aplicações</button>
-                        </div>
-                    </div>
-
-                    <div class="col-md-3 card gm">
-                        <img src="photos/sist-direcao/barras/ax012.png" alt="ax012" class="img-fluid">
-                        <div class="card-body">
-                            <h5 class="card-title">Barra Axial AX-012</h5>
-                            <p class="card-text">Sistema Hidráulico e Mecânico</p>
-                            <p class="card-text">Linha GM</p>
-
-                            <button type="button" class="padraoBtn" data-bs-toggle="modal" data-bs-target="#ax012">Aplicações</button>
-                        </div>
-                    </div>
-
-                    <!-- vws  -->
-                    <div class="col-md-3 card vws">
-                        <img src="photos/sist-direcao/barras/amortex68192.png" alt="amortex68192" class="img-fluid">
-                        <div class="card-body">
-                            <h5 class="card-title">Barra Axial Amortex-68192</h5>
-                            <p class="card-text">Sistema Hidráulico</p>
-                            <p class="card-text">Linha Volskwage</p>
-
-                            <button type="button" class="padraoBtn" data-bs-toggle="modal" data-bs-target="#68192">Aplicações</button>
-                        </div>
-                    </div>
-
-                    <div class="col-md-3 card vws">
-                        <img src="photos/sist-direcao/barras/amortex68032.png" alt="amortex68032" class="img-fluid">
-                        <div class="card-body">
-                            <h5 class="card-title">Barra Axial Amortex-68032</h5>
-                            <p class="card-text">Sistema Hidráulico</p>
-                            <p class="card-text">Linha Volskwage</p>
-
-                            <button type="button" class="padraoBtn" data-bs-toggle="modal" data-bs-target="#68032">Aplicações</button>
-                        </div>
-                    </div>
-                    
-                    <!-- ford  -->
-                    <div class="col-md-3 card ford">
-                        <img src="photos/sist-direcao/barras/amortex68184.png" alt="amortex68184" class="img-fluid">
-                        <div class="card-body">
-                            <h5 class="card-title">Barra Axial Amortex-68184</h5>
-                            <p class="card-text">Sistema Hidráulico</p>
-                            <p class="card-text">Linha Ford</p>
-
-                            <button type="button" class="padraoBtn" data-bs-toggle="modal" data-bs-target="#68184">Aplicações</button>
-                        </div>
-                    </div>
-
-
-                    </div>
-                
-            </div>
-        </div>
-
-
-        <!-- 7 -->
-         <!-- sessao do sistema de suspensao -->
-        <div id="area-sistema-suspensao" class="sessao">
-            <div class="container">
-
-
-                <!-- parte do header  -->
-                <div class="col-12">
-                    <div class="row espacamento-header">
-
-                <div class="col-12 estrutura-title">
-
-                    <div class="col-md-6">
-                        <h2 class="titles-sessoes">Sistema de Suspensão</h2>
-                    </div>
-                    <div class="col-md-6 btn-offcanvas">
-                        <button  data-bs-target="#allSessoesPesquisa" type="button" aria-controls="allSessoesPesquisa" class="btn-open-offcanvas">Ver todos os departamentos</button>
-                    </div>
-
-                </div>
-
-                <!-- parte do offcanvas  -->
-                <div class="offcanvas offcanvas-top myOffCanvas" tabindex="-1" >
-
-                    <div class="offcanvas-header">
-
-                        <h5 class="offCanvasTitle">Partes do Sistema de Suspensão </h5>
-                        <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
-
-                    </div>
-
-                    <div class="offcanvas-body" id="offcanvas-body">
-                        <ul>
-                            <li><a href="#"></a></li>
-                            <li><a href="#"></a></li>
-                            <li><a href="#"></a></li>
-                        </ul>
-
-                        <p class="aviso-offcanvas">Botões não disponiveis nesse formato de tela! Porfavor, desvire o celular! </p>
-                    </div>
-
-                </div>
-
-            </div>
-               
-
-
-
-                </div>
-
-                <!-- Batedores -->
-                <div class="row" id="row-batedores">
-
-                    <div class="col-12">
-                        <h2 class="titles-sessoes" style="margin-bottom: 50px;">Batedores</h2>
-                    </div>
-
-                    <!--  GM  -->
-                    <div class="col-md-3 card gm">
-                        <img src="photos/sist-suspensao/batedores/batedor400.png" alt="batedorGm" class="img-fluid">
-                        <div class="card-body">
-                            <h5 class="card-title">Kit Batedor Dianteiro</h5>
-                            <p class="card-text">Linha GM</p>
-
-                            <button type="button" class="padraoBtn" data-bs-toggle="modal" data-bs-target="#batedor400">Aplicações</button>
-                        </div>
-                    </div>
-
-
-                    <!--  fiat  -->
-                    <div class="col-md-3 card fiat">
-                        <img src="photos/sist-suspensao/batedores/batedor500.png" alt="batedor500" class="img-fluid">
-                        <div class="card-body">
-                            <h5 class="card-title">Kit Batedor Dianteiro</h5>
-                            <p class="card-text">Linha Fiat</p>
-
-                            <button type="button" class="padraoBtn" data-bs-toggle="modal" data-bs-target="#batedor500">Aplicações</button>
-                        </div>
-                    </div>
-
-                    
-
-
-
-
 
 
                 </div>
@@ -4427,7 +4489,185 @@
 
             <div class="modal-footer" id="modalFooterDirecao">
                 <p><span class="carro">Marca:</span> <span class="marcas">Brasil Componentes</span></p>
-                <p class="carro">C-3485</p>
+                <p class="carro">C-114</p>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<!-- batedor501 -->
+<div class="modal fade" id="batedor501" aria-hidden="true" aria-labelledby="modal-filtro-label" tabindex="-1" >
+    <div class="modal-dialog modal-dialog-scrollable">
+
+        <div class="modal-content" id="modal-content">
+
+            <div class="modal-header">
+                <h2>Aplicações</h2>
+                <button class="btn-close" type="button" data-bs-dismiss="modal" aria-label="close"></button>
+            </div>
+                <div class="modal-body">
+                <h5>Kit Batedor Dianteiro</h5>
+                <ul id="lista-aplicacoes">
+                    <li class="montadora">FIAT:</li>
+                    <li><span class="carro">Ducato:</span> 1994-2017</li>
+
+                    <li class="montadora">CITROEN:</li>
+                    <li><span class="carro">Jumper:</span> 1999-2017</li>
+
+                    <li class="montadora">Peugeot:</li>
+                    <li><span class="carro">Boxer:</span> 1999-2017</li>
+
+                </ul>
+            </div>
+
+            <div class="modal-footer" id="modalFooterDirecao">
+                <p><span class="carro">Marca:</span> <span class="marcas">Brasil Componentes</span></p>
+                <p class="carro">C-3486</p>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<!-- ksc03116s -->
+<div class="modal fade" id="ksc03116s" aria-hidden="true" aria-labelledby="modal-filtro-label" tabindex="-1" >
+    <div class="modal-dialog modal-dialog-scrollable">
+
+        <div class="modal-content" id="modal-content">
+
+            <div class="modal-header">
+                <h2>Aplicações</h2>
+                <button class="btn-close" type="button" data-bs-dismiss="modal" aria-label="close"></button>
+            </div>
+                <div class="modal-body">
+                <h5>Kit Batedor Dianteiro</h5>
+                <ul id="lista-aplicacoes">
+                    <li class="montadora">FIAT:</li>
+                    <li><span class="carro">Palio:</span> 2011-2019</li>
+                    <li><span class="carro">Grand-Siena:</span> 2012-2022</li>
+                    <li><span class="carro">Siena:</span> 2012-2019</li>
+                    <li><span class="carro">Uno:</span> 2010-2022</li>
+
+                </ul>
+            </div>
+
+            <div class="modal-footer" id="modalFooterDirecao">
+                <p><span class="carro">Marca:</span> <span class="marcas">Cofap</span></p>
+                <p class="carro">C-1638</p>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<!-- ksc04205s -->
+<div class="modal fade" id="ksc04205s" aria-hidden="true" aria-labelledby="modal-filtro-label" tabindex="-1" >
+    <div class="modal-dialog modal-dialog-scrollable">
+
+        <div class="modal-content" id="modal-content">
+
+            <div class="modal-header">
+                <h2>Aplicações</h2>
+                <button class="btn-close" type="button" data-bs-dismiss="modal" aria-label="close"></button>
+            </div>
+                <div class="modal-body">
+                <h5>Batente</h5>
+                <ul id="lista-aplicacoes">
+                    <li class="montadora">GM:</li>
+                    <li><span class="carro">Astra:</span> 1998-2008</li>
+                </ul>
+            </div>
+
+            <div class="modal-footer" id="modalFooterDirecao">
+                <p><span class="carro">Marca:</span> <span class="marcas">Cofap</span></p>
+                <p class="carro">C-SEM</p>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<!-- batedor200 -->
+<div class="modal fade" id="batedor200" aria-hidden="true" aria-labelledby="modal-filtro-label" tabindex="-1" >
+    <div class="modal-dialog modal-dialog-scrollable">
+
+        <div class="modal-content" id="modal-content">
+
+            <div class="modal-header">
+                <h2>Aplicações</h2>
+                <button class="btn-close" type="button" data-bs-dismiss="modal" aria-label="close"></button>
+            </div>
+                <div class="modal-body">
+                <h5>Kit Batedor Dianteiro</h5>
+                <ul id="lista-aplicacoes">
+                    <li class="montadora">Volskwage:</li>
+                    <li><span class="carro">Gol:</span> 1998..</li>
+                    <li><span class="carro">Parati:</span> 1998..</li>
+                    <li><span class="carro">Saveiro:</span> 1998..</li>
+                </ul>
+            </div>
+
+            <div class="modal-footer" id="modalFooterDirecao">
+                <p><span class="carro">Marca:</span> <span class="marcas">Brasil Componentes</span></p>
+                <p class="carro">C-1244</p>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<!-- amortex35254 -->
+<div class="modal fade" id="amortex35254" aria-hidden="true" aria-labelledby="modal-filtro-label" tabindex="-1" >
+    <div class="modal-dialog modal-dialog-scrollable">
+
+        <div class="modal-content" id="modal-content">
+
+            <div class="modal-header">
+                <h2>Aplicações</h2>
+                <button class="btn-close" type="button" data-bs-dismiss="modal" aria-label="close"></button>
+            </div>
+                <div class="modal-body">
+                <h5>Kit Batedor Dianteiro</h5>
+                <ul id="lista-aplicacoes">
+                    <li class="montadora">Volskwage:</li>
+                    <li><span class="carro">CrossFox:</span> 2005-2009</li>
+                    <li><span class="carro">Fox:</span> 2003-2009</li>
+                    <li><span class="carro">Polo:</span> 2003-2019</li>
+                    <li><span class="carro">Space-Fox:</span> 2006-2009</li>
+                </ul>
+            </div>
+
+            <div class="modal-footer" id="modalFooterDirecao">
+                <p><span class="carro">Marca:</span> <span class="marcas">Brasil Componentes</span></p>
+                <p class="carro">C-1981</p>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<!-- sk117s -->
+<div class="modal fade" id="sk117s" aria-hidden="true" aria-labelledby="modal-filtro-label" tabindex="-1" >
+    <div class="modal-dialog modal-dialog-scrollable">
+
+        <div class="modal-content" id="modal-content">
+
+            <div class="modal-header">
+                <h2>Aplicações</h2>
+                <button class="btn-close" type="button" data-bs-dismiss="modal" aria-label="close"></button>
+            </div>
+                <div class="modal-body">
+                <h5>Kit Batedor Dianteiro</h5>
+                <ul id="lista-aplicacoes">
+                    <li class="montadora">Fiat:</li>
+                    <li><span class="carro">Fiorino:</span> 1994-2013</li>
+                </ul>
+            </div>
+
+            <div class="modal-footer" id="modalFooterDirecao">
+                <p><span class="carro">Marca:</span> <span class="marcas">Brasil Componentes</span></p>
+                <p class="carro">C-SEM</p>
             </div>
         </div>
     </div>
