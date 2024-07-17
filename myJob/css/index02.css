@@ -192,7 +192,11 @@
         display: flex;
         flex-wrap: wrap;
     }
-    
+    /* batedores btn */
+    #btns-batedores{
+        display: flex;
+        flex-wrap: wrap;
+    }
 }
 
 /* estrutura offcanvas para mobile  */
