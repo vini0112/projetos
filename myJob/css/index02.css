@@ -1,5 +1,7 @@
 
 
+/* TRANSITION */
+
 
 :root{
     --lightBlue: #8bf6fc;
@@ -140,8 +142,11 @@
     margin-bottom: 20px;
 }
 
-
-
+/* AMORTECEDORES */
+#row-amortecedores{
+    display: flex;
+    justify-content: space-around;
+}
 
 
 

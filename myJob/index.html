@@ -1403,7 +1403,7 @@
                                 <ul>
                                     <li><a href="#row-batedores">Batedores</a></li>
                                     <li><a href="#row-pivos">Pivôs</a></li>
-                                    <li><a href="#"></a></li>
+                                    <li><a href="#row-amortecedores">Amortecedores</a></li>
                                 </ul>
 
                                 <p class="aviso-offcanvas">Botões não disponiveis nesse formato de tela! Porfavor, desvire o celular! </p>
@@ -1424,6 +1424,14 @@
                         <h2 class="titles-sessoes" style="margin-bottom: 50px;">Batedores</h2>
                     </div>
 
+                    <!-- btns dos terminais  -->
+                    <div class="col-12 d-flex justify-content-around" id="btns-batedores">
+                        <button class="design-btn active">Todos</button>
+                        <button class="design-btn">Fiat</button>
+                        <button class="design-btn">Volskwage</button>
+                        <button class="design-btn">GM</button>
+                    </div>
+
                     <!--  GM  -->
                     <div class="col-md-3 card gm">
                         <img src="photos/sist-suspensao/batedores/batedor400.png" alt="batedorGm" class="img-fluid">
@@ -1442,6 +1450,16 @@
                             <p class="card-text">Linha GM</p>
 
                             <button type="button" class="padraoBtn" data-bs-toggle="modal" data-bs-target="#ksc04205s">Aplicações</button>
+                        </div>
+                    </div>
+
+                    <div class="col-md-3 card gm">
+                        <img src="photos/sist-suspensao/batedores/nk0371.png" alt="nk0371" class="img-fluid">
+                        <div class="card-body">
+                            <h5 class="card-title">Kit Batedor Dianteiro</h5>
+                            <p class="card-text">Linha GM</p>
+
+                            <button type="button" class="padraoBtn" data-bs-toggle="modal" data-bs-target="#nk0371">Aplicações</button>
                         </div>
                     </div>
 
@@ -1489,7 +1507,7 @@
 
                     <!-- vws  -->
                     
-                    <div class="col-md-3 card fiat">
+                    <div class="col-md-3 card vws">
                         <img src="photos/sist-suspensao/batedores/batedor200.png" alt="batedor200" class="img-fluid">
                         <div class="card-body">
                             <h5 class="card-title">Kit Batedor Dianteiro</h5>
@@ -1499,7 +1517,7 @@
                         </div>
                     </div>
 
-                    <div class="col-md-3 card fiat">
+                    <div class="col-md-3 card vws">
                         <img src="photos/sist-suspensao/batedores/amortex35254.png" alt="amortex35254" class="img-fluid">
                         <div class="card-body">
                             <h5 class="card-title">Kit Batedor Dianteiro</h5>
@@ -1645,6 +1663,61 @@
                             <p class="card-text">Linha Ford - Lado Direito/Esquerdo</p>
 
                             <button type="button" class="padraoBtn" data-bs-toggle="modal" data-bs-target="#53083">Aplicações</button>
+                        </div>
+                    </div>
+
+
+                </div>
+
+
+                <!-- AMORTECEDORES -->
+                <div class="row espaco-card" id="row-amortecedores">
+
+                    
+                    <div class="col-12">
+                        <h2 class="titles-sessoes espacamento-title">Amortecedores</h2>
+                    </div>
+
+                    <!-- GM  -->
+                    <div class="col-md-3 card gm">
+                        <img src="photos/sist-suspensao/amortecedor/ac30728.png" alt="ac30728" class="img-fluid">
+                        <div class="card-body">
+                            <h5 class="card-title">Amortecedor Traseiro</h5>
+                            <p class="card-text">Linha GM</p>
+
+                            <button type="button" class="padraoBtn" data-bs-toggle="modal" data-bs-target="#ac30728">Aplicações</button>
+                        </div>
+                    </div>
+
+                    <!-- vws  -->
+                    <div class="col-md-3 card vws">
+                        <img src="photos/sist-suspensao/amortecedor/ct30826.png" alt="ct30826" class="img-fluid">
+                        <div class="card-body">
+                            <h5 class="card-title">Amortecedor Dianteiro</h5>
+                            <p class="card-text">Linha Volskwage</p>
+
+                            <button type="button" class="padraoBtn" data-bs-toggle="modal" data-bs-target="#ct30826">Aplicações</button>
+                        </div>
+                    </div>
+
+                    <!-- fiat -->
+                    <div class="col-md-3 card fiat">
+                        <img src="photos/sist-suspensao/amortecedor/hg33093.png" alt="hg33093" class="img-fluid">
+                        <div class="card-body">
+                            <h5 class="card-title">Amortecedor Dianteiro</h5>
+                            <p class="card-text">Linha Fiat</p>
+
+                            <button type="button" class="padraoBtn" data-bs-toggle="modal" data-bs-target="#hg33093">Aplicações</button>
+                        </div>
+                    </div>
+
+                    <div class="col-md-3 card fiat">
+                        <img src="photos/sist-suspensao/amortecedor/hg33098.png" alt="hg33098" class="img-fluid">
+                        <div class="card-body">
+                            <h5 class="card-title">Amortecedor Dianteiro</h5>
+                            <p class="card-text">Linha Fiat</p>
+
+                            <button type="button" class="padraoBtn" data-bs-toggle="modal" data-bs-target="#hg33098">Aplicações</button>
                         </div>
                     </div>
 
@@ -4410,35 +4483,6 @@
  <div>
 
 
-<!-- esqueleto base -->
-<div class="modal fade" id="" aria-hidden="true" aria-labelledby="modal-filtro-label" tabindex="-1" >
-    <div class="modal-dialog modal-dialog-scrollable">
-
-        <div class="modal-content" id="modal-content">
-
-            <div class="modal-header">
-                <h2>Aplicações</h2>
-                <button class="btn-close" type="button" data-bs-dismiss="modal" aria-label="close"></button>
-            </div>
-                <div class="modal-body">
-                <h5></h5>
-                <ul id="lista-aplicacoes">
-                    <li class="montadora"></li>
-                    <li><span class="carro"></span></li>
-
-
-                </ul>
-            </div>
-
-            <div class="modal-footer" id="modalFooterDirecao">
-                <p><span class="carro">Marca:</span> <span class="marcas"></span></p>
-                <p class="carro">C-</p>
-            </div>
-        </div>
-    </div>
-</div>
-
-
 <!-- batedor400 -->
 <div class="modal fade" id="batedor400" aria-hidden="true" aria-labelledby="modal-filtro-label" tabindex="-1" >
     <div class="modal-dialog modal-dialog-scrollable">
@@ -4450,7 +4494,7 @@
                 <button class="btn-close" type="button" data-bs-dismiss="modal" aria-label="close"></button>
             </div>
                 <div class="modal-body">
-                <h5>Kit Batedor Dianteiro</h5>
+                <h5>Kit Batedor Dianteiro - 400.539-2</h5>
                 <ul id="lista-aplicacoes">
                     <li class="montadora">GM:</li>
                     <li><span class="carro">Corsa:</span> 2000..</li>
@@ -4478,7 +4522,7 @@
                 <button class="btn-close" type="button" data-bs-dismiss="modal" aria-label="close"></button>
             </div>
                 <div class="modal-body">
-                <h5>Kit Batedor Dianteiro</h5>
+                <h5>Kit Batedor Dianteiro - 500.247-8</h5>
                 <ul id="lista-aplicacoes">
                     <li class="montadora">FIAT:</li>
                     <li><span class="carro">Uno:</span> 1993..</li>
@@ -4507,7 +4551,7 @@
                 <button class="btn-close" type="button" data-bs-dismiss="modal" aria-label="close"></button>
             </div>
                 <div class="modal-body">
-                <h5>Kit Batedor Dianteiro</h5>
+                <h5>Kit Batedor Dianteiro - 501.185-1</h5>
                 <ul id="lista-aplicacoes">
                     <li class="montadora">FIAT:</li>
                     <li><span class="carro">Ducato:</span> 1994-2017</li>
@@ -4541,7 +4585,7 @@
                 <button class="btn-close" type="button" data-bs-dismiss="modal" aria-label="close"></button>
             </div>
                 <div class="modal-body">
-                <h5>Kit Batedor Dianteiro</h5>
+                <h5>Kit Batedor Dianteiro - KSC03116S</h5>
                 <ul id="lista-aplicacoes">
                     <li class="montadora">FIAT:</li>
                     <li><span class="carro">Palio:</span> 2011-2019</li>
@@ -4572,7 +4616,7 @@
                 <button class="btn-close" type="button" data-bs-dismiss="modal" aria-label="close"></button>
             </div>
                 <div class="modal-body">
-                <h5>Batente</h5>
+                <h5>Batente - KSC04205S</h5>
                 <ul id="lista-aplicacoes">
                     <li class="montadora">GM:</li>
                     <li><span class="carro">Astra:</span> 1998-2008</li>
@@ -4599,7 +4643,7 @@
                 <button class="btn-close" type="button" data-bs-dismiss="modal" aria-label="close"></button>
             </div>
                 <div class="modal-body">
-                <h5>Kit Batedor Dianteiro</h5>
+                <h5>Kit Batedor Dianteiro - 200.961-7</h5>
                 <ul id="lista-aplicacoes">
                     <li class="montadora">Volskwage:</li>
                     <li><span class="carro">Gol:</span> 1998..</li>
@@ -4628,7 +4672,7 @@
                 <button class="btn-close" type="button" data-bs-dismiss="modal" aria-label="close"></button>
             </div>
                 <div class="modal-body">
-                <h5>Kit Batedor Dianteiro</h5>
+                <h5>Kit Batedor Dianteiro - Amortex-35254</h5>
                 <ul id="lista-aplicacoes">
                     <li class="montadora">Volskwage:</li>
                     <li><span class="carro">CrossFox:</span> 2005-2009</li>
@@ -4639,7 +4683,7 @@
             </div>
 
             <div class="modal-footer" id="modalFooterDirecao">
-                <p><span class="carro">Marca:</span> <span class="marcas">Brasil Componentes</span></p>
+                <p><span class="carro">Marca:</span> <span class="marcas">Amortex</span></p>
                 <p class="carro">C-1981</p>
             </div>
         </div>
@@ -4658,7 +4702,7 @@
                 <button class="btn-close" type="button" data-bs-dismiss="modal" aria-label="close"></button>
             </div>
                 <div class="modal-body">
-                <h5>Kit Batedor Dianteiro</h5>
+                <h5>Kit Batedor Dianteiro - SK117S</h5>
                 <ul id="lista-aplicacoes">
                     <li class="montadora">Fiat:</li>
                     <li><span class="carro">Fiorino:</span> 1994-2013</li>
@@ -4666,8 +4710,35 @@
             </div>
 
             <div class="modal-footer" id="modalFooterDirecao">
-                <p><span class="carro">Marca:</span> <span class="marcas">Brasil Componentes</span></p>
+                <p><span class="carro">Marca:</span> <span class="marcas">Sampel</span></p>
                 <p class="carro">C-SEM</p>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- nk0371 -->
+<div class="modal fade" id="nk0371" aria-hidden="true" aria-labelledby="modal-filtro-label" tabindex="-1" >
+    <div class="modal-dialog modal-dialog-scrollable">
+
+        <div class="modal-content" id="modal-content">
+
+            <div class="modal-header">
+                <h2>Aplicações</h2>
+                <button class="btn-close" type="button" data-bs-dismiss="modal" aria-label="close"></button>
+            </div>
+                <div class="modal-body">
+                <h5>Kit Batedor Dianteiro - NK0371</h5>
+                <ul id="lista-aplicacoes">
+                    <li class="montadora">GM:</li>
+                    <li><span class="carro">Onix:</span> 2019..</li>
+                    <li><span class="carro">Onix-Plus:</span> 2019..</li>
+                </ul>
+            </div>
+
+            <div class="modal-footer" id="modalFooterDirecao">
+                <p><span class="carro">Marca:</span> <span class="marcas">Nakata</span></p>
+                <p class="carro">C-3817</p>
             </div>
         </div>
     </div>
@@ -4684,8 +4755,153 @@
 
  </div>
 
+ <!-- MODAIS DOS AMORTECEDORES -->
+
+<div>
+
+<!-- esqueleto base -->
+<div class="modal fade" id="" aria-hidden="true" aria-labelledby="modal-filtro-label" tabindex="-1" >
+    <div class="modal-dialog modal-dialog-scrollable">
+
+        <div class="modal-content" id="modal-content">
+
+            <div class="modal-header">
+                <h2>Aplicações</h2>
+                <button class="btn-close" type="button" data-bs-dismiss="modal" aria-label="close"></button>
+            </div>
+                <div class="modal-body">
+                <h5></h5>
+                <ul id="lista-aplicacoes">
+                    <li class="montadora"></li>
+                    <li><span class="carro"></span></li>
 
 
+                </ul>
+            </div>
+
+            <div class="modal-footer" id="modalFooterDirecao">
+                <p><span class="carro">Marca:</span> <span class="marcas"></span></p>
+                <p class="carro">C-</p>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- ac30728 -->
+<div class="modal fade" id="ac30728" aria-hidden="true" aria-labelledby="modal-filtro-label" tabindex="-1" >
+    <div class="modal-dialog modal-dialog-scrollable">
+
+        <div class="modal-content" id="modal-content">
+
+            <div class="modal-header">
+                <h2>Aplicações</h2>
+                <button class="btn-close" type="button" data-bs-dismiss="modal" aria-label="close"></button>
+            </div>
+                <div class="modal-body">
+                <h5>Nakata - AC-30728</h5>
+                <ul id="lista-aplicacoes">
+                    <li class="montadora">GM:</li>
+                    <li><span class="carro">Classic:</span> 2003-2012</li>
+                    <li><span class="carro">Corsa:</span> 1994..</li>
+                    <li><span class="carro">Celta:</span> 2000-2014</li>
+                </ul>
+            </div>
+
+            <div class="modal-footer" id="modalFooterDirecao">
+                <p><span class="carro">Marca:</span> <span class="marcas">Nakata</span></p>
+                <p class="carro">C-128</p>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<!-- ct30826 -->
+<div class="modal fade" id="ct30826" aria-hidden="true" aria-labelledby="modal-filtro-label" tabindex="-1" >
+    <div class="modal-dialog modal-dialog-scrollable">
+
+        <div class="modal-content" id="modal-content">
+
+            <div class="modal-header">
+                <h2>Aplicações</h2>
+                <button class="btn-close" type="button" data-bs-dismiss="modal" aria-label="close"></button>
+            </div>
+                <div class="modal-body">
+                <h5>Nakata - CT-30826</h5>
+                <ul id="lista-aplicacoes">
+                    <li class="montadora">Volskwage:</li>
+                    <li><span class="carro">Voyage:</span> 1982-1995</li>
+                    <li><span class="carro">Gol-Furgão:</span> 1980-1997</li>
+                    <li><span class="carro">Parati:</span> 1982-1996</li>
+                    <li><span class="carro">Saveiro:</span> 1980.. exeto G5</li>
+                </ul>
+            </div>
+
+            <div class="modal-footer" id="modalFooterDirecao">
+                <p><span class="carro">Marca:</span> <span class="marcas">Nakata</span></p>
+                <p class="carro">C-699</p>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<!-- hg33093 -->
+<div class="modal fade" id="hg33093" aria-hidden="true" aria-labelledby="modal-filtro-label" tabindex="-1" >
+    <div class="modal-dialog modal-dialog-scrollable">
+
+        <div class="modal-content" id="modal-content">
+
+            <div class="modal-header">
+                <h2>Aplicações</h2>
+                <button class="btn-close" type="button" data-bs-dismiss="modal" aria-label="close"></button>
+            </div>
+                <div class="modal-body">
+                <h5>Nakata - HG-33093</h5>
+                <ul id="lista-aplicacoes">
+                    <li class="montadora">FIAT:</li>
+                    <li><span class="carro">Strada:</span> 2001-2013</li>
+                    <li><span class="carro">Strada:</span> COM ABS 2014-2020</li>
+                </ul>
+            </div>
+
+            <div class="modal-footer" id="modalFooterDirecao">
+                <p><span class="carro">Marca:</span> <span class="marcas">Nakata</span></p>
+                <p class="carro">C-3719</p>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- hg33098 -->
+<div class="modal fade" id="hg33098" aria-hidden="true" aria-labelledby="modal-filtro-label" tabindex="-1" >
+    <div class="modal-dialog modal-dialog-scrollable">
+
+        <div class="modal-content" id="modal-content">
+
+            <div class="modal-header">
+                <h2>Aplicações</h2>
+                <button class="btn-close" type="button" data-bs-dismiss="modal" aria-label="close"></button>
+            </div>
+                <div class="modal-body">
+                <h5>Nakata - HG-33098</h5>
+                <ul id="lista-aplicacoes">
+                    <li class="montadora">FIAT:</li>
+                    <li><span class="carro">Fiorino:</span> 2013-2016</li>
+                </ul>
+            </div>
+
+            <div class="modal-footer" id="modalFooterDirecao">
+                <p><span class="carro">Marca:</span> <span class="marcas">Nakata</span></p>
+                <p class="carro">C-SEM</p>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+</div>
 
 
 
