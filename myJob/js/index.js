@@ -1303,9 +1303,6 @@ function filtroBatedor(){
 
 
 
-
-
-
 // logica offcanvas 
 document.addEventListener('DOMContentLoaded', () =>{
 

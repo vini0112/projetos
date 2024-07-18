@@ -1,7 +1,5 @@
 
 
-/* TRANSITION */
-
 
 :root{
     --lightBlue: #8bf6fc;
@@ -22,6 +20,7 @@
     color: var(--darkBlue);
     font-size: 1.8rem;
     text-shadow: 2px 2px 1px black;
+
 }
 .myOffCanvas ul{
     padding: 0%;
@@ -31,6 +30,21 @@
     justify-content: space-around;
     height: 100%;
     align-items: center;
+    
+
+}
+.myOffCanvas ul li{
+    width: 155px;
+    border: 2px solid black;
+    text-align: center;
+    background-color: var(--darkBlue);
+    opacity: 0.5;
+    cursor: pointer;
+}
+.myOffCanvas ul li:hover{
+    transition: 0.5s ease-in-out;
+    opacity: 1;
+
 }
 
 .myOffCanvas ul li a{
@@ -39,12 +53,10 @@
     font-weight: bold;
     color: white;
     text-shadow: 2px 2px 2px black;
-    padding: 10px;
-
-    height: 40px;
-    width: 100px;
-    border: 1px solid black;
-    background-color: gray;
+    text-align: center;
+    
+    
+    
 }
 #offcanvas-body{
     padding: 0%;
@@ -71,6 +83,8 @@
     
 }
 
+/* sistema de direcao */
+
 #area-sistema-direcao{
     display: none;
 }
@@ -84,7 +98,6 @@
     justify-content: space-around;
     
 }
-
 
 
 /* TERMINAIS DE DIRECAO */
@@ -148,6 +161,20 @@
     justify-content: space-around;
 }
 
+/* buchas */
+#row-buchas{
+    display: flex;
+    justify-content: space-around;
+}
+#row-buchas .card{
+    margin-bottom: 20px;
+}
+
+
+
+
+
+
 
 
 /* MEDIA QUERIES */
@@ -169,6 +196,13 @@
     /* Stylo global dos cards mobile  */
     .espaco-card .card{
         width: 50%;
+    }
+    .myOffCanvas ul{
+        display: flex;
+        flex-wrap: wrap;
+    }
+    .myOffCanvas ul li{
+        opacity: 1;
     }
 
 
@@ -230,16 +264,13 @@
 
     .myOffCanvas ul li a{
         text-decoration: none ;
-        font-size: 0.7rem;
+        font-size: 1rem;
         font-weight: bold;
         color: white;
         text-shadow: 2px 2px 2px black;
-        padding: 10px;
-    
-        height: 40px;
         width: 100px;
-        border: 1px solid black;
-        background-color: gray;
+        text-align: center;
+        padding: 5px;
     }
     
 }
@@ -262,12 +293,6 @@
         font-weight: bold;
         color: white;
         text-shadow: 2px 2px 2px black;
-        padding: 8px;
-    
-        height: 40px;
-        width: 100px;
-        border: 1px solid black;
-        background-color: gray;
     }
 }
 
