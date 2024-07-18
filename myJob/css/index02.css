@@ -191,6 +191,7 @@
     }
 }
 
+/* tablet */
 @media (max-width: 768px) {
 
     /* Stylo global dos cards mobile  */
@@ -228,6 +229,12 @@
     }
     /* batedores btn */
     #btns-batedores{
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    /* buchas */
+    #btns-buchas{
         display: flex;
         flex-wrap: wrap;
     }
