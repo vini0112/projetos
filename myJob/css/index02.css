@@ -86,7 +86,7 @@
 /* sistema de direcao */
 
 #area-sistema-direcao{
-    display: none;
+    display: non;
 }
 .espacamento-header{
     height: 250px;
@@ -122,21 +122,21 @@
 } 
 
 
-/* pivos de suspensao */
-#row-pivos{
-    display: flex;
-    justify-content: space-around;
-}
-#row-pivos .card{
-    margin-bottom: 20px;
-}
-
 /* BARRAS AXIAIS */
 #row-axiais{
     display: flex;
     justify-content: space-around;
 }
 #row-axiais .card{
+    margin-bottom: 20px;
+}
+
+#row-estabilizadores{
+    display: flex;
+    justify-content: space-around;
+}
+
+#row-estabilizadores .card{
     margin-bottom: 20px;
 }
 
@@ -152,6 +152,15 @@
     justify-content: space-around;
 }
 #row-batedores .card{
+    margin-bottom: 20px;
+}
+
+/* pivos de suspensao */
+#row-pivos{
+    display: flex;
+    justify-content: space-around;
+}
+#row-pivos .card{
     margin-bottom: 20px;
 }
 
@@ -176,6 +185,15 @@
     justify-content: space-around;
 }
 #row-coxins-amort .card{
+    margin-bottom: 20px;
+}
+
+/* bieletas */
+#row-bieleta{
+    display: flex;
+    justify-content: space-around;
+}
+#row-bieleta .card{
     margin-bottom: 20px;
 }
 
