@@ -170,9 +170,14 @@
     margin-bottom: 20px;
 }
 
-
-
-
+/* coxins amortecedores */
+#row-coxins-amort{
+    display: flex;
+    justify-content: space-around;
+}
+#row-coxins-amort .card{
+    margin-bottom: 20px;
+}
 
 
 
