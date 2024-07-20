@@ -2,7 +2,7 @@
 // onload 
 document.addEventListener('DOMContentLoaded', () =>{
 
-    //alert(`Projetos ainda em manutenção`)
+    alert(`Sistema ainda em manutenção`)
     // FUCAO AO CLICAR NO TITULO PRINCIPAL
     let onloadTitlePrinc = document.querySelector('#title-princ')
     onloadTitlePrinc.addEventListener('click', () =>{
@@ -576,6 +576,14 @@ function mostrarInfoFastSearch(){
         for(let c = 0;c < allSessoes.length;c++){
             allSessoes[c].style.display='none'
             allSessoes[7].style.display='block'
+        }
+    })
+
+    // mostrando sistema de freios
+    allDepart[2].addEventListener('click', () =>{
+        for(let c = 0;c < allSessoes.length;c++){
+            allSessoes[c].style.display='none'
+            allSessoes[8].style.display='block'
         }
     })
     
@@ -1494,6 +1502,7 @@ document.addEventListener('DOMContentLoaded', () =>{
 
     let bsOffCanvas = new bootstrap.Offcanvas(myOffCanvas[0]);
     let bsOffCanvas2 = new bootstrap.Offcanvas(myOffCanvas[1]);
+    let bsOffCanvas3 = new bootstrap.Offcanvas(myOffCanvas[2])
 
     let allBtnOff = document.querySelectorAll('.btn-open-offcanvas')
     //console.log(allBtnOff)
@@ -1513,6 +1522,13 @@ document.addEventListener('DOMContentLoaded', () =>{
         bsOffCanvas2.toggle()
     })
 
+
+    allBtnOff[2].addEventListener('click', (e) =>{
+
+        e.preventDefault()
+        e.stopPropagation()
+        bsOffCanvas3.toggle()
+    })
 
     
 

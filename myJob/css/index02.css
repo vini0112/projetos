@@ -205,8 +205,20 @@
 }
 
 
+/* SISTEMA DE FREIOS */
+#area-sistema-freios{
+    display: none;
+}
 
 
+/* pastilhas */
+#row-pastilhas{
+    display: flex;
+    justify-content: space-around;
+}
+#row-pastilhas .card{
+    margin-bottom: 20px;
+}
 
 /* MEDIA QUERIES */
 
