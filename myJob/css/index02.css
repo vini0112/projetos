@@ -288,6 +288,12 @@
         display: flex;
         flex-wrap: wrap;
     }
+
+    /* pastilhas */
+    #btns-pastilha{
+        display: flex;
+        flex-wrap: wrap;
+    }
 }
 
 /* estrutura offcanvas para mobile  */
