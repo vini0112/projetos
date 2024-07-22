@@ -220,6 +220,34 @@
     margin-bottom: 20px;
 }
 
+/* discos freio */
+#row-discos{
+    display: flex;
+    justify-content: space-around;
+}
+#row-discos .card{
+    margin-bottom: 20px;
+}
+
+/* TAMBORES DE FREIO */
+#row-tambores{
+    display: flex;
+    justify-content: space-around;
+}
+#row-tambores .card{
+    margin-bottom: 20px;
+}
+
+
+
+
+
+
+
+
+
+
+
 /* MEDIA QUERIES */
 
 @media (orientation: landscape) and (max-height: 350px){
