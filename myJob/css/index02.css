@@ -207,7 +207,7 @@
 
 /* SISTEMA DE FREIOS */
 #area-sistema-freios{
-    display: none;
+    display: non;
 }
 
 
@@ -238,7 +238,14 @@
     margin-bottom: 20px;
 }
 
-
+/* REPAROS */
+#row-reparos{
+    display: flex;
+    justify-content: space-around;
+}
+#row-reparos{
+    margin-bottom: 20px;
+}
 
 
 
