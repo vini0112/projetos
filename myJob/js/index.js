@@ -2,7 +2,7 @@
 // onload 
 document.addEventListener('DOMContentLoaded', () =>{
 
-    //alert(`Sistema ainda em manutenção`)
+    alert(`Sistema ainda em manutenção`)
     // FUCAO AO CLICAR NO TITULO PRINCIPAL
     let onloadTitlePrinc = document.querySelector('#title-princ')
     onloadTitlePrinc.addEventListener('click', () =>{
