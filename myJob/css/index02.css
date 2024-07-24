@@ -247,7 +247,14 @@
     margin-bottom: 20px;
 }
 
-
+/* CABOS */
+#row-cabos{
+    display: flex;
+    justify-content: space-around;
+}
+#row-cabos .card{
+    margin-bottom: 20px;
+}
 
 
 
@@ -326,6 +333,12 @@
 
     /* pastilhas */
     #btns-pastilha{
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    /* reparos */
+    #btns-reparos{
         display: flex;
         flex-wrap: wrap;
     }
