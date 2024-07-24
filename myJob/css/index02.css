@@ -342,6 +342,12 @@
         display: flex;
         flex-wrap: wrap;
     }
+
+    /* cabos */
+    #btns-cabos{
+        display: flex;
+        flex-wrap: wrap;
+    }
 }
 
 /* estrutura offcanvas para mobile  */

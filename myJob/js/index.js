@@ -51,6 +51,12 @@ document.addEventListener('DOMContentLoaded', () =>{
     //fucao filtrando pesquisa dos reparos
     filtroReparo()
 
+    // fucao filtrando pesquisa dos cabos
+    filtroCabos()
+
+
+
+
     // funcoes do fast-search para mostrar pagina
     mostrarInfoFastSearch()
 
@@ -1776,6 +1782,87 @@ function filtroReparo(){
 
 }
 
+// fucao filtrando pesquisa dos cabos
+function filtroCabos(){
+
+    let allBtns = document.querySelectorAll("#row-cabos #btns-cabos button")
+    //console.log(allBtns)
+
+    let allCards = document.querySelectorAll('#row-cabos .card')
+    //console.log(allCards)
+
+
+
+    // BTN TODOS
+    allBtns[0].addEventListener('click', () =>{
+        for(let c = 0;c < allCards.length;c++){
+            allCards[c].style.display='block'
+        }
+
+        for(let b = 0;b < allBtns.length;b++){
+            if(allBtns[0]){
+                allBtns[b].classList.remove('active')
+                allBtns[0].classList.add('active')
+            }
+        }
+    })
+
+    // BTN fiat
+    allBtns[1].addEventListener('click', () =>{
+        for(let c = 0;c < allCards.length;c++){
+            allCards[c].style.display='block'
+
+            if(!(allCards[c].classList.contains('fiat'))){
+                allCards[c].style.display='none'
+                
+            }
+        } 
+
+        for(let b = 0;b < allBtns.length;b++){
+            if(allBtns[1]){
+                allBtns[b].classList.remove('active')
+                allBtns[1].classList.add('active')
+            }
+        }
+    })
+
+    // BTN vws
+    allBtns[2].addEventListener('click', () =>{
+        for(let c = 0;c < allCards.length;c++){
+            allCards[c].style.display='block'
+
+            if(!(allCards[c].classList.contains('vws'))){
+                allCards[c].style.display='none'
+            }
+        } 
+
+        for(let b = 0;b < allBtns.length;b++){
+            if(allBtns[2]){
+                allBtns[b].classList.remove('active')
+                allBtns[2].classList.add('active')
+            }
+        }
+    })
+
+    // BTN GM
+    allBtns[3].addEventListener('click', () =>{
+        for(let c = 0;c < allCards.length;c++){
+            allCards[c].style.display='block'
+
+            if(!(allCards[c].classList.contains('gm'))){
+                allCards[c].style.display='none'
+            }
+        } 
+
+        for(let b = 0;b < allBtns.length;b++){
+            if(allBtns[3]){
+                allBtns[b].classList.remove('active')
+                allBtns[3].classList.add('active')
+            }
+        }
+    })
+
+}
 
 // logica offcanvas 
 document.addEventListener('DOMContentLoaded', () =>{
