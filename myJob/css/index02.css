@@ -10,6 +10,10 @@
 .espacamento-title{
     margin: 80px 0px;
 }
+.acabou{
+    opacity: 0.2;
+    
+}
 
 
 
@@ -253,6 +257,24 @@
     justify-content: space-around;
 }
 #row-cabos .card{
+    margin-bottom: 20px;
+}
+
+/* SAPATAS */
+#row-sapatas{
+    display: flex;
+    justify-content: space-around;
+}
+#row-sapatas .card{
+    margin-bottom: 20px;
+}
+
+/* CILINDROS */
+#row-cilindros{
+    display: flex;
+    justify-content: space-around;
+}
+#row-cilindros .card{
     margin-bottom: 20px;
 }
 

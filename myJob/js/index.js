@@ -738,6 +738,7 @@ function combustSimples(){
 
     
 }
+
        
 // funcao filtrar pesquisa dos filtros combustivel simples
 function combustPesados(){
@@ -837,6 +838,7 @@ function combustPesados(){
 
 
 }
+
         
 // funcao filtrar pesquisa dos filtros de ar motor
 function arMotor(){
@@ -970,6 +972,7 @@ function arMotor(){
 
 }
 
+
 // funcao filtrar pesquisa dos terminais
 function filtroTerminais(){
 
@@ -1069,6 +1072,7 @@ function filtroTerminais(){
 
 }
         
+
 // funcao filtrar pesquisa dos pivos
 function filtroPivos(){
 
