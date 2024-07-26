@@ -7,6 +7,8 @@
     --marcas: purple;
 }
 
+/* stylo globais  */
+
 .espacamento-title{
     margin: 80px 0px;
 }
@@ -14,9 +16,21 @@
     opacity: 0.2;
     
 }
-
-
-
+.space-around-card{
+    display: flex;
+    justify-content: space-around;
+}
+.space-around-card .card{
+    margin-bottom: 20px;
+}
+.marcas{
+    color: var(--marcas);
+    font-weight: bold;
+    font-size: 1.1rem;
+}
+.active{
+    background-color: var(--corBtnActive);
+}
 
 /* STYLO DO OFFCANVAS */
 .offCanvasTitle{
@@ -92,62 +106,22 @@
     
 }
 
-/* sistema de direcao */
-
-#area-sistema-direcao{
-    display: none;
-}
 .espacamento-header{
     height: 250px;
 }
-.estrutura-title{
+
+.espacamento-header .estrutura-title{
     display: flex;
+    justify-content: space-around;
     height: 100%;
     align-items: center;
-    justify-content: space-around;
-    
+    padding: 0;
 }
 
 
-/* TERMINAIS DE DIRECAO */
-#row-terminais{
-    display: flex;
-    justify-content: space-around;
-}
-#row-terminais .card{
-    margin-bottom: 20px;
-}
-
-
-/* modal footer dos terminais */
-#modalFooterDirecao{
-    display: flex;
-    justify-content: space-between;
-}
-.marcas{
-    color: var(--marcas);
-    font-size: 1.1rem;
-    font-weight: bold;
-} 
-
-
-/* BARRAS AXIAIS */
-#row-axiais{
-    display: flex;
-    justify-content: space-around;
-}
-#row-axiais .card{
-    margin-bottom: 20px;
-}
-
-/* estabilizadores */
-#row-estabilizadores{
-    display: flex;
-    justify-content: space-around;
-}
-
-#row-estabilizadores .card{
-    margin-bottom: 20px;
+/* sistema de direcao */
+#area-sistema-direcao{
+    display: none;
 }
 
 
@@ -157,129 +131,15 @@
 }
 
 
-/* BATEDORES */
-#row-batedores{
-    display: flex;
-    justify-content: space-around;
-}
-#row-batedores .card{
-    margin-bottom: 20px;
-}
-
-/* pivos de suspensao */
-#row-pivos{
-    display: flex;
-    justify-content: space-around;
-}
-#row-pivos .card{
-    margin-bottom: 20px;
-}
-
-/* AMORTECEDORES */
-#row-amortecedores{
-    display: flex;
-    justify-content: space-around;
-}
-
-/* buchas */
-#row-buchas{
-    display: flex;
-    justify-content: space-around;
-}
-#row-buchas .card{
-    margin-bottom: 20px;
-}
-
-/* coxins amortecedores */
-#row-coxins-amort{
-    display: flex;
-    justify-content: space-around;
-}
-#row-coxins-amort .card{
-    margin-bottom: 20px;
-}
-
-/* bieletas */
-#row-bieleta{
-    display: flex;
-    justify-content: space-around;
-}
-#row-bieleta .card{
-    margin-bottom: 20px;
-}
-
-
 /* SISTEMA DE FREIOS */
 #area-sistema-freios{
     display: none;
 }
 
-
-/* pastilhas */
-#row-pastilhas{
-    display: flex;
-    justify-content: space-around;
+/* SISTEMA IGNIÇÃO */
+#area-sistema-ignicao{
+    display: none;
 }
-#row-pastilhas .card{
-    margin-bottom: 20px;
-}
-
-/* discos freio */
-#row-discos{
-    display: flex;
-    justify-content: space-around;
-}
-#row-discos .card{
-    margin-bottom: 20px;
-}
-
-/* TAMBORES DE FREIO */
-#row-tambores{
-    display: flex;
-    justify-content: space-around;
-}
-#row-tambores .card{
-    margin-bottom: 20px;
-}
-
-/* REPAROS */
-#row-reparos{
-    display: flex;
-    justify-content: space-around;
-}
-#row-reparos .card{
-    margin-bottom: 20px;
-}
-
-/* CABOS */
-#row-cabos{
-    display: flex;
-    justify-content: space-around;
-}
-#row-cabos .card{
-    margin-bottom: 20px;
-}
-
-/* SAPATAS */
-#row-sapatas{
-    display: flex;
-    justify-content: space-around;
-}
-#row-sapatas .card{
-    margin-bottom: 20px;
-}
-
-/* CILINDROS */
-#row-cilindros{
-    display: flex;
-    justify-content: space-around;
-}
-#row-cilindros .card{
-    margin-bottom: 20px;
-}
-
-
-
 
 
 
@@ -298,6 +158,7 @@
     }
 }
 
+
 /* tablet */
 @media (max-width: 768px) {
 
@@ -312,64 +173,10 @@
     .myOffCanvas ul li{
         opacity: 1;
     }
-
-
-    /* terminais de direcao */
     #btn-offcanvas{
-        font-size: 1rem;
-    }
-    #btns-terminais{
-        display: flex;
-        flex-wrap: wrap;
-    }
+            font-size: 1rem;
+        }
 
-    /* pivos */
-    
-    #btns-pivos{
-        display: flex;
-        flex-wrap: wrap;
-    }
-    /* barras */
-    #sistema-btns{
-        display: flex;
-        flex-wrap: wrap;
-    }
-    /* estabilizadores */
-    #btn-estabili{
-        display: flex;
-        flex-wrap: wrap;
-    }
-
-
-    /* batedores btn */
-    #btns-batedores{
-        display: flex;
-        flex-wrap: wrap;
-    }
-
-    /* buchas */
-    #btns-buchas{
-        display: flex;
-        flex-wrap: wrap;
-    }
-
-    /* pastilhas */
-    #btns-pastilha{
-        display: flex;
-        flex-wrap: wrap;
-    }
-
-    /* reparos */
-    #btns-reparos{
-        display: flex;
-        flex-wrap: wrap;
-    }
-
-    /* cabos */
-    #btns-cabos{
-        display: flex;
-        flex-wrap: wrap;
-    }
 }
 
 /* estrutura offcanvas para mobile  */
@@ -395,6 +202,7 @@
     
 }
 
+
 /* tamanho da font do btn para mobile */
 @media (max-width: 480px) {
     
@@ -403,6 +211,7 @@
     }
     
 }
+
 
 @media (max-width: 370px){
 

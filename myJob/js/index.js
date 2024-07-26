@@ -67,434 +67,6 @@ document.addEventListener('DOMContentLoaded', () =>{
 
 })
 
-// funcao de fade-in-out
-
-
-
-// funcao friltrar pesquisa dos oleos! 
-function filtrarMarcas(){
-
-    let allBtnMarcas = document.querySelectorAll('#BoxBtnsDoFiltro .btn-filtro')
-    //console.log(allBtnMarcas)
-    let alloleos = document.querySelectorAll('.projeto-oleo')
-    //console.log(alloleos)
-
-
-    // btn todos 
-    allBtnMarcas[0].addEventListener('click', () =>{
-        // replacing active btn funcao
-        for(let b = 0;b < allBtnMarcas.length;b++){
-            if(allBtnMarcas[0]){
-                allBtnMarcas[b].classList.remove('BtnActive')
-                allBtnMarcas[0].classList.add('BtnActive')
-            }
-        }
-        
-        for(let c = 0;c < alloleos.length;c++){
-            alloleos[c].style.display='block'
-            
-        }
-    })
-
-    // btn lubrax 
-    allBtnMarcas[1].addEventListener('click', () =>{
-        // replacing active btn funcao
-        for(let b = 0;b < allBtnMarcas.length;b++){
-            if(allBtnMarcas[1]){
-                allBtnMarcas[b].classList.remove('BtnActive')
-                allBtnMarcas[1].classList.add('BtnActive')
-            }
-        }
-        
-        // filtrando
-        for(let c = 0;c < alloleos.length;c++){
-            alloleos[c].style.display='block'
-            if(!(alloleos[c]).classList.contains('lubrax')){
-                alloleos[c].style.display='none'
-            }
-            
-        }
-    })
-
-    // btn selenia
-    allBtnMarcas[2].addEventListener('click', () =>{
-        // replacing active btn funcao
-        for(let b = 0;b < allBtnMarcas.length;b++){
-            if(allBtnMarcas[2]){
-                allBtnMarcas[b].classList.remove('BtnActive')
-                allBtnMarcas[2].classList.add('BtnActive')
-            }
-        }
-        
-        // filtrando
-        for(let c = 0;c < alloleos.length;c++){
-            alloleos[c].style.display='block'
-            if(!(alloleos[c]).classList.contains('selen')){
-                alloleos[c].style.display='none'
-            }
-            
-        }
-    })
-
-    // btn mobil
-    allBtnMarcas[3].addEventListener('click', () =>{
-        // replacing active btn funcao
-        for(let b = 0;b < allBtnMarcas.length;b++){
-            if(allBtnMarcas[3]){
-                allBtnMarcas[b].classList.remove('BtnActive')
-                allBtnMarcas[3].classList.add('BtnActive')
-            }
-        }
-        
-        // filtrando
-        for(let c = 0;c < alloleos.length;c++){
-            alloleos[c].style.display='block'
-            if(!(alloleos[c]).classList.contains('mobil')){
-                alloleos[c].style.display='none'
-            }
-            
-        }
-    })
-
-    // btn elaion
-    allBtnMarcas[4].addEventListener('click', () =>{
-        // replacing active btn funcao
-        for(let b = 0;b < allBtnMarcas.length;b++){
-            if(allBtnMarcas[4]){
-                allBtnMarcas[b].classList.remove('BtnActive')
-                allBtnMarcas[4].classList.add('BtnActive')
-            }
-        }
-        
-        // filtrando
-        for(let c = 0;c < alloleos.length;c++){
-            alloleos[c].style.display='block'
-            if(!(alloleos[c]).classList.contains('elaion')){
-                alloleos[c].style.display='none'
-            }
-            
-        }
-    })
-
-    // btn dulub
-    allBtnMarcas[5].addEventListener('click', () =>{
-        // replacing active btn funcao
-        for(let b = 0;b < allBtnMarcas.length;b++){
-            if(allBtnMarcas[5]){
-                allBtnMarcas[b].classList.remove('BtnActive')
-                allBtnMarcas[5].classList.add('BtnActive')
-            }
-        }
-        
-        // filtrando
-        for(let c = 0;c < alloleos.length;c++){
-            alloleos[c].style.display='block'
-            if(!(alloleos[c]).classList.contains('lubel')){
-                alloleos[c].style.display='none'
-            }
-            
-        }
-    })
-   
-}
-
-
-// fucao filtrar pesquisa de filtros de oleo
-function filtrarFiltrosOleo(){
-
-    let allBtnFiltro = document.querySelectorAll('#estrutra-btn-filtro-oleo .btns-filtro-oleo')
-    //console.log(allBtnFiltro)
-    let allFiltros = document.querySelectorAll('#row-filtros .projeto-filtro-oleo')
-    //console.log(allFiltros)
-
-    // todos os filtros
-    allBtnFiltro[0].addEventListener('click', () =>{
-        for(let c = 0;c < allFiltros.length;c++){
-            allFiltros[c].style.display='block'
-
-            //replecing btn active
-            for(let b = 0;b < allBtnFiltro.length;b++){
-                if(allBtnFiltro[0]){
-                    allBtnFiltro[b].classList.remove('FiltroOleoActive')
-                    allBtnFiltro[0].classList.add('FiltroOleoActive')
-                }
-            }
-        }
-    })
-
-    // filtro Fiat 
-    allBtnFiltro[1].addEventListener('click', () =>{
-        for(let c = 0;c < allFiltros.length;c++){
-            // mostrar todos antes de filtrar 
-            allFiltros[c].style.display='block'
-
-            //replecing btn active
-            for(let b = 0;b < allBtnFiltro.length;b++){
-                if(allBtnFiltro[1]){
-                    allBtnFiltro[b].classList.remove('FiltroOleoActive')
-                    allBtnFiltro[1].classList.add('FiltroOleoActive')
-                }
-            }
-
-
-            //filtrando
-            if(!(allFiltros[c].classList.contains('fiat'))){
-                allFiltros[c].style.display='none'
-                
-            }
-        }
-    })
-
-    // filtro GM
-    allBtnFiltro[2].addEventListener('click', () =>{
-
-        for(let c = 0;c < allFiltros.length;c++){
-            // mostrar todos antes de filtrar 
-            allFiltros[c].style.display='block'
-
-            //replecing btn active
-            for(let b = 0;b < allBtnFiltro.length;b++){
-                if(allBtnFiltro[2]){
-                    allBtnFiltro[b].classList.remove('FiltroOleoActive')
-                    allBtnFiltro[2].classList.add('FiltroOleoActive')
-                }
-            }
-
-
-            //filtrando
-            if(!(allFiltros[c].classList.contains('gm'))){
-                allFiltros[c].style.display='none'
-                
-            }
-        }
-    })
-
-    // btn VW
-    allBtnFiltro[3].addEventListener('click', () =>{
-
-        for(let c = 0;c < allFiltros.length;c++){
-            // mostrar todos antes de filtrar 
-            allFiltros[c].style.display='block'
-
-            //replecing btn active
-            for(let b = 0;b < allBtnFiltro.length;b++){
-                if(allBtnFiltro[3]){
-                    allBtnFiltro[b].classList.remove('FiltroOleoActive')
-                    allBtnFiltro[3].classList.add('FiltroOleoActive')
-                }
-            }
-
-
-            //filtrando
-            if(!(allFiltros[c].classList.contains('vw'))){
-                allFiltros[c].style.display='none'
-                
-            }
-        }
-    })
-
-    // btn toyota
-    allBtnFiltro[4].addEventListener('click', () =>{
-
-        for(let c = 0;c < allFiltros.length;c++){
-            // mostrar todos antes de filtrar 
-            allFiltros[c].style.display='block'
-
-            //replecing btn active
-            for(let b = 0;b < allBtnFiltro.length;b++){
-                if(allBtnFiltro[4]){
-                    allBtnFiltro[b].classList.remove('FiltroOleoActive')
-                    allBtnFiltro[4].classList.add('FiltroOleoActive')
-                }
-            }
-
-
-            //filtrando
-            if(!(allFiltros[c].classList.contains('toy'))){
-                allFiltros[c].style.display='none'
-                
-            }
-        }
-    })
-
-    // btn renault
-    allBtnFiltro[5].addEventListener('click', () =>{
-
-        for(let c = 0;c < allFiltros.length;c++){
-            // mostrar todos antes de filtrar 
-            allFiltros[c].style.display='block'
-
-            //replecing btn active
-            for(let b = 0;b < allBtnFiltro.length;b++){
-                if(allBtnFiltro[5]){
-                    allBtnFiltro[b].classList.remove('FiltroOleoActive')
-                    allBtnFiltro[5].classList.add('FiltroOleoActive')
-                }
-            }
-
-
-            //filtrando
-            if(!(allFiltros[c].classList.contains('ren'))){
-                allFiltros[c].style.display='none'
-                
-            }
-        }
-    })
-
-    // btn ford
-    allBtnFiltro[6].addEventListener('click', () =>{
-
-        for(let c = 0;c < allFiltros.length;c++){
-            // mostrar todos antes de filtrar 
-            allFiltros[c].style.display='block'
-
-            //replecing btn active
-            for(let b = 0;b < allBtnFiltro.length;b++){
-                if(allBtnFiltro[6]){
-                    allBtnFiltro[b].classList.remove('FiltroOleoActive')
-                    allBtnFiltro[6].classList.add('FiltroOleoActive')
-                }
-            }
-
-
-            //filtrando
-            if(!(allFiltros[c].classList.contains('ford'))){
-                allFiltros[c].style.display='none'
-                
-            }
-        }
-    })
-
-}
-
-
-// funcao filtrar pesquisa dos filtros pesados
-function filtrandoPesados(){
-
-    let allBtns = document.querySelectorAll('#btn-filtros-pesados .btn-filtros-pesados')
-    //console.log(allBtns)
-    let allFiltroPesado = document.querySelectorAll('#row-filtros-pesados .filtros-pesados')
-    //console.log(allFiltroPesado)
-
-    // todos 
-    allBtns[0].addEventListener('click', () =>{
-        // replecing active
-        for(let b = 0;b < allBtns.length;b++){
-            if(allBtns[1]){
-                allBtns[b].classList.remove('pesadoActive')
-                allBtns[0].classList.add('pesadoActive')
-                
-            }
-        }
-
-        // filtrando filtros 
-        for(let c = 0;c < allFiltroPesado.length;c++){
-            allFiltroPesado[c].style.display='block'
-        }
-
-
-
-    })
-
-
-    // btn ford pesado 
-    allBtns[1].addEventListener('click', () =>{
-
-        // replecing active
-        for(let b = 0;b < allBtns.length;b++){
-            if(allBtns[1]){
-                allBtns[b].classList.remove('pesadoActive')
-                allBtns[1].classList.add('pesadoActive')
-                
-            }
-        }
-
-
-        // filtrando filtros 
-        for(let c = 0;c < allFiltroPesado.length;c++){
-            allFiltroPesado[c].style.display='block'
-
-            if(!(allFiltroPesado[c].classList.contains('ford-pesado'))){
-                allFiltroPesado[c].style.display='none'
-                
-            }
-        }
-    })
-
-    // btn hyundai 
-    allBtns[2].addEventListener('click', () =>{
-
-        // replecing active
-        for(let b = 0;b < allBtns.length;b++){
-            if(allBtns[2]){
-                allBtns[b].classList.remove('pesadoActive')
-                allBtns[2].classList.add('pesadoActive')
-                
-            }
-        }
-
-
-        // filtrando filtros 
-        for(let c = 0;c < allFiltroPesado.length;c++){
-            allFiltroPesado[c].style.display='block'
-
-            if(!(allFiltroPesado[c].classList.contains('hyun'))){
-                allFiltroPesado[c].style.display='none'
-                
-            }
-        }
-    })
-
-    // btn mercedez
-    allBtns[3].addEventListener('click', () =>{
-
-        // replecing active
-        for(let b = 0;b < allBtns.length;b++){
-            if(allBtns[3]){
-                allBtns[b].classList.remove('pesadoActive')
-                allBtns[3].classList.add('pesadoActive')
-                
-            }
-        }
-
-
-        // filtrando filtros
-        for(let c = 0;c < allFiltroPesado.length;c++){
-            allFiltroPesado[c].style.display='block'
-
-            if(!(allFiltroPesado[c].classList.contains('benz'))){
-                allFiltroPesado[c].style.display='none'
-                
-            }
-        }
-    })
-
-    // gm pesados 
-    allBtns[4].addEventListener('click', () =>{
-
-        // replecing active
-        for(let b = 0;b < allBtns.length;b++){
-            if(allBtns[4]){
-                allBtns[b].classList.remove('pesadoActive')
-                allBtns[4].classList.add('pesadoActive')
-                
-            }
-        }
-
-
-        // filtrando filtros
-        for(let c = 0;c < allFiltroPesado.length;c++){
-            allFiltroPesado[c].style.display='block'
-
-            if(!(allFiltroPesado[c].classList.contains('gm-pesado'))){
-                allFiltroPesado[c].style.display='none'
-                
-            }
-        }
-    })
-
-}
-
 
 // funcao das sessoes da pagina
 function mostrarInfoFastSearch(){
@@ -599,10 +171,449 @@ function mostrarInfoFastSearch(){
             allSessoes[8].style.display='block'
         }
     })
+
+    // mostrando sistema de ignição
+    allDepart[3].addEventListener('click', () =>{
+        for(let c = 0;c < allSessoes.length;c++){
+            allSessoes[c].style.display='none'
+            allSessoes[9].style.display='block'
+        }
+    })
     
 
     
 }
+
+
+
+// funcao friltrar pesquisa dos oleos! 
+function filtrarMarcas(){
+
+    let allBtns = document.querySelectorAll("#row-oleos #BoxBtnsDoFiltro button")
+    //console.log(allBtns)
+
+    let allCards = document.querySelectorAll('#row-oleos .card')
+    //console.log(allCards)
+
+
+    // btn todos 
+    allBtns[0].addEventListener('click', () =>{
+        // replacing active btn funcao
+        for(let b = 0;b < allBtns.length;b++){
+            if(allBtns[0]){
+                allBtns[b].classList.remove('active')
+                allBtns[0].classList.add('active')
+            }
+        }
+        
+        for(let c = 0;c < allCards.length;c++){
+            allCards[c].style.display='block'
+            
+        }
+    })
+
+    // btn lubrax 
+    allBtns[1].addEventListener('click', () =>{
+        // replacing active btn funcao
+        for(let b = 0;b < allBtns.length;b++){
+            if(allBtns[1]){
+                allBtns[b].classList.remove('active')
+                allBtns[1].classList.add('active')
+            }
+        }
+        
+        // filtrando
+        for(let c = 0;c < allCards.length;c++){
+            allCards[c].style.display='block'
+            if(!(allCards[c]).classList.contains('lubrax')){
+                allCards[c].style.display='none'
+            }
+            
+        }
+    })
+
+    // btn selenia
+    allBtns[2].addEventListener('click', () =>{
+        // replacing active btn funcao
+        for(let b = 0;b < allBtns.length;b++){
+            if(allBtns[2]){
+                allBtns[b].classList.remove('active')
+                allBtns[2].classList.add('active')
+            }
+        }
+        
+        // filtrando
+        for(let c = 0;c < allCards.length;c++){
+            allCards[c].style.display='block'
+            if(!(allCards[c]).classList.contains('selen')){
+                allCards[c].style.display='none'
+            }
+            
+        }
+    })
+
+    // btn mobil
+    allBtns[3].addEventListener('click', () =>{
+        // replacing active btn funcao
+        for(let b = 0;b < allBtns.length;b++){
+            if(allBtns[3]){
+                allBtns[b].classList.remove('active')
+                allBtns[3].classList.add('active')
+            }
+        }
+        
+        // filtrando
+        for(let c = 0;c < allCards.length;c++){
+            allCards[c].style.display='block'
+            if(!(allCards[c]).classList.contains('mobil')){
+                allCards[c].style.display='none'
+            }
+            
+        }
+    })
+
+    // btn elaion
+    allBtns[4].addEventListener('click', () =>{
+        // replacing active btn funcao
+        for(let b = 0;b < allBtns.length;b++){
+            if(allBtns[4]){
+                allBtns[b].classList.remove('active')
+                allBtns[4].classList.add('active')
+            }
+        }
+        
+        // filtrando
+        for(let c = 0;c < allCards.length;c++){
+            allCards[c].style.display='block'
+            if(!(allCards[c]).classList.contains('elaion')){
+                allCards[c].style.display='none'
+            }
+            
+        }
+    })
+
+    // btn dulub
+    allBtns[5].addEventListener('click', () =>{
+        // replacing active btn funcao
+        for(let b = 0;b < allBtns.length;b++){
+            if(allBtns[5]){
+                allBtns[b].classList.remove('active')
+                allBtns[5].classList.add('active')
+            }
+        }
+        
+        // filtrando
+        for(let c = 0;c < allCards.length;c++){
+            allCards[c].style.display='block'
+            if(!(allCards[c]).classList.contains('lubel')){
+                allCards[c].style.display='none'
+            }
+            
+        }
+    })
+   
+}
+
+
+// fucao filtrar pesquisa de filtros de oleo
+function filtrarFiltrosOleo(){
+
+    let allBtns = document.querySelectorAll("#row-filtros #estrutra-btn-filtro-oleo button")
+    //console.log(allBtns)
+
+    let allCards = document.querySelectorAll('#row-filtros .card')
+    //console.log(allCards)
+
+    // todos os filtros
+    allBtns[0].addEventListener('click', () =>{
+        for(let c = 0;c < allCards.length;c++){
+            allCards[c].style.display='block'
+
+            //replecing btn active
+            for(let b = 0;b < allBtns.length;b++){
+                if(allBtns[0]){
+                    allBtns[b].classList.remove('.active')
+                    allBtns[0].classList.add('.active')
+                }
+            }
+        }
+    })
+
+    // filtro Fiat 
+    allBtns[1].addEventListener('click', () =>{
+        for(let c = 0;c < allCards.length;c++){
+            // mostrar todos antes de filtrar 
+            allCards[c].style.display='block'
+
+            //replecing btn active
+            for(let b = 0;b < allBtns.length;b++){
+                if(allBtns[1]){
+                    allBtns[b].classList.remove('active')
+                    allBtns[1].classList.add('active')
+                }
+            }
+
+
+            //filtrando
+            if(!(allCards[c].classList.contains('fiat'))){
+                allCards[c].style.display='none'
+                
+            }
+        }
+    })
+
+    // filtro GM
+    allBtns[2].addEventListener('click', () =>{
+
+        for(let c = 0;c < allCards.length;c++){
+            // mostrar todos antes de filtrar 
+            allCards[c].style.display='block'
+
+            //replecing btn active
+            for(let b = 0;b < allBtns.length;b++){
+                if(allBtns[2]){
+                    allBtns[b].classList.remove('active')
+                    allBtns[2].classList.add('active')
+                }
+            }
+
+
+            //filtrando
+            if(!(allCards[c].classList.contains('gm'))){
+                allCards[c].style.display='none'
+                
+            }
+        }
+    })
+
+    // btn VW
+    allBtns[3].addEventListener('click', () =>{
+
+        for(let c = 0;c < allCards.length;c++){
+            // mostrar todos antes de filtrar 
+            allCards[c].style.display='block'
+
+            //replecing btn active
+            for(let b = 0;b < allBtns.length;b++){
+                if(allBtns[3]){
+                    allBtns[b].classList.remove('active')
+                    allBtns[3].classList.add('active')
+                }
+            }
+
+
+            //filtrando
+            if(!(allCards[c].classList.contains('vw'))){
+                allCards[c].style.display='none'
+                
+            }
+        }
+    })
+
+    // btn toyota
+    allBtns[4].addEventListener('click', () =>{
+
+        for(let c = 0;c < allCards.length;c++){
+            // mostrar todos antes de filtrar 
+            allCards[c].style.display='block'
+
+            //replecing btn active
+            for(let b = 0;b < allBtns.length;b++){
+                if(allBtns[4]){
+                    allBtns[b].classList.remove('active')
+                    allBtns[4].classList.add('active')
+                }
+            }
+
+
+            //filtrando
+            if(!(allCards[c].classList.contains('toy'))){
+                allCards[c].style.display='none'
+                
+            }
+        }
+    })
+
+    // btn renault
+    allBtns[5].addEventListener('click', () =>{
+
+        for(let c = 0;c < allCards.length;c++){
+            // mostrar todos antes de filtrar 
+            allCards[c].style.display='block'
+
+            //replecing btn active
+            for(let b = 0;b < allBtns.length;b++){
+                if(allBtns[5]){
+                    allBtns[b].classList.remove('active')
+                    allBtns[5].classList.add('active')
+                }
+            }
+
+
+            //filtrando
+            if(!(allCards[c].classList.contains('ren'))){
+                allCards[c].style.display='none'
+                
+            }
+        }
+    })
+
+    // btn ford
+    allBtns[6].addEventListener('click', () =>{
+
+        for(let c = 0;c < allCards.length;c++){
+            // mostrar todos antes de filtrar 
+            allCards[c].style.display='block'
+
+            //replecing btn active
+            for(let b = 0;b < allBtns.length;b++){
+                if(allBtns[6]){
+                    allBtns[b].classList.remove('active')
+                    allBtns[6].classList.add('active')
+                }
+            }
+
+
+            //filtrando
+            if(!(allCards[c].classList.contains('ford'))){
+                allCards[c].style.display='none'
+                
+            }
+        }
+    })
+
+}
+
+
+// funcao filtrar pesquisa dos filtros pesados
+function filtrandoPesados(){
+
+    let allBtns = document.querySelectorAll("#row-filtros-pesados #btn-filtros-pesados button")
+    //console.log(allBtns)
+
+    let allCards = document.querySelectorAll('#row-filtros-pesados .card')
+    //console.log(allCards)
+
+    // todos 
+    allBtns[0].addEventListener('click', () =>{
+        // replecing active
+        for(let b = 0;b < allBtns.length;b++){
+            if(allBtns[1]){
+                allBtns[b].classList.remove('active')
+                allBtns[0].classList.add('active')
+                
+            }
+        }
+
+        // filtrando filtros 
+        for(let c = 0;c < allCards.length;c++){
+            allCards[c].style.display='block'
+        }
+
+
+
+    })
+
+
+    // btn ford pesado 
+    allBtns[1].addEventListener('click', () =>{
+
+        // replecing active
+        for(let b = 0;b < allBtns.length;b++){
+            if(allBtns[1]){
+                allBtns[b].classList.remove('active')
+                allBtns[1].classList.add('active')
+                
+            }
+        }
+
+
+        // filtrando filtros 
+        for(let c = 0;c < allCards.length;c++){
+            allCards[c].style.display='block'
+
+            if(!(allCards[c].classList.contains('ford-pesado'))){
+                allCards[c].style.display='none'
+                
+            }
+        }
+    })
+
+    // btn hyundai 
+    allBtns[2].addEventListener('click', () =>{
+
+        // replecing active
+        for(let b = 0;b < allBtns.length;b++){
+            if(allBtns[2]){
+                allBtns[b].classList.remove('active')
+                allBtns[2].classList.add('active')
+                
+            }
+        }
+
+
+        // filtrando filtros 
+        for(let c = 0;c < allCards.length;c++){
+            allCards[c].style.display='block'
+
+            if(!(allCards[c].classList.contains('hyun'))){
+                allCards[c].style.display='none'
+                
+            }
+        }
+    })
+
+    // btn mercedez
+    allBtns[3].addEventListener('click', () =>{
+
+        // replecing active
+        for(let b = 0;b < allBtns.length;b++){
+            if(allBtns[3]){
+                allBtns[b].classList.remove('active')
+                allBtns[3].classList.add('active')
+                
+            }
+        }
+
+
+        // filtrando filtros
+        for(let c = 0;c < allCards.length;c++){
+            allCards[c].style.display='block'
+
+            if(!(allCards[c].classList.contains('benz'))){
+                allCards[c].style.display='none'
+                
+            }
+        }
+    })
+
+    // gm pesados 
+    allBtns[4].addEventListener('click', () =>{
+
+        // replecing active
+        for(let b = 0;b < allBtns.length;b++){
+            if(allBtns[4]){
+                allBtns[b].classList.remove('active')
+                allBtns[4].classList.add('active')
+                
+            }
+        }
+
+
+        // filtrando filtros
+        for(let c = 0;c < allCards.length;c++){
+            allCards[c].style.display='block'
+
+            if(!(allCards[c].classList.contains('gm-pesado'))){
+                allCards[c].style.display='none'
+                
+            }
+        }
+    })
+
+}
+
+
 
 
 // DROP-TODOS DEPARTAMENTOS MOBILE
@@ -1877,6 +1888,8 @@ document.addEventListener('DOMContentLoaded', () =>{
     let bsOffCanvas = new bootstrap.Offcanvas(myOffCanvas[0]);
     let bsOffCanvas2 = new bootstrap.Offcanvas(myOffCanvas[1]);
     let bsOffCanvas3 = new bootstrap.Offcanvas(myOffCanvas[2])
+    let bsOffCanvas4 = new bootstrap.Offcanvas(myOffCanvas[3])
+
 
     let allBtnOff = document.querySelectorAll('.btn-open-offcanvas')
     //console.log(allBtnOff)
@@ -1896,12 +1909,20 @@ document.addEventListener('DOMContentLoaded', () =>{
         bsOffCanvas2.toggle()
     })
 
-
+    // freios
     allBtnOff[2].addEventListener('click', (e) =>{
 
         e.preventDefault()
         e.stopPropagation()
         bsOffCanvas3.toggle()
+    })
+
+    // freios
+    allBtnOff[3].addEventListener('click', (e) =>{
+
+        e.preventDefault()
+        e.stopPropagation()
+        bsOffCanvas4.toggle()
     })
 
     

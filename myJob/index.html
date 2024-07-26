@@ -81,6 +81,8 @@
                             <li class="dropdown-item"><a href="#area-sistema-suspensao" class="no-mobile">Sistema Suspensão</a></li>
 
                             <li class="dropdown-item"><a href="#area-sistema-freios" class="no-mobile">Freios</a></li>
+
+                            <li class="dropdown-item"><a href="#area-sistema-ignicao" class="no-mobile">Sistema Ignição</a></li>
                             
                         </ul>
                         
@@ -167,20 +169,20 @@
         <!-- sessao de oleos -->
         <div id="oleos" class="sessao">
             <div class="container">
-                <div class="row espaco-card" id="row-oleos">
+                <div class="row espaco-card space-around-card" id="row-oleos">
                     <!-- title -->
                     <div class="col-md-12">
                         <h2 class="titles-sessoes">Óleos</h2>
                     </div>
                     
-                    <!-- btns filtro  -->
-                    <div class="col-12 btns-flex-wrap" id="BoxBtnsDoFiltro">
-                        <button class="design-btn btn-filtro BtnActive">Todos</button>
-                        <button class="design-btn btn-filtro">Lubrax</button>
-                        <button class="design-btn btn-filtro">Selenia</button>
-                        <button class="design-btn btn-filtro">Mobil</button>
-                        <button class="design-btn btn-filtro">Elaion</button>
-                        <button class="design-btn btn-filtro">Dulub</button>                
+                    <!-- btns dos oleos -->
+                    <div class="col-12 btn-mobile-wrap" id="BoxBtnsDoFiltro">
+                        <button class="design-btn active">Todos</button>
+                        <button class="design-btn">Lubrax</button>
+                        <button class="design-btn">Selenia</button>
+                        <button class="design-btn">Mobil</button>
+                        <button class="design-btn">Elaion</button>
+                        <button class="design-btn">Dulub</button>                
                     </div>
 
                     <!-- oleos lubrax -->
@@ -283,7 +285,7 @@
         <div id="area-oleo-freio" class="sessao">
             <div class="container">
 
-                <div class="row espaco-card" id="row-fluido-oleo">
+                <div class="row espaco-card space-around-card" id="row-fluido-oleo">
 
 
                     <div class="col-12">
@@ -304,21 +306,22 @@
             <div class="container">
 
                 <!-- filtros simples  -->
-                <div class="row espaco-card" id="row-filtros">
+                <div class="row espaco-card space-around-card" id="row-filtros">
                     <div class="col-md-12">
                         <h2 class="titles-sessoes">Filtros de Óleo</h2>
                     </div>
 
                     <!-- btns dos filtro de oleo  -->
-                    <div class="col-md-12" id="estrutra-btn-filtro-oleo">
-                        <button class="design-btn btns-filtro-oleo FiltroOleoActive">Todos</button>
-                        <button class="design-btn btns-filtro-oleo">Fiat</button>
-                        <button class="design-btn btns-filtro-oleo">GM</button>
-                        <button class="design-btn btns-filtro-oleo">Volskwage</button>
-                        <button class="design-btn btns-filtro-oleo">Toyota</button>
-                        <button class="design-btn btns-filtro-oleo">Renault</button>
-                        <button class="design-btn btns-filtro-oleo">Ford</button>
+                    <div class="col-md-12 btn-mobile-wrap" id="estrutra-btn-filtro-oleo">
+                        <button class="design-btn active">Todos</button>
+                        <button class="design-btn">Fiat</button>
+                        <button class="design-btn">GM</button>
+                        <button class="design-btn">Volskwage</button>
+                        <button class="design-btn">Toyota</button>
+                        <button class="design-btn">Renault</button>
+                        <button class="design-btn">Ford</button>
                     </div>
+
 
                     <!-- linha GM  -->
                     <div class="col-md-3 card projeto-filtro-oleo gm">
@@ -481,19 +484,19 @@
                 </div>
 
                 <!-- filtros pesados  -->
-                <div class="row espaco-card" id="row-filtros-pesados">
+                <div class="row espaco-card space-around-card" id="row-filtros-pesados">
 
                     <div class="col-md-12" style="margin: 40px 0px;">
                         <h2 class="titles-sessoes">Filtros Pesados</h2>
                     </div>
 
                     <!-- BTNS FILTROS PESADOS  -->
-                    <div class="col-md-12" id="btn-filtros-pesados">
-                        <button class="design-btn btn-filtros-pesados pesadoActive">Todos</button>
-                        <button class="design-btn btn-filtros-pesados">Ford</button>
-                        <button class="design-btn btn-filtros-pesados">Hyundai</button>
-                        <button class="design-btn btn-filtros-pesados">Mercedes</button>
-                        <button class="design-btn btn-filtros-pesados">GM</button>
+                    <div class="col-md-12 btn-mobile-wrap" id="btn-filtros-pesados">
+                        <button class="design-btn active">Todos</button>
+                        <button class="design-btn">Ford</button>
+                        <button class="design-btn">Hyundai</button>
+                        <button class="design-btn">Mercedes</button>
+                        <button class="design-btn">GM</button>
                     </div>
 
                     
@@ -608,13 +611,13 @@
             <div class="container">
 
                 <!-- SIMPLES -->
-                <div class="row espaco-card" id="row-filtro-combus-simples">
+                <div class="row espaco-card space-around-card" id="row-filtro-combus-simples">
                     <div class="col-12">
                         <h2 class="titles-sessoes" style="margin-bottom: 60px;">Filtros de combustível (simples)</h2>
                     </div>
 
                     <!-- btns de filtrar pesquisa -->
-                    <div class="col-12" id="all-btns-combust-simples">
+                    <div class="col-12 btn-mobile-wrap" id="all-btns-combust-simples">
                         <button class="design-btn btn-filtro-combus-simples active">Todos</button>
                         <button class="design-btn btn-filtro-combus-simples">GM</button>
                         <button class="design-btn btn-filtro-combus-simples">Fiat</button>
@@ -684,13 +687,13 @@
 
 
                 <!-- PESADOS  -->
-                <div class="row espaco-card" id="row-filtro-combus">
+                <div class="row espaco-card space-around-card" id="row-filtro-combus">
                     <div class="col-12">
                         <h2 class="titles-sessoes" style="margin-bottom: 60px; margin-top: 30px;">Filtros de Combustível (Pesados)</h2>
                     </div>
 
                     <!-- btns de filtrar pesquisa -->
-                    <div class="col-12" id="all-btns-combust-pesado">
+                    <div class="col-12 btn-mobile-wrap" id="all-btns-combust-pesado">
                         <button class="design-btn btn-filtro-combus-pesado active">Todos</button>
                         <button class="design-btn btn-filtro-combus-pesado">GM</button>
                         <button class="design-btn btn-filtro-combus-pesado">Toyota</button>
@@ -796,14 +799,14 @@
             <div class="container">
 
                 <!-- FILTROS DE AR DO MOTOR -->
-                <div class="row espaco-card" id="row-filtros-ar-motor">
+                <div class="row espaco-card space-around-card" id="row-filtros-ar-motor">
                     <div class="col-12">
                         <h2 class="titles-sessoes" style="margin-bottom: 60px;">Filtros de Ar do Motor</h2>
                     </div>
 
                     <!-- BTNS DOS FILTROS DE AR  -->
 
-                    <div class="col-12" id="all-btns-filtro-ar-motor">
+                    <div class="col-12 btn-mobile-wrap" id="all-btns-filtro-ar-motor">
                         <button class="design-btn active">Todos</button>
                         <button class="design-btn">GM</button>
                         <button class="design-btn">Volskwage</button>
@@ -938,7 +941,7 @@
 
 
                 <!-- FILTROS DE AR DE CABINE -->
-                <div class="row espaco-card" id="row-filtros-ar-cabine">
+                <div class="row espaco-card space-around-card" id="row-filtros-ar-cabine">
                     <div class="col-12">
                         <h2 class="titles-sessoes" style="margin-bottom: 60px; margin-top: 30px;">Filtros de Ar de Cabine</h2>
                     </div>
@@ -977,7 +980,7 @@
         <!-- sessao baterias -->
         <div id="area-bateria" class="sessao">
             <div class="container">
-                <div class="row espaco-card" id="row-baterias">
+                <div class="row espaco-card space-around-card" id="row-baterias">
 
                     <div class="col-md-12">
                         <h2 class="titles-sessoes" style="margin-bottom: 55px;">Batérias</h2>
@@ -1074,6 +1077,7 @@
                         <div class="offcanvas-header">
 
                             <h5 class="offCanvasTitle">Partes do Sistema de Direção</h5>
+
                             <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
 
                         </div>
@@ -1093,13 +1097,13 @@
 
 
                 <!-- TERMINAIS DE DIREÇÃO  -->
-                <div class="row espaco-card" id="row-terminais">
+                <div class="row espaco-card space-around-card" id="row-terminais">
                     <div class="col-12">
                         <h2 class="titles-sessoes" style="margin-bottom: 50px;">Terminais de Direção</h2>
                     </div>
 
                     <!-- btns dos terminais  -->
-                        <div class="col-12 d-flex justify-content-around" id="btns-terminais">
+                        <div class="col-12 btn-mobile-wrap" id="btns-terminais">
                         <button class="design-btn active">Todos</button>
                         <button class="design-btn">Fiat</button>
                         <button class="design-btn">Volskwage</button>
@@ -1316,14 +1320,14 @@
 
 
                 <!-- BARRAS AXIAIS -->
-                <div class="row espaco-card" id="row-axiais">
+                <div class="row espaco-card space-around-card" id="row-axiais">
 
                 <div class="col-12">
                     <h2 class="titles-sessoes espacamento-title">Barras Axiais</h2>
                 </div>
 
                 <!-- btns das barras  -->
-                <div class="col-12 d-flex justify-content-around" id="sistema-btns">
+                <div class="col-12 btn-mobile-wrap" id="sistema-btns">
                     <button class="design-btn active">Todos</button>
                     <button class="design-btn">Fiat</button>
                     <button class="design-btn">Volskwage</button>
@@ -1436,14 +1440,14 @@
 
 
                 <!-- ESTABILIZADORES DA BARRA -->
-                <div class="row espaco-card" id="row-estabilizadores">
+                <div class="row espaco-card space-around-card" id="row-estabilizadores">
 
                     <div class="col-12">
                         <h2 class="titles-sessoes espacamento-title">Estabilizadores Barra Direção</h2>
                     </div>
 
                     <!-- btns dos estabilizadores  -->
-                <div class="col-12 d-flex justify-content-around" id="btn-estabili">
+                <div class="col-12 btn-mobile-wrap" id="btn-estabili">
                     <button class="design-btn active">Todos</button>
                     <button class="design-btn">Fiat</button>
                     <button class="design-btn">Volskwage</button>
@@ -1641,14 +1645,14 @@
 
 
                 <!-- Batedores -->
-                <div class="row espaco-card" id="row-batedores">
+                <div class="row espaco-card space-around-card" id="row-batedores">
 
                     <div class="col-12">
                         <h2 class="titles-sessoes" style="margin-bottom: 50px;">Batedores</h2>
                     </div>
 
                     <!-- btns dos terminais  -->
-                    <div class="col-12 d-flex justify-content-around" id="btns-batedores">
+                    <div class="col-12 btn-mobile-wrap" id="btns-batedores">
                         <button class="design-btn active">Todos</button>
                         <button class="design-btn">Fiat</button>
                         <button class="design-btn">Volskwage</button>
@@ -1755,13 +1759,13 @@
 
 
                 <!-- PIVOS DE SUSPENSAO -->
-                <div class="row espaco-card" id="row-pivos">
+                <div class="row espaco-card space-around-card" id="row-pivos">
                     <div class="col-12">
                         <h2 class="titles-sessoes espacamento-title">Pivos de Suspensão</h2>
                     </div>
 
                     <!-- btns dos terminais  -->
-                    <div class="col-12 d-flex justify-content-around" id="btns-pivos">
+                    <div class="col-12 btn-mobile-wrap" id="btns-pivos">
                         <button class="design-btn active">Todos</button>
                         <button class="design-btn">Fiat</button>
                         <button class="design-btn">Volskwage</button>
@@ -1902,7 +1906,7 @@
 
 
                 <!-- AMORTECEDORES -->
-                <div class="row espaco-card" id="row-amortecedores">
+                <div class="row espaco-card space-around-card" id="row-amortecedores">
                     
                     <div class="col-12">
                         <h2 class="titles-sessoes espacamento-title">Amortecedores</h2>
@@ -1956,7 +1960,7 @@
 
 
                 <!-- Buchas -->
-                <div class="row espaco-card" id="row-buchas">
+                <div class="row espaco-card space-around-card" id="row-buchas">
 
                     
                     <div class="col-12">
@@ -1965,7 +1969,7 @@
 
 
                     <!-- btns dos terminais  -->
-                    <div class="col-12 d-flex justify-content-around" id="btns-buchas">
+                    <div class="col-12 btn-mobile-wrap" id="btns-buchas">
                         <button class="design-btn active">Todos</button>
                         <button class="design-btn">Fiat</button>
                         <button class="design-btn">Volskwage</button>
@@ -2177,7 +2181,7 @@
 
 
                 <!-- coxins -->
-                <div class="row espaco-card" id="row-coxins-amort">
+                <div class="row espaco-card space-around-card" id="row-coxins-amort">
 
                     
                     <div class="col-12">
@@ -2210,7 +2214,7 @@
 
 
                 <!-- bieletas -->
-                <div class="row espaco-card" id="row-bieleta">
+                <div class="row espaco-card space-around-card" id="row-bieleta">
 
                     
                     <div class="col-12">
@@ -2291,7 +2295,6 @@
                                     <li><a href="#row-tambores">Tambores</a></li>
                                     <li><a href="#row-reparos">Reparos</a></li>
                                     <li><a href="#row-cabos">Cabos</a></li>
-                                    <li><a href="#"></a></li>
                                 </ul>
 
                                 <p class="aviso-offcanvas">Botões não disponiveis nesse formato de tela! Porfavor, desvire o celular! </p>
@@ -2306,7 +2309,7 @@
 
 
                 <!-- PASTILHAS -->
-                <div class="row espaco-card" id="row-pastilhas">
+                <div class="row espaco-card space-around-card" id="row-pastilhas">
 
                     <div class="col-12">
                         <h2 class="titles-sessoes" style="margin-bottom: 50px;">Pastilhas De Freio</h2>
@@ -2314,7 +2317,7 @@
 
 
                     <!-- btns dos PASTILHAS  -->
-                    <div class="col-12 d-flex justify-content-around" id="btns-pastilha">
+                    <div class="col-12 btn-mobile-wrap" id="btns-pastilha">
                         <button class="design-btn active">Todos</button>
                         <button class="design-btn">Fiat</button>
                         <button class="design-btn">Volskwagen</button>
@@ -2551,7 +2554,7 @@
 
 
                 <!-- DISCOS DE FREIO -->
-                <div class="row espaco-card" id="row-discos">
+                <div class="row espaco-card space-around-card" id="row-discos">
 
                     <div class="col-12">
                         <h2 class="titles-sessoes espacamento-title" >Discos De Freio</h2>
@@ -2620,7 +2623,7 @@
 
 
                 <!-- SAPATAS -->
-                <div class="row espaco-card" id="row-sapatas">
+                <div class="row espaco-card space-around-card" id="row-sapatas">
 
                     <div class="col-12">
                         <h2 class="titles-sessoes espacamento-title">Sapatas de Freio</h2>
@@ -2657,7 +2660,7 @@
 
 
                 <!-- CILINDROS -->
-                <div class="row espaco-card" id="row-cilindros">
+                <div class="row espaco-card space-around-card" id="row-cilindros">
 
                     <div class="col-12">
                         <h2 class="titles-sessoes espacamento-title">Cilindros</h2>
@@ -2739,7 +2742,7 @@
 
 
                 <!-- TAMBORES DE FREIO -->
-                <div class="row espaco-card" id="row-tambores">
+                <div class="row espaco-card space-around-card" id="row-tambores">
 
                     <div class="col-12">
                         <h2 class="titles-sessoes espacamento-title">Tambores de Freio</h2>
@@ -2821,7 +2824,7 @@
 
 
                  <!-- REPAROS -->
-                 <div class="row espaco-card" id="row-reparos">
+                 <div class="row espaco-card space-around-card" id="row-reparos">
 
                     <div class="col-12">
                         <h2 class="titles-sessoes espacamento-title">Reparos</h2>
@@ -2830,7 +2833,7 @@
 
 
                     <!-- btns dos REPAROS  -->
-                    <div class="col-12 d-flex justify-content-around" id="btns-reparos">
+                    <div class="col-12 btn-mobile-wrap" id="btns-reparos">
                         <button class="design-btn active">Todos</button>
                         <button class="design-btn">Fiat</button>
                         <button class="design-btn">Volskwagen</button>
@@ -3069,7 +3072,7 @@
 
 
                 <!-- CABOS -->
-                <div class="row espaco-card" id="row-cabos">
+                <div class="row espaco-card space-around-card" id="row-cabos">
 
                     <div class="col-12">
                         <h2 class="titles-sessoes espacamento-title">Cabos e Flexiveis</h2>
@@ -3077,7 +3080,7 @@
 
 
                     <!-- btns dos cabos  -->
-                    <div class="col-12 d-flex justify-content-around" id="btns-cabos">
+                    <div class="col-12 btn-mobile-wrap" id="btns-cabos">
                         <button class="design-btn active">Todos</button>
                         <button class="design-btn">Fiat</button>
                         <button class="design-btn">Volskwagen</button>
@@ -3242,14 +3245,460 @@
         </div>
 
 
+        <!-- 9 -->
+        <!-- sessao do sistema de ignição -->
+         <div id="area-sistema-ignicao" class="sessao">
+            <div class="container">
+
+
+                 <!-- parte do header  -->
+                 <div class="col-12">
+                    <div class="row espacamento-header">
+
+
+                        <div class="col-12 estrutura-title">
+
+                            <div class="col-md-6">
+                                <h2 class="titles-sessoes">Sistema de Ignição</h2>
+                            </div>
+
+                            <div class="col-md-6 btn-offcanvas">
+                                <button  data-bs-target="#allSessoesPesquisa" type="button" aria-controls="allSessoesPesquisa" class="btn-open-offcanvas">Ver todos os departamentos</button>
+                            </div>
+
+                        </div>
+
+
+                        <!-- parte do offcanvas  -->
+                        <div class="offcanvas offcanvas-top myOffCanvas" tabindex="-1" >
+
+                            <!-- header  -->
+                            <div class="offcanvas-header">
+
+                                <h5 class="offCanvasTitle">Partes do Sistema de Ignição</h5>
+                                <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+
+                            </div>
+
+                            <!-- body  -->
+                            <div class="offcanvas-body"> <!--  offcanvas-body  -->
+                                <ul>
+                                    <li><a href="#row-cabo-ignicao">Cabos Velas</a></li>
+                                    <li><a href="#row-vela-ignicao">Velas</a></li>
+                                    <li><a href="#row-impulsores">Impulsores</a></li>
+                                 
+                                </ul>
+
+                                <p class="aviso-offcanvas">Botões não disponiveis nesse formato de tela! Porfavor, desvire o celular! </p>
+                            </div>
+
+
+                        </div>
+
+
+                    </div>
+                </div>
+
+                
+                <!-- cabos-ignicao -->
+                <div class="row espaco-card space-around-card" id="row-cabo-ignicao">
+
+                    <div class="col-12">
+                        <h2 class="titles-sessoes" style="margin-bottom: 50px;">Cabos de Ignição</h2>
+                    </div>
+
+                    
+                     <!-- vws -->
+                     <div class="col-md-3 card vws">
+                        <img src="photos/sist-ignicao/cabos-ignicao/stv09.png" alt="stv09" class="img-fluid">
+                        <div class="card-body">
+                            <h5 class="card-title">Cabo Velas ST-V09</h5>
+                            <h5 class="card-title"></h5>
+                            <p class="card-text">Linha Volskwagen</p>
+
+                            <button type="button" class="padraoBtn" data-bs-toggle="modal" data-bs-target="#stv09">Aplicações</button>
+                        </div>
+                    </div>
+
+                     <div class="col-md-3 card vws">
+                        <img src="photos/sist-ignicao/cabos-ignicao/caboGol1000.png" alt="caboGol1000" class="img-fluid">
+                        <div class="card-body">
+                            <h5 class="card-title">Cabo Velas PBV-309</h5>
+                            <h5 class="card-title"></h5>
+                            <p class="card-text">Linha Volskwagen</p>
+
+                            <button type="button" class="padraoBtn" data-bs-toggle="modal" data-bs-target="#caboGol1000">Aplicações</button>
+                        </div>
+                    </div>
+
+
+                </div>
+
+
+                <!-- velas ignicao -->
+                <div class="row espaco-card space-around-card" id="row-vela-ignicao">
+
+                    <div class="col-12">
+                        <h2 class="titles-sessoes espacamento-title">Velas de Ignição</h2>
+                    </div>
+
+
+                    <!-- fiat -->
+                    <div class="col-md-3 card vws">
+                        <img src="photos/sist-ignicao/velas/46480362.png" alt="46480362" class="img-fluid">
+                        <div class="card-body">
+                            <h5 class="card-title">Velas NGK</h5>
+                            <h5 class="card-title"></h5>
+                            <p class="card-text">Linha Fiat</p>
+
+                            <button type="button" class="padraoBtn" data-bs-toggle="modal" data-bs-target="#46480362">Aplicações</button>
+                        </div>
+                    </div>
+
+                </div>
+
+                
+                <!-- Impulsores -->
+                <div class="row espaco-card space-around-card" id="row-impulsores">
+
+                    <div class="col-12">
+                        <h2 class="titles-sessoes espacamento-title">Impulsores de Ignição</h2>
+                    </div>
+
+
+                    <!-- fiat -->
+                    <div class="col-md-3 card vws">
+                        <img src="photos/sist-ignicao/impulsor/0846.png" alt="0846" class="img-fluid">
+                        <div class="card-body">
+                            <h5 class="card-title">Impulsor - 0846</h5>
+                            <h5 class="card-title"></h5>
+                            <p class="card-text">Linha Fiat</p>
+
+                            <button type="button" class="padraoBtn" data-bs-toggle="modal" data-bs-target="#0846">Aplicações</button>
+                        </div>
+                    </div>
+
+                    <div class="col-md-3 card vws">
+                        <img src="photos/sist-ignicao/impulsor/0743.png" alt="0743" class="img-fluid">
+                        <div class="card-body">
+                            <h5 class="card-title">Impulsor - 0743</h5>
+                            <h5 class="card-title"></h5>
+                            <p class="card-text">Linha Fiat</p>
+
+                            <button type="button" class="padraoBtn" data-bs-toggle="modal" data-bs-target="#0743">Aplicações</button>
+                        </div>
+                    </div>
+
+                    <!-- GM  -->
+                    <div class="col-md-3 card gm">
+                        <img src="photos/sist-ignicao/impulsor/0843.png" alt="0843" class="img-fluid">
+                        <div class="card-body">
+                            <h5 class="card-title">Impulsor - 0843</h5>
+                            <h5 class="card-title"></h5>
+                            <p class="card-text">Linha GM/Renault</p>
+
+                            <button type="button" class="padraoBtn" data-bs-toggle="modal" data-bs-target="#0843">Aplicações</button>
+                        </div>
+                    </div>
+
+                    <div class="col-md-3 card gm">
+                        <img src="photos/sist-ignicao/impulsor/1745.png" alt="1745" class="img-fluid">
+                        <div class="card-body">
+                            <h5 class="card-title">Impulsor - 1745</h5>
+                            <h5 class="card-title"></h5>
+                            <p class="card-text">Linha GM</p>
+
+                            <button type="button" class="padraoBtn" data-bs-toggle="modal" data-bs-target="#1745">Aplicações</button>
+                        </div>
+                    </div>
+
+
+
+
+                </div>
+                
+            </div>
+         </div>
+
+
 
         
     </main>
-    
+
+
+
+
+<!-- impulsores -->
+ <div>
+
+<!-- esqueleto base -->   
+<div class="modal fade" id="" aria-hidden="true" aria-labelledby="modal-filtro-label" tabindex="-1" >
+    <div class="modal-dialog modal-dialog-scrollable">
+
+        <div class="modal-content" id="modal-content">
+
+            <div class="modal-header">
+                <h2>Aplicações</h2>
+                <button class="btn-close" type="button" data-bs-dismiss="modal" aria-label="close"></button>
+            </div>
+                <div class="modal-body">
+                <h5></h5>
+                <ul id="lista-aplicacoes">
+                    <li class="montadora"></li>
+                    <li><span class="carro"></span></li>
+
+
+                </ul>
+            </div>
+
+            <div class="modal-footer" id="modalFooterDirecao">
+                <p><span class="carro">Marca:</span> <span class="marcas"></span></p>
+                <p class="carro">C-</p>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<!-- 0846 -->   
+<div class="modal fade" id="0846" aria-hidden="true" aria-labelledby="modal-filtro-label" tabindex="-1" >
+    <div class="modal-dialog modal-dialog-scrollable">
+
+        <div class="modal-content" id="modal-content">
+
+            <div class="modal-header">
+                <h2>Aplicações</h2>
+                <button class="btn-close" type="button" data-bs-dismiss="modal" aria-label="close"></button>
+            </div>
+                <div class="modal-body">
+                <h5>Impulsor - 0846</h5>
+                <ul id="lista-aplicacoes">
+                    <li class="montadora">FIAT:</li>
+                    <li><span class="carro">Palio:</span> 2000-2017</li>
+                    <li><span class="carro">Palio-Weekend:</span> 19978-2004</li>
+                    <li><span class="carro">Siena:</span> 1998-2016</li>
+                    <li><span class="carro">Strada:</span> 1999-2004</li>
+                    <li><span class="carro">Uno:</span> 1996..</li>
+
+                    <li class="montadora">CITROEN:</li>
+                    <li><span class="carro">Berlingo:</span> 1998-2019</li>
+                    <li><span class="carro">Xantia:</span> 1994-2001</li>
+                    <li><span class="carro">Congo:</span></li>
+                </ul>
+            </div>
+
+            <div class="modal-footer" id="modalFooterDirecao">
+                <p><span class="carro">Marca:</span> <span class="marcas">Kheller</span></p>
+                <p class="carro">C-564</p>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- 0743 -->   
+<div class="modal fade" id="0743" aria-hidden="true" aria-labelledby="modal-filtro-label" tabindex="-1" >
+    <div class="modal-dialog modal-dialog-scrollable">
+
+        <div class="modal-content" id="modal-content">
+
+            <div class="modal-header">
+                <h2>Aplicações</h2>
+                <button class="btn-close" type="button" data-bs-dismiss="modal" aria-label="close"></button>
+            </div>
+                <div class="modal-body">
+                <h5>Impulsor - 0743</h5>
+                <ul id="lista-aplicacoes">
+                    <li class="montadora">FIAT:</li>
+                    <li><span class="carro">147:</span></li>
+                    <li><span class="carro">Duna:</span></li>
+                    <li><span class="carro">Fiorino:</span></li>
+                    <li><span class="carro">Uno:</span></li>
+                    <li><span class="carro">Uno-Vivace:</span></li>
+                </ul>
+            </div>
+
+            <div class="modal-footer" id="modalFooterDirecao">
+                <p><span class="carro">Marca:</span> <span class="marcas">Zen</span></p>
+                <p class="carro">C-SEM</p>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<!-- 0843 -->   
+<div class="modal fade" id="0843" aria-hidden="true" aria-labelledby="modal-filtro-label" tabindex="-1" >
+    <div class="modal-dialog modal-dialog-scrollable">
+
+        <div class="modal-content" id="modal-content">
+
+            <div class="modal-header">
+                <h2>Aplicações</h2>
+                <button class="btn-close" type="button" data-bs-dismiss="modal" aria-label="close"></button>
+            </div>
+                <div class="modal-body">
+                <h5>Impulsor - 0843</h5>
+                <ul id="lista-aplicacoes">
+                    <li class="montadora">GM:</li>
+                    <li><span class="carro">Corsa:</span> 1994-2021</li>
+                    <li><span class="carro">Celta:</span> 2000-2019</li>
+
+                    <li class="montadora">RENAULT:</li>
+                    <li><span class="carro">Megane:</span> 1996-2018</li>
+                    <li><span class="carro">Scenic:</span> 1999-2017</li>
+                    <li><span class="carro">R19:</span> 1994-2015</li>
+                    <li><span class="carro">Clio:</span> 1998-2016</li>
+                    <li><span class="carro">Kangoo:</span> 1994-2019</li>
+                    <li><span class="carro">Laguna:</span> 2000-2012</li>
+                </ul>
+            </div>
+
+            <div class="modal-footer" id="modalFooterDirecao">
+                <p><span class="carro">Marca:</span> <span class="marcas">Zen</span></p>
+                <p class="carro">C-SEM</p>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- 1745 -->   
+<div class="modal fade" id="1745" aria-hidden="true" aria-labelledby="modal-filtro-label" tabindex="-1" >
+    <div class="modal-dialog modal-dialog-scrollable">
+
+        <div class="modal-content" id="modal-content">
+
+            <div class="modal-header">
+                <h2>Aplicações</h2>
+                <button class="btn-close" type="button" data-bs-dismiss="modal" aria-label="close"></button>
+            </div>
+                <div class="modal-body">
+                <h5>Impulsor - 1745</h5>
+                <ul id="lista-aplicacoes">
+                    <li class="montadora">GM:</li>
+                    <li><span class="carro">Celta:</span></li>
+                    <li><span class="carro">Classic:</span></li>
+                    <li><span class="carro">Colbalt:</span></li>
+                    <li><span class="carro">Cruze:</span></li>
+                    <li><span class="carro">Montana:</span></li>
+                    <li><span class="carro">Novo-Prisma:</span> 2013-2018</li>
+                    <li><span class="carro">Onix:</span> 2013-2018</li>
+                    <li><span class="carro">Spin:</span></li>
+                    <li><span class="carro">Agile:</span></li>
+                </ul>
+            </div>
+
+            <div class="modal-footer" id="modalFooterDirecao">
+                <p><span class="carro">Marca:</span> <span class="marcas">Zen</span></p>
+                <p class="carro">C-4675</p>
+            </div>
+        </div>
+    </div>
+</div>
+
+ </div>
+
+<!-- velas ignicao -->
+<div>
+
+ 
+ <!-- 46480362 -->   
+<div class="modal fade" id="46480362" aria-hidden="true" aria-labelledby="modal-filtro-label" tabindex="-1" >
+    <div class="modal-dialog modal-dialog-scrollable">
+
+        <div class="modal-content" id="modal-content">
+
+            <div class="modal-header">
+                <h2>Aplicações</h2>
+                <button class="btn-close" type="button" data-bs-dismiss="modal" aria-label="close"></button>
+            </div>
+                <div class="modal-body">
+                <h5>NGK - 46480362</h5>
+                <ul id="lista-aplicacoes">
+                    <li class="montadora">FIAT:</li>
+                    <li><span class="carro">Palio:</span> 2001-2017</li>
+                    <li><span class="carro">Doblo:</span> 2002-2018</li>
+                    <li><span class="carro">Idea:</span> 2006-2010</li>
+                    <li><span class="carro">Linea:</span> 2009-2010</li>
+                    <li><span class="carro">Marea:</span> 2006-2007</li>
+                    <li><span class="carro">Uno:</span> 2004-2013</li>
+                    <li><span class="carro">Novo-Uno:</span> 2011-2015</li>
+                </ul>
+            </div>
+
+            <div class="modal-footer" id="modalFooterDirecao">
+                <p><span class="carro">Marca:</span> <span class="marcas">NGK</span></p>
+                <p class="carro">C-3537</p>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+</div>
+
+
+<!-- cabos velas -->
+<div>
+
+
+<!-- stv09 -->
+<div class="modal fade" id="stv09" aria-hidden="true" aria-labelledby="modal-filtro-label" tabindex="-1" >
+    <div class="modal-dialog modal-dialog-scrollable">
+
+        <div class="modal-content" id="modal-content">
+
+            <div class="modal-header">
+                <h2>Aplicações</h2>
+                <button class="btn-close" type="button" data-bs-dismiss="modal" aria-label="close"></button>
+            </div>
+                <div class="modal-body">
+                <h5>ST-V09</h5>
+                <ul id="lista-aplicacoes">
+                    <li class="montadora">Volkswagen</li>
+                    <li><span class="carro">Gol:</span> Motor (AP) 1995-1996</li>
+                    <li><span class="carro">Parati:</span> Motor (AP) 1995-1997</li>
+                </ul>
+            </div>
+
+            <div class="modal-footer" id="modalFooterDirecao">
+                <p><span class="carro">Marca:</span> <span class="marcas">NGK</span></p>
+                <p class="carro">C-2920</p>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- CABO MOTOR 1000 -->
+<div class="modal fade" id="caboGol1000" aria-hidden="true" aria-labelledby="modal-filtro-label" tabindex="-1" >
+    <div class="modal-dialog modal-dialog-scrollable">
+
+        <div class="modal-content" id="modal-content">
+
+            <div class="modal-header">
+                <h2>Aplicações</h2>
+                <button class="btn-close" type="button" data-bs-dismiss="modal" aria-label="close"></button>
+            </div>
+                <div class="modal-body">
+                <h5>PBV-309</h5>
+                <ul id="lista-aplicacoes">
+                    <li class="montadora">Volkswagen</li>
+                    <li><span class="carro">Gol:</span> 1995-1996</li>
+                </ul>
+            </div>
+
+            <div class="modal-footer" id="modalFooterDirecao">
+                <p><span class="carro">Marca:</span> <span class="marcas"></span></p>
+                <p class="carro">C-1057</p>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+</div>
 
 
 <!-- CILINDROS -->
-
 <div>
 
     <!-- esqueleto base -->
@@ -3511,6 +3960,7 @@
             </div>
                 <div class="modal-body">
                 <h5>Sapata Freio FI/91-CPA</h5>
+
                 <ul id="lista-aplicacoes">
                     <li class="montadora">FORD:</li>
                     <li><span class="carro">Fiorino-Furgão:</span> 2006-2013</li>
@@ -5881,7 +6331,7 @@
                     </ul>
                 </div>
                 <div class="modal-footer">
-                    <p>C-3068</p>
+                    <p class="carro">C-3068</p>
                 </div>
             </div>
         </div>
