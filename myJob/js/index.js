@@ -2,7 +2,7 @@
 // onload 
 document.addEventListener('DOMContentLoaded', () =>{
 
-    //alert(`Sistema ainda em manutenção`)
+    alert(`Sistema ainda em manutenção`)
     // FUCAO AO CLICAR NO TITULO PRINCIPAL
     let onloadTitlePrinc = document.querySelector('#title-princ')
     onloadTitlePrinc.addEventListener('click', () =>{
@@ -1889,6 +1889,7 @@ document.addEventListener('DOMContentLoaded', () =>{
     let bsOffCanvas2 = new bootstrap.Offcanvas(myOffCanvas[1]);
     let bsOffCanvas3 = new bootstrap.Offcanvas(myOffCanvas[2])
     let bsOffCanvas4 = new bootstrap.Offcanvas(myOffCanvas[3])
+    let bsOffCanvas5 = new bootstrap.Offcanvas(myOffCanvas[4])
 
 
     let allBtnOff = document.querySelectorAll('.btn-open-offcanvas')
@@ -1917,12 +1918,20 @@ document.addEventListener('DOMContentLoaded', () =>{
         bsOffCanvas3.toggle()
     })
 
-    // freios
+    // ignicao
     allBtnOff[3].addEventListener('click', (e) =>{
 
         e.preventDefault()
         e.stopPropagation()
         bsOffCanvas4.toggle()
+    })
+
+    // carga
+    allBtnOff[4].addEventListener('click', (e) =>{
+
+        e.preventDefault()
+        e.stopPropagation()
+        bsOffCanvas5.toggle()
     })
 
     
