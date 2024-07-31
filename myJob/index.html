@@ -80,7 +80,7 @@
 
                             <li class="dropdown-item"><a href="#area-sistema-suspensao" class="no-mobile">Sistema Suspensão</a></li>
 
-                            <li class="dropdown-item"><a href="#area-sistema-freios" class="no-mobile">Freios</a></li>
+                            <li class="dropdown-item"><a href="#area-sistema-freios" class="no-mobile">Sistema Freios</a></li>
 
                             <li class="dropdown-item"><a href="#area-sistema-ignicao" class="no-mobile">Sistema Ignição</a></li>
 
@@ -3620,6 +3620,7 @@
                                     <li><a href="#row-tensores">Tensores</a></li>
                                     <li><a href="#row-correia-alter">Correia Alter.</a></li>
                                     <li><a href="#row-correia-dent">Correia Dent.</a></li>
+                                    <li><a href="#row-porta-escova">Porta-Escovas</a></li>
                                  
                                 </ul>
 
@@ -3939,6 +3940,90 @@
                 </div>
 
 
+                <!-- porta escovas -->
+                <div class="row espaco-card space-around-card" id="row-porta-escova">
+
+                    <div class="col-12">
+                        <h2 class="titles-sessoes espacamento-title">Porta-Escova Motor de Partida</h2>
+                    </div>
+
+
+                    <!-- fiat -->
+                    <div class="col-md-3 card">
+                        <img src="photos/sist-carga/escovas/A11712V.png" alt="A11712V" class="img-fluid">
+                        <div class="card-body">
+                            <h5 class="card-title">Porta Escovas</h5>
+                            <h5 class="card-title">A-117-12V</h5>
+                            <p class="card-text">Linha Volkswagen/Fiat/Ford</p>
+
+                            <button type="button" class="padraoBtn" data-bs-toggle="modal" data-bs-target="#A11712V">Aplicações</button>
+                        </div>
+                    </div>
+
+                    <div class="col-md-3 card">
+                        <img src="photos/sist-carga/escovas/myr1094.png" alt="myr1094" class="img-fluid">
+                        <div class="card-body">
+                            <h5 class="card-title">Porta Escovas</h5>
+                            <h5 class="card-title">MYR-1094</h5>
+                            <p class="card-text">Linha Fiat</p>
+
+                            <button type="button" class="padraoBtn" data-bs-toggle="modal" data-bs-target="#myr1094">Aplicações</button>
+                        </div>
+                    </div>
+
+
+                    <!-- vws -->
+                    <div class="col-md-3 card">
+                        <img src="photos/sist-carga/escovas/A11812V.png" alt="A11812V" class="img-fluid">
+                        <div class="card-body">
+                            <h5 class="card-title">Porta Escovas</h5>
+                            <h5 class="card-title">A-118-12V</h5>
+                            <p class="card-text">Linha Volkswagen/Fiat/GM</p>
+
+                            <button type="button" class="padraoBtn" data-bs-toggle="modal" data-bs-target="#A11812V">Aplicações</button>
+                        </div>
+                    </div>
+
+                    <div class="col-md-3 card">
+                        <img src="photos/sist-carga/escovas/my71051.png" alt="my71051" class="img-fluid">
+                        <div class="card-body">
+                            <h5 class="card-title">Porta Escovas</h5>
+                            <h5 class="card-title">MY-71051</h5>
+                            <p class="card-text">Linha Volkswagen</p>
+
+                            <button type="button" class="padraoBtn" data-bs-toggle="modal" data-bs-target="#my71051">Aplicações</button>
+                        </div>
+                    </div>
+
+
+                    <!-- gm -->
+                    <div class="col-md-3 card">
+                        <img src="photos/sist-carga/escovas/A13012V.png" alt="A13012V" class="img-fluid">
+                        <div class="card-body">
+                            <h5 class="card-title">Porta Escovas</h5>
+                            <h5 class="card-title">A-130-12V</h5>
+                            <p class="card-text">Linha Ford/GM</p>
+
+                            <button type="button" class="padraoBtn" data-bs-toggle="modal" data-bs-target="#A13012V">Aplicações</button>
+                        </div>
+                    </div>
+
+                    <div class="col-md-3 card">
+                        <img src="photos/sist-carga/escovas/my71033-4.png" alt="my71033-4" class="img-fluid">
+                        <div class="card-body">
+                            <h5 class="card-title">Porta Escovas</h5>
+                            <h5 class="card-title">MY-71033/4</h5>
+                            <p class="card-text">Linha GM/Mercedez</p>
+
+                            <button type="button" class="padraoBtn" data-bs-toggle="modal" data-bs-target="#my71033-4">Aplicações</button>
+                        </div>
+                    </div>
+
+
+                </div>
+
+
+
 
             </div>
            </div>
@@ -3947,6 +4032,277 @@
 
         
     </main>
+
+
+
+<!-- porta escovas -->
+<div>
+
+<!-- esqueleto base -->   
+<div class="modal fade" id="" aria-hidden="true" aria-labelledby="modal-filtro-label" tabindex="-1" >
+    <div class="modal-dialog modal-dialog-scrollable">
+
+        <div class="modal-content" id="modal-content">
+
+            <div class="modal-header">
+                <h2>Aplicações</h2>
+                <button class="btn-close" type="button" data-bs-dismiss="modal" aria-label="close"></button>
+            </div>
+                <div class="modal-body">
+                <h5></h5>
+                <ul id="lista-aplicacoes">
+                    <li class="montadora"></li>
+                    <li><span class="carro"></span></li>
+
+
+                </ul>
+            </div>
+
+            <div class="modal-footer" id="modalFooterDirecao">
+                <p><span class="carro">Marca:</span> <span class="marcas"></span></p>
+                <p class="carro">C-</p>
+            </div>
+        </div>
+    </div>
+</div>    
+
+
+<!-- A11712V -->   
+<div class="modal fade" id="A11712V" aria-hidden="true" aria-labelledby="modal-filtro-label" tabindex="-1" >
+    <div class="modal-dialog modal-dialog-scrollable">
+
+        <div class="modal-content" id="modal-content">
+
+            <div class="modal-header">
+                <h2>Aplicações</h2>
+                <button class="btn-close" type="button" data-bs-dismiss="modal" aria-label="close"></button>
+            </div>
+                <div class="modal-body">
+                <h5>A-117-12V</h5>
+                <ul id="lista-aplicacoes">
+                    <li class="montadora"></li>
+                    <li><span class="carro">Parati:</span></li>
+                    <li><span class="carro">Golf:</span></li>
+                    <li><span class="carro">Passat:</span></li>
+
+                    <li class="montadora">FIAT:</li>
+                    <li><span class="carro">Palio</span></li>
+                    <li><span class="carro">Siena</span></li>
+                    <li><span class="carro">Strada:</span></li>
+                    <li><span class="carro">Bravo:</span></li>
+                    <li><span class="carro">Doblo:</span></li>
+                    <li><span class="carro">Palio-Weekend:</span></li>
+                    <li><span class="carro">Ducato:</span></li>
+
+                    <li class="montadora">FORD:</li>
+                    <li><span class="carro">Escort:</span></li>
+
+                </ul>
+            </div>
+
+            <div class="modal-footer" id="modalFooterDirecao">
+                <p><span class="carro">Marca:</span> <span class="marcas">Sulcarbon</span></p>
+                <p class="carro">C-SEM</p>
+            </div>
+        </div>
+    </div>
+</div>    
+
+
+<!-- A11812V -->   
+<div class="modal fade" id="A11812V" aria-hidden="true" aria-labelledby="modal-filtro-label" tabindex="-1" >
+    <div class="modal-dialog modal-dialog-scrollable">
+
+        <div class="modal-content" id="modal-content">
+
+            <div class="modal-header">
+                <h2>Aplicações</h2>
+                <button class="btn-close" type="button" data-bs-dismiss="modal" aria-label="close"></button>
+            </div>
+                <div class="modal-body">
+                <h5>A-118-12V</h5>
+                <ul id="lista-aplicacoes">
+                    <li class="montadora">Volkswagen:</li>
+                    <li><span class="carro">Parati:</span></li>
+                    <li><span class="carro">Golf:</span></li>
+                    <li><span class="carro">Voyage:</span></li>
+                    <li><span class="carro">Saveiro:</span></li>
+                    <li><span class="carro">Quantun:</span></li>
+                    
+
+                    <li class="montadora">GM:</li>
+                    <li><span class="carro">Omega:</span></li>
+                    <li><span class="carro">Vectra:</span></li>
+                    <li><span class="carro">Blazer:</span></li>
+                    <li><span class="carro">Ipanema:</span></li>
+                    <li><span class="carro">Astra:</span></li>
+                    <li><span class="carro">Kadett:</span></li>
+
+                    <li class="montadora">FIAT:</li>
+                    <li><span class="carro">Tempra:</span></li>
+
+                </ul>
+            </div>
+
+            <div class="modal-footer" id="modalFooterDirecao">
+                <p><span class="carro">Marca:</span> <span class="marcas">Sulcarbon</span></p>
+                <p class="carro">C-1972</p>
+            </div>
+        </div>
+    </div>
+</div>    
+
+
+<!-- A13012V -->   
+<div class="modal fade" id="A13012V" aria-hidden="true" aria-labelledby="modal-filtro-label" tabindex="-1" >
+    <div class="modal-dialog modal-dialog-scrollable">
+
+        <div class="modal-content" id="modal-content">
+
+            <div class="modal-header">
+                <h2>Aplicações</h2>
+                <button class="btn-close" type="button" data-bs-dismiss="modal" aria-label="close"></button>
+            </div>
+                <div class="modal-body">
+                <h5>A-130-12V</h5>
+                <ul id="lista-aplicacoes">
+                    <li class="montadora">FORD:</li>
+                    <li><span class="carro">Ranger:</span></li>
+                    <li><span class="carro">Cargo-1722:</span></li>
+                    <li><span class="carro">Cargo-1716:</span></li>
+                    <li><span class="carro">F-1000:</span></li>
+                    <li><span class="carro">Cargo-1416:</span></li>
+                    <li><span class="carro">F-14000:</span></li>
+                    <li><span class="carro">F-100:</span></li>
+                    <li><span class="carro">F-1000:</span></li>
+                    
+
+                    <li class="montadora">GM:</li>
+                    <li><span class="carro">D-20:</span></li>
+                    <li><span class="carro">Blazer DLX:</span></li>
+                    <li><span class="carro">S-10:</span></li>
+                    <li><span class="carro">Silverado:</span></li>
+
+                </ul>
+            </div>
+
+            <div class="modal-footer" id="modalFooterDirecao">
+                <p><span class="carro">Marca:</span> <span class="marcas">Sulcarbon</span></p>
+                <p class="carro">C-1974</p>
+            </div>
+        </div>
+    </div>
+</div>    
+
+
+<!-- myr1094 -->   
+<div class="modal fade" id="myr1094" aria-hidden="true" aria-labelledby="modal-filtro-label" tabindex="-1" >
+    <div class="modal-dialog modal-dialog-scrollable">
+
+        <div class="modal-content" id="modal-content">
+
+            <div class="modal-header">
+                <h2>Aplicações</h2>
+                <button class="btn-close" type="button" data-bs-dismiss="modal" aria-label="close"></button>
+            </div>
+                <div class="modal-body">
+                <h5>MYR-1094</h5>
+                <ul id="lista-aplicacoes">
+                    <li class="montadora">FIAT:</li>
+                    <li><span class="carro">Palio:</span> 1991-2013</li>
+                    <li><span class="carro">Palio-Weekend:</span></li>
+
+                </ul>
+            </div>
+
+            <div class="modal-footer" id="modalFooterDirecao">
+                <p><span class="carro">Marca:</span> <span class="marcas">MYR</span></p>
+                <p class="carro">C-296</p>
+            </div>
+        </div>
+    </div>
+</div>    
+
+
+<!-- my71051 -->   
+<div class="modal fade" id="my71051" aria-hidden="true" aria-labelledby="modal-filtro-label" tabindex="-1" >
+    <div class="modal-dialog modal-dialog-scrollable">
+
+        <div class="modal-content" id="modal-content">
+
+            <div class="modal-header">
+                <h2>Aplicações</h2>
+                <button class="btn-close" type="button" data-bs-dismiss="modal" aria-label="close"></button>
+            </div>
+                <div class="modal-body">
+                <h5>MY-71051</h5>
+                <ul id="lista-aplicacoes">
+                    <li class="montadora">Volskwagen</li>
+                    <li><span class="carro">Passat:</span></li>
+                    <li><span class="carro">Pointer:</span></li>
+                    <li><span class="carro">Gol:</span></li>
+                    <li><span class="carro">Polo:</span></li>
+                    <li><span class="carro">Parati:</span></li>
+                    <li><span class="carro">Golf:</span></li>
+
+                </ul>
+            </div>
+
+            <div class="modal-footer" id="modalFooterDirecao">
+                <p><span class="carro">Marca:</span> <span class="marcas">MYR</span></p>
+                <p class="carro">C-1971</p>
+            </div>
+        </div>
+    </div>
+</div>   
+
+
+<!-- my71033-4 -->   
+<div class="modal fade" id="my71033-4" aria-hidden="true" aria-labelledby="modal-filtro-label" tabindex="-1" >
+    <div class="modal-dialog modal-dialog-scrollable">
+
+        <div class="modal-content" id="modal-content">
+
+            <div class="modal-header">
+                <h2>Aplicações</h2>
+                <button class="btn-close" type="button" data-bs-dismiss="modal" aria-label="close"></button>
+            </div>
+                <div class="modal-body">
+                <h5>MY-71033/4</h5>
+                <ul id="lista-aplicacoes">
+                    <li class="montadora">GM:</li>
+                    <li><span class="carro">D-20:</span></li>
+                    <li><span class="carro">D-6000:</span></li>
+
+                    <li class="montadora">Modelos Mercedes-Benz:</li>                    
+
+                    <li class="montadora">Modelos Agrale:</li>
+
+                    <li class="montadora">Modelos Valmet:</li>
+                    
+
+                </ul>
+            </div>
+
+            <div class="modal-footer" id="modalFooterDirecao">
+                <p><span class="carro">Marca:</span> <span class="marcas">MYR</span></p>
+                <p class="carro">C-SEM</p>
+            </div>
+        </div>
+    </div>
+</div>    
+
+
+
+
+
+
+
+
+</div>
+
+
+
 
 
 
@@ -4877,14 +5233,6 @@
         </div>
     </div>
 </div>
-
-
-
-
-
-
-
-
 
 
 
