@@ -2,7 +2,7 @@
 // onload 
 document.addEventListener('DOMContentLoaded', () =>{
 
-    alert(`Sistema ainda em manutenção`)
+    //alert(`Sistema ainda em manutenção`)
     // FUCAO AO CLICAR NO TITULO PRINCIPAL
     let onloadTitlePrinc = document.querySelector('#title-princ')
     onloadTitlePrinc.addEventListener('click', () =>{
@@ -177,6 +177,14 @@ function mostrarInfoFastSearch(){
         for(let c = 0;c < allSessoes.length;c++){
             allSessoes[c].style.display='none'
             allSessoes[9].style.display='block'
+        }
+    })
+
+    // mostrando sistema de carga
+    allDepart[4].addEventListener('click', () =>{
+        for(let c = 0;c < allSessoes.length;c++){
+            allSessoes[c].style.display='none'
+            allSessoes[10].style.display='block'
         }
     })
     
