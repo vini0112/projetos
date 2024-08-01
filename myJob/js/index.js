@@ -187,6 +187,14 @@ function mostrarInfoFastSearch(){
             allSessoes[10].style.display='block'
         }
     })
+
+    // mostrando sistema de partida
+    allDepart[5].addEventListener('click', () =>{
+        for(let c = 0;c < allSessoes.length;c++){
+            allSessoes[c].style.display='none'
+            allSessoes[11].style.display='block'
+        }
+    })
     
 
     
@@ -1898,6 +1906,7 @@ document.addEventListener('DOMContentLoaded', () =>{
     let bsOffCanvas3 = new bootstrap.Offcanvas(myOffCanvas[2])
     let bsOffCanvas4 = new bootstrap.Offcanvas(myOffCanvas[3])
     let bsOffCanvas5 = new bootstrap.Offcanvas(myOffCanvas[4])
+    let bsOffCanvas6 = new bootstrap.Offcanvas(myOffCanvas[5])
 
 
     let allBtnOff = document.querySelectorAll('.btn-open-offcanvas')
@@ -1940,6 +1949,14 @@ document.addEventListener('DOMContentLoaded', () =>{
         e.preventDefault()
         e.stopPropagation()
         bsOffCanvas5.toggle()
+    })
+
+    // partida
+    allBtnOff[5].addEventListener('click', (e) =>{
+
+        e.preventDefault()
+        e.stopPropagation()
+        bsOffCanvas6.toggle()
     })
 
     
