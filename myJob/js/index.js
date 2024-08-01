@@ -4,18 +4,29 @@ document.addEventListener('DOMContentLoaded', () =>{
 
     //alert(`Sistema ainda em manutenção`)
     // FUCAO AO CLICAR NO TITULO PRINCIPAL
+
+    let allSessoes = document.querySelectorAll('main .sessao')
     let onloadTitlePrinc = document.querySelector('#title-princ')
+
     onloadTitlePrinc.addEventListener('click', () =>{
+
+        for(let c = 0;c < allSessoes.length;c++){
+            allSessoes[c].style.display=`none`
+            allSessoes[0].style.display=`block`
+        }
         location.reload()
     })
 
-    // fucao do oleo 
+    // funcao filtrando pesquisa oleos da primeira pagina
+    filtroIniciar()
+
+    // funcao filtrando pesquisa dos oleos
     filtrarMarcas()
 
-    // fucao dos filtro de oleo simples
+    // fucao dos filtros de oleo simples
     filtrarFiltrosOleo()
 
-    // fucao dos filtro de oleo pesado
+    // fucao dos filtros de oleo pesado
     filtrandoPesados()
 
     // funcao filtrando pesquisa dos filtros-combustivel simples
@@ -60,9 +71,6 @@ document.addEventListener('DOMContentLoaded', () =>{
     // funcoes do fast-search para mostrar pagina
     mostrarInfoFastSearch()
 
-    // DROP-TODOS DEPARTAMENTOS MOBILE
-    allDepart()
-
     
 
 })
@@ -70,6 +78,7 @@ document.addEventListener('DOMContentLoaded', () =>{
 
 // funcao das sessoes da pagina
 function mostrarInfoFastSearch(){
+
     // SESSOES
     let allSessoes = document.querySelectorAll('main .sessao')
     //console.log(allSessoes)
@@ -79,7 +88,7 @@ function mostrarInfoFastSearch(){
     //console.log(estruturasNAV)
 
 
-    // DROPS-DOWN
+    // DROPS-DOWN - filtros
     let allLinkDrop = document.querySelectorAll(`.dropdown-menu .dropdown-link`)
     //console.log(allLinkDrop)
 
@@ -89,58 +98,45 @@ function mostrarInfoFastSearch(){
 
 
 
-    // ACAO DOS DROPS-DOWN
+    // ACAO DOS DROPS-DOWN -filtros
 
-    // mostrando oleos 
+    // mostrando filtros de oleos 
     allLinkDrop[0].addEventListener(`click`, () =>{
-        for(let c = 0;c < allSessoes.length;c++){
-            allSessoes[c].style.display=`none`
-            allSessoes[0].style.display=`block`
-        }
-    })
-
-     // mostrando fluidos de freio
-    allLinkDrop[1].addEventListener(`click`, () =>{
-        for(let c = 0;c < allSessoes.length;c++){
-            allSessoes[c].style.display=`none`
-            allSessoes[1].style.display=`block`
-        }
-    })
-
-    // mostrando filtro oleo
-    allLinkDrop[2].addEventListener(`click`, () =>{
         for(let c = 0;c < allSessoes.length;c++){
             allSessoes[c].style.display=`none`
             allSessoes[2].style.display=`block`
         }
     })
 
-    // mostrando filtros combustivel
-    allLinkDrop[3].addEventListener(`click`, () =>{
+
+     // mostrando filtros de combustivel
+    allLinkDrop[1].addEventListener(`click`, () =>{
         for(let c = 0;c < allSessoes.length;c++){
             allSessoes[c].style.display=`none`
             allSessoes[3].style.display=`block`
         }
     })
 
-    // mostrando filtros de ar
-    allLinkDrop[4].addEventListener(`click`, () =>{
+
+     // mostrando filtros de ar
+    allLinkDrop[2].addEventListener(`click`, () =>{
         for(let c = 0;c < allSessoes.length;c++){
             allSessoes[c].style.display=`none`
             allSessoes[4].style.display=`block`
         }
     })
 
+    
 
 
 
     // ACAO DOS LINKS SEM DROP-DOWN
 
-    // mostrar baterias
+    // mostrar OLEOS
     estruturasNAV[0].addEventListener('click', () =>{
         for(let c = 0;c < allSessoes.length;c++){
             allSessoes[c].style.display='none'
-            allSessoes[5].style.display='block'
+            allSessoes[1].style.display='block'
         }
         
     })
@@ -152,7 +148,7 @@ function mostrarInfoFastSearch(){
     allDepart[0].addEventListener('click', () =>{
         for(let c = 0;c < allSessoes.length;c++){
             allSessoes[c].style.display='none'
-            allSessoes[6].style.display='block'
+            allSessoes[5].style.display='block'
         }
     })
 
@@ -160,7 +156,7 @@ function mostrarInfoFastSearch(){
     allDepart[1].addEventListener('click', () =>{
         for(let c = 0;c < allSessoes.length;c++){
             allSessoes[c].style.display='none'
-            allSessoes[7].style.display='block'
+            allSessoes[6].style.display='block'
         }
     })
 
@@ -168,7 +164,7 @@ function mostrarInfoFastSearch(){
     allDepart[2].addEventListener('click', () =>{
         for(let c = 0;c < allSessoes.length;c++){
             allSessoes[c].style.display='none'
-            allSessoes[8].style.display='block'
+            allSessoes[7].style.display='block'
         }
     })
 
@@ -176,7 +172,7 @@ function mostrarInfoFastSearch(){
     allDepart[3].addEventListener('click', () =>{
         for(let c = 0;c < allSessoes.length;c++){
             allSessoes[c].style.display='none'
-            allSessoes[9].style.display='block'
+            allSessoes[8].style.display='block'
         }
     })
 
@@ -184,7 +180,7 @@ function mostrarInfoFastSearch(){
     allDepart[4].addEventListener('click', () =>{
         for(let c = 0;c < allSessoes.length;c++){
             allSessoes[c].style.display='none'
-            allSessoes[10].style.display='block'
+            allSessoes[9].style.display='block'
         }
     })
 
@@ -192,7 +188,7 @@ function mostrarInfoFastSearch(){
     allDepart[5].addEventListener('click', () =>{
         for(let c = 0;c < allSessoes.length;c++){
             allSessoes[c].style.display='none'
-            allSessoes[11].style.display='block'
+            allSessoes[10].style.display='block'
         }
     })
     
@@ -201,8 +197,143 @@ function mostrarInfoFastSearch(){
 }
 
 
+// funcao filtrar oleos da primeira pagina
+function filtroIniciar(){
+                    
+    let allBtns = document.querySelectorAll("#row-inicio-oleos #btns-iniciar-oleos button")
+    //console.log(allBtns)
 
-// funcao friltrar pesquisa dos oleos! 
+    let allCards = document.querySelectorAll('#row-inicio-oleos .card')
+    //console.log(allCards)
+
+
+    // btn todos 
+    allBtns[0].addEventListener('click', () =>{
+        // replacing active btn funcao
+        for(let b = 0;b < allBtns.length;b++){
+            if(allBtns[0]){
+                allBtns[b].classList.remove('active')
+                allBtns[0].classList.add('active')
+            }
+        }
+        
+        for(let c = 0;c < allCards.length;c++){
+            allCards[c].style.display='block'
+            
+        }
+    })
+
+
+    // btn lubrax 
+    allBtns[1].addEventListener('click', () =>{
+        // replacing active btn funcao
+        for(let b = 0;b < allBtns.length;b++){
+            if(allBtns[1]){
+                allBtns[b].classList.remove('active')
+                allBtns[1].classList.add('active')
+            }
+        }
+        
+        // filtrando
+        for(let c = 0;c < allCards.length;c++){
+            allCards[c].style.display='block'
+            if(!(allCards[c]).classList.contains('lubrax')){
+                allCards[c].style.display='none'
+            }
+            
+        }
+    })
+
+    
+    // btn selenia
+    allBtns[2].addEventListener('click', () =>{
+        // replacing active btn funcao
+        for(let b = 0;b < allBtns.length;b++){
+            if(allBtns[2]){
+                allBtns[b].classList.remove('active')
+                allBtns[2].classList.add('active')
+            }
+        }
+        
+        // filtrando
+        for(let c = 0;c < allCards.length;c++){
+            allCards[c].style.display='block'
+            if(!(allCards[c]).classList.contains('selen')){
+                allCards[c].style.display='none'
+            }
+            
+        }
+    })
+
+
+    // btn mobil
+    allBtns[3].addEventListener('click', () =>{
+        // replacing active btn funcao
+        for(let b = 0;b < allBtns.length;b++){
+            if(allBtns[3]){
+                allBtns[b].classList.remove('active')
+                allBtns[3].classList.add('active')
+            }
+        }
+        
+        // filtrando
+        for(let c = 0;c < allCards.length;c++){
+            allCards[c].style.display='block'
+            if(!(allCards[c]).classList.contains('mobil')){
+                allCards[c].style.display='none'
+            }
+            
+        }
+    })
+
+
+    // btn elaion
+    allBtns[4].addEventListener('click', () =>{
+        // replacing active btn funcao
+        for(let b = 0;b < allBtns.length;b++){
+            if(allBtns[4]){
+                allBtns[b].classList.remove('active')
+                allBtns[4].classList.add('active')
+            }
+        }
+        
+        // elaion
+        for(let c = 0;c < allCards.length;c++){
+            allCards[c].style.display='block'
+            if(!(allCards[c]).classList.contains('elaion')){
+                allCards[c].style.display='none'
+            }
+            
+        }
+
+    })
+
+
+    // btn dulub
+    allBtns[5].addEventListener('click', () =>{
+        // replacing active btn funcao
+        for(let b = 0;b < allBtns.length;b++){
+            if(allBtns[5]){
+                allBtns[b].classList.remove('active')
+                allBtns[5].classList.add('active')
+            }
+        }
+        
+        // filtrando
+        for(let c = 0;c < allCards.length;c++){
+            allCards[c].style.display='block'
+            if(!(allCards[c]).classList.contains('lubel')){
+                allCards[c].style.display='none'
+            }
+            
+        }
+    })
+   
+
+}
+
+
+// funcao filtrar pesquisa dos oleos! 
 function filtrarMarcas(){
 
     let allBtns = document.querySelectorAll("#row-oleos #BoxBtnsDoFiltro button")
@@ -629,44 +760,6 @@ function filtrandoPesados(){
 
 }
 
-
-
-
-// DROP-TODOS DEPARTAMENTOS MOBILE
-function allDepart(){
-
-    let allSessoes = document.querySelectorAll('main .sessao')
-    //console.log(allSessoes)
-
-
-    let allMobileLinks = document.querySelectorAll('.dropdown-menu .mobile')
-    //console.log(allMobileLinks)
-
-    // BTN-OLEO-MOBILE 
-    allMobileLinks[0].addEventListener(`click`, () =>{
-        for(let c = 0;c < allSessoes.length;c++){
-            allSessoes[c].style.display=`none`
-            allSessoes[0].style.display=`block`
-        }
-    })
-
-    // BTN-OLEO-FREIO 
-    allMobileLinks[1].addEventListener(`click`, () =>{
-        for(let c = 0;c < allSessoes.length;c++){
-            allSessoes[c].style.display=`none`
-            allSessoes[1].style.display=`block`
-        }
-    })
-
-    // BTN-BATERIA
-    allMobileLinks[2].addEventListener(`click`, () =>{
-        for(let c = 0;c < allSessoes.length;c++){
-            allSessoes[c].style.display='none'
-            allSessoes[5].style.display='block'
-        }
-    })
-
-}
         
 
 // funcao filtrar pesquisa dos filtros combustivel simples
@@ -1813,6 +1906,7 @@ function filtroReparo(){
 
 }
 
+
 // fucao filtrando pesquisa dos cabos
 function filtroCabos(){
 
@@ -1894,6 +1988,7 @@ function filtroCabos(){
     })
 
 }
+
 
 // logica offcanvas 
 document.addEventListener('DOMContentLoaded', () =>{

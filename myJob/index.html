@@ -63,16 +63,11 @@
 
                     <!-- dropdown todos os departamentos -->
                     <li class="nav-item estrutura-drop dropdown" id="src-fast">
+
                         <a href="#" class="nav-link dropdown-toggle" role="button" data-bs-toggle="dropdown" aria-expanded="false">Todos os departamentos</a>
 
                         
                         <ul class="dropdown-menu">
-                            <!-- DROPS-MOBILE -->
-                            <li class="dropdown-item drop-mobile"><a href="#oleos" class="mobile">Óleo Motor</a></li>
-
-                            <li class="dropdown-item drop-mobile"><a href="#area-oleo-freio" class="mobile">Óleo Freio</a></li>
-                            
-                            <li class="dropdown-item drop-mobile"><a href="#area-bateria" class="mobile">Batéria</a></li>
 
 
                             <!-- DROPS NO-MOBILE -->
@@ -93,18 +88,8 @@
                     </li>
 
                     
-                    <!-- dropdown dos oleos -->
-                    <li class="nav-item estrutura-drop dropdown" id="drop-oleo">
-                        <a href="#" class="nav-link dropdown-toggle" role="button" data-bs-toggle="dropdown" aria-expanded="false">Óleos</a>
 
-                        <ul class="dropdown-menu">
-                            <li class="dropdown-item"><a href="#oleos" class="dropdown-link">Óleo Motor</a></li>
-                            <li class="dropdown-item"><a href="#area-oleo-freio" class="dropdown-link">Óleo Freio</a></li>
-                        </ul>
-
-                    </li>
-
-                    <!-- dropdown filtros  -->
+                      <!-- dropdown filtros -->
                     <li class="nav-item estrutura-drop dropdown" id="drop-filtro">
                         <a href="#" class="nav-link dropdown-toggle" role="button" data-bs-toggle="dropdown" aria-expanded="false">Filtros</a>
 
@@ -119,11 +104,13 @@
                     </li>
 
 
-                    <li class="nav-item estrutura" id="link-bateria"><a href="#area-bateria" class="nav-link">Batérias</a></li>
+                    <!-- oleos -->
+                    <li class="nav-item estrutura" id="link-oleos"><a href="#area-oleos" class="nav-link">Óleos</a></li>
                     
 
                 </ul>
             </div>
+
 
         </div>
 
@@ -169,32 +156,22 @@
         </div>
 
 
+
         <!-- 0 -->
-        <!-- sessao de oleos -->
-        <div id="oleos" class="sessao">
+        <!-- sessao Inicial -->
+        <div id="inicial" class="sessao">
             <div class="container">
-                <div class="row espaco-card space-around-card" id="row-oleos">
+
+                <!-- OLEOS DE MOTOR -->
+                <div class="row espaco-card space-around-card" id="row-inicio-oleos">
                     
 
-                    <!-- cabos de vela -->
-                <!-- <div class="row espaco-card space-around-card" id="row-cabo-vela">
-
-                    <div class="col-12">
-                        <h2 class="titles-sessoes" style="margin-bottom: 50px;">Cabos de Vela</h2>
-                    </div>
-                </div> -->
-
-
-
-
-
-
                     <div class="col-md-12">
-                        <h2 class="titles-sessoes">Óleos</h2>
+                        <h2 class="titles-sessoes espacamento-title">Óleos de Motor</h2>
                     </div>
                     
                     <!-- btns dos oleos -->
-                    <div class="col-12 btn-mobile-wrap" id="BoxBtnsDoFiltro">
+                    <div class="col-12 btn-mobile-wrap" id="btns-iniciar-oleos">
                         <button class="design-btn active">Todos</button>
                         <button class="design-btn">Lubrax</button>
                         <button class="design-btn">Selenia</button>
@@ -294,28 +271,226 @@
 
 
                 </div>
+
+
+                <!-- BATERIAS -->
+                <div class="row espaco-card space-around-card" id="row-inicio-baterias">
+
+                    <div class="col-md-12">
+                        <h2 class="titles-sessoes espacamento-title">Batérias</h2>
+                    </div>
+
+                    <!-- linha moura  -->
+                    <div class="col-md-3 card acabou">
+                        <img src="photos/baterias/moura60.png" alt="Moura 60amp" class="img-fluid">
+                        <div class="card-body">
+                            <h5 class="card-title">Batéria Moura</h5>
+                            <h5 class="card-title">60 Amperes</h5>
+                        </div>
+                    </div>
+
+                    <div class="col-md-3 card">
+                        <img src="photos/baterias/zeta2.png" alt="Moura 60amp" class="img-fluid">
+                        <div class="card-body">
+                            <h5 class="card-title">Batéria Zetta</h5>
+                            <h5 class="card-title">60 Amperes</h5>
+                        </div>
+                    </div>
+
+                    <div class="col-md-3 card">
+                        <img src="photos/baterias/zeta2.png" alt="Moura 50amp" class="img-fluid">
+                        <div class="card-body">
+                            <h5 class="card-title">Batéria Zetta</h5>
+                            <h5 class="card-title">50 Amperes</h5>
+                        </div>
+                    </div>
+
+                    <div class="col-md-3 card acabou">
+                        <img src="photos/baterias/zeta2.png" alt="Moura 70amp" class="img-fluid">
+                        <div class="card-body">
+                            <h5 class="card-title">Batéria Zetta</h5>
+                            <h5 class="card-title">70 Amperes</h5>
+                        </div>
+                    </div>
+
+                    <!-- heliar -->
+                    <div class="col-md-3 card acabou">
+                        <img src="photos/baterias/heliar.png" alt="Heliar 60amp" class="img-fluid">
+                        <div class="card-body">
+                            <h5 class="card-title">Batéria Heliar</h5>
+                            <h5 class="card-title">60 Amperes</h5>
+                        </div>
+                    </div>
+
+                    <!-- america -->
+                    <div class="col-md-3 card">
+                        <img src="photos/baterias/america.png" alt="america 50amp" class="img-fluid">
+                        <div class="card-body">
+                            <h5 class="card-title">Batéria America</h5>
+                            <h5 class="card-title">50 Amperes</h5>
+                        </div>
+                    </div>
+
+                    <div class="col-md-3 card">
+                        <img src="photos/baterias/america.png" alt="america 60amp" class="img-fluid">
+                        <div class="card-body">
+                            <h5 class="card-title">Batéria America</h5>
+                            <h5 class="card-title">60 Amperes</h5>
+                        </div>
+                    </div>
+
+
+                </div>
+
             </div>
         </div>
 
 
+
         <!-- 1 -->
-        <!-- SESSAO FLUIDO FREIO -->
-        <div id="area-oleo-freio" class="sessao">
+        <!-- sessao de oleos  -->
+        <div id="area-oleos" class="sessao">
             <div class="container">
 
+
+                <!-- OLEOS DE MOTOR -->
+                <div class="row espaco-card space-around-card" id="row-oleos">
+                    
+
+                    <div class="col-md-12">
+                        <h2 class="titles-sessoes espacamento-title">Óleos de Motor</h2>
+                    </div>
+                    
+
+                    <!-- btns dos oleos -->
+                    <div class="col-12 btn-mobile-wrap" id="BoxBtnsDoFiltro">
+                        <button class="design-btn active">Todos</button>
+                        <button class="design-btn">Lubrax</button>
+                        <button class="design-btn">Selenia</button>
+                        <button class="design-btn">Mobil</button>
+                        <button class="design-btn">Elaion</button>
+                        <button class="design-btn">Dulub</button>                
+                    </div>
+
+
+                    <!-- oleos lubrax -->
+                    <div class="col-md-3 card projeto-oleo lubrax" id="estrutura-card">
+                        <img src="photos/oleos/lubrax5w30.png" alt="lubrax 5w30" class="img-fluid">
+                        <div class="card-body">
+                            <h5 class="card-title">Óleo Lubrax 5w30</h5>
+                        </div>
+                    </div>
+
+                    <div class="col-md-3 card projeto-oleo lubrax" id="estrutura-card">
+                        <img src="photos/oleos/lubrax0w20.png" alt="lubrax 0w20" class="img-fluid">
+                        <div class="card-body">
+                            <h5 class="card-title">Óleo Lubrax 0w20</h5>
+                        </div>
+                    </div>
+
+                    <div class="col-md-3 card projeto-oleo lubrax acabou" id="estrutura-card">
+                        <img src="photos/oleos/lubrax15w40.png" alt="lubrax 15w40" class="img-fluid">
+                        <div class="card-body">
+                            <h5 class="card-title">Óleo Lubrax 15w40</h5>
+                        </div>
+                    </div>
+
+                    <div class="col-md-3 card projeto-oleo lubrax" id="estrutura-card">
+                        <img src="photos/oleos/lubrax-extraturbo.png" alt="lubrax turbo 15w40" class="img-fluid">
+                        <div class="card-body">
+                            <h5 class="card-title">Óleo Lubrax Extra Turbo 15w40 3L</h5>
+                        </div>
+                    </div>
+
+
+                    <!-- oleos selenia  -->
+                    <div class="col-md-3 card projeto-oleo selen" id="estrutura-card">
+                        <img src="photos/oleos/seleniakpower5w30.png" alt="selenia 5w30" class="img-fluid">
+                        <div class="card-body">
+                            <h5 class="card-title">Óleo Selenia Kpower 5w30</h5>
+                        </div>
+                    </div>
+
+                    <div class="col-md-3 card projeto-oleo selen " id="estrutura-card">
+                        <img src="photos/oleos/selenia15w40.png" alt="selenia 15w40" class="img-fluid">
+                        <div class="card-body">
+                            <h5 class="card-title">Óleo Selenia Performer 15w40</h5>
+                        </div>
+                    </div>
+
+
+                    <!-- oleos elaion -->
+                    <div class="col-md-3 card projeto-oleo elaion" id="estrutura-card">
+                        <img src="photos/oleos/elaion5w40.png" alt="selenia 5w40" class="img-fluid">
+                        <div class="card-body">
+                            <h5 class="card-title">Óleo Elaion 5w40</h5>
+                        </div>
+                    </div>
+
+                    <div class="col-md-3 card projeto-oleo elaion" id="estrutura-card">
+                        <img src="photos/oleos/elaion10w40.jpg" alt="Elaion 10w40" class="img-fluid">
+                        <div class="card-body">
+                            <h5 class="card-title">Óleo Elaion 10w40</h5>
+                        </div>
+                    </div>
+                    
+
+                    <!-- oleos mobil -->
+                    <div class="col-md-3 card projeto-oleo mobil" id="estrutura-card">
+                        <img src="photos/oleos/mobil5w30.png" alt="mobil5w30" class="img-fluid">
+                        <div class="card-body">
+                            <h5 class="card-title">Óleo Mobil 5w30</h5>
+                        </div>
+                    </div>
+
+                    <div class="col-md-3 card projeto-oleo mobil" id="estrutura-card">
+                        <img src="photos/oleos/mobil15w40-4l.png" alt="mobil 15w40 3l" class="img-fluid">
+                        <div class="card-body">
+                            <h5 class="card-title">Óleo Mobil 15w40 4L</h5>
+                        </div>
+                    </div>
+
+                    <div class="col-md-3 card projeto-oleo mobil" id="estrutura-card">
+                        <img src="photos/oleos/mobil15w40-20l.png" alt="mobil 15w40-20l" class="img-fluid">
+                        <div class="card-body">
+                            <h5 class="card-title">Óleo Mobil 15w40 20L</h5>
+                        </div>
+                    </div>
+                    
+
+                    <!-- oleo lubel -->
+                    <div class="col-md-3 card projeto-oleo lubel acabou" id="estrutura-card">
+                        <img src="photos/oleos/dulub.png" alt="Dulub 20w50" class="img-fluid">
+                        <div class="card-body">
+                            <h5 class="card-title">Óleo Dulub 20w50</h5>
+                        </div>
+                    </div>
+
+
+                </div>
+
+
+                <!-- fluidos de freio -->
                 <div class="row espaco-card space-around-card" id="row-fluido-oleo">
 
-
                     <div class="col-12">
-                        <h2 class="titles-sessoes" style="margin-bottom: 60px;">Fluidos de Freio</h2>
+                        <h2 class="titles-sessoes espacamento-title">Fluidos de Freio</h2>
                     </div>
+
+
                     <div class="col-md-3 card">
                         <img src="photos/oleos/fluido-freio.png" alt="DOT-3" class="img-fluid">
                         <h5 class="card-title">Fluido de Freio DOT-3</h5>
                     </div>
+
                 </div>
+
+
+
+
             </div>
         </div>
+
         
 
         <!-- 2 -->
@@ -623,6 +798,7 @@
         </div>
 
 
+
         <!-- 3 -->
         <!-- sessao filtros combustivel -->
         <div id="area-filtro-combus" class="sessao">
@@ -811,6 +987,7 @@
         </div>
 
 
+
         <!-- 4 -->
             <!-- sessao filtros de ar -->
         <div id="area-filtro-ar" class="sessao">
@@ -994,82 +1171,8 @@
         </div>
 
 
+
         <!-- 5 -->
-        <!-- sessao baterias -->
-        <div id="area-bateria" class="sessao">
-            <div class="container">
-                <div class="row espaco-card space-around-card" id="row-baterias">
-
-                    <div class="col-md-12">
-                        <h2 class="titles-sessoes" style="margin-bottom: 55px;">Batérias</h2>
-                    </div>
-
-                    <!-- linha moura  -->
-                    <div class="col-md-3 card acabou">
-                        <img src="photos/baterias/moura60.png" alt="Moura 60amp" class="img-fluid">
-                        <div class="card-body">
-                            <h5 class="card-title">Batéria Moura</h5>
-                            <h5 class="card-title">60 Amperes</h5>
-                        </div>
-                    </div>
-
-                    <div class="col-md-3 card">
-                        <img src="photos/baterias/zeta2.png" alt="Moura 60amp" class="img-fluid">
-                        <div class="card-body">
-                            <h5 class="card-title">Batéria Zetta</h5>
-                            <h5 class="card-title">60 Amperes</h5>
-                        </div>
-                    </div>
-
-                    <div class="col-md-3 card">
-                        <img src="photos/baterias/zeta2.png" alt="Moura 50amp" class="img-fluid">
-                        <div class="card-body">
-                            <h5 class="card-title">Batéria Zetta</h5>
-                            <h5 class="card-title">50 Amperes</h5>
-                        </div>
-                    </div>
-
-                    <div class="col-md-3 card acabou">
-                        <img src="photos/baterias/zeta2.png" alt="Moura 70amp" class="img-fluid">
-                        <div class="card-body">
-                            <h5 class="card-title">Batéria Zetta</h5>
-                            <h5 class="card-title">70 Amperes</h5>
-                        </div>
-                    </div>
-
-                    <!-- heliar -->
-                    <div class="col-md-3 card acabou">
-                        <img src="photos/baterias/heliar.png" alt="Heliar 60amp" class="img-fluid">
-                        <div class="card-body">
-                            <h5 class="card-title">Batéria Heliar</h5>
-                            <h5 class="card-title">60 Amperes</h5>
-                        </div>
-                    </div>
-
-                    <!-- america -->
-                    <div class="col-md-3 card">
-                        <img src="photos/baterias/america.png" alt="america 50amp" class="img-fluid">
-                        <div class="card-body">
-                            <h5 class="card-title">Batéria America</h5>
-                            <h5 class="card-title">50 Amperes</h5>
-                        </div>
-                    </div>
-
-                    <div class="col-md-3 card">
-                        <img src="photos/baterias/america.png" alt="america 60amp" class="img-fluid">
-                        <div class="card-body">
-                            <h5 class="card-title">Batéria America</h5>
-                            <h5 class="card-title">60 Amperes</h5>
-                        </div>
-                    </div>
-
-
-                </div>
-            </div>
-        </div>
-
-
-        <!-- 6 -->
         <!-- sessao do sistema de direcao -->
         <div id="area-sistema-direcao" class="sessao">
             <div class="container">
@@ -1608,7 +1711,8 @@
         </div>
 
 
-        <!-- 7 -->
+
+        <!-- 6 -->
          <!-- sessao do sistema de suspensao -->
         <div id="area-sistema-suspensao" class="sessao">
             <div class="container">
@@ -2304,7 +2408,8 @@
         </div>
 
 
-        <!-- 8 -->
+
+        <!-- 7 -->
         <!-- sessao do sistema de freios  -->
         <div id="area-sistema-freios" class="sessao">
             <div class="container">
@@ -3310,7 +3415,8 @@
         </div>
 
 
-        <!-- 9 -->
+
+        <!-- 8 -->
         <!-- sessao do sistema de ignição -->
         <div id="area-sistema-ignicao" class="sessao">
             <div class="container">
@@ -3512,7 +3618,7 @@
 
 
 
-         <!-- 10 -->
+         <!-- 9 -->
         <!-- sessao sistema de carga -->
         <div id="area-sistema-carga" class="sessao">
             <div class="container">
@@ -3938,7 +4044,8 @@
         </div>
 
 
-        <!-- 11 -->
+
+        <!-- 10 -->
         <!-- sessao sistema de partida -->
         <div id="area-sistema-partida" class="sessao">
             <div class="container">
@@ -4165,7 +4272,6 @@
 
             </div>    
         </div>
-
 
 
 

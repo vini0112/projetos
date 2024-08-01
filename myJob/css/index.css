@@ -152,7 +152,10 @@
     border: 2px solid white;
 }
 
-
+/* area oleos */
+#area-oleos{
+    display: none;
+}
 
 /* sessao filtros OLEO */
 #area-filtros{
