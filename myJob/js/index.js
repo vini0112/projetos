@@ -191,6 +191,14 @@ function mostrarInfoFastSearch(){
             allSessoes[10].style.display='block'
         }
     })
+
+    // mostrando arrefecimento
+    allDepart[6].addEventListener('click', () =>{
+        for(let c = 0;c < allSessoes.length;c++){
+            allSessoes[c].style.display='none'
+            allSessoes[11].style.display='block'
+        }
+    })
     
 
     
@@ -2002,6 +2010,7 @@ document.addEventListener('DOMContentLoaded', () =>{
     let bsOffCanvas4 = new bootstrap.Offcanvas(myOffCanvas[3])
     let bsOffCanvas5 = new bootstrap.Offcanvas(myOffCanvas[4])
     let bsOffCanvas6 = new bootstrap.Offcanvas(myOffCanvas[5])
+    let bsOffCanvas7 = new bootstrap.Offcanvas(myOffCanvas[6])
 
 
     let allBtnOff = document.querySelectorAll('.btn-open-offcanvas')
@@ -2052,6 +2061,14 @@ document.addEventListener('DOMContentLoaded', () =>{
         e.preventDefault()
         e.stopPropagation()
         bsOffCanvas6.toggle()
+    })
+
+    // arrefecimento
+    allBtnOff[6].addEventListener('click', (e) =>{
+
+        e.preventDefault()
+        e.stopPropagation()
+        bsOffCanvas7.toggle()
     })
 
     
