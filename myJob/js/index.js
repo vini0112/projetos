@@ -204,6 +204,14 @@ function mostrarInfoFastSearch(){
             allSessoes[11].style.display='block'
         }
     })
+
+    // mostrando arrefecimento
+    allDepart[7].addEventListener('click', () =>{
+        for(let c = 0;c < allSessoes.length;c++){
+            allSessoes[c].style.display='none'
+            allSessoes[12].style.display='block'
+        }
+    })
     
 
     
@@ -2203,6 +2211,7 @@ document.addEventListener('DOMContentLoaded', () =>{
     let bsOffCanvas5 = new bootstrap.Offcanvas(myOffCanvas[4])
     let bsOffCanvas6 = new bootstrap.Offcanvas(myOffCanvas[5])
     let bsOffCanvas7 = new bootstrap.Offcanvas(myOffCanvas[6])
+    let bsOffCanvas8 = new bootstrap.Offcanvas(myOffCanvas[7])
 
 
     let allBtnOff = document.querySelectorAll('.btn-open-offcanvas')
@@ -2261,6 +2270,14 @@ document.addEventListener('DOMContentLoaded', () =>{
         e.preventDefault()
         e.stopPropagation()
         bsOffCanvas7.toggle()
+    })
+
+    // combustivel
+    allBtnOff[7].addEventListener('click', (e) =>{
+
+        e.preventDefault()
+        e.stopPropagation()
+        bsOffCanvas8.toggle()
     })
 
     

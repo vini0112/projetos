@@ -16,6 +16,10 @@
     --corMontadoras: #06aaf6;
 }
 
+body{
+    
+}
+
 /* stylos globals */
 .container{
     padding: 60px 20px;
@@ -27,11 +31,12 @@
 
 .card-title{
     text-align: center;
+    font-weight: 400;
 }
 .card-text{
     text-align: center;
+    font-size: 1rem;
 }
-
 
 
 
@@ -179,12 +184,17 @@
 .padraoBtn{
     border: none;
     padding: 0.5rem 1rem;
-    background-color: gray;
+    background-color: var(--corBtnActive);
     color: white;
+    text-shadow: 2px 2px 3px black;
     font-weight: bold;
     font-size: 1rem;
     border-radius: 5px;
+    
 }
+
+
+
 .modal-body h5{
     display: flex;
     justify-content: center;
