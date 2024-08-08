@@ -212,6 +212,14 @@ function mostrarInfoFastSearch(){
             allSessoes[12].style.display='block'
         }
     })
+
+    // mostrando transmiçao
+    allDepart[8].addEventListener('click', () =>{
+        for(let c = 0;c < allSessoes.length;c++){
+            allSessoes[c].style.display='none'
+            allSessoes[13].style.display='block'
+        }
+    })
     
 
     
@@ -2212,6 +2220,7 @@ document.addEventListener('DOMContentLoaded', () =>{
     let bsOffCanvas6 = new bootstrap.Offcanvas(myOffCanvas[5])
     let bsOffCanvas7 = new bootstrap.Offcanvas(myOffCanvas[6])
     let bsOffCanvas8 = new bootstrap.Offcanvas(myOffCanvas[7])
+    let bsOffCanvas9 = new bootstrap.Offcanvas(myOffCanvas[8])
 
 
     let allBtnOff = document.querySelectorAll('.btn-open-offcanvas')
@@ -2278,6 +2287,14 @@ document.addEventListener('DOMContentLoaded', () =>{
         e.preventDefault()
         e.stopPropagation()
         bsOffCanvas8.toggle()
+    })
+
+    // transmissao
+    allBtnOff[8].addEventListener('click', (e) =>{
+
+        e.preventDefault()
+        e.stopPropagation()
+        bsOffCanvas9.toggle()
     })
 
     
