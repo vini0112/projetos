@@ -1087,6 +1087,57 @@
         <div id="area-filtro-ar" class="sessao">
             <div class="container">
 
+
+                <!-- parte do header  -->
+                <div class="col-12">
+                    <div class="row espacamento-header">
+
+
+                        <div class="col-12 estrutura-title">
+
+                            <div class="col-md-6">
+                                <h2 class="titles-sessoes">Filtros de Ar</h2>
+                            </div>
+
+                            <div class="col-md-6 btn-offcanvas">
+                                <button  data-bs-target="#allSessoesPesquisa" type="button" aria-controls="allSessoesPesquisa" class="btn-open-offcanvas">Ver todos os departamentos</button>
+                            </div>
+
+                        </div>
+
+
+                        <!-- parte do offcanvas  -->
+                        <div class="offcanvas offcanvas-top myOffCanvas" tabindex="-1" >
+
+                            <!-- header  -->
+                            <div class="offcanvas-header">
+
+                                <h5 class="offCanvasTitle">Filtros de Ar</h5>
+                                <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+
+                            </div>
+
+                            <!-- body  -->
+                            <div class="offcanvas-body"> <!--  offcanvas-body  -->
+                                <ul>
+                                    <li><a href="#row-filtros-ar-motor">Ar Mortor</a></li>
+                                    <li><a href="#row-filtros-ar-cabine">Ar Cabine</a></li>
+                                    <li><a href="#row-mangotesAr">Mangotes Ar</a></li>
+                                    
+                                </ul>
+
+                                <p class="aviso-offcanvas">Botões não disponiveis nesse formato de tela! Porfavor, desvire o celular! </p>
+                            </div>
+
+
+                        </div>
+
+
+
+                    </div>
+                </div>
+
+
                 <!-- FILTROS DE AR DO MOTOR -->
                 <div class="row espaco-card space-around-card" id="row-filtros-ar-motor">
                     <div class="col-12">
@@ -1243,7 +1294,7 @@
                 <!-- FILTROS DE AR DE CABINE -->
                 <div class="row espaco-card space-around-card" id="row-filtros-ar-cabine">
                     <div class="col-12">
-                        <h2 class="titles-sessoes" style="margin-bottom: 60px; margin-top: 30px;">Filtros de Ar de Cabine</h2>
+                        <h2 class="titles-sessoes espacamento-title">Filtros de Ar de Cabine</h2>
                     </div>
 
                     <!-- gm  -->
@@ -1269,6 +1320,46 @@
                             <button type="button" class="padraoBtn" data-bs-toggle="modal" data-bs-target="#acp906">Aplicações</button>
                         </div>
                     </div>
+
+
+                </div>
+
+
+                <!-- mangotes de ar -->
+                <div class="row espaco-card space-around-card" id="row-mangotesAr">
+
+
+                    <div class="col-12">
+                        <h2 class="titles-sessoes espacamento-title">Mangotes de Ar</h2>
+                    </div>
+
+
+                    <!-- fiat  -->
+                    <div class="col-md-3 card">
+                        <img src="photos/filtros/mangote-ar/mg007.png" alt="mg007" class="img-fluid">
+                        <div class="card-body">
+                            <h5 class="card-title">Mangote de Ar</h5>
+                            <h5 class="card-title">MG-007</h5>
+                            <p class="card-text">Linha Fiat</p>
+
+                            <button type="button" class="padraoBtn" data-bs-toggle="modal" data-bs-target="#mg007">Aplicações</button>
+                        </div>
+                    </div>
+
+                    <div class="col-md-3 card">
+                        <img src="photos/filtros/mangote-ar/MG008.png" alt="MG008" class="img-fluid">
+                        <div class="card-body">
+                            <h5 class="card-title">Mangote de Ar</h5>
+                            <h5 class="card-title">MG-008</h5>
+                            <p class="card-text">Linha Fiat</p>
+
+                            <button type="button" class="padraoBtn" data-bs-toggle="modal" data-bs-target="#MG008">Aplicações</button>
+                        </div>
+                    </div>
+
+
+
+
 
 
                 </div>
@@ -4619,6 +4710,16 @@
                         </div>
                     </div>
 
+                    <div class="col-md-3 card vws">
+                        <img src="photos/arrefecimento/reservatorios/coximRadiador.png" alt="coximRadiador" class="img-fluid">
+                        <div class="card-body">
+                            <h5 class="card-title">Coxim Radiador</h5>
+                            <h5 class="card-title"></h5>
+                            <p class="card-text">Linha Volkswagen</p>
+
+                            <button type="button" class="padraoBtn" data-bs-toggle="modal" data-bs-target="#coximRadiador">Aplicações</button>
+                        </div>
+                    </div>
 
                     <!-- gm  -->
                     <div class="col-md-3 card gm">
@@ -4873,7 +4974,16 @@
                         </div>
                     </div>
 
+                    <div class="col-md-3 card fiat">
+                        <img src="photos/arrefecimento/canos/67365.png" alt="67365" class="img-fluid">
+                        <div class="card-body">
+                            <h5 class="card-title">Mangote Infe. Radiador</h5>
+                            <h5 class="card-title">67365</h5>
+                            <p class="card-text">Linha Fiat</p>
 
+                            <button type="button" class="padraoBtn" data-bs-toggle="modal" data-bs-target="#67365">Aplicações</button>
+                        </div>
+                    </div>
                     <!-- ford  -->
                     <div class="col-md-3 card ford">
                         <img src="photos/arrefecimento/canos/67136.png" alt="67136" class="img-fluid">
@@ -4886,16 +4996,7 @@
                         </div>
                     </div>
 
-                    <div class="col-md-3 card ford">
-                        <img src="photos/arrefecimento/canos/67365.png" alt="67365" class="img-fluid">
-                        <div class="card-body">
-                            <h5 class="card-title">Mangote Infe. Radiador</h5>
-                            <h5 class="card-title">67365</h5>
-                            <p class="card-text">Linha Ford</p>
-
-                            <button type="button" class="padraoBtn" data-bs-toggle="modal" data-bs-target="#67365">Aplicações</button>
-                        </div>
-                    </div>
+                    
 
 
 
@@ -5015,7 +5116,7 @@
 
 
 
-                <!-- acessorios d'agua -->
+                <!-- acessorios arrefecimento -->
                 <div class="row espaco-card space-around-card" id="row-acessorios">
 
                     <div class="col-12">
@@ -5035,14 +5136,28 @@
                         </div>
                     </div>
 
+
+                    <!-- fiat  -->
                     <div class="col-md-3 card">
                         <img src="photos/arrefecimento/acessorios/88va400823.png" alt="88va400823" class="img-fluid">
                         <div class="card-body">
-                            <h5 class="card-title">Cavalete D'Agua</h5>
+                            <h5 class="card-title">Válvula Expanssão</h5>
                             <h5 class="card-title">88VA400823</h5>
-                            <p class="card-text">Linha Volskwagen</p>
+                            <p class="card-text">Linha Fiat</p>
 
                             <button type="button" class="padraoBtn" data-bs-toggle="modal" data-bs-target="#88va400823">Aplicações</button>
+                        </div>
+                    </div>
+
+                    <!-- UNIVERSAL -->
+                    <div class="col-md-3 card">
+                        <img src="photos/arrefecimento/acessorios/conexaoL.png" alt="conexaoL" class="img-fluid">
+                        <div class="card-body">
+                            <h5 class="card-title">Conexão L Mangote</h5>
+                            <h5 class="card-title"></h5>
+                            <p class="card-text">Linha Universal</p>
+
+                            <button type="button" class="padraoBtn" data-bs-toggle="modal" data-bs-target="#conexaoL">Aplicações</button>
                         </div>
                     </div>
 
@@ -5096,7 +5211,7 @@
                                 <ul>
                                     <li><a href="#row-bicos">Bicos</a></li>
                                     <li><a href="#row-bomba-combust">Bomba Comb.</a></li>
-                                    <li><a href="#row-flanges">Flange</a></li>
+                                    <li><a href="#row-flange">Flange</a></li>
                                     
                                 </ul>
 
@@ -5269,7 +5384,6 @@
                                 <ul>
                                     <li><a href="#row-discos-embre">Discos Embreag.</a></li>
                                     <li><a href="#row-reparos-CeT">Reparos</a></li>
-                                    <li><a href="#"></a></li>
                                     
                                 </ul>
 
@@ -5385,7 +5499,7 @@
                     </div>
 
                     <!-- gm -->
-                    <div class="col-md-3 card fiat">
+                    <div class="col-md-3 card gm">
                         <img src="photos/sist-transmi/reparos/tl8766.png" alt="tl8766" class="img-fluid">
                         <div class="card-body">
                             <h5 class="card-title">Pino Conexão Trabulador</h5>
@@ -5396,7 +5510,7 @@
                         </div>
                     </div>
 
-                    <div class="col-md-3 card fiat">
+                    <div class="col-md-3 card gm">
                         <img src="photos/sist-transmi/reparos/alavancaCobalt.png" alt="alavancaCobalt" class="img-fluid">
                         <div class="card-body">
                             <h5 class="card-title">Alavanca Trabulador</h5>
@@ -5407,7 +5521,7 @@
                         </div>
                     </div>
 
-                    <div class="col-md-3 card fiat">
+                    <div class="col-md-3 card gm">
                         <img src="photos/sist-transmi/reparos/34944.png" alt="34944" class="img-fluid">
                         <div class="card-body">
                             <h5 class="card-title">Alavanca Trabulador</h5>
@@ -5415,6 +5529,17 @@
                             <p class="card-text">Linha GM</p>
 
                             <button type="button" class="padraoBtn" data-bs-toggle="modal" data-bs-target="#34944">Aplicações</button>
+                        </div>
+                    </div>
+
+                    <div class="col-md-3 card gm">
+                        <img src="photos/sist-transmi/reparos/terminalEngate.png" alt="terminalEngate" class="img-fluid">
+                        <div class="card-body">
+                            <h5 class="card-title">Terminal Engate</h5>
+                            <h5 class="card-title"></h5>
+                            <p class="card-text">Linha GM</p>
+
+                            <button type="button" class="padraoBtn" data-bs-toggle="modal" data-bs-target="#terminalEngate">Aplicações</button>
                         </div>
                     </div>
 
@@ -5437,7 +5562,6 @@
 
 <!-- reparos do cambio -->
 <div>
-
 
     <!-- esqueleto base -->   
 <div class="modal fade" id="" aria-hidden="true" aria-labelledby="modal-filtro-label" tabindex="-1" >
@@ -5697,6 +5821,40 @@
             <div class="modal-footer" id="modalFooterDirecao">
                 <p><span class="carro">Marca:</span> <span class="marcas">Amortex</span></p>
                 <p class="carro">C-3410</p>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+    <!-- terminalEngate -->   
+<div class="modal fade" id="terminalEngate" aria-hidden="true" aria-labelledby="modal-filtro-label" tabindex="-1" >
+    <div class="modal-dialog modal-dialog-scrollable">
+
+        <div class="modal-content" id="modal-content">
+
+            <div class="modal-header">
+                <h2>Aplicações</h2>
+                <button class="btn-close" type="button" data-bs-dismiss="modal" aria-label="close"></button>
+            </div>
+                <div class="modal-body">
+                <h534944</h5>
+                <ul id="lista-aplicacoes">
+                    <li class="montadora">GM:</li>
+                    <li><span class="carro">Agile:</span> 2010-2014</li>
+                    <li><span class="carro">Celta:</span> 2005..</li>
+                    <li><span class="carro">Corsa:</span> 2005..</li>
+                    <li><span class="carro">Astra:</span> 2006-2011</li>
+                    <li><span class="carro">Prisma:</span> 2003..</li>
+                    <li><span class="carro">Montana:</span> 2003..</li>
+                    <li><span class="carro">Vectra:</span> 2006..</li>
+                    <li><span class="carro">Zafira:</span> 2006-2008</li>
+                </ul>
+            </div>
+
+            <div class="modal-footer" id="modalFooterDirecao">
+                <p><span class="carro">Marca:</span> <span class="marcas"></span></p>
+                <p class="carro">C-1156</p>
             </div>
         </div>
     </div>
@@ -6025,11 +6183,8 @@
  </div>
 
 
-<!-- acessorios d'agua -->
+<!-- acessorios arrefecimento -->
 <div>
-
-
-
 
 <!-- 7008 -->   
 <div class="modal fade" id="7008" aria-hidden="true" aria-labelledby="modal-filtro-label" tabindex="-1" >
@@ -6073,7 +6228,7 @@
                 <div class="modal-body">
                 <h5>88VA400823</h5>
                 <ul id="lista-aplicacoes">
-                    <li class="montadora">Volskwagen:</li>
+                    <li class="montadora">FIAT:</li>
                     <li><span class="carro">Novo-Uno:</span> 2010..</li>
                     <li><span class="carro">Palio:</span>2012..</li>
                     <li><span class="carro">Argo: </span></li>
@@ -6089,11 +6244,31 @@
     </div>
 </div> 
 
+<!-- conexaoL -->   
+<div class="modal fade" id="conexaoL" aria-hidden="true" aria-labelledby="modal-filtro-label" tabindex="-1" >
+    <div class="modal-dialog modal-dialog-scrollable">
 
+        <div class="modal-content" id="modal-content">
 
+            <div class="modal-header">
+                <h2>Aplicações</h2>
+                <button class="btn-close" type="button" data-bs-dismiss="modal" aria-label="close"></button>
+            </div>
+                <div class="modal-body">
+                <h5></h5>
+                <ul id="lista-aplicacoes">
+                    <li class="montadora">Universal:</li>
+                   
+                </ul>
+            </div>
 
-
-
+            <div class="modal-footer" id="modalFooterDirecao">
+                <p><span class="carro">Marca:</span> <span class="marcas"></span></p>
+                <p class="carro">C-3754</p>
+            </div>
+        </div>
+    </div>
+</div> 
 
 
 
@@ -6715,7 +6890,7 @@
                 <div class="modal-body">
                 <h5>67365</h5>
                 <ul id="lista-aplicacoes">
-                    <li class="montadora">FORD:</li>
+                    <li class="montadora">FIAT:</li>
                     <li><span class="carro">Siena:</span> 2008-2010</li>
                 </ul>
             </div>
@@ -6963,6 +7138,38 @@
             <div class="modal-footer" id="modalFooterDirecao">
                 <p><span class="carro">Marca:</span> <span class="marcas">Gonel</span></p>
                 <p class="carro">C-15</p>
+            </div>
+        </div>
+    </div>
+</div> 
+
+
+<!-- coximRadiador -->   
+<div class="modal fade" id="coximRadiador" aria-hidden="true" aria-labelledby="modal-filtro-label" tabindex="-1" >
+    <div class="modal-dialog modal-dialog-scrollable">
+
+        <div class="modal-content" id="modal-content">
+
+            <div class="modal-header">
+                <h2>Aplicações</h2>
+                <button class="btn-close" type="button" data-bs-dismiss="modal" aria-label="close"></button>
+            </div>
+                <div class="modal-body">
+                <h5></h5>
+                <ul id="lista-aplicacoes">
+                    <li class="montadora">Volskwagen:</li>
+                    <li><span class="carro">Fox:</span> 2009..</li>
+                    <li><span class="carro">Gol:</span> 2009..</li>
+                    <li><span class="carro">Polo:</span> 2002-2015</li>
+                    <li><span class="carro">SpaceFox:</span> 2002-2015</li>
+                    <li><span class="carro">Voyage:</span> 2009..</li>
+                   
+                </ul>
+            </div>
+
+            <div class="modal-footer" id="modalFooterDirecao">
+                <p><span class="carro">Marca:</span> <span class="marcas">ProKit</span></p>
+                <p class="carro">C-2854</p>
             </div>
         </div>
     </div>
@@ -12898,6 +13105,68 @@
 
 </div>
 
+
+<!-- MODAIS MANGOTES DE AR -->
+ <div>
+
+
+<!-- mg007 -->
+<div class="modal fade" id="mg007" aria-hidden="true" aria-labelledby="modal-filtro-label" tabindex="-1" >
+    <div class="modal-dialog modal-dialog-scrollable">
+
+        <div class="modal-content" id="modal-content">
+
+            <div class="modal-header">
+                <h2>Aplicações</h2>
+                <button class="btn-close" type="button" data-bs-dismiss="modal" aria-label="close"></button>
+            </div>
+                <div class="modal-body">
+                <h5>MG-007</h5>
+                <ul id="lista-aplicacoes">
+                    <li class="montadora">FIAT:</li>
+                    <li><span class="carro">Idea:</span> FIRE 2006..</li>
+                    <li><span class="carro">Palio:</span> FIRE 2006..</li>
+                    <li><span class="carro">Siena:</span> FIRE 2006..</li>
+                    <li><span class="carro">Strada:</span> FIRE 2006..</li>
+                </ul>
+            </div>
+            <div class="modal-footer">
+                <p class="carro">C-3755</p>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<!-- mg008 -->
+<div class="modal fade" id="MG008" aria-hidden="true" aria-labelledby="modal-filtro-label" tabindex="-1" >
+    <div class="modal-dialog modal-dialog-scrollable">
+
+        <div class="modal-content" id="modal-content">
+
+            <div class="modal-header">
+                <h2>Aplicações</h2>
+                <button class="btn-close" type="button" data-bs-dismiss="modal" aria-label="close"></button>
+            </div>
+                <div class="modal-body">
+                <h5>MG-008</h5>
+                <ul id="lista-aplicacoes">
+                    <li class="montadora">FIAT:</li>
+                    <li><span class="carro">Palio:</span> FIRE 2003-2006</li>
+                    <li><span class="carro">Siena:</span> FIRE 2003-2006</li>
+                </ul>
+            </div>
+            <div class="modal-footer">
+                <p class="carro">C-3765</p>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+ </div>
 
 <!-- MODAIS DOS TERMINAIS DE DIRECAO -->
 <div>

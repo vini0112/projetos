@@ -2221,27 +2221,28 @@ document.addEventListener('DOMContentLoaded', () =>{
     let bsOffCanvas7 = new bootstrap.Offcanvas(myOffCanvas[6])
     let bsOffCanvas8 = new bootstrap.Offcanvas(myOffCanvas[7])
     let bsOffCanvas9 = new bootstrap.Offcanvas(myOffCanvas[8])
+    let bsOffCanvas10 = new bootstrap.Offcanvas(myOffCanvas[9])
 
 
     let allBtnOff = document.querySelectorAll('.btn-open-offcanvas')
-    //console.log(allBtnOff)
+    console.log(allBtnOff)
 
 
-    // terminais 
+    //  filtros ar
     allBtnOff[0].addEventListener('click', (e) =>{
         e.preventDefault()
         e.stopPropagation()
         bsOffCanvas.toggle()
     })
 
-    // Suspensao
+    // terminais
     allBtnOff[1].addEventListener('click', (e) =>{
         e.preventDefault()
         e.stopPropagation()
         bsOffCanvas2.toggle()
     })
 
-    // freios
+    // Suspensao
     allBtnOff[2].addEventListener('click', (e) =>{
 
         e.preventDefault()
@@ -2249,7 +2250,7 @@ document.addEventListener('DOMContentLoaded', () =>{
         bsOffCanvas3.toggle()
     })
 
-    // ignicao
+    // freios
     allBtnOff[3].addEventListener('click', (e) =>{
 
         e.preventDefault()
@@ -2257,7 +2258,7 @@ document.addEventListener('DOMContentLoaded', () =>{
         bsOffCanvas4.toggle()
     })
 
-    // carga
+    // ignicao
     allBtnOff[4].addEventListener('click', (e) =>{
 
         e.preventDefault()
@@ -2265,7 +2266,7 @@ document.addEventListener('DOMContentLoaded', () =>{
         bsOffCanvas5.toggle()
     })
 
-    // partida
+    // carga
     allBtnOff[5].addEventListener('click', (e) =>{
 
         e.preventDefault()
@@ -2273,7 +2274,7 @@ document.addEventListener('DOMContentLoaded', () =>{
         bsOffCanvas6.toggle()
     })
 
-    // arrefecimento
+    // partida
     allBtnOff[6].addEventListener('click', (e) =>{
 
         e.preventDefault()
@@ -2281,7 +2282,7 @@ document.addEventListener('DOMContentLoaded', () =>{
         bsOffCanvas7.toggle()
     })
 
-    // combustivel
+    // arrefecimento
     allBtnOff[7].addEventListener('click', (e) =>{
 
         e.preventDefault()
@@ -2289,12 +2290,20 @@ document.addEventListener('DOMContentLoaded', () =>{
         bsOffCanvas8.toggle()
     })
 
-    // transmissao
+    // Combustivel
     allBtnOff[8].addEventListener('click', (e) =>{
 
         e.preventDefault()
         e.stopPropagation()
         bsOffCanvas9.toggle()
+    })
+
+    // transmissao
+    allBtnOff[9].addEventListener('click', (e) =>{
+
+        e.preventDefault()
+        e.stopPropagation()
+        bsOffCanvas10.toggle()
     })
 
     
