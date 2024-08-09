@@ -2225,7 +2225,7 @@ document.addEventListener('DOMContentLoaded', () =>{
 
 
     let allBtnOff = document.querySelectorAll('.btn-open-offcanvas')
-    console.log(allBtnOff)
+    //console.log(allBtnOff)
 
 
     //  filtros ar
