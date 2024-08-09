@@ -16,9 +16,6 @@
     --corMontadoras: #06aaf6;
 }
 
-body{
-    
-}
 
 /* stylos globals */
 .container{
@@ -27,6 +24,9 @@ body{
 .titles-sessoes{
     text-align: center;
     font-family: 'Times New Roman', Times, serif;
+    letter-spacing: .3rem;
+    text-shadow: 2px 2px 10px black;
+    color: var(--);
 }
 
 .card-title{
@@ -70,6 +70,7 @@ body{
     font-family: Arial, Helvetica, sans-serif;
     text-shadow: 2px 2px 3px black;
 }
+
 
 
 /* cabecalho */
@@ -233,6 +234,31 @@ body{
 #area-filtro-ar{
     display: none;
 }
+
+/* banner das baterias */
+/* .bannerBaterias{
+    background-image: url(../photos/banners/bannerMoura2.jpg);  
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+    margin-bottom: 2rem;
+    height: 280px;
+    
+} */
+
+/* 
+.bannerBaterias h2{
+    color: #dec129;
+    font-weight: bold;
+    font-size: 3rem;
+    text-shadow: 2px 2px 1px black;
+    display: flex;
+    height: 100%;
+    align-items: center;
+
+} */
+
+
 
 
 
