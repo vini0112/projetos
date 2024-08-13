@@ -110,6 +110,11 @@
     display: none;
 }
 
+.btn-offcanvas{
+    display: flex;
+    justify-content: center;
+}
+
 .btn-offcanvas button{
     max-width: 350px;
     width: 100%;
@@ -183,6 +188,10 @@
     display: none;
 }
 
+/* AREA RODAGEM */
+#area-rodagem{
+    display: none;
+}
 
 
 

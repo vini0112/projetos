@@ -77,14 +77,26 @@ document.addEventListener('DOMContentLoaded', () =>{
     // funcoes do fast-search para mostrar pagina
     mostrarInfoFastSearch()
 
-    
+    // funcao dos links carousel
+    carouselBanners()
 
 })
 
 
 // funcao das sessoes da pagina
 function mostrarInfoFastSearch(){
+    // all links A clicando no LI
+    let allSetLinks = document.querySelectorAll(`.dropdown-menu .setLink`)
+    //console.log(allSetLinks)
 
+    // all links dos filtros clicando no LI
+    let allLinksFiltros = document.querySelectorAll('#drop-filtro .btnFiltros')
+    console.log(allLinksFiltros)
+
+
+
+
+    
     // SESSOES
     let allSessoes = document.querySelectorAll('main .sessao')
     //console.log(allSessoes)
@@ -111,6 +123,11 @@ function mostrarInfoFastSearch(){
         for(let c = 0;c < allSessoes.length;c++){
             allSessoes[c].style.display=`none`
             allSessoes[2].style.display=`block`
+
+            if(allLinksFiltros[0]){
+                window.location.href = '#area-filtros'
+            }
+            
         }
     })
 
@@ -120,6 +137,10 @@ function mostrarInfoFastSearch(){
         for(let c = 0;c < allSessoes.length;c++){
             allSessoes[c].style.display=`none`
             allSessoes[3].style.display=`block`
+
+            if(allLinksFiltros[1]){
+                window.location.href = '#area-filtro-combus'
+            }
         }
     })
 
@@ -129,11 +150,16 @@ function mostrarInfoFastSearch(){
         for(let c = 0;c < allSessoes.length;c++){
             allSessoes[c].style.display=`none`
             allSessoes[4].style.display=`block`
+
+            if(allLinksFiltros[2]){
+                window.location.href = '#area-filtro-ar'
+            }
         }
     })
 
     
 
+    
 
 
     // ACAO DOS LINKS SEM DROP-DOWN
@@ -154,6 +180,15 @@ function mostrarInfoFastSearch(){
         for(let c = 0;c < allSessoes.length;c++){
             allSessoes[c].style.display='none'
             allSessoes[5].style.display='block'
+            
+            if(allSetLinks[0]){
+                window.location.href = '#area-sistema-direcao'
+            }
+        
+            
+            
+
+
         }
     })
 
@@ -162,7 +197,14 @@ function mostrarInfoFastSearch(){
         for(let c = 0;c < allSessoes.length;c++){
             allSessoes[c].style.display='none'
             allSessoes[6].style.display='block'
+
+            if(allSetLinks[1]){
+                window.location.href = '#area-sistema-suspensao'
+            }
+            
         }
+
+        
     })
 
     // mostrando sistema de freios
@@ -170,6 +212,10 @@ function mostrarInfoFastSearch(){
         for(let c = 0;c < allSessoes.length;c++){
             allSessoes[c].style.display='none'
             allSessoes[7].style.display='block'
+
+            if(allSetLinks[2]){
+                window.location.href = '#area-sistema-freios'
+            }
         }
     })
 
@@ -178,6 +224,10 @@ function mostrarInfoFastSearch(){
         for(let c = 0;c < allSessoes.length;c++){
             allSessoes[c].style.display='none'
             allSessoes[8].style.display='block'
+
+            if(allSetLinks[3]){
+                window.location.href = '#area-sistema-ignicao'
+            }
         }
     })
 
@@ -186,6 +236,10 @@ function mostrarInfoFastSearch(){
         for(let c = 0;c < allSessoes.length;c++){
             allSessoes[c].style.display='none'
             allSessoes[9].style.display='block'
+
+            if(allSetLinks[4]){
+                window.location.href = '#area-sistema-carga'
+            }
         }
     })
 
@@ -194,6 +248,12 @@ function mostrarInfoFastSearch(){
         for(let c = 0;c < allSessoes.length;c++){
             allSessoes[c].style.display='none'
             allSessoes[10].style.display='block'
+
+
+            if(allSetLinks[5]){
+                window.location.href = '#area-sistema-partida'
+            }
+           
         }
     })
 
@@ -202,14 +262,24 @@ function mostrarInfoFastSearch(){
         for(let c = 0;c < allSessoes.length;c++){
             allSessoes[c].style.display='none'
             allSessoes[11].style.display='block'
+
+
+            if(allSetLinks[6]){
+                window.location.href = '#area-arrefecimento'
+            }
         }
     })
 
-    // mostrando arrefecimento
+    // mostrando combustivel
     allDepart[7].addEventListener('click', () =>{
         for(let c = 0;c < allSessoes.length;c++){
             allSessoes[c].style.display='none'
             allSessoes[12].style.display='block'
+
+
+            if(allSetLinks[7]){
+                window.location.href = '#area-combustivel'
+            }
         }
     })
 
@@ -218,6 +288,11 @@ function mostrarInfoFastSearch(){
         for(let c = 0;c < allSessoes.length;c++){
             allSessoes[c].style.display='none'
             allSessoes[13].style.display='block'
+
+
+            if(allSetLinks[8]){
+                window.location.href = '#area-transmissao'
+            }
         }
     })
     
@@ -2222,6 +2297,7 @@ document.addEventListener('DOMContentLoaded', () =>{
     let bsOffCanvas8 = new bootstrap.Offcanvas(myOffCanvas[7])
     let bsOffCanvas9 = new bootstrap.Offcanvas(myOffCanvas[8])
     let bsOffCanvas10 = new bootstrap.Offcanvas(myOffCanvas[9])
+    let bsOffCanvas11 = new bootstrap.Offcanvas(myOffCanvas[10])
 
 
     let allBtnOff = document.querySelectorAll('.btn-open-offcanvas')
@@ -2306,6 +2382,14 @@ document.addEventListener('DOMContentLoaded', () =>{
         bsOffCanvas10.toggle()
     })
 
+    // rodagem
+    allBtnOff[10].addEventListener('click', (e) =>{
+
+        e.preventDefault()
+        e.stopPropagation()
+        bsOffCanvas11.toggle()
+    })
+
     
 
     // document.querySelector('.btn-open-offcanvas').addEventListener('click', (e) =>{
@@ -2316,5 +2400,35 @@ document.addEventListener('DOMContentLoaded', () =>{
 
 })
 
+
+// links dos carousel banners
+function carouselBanners(){
+    const btnsBanner = document.querySelectorAll('.carousel-item .link-banner')
+    //console.log(btnsBanner)
+
+    // SESSOES
+    let allSessoes = document.querySelectorAll('main .sessao')
+    //console.log(allSessoes)
+
+    btnsBanner[0].addEventListener('click', () =>{
+        for(let c = 0; c < allSessoes.length; c++){
+            allSessoes[c].style.display='none'
+            allSessoes[0].style.display='block'
+
+        }
+    })
+
+    btnsBanner[1].addEventListener('click', () =>{
+        for(let c = 0; c < allSessoes.length; c++){
+            allSessoes[c].style.display='none'
+            allSessoes[0].style.display='block'
+
+        }
+    })
+
+    
+
+
+}
 
 

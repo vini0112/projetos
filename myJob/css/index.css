@@ -6,11 +6,11 @@
 
 /* palheta cores  */
 :root{
-    --cor1: #85ebf2;
-    --cor2: #00ccbe;
-    --cor3: #bcebee;
+    --cor1: #009FF5;
+    --cor2: #0052F5;
+    --cor3: #01B0F5;
     --cor4: #1b58b3;
-    --cor5: #35528b;
+    --cor5: ;
     --corDropdown:#06bbaf;
     --corBtnActive: #2e7e7e;
     --corMontadoras: #06aaf6;
@@ -26,7 +26,7 @@
     font-family: 'Times New Roman', Times, serif;
     letter-spacing: .3rem;
     text-shadow: 2px 2px 10px black;
-    color: var(--);
+    
 }
 
 .card-title{
@@ -45,13 +45,25 @@
     justify-content: space-around;
 }
 
+.word-shadow{
+    color: white;
+    text-shadow: 1px 1px 1px black;
+}
+
+
+/* navbar fast */
+
 .dropdown-menu{
-    background-color: var(--corDropdown);
+    background-color: var(--cor4);
     text-align: center;
 }
 .dropdown-menu .dropdown-item a{
-    color: black;
+    color: white;
     text-decoration: none;
+    text-shadow: 2px 2px 1px black;
+}
+.dropdown-menu .dropdown-item:hover > a{
+    color: var(--cor1);
 }
 
 .design-btn{
@@ -68,21 +80,24 @@
     margin-bottom: 15px;
     box-shadow: 2px 3px 5px black;
     font-family: Arial, Helvetica, sans-serif;
-    text-shadow: 2px 2px 3px black;
+    text-shadow: 1px 1px 1px black;
 }
+
 
 
 
 /* cabecalho */
 #navbar{
-    background-color: var(--cor2);
+    background-color: var(--cor4);
     padding: 25px 0px;
 }
 
 #title-princ{
-    margin-left: 15px;
+    margin-left: 25px;
     color: white;
     font-weight: bold;
+    text-shadow: 1px 1px 1px black;
+    font-size: 1.6rem;
 }
 #collapsee{
     margin-right: 15px;
@@ -91,10 +106,11 @@
 #collapsee a{
     color: white;
     font-weight: bold;
+    text-shadow: 1px 1px 1px black;
 }
 
 #corpo-dropdown{
-    background-color: var(--cor2);
+    background-color: var(--cor1);
 }
 #corpo-dropdown a{
     text-align: center;
@@ -107,8 +123,8 @@
     justify-content: space-around;
     margin: 0px;
     padding: 10px 0px;
-    background-color: #06bbaf;
-    
+    background-color: #234d8b;
+    /*  */
 }
 
 #estrutura-fast-src li{
@@ -133,7 +149,7 @@
 .carousel-caption{
     display: flex;
     flex-direction: column;
-    height: 45%;
+    height: 60%;
     
 }
 .carousel-caption p{
@@ -141,22 +157,69 @@
     font-weight: bold;
 }
 
-.carousel-caption #btn-caption{
+
+.carousel-caption a{
     max-width: 120px;
     width: 100%;
     height: 40px;
-    margin: auto;
+    margin: 1rem auto;
     border: none;
-    background-color: gray;
+    background-color: #234d8b;
     color: white;
     font-weight: bold;
     border-radius: 20px;
+    text-shadow: 1px 1px 1px black;
+    transition: 0.3s ease-in-out;
+    text-decoration: none;
+    
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0.4rem;
+
 }
-.carousel-caption #btn-caption:hover{
+.carousel-caption a:hover{
     background-color: transparent;
-    color: white;
-    border: 2px solid white;
+    color: var(--cor3);
+    border: 2px solid  var(--cor2);
+    text-shadow: 1px 1px 1px black;
 }
+
+.carousel-caption h5{
+    color: white;
+    text-shadow: 3px 3px 3px black;
+    letter-spacing: 1px;
+}
+.carousel-caption p{
+    color: white;
+    text-shadow: 3px 3px 3px black;
+    letter-spacing: 1px;
+}
+
+
+#captions-moura h5{
+    color: #f9d003;
+    text-shadow: 3px 3px 2px black;    
+}
+#captions-moura p{
+    color: #f9d003;
+    text-shadow: 3px 3px 2px black;
+}
+#captions-moura a{
+    max-width: 120px;
+    width: 100%;
+    height: 40px;
+    text-shadow: 1px 1px 1px black;
+    background-color: #dec129;
+    transition: 0.3s ease-in-out;
+}
+#captions-moura a:hover{
+    border: 2px solid #dec129;
+    background-color: transparent;
+    color: #dec129;
+}
+
+
 
 /* area oleos */
 #area-oleos{
@@ -235,30 +298,21 @@
     display: none;
 }
 
-/* banner das baterias */
-/* .bannerBaterias{
-    background-image: url(../photos/banners/bannerMoura2.jpg);  
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center center;
-    margin-bottom: 2rem;
-    height: 280px;
-    
-} */
-
-/* 
-.bannerBaterias h2{
-    color: #dec129;
-    font-weight: bold;
-    font-size: 3rem;
-    text-shadow: 2px 2px 1px black;
-    display: flex;
-    height: 100%;
-    align-items: center;
-
-} */
 
 
+
+
+/* media do banner moura */
+@media(min-width: 1100px){
+    #captions-moura{
+        max-width: 350px;
+        width: 100%;
+        height: 200px;
+        position: absolute;
+        top: 30%;
+        left: 15%;
+    }
+}
 
 
 
@@ -282,6 +336,7 @@
         width: 100%;
     }
 
+   
 
 }
 
@@ -300,5 +355,4 @@
 
 
 }
-
 
