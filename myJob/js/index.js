@@ -295,6 +295,20 @@ function mostrarInfoFastSearch(){
             }
         }
     })
+
+
+    // mostrando rodagem
+    allDepart[9].addEventListener('click', () =>{
+        for(let c = 0;c < allSessoes.length;c++){
+            allSessoes[c].style.display='none'
+            allSessoes[14].style.display='block'
+
+
+            if(allSetLinks[9]){
+                window.location.href = '#area-rodagem'
+            }
+        }
+    })
     
 
     
