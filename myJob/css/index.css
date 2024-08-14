@@ -90,7 +90,14 @@
 #navbar{
     background-color: var(--cor4);
     padding: 25px 0px;
+    display: flex;
+    justify-content: space-between;
 }
+
+#logo{
+    margin-right: 25px;
+}
+
 
 #title-princ{
     margin-left: 25px;
@@ -351,6 +358,17 @@
     }
     .drop-mobile{
         display: block;
+    }
+
+    /* img carousel  */
+    #img-carousel{
+        height: 60vh;
+
+    }
+    .carousel-caption{
+        position: absolute;
+        top: 20%;
+        left: 15%;
     }
 
 

@@ -274,6 +274,17 @@
     .btn-offcanvas button{
         font-size: 1rem;
     }
+
+    /* stilo do navbar */
+    #title-princ{
+        margin-left: 15px;
+        font-size: 1.4rem;
+    }
+    #logo{
+        width: 60px;
+        height: 60px;
+        margin-right: 15px;
+    }
     
 }
 

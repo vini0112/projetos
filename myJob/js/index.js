@@ -91,7 +91,7 @@ function mostrarInfoFastSearch(){
 
     // all links dos filtros clicando no LI
     let allLinksFiltros = document.querySelectorAll('#drop-filtro .btnFiltros')
-    console.log(allLinksFiltros)
+    //console.log(allLinksFiltros)
 
 
 
