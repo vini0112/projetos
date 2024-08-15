@@ -229,7 +229,7 @@
             font-size: 1rem;
         }
 
-    /* tirando o efeito notebook */
+    /* tirando o efeito do notebook */
     .card{
         border: 1px solid black;
         border-radius: 10px;
@@ -263,6 +263,10 @@
         
     }
 
+    /* diminuindo espaçamento title no mobile  */
+    .espacamento-title{
+        margin-top: 30px;
+    }
     
     
 }
