@@ -2312,6 +2312,7 @@ document.addEventListener('DOMContentLoaded', () =>{
     let bsOffCanvas9 = new bootstrap.Offcanvas(myOffCanvas[8])
     let bsOffCanvas10 = new bootstrap.Offcanvas(myOffCanvas[9])
     let bsOffCanvas11 = new bootstrap.Offcanvas(myOffCanvas[10])
+    let bsOffCanvas12 = new bootstrap.Offcanvas(myOffCanvas[11])
 
 
     let allBtnOff = document.querySelectorAll('.btn-open-offcanvas')
@@ -2402,6 +2403,14 @@ document.addEventListener('DOMContentLoaded', () =>{
         e.preventDefault()
         e.stopPropagation()
         bsOffCanvas11.toggle()
+    })
+
+    // escapamentos
+    allBtnOff[11].addEventListener('click', (e) =>{
+
+        e.preventDefault()
+        e.stopPropagation()
+        bsOffCanvas12.toggle()
     })
 
     
