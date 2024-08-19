@@ -36,7 +36,6 @@
 .card{
     border: none;
     border-radius: none;
-    cursor: pointer;
     transition: 0.5s ease-in-out;
     background-color: transparent;
     
