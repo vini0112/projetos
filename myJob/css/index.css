@@ -10,9 +10,8 @@
     --cor2: #0052F5;
     --cor3: #01B0F5;
     --cor4: #1b58b3;
-    --cor5: ;
     --corDropdown:#06bbaf;
-    --corBtnActive: #2e7e7e;
+    --btnApli: #0688c4;
     --corMontadoras: #06aaf6;
 }
 
@@ -72,7 +71,7 @@
     height: 40px;
     border: none;
     border-radius: 30px;
-    background-color: var(--corDropdown);
+    background-color: var(--corMontadoras);
     color: white;
     font-weight: bold;
     font-size: 1.1rem;
@@ -255,7 +254,7 @@
 .padraoBtn{
     border: none;
     padding: 0.5rem 1rem;
-    background-color: var(--corBtnActive);
+    background-color: var(--btnApli);
     color: white;
     text-shadow: 2px 2px 3px black;
     font-weight: bold;
