@@ -63,7 +63,7 @@
     text-shadow: 2px 2px 1px black;
 }
 .dropdown-menu .dropdown-item:hover > a{
-    color: var(--cor1);
+    color: rgb(19, 201, 222);
 }
 
 .design-btn{
