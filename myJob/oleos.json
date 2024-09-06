@@ -1,0 +1,95 @@
+{
+    "oleos": [
+        {
+            "nome": "Óleo",
+            "viscosidade": "5w30",
+            "marca": "Lubrax",
+            "info": "Sintético"
+        },
+        {
+            "nome": "Óleo",
+            "viscosidade": "0w20",
+            "marca": "Lubrax",
+            "info": "Sintético Prêmio"
+        },
+        {
+            "nome": "Óleo",
+            "viscosidade": "15w40",
+            "marca": "Lubrax",
+            "info": "Semi-Sintético"
+        },
+        {
+            "nome": "Óleo",
+            "viscosidade": "15w40",
+            "marca": "Lubrax",
+            "info": "Mineral Extra Turbo"
+        },
+        {
+            "nome": "Óleo KPower",
+            "viscosidade": "5w30",
+            "marca": "Selenia",
+            "info": "Sintético"
+        },
+        {
+            "nome": "Óleo Performer",
+            "viscosidade": "15w40",
+            "marca": "Selenia",
+            "info": "Semi-Sintético"
+        },
+        {
+            "nome": "Óleo",
+            "viscosidade": "5w40",
+            "marca": "Elaion",
+            "info": "Sintético"
+        },
+        {
+            "nome": "Óleo",
+            "viscosidade": "10w40",
+            "marca": "Elaion",
+            "info": "Semi-Sintético"
+        },
+        {
+            "nome": "Óleo",
+            "viscosidade": "5w30",
+            "marca": "Mobil",
+            "info": "Sintético"
+        },
+        {
+            "nome": "Óleo",
+            "viscosidade": "15w40",
+            "marca": "Mobil",
+            "info": "Mineral"
+        },
+        {
+            "nome": "Óleo",
+            "viscosidade": "15w40",
+            "marca": "Mobil",
+            "info": "Mineral"
+        },
+        {
+            "nome": "Óleo",
+            "viscosidade": "15w40",
+            "marca": "Lubel",
+            "info": "Semi-Sintético"
+        },
+        {
+            "nome": "Óleo",
+            "viscosidade": "20w50",
+            "marca": "Lubel",
+            "info": "Mineral"
+        },
+        {
+            "nome": "Óleo",
+            "viscosidade": "15w40",
+            "marca": "Lubel",
+            "info": "Mineral"
+        },
+        {
+            "nome": "Óleo",
+            "viscosidade": "20w50",
+            "marca": "Classic Line ",
+            "info": "Mineral"
+        }
+        
+    ]
+}
