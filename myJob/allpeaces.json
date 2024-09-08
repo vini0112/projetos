@@ -1,0 +1,407 @@
+{
+    "oleos": [
+        {
+            "nome": "Óleo",
+            "viscosidade": "5w30",
+            "image": "photos/oleos/lubrax5w30.png",
+            "marca": "Lubrax",
+            "info": "Sintético",
+            "price": 43.00,
+            "qtd": 10
+        },
+        {
+            "nome": "Óleo",
+            "viscosidade": "0w20",
+            "image": "photos/oleos/lubrax0w20.png",
+            "marca": "Lubrax",
+            "info": "Sintético Prêmio",
+            "price": 45.00,
+            "qtd": 10
+        },
+        {
+            "nome": "Óleo",
+            "viscosidade": "15w40",
+            "image": "photos/oleos/lubrax15w40.png",
+            "marca": "Lubrax",
+            "info": "Semi-Sintético",
+            "price": 35.00,
+            "qtd": 0
+        },
+        {
+            "nome": "Óleo",
+            "viscosidade": "15w40",
+            "image": "photos/oleos/lubrax-extraturbo.png",
+            "marca": "Lubrax",
+            "info": "Mineral Extra Turbo",
+            "price": 115,
+            "qtd": 10
+        },
+        {
+            "nome": "Óleo KPower",
+            "viscosidade": "5w30",
+            "image": "photos/oleos/seleniakpower5w30.png",
+            "marca": "Selenia",
+            "info": "Sintético",
+            "price": 42.00,
+            "qtd": 0
+        },
+        {
+            "nome": "Óleo Performer",
+            "viscosidade": "15w40",
+            "image": "photos/oleos/selenia15w40.png",
+            "marca": "Selenia",
+            "info": "Semi-Sintético",
+            "price": 35.00,
+            "qtd": 10
+        },
+        {
+            "nome": "Óleo",
+            "viscosidade": "5w40",
+            "image": "photos/oleos/elaion5w40.png",
+            "marca": "Elaion",
+            "info": "Sintético",
+            "price": 46.00,
+            "qtd": 10
+        },
+        {
+            "nome": "Óleo",
+            "viscosidade": "10w40",
+            "image": "photos/oleos/elaion10w40.png",
+            "marca": "Elaion",
+            "info": "Semi-Sintético",
+            "price": 40.00,
+            "qtd": 10
+        },
+        {
+            "nome": "Óleo",
+            "viscosidade": "5w30",
+            "image": "photos/oleos/mobil5w30.png",
+            "marca": "Mobil",
+            "info": "Sintético",
+            "price": 42.74,
+            "qtd": 10
+        },
+        {
+            "nome": "Óleo",
+            "viscosidade": "15w40",
+            "image": "photos/oleos/mobil15w40-4l.png",
+            "marca": "Mobil",
+            "info": "Mineral",
+            "price": 125,
+            "qtd": 10
+        },
+        {
+            "nome": "Óleo",
+            "viscosidade": "15w40",
+            "image": "photos/oleos/mobil15w40-20l.png",
+            "marca": "Mobil",
+            "info": "Mineral",
+            "price": 596.26,
+            "qtd": 1
+        },
+        {
+            "nome": "Óleo",
+            "viscosidade": "15w40",
+            "image": "photos/oleos/lube15w40-semi.png",
+            "marca": "Lubel",
+            "info": "Semi-Sintético",
+            "price": 35.00,
+            "qtd": 10
+        },
+        {
+            "nome": "Óleo",
+            "viscosidade": "20w50",
+            "image": "photos/oleos/lubel20w50-mine.png",
+            "marca": "Lubel",
+            "info": "Mineral",
+            "price": 26.60,
+            "qtd": 10
+        },
+        {
+            "nome": "Óleo",
+            "viscosidade": "15w40",
+            "image": "photos/oleos/lubel15w40-mine.png",
+            "marca": "Lubel",
+            "info": "Mineral",
+            "price": 28.56,
+            "qtd": 10
+        },
+        {
+            "nome": "Óleo",
+            "viscosidade": "20w50",
+            "image": "photos/oleos/classicLine.png",
+            "marca": "Classic-Line",
+            "info": "Mineral",
+            "price": 26.46,
+            "qtd": 1
+        }
+        
+    ],
+
+
+    "fluidos": [
+        {
+            "nome": "Fluido Freio",
+            "viscosidade": "Dot-3",
+            "image": "photos/oleos/fluido-freio.png",
+            "marca": "Lubrax",
+            "info": "",
+            "price": 16.00,
+            "qtd": 0
+        }
+    ],
+    
+
+    "baterias": [
+        {
+            "nome": "Batéria",
+            "image": "photos/baterias/moura60.png",
+            "marca": "Moura",
+            "info": "60 Ámpere",
+            "price": 515,
+            "qtd": 1
+        },
+        {
+            "nome": "Batéria",
+            "image": "photos/baterias/zeta2.png",
+            "marca": "Zetta",
+            "info": "60 Ámpere",
+            "price": 388,
+            "qtd": 0
+        },
+        {
+            "nome": "Batéria",
+            "image": "photos/baterias/zeta2.png",
+            "marca": "Zetta",
+            "info": "50 Ámpere",
+            "price": 315,
+            "qtd": 1
+        },
+        {
+            "nome": "Batéria",
+            "image": "photos/baterias/zeta2.png",
+            "marca": "Zetta",
+            "info": "70 Ámpere",
+            "price": 584.84,
+            "qtd": 0
+        },
+        {
+            "nome": "Batéria",
+            "image": "photos/baterias/zetta45.png",
+            "marca": "Zetta",
+            "info": "45 Ámpere",
+            "price": 326,
+            "qtd": 0
+        },
+        {
+            "nome": "Batéria",
+            "image": "photos/baterias/heliar.png",
+            "marca": "Heliar",
+            "info": "60 Ámpere",
+            "price": 500,
+            "qtd": 0
+        },
+        {
+            "nome": "Batéria",
+            "image": "photos/baterias/america.png",
+            "marca": "America",
+            "info": "50 Ámpere",
+            "price": 325,
+            "qtd": 1
+        },
+        {
+            "nome": "Batéria",
+            "image": "photos/baterias/america.png",
+            "marca": "America",
+            "info": "60 Ámpere",
+            "price": 315,
+            "qtd": 0
+        }
+        
+    ],
+
+    "filtroOleoSimples": [
+        {
+            "nome": "Filtro de Óleo",
+            "image": "photos/baterias/moura60.png",
+            "marca": "Tecfil",
+            "info": "PSL-619",
+            "linha": "GM",
+            "linhaCode": "gm",
+            "code": 2638,
+            "linkApli": "#psl619",
+            "price": 0,
+            "qtd": 1
+        },
+        {
+            "nome": "Filtro de Óleo",
+            "image": "photos/filtros/oleo/WO133.png",
+            "marca": "Wega",
+            "info": "WO-133",
+            "linha": "GM/JEEP/FIAT",
+            "linhaCode": "gm",
+            "secundLineCode": "fiat",
+            "code": "Sem",
+            "linkApli": "#wo133",
+            "price": 0,
+            "qtd": 1
+        },
+        {
+            "nome": "Filtro de Óleo",
+            "image": "photos/filtros/oleo/psl55.jpg",
+            "marca": "Tecfil",
+            "info": "PSL-55",
+            "linha": "Fiat",
+            "linhaCode": "fiat",
+            "code": 554,
+            "linkApli": "#psl55",
+            "price": 0,
+            "qtd": 1
+        },
+        {
+            "nome": "Filtro de Óleo",
+            "image": "photos/filtros/oleo/psl56.jpg",
+            "marca": "Tecfil",
+            "info": "PSL-56",
+            "linha": "Fiat",
+            "linhaCode": "fiat",
+            "secundLineCode": "renault",
+            "code": 3495,
+            "linkApli": "#psl56",
+            "price": 0,
+            "qtd": 1
+        },
+        {
+            "nome": "Filtro de Óleo",
+            "image": "photos/filtros/oleo/pel118.jpg",
+            "marca": "Tecfil",
+            "info": "PEL-118",
+            "linha": "Fiat",
+            "linhaCode": "fiat",
+            "code": 3778,
+            "linkApli": "#pel118",
+            "price": 0,
+            "qtd": 1
+        },
+        {
+            "nome": "Filtro de Óleo",
+            "image": "photos/filtros/oleo/tm1.jpg",
+            "marca": "Tecfil",
+            "info": "TM1",
+            "linha": "Diversas Linhas",
+            "linhaCode": "",
+            "code": 3779,
+            "linkApli": "#tm1",
+            "price": 0,
+            "qtd": 1
+        },
+        {
+            "nome": "Filtro de Óleo",
+            "image": "",
+            "marca": "",
+            "info": "",
+            "linha": "",
+            "linhaCode": "",
+            "code": 0,
+            "linkApli": "#",
+            "price": 0,
+            "qtd": 1
+        },
+        {
+            "nome": "Filtro de Óleo",
+            "image": "",
+            "marca": "",
+            "info": "",
+            "linha": "",
+            "linhaCode": "",
+            "code": 0,
+            "linkApli": "#",
+            "price": 0,
+            "qtd": 1
+        },
+        {
+            "nome": "Filtro de Óleo",
+            "image": "",
+            "marca": "",
+            "info": "",
+            "linha": "",
+            "linhaCode": "",
+            "code": 0,
+            "linkApli": "#",
+            "price": 0,
+            "qtd": 1
+        },
+        {
+            "nome": "Filtro de Óleo",
+            "image": "",
+            "marca": "",
+            "info": "",
+            "linha": "",
+            "linhaCode": "",
+            "code": 0,
+            "linkApli": "#",
+            "price": 0,
+            "qtd": 1
+        },
+        {
+            "nome": "Filtro de Óleo",
+            "image": "",
+            "marca": "",
+            "info": "",
+            "linha": "",
+            "linhaCode": "",
+            "code": 0,
+            "linkApli": "#",
+            "price": 0,
+            "qtd": 1
+        },
+        {
+            "nome": "Filtro de Óleo",
+            "image": "",
+            "marca": "",
+            "info": "",
+            "linha": "",
+            "linhaCode": "",
+            "code": 0,
+            "linkApli": "#",
+            "price": 0,
+            "qtd": 1
+        },
+        {
+            "nome": "Filtro de Óleo",
+            "image": "",
+            "marca": "",
+            "info": "",
+            "linha": "",
+            "linhaCode": "",
+            "code": 0,
+            "linkApli": "#",
+            "price": 0,
+            "qtd": 1
+        },
+        {
+            "nome": "Filtro de Óleo",
+            "image": "",
+            "marca": "",
+            "info": "",
+            "linha": "",
+            "linhaCode": "",
+            "code": 0,
+            "linkApli": "#",
+            "price": 0,
+            "qtd": 1
+        },
+        {
+            "nome": "Filtro de Óleo",
+            "image": "",
+            "marca": "",
+            "info": "",
+            "linha": "",
+            "linhaCode": "",
+            "code": 0,
+            "linkApli": "#",
+            "price": 0,
+            "qtd": 1
+        }
+    ]
+}

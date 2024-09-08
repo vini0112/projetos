@@ -18,10 +18,10 @@ document.addEventListener('DOMContentLoaded', () =>{
     })
 
     // funcao filtrando pesquisa oleos da primeira pagina
-    filtroIniciar()
+    // filtroIniciar()
 
     // funcao filtrando pesquisa dos oleos
-    filtrarMarcas()
+    // filtrarMarcas()
 
     // fucao dos filtros de oleo simples
     filtrarFiltrosOleo()
@@ -88,6 +88,7 @@ document.addEventListener('DOMContentLoaded', () =>{
     carouselBanners()
 
 })
+
 
 
 // funcao das sessoes da pagina
@@ -335,269 +336,9 @@ function mostrarInfoFastSearch(){
 }
 
 
-// funcao filtrar oleos da primeira pagina
-function filtroIniciar(){
-                    
-    let allBtns = document.querySelectorAll("#row-inicio-oleos #btns-iniciar-oleos button")
-    //console.log(allBtns)
-
-    let allCards = document.querySelectorAll('#row-inicio-oleos .card')
-    //console.log(allCards)
 
 
-    // btn todos 
-    allBtns[0].addEventListener('click', () =>{
-        // replacing active btn funcao
-        for(let b = 0;b < allBtns.length;b++){
-            if(allBtns[0]){
-                allBtns[b].classList.remove('active')
-                allBtns[0].classList.add('active')
-            }
-        }
-        
-        for(let c = 0;c < allCards.length;c++){
-            allCards[c].style.display='block'
-            
-        }
-    })
 
-
-    // btn lubrax 
-    allBtns[1].addEventListener('click', () =>{
-        // replacing active btn funcao
-        for(let b = 0;b < allBtns.length;b++){
-            if(allBtns[1]){
-                allBtns[b].classList.remove('active')
-                allBtns[1].classList.add('active')
-            }
-        }
-        
-        // filtrando
-        for(let c = 0;c < allCards.length;c++){
-            allCards[c].style.display='block'
-            if(!(allCards[c]).classList.contains('lubrax')){
-                allCards[c].style.display='none'
-            }
-            
-        }
-    })
-
-    
-    // btn selenia
-    allBtns[2].addEventListener('click', () =>{
-        // replacing active btn funcao
-        for(let b = 0;b < allBtns.length;b++){
-            if(allBtns[2]){
-                allBtns[b].classList.remove('active')
-                allBtns[2].classList.add('active')
-            }
-        }
-        
-        // filtrando
-        for(let c = 0;c < allCards.length;c++){
-            allCards[c].style.display='block'
-            if(!(allCards[c]).classList.contains('selen')){
-                allCards[c].style.display='none'
-            }
-            
-        }
-    })
-
-
-    // btn mobil
-    allBtns[3].addEventListener('click', () =>{
-        // replacing active btn funcao
-        for(let b = 0;b < allBtns.length;b++){
-            if(allBtns[3]){
-                allBtns[b].classList.remove('active')
-                allBtns[3].classList.add('active')
-            }
-        }
-        
-        // filtrando
-        for(let c = 0;c < allCards.length;c++){
-            allCards[c].style.display='block'
-            if(!(allCards[c]).classList.contains('mobil')){
-                allCards[c].style.display='none'
-            }
-            
-        }
-    })
-
-
-    // btn elaion
-    allBtns[4].addEventListener('click', () =>{
-        // replacing active btn funcao
-        for(let b = 0;b < allBtns.length;b++){
-            if(allBtns[4]){
-                allBtns[b].classList.remove('active')
-                allBtns[4].classList.add('active')
-            }
-        }
-        
-        // elaion
-        for(let c = 0;c < allCards.length;c++){
-            allCards[c].style.display='block'
-            if(!(allCards[c]).classList.contains('elaion')){
-                allCards[c].style.display='none'
-            }
-            
-        }
-
-    })
-
-
-    // btn dulub
-    allBtns[5].addEventListener('click', () =>{
-        // replacing active btn funcao
-        for(let b = 0;b < allBtns.length;b++){
-            if(allBtns[5]){
-                allBtns[b].classList.remove('active')
-                allBtns[5].classList.add('active')
-            }
-        }
-        
-        // filtrando
-        for(let c = 0;c < allCards.length;c++){
-            allCards[c].style.display='block'
-            if(!(allCards[c]).classList.contains('lubel')){
-                allCards[c].style.display='none'
-            }
-            
-        }
-    })
-   
-
-}
-
-
-// funcao filtrar pesquisa dos oleos! 
-function filtrarMarcas(){
-
-    let allBtns = document.querySelectorAll("#row-oleos #BoxBtnsDoFiltro button")
-    //console.log(allBtns)
-
-    let allCards = document.querySelectorAll('#row-oleos .card')
-    //console.log(allCards)
-
-
-    // btn todos 
-    allBtns[0].addEventListener('click', () =>{
-        // replacing active btn funcao
-        for(let b = 0;b < allBtns.length;b++){
-            if(allBtns[0]){
-                allBtns[b].classList.remove('active')
-                allBtns[0].classList.add('active')
-            }
-        }
-        
-        for(let c = 0;c < allCards.length;c++){
-            allCards[c].style.display='block'
-            
-        }
-    })
-
-    // btn lubrax 
-    allBtns[1].addEventListener('click', () =>{
-        // replacing active btn funcao
-        for(let b = 0;b < allBtns.length;b++){
-            if(allBtns[1]){
-                allBtns[b].classList.remove('active')
-                allBtns[1].classList.add('active')
-            }
-        }
-        
-        // filtrando
-        for(let c = 0;c < allCards.length;c++){
-            allCards[c].style.display='block'
-            if(!(allCards[c]).classList.contains('lubrax')){
-                allCards[c].style.display='none'
-            }
-            
-        }
-    })
-
-    // btn selenia
-    allBtns[2].addEventListener('click', () =>{
-        // replacing active btn funcao
-        for(let b = 0;b < allBtns.length;b++){
-            if(allBtns[2]){
-                allBtns[b].classList.remove('active')
-                allBtns[2].classList.add('active')
-            }
-        }
-        
-        // filtrando
-        for(let c = 0;c < allCards.length;c++){
-            allCards[c].style.display='block'
-            if(!(allCards[c]).classList.contains('selen')){
-                allCards[c].style.display='none'
-            }
-            
-        }
-    })
-
-    // btn mobil
-    allBtns[3].addEventListener('click', () =>{
-        // replacing active btn funcao
-        for(let b = 0;b < allBtns.length;b++){
-            if(allBtns[3]){
-                allBtns[b].classList.remove('active')
-                allBtns[3].classList.add('active')
-            }
-        }
-        
-        // filtrando
-        for(let c = 0;c < allCards.length;c++){
-            allCards[c].style.display='block'
-            if(!(allCards[c]).classList.contains('mobil')){
-                allCards[c].style.display='none'
-            }
-            
-        }
-    })
-
-    // btn elaion
-    allBtns[4].addEventListener('click', () =>{
-        // replacing active btn funcao
-        for(let b = 0;b < allBtns.length;b++){
-            if(allBtns[4]){
-                allBtns[b].classList.remove('active')
-                allBtns[4].classList.add('active')
-            }
-        }
-        
-        // filtrando
-        for(let c = 0;c < allCards.length;c++){
-            allCards[c].style.display='block'
-            if(!(allCards[c]).classList.contains('elaion')){
-                allCards[c].style.display='none'
-            }
-            
-        }
-    })
-
-    // btn dulub
-    allBtns[5].addEventListener('click', () =>{
-        // replacing active btn funcao
-        for(let b = 0;b < allBtns.length;b++){
-            if(allBtns[5]){
-                allBtns[b].classList.remove('active')
-                allBtns[5].classList.add('active')
-            }
-        }
-        
-        // filtrando
-        for(let c = 0;c < allCards.length;c++){
-            allCards[c].style.display='block'
-            if(!(allCards[c]).classList.contains('lubel')){
-                allCards[c].style.display='none'
-            }
-            
-        }
-    })
-   
-}
 
 
 // fucao filtrar pesquisa de filtros de oleo
@@ -997,7 +738,7 @@ function combustSimples(){
     
 }
 
-       
+
 // funcao filtrar pesquisa dos filtros combustivel simples
 function combustPesados(){
     let allBtns = document.querySelectorAll('#all-btns-combust-pesado button')
@@ -2729,5 +2470,33 @@ function carouselBanners(){
 
 
 }
+
+
+
+
+// PARTE DO UPDATE DA PAGINA
+// FAZENDO REQUESTS DE JSONS
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
