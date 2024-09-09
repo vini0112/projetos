@@ -676,6 +676,440 @@
             "price": 65.74,
             "qtd": 1
         }
+    ],
+
+
+    "filtroArMotor": [
+        {
+            "nome": "Filtro de Ar",
+            "image": "photos/filtros/ar/arl4150.jpg",
+            "marca": "Tecfil",
+            "info": "ARL-4150",
+            "linha": "Fiat",
+            "linhaCode": "fiat",
+            "code": 439,
+            "linkApli": "#arl4150",
+            "price": 19.44,
+            "qtd": 1
+        },
+        {
+            "nome": "Filtro de Ar",
+            "image": "photos/filtros/ar/arl4151.jpg",
+            "marca": "Tecfil",
+            "info": "ARL-4151",
+            "linha": "Fiat",
+            "linhaCode": "fiat",
+            "code": 60,
+            "linkApli": "#arl4151",
+            "price": 30.00,
+            "qtd": 1
+        },
+        {
+            "nome": "Filtro de Ar",
+            "image": "photos/filtros/ar/arl4147.jpg",
+            "marca": "Tecfil",
+            "info": "ARL-4147",
+            "linha": "Fiat",
+            "linhaCode": "fiat",
+            "code": 614,
+            "linkApli": "#arl4147",
+            "price": 18.50,
+            "qtd": 1
+        },
+        {
+            "nome": "Filtro de Ar",
+            "image": "photos/filtros/ar/arl2147.jpg",
+            "marca": "Tecfil",
+            "info": "AR-2147",
+            "linha": "Fiat",
+            "linhaCode": "fiat",
+            "code": "Sem",
+            "linkApli": "#ar2147",
+            "price": 0,
+            "qtd": 1
+        },
+        {
+            "nome": "Filtro de Ar",
+            "image": "photos/filtros/ar/arl8832.jpg",
+            "marca": "Tecfil",
+            "info": "ARL-8832",
+            "linha": "GM",
+            "linhaCode": "gm",
+            "code": 2956,
+            "linkApli": "#arl8832",
+            "price": 16.46,
+            "qtd": 1
+        },
+        {
+            "nome": "Filtro de Ar",
+            "image": "photos/filtros/ar/ap2710.png",
+            "marca": "Tecfil",
+            "info": "AP-2710",
+            "linha": "GM/Ford",
+            "linhaCode": "gm",
+            "secundLineCode": "ford",
+            "code": 238,
+            "linkApli": "#ap2710",
+            "price": 77.00,
+            "qtd": 1
+        },
+        {
+            "nome": "Filtro de Ar",
+            "image": "photos/filtros/ar/arl6096.jpg",
+            "marca": "Tecfil",
+            "info": "ARL-6096",
+            "linha": "Volkswagen",
+            "linhaCode": "vws",
+            "code": 1710,
+            "linkApli": "#arl6096",
+            "price": 20.65,
+            "qtd": 1
+        },
+        {
+            "nome": "Filtro de Ar",
+            "image": "photos/filtros/ar/fap7007.jpg",
+            "marca": "Wega",
+            "info": "FAP-7007",
+            "linha": "Volkswagen",
+            "linhaCode": "vws",
+            "code": 3332,
+            "linkApli": "#fap7007",
+            "price": 25.00,
+            "qtd": 1
+        },
+        {
+            "nome": "Filtro de Ar",
+            "image": "photos/filtros/ar/art5051.jpg",
+            "marca": "Tecfil",
+            "info": "ART-5051",
+            "linha": "Renault",
+            "linhaCode": "renault",
+            "code": "Sem",
+            "linkApli": "#art5051",
+            "price": 0,
+            "qtd": 1
+        },
+        {
+            "nome": "Filtro de Ar",
+            "image": "photos/filtros/ar/fap9003.png",
+            "marca": "Wega",
+            "info": "FAP-9003",
+            "linha": "Ford",
+            "linhaCode": "ford",
+            "code": 2649,
+            "linkApli": "#fap9003",
+            "price": 25.55,
+            "qtd": 1
+        },
+        {
+            "nome": "Filtro de Ar",
+            "image": "photos/filtros/ar/ars9838.png",
+            "marca": "Tecfil",
+            "info": "ARS-9838",
+            "linha": "Mercedes",
+            "linhaCode": "benz",
+            "code": "Sem",
+            "linkApli": "#ars9838",
+            "price": 0,
+            "qtd": 1
+        }
+        
+    ],
+
+
+    "filtroArCabine": [
+        {
+            "nome": "Filtro Ar Cabine",
+            "image": "photos/filtros/ar/acp003.jpg",
+            "marca": "Tecfil",
+            "info": "ACP-003",
+            "linha": "GM",
+            "linhaCode": "gm",
+            "code": 441,
+            "linkApli": "#acp003",
+            "price": 19.00,
+            "qtd": 1
+        },
+        {
+            "nome": "Filtro Ar Cabine",
+            "image": "photos/filtros/ar/acp906.jpg",
+            "marca": "Tecfil",
+            "info": "ACP-906",
+            "linha": "Fiat",
+            "linhaCode": "fiat",
+            "code": 58,
+            "linkApli": "#acp906",
+            "price": 20.00,
+            "qtd": 1
+        }
+    ],
+
+
+    "mangoteAR": [
+        {
+            "nome": "Mangote de AR",
+            "image": "photos/filtros/mangote-ar/mg007.png",
+            "marca": "MG",
+            "info": "MG-007",
+            "linha": "Fiat",
+            "linhaCode": "fiat",
+            "code": 3755,
+            "linkApli": "#mg007",
+            "price": 28.00,
+            "qtd": 1
+        },
+        {
+            "nome": "Mangote de AR",
+            "image": "photos/filtros/mangote-ar/MG008.png",
+            "marca": "MG",
+            "info": "MG-008",
+            "linha": "Fiat",
+            "linhaCode": "fiat",
+            "code": 3756,
+            "linkApli": "#MG008",
+            "price": 29.00,
+            "qtd": 1
+        }
+    ],
+
+
+    "terminaisDirecao": [
+        {
+            "nome": "Terminal Direção",
+            "image": "photos/sist-direcao/terminais/tdi1003.png",
+            "marca": "Perfect",
+            "info": "TDI-1003",
+            "lados": "L.D",
+            "linha": "Fiat",
+            "linhaCode": "fiat",
+            "code": 1806,
+            "linkApli": "#tdi1003",
+            "price": 48.00,
+            "qtd": 1
+        },
+        {
+            "nome": "Terminal Direção",
+            "image": "photos/sist-direcao/terminais/tdi1002.png",
+            "marca": "Perfect",
+            "info": "TDI-1002",
+            "lados": "L.D/L.E",
+            "linha": "Fiat",
+            "linhaCode": "fiat",
+            "code": 100,
+            "linkApli": "#tdi1002",
+            "price": 45.00,
+            "qtd": 1
+        },
+        {
+            "nome": "Terminal Direção",
+            "image": "photos/sist-direcao/terminais/amortex.jpg",
+            "marca": "Amortex",
+            "info": "33295",
+            "lados": "L.E",
+            "linha": "Fiat",
+            "linhaCode": "fiat",
+            "code": 1272,
+            "linkApli": "#33295",
+            "price": 59.38,
+            "qtd": 1
+        },
+        {
+            "nome": "Terminal Direção",
+            "image": "photos/sist-direcao/terminais/viemar335433.png",
+            "marca": "Viemar",
+            "info": "335433",
+            "lados": "L.D",
+            "linha": "Fiat",
+            "linhaCode": "fiat",
+            "code": 1736,
+            "linkApli": "#335433",
+            "price": 77.00,
+            "qtd": 1
+        },
+        {
+            "nome": "Terminal Direção",
+            "image": "photos/sist-direcao/terminais/tdi0149.png",
+            "marca": "Viemar",
+            "info": "TDI-0149",
+            "lados": "L.D",
+            "linha": "Fiat",
+            "linhaCode": "fiat",
+            "code": "Sem",
+            "linkApli": "#tdi0149",
+            "price": 86.00,
+            "qtd": 1
+        },
+        {
+            "nome": "Terminal Direção",
+            "image": "photos/sist-direcao/terminais/n6012.png",
+            "marca": "NAKATA",
+            "info": "N-6012",
+            "lados": "L.D/L.E",
+            "linha": "Fiat",
+            "linhaCode": "fiat",
+            "code": "Sem",
+            "linkApli": "#n6012",
+            "price": 0,
+            "qtd": 1
+        },
+        {
+            "nome": "Terminal Direção",
+            "image": "photos/sist-direcao/terminais/tdi1083.png",
+            "marca": "Perfect",
+            "info": "TDI-1083",
+            "lados": "L.D/L.E",
+            "linha": "GM",
+            "linhaCode": "gm",
+            "code": 738,
+            "linkApli": "#tdi1083",
+            "price": 42.50,
+            "qtd": 1
+        },
+        {
+            "nome": "Terminal Direção",
+            "image": "photos/sist-direcao/terminais/amortex63302.png",
+            "marca": "Amortex",
+            "info": "633302",
+            "lados": "L.D/L.E",
+            "linha": "GM",
+            "linhaCode": "gm",
+            "code": 1689,
+            "linkApli": "#63302",
+            "price": 56.00,
+            "qtd": 1
+        },
+        {
+            "nome": "Terminal Direção",
+            "image": "photos/sist-direcao/terminais/amortex33604.png",
+            "marca": "Amortex",
+            "info": "33604",
+            "lados": "L.D/L.E",
+            "linha": "GM",
+            "linhaCode": "gm",
+            "code": 1230,
+            "linkApli": "#33604",
+            "price": 42.00,
+            "qtd": 1
+        },
+        {
+            "nome": "Terminal Direção",
+            "image": "photos/sist-direcao/terminais/n302.png",
+            "marca": "NAKATA",
+            "info": "N-302",
+            "lados": "L.D/L.E",
+            "linha": "GM",
+            "linhaCode": "gm",
+            "code": 1368,
+            "linkApli": "#n302",
+            "price": 109,
+            "qtd": 1
+        },
+        {
+            "nome": "Terminal Direção",
+            "image": "photos/sist-direcao/terminais/n336.png",
+            "marca": "NAKATA",
+            "info": "N-336",
+            "lados": "L.D/L.E",
+            "linha": "GM",
+            "linhaCode": "gm",
+            "code": 3602,
+            "linkApli": "#n336",
+            "price": 119,
+            "qtd": 1
+        },
+        {
+            "nome": "Terminal Direção",
+            "image": "photos/sist-direcao/terminais/amortex633074.png",
+            "marca": "Amortex",
+            "info": "633074",
+            "lados": "L.D/L.E",
+            "linha": "GM",
+            "linhaCode": "gm",
+            "code": 1686,
+            "linkApli": "#633074",
+            "price": 38.00,
+            "qtd": 1
+        },
+        {
+            "nome": "Terminal Direção",
+            "image": "photos/sist-direcao/terminais/nakata1027.png",
+            "marca": "NAKATA",
+            "info": "1027",
+            "lados": "L.D/L.E",
+            "linha": "Volkswagen",
+            "linhaCode": "vws",
+            "code": 134,
+            "linkApli": "#1027",
+            "price": 40.00,
+            "qtd": 1
+        },
+        {
+            "nome": "Terminal Direção",
+            "image": "photos/sist-direcao/terminais/amortex33168.png",
+            "marca": "Amortex",
+            "info": "33168",
+            "lados": "L.D/L.E",
+            "linha": "Volkswagen",
+            "linhaCode": "vws",
+            "code": 1229,
+            "linkApli": "#33168",
+            "price": 32.00,
+            "qtd": 1
+        },
+        {
+            "nome": "Terminal Direção",
+            "image": "photos/sist-direcao/terminais/amortex33001.png",
+            "marca": "Amortex",
+            "info": "33001",
+            "lados": "L.D",
+            "linha": "Volkswagen",
+            "linhaCode": "vws",
+            "code": 1225,
+            "linkApli": "#33001",
+            "price": 34.65,
+            "qtd": 1
+        },
+        {
+            "nome": "Terminal Direção",
+            "image": "photos/sist-direcao/terminais/tdi1088.png",
+            "marca": "Perfect",
+            "info": "TDI-1088",
+            "lados": "L.D",
+            "linha": "Volkswagen",
+            "linhaCode": "vws",
+            "code": "Sem",
+            "linkApli": "#tdi1088",
+            "price": 0,
+            "qtd": 1
+        },
+        {
+            "nome": "Terminal Direção",
+            "image": "photos/sist-direcao/terminais/viemar335585.png",
+            "marca": "Viemar",
+            "info": "335585",
+            "lados": "L.E",
+            "linha": "Nissan",
+            "linhaCode": "nissan",
+            "code": 3627,
+            "linkApli": "#335585",
+            "price": 126.36,
+            "qtd": 1
+        },
+        {
+            "nome": "Terminal Direção",
+            "image": "photos/sist-direcao/terminais/amortex33079.png",
+            "marca": "Amortex",
+            "info": "33079",
+            "lados": "L.D/L.E",
+            "linha": "Toyota",
+            "linhaCode": "toyota",
+            "code": 1692,
+            "linkApli": "#33079",
+            "price": 107,
+            "qtd": 1
+        }
     ]
+
+
 
 }
