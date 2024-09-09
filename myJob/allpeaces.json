@@ -220,10 +220,11 @@
         
     ],
 
+
     "filtroOleoSimples": [
         {
             "nome": "Filtro de Óleo",
-            "image": "photos/baterias/moura60.png",
+            "image": "photos/filtros/oleo/filtro619.jpg",
             "marca": "Tecfil",
             "info": "PSL-619",
             "linha": "GM",
@@ -289,7 +290,7 @@
             "marca": "Tecfil",
             "info": "TM1",
             "linha": "Diversas Linhas",
-            "linhaCode": "",
+            "linhaCode": "any",
             "code": 3779,
             "linkApli": "#tm1",
             "price": 18.00,
