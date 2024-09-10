@@ -1,7 +1,7 @@
 
 // on reload function
 document.addEventListener('DOMContentLoaded', () =>{
-    // SESSAO 0
+    // SESSAO 00
 
     // adding oleos
     addCardsOleo()
@@ -10,7 +10,7 @@ document.addEventListener('DOMContentLoaded', () =>{
     addBattery()
 
 
-    // SESSAO 1
+    // SESSAO 01
 
     // adding fluido
     addFluidos()
@@ -18,7 +18,7 @@ document.addEventListener('DOMContentLoaded', () =>{
     // adding oleo 2
     addOleo2()
 
-    // SESSAO 2
+    // SESSAO 02
 
     // adding filtro Oleo Simples
     addFiltroOleoSimp()
@@ -26,6 +26,18 @@ document.addEventListener('DOMContentLoaded', () =>{
     // adding filtro oleo pesado
     addFiltroOleoPesado()
 
+
+    // SESSAO O3
+
+    // adding filtro combust simples
+    filtroCombustSimples()
+
+    // adding filtro combust pesado
+    filtroCombustPesado()
+
+
+    // SESSAO 04
+    filtroArMotor()
 })
 
 // API REQUEST
@@ -44,7 +56,7 @@ async function gettingApi(){
 gettingApi()
 
 
-// SESSÃO 0 
+// SESSÃO 00 
 const estruturaOleo = document.querySelector('#row-inicio-oleos')
 const estruturaBatery = document.querySelector('#row-inicio-baterias')
 
@@ -264,7 +276,7 @@ async function addBattery(){
 
 
 
-// SESSAO 1
+// SESSAO 01
 const estrutura2Oleo = document.querySelector('#row-oleos')
 const estruturaFluido = document.querySelector('#row-fluido-oleo')
 
@@ -467,10 +479,13 @@ async function addFluidos(){
 }
 
 
-// SESSAO 2
+// SESSAO 02
 
 let rowFiltroSimp = document.querySelector('#row-filtros')
 let rowFiltroPesado = document.querySelector('#row-filtros-pesados')
+let rowFiltroCombustSimples = document.querySelector('#row-filtro-combus-simples')
+let rowFiltroCombustPesado = document.querySelector('#row-filtro-combus')
+
 
 
 // adding filtros oleo simples
@@ -867,14 +882,324 @@ function filtrandoPesados(){
 
 
 
+// adding filtro combust simples
+async function filtroCombustSimples() {
+    
+    const dado = await gettingApi()
+    const dados = dado.filtroCombustSimples
+    // console.log(dados)
 
-{/* <div class="col-md-3 card filtros-pesados hyun">
-<img src="photos/filtros/oleo/w9020.png" alt="w9020" class="img-fluid">
+
+    for(let i = 0;i < dados.length;i++){
+
+        let newDiv = document.createElement('div')
+        newDiv.classList.add('col-md-3')
+        newDiv.classList.add('card')
+        newDiv.classList.add('filtro-simples')
+        newDiv.classList.add(dados[i].linhaCode)
+
+        if(dados[i].qtd == 0){
+            newDiv.classList.add('acabou')
+        }
+
+        if(dados[i].secundLineCode){
+            newDiv.classList.add(dados[i].secundLineCode)
+        }
+
+        if(dados[i].thirdLineCode){
+            newDiv.classList.add(dados[i].thirdLineCode)
+        }
+
+
+        newDiv.innerHTML = `
+        <img src="${dados[i].image}" alt="${dados[i].info}" class="img-fluid">
+        <div class="card-body">
+            <h5 class="card-title">${dados[i].nome}</h5>
+            <h5 class="card-title">${dados[i].info}</h5>
+            <p class="card-text">Linha ${dados[i].linha}</p>
+
+            <button type="button" class="padraoBtn" data-bs-toggle="modal" data-bs-target="${dados[i].linkApli}">Aplicações</button>
+        </div>
+        
+        `
+
+
+        rowFiltroCombustSimples.appendChild(newDiv)
+
+    }
+
+
+    combustSimples()
+}
+
+// funcao filtrar pesquisa dos filtros combustivel simples
+function combustSimples(){
+    let allBtns = document.querySelectorAll('#all-btns-combust-simples button')
+    //console.log(allBtns)
+
+    let allCards = document.querySelectorAll('#row-filtro-combus-simples .filtro-simples')
+    //console.log(allCards)
+
+    // BTN TODOS
+    allBtns[0].addEventListener('click', () =>{
+        for(let c = 0;c < allCards.length;c++){
+            allCards[c].style.display='block'
+        }
+
+        for(let b = 0;b < allBtns.length;b++){
+            if(allBtns[0]){
+                allBtns[b].classList.remove('active')
+                allBtns[0].classList.add('active')
+            }
+        }
+    })
+
+    // BTN GM 
+    allBtns[1].addEventListener('click', () =>{
+        for(let c = 0;c < allCards.length;c++){
+            allCards[c].style.display='block'
+
+            if(!(allCards[c].classList.contains('gm'))){
+                allCards[c].style.display='none'
+            }
+        } 
+
+        for(let b = 0;b < allBtns.length;b++){
+            if(allBtns[1]){
+                allBtns[b].classList.remove('active')
+                allBtns[1].classList.add('active')
+            }
+        }
+    })
+
+    // BTN FIAT 
+    allBtns[2].addEventListener('click', () =>{
+        for(let c = 0;c < allCards.length;c++){
+            allCards[c].style.display='block'
+
+            if(!(allCards[c].classList.contains('fiat'))){
+                allCards[c].style.display='none'
+            }
+        } 
+
+        for(let b = 0;b < allBtns.length;b++){
+            if(allBtns[2]){
+                allBtns[b].classList.remove('active')
+                allBtns[2].classList.add('active')
+            }
+        }
+    })
+
+    // BTN vws
+    allBtns[3].addEventListener('click', () =>{
+        for(let c = 0;c < allCards.length;c++){
+            allCards[c].style.display='block'
+
+            if(!(allCards[c].classList.contains('vws'))){
+                allCards[c].style.display='none'
+            }
+        } 
+
+        for(let b = 0;b < allBtns.length;b++){
+            if(allBtns[3]){
+                allBtns[b].classList.remove('active')
+                allBtns[3].classList.add('active')
+            }
+        }
+    })
+
+    // BTN ford
+    allBtns[4].addEventListener('click', () =>{
+        for(let c = 0;c < allCards.length;c++){
+            allCards[c].style.display='block'
+
+            if(!(allCards[c].classList.contains('ford'))){
+                allCards[c].style.display='none'
+            }
+        } 
+
+        for(let b = 0;b < allBtns.length;b++){
+            if(allBtns[4]){
+                allBtns[b].classList.remove('active')
+                allBtns[4].classList.add('active')
+            }
+        }
+    })
+
+    
+}
+
+
+
+// adding filtro combust pesado
+async function filtroCombustPesado(){
+
+    const dado = await gettingApi()
+    const dados = dado.filtroCombustPesado
+    // console.log(dados)
+
+
+    for(let i = 0;i < dados.length;i++){
+
+        let newDiv = document.createElement('div')
+        newDiv.classList.add('col-md-3')
+        newDiv.classList.add('card')
+        newDiv.classList.add('filtro-pesado')
+        newDiv.classList.add(dados[i].linhaCode)
+
+        if(dados[i].qtd == 0){
+            newDiv.classList.add('acabou')
+        }
+
+        if(dados[i].secundLineCode){
+            newDiv.classList.add(dados[i].secundLineCode)
+        }
+
+
+        newDiv.innerHTML = `
+        <img src="${dados[i].image}" alt="${dados[i].info}" class="img-fluid">
+        <div class="card-body">
+            <h5 class="card-title">${dados[i].nome}</h5>
+            <h5 class="card-title">${dados[i].info}</h5>
+            <p class="card-text">Linha ${dados[i].linha}</p>
+
+            <button type="button" class="padraoBtn" data-bs-toggle="modal" data-bs-target="${dados[i].linkApli}">Aplicações</button>
+        </div>
+        
+        `
+
+
+        rowFiltroCombustPesado.appendChild(newDiv)
+
+    }
+
+    combustPesados()
+}
+
+// funcao filtrar pesquisa dos filtros combustivel simples
+function combustPesados(){
+    let allBtns = document.querySelectorAll('#all-btns-combust-pesado button')
+    //console.log(allBtns)
+
+    let allCards = document.querySelectorAll('#row-filtro-combus .filtro-pesado')
+    //console.log(allCards)
+
+    // BTN TODOS
+    allBtns[0].addEventListener('click', () =>{
+        for(let c = 0;c < allCards.length;c++){
+            allCards[c].style.display='block'
+        }
+
+        for(let b = 0;b < allBtns.length;b++){
+            if(allBtns[0]){
+                allBtns[b].classList.remove('active')
+                allBtns[0].classList.add('active')
+            }
+        }
+    })
+
+    // BTN GM 
+    allBtns[1].addEventListener('click', () =>{
+        for(let c = 0;c < allCards.length;c++){
+            allCards[c].style.display='block'
+
+            if(!(allCards[c].classList.contains('gm'))){
+                allCards[c].style.display='none'
+            }
+        } 
+
+        for(let b = 0;b < allBtns.length;b++){
+            if(allBtns[1]){
+                allBtns[b].classList.remove('active')
+                allBtns[1].classList.add('active')
+            }
+        }
+    })
+
+    // BTN toyota
+    allBtns[2].addEventListener('click', () =>{
+        for(let c = 0;c < allCards.length;c++){
+            allCards[c].style.display='block'
+
+            if(!(allCards[c].classList.contains('toyota'))){
+                allCards[c].style.display='none'
+            }
+        } 
+
+        for(let b = 0;b < allBtns.length;b++){
+            if(allBtns[2]){
+                allBtns[b].classList.remove('active')
+                allBtns[2].classList.add('active')
+            }
+        }
+    })
+
+    // BTN MERCEDEZ
+    allBtns[3].addEventListener('click', () =>{
+        for(let c = 0;c < allCards.length;c++){
+            allCards[c].style.display='block'
+
+            if(!(allCards[c].classList.contains('benz'))){
+                allCards[c].style.display='none'
+            }
+        } 
+
+        for(let b = 0;b < allBtns.length;b++){
+            if(allBtns[3]){
+                allBtns[b].classList.remove('active')
+                allBtns[3].classList.add('active')
+            }
+        }
+    })
+
+    // BTN FORD
+    allBtns[4].addEventListener('click', () =>{
+        for(let c = 0;c < allCards.length;c++){
+            allCards[c].style.display='block'
+
+            if(!(allCards[c].classList.contains('ford'))){
+                allCards[c].style.display='none'
+            }
+        } 
+
+        for(let b = 0;b < allBtns.length;b++){
+            if(allBtns[4]){
+                allBtns[b].classList.remove('active')
+                allBtns[4].classList.add('active')
+            }
+        }
+    })
+
+
+
+
+}
+
+
+
+
+// SESSAO 04
+
+
+// adding filtro de Ar motor
+async function filtroArMotor(){
+
+    const dado = await gettingApi()
+    const dados = dado.filtroArMotor
+    // console.log(dados)
+}
+
+
+
+
+
+{/* <div class="col-md-3 card filtro-ar-motor fiat">
+<img src="photos/filtros/ar/arl4150.jpg" alt="arl4150" class="img-fluid">
 <div class="card-body">
-    <h5 class="card-title">Filtro Óleo</h5>
-    <h5 class="card-title">W-9020</h5>
-    <p class="card-text">Linha Hyundai</p>
+    <h5 class="card-title">Filtro de Ar</h5>
+    <h5 class="card-title">ARL-4150</h5>
+    <p class="card-text">Linha Fiat</p>
 
-    <button type="button" class="padraoBtn" data-bs-toggle="modal" data-bs-target="#w9020">Aplicações</button>
+    <button type="button" class="padraoBtn" data-bs-toggle="modal" data-bs-target="#arl4150">Aplicações</button>
 </div>
 </div> */}
