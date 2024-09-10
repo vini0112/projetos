@@ -654,7 +654,7 @@
         },
         {
             "nome": "Filtro Combustível",
-            "image": "",
+            "image": "photos/filtros/combustivel/psc72-2.jpg",
             "marca": "Tecfil",
             "info": "PSC-72/2",
             "linha": "Ford/Volskwagen",
@@ -670,7 +670,7 @@
             "marca": "Tecfil",
             "info": "PC3/155",
             "linha": "CATERPILLAR",
-            "linhaCode": "",
+            "linhaCode": "any",
             "code": 2958,
             "linkApli": "#pc3/155",
             "price": 65.74,

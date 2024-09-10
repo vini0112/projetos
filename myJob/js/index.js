@@ -30,10 +30,10 @@ document.addEventListener('DOMContentLoaded', () =>{
     // filtrandoPesados()
 
     // funcao filtrando pesquisa dos filtros-combustivel simples
-    combustSimples()
+    // combustSimples()
 
     // funcao filtrando pesquisa dos filtros-combustivel simples
-    combustPesados()
+    // combustPesados()
 
     // funcao filtrando pesquisa dos filtros-ar-motor
     arMotor()
@@ -348,202 +348,10 @@ function mostrarInfoFastSearch(){
 
         
 
-// funcao filtrar pesquisa dos filtros combustivel simples
-function combustSimples(){
-    let allBtns = document.querySelectorAll('#all-btns-combust-simples button')
-    //console.log(allBtns)
-
-    let allCards = document.querySelectorAll('#row-filtro-combus-simples .filtro-simples')
-    //console.log(allCards)
-
-    // BTN TODOS
-    allBtns[0].addEventListener('click', () =>{
-        for(let c = 0;c < allCards.length;c++){
-            allCards[c].style.display='block'
-        }
-
-        for(let b = 0;b < allBtns.length;b++){
-            if(allBtns[0]){
-                allBtns[b].classList.remove('active')
-                allBtns[0].classList.add('active')
-            }
-        }
-    })
-
-    // BTN GM 
-    allBtns[1].addEventListener('click', () =>{
-        for(let c = 0;c < allCards.length;c++){
-            allCards[c].style.display='block'
-
-            if(!(allCards[c].classList.contains('gm'))){
-                allCards[c].style.display='none'
-            }
-        } 
-
-        for(let b = 0;b < allBtns.length;b++){
-            if(allBtns[1]){
-                allBtns[b].classList.remove('active')
-                allBtns[1].classList.add('active')
-            }
-        }
-    })
-
-    // BTN FIAT 
-    allBtns[2].addEventListener('click', () =>{
-        for(let c = 0;c < allCards.length;c++){
-            allCards[c].style.display='block'
-
-            if(!(allCards[c].classList.contains('fiat'))){
-                allCards[c].style.display='none'
-            }
-        } 
-
-        for(let b = 0;b < allBtns.length;b++){
-            if(allBtns[2]){
-                allBtns[b].classList.remove('active')
-                allBtns[2].classList.add('active')
-            }
-        }
-    })
-
-    // BTN vws
-    allBtns[3].addEventListener('click', () =>{
-        for(let c = 0;c < allCards.length;c++){
-            allCards[c].style.display='block'
-
-            if(!(allCards[c].classList.contains('vws'))){
-                allCards[c].style.display='none'
-            }
-        } 
-
-        for(let b = 0;b < allBtns.length;b++){
-            if(allBtns[3]){
-                allBtns[b].classList.remove('active')
-                allBtns[3].classList.add('active')
-            }
-        }
-    })
-
-    // BTN ford
-    allBtns[4].addEventListener('click', () =>{
-        for(let c = 0;c < allCards.length;c++){
-            allCards[c].style.display='block'
-
-            if(!(allCards[c].classList.contains('ford'))){
-                allCards[c].style.display='none'
-            }
-        } 
-
-        for(let b = 0;b < allBtns.length;b++){
-            if(allBtns[4]){
-                allBtns[b].classList.remove('active')
-                allBtns[4].classList.add('active')
-            }
-        }
-    })
-
-    
-}
-
-
-// funcao filtrar pesquisa dos filtros combustivel simples
-function combustPesados(){
-    let allBtns = document.querySelectorAll('#all-btns-combust-pesado button')
-    //console.log(allBtns)
-
-    let allCards = document.querySelectorAll('#row-filtro-combus .filtro-pesado')
-    //console.log(allCards)
-
-    // BTN TODOS
-    allBtns[0].addEventListener('click', () =>{
-        for(let c = 0;c < allCards.length;c++){
-            allCards[c].style.display='block'
-        }
-
-        for(let b = 0;b < allBtns.length;b++){
-            if(allBtns[0]){
-                allBtns[b].classList.remove('active')
-                allBtns[0].classList.add('active')
-            }
-        }
-    })
-
-    // BTN GM 
-    allBtns[1].addEventListener('click', () =>{
-        for(let c = 0;c < allCards.length;c++){
-            allCards[c].style.display='block'
-
-            if(!(allCards[c].classList.contains('gm'))){
-                allCards[c].style.display='none'
-            }
-        } 
-
-        for(let b = 0;b < allBtns.length;b++){
-            if(allBtns[1]){
-                allBtns[b].classList.remove('active')
-                allBtns[1].classList.add('active')
-            }
-        }
-    })
-
-    // BTN toyota
-    allBtns[2].addEventListener('click', () =>{
-        for(let c = 0;c < allCards.length;c++){
-            allCards[c].style.display='block'
-
-            if(!(allCards[c].classList.contains('toy'))){
-                allCards[c].style.display='none'
-            }
-        } 
-
-        for(let b = 0;b < allBtns.length;b++){
-            if(allBtns[2]){
-                allBtns[b].classList.remove('active')
-                allBtns[2].classList.add('active')
-            }
-        }
-    })
-
-    // BTN MERCEDEZ
-    allBtns[3].addEventListener('click', () =>{
-        for(let c = 0;c < allCards.length;c++){
-            allCards[c].style.display='block'
-
-            if(!(allCards[c].classList.contains('benz'))){
-                allCards[c].style.display='none'
-            }
-        } 
-
-        for(let b = 0;b < allBtns.length;b++){
-            if(allBtns[3]){
-                allBtns[b].classList.remove('active')
-                allBtns[3].classList.add('active')
-            }
-        }
-    })
-
-    // BTN FORD
-    allBtns[4].addEventListener('click', () =>{
-        for(let c = 0;c < allCards.length;c++){
-            allCards[c].style.display='block'
-
-            if(!(allCards[c].classList.contains('ford'))){
-                allCards[c].style.display='none'
-            }
-        } 
-
-        for(let b = 0;b < allBtns.length;b++){
-            if(allBtns[4]){
-                allBtns[b].classList.remove('active')
-                allBtns[4].classList.add('active')
-            }
-        }
-    })
 
 
 
 
-}
 
         
 // funcao filtrar pesquisa dos filtros de ar motor
