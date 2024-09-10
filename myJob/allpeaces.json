@@ -1108,6 +1108,265 @@
             "price": 107,
             "qtd": 1
         }
+    ],
+
+
+    "barrasAxiais": [
+        {
+            "nome": "Barra Axial",
+            "image": "photos/sist-direcao/barras/axial63542.png",
+            "marca": "Amortex",
+            "info": "63542",
+            "sistema": "Hidráulico",
+            "linha": "Fiat",
+            "linhaCode": "fiat",
+            "code": 1241,
+            "linkApli": "#63542",
+            "price": 55.00,
+            "qtd": 1
+        },
+        {
+            "nome": "Barra Axial",
+            "image": "photos/sist-direcao/barras/axial68002.png",
+            "marca": "Amortex",
+            "info": "68002",
+            "sistema": "Hidráulico",
+            "secundSistema": "Mecânico",
+            "linha": "Fiat",
+            "linhaCode": "fiat",
+            "code": 1238,
+            "linkApli": "#68002",
+            "price": 35.00,
+            "qtd": 1
+        },
+        {
+            "nome": "Barra Axial",
+            "image": "photos/sist-direcao/barras/amortex68077.png",
+            "marca": "Amortex",
+            "info": "68077",
+            "sistema": "Hidráulico",
+            "linha": "Fiat/Citroen/Peugeot",
+            "linhaCode": "fiat",
+            "code": 3432,
+            "linkApli": "#68077",
+            "price": 59.00,
+            "qtd": 1
+        },
+        {
+            "nome": "Barra Axial",
+            "image": "photos/sist-direcao/barras/axial68011.png",
+            "marca": "Amortex",
+            "info": "68011",
+            "sistema": "Hidráulico",
+            "secundSistema":"Mecânico",
+            "linha": "GM/Ford",
+            "linhaCode": "68011",
+            "code": 1683,
+            "linkApli": "#68011",
+            "price": 44.00,
+            "qtd": 1
+        },
+        {
+            "nome": "Barra Axial",
+            "image": "photos/sist-direcao/barras/ax012.png",
+            "marca": "Volda",
+            "info": "AX-012",
+            "sistema": "Hidráulico",
+            "secundSistema":"Mecânico",
+            "linha": "GM",
+            "linhaCode": "gm",
+            "code": 3123,
+            "linkApli": "#ax012",
+            "price": 62.00,
+            "qtd": 1
+        },
+        {
+            "nome": "Barra Axial",
+            "image": "photos/sist-direcao/barras/amortex68192.png",
+            "marca": "Amortex",
+            "info": "68192",
+            "sistema": "Hidráulico",
+            "linha": "Volkswagen",
+            "linhaCode": "vws",
+            "code": 1349,
+            "linkApli": "#68192",
+            "price": 52.00,
+            "qtd": 1
+        },
+        {
+            "nome": "Barra Axial",
+            "image": "photos/sist-direcao/barras/amortex68032.png",
+            "marca": "Amortex",
+            "info": "68032",
+            "sistema": "Hidráulico",
+            "linha": "Volkswagen",
+            "linhaCode": "vws",
+            "code": 1693,
+            "linkApli": "#68032",
+            "price": 58.00,
+            "qtd": 1
+        },
+        {
+            "nome": "Barra Axial",
+            "image": "photos/sist-direcao/barras/amortex68184.png",
+            "marca": "Amortex",
+            "info": "68184",
+            "sistema": "Hidráulico",
+            "linha": "Ford",
+            "linhaCode": "ford",
+            "code": 1684,
+            "linkApli": "#68184",
+            "price": 36.00,
+            "qtd": 1
+        }
+    ],
+
+
+    "estabilizadores": [
+        {
+            "nome": "Estabilizador",
+            "image": "photos/sist-direcao/estabilizadores/amortex35564.png",
+            "marca": "Amortex",
+            "info": "35564",
+            "lados": "Interno",
+            "linha": "Fiat",
+            "linhaCode": "fiat",
+            "code": 3765,
+            "linkApli": "#amortex35564",
+            "price": 14.00,
+            "qtd": 1
+        },
+        {
+            "nome": "Estabilizador",
+            "image": "photos/sist-direcao/estabilizadores/amortex35563.png",
+            "marca": "Amortex",
+            "info": "35563",
+            "lados": "Externo",
+            "linha": "Fiat",
+            "linhaCode": "fiat",
+            "code": 3766,
+            "linkApli": "#amortex35563",
+            "price": 16.00,
+            "qtd": 1
+        },
+        {
+            "nome": "Estabilizador",
+            "image": "photos/sist-direcao/estabilizadores/slk2031.png",
+            "marca": "Solopes",
+            "info": "SLK-2031",
+            "lados": "L.D",
+            "linha": "Fiat",
+            "linhaCode": "fiat",
+            "code": 1518,
+            "linkApli": "#slk2031",
+            "price": 15.00,
+            "qtd": 1
+        },
+        {
+            "nome": "Estabilizador",
+            "image": "photos/sist-direcao/estabilizadores/slk2030.png",
+            "marca": "Solopes",
+            "info": "SLK-2030",
+            "lados": "L.E",
+            "linha": "Fiat",
+            "linhaCode": "fiat",
+            "code": 1518,
+            "linkApli": "#slk2030",
+            "price": 15.00,
+            "qtd": 1
+        },
+        {
+            "nome": "Estabilizador",
+            "image": "photos/sist-direcao/estabilizadores/slk2024.png",
+            "marca": "Solopes",
+            "info": "SKL-2024",
+            "lados": "L.D",
+            "linha": "Fiat",
+            "linhaCode": "fiat",
+            "code": 3769,
+            "linkApli": "#slk2024",
+            "price": 16.00,
+            "qtd": 1
+        },
+        {
+            "nome": "Estabilizador",
+            "image": "photos/sist-direcao/estabilizadores/slk2025.png",
+            "marca": "Solopes",
+            "info": "SLK-2025",
+            "lados": "L.E",
+            "linha": "Fiat",
+            "linhaCode": "fiat",
+            "code": 3769,
+            "linkApli": "#slk2025",
+            "price": 16.00,
+            "qtd": 1
+        },
+        {
+            "nome": "Estabilizador",
+            "image": "photos/sist-direcao/estabilizadores/mb483.png",
+            "marca": "Mobensani",
+            "info": "MB-483",
+            "lados": "Ponta-Barra",
+            "linha": "Fiat",
+            "linhaCode": "fiat",
+            "code": 3753,
+            "linkApli": "#mb483",
+            "price": 34.00,
+            "qtd": 1
+        },
+        {
+            "nome": "Estabilizador",
+            "image": "photos/sist-direcao/estabilizadores/kitcia40086.png",
+            "marca": "KitCia",
+            "info": "40086",
+            "lados": "Externo",
+            "linha": "Volkswagen",
+            "linhaCode": "vws",
+            "code": "Sem",
+            "linkApli": "#kitcia40086",
+            "price": 0,
+            "qtd": 1
+        },
+        {
+            "nome": "Estabilizador",
+            "image": "photos/sist-direcao/estabilizadores/brokits1017.png",
+            "marca": "BroKits",
+            "info": "BroKits-1017",
+            "lados": "Interno",
+            "linha": "Volkswagen",
+            "linhaCode": "vws",
+            "code": "sem",
+            "linkApli": "#brokits1017",
+            "price": 0,
+            "qtd": 1
+        },
+        
+        {
+            "nome": "Estabilizador",
+            "image": "",
+            "marca": "",
+            "info": "",
+            "lados": "",
+            "linha": "Volkswagen",
+            "linhaCode": "vws",
+            "code": 1241,
+            "linkApli": "#",
+            "price": 0,
+            "qtd": 1
+        },
+        {
+            "nome": "Estabilizador",
+            "image": "",
+            "marca": "",
+            "info": "",
+            "lados": "",
+            "linha": "GM",
+            "linhaCode": "gm",
+            "code": 1241,
+            "linkApli": "#",
+            "price": 0,
+            "qtd": 1
+        }
     ]
 
 
