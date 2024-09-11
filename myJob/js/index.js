@@ -90,6 +90,25 @@ document.addEventListener('DOMContentLoaded', () =>{
 })
 
 
+//  ESTRUTURA JSON
+// {
+//     "nome": "",
+//     "Lado": "",
+//     "image": "",
+//     "marca": "",
+//     "info": "",
+//     "linha": "",
+//     "linhaCode": "",
+//     "code": "",
+//     "linkApli": "#",
+//     "price": 0,
+//     "qtd": 1
+// },
+
+
+
+
+
 
 // funcao das sessoes da pagina
 function mostrarInfoFastSearch(){
