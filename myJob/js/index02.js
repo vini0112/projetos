@@ -3,41 +3,45 @@
 document.addEventListener('DOMContentLoaded', () =>{
     // SESSAO 00
 
-    // adding oleos
     addCardsOleo()
 
-    // adding batteries
     addBattery()
 
 
     // SESSAO 01
 
-    // adding fluido
     addFluidos()
 
-    // adding oleo 2
     addOleo2()
 
     // SESSAO 02
 
-    // adding filtro Oleo Simples
     addFiltroOleoSimp()
 
-    // adding filtro oleo pesado
     addFiltroOleoPesado()
 
 
     // SESSAO O3
 
-    // adding filtro combust simples
     filtroCombustSimples()
 
-    // adding filtro combust pesado
     filtroCombustPesado()
 
 
     // SESSAO 04
+
     filtroArMotor()
+
+    filtroArCabine()
+
+    mangotesAr()
+
+
+    // SESSAO 05
+
+    terminaisDirecao()
+
+    barraAxiais()
 })
 
 // API REQUEST
@@ -1180,6 +1184,10 @@ function combustPesados(){
 
 // SESSAO 04
 
+let rowFiltroArMotor = document.querySelector('#row-filtros-ar-motor')
+let rowFiltroArCabine = document.querySelector('#row-filtros-ar-cabine')
+let rowMangotesAr = document.querySelector('#row-mangotesAr')
+
 
 // adding filtro de Ar motor
 async function filtroArMotor(){
@@ -1187,19 +1195,562 @@ async function filtroArMotor(){
     const dado = await gettingApi()
     const dados = dado.filtroArMotor
     // console.log(dados)
+
+
+    for(let i = 0;i < dados.length;i++){
+
+        let newDiv = document.createElement('div')
+        newDiv.classList.add('col-md-3')
+        newDiv.classList.add('card')
+        newDiv.classList.add('filtro-ar-motor')
+        newDiv.classList.add(dados[i].linhaCode)
+
+        if(dados[i].qtd == 0){
+            newDiv.classList.add('acabou')
+        }
+
+
+        newDiv.innerHTML = `
+        <img src="${dados[i].image}" alt="${dados[i].info}" class="img-fluid">
+        <div class="card-body">
+            <h5 class="card-title">${dados[i].nome}</h5>
+            <h5 class="card-title">${dados[i].info}</h5>
+            <p class="card-text">Linha ${dados[i].linha}</p>
+
+            <button type="button" class="padraoBtn" data-bs-toggle="modal" data-bs-target="${dados[i].linkApli}">Aplicações</button>
+        </div>
+        
+        `
+
+
+        rowFiltroArMotor.appendChild(newDiv)
+
+    }
+
+    arMotor()
+}
+
+// funcao filtrar pesquisa dos filtros de ar motor
+function arMotor(){
+    let allBtns = document.querySelectorAll("#all-btns-filtro-ar-motor button")
+    //console.log(allBtnsFiltroMotor)
+
+    let allCards = document.querySelectorAll('#row-filtros-ar-motor .filtro-ar-motor')
+    //console.log(allCards)
+
+    // BTN TODOS
+    allBtns[0].addEventListener('click', () =>{
+        for(let c = 0;c < allCards.length;c++){
+            allCards[c].style.display='block'
+        }
+
+        for(let b = 0;b < allBtns.length;b++){
+            if(allBtns[0]){
+                allBtns[b].classList.remove('active')
+                allBtns[0].classList.add('active')
+            }
+        }
+    })
+
+    // BTN GM
+    allBtns[1].addEventListener('click', () =>{
+        for(let c = 0;c < allCards.length;c++){
+            allCards[c].style.display='block'
+
+            if(!(allCards[c].classList.contains('gm'))){
+                allCards[c].style.display='none'
+            }
+        } 
+
+        for(let b = 0;b < allBtns.length;b++){
+            if(allBtns[1]){
+                allBtns[b].classList.remove('active')
+                allBtns[1].classList.add('active')
+            }
+        }
+    })
+
+    // BTN VWS
+    allBtns[2].addEventListener('click', () =>{
+        for(let c = 0;c < allCards.length;c++){
+            allCards[c].style.display='block'
+
+            if(!(allCards[c].classList.contains('vws'))){
+                allCards[c].style.display='none'
+            }
+        } 
+
+        for(let b = 0;b < allBtns.length;b++){
+            if(allBtns[2]){
+                allBtns[b].classList.remove('active')
+                allBtns[2].classList.add('active')
+            }
+        }
+    })
+
+    // BTN FIAT
+    allBtns[3].addEventListener('click', () =>{
+        for(let c = 0;c < allCards.length;c++){
+            allCards[c].style.display='block'
+
+            if(!(allCards[c].classList.contains('fiat'))){
+                allCards[c].style.display='none'
+            }
+        } 
+
+        for(let b = 0;b < allBtns.length;b++){
+            if(allBtns[3]){
+                allBtns[b].classList.remove('active')
+                allBtns[3].classList.add('active')
+            }
+        }
+    })
+
+    // BTN FORD
+    allBtns[4].addEventListener('click', () =>{
+        for(let c = 0;c < allCards.length;c++){
+            allCards[c].style.display='block'
+
+            if(!(allCards[c].classList.contains('ford'))){
+                allCards[c].style.display='none'
+            }
+        } 
+
+        for(let b = 0;b < allBtns.length;b++){
+            if(allBtns[4]){
+                allBtns[b].classList.remove('active')
+                allBtns[4].classList.add('active')
+            }
+        }
+    })
+
+    // BTN RENAULT
+    allBtns[5].addEventListener('click', () =>{
+        for(let c = 0;c < allCards.length;c++){
+            allCards[c].style.display='block'
+
+            if(!(allCards[c].classList.contains('renault'))){
+                allCards[c].style.display='none'
+            }
+        } 
+
+        for(let b = 0;b < allBtns.length;b++){
+            if(allBtns[5]){
+                allBtns[b].classList.remove('active')
+                allBtns[5].classList.add('active')
+            }
+        }
+    })
+
+    // BTN mecedez
+    allBtns[6].addEventListener('click', () =>{
+        for(let c = 0;c < allCards.length;c++){
+            allCards[c].style.display='block'
+
+            if(!(allCards[c].classList.contains('benz'))){
+                allCards[c].style.display='none'
+            }
+        } 
+
+        for(let b = 0;b < allBtns.length;b++){
+            if(allBtns[6]){
+                allBtns[b].classList.remove('active')
+                allBtns[6].classList.add('active')
+            }
+        }
+    })
+
+}
+
+
+
+// adding filtro de ar cabine
+async function filtroArCabine(){
+
+    const dado = await gettingApi()
+    const dados = dado.filtroArCabine
+    // console.log(dados)
+
+
+
+    for(let i = 0;i < dados.length;i++){
+
+        let newDiv = document.createElement('div')
+        newDiv.classList.add('col-md-3')
+        newDiv.classList.add('card')
+        newDiv.classList.add(dados[i].linhaCode)
+
+        if(dados[i].qtd == 0){
+            newDiv.classList.add('acabou')
+        }
+
+
+        newDiv.innerHTML = `
+        <img src="${dados[i].image}" alt="${dados[i].info}" class="img-fluid">
+        <div class="card-body">
+            <h5 class="card-title">${dados[i].nome}</h5>
+            <h5 class="card-title">${dados[i].info}</h5>
+            <p class="card-text">Linha ${dados[i].linha}</p>
+
+            <button type="button" class="padraoBtn" data-bs-toggle="modal" data-bs-target="${dados[i].linkApli}">Aplicações</button>
+        </div>
+        
+        `
+
+        rowFiltroArCabine.appendChild(newDiv)
+
+    }
+
+
+
+
+}
+
+
+// adding mangotes de ar
+async function mangotesAr(){
+
+    const dado = await gettingApi()
+    const dados = dado.mangoteAR
+    // console.log(dados)
+
+
+
+    for(let i = 0;i < dados.length;i++){
+
+        let newDiv = document.createElement('div')
+        newDiv.classList.add('col-md-3')
+        newDiv.classList.add('card')
+        newDiv.classList.add(dados[i].linhaCode)
+
+        if(dados[i].qtd == 0){
+            newDiv.classList.add('acabou')
+        }
+
+
+        newDiv.innerHTML = `
+        <img src="${dados[i].image}" alt="${dados[i].info}" class="img-fluid">
+        <div class="card-body">
+            <h5 class="card-title">${dados[i].nome}</h5>
+            <h5 class="card-title">${dados[i].info}</h5>
+            <p class="card-text">Linha ${dados[i].linha}</p>
+
+            <button type="button" class="padraoBtn" data-bs-toggle="modal" data-bs-target="${dados[i].linkApli}">Aplicações</button>
+        </div>
+        
+        `
+
+        rowMangotesAr.appendChild(newDiv)
+
+    }
 }
 
 
 
 
+// SESSAO 05
 
-{/* <div class="col-md-3 card filtro-ar-motor fiat">
-<img src="photos/filtros/ar/arl4150.jpg" alt="arl4150" class="img-fluid">
+let rowTerminaisDir = document.querySelector('#row-terminais')
+let rowBarraAxiais = document.querySelector('#row-axiais')
+
+
+// adding terminais direção
+async function terminaisDirecao(){
+
+    const dado = await gettingApi()
+    const dados = dado.terminaisDirecao
+    // console.log(dados)
+
+    for(let i = 0;i < dados.length;i++){
+
+        let newDiv = document.createElement('div')
+        newDiv.classList.add('col-md-3')
+        newDiv.classList.add('card')
+        newDiv.classList.add(dados[i].linhaCode)
+
+        if(dados[i].qtd == 0){
+            newDiv.classList.add('acabou')
+        }
+
+
+        newDiv.innerHTML = `
+        <img src="${dados[i].image}" alt="${dados[i].info}" class="img-fluid">
+        <div class="card-body">
+            <h5 class="card-title">${dados[i].nome}</h5>
+            <h5 class="card-title">${dados[i].info}</h5>
+            <p class="card-text">Linha ${dados[i].linha}</p>
+
+            <button type="button" class="padraoBtn" data-bs-toggle="modal" data-bs-target="${dados[i].linkApli}">Aplicações</button>
+        </div>
+        
+        `
+
+        rowTerminaisDir.appendChild(newDiv)
+
+    }
+
+    filtroTerminais()
+}
+
+// funcao filtrar pesquisa dos terminais
+function filtroTerminais(){
+
+    let allBtns = document.querySelectorAll("#btns-terminais button")
+    //console.log(allBtns)
+
+    let allCards = document.querySelectorAll('#row-terminais .card')
+    //console.log(allCards)
+
+     // BTN TODOS
+    allBtns[0].addEventListener('click', () =>{
+        for(let c = 0;c < allCards.length;c++){
+            allCards[c].style.display='block'
+        }
+
+        for(let b = 0;b < allBtns.length;b++){
+            if(allBtns[0]){
+                allBtns[b].classList.remove('active')
+                allBtns[0].classList.add('active')
+            }
+        }
+    })
+
+    // BTN fiat
+    allBtns[1].addEventListener('click', () =>{
+        for(let c = 0;c < allCards.length;c++){
+            allCards[c].style.display='block'
+
+            if(!(allCards[c].classList.contains('fiat'))){
+                allCards[c].style.display='none'
+            }
+        } 
+
+        for(let b = 0;b < allBtns.length;b++){
+            if(allBtns[1]){
+                allBtns[b].classList.remove('active')
+                allBtns[1].classList.add('active')
+            }
+        }
+    })
+
+    // BTN vws
+    allBtns[2].addEventListener('click', () =>{
+        for(let c = 0;c < allCards.length;c++){
+            allCards[c].style.display='block'
+
+            if(!(allCards[c].classList.contains('vws'))){
+                allCards[c].style.display='none'
+            }
+        } 
+
+        for(let b = 0;b < allBtns.length;b++){
+            if(allBtns[2]){
+                allBtns[b].classList.remove('active')
+                allBtns[2].classList.add('active')
+            }
+        }
+    })
+
+    // BTN GM
+    allBtns[3].addEventListener('click', () =>{
+        for(let c = 0;c < allCards.length;c++){
+            allCards[c].style.display='block'
+
+            if(!(allCards[c].classList.contains('gm'))){
+                allCards[c].style.display='none'
+            }
+        } 
+
+        for(let b = 0;b < allBtns.length;b++){
+            if(allBtns[3]){
+                allBtns[b].classList.remove('active')
+                allBtns[3].classList.add('active')
+            }
+        }
+    })
+
+    // BTN nissan
+    allBtns[4].addEventListener('click', () =>{
+        for(let c = 0;c < allCards.length;c++){
+            allCards[c].style.display='block'
+
+            if(!(allCards[c].classList.contains('nissan'))){
+                allCards[c].style.display='none'
+            }
+        } 
+
+        for(let b = 0;b < allBtns.length;b++){
+            if(allBtns[4]){
+                allBtns[b].classList.remove('active')
+                allBtns[4].classList.add('active')
+            }
+        }
+    })
+
+
+
+}
+
+
+
+
+// adding barra axiais
+async function barraAxiais(){
+
+    const dado = await gettingApi()
+    const dados = dado.barrasAxiais
+    // console.log(dados)
+
+
+    for(let i = 0;i < dados.length;i++){
+
+        let newDiv = document.createElement('div')
+        newDiv.classList.add('col-md-3')
+        newDiv.classList.add('card')
+        newDiv.classList.add(dados[i].linhaCode)
+
+        if(dados[i].qtd == 0){
+            newDiv.classList.add('acabou')
+        }
+
+        if(dados[i].secundLineCode){
+            newDiv.classList.add(dados[i].secundLineCode)
+        }
+
+
+        newDiv.innerHTML = `
+        <img src="${dados[i].image}" alt="${dados[i].info}" class="img-fluid">
+        <div class="card-body">
+            <h5 class="card-title">${dados[i].nome}</h5>
+            <h5 class="card-title">${dados[i].info}</h5>
+            <p class="card-text">${dados[i].sistema}</p>
+            <p class="card-text">Linha ${dados[i].linha}</p>
+
+            <button type="button" class="padraoBtn" data-bs-toggle="modal" data-bs-target="${dados[i].linkApli}">Aplicações</button>
+        </div>
+        
+        `
+
+        rowBarraAxiais.appendChild(newDiv)
+
+    }
+    filtroBarras()
+
+}
+
+// fucao filtrando pesquisa das barras axiais
+function filtroBarras(){
+
+    let allBtns = document.querySelectorAll("#row-axiais #sistema-btns button")
+    //console.log(allBtns)
+
+    let allCards = document.querySelectorAll('#row-axiais .card')
+    //console.log(allCards)
+
+    
+
+    // BTN TODOS
+    allBtns[0].addEventListener('click', () =>{
+        for(let c = 0;c < allCards.length;c++){
+            allCards[c].style.display='block'
+        }
+
+        for(let b = 0;b < allBtns.length;b++){
+            if(allBtns[0]){
+                allBtns[b].classList.remove('active')
+                allBtns[0].classList.add('active')
+            }
+        }
+    })
+
+    // BTN fiat
+    allBtns[1].addEventListener('click', () =>{
+        for(let c = 0;c < allCards.length;c++){
+            allCards[c].style.display='block'
+
+            if(!(allCards[c].classList.contains('fiat'))){
+                allCards[c].style.display='none'
+                
+            }
+        } 
+
+        for(let b = 0;b < allBtns.length;b++){
+            if(allBtns[1]){
+                allBtns[b].classList.remove('active')
+                allBtns[1].classList.add('active')
+            }
+        }
+    })
+
+    // BTN vws
+    allBtns[2].addEventListener('click', () =>{
+        for(let c = 0;c < allCards.length;c++){
+            allCards[c].style.display='block'
+
+            if(!(allCards[c].classList.contains('vws'))){
+                allCards[c].style.display='none'
+            }
+        } 
+
+        for(let b = 0;b < allBtns.length;b++){
+            if(allBtns[2]){
+                allBtns[b].classList.remove('active')
+                allBtns[2].classList.add('active')
+            }
+        }
+    })
+
+    // BTN GM
+    allBtns[3].addEventListener('click', () =>{
+        for(let c = 0;c < allCards.length;c++){
+            allCards[c].style.display='block'
+
+            if(!(allCards[c].classList.contains('gm'))){
+                allCards[c].style.display='none'
+            }
+        } 
+
+        for(let b = 0;b < allBtns.length;b++){
+            if(allBtns[3]){
+                allBtns[b].classList.remove('active')
+                allBtns[3].classList.add('active')
+            }
+        }
+    })
+
+    // BTN Ford
+    allBtns[4].addEventListener('click', () =>{
+        for(let c = 0;c < allCards.length;c++){
+            allCards[c].style.display='block'
+
+            if(!(allCards[c].classList.contains('ford'))){
+                allCards[c].style.display='none'
+            }
+        } 
+
+        for(let b = 0;b < allBtns.length;b++){
+            if(allBtns[4]){
+                allBtns[b].classList.remove('active')
+                allBtns[4].classList.add('active')
+            }
+        }
+
+    })
+}
+
+
+
+
+{/* <div class="col-md-3 card fiat">
+<img src="photos/sist-direcao/barras/axial63542.png" alt="axial63542" class="img-fluid">
 <div class="card-body">
-    <h5 class="card-title">Filtro de Ar</h5>
-    <h5 class="card-title">ARL-4150</h5>
+    <h5 class="card-title">Barra Axial</h5>
+    <h5 class="card-title">63542</h5>
+    <p class="card-text">Sistema Hidráulico</p>
     <p class="card-text">Linha Fiat</p>
 
-    <button type="button" class="padraoBtn" data-bs-toggle="modal" data-bs-target="#arl4150">Aplicações</button>
+    <button type="button" class="padraoBtn" data-bs-toggle="modal" data-bs-target="#63542">Aplicações</button>
 </div>
 </div> */}
+
+
