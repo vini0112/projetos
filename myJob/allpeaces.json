@@ -1731,6 +1731,63 @@
             "qtd": 1
         }
 
+    ],
+
+
+    "amortecedores": [
+        {
+            "nome": "Amortecedor",
+            "position": "Tras.",
+            "image": "photos/sist-suspensao/amortecedor/ac30728.png",
+            "marca": "NAKATA",
+            "info": "AC-30728",
+            "linha": "GM",
+            "linhaCode": "gm",
+            "code": 128,
+            "linkApli": "#ac30728",
+            "price": 132,
+            "qtd": 1
+        },
+
+        {
+            "nome": "Amortecedor",
+            "position": "Diant.",
+            "image": "photos/sist-suspensao/amortecedor/ct30826.png",
+            "marca": "NAKATA",
+            "info": "CT-30826",
+            "linha": "Volkswagen",
+            "linhaCode": "vws",
+            "code": 699,
+            "linkApli": "#ct30826",
+            "price": 130,
+            "qtd": 1
+        },
+        {
+            "nome": "Amortecedor",
+            "position": "Diant.",
+            "image": "photos/sist-suspensao/amortecedor/hg33093.png",
+            "marca": "NAKATA",
+            "info": "CT",
+            "linha": "",
+            "linhaCode": "",
+            "code": 3719,
+            "linkApli": "#hg33093",
+            "price": 275.80,
+            "qtd": 1
+        },
+        {
+            "nome": "Amortecedor",
+            "position": "Diant.",
+            "image": "",
+            "marca": "NAKATA",
+            "info": "",
+            "linha": "",
+            "linhaCode": "",
+            "code": "Sem",
+            "linkApli": "#",
+            "price": 0,
+            "qtd": 1
+        }
     ]
 
 
