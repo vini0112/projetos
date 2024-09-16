@@ -1222,11 +1222,10 @@
 
     "estabilizadores": [
         {
-            "nome": "Estabilizador",
+            "nome": "Estabilizador Interno",
             "image": "photos/sist-direcao/estabilizadores/amortex35564.png",
             "marca": "Amortex",
             "info": "35564",
-            "lados": "Interno",
             "linha": "Fiat",
             "linhaCode": "fiat",
             "code": 3765,
@@ -1235,11 +1234,10 @@
             "qtd": 1
         },
         {
-            "nome": "Estabilizador",
+            "nome": "Estabilizador Externo",
             "image": "photos/sist-direcao/estabilizadores/amortex35563.png",
             "marca": "Amortex",
             "info": "35563",
-            "lados": "Externo",
             "linha": "Fiat",
             "linhaCode": "fiat",
             "code": 3766,
@@ -1248,11 +1246,10 @@
             "qtd": 1
         },
         {
-            "nome": "Estabilizador",
+            "nome": "Estabilizador L.D",
             "image": "photos/sist-direcao/estabilizadores/slk2031.png",
             "marca": "Solopes",
             "info": "SLK-2031",
-            "lados": "L.D",
             "linha": "Fiat",
             "linhaCode": "fiat",
             "code": 1518,
@@ -1261,11 +1258,10 @@
             "qtd": 1
         },
         {
-            "nome": "Estabilizador",
+            "nome": "Estabilizador L.E",
             "image": "photos/sist-direcao/estabilizadores/slk2030.png",
             "marca": "Solopes",
             "info": "SLK-2030",
-            "lados": "L.E",
             "linha": "Fiat",
             "linhaCode": "fiat",
             "code": 1518,
@@ -1274,11 +1270,10 @@
             "qtd": 1
         },
         {
-            "nome": "Estabilizador",
+            "nome": "Estabilizador L.D",
             "image": "photos/sist-direcao/estabilizadores/slk2024.png",
             "marca": "Solopes",
             "info": "SKL-2024",
-            "lados": "L.D",
             "linha": "Fiat",
             "linhaCode": "fiat",
             "code": 3769,
@@ -1287,11 +1282,10 @@
             "qtd": 1
         },
         {
-            "nome": "Estabilizador",
+            "nome": "Estabilizador L.E",
             "image": "photos/sist-direcao/estabilizadores/slk2025.png",
             "marca": "Solopes",
             "info": "SLK-2025",
-            "lados": "L.E",
             "linha": "Fiat",
             "linhaCode": "fiat",
             "code": 3769,
@@ -1300,11 +1294,10 @@
             "qtd": 1
         },
         {
-            "nome": "Estabilizador",
+            "nome": "Estabilizador Ponta-Barra",
             "image": "photos/sist-direcao/estabilizadores/mb483.png",
             "marca": "Mobensani",
             "info": "MB-483",
-            "lados": "Ponta-Barra",
             "linha": "Fiat",
             "linhaCode": "fiat",
             "code": 3753,
@@ -1313,11 +1306,10 @@
             "qtd": 1
         },
         {
-            "nome": "Estabilizador",
+            "nome": "Estabilizador Externo",
             "image": "photos/sist-direcao/estabilizadores/kitcia40086.png",
             "marca": "KitCia",
             "info": "40086",
-            "lados": "Externo",
             "linha": "Volkswagen",
             "linhaCode": "vws",
             "code": "Sem",
@@ -1326,11 +1318,10 @@
             "qtd": 1
         },
         {
-            "nome": "Estabilizador",
+            "nome": "Estabilizador Interno",
             "image": "photos/sist-direcao/estabilizadores/brokits1017.png",
             "marca": "BroKits",
             "info": "BroKits-1017",
-            "lados": "Interno",
             "linha": "Volkswagen",
             "linhaCode": "vws",
             "code": "sem",
@@ -1340,11 +1331,10 @@
         },
         
         {
-            "nome": "Estabilizador",
+            "nome": "Estabilizador Interno",
             "image": "photos/sist-direcao/estabilizadores/prokitPassat.png",
             "marca": "BroKits",
             "info": "BroKits-Passat",
-            "lados": "Interno",
             "linha": "Volkswagen",
             "linhaCode": "vws",
             "code": "Sem",
@@ -1353,11 +1343,10 @@
             "qtd": 1
         },
         {
-            "nome": "Estabilizador",
+            "nome": "Estabilizador Interno",
             "image": "photos/sist-direcao/estabilizadores/kato82020275.png",
             "marca": "Kato",
             "info": "82020275",
-            "lados": "Interno",
             "linha": "GM",
             "linhaCode": "gm",
             "code": "Sem",
@@ -1370,8 +1359,7 @@
 
     "BuchaCaixaDirecao": [
         {
-            "nome": "Bucha",
-            "moreInfo": "Caixa-Direção",
+            "nome": "Bucha Caixa Direção",
             "image": "photos/sist-direcao/buchas-direcao/brk50332.png",
             "marca": "BRK",
             "info": "BRK-50332",
@@ -1383,11 +1371,10 @@
             "qtd": 1
         },
         {
-            "nome": "Bucha",
-            "moreInfo": "Caixa-Direção",
+            "nome": "Bucha Caixa Direção",
             "image": "photos/sist-direcao/buchas-direcao/brk50347.png",
             "marca": "BRK",
-            "info": "brk-50347",
+            "info": "BRK-50347",
             "linha": "GM",
             "linhaCode": "gm",
             "code": "sem",
@@ -1396,8 +1383,7 @@
             "qtd": 1
         },
         {
-            "nome": "Bucha",
-            "moreInfo": "Caixa-Direção",
+            "nome": "Bucha Caixa Direção",
             "image": "photos/sist-direcao/buchas-direcao/brk50331.png",
             "marca": "BRK",
             "info": "BRK-50331",
@@ -1409,8 +1395,7 @@
             "qtd": 1
         },
         {
-            "nome": "Bucha",
-            "moreInfo": "Caixa-Direção",
+            "nome": "Bucha Caixa Direção",
             "image": "photos/sist-direcao/buchas-direcao/borrachaChevette.png",
             "marca": "ProKit",
             "info": "Borracha-Chevette",

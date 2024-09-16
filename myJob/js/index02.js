@@ -42,6 +42,10 @@ document.addEventListener('DOMContentLoaded', () =>{
     terminaisDirecao()
 
     barraAxiais()
+
+    estabilazadores()
+
+    buchaCaixaDirecao()
 })
 
 // API REQUEST
@@ -1446,12 +1450,12 @@ async function mangotesAr(){
 }
 
 
-
-
 // SESSAO 05
 
 let rowTerminaisDir = document.querySelector('#row-terminais')
 let rowBarraAxiais = document.querySelector('#row-axiais')
+let rowEstabilizadores = document.querySelector('#row-estabilizadores')
+let rowBuchaCaixaDir = document.querySelector('#row-buchas-reparos')
 
 
 // adding terminais direção
@@ -1740,17 +1744,189 @@ function filtroBarras(){
 
 
 
+// adding estabilizadores
+async function estabilazadores(){
 
-{/* <div class="col-md-3 card fiat">
-<img src="photos/sist-direcao/barras/axial63542.png" alt="axial63542" class="img-fluid">
-<div class="card-body">
-    <h5 class="card-title">Barra Axial</h5>
-    <h5 class="card-title">63542</h5>
-    <p class="card-text">Sistema Hidráulico</p>
-    <p class="card-text">Linha Fiat</p>
+    const dado = await gettingApi()
+    const dados = dado.estabilizadores
+    // console.log(dados)
 
-    <button type="button" class="padraoBtn" data-bs-toggle="modal" data-bs-target="#63542">Aplicações</button>
-</div>
-</div> */}
+
+
+    for(let i = 0;i < dados.length;i++){
+
+        let newDiv = document.createElement('div')
+        newDiv.classList.add('col-md-3')
+        newDiv.classList.add('card')
+        newDiv.classList.add(dados[i].linhaCode)
+
+        if(dados[i].qtd == 0){
+            newDiv.classList.add('acabou')
+        }
+
+        // if(dados[i].secundLineCode){
+        //     newDiv.classList.add(dados[i].secundLineCode)
+        // }
+
+
+        newDiv.innerHTML = `
+        <img src="${dados[i].image}" alt="${dados[i].info}" class="img-fluid">
+        <div class="card-body">
+            <h5 class="card-title">${dados[i].nome}</h5>
+            <h5 class="card-title">${dados[i].info}</h5>
+            <p class="card-text">Linha ${dados[i].linha}</p>
+
+            <button type="button" class="padraoBtn" data-bs-toggle="modal" data-bs-target="${dados[i].linkApli}">Aplicações</button>
+        </div>
+        
+        `
+
+        rowEstabilizadores.appendChild(newDiv)
+
+    }
+
+    filtroEstabili()
+}
+
+// fucao filtrando pesquisa dos estabilizadores
+function filtroEstabili(){
+
+    let allBtns = document.querySelectorAll("#row-estabilizadores #btn-estabili button")
+    //console.log(allBtns)
+
+    let allCards = document.querySelectorAll('#row-estabilizadores .card')
+    //console.log(allCards)
+
+
+     // BTN TODOS
+    allBtns[0].addEventListener('click', () =>{
+        for(let c = 0;c < allCards.length;c++){
+            allCards[c].style.display='block'
+        }
+
+        for(let b = 0;b < allBtns.length;b++){
+            if(allBtns[0]){
+                allBtns[b].classList.remove('active')
+                allBtns[0].classList.add('active')
+            }
+        }
+    })
+
+    // BTN fiat
+    allBtns[1].addEventListener('click', () =>{
+        for(let c = 0;c < allCards.length;c++){
+            allCards[c].style.display='block'
+
+            if(!(allCards[c].classList.contains('fiat'))){
+                allCards[c].style.display='none'
+                
+            }
+        } 
+
+        for(let b = 0;b < allBtns.length;b++){
+            if(allBtns[1]){
+                allBtns[b].classList.remove('active')
+                allBtns[1].classList.add('active')
+            }
+        }
+    })
+
+    // BTN vws
+    allBtns[2].addEventListener('click', () =>{
+        for(let c = 0;c < allCards.length;c++){
+            allCards[c].style.display='block'
+
+            if(!(allCards[c].classList.contains('vws'))){
+                allCards[c].style.display='none'
+            }
+        } 
+
+        for(let b = 0;b < allBtns.length;b++){
+            if(allBtns[2]){
+                allBtns[b].classList.remove('active')
+                allBtns[2].classList.add('active')
+            }
+        }
+    })
+
+    // BTN GM
+    allBtns[3].addEventListener('click', () =>{
+        for(let c = 0;c < allCards.length;c++){
+            allCards[c].style.display='block'
+
+            if(!(allCards[c].classList.contains('gm'))){
+                allCards[c].style.display='none'
+            }
+        } 
+
+        for(let b = 0;b < allBtns.length;b++){
+            if(allBtns[3]){
+                allBtns[b].classList.remove('active')
+                allBtns[3].classList.add('active')
+            }
+        }
+    })
+}
+
+
+
+// adding buchas caixa-direçao
+async function buchaCaixaDirecao(){
+
+    const dado = await gettingApi()
+    const dados = dado.BuchaCaixaDirecao
+    // console.log(dados)
+
+
+    for(let i = 0;i < dados.length;i++){
+
+        let newDiv = document.createElement('div')
+        newDiv.classList.add('col-md-3')
+        newDiv.classList.add('card')
+        newDiv.classList.add(dados[i].linhaCode)
+
+        if(dados[i].qtd == 0){
+            newDiv.classList.add('acabou')
+        }
+
+        // if(dados[i].secundLineCode){
+        //     newDiv.classList.add(dados[i].secundLineCode)
+        // }
+
+
+        newDiv.innerHTML = `
+        <img src="${dados[i].image}" alt="${dados[i].info}" class="img-fluid">
+        <div class="card-body">
+            <h5 class="card-title">${dados[i].nome}</h5>
+            <h5 class="card-title">${dados[i].info}</h5>
+            <p class="card-text">Linha ${dados[i].linha}</p>
+
+            <button type="button" class="padraoBtn" data-bs-toggle="modal" data-bs-target="${dados[i].linkApli}">Aplicações</button>
+        </div>
+        
+        `
+
+        rowBuchaCaixaDir.appendChild(newDiv)
+
+    }
+}
+
+
+// SESSAO 06
+
+let rowBatedores = document.querySelector('#row-batedores')
+let rowPivos = document.querySelector('#row-pivos')
+let rowAmortecedores = document.querySelector('#row-amortecedores')
+let rowBuchas = document.querySelector('#row-buchas')
+let rowCoxinsAmort = document.querySelector('#row-coxins-amort')
+let rowBieleta = document.querySelector('#row-bieleta')
+
+
+
+
+
+
+
+
 
 
