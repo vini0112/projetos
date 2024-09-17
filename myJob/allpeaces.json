@@ -2070,21 +2070,506 @@
 
 
 
-    "next": [
+    "coxinsAmort": [
         
         
         {
-            "nome": "Bucha Bandeja",
+            "nome": "Coxim",
+            "position": "Diant.",
+            "lados": "L.E",
+            "image": "photos/sist-suspensao/coxins/axios82491441.png",
+            "marca": "Axios",
+            "info": "82491441",
+            "linha": "Fiat",
+            "linhaCode": "fiat",
+            "code": 3630,
+            "linkApli": "#axios82491441",
+            "price": 175,
+            "qtd": 1
+        },
+        {
+            "nome": "Coxim Motor",
+            "position": "Diant.",
+            "lados": "L.D/L.E",
+            "image": "photos/sist-suspensao/coxins/mb434.png",
+            "marca": "Mobensani",
+            "info": "MB-434",
+            "linha": "Fiat",
+            "linhaCode": "fiat",
+            "code": 3770,
+            "linkApli": "#mb434",
+            "price": 90.96,
+            "qtd": 1
+        },
+        {
+            "nome": "Coxim Motor",
+            "position": "Diant.",
+            "lados": "L.D",
+            "image": "photos/sist-suspensao/coxins/mb4440.png",
+            "marca": "Mobensani",
+            "info": "MB-4440",
+            "linha": "Fiat",
+            "linhaCode": "fiat",
+            "code": 1908,
+            "linkApli": "#mb4440",
+            "price": 277.58,
+            "qtd": 1
+        },
+        {
+            "nome": "Coxim",
             "position": "Tras.",
-            "image": "",
-            "marca": "",
-            "info": "",
-            "linha": "",
-            "linhaCode": "",
-            "code": "",
-            "linkApli": "#",
+            "lados": "L.D/L.E",
+            "image": "photos/sist-suspensao/coxins/br13504301688.png",
+            "marca": "Axios",
+            "info": "BR13504301688",
+            "linha": "Ford",
+            "linhaCode": "ford",
+            "code": 2646,
+            "linkApli": "#br13504301688",
+            "price": 70.82,
+            "qtd": 1
+        },
+        {
+            "nome": "Coxim Câmbio",
+            "position": "Diant.",
+            "image": "photos/sist-suspensao/coxins/sampel3027.png",
+            "marca": "Sampel",
+            "info": "Sampel-3027",
+            "linha": "GM",
+            "linhaCode": "gm",
+            "code": "sem",
+            "linkApli": "#sampel3027",
             "price": 0,
             "qtd": 1
+        }
+        
+        
+    ],
+
+
+
+    "bieletas": [
+        {
+            "nome": "Bieleta",
+            "image": "photos/sist-suspensao/bieletas/kbt0314.png",
+            "marca": "Perfect",
+            "info": "KBT-0314",
+            "linha": "GM",
+            "linhaCode": "gm",
+            "code": 3169,
+            "linkApli": "#kbt0314",
+            "price": 40.00,
+            "qtd": 1
+        },
+        {
+            "nome": "Bieleta",
+            "image": "photos/sist-suspensao/bieletas/btc04119.png",
+            "marca": "Cofap",
+            "info": "BTC-04119",
+            "linha": "GM",
+            "linhaCode": "gm",
+            "code": 3818,
+            "linkApli": "#btc04119",
+            "price": 71.00,
+            "qtd": 1
+        }
+        
+    ],
+
+
+    "pastilhaFreio": [
+        {
+            "nome": "Pastilha",
+            "position": "Diant.",
+            "image": "photos/freios/pastilhas/sna525.png",
+            "marca": "Speed-Break",
+            "info": "SNA-525/P-60",
+            "linha": "GM",
+            "linhaCode": "gm",
+            "code": 2023,
+            "linkApli": "#sna525",
+            "price": 36.77,
+            "qtd": 1
+            
+        },
+        {
+            "nome": "Pastilha",
+            "position": "Tras.",
+            "image": "photos/freios/pastilhas/p501.png",
+            "marca": "Lona-Flex",
+            "info": "P-501",
+            "linha": "Fiat/Citroen/Peugeot",
+            "linhaCode": "fiat",
+            "code": 429,
+            "linkApli": "#p501",
+            "price": 66.00,
+            "qtd": 1
+            
+        },
+        {
+            "nome": "Pastilha",
+            "position": "Tras.",
+            "image": "photos/freios/pastilhas/sna564.png",
+            "marca": "Speed-Break",
+            "info": "SNA-564",
+            "linha": "Fiat/Citroen/Peugeot",
+            "linhaCode": "fiat",
+            "code": 3003,
+            "linkApli": "#sna564",
+            "price": 71.61,
+            "qtd": 1
+            
+        },
+        {
+            "nome": "Pastilha",
+            "position": "Tras.",
+            "image": "photos/freios/pastilhas/lig564.png",
+            "marca": "LigMax",
+            "info": "LIG-564",
+            "linha": "Fiat/Citroen/Peugeot",
+            "linhaCode": "fiat",
+            "code": 372,
+            "linkApli": "#lig564",
+            "price": 66.00,
+            "qtd": 1
+            
+        },
+        {
+            "nome": "Pastilha",
+            "position": "Diant.",
+            "image": "photos/freios/pastilhas/pd652b.png",
+            "marca": "Frasle",
+            "info": "PD-652-B",
+            "linha": "Fiat/Citroen/Peugeot",
+            "linhaCode": "fiat",
+            "code": 3464,
+            "linkApli": "#pd652b",
+            "price": 270,
+            "qtd": 1
+            
+        },
+        {
+            "nome": "Pastilha",
+            "position": "Diant.",
+            "image": "photos/freios/pastilhas/sna540.png",
+            "marca": "Speed-Break",
+            "info": "SNA-540",
+            "linha": "Fiat",
+            "linhaCode": "fiat",
+            "code": 3783,
+            "linkApli": "#sna540",
+            "price": 100,
+            "qtd": 1
+            
+        },
+        {
+            "nome": "Pastilha",
+            "position": "Diant.",
+            "image": "photos/freios/pastilhas/P-68.png",
+            "marca": "Lona-Flex",
+            "info": "P-68",
+            "linha": "Fiat",
+            "linhaCode": "fiat",
+            "code": 433,
+            "linkApli": "#P-68",
+            "price": 65.00,
+            "qtd": 1
+            
+        },
+        {
+            "nome": "Pastilha",
+            "position": "Diant.",
+            "image": "photos/freios/pastilhas/sna393.png",
+            "marca": "Speed-Break",
+            "info": "SNA-393",
+            "linha": "GM",
+            "linhaCode": "gm",
+            "code": 2476,
+            "linkApli": "#sna393",
+            "price": 63.34,
+            "qtd": 1
+            
+        },
+        {
+            "nome": "Pastilha",
+            "position": "Diant.",
+            "image": "photos/freios/pastilhas/nkf1054p.png",
+            "marca": "NAKATA",
+            "info": "NKF-1054P",
+            "linha": "GM/Volkswagen",
+            "linhaCode": "gm",
+            "secundLineCode": "vws",
+            "code": 847,
+            "linkApli": "#nkf1054p",
+            "price": 61.00,
+            "qtd": 1
+            
+        },
+        {
+            "nome": "Pastilha",
+            "position": "Diant.",
+            "image": "photos/freios/pastilhas/sna134.png",
+            "marca": "Speed-Break",
+            "info": "SNA-134",
+            "linha": "GM/Ford",
+            "linhaCode": "gm",
+            "secundLineCode": "ford",
+            "code": 2814,
+            "linkApli": "#sna134",
+            "price": 71.63,
+            "qtd": 1
+            
+        },
+        {
+            "nome": "Pastilha",
+            "position": "Diant.",
+            "image": "photos/freios/pastilhas/P19C.png",
+            "marca": "Lona-Flex",
+            "info": "P-19-C",
+            "linha": "GM/Ford",
+            "linhaCode": "gm",
+            "secundLineCode": "ford",
+            "code": 2384,
+            "linkApli": "#P19C",
+            "price": 75.00,
+            "qtd": 1
+            
+        },
+        {
+            "nome": "Pastilha",
+            "position": "Diant.",
+            "image": "photos/freios/pastilhas/p58.png",
+            "marca": "Lona-Flex",
+            "info": "P-58",
+            "linha": "Volkswagen",
+            "linhaCode": "vws",
+            "code": 3671,
+            "linkApli": "#p58",
+            "price": 114,
+            "qtd": 1
+            
+        },
+        {
+            "nome": "Pastilha",
+            "position": "Diant.",
+            "image": "photos/freios/pastilhas/p1346.png",
+            "marca": "Lona-Flex",
+            "info": "P-1346",
+            "linha": "Volkswagen",
+            "linhaCode": "vws",
+            "code": 111,
+            "linkApli": "#p1346",
+            "price": 93.50,
+            "qtd": 1
+            
+        },
+        {
+            "nome": "Pastilha",
+            "position": "Tras.",
+            "image": "photos/freios/pastilhas/nkf1283p.png",
+            "marca": "NAKATA",
+            "info": "NKF-1283-P",
+            "linha": "Volkswagen",
+            "linhaCode": "vws",
+            "code": "Sem",
+            "linkApli": "#nkf1283p",
+            "price": 0,
+            "qtd": 1
+            
+        },
+        {
+            "nome": "Pastilha",
+            "position": "Diant.",
+            "image": "photos/freios/pastilhas/sna465.png",
+            "marca": "Speed-Break",
+            "info": "SNA-465",
+            "linha": "Ford",
+            "linhaCode": "ford",
+            "code": 2817,
+            "linkApli": "#sna465",
+            "price": 70.32,
+            "qtd": 1
+            
+        },
+        {
+            "nome": "Pastilha",
+            "position": "Diant.",
+            "image": "photos/freios/pastilhas/syl2235.png",
+            "marca": "SYL",
+            "info": "SYL-2235",
+            "linha": "Ford",
+            "linhaCode": "ford",
+            "code": 3286,
+            "linkApli": "#syl2235",
+            "price": 75.00,
+            "qtd": 0
+            
+        },
+        {
+            "nome": "Pastilha",
+            "position": "Diant.",
+            "image": "photos/freios/pastilhas/sna462.png",
+            "marca": "Speed-Break",
+            "info": "SNA-462",
+            "linha": "Renault",
+            "linhaCode": "renault",
+            "code": 2816,
+            "linkApli": "#sna462",
+            "price": 79.00,
+            "qtd": 1
+            
+        },
+        {
+            "nome": "Pastilha",
+            "position": "Diant.",
+            "image": "photos/freios/pastilhas/sna455.png",
+            "marca": "Speed-Break",
+            "info": "SNA-455",
+            "linha": "Renault",
+            "linhaCode": "renault",
+            "code": 2475,
+            "linkApli": "#sna455",
+            "price": 80.19,
+            "qtd": 1
+            
+        },
+        {
+            "nome": "Pastilha",
+            "position": "Diant.",
+            "image": "photos/freios/pastilhas/sna1319.png",
+            "marca": "Speed-Break",
+            "info": "SNA-1319",
+            "linha": "Toyota",
+            "linhaCode": "toyota",
+            "code": 2815,
+            "linkApli": "#sna1319",
+            "price": 57.00,
+            "qtd": 1
+            
+        },
+        {
+            "nome": "Pastilha",
+            "position": "Diant.",
+            "image": "photos/freios/pastilhas/SYL1387.png",
+            "marca": "SYL",
+            "info": "SYL-1387",
+            "linha": "Toyota",
+            "linhaCode": "toyota",
+            "code": "Sem",
+            "linkApli": "#syl1387",
+            "price": 0,
+            "qtd": 1
+            
+        }
+        
+    ],
+
+
+
+    "discosFreio": [
+        {
+            "nome": "Disco Freio",
+            "position": "Diant.",
+            "image": "photos/freios/discos/rpdi00420.png",
+            "marca": "TRW",
+            "info": "RPDI-00420",
+            "linha": "GM",
+            "linhaCode": "gm",
+            "code": 1618,
+            "linkApli": "#rpdi00420",
+            "price": 100,
+            "qtd": 1
+            
+        },
+        {
+            "nome": "Disco Freio",
+            "position": "Diant.",
+            "image": "photos/freios/discos/hf51n.png",
+            "marca": "Hipper-Freios",
+            "info": "HF51N",
+            "linha": "GM",
+            "linhaCode": "gm",
+            "code": 1662,
+            "linkApli": "#hf51n",
+            "price": 120.88,
+            "qtd": 1
+            
+        },
+        {
+            "nome": "Disco Freio",
+            "position": "Diant.",
+            "image": "photos/freios/discos/hf02a.png",
+            "marca": "Hipper-Freios",
+            "info": "HF02A",
+            "linha": "Volkswagen",
+            "linhaCode": "vws",
+            "code": 798,
+            "linkApli": "#hf02a",
+            "price": 52.00,
+            "qtd": 1
+            
+        },
+        {
+            "nome": "Disco Freio",
+            "position": "Diant.",
+            "image": "photos/freios/discos/hf87e.png",
+            "marca": "Hipper-Freios",
+            "info": "HF87E",
+            "linha": "Volkswagen",
+            "linhaCode": "vws",
+            "code": 3217,
+            "linkApli": "#hf87e",
+            "price": 212.14,
+            "qtd": 1
+            
+        },
+        {
+            "nome": "Disco Freio",
+            "position": "Diant.",
+            "image": "photos/freios/discos/rcdi10800.png",
+            "marca": "TRW",
+            "info": "RCDI-10800",
+            "linha": "Volkswagen",
+            "linhaCode": "vws",
+            "code": "Sem",
+            "linkApli": "#rcdi10800",
+            "price": 0,
+            "qtd": 1
+            
+        }
+        
+    ],
+
+
+
+    "sapatasFreio": [
+        {
+            "nome": "Sapata Freio",
+            "position": "Tras.",
+            "image": "photos/freios/sapatas/rn489cp.png",
+            "marca": "Frasle",
+            "info": "RN/489-CP",
+            "linha": "Renault",
+            "linhaCode": "renault",
+            "code": 2211,
+            "linkApli": "#rn489cp",
+            "price": 227.09,
+            "qtd": 1
+            
+        },
+        {
+            "nome": "Sapata Freio",
+            "position": "Tras.",
+            "image": "photos/freios/sapatas/fi91cpa.png",
+            "marca": "Frasle",
+            "info": "FI/91-CPA",
+            "linha": "Fiat",
+            "linhaCode": "fiat",
+            "code": 2849,
+            "linkApli": "#rn489cp",
+            "price": 150.78,
+            "qtd": 1
+            
         }
         
     ]
