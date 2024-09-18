@@ -2572,6 +2572,214 @@
             
         }
         
+    ],
+
+
+    
+    "cilindros": [
+        {
+            "nome": "Cilindro Freio",
+            "position": "Tras.",
+            "image": "photos/freios/cilindros/005760.png",
+            "marca": "Ate",
+            "info": "005760",
+            "linha": "Fiat",
+            "linhaCode": "fiat",
+            "code": 167,
+            "linkApli": "#005760",
+            "price": 36.81,
+            "qtd": 1
+        },
+        {
+            "nome": "Cilindro Freio",
+            "position": "Tras.",
+            "image": "photos/freios/cilindros/rccr01400.png",
+            "marca": "TRW",
+            "info": "RCCR-01400",
+            "linha": "Fiat",
+            "linhaCode": "fiat",
+            "code": 2299,
+            "linkApli": "#rccr01400",
+            "price": 36.77,
+            "qtd": 1
+        },
+        {
+            "nome": "Cilindro Freio",
+            "position": "Tras.",
+            "image": "photos/freios/cilindros/k1027.png",
+            "marca": "Katho",
+            "info": "K1027",
+            "linha": "Fiat/Ford",
+            "linhaCode": "fiat",
+            "secundLineCode": "ford",
+            "code": 3758,
+            "linkApli": "#k1027",
+            "price": 40.00,
+            "qtd": 1
+        },
+        {
+            "nome": "Bomba Embreagem",
+            "image": "photos/freios/cilindros/bombaEmbreLuk.png",
+            "marca": "LUK",
+            "info": "512 0070 10 0 A1",
+            "linha": "Fiat",
+            "linhaCode": "fiat",
+            "code":3853 ,
+            "linkApli": "#bombaEmbreLuk",
+            "price": 113,
+            "qtd": 1
+        },
+        {
+            "nome": "Bomba Embreagem",
+            "image": "photos/freios/cilindros/5120174100A1.png",
+            "marca": "LUK",
+            "info": "512 0174 10 0 A1",
+            "linha": "Fiat",
+            "linhaCode": "fiat",
+            "code": 2385,
+            "linkApli": "#5120174100A1",
+            "price": 135.33,
+            "qtd": 1
+        },
+        {
+            "nome": "Cilindro Mestre Embreagem",
+            "image": "photos/freios/cilindros/cilinMestreEmbre.png",
+            "marca": "LUK",
+            "linha": "Fiat",
+            "linhaCode": "fiat",
+            "code": 3854,
+            "linkApli": "#cilinMestreEmbre",
+            "price": 124,
+            "qtd": 1
+        },
+        {
+            "nome": "Cilindro Freio",
+            "position": "Tras.",
+            "image": "photos/freios/cilindros/k1009.png",
+            "marca": "Katho",
+            "info": "K1009",
+            "linha": "Ford",
+            "linhaCode": "ford",
+            "code": 3672,
+            "linkApli": "#k1009",
+            "price": 47.16,
+            "qtd": 1
+        },
+        {
+            "nome": "Cilindro Freio",
+            "position": "Tras.",
+            "image": "photos/freios/cilindros/controil3530.png",
+            "marca": "Controil",
+            "info": "3530",
+            "linha": "Nissan",
+            "linhaCode": "nissan",
+            "code": 3126,
+            "linkApli": "#controil3530",
+            "price": 205.50,
+            "qtd": 1
+        },
+        {
+            "nome": "Reparo Cilindro Mestre",
+            "position": "Tras.",
+            "image": "photos/freios/cilindros/C1092.png",
+            "marca": "Controil",
+            "info": "C-1092",
+            "linha": "GM/Ford",
+            "linhaCode": "gm",
+            "secundLineCode": "ford",
+            "code": 1907,
+            "linkApli": "#C1092",
+            "price": 138.30,
+            "qtd": 0
+        }
+        
+    ],
+
+
+
+    "tamboresFreio": [
+        {
+            "nome": "Tambor Freio",
+            "position": "Tras.",
+            "image": "photos/freios/tambores/rpta02330.png",
+            "marca": "TRW",
+            "info": "RPTA-02330",
+            "linha": "Volkswagen",
+            "linhaCode": "vws",
+            "code": 3338,
+            "linkApli": "#rpta02330",
+            "price": 154.50,
+            "qtd": 1
+        },
+        {
+            "nome": "Tambor Freio",
+            "position": "Tras.",
+            "image": "photos/freios/tambores/hf51d.png",
+            "marca": "Hipper-Freios",
+            "info": "HF51D",
+            "linha": "GM",
+            "linhaCode": "gm",
+            "code": "Sem",
+            "linkApli": "#hf51d",
+            "price": 0,
+            "qtd": 1
+        },
+        {
+            "nome": "Tambor Freio",
+            "position": "Tras.",
+            "image": "photos/freios/tambores/hf08a.png",
+            "marca": "Hipper-Freios",
+            "info": "HF08A",
+            "linha": "Volkswagen",
+            "linhaCode": "vws",
+            "code": "Sem",
+            "linkApli": "#hf08a",
+            "price": 0,
+            "qtd": 1
+        },
+        {
+            "nome": "Tambor Freio",
+            "position": "Tras.",
+            "image": "photos/freios/tambores/hf36.png",
+            "marca": "Hipper-Freios",
+            "info": "HF36",
+            "linha": "Fiat",
+            "linhaCode": "fiat",
+            "code": 363,
+            "linkApli": "#hf36",
+            "price": 81.60,
+            "qtd": 1
+        },
+        {
+            "nome": "Tambor Freio",
+            "position": "Diant.",
+            "image": "photos/freios/tambores/hf41a.png",
+            "marca": "Hipper-Freios",
+            "info": "HF41A",
+            "linha": "Fiat/Citroen/Peugeot",
+            "linhaCode": "fiat",
+            "code": "Sem",
+            "linkApli": "#hf41a",
+            "price": 0,
+            "qtd": 1
+        },
+        {
+            "nome": "Tambor Freio",
+            "position": "Tras.",
+            "image": "photos/freios/tambores/hf37a.png",
+            "marca": "Hipper-Freios",
+            "info": "HF37A",
+            "linha": "Fiat",
+            "linhaCode": "fiat",
+            "code": 996,
+            "linkApli": "#hf37a",
+            "price": 120.50,
+            "qtd": 1
+        }
+        
+
+
+
     ]
 
 
