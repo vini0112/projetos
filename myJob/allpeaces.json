@@ -1548,7 +1548,7 @@
         
         {
             "nome": "Pivô",
-            "Lados": "L.D/L.E",
+            "lados": "L.D/L.E",
             "image": "photos/sist-direcao/pivos/pvi1031.png",
             "marca": "Perfect",
             "info": "TDI-1031",
@@ -1561,7 +1561,7 @@
         },
         {
             "nome": "Pivô",
-            "Lados": "L.D/L.E",
+            "lados": "L.D/L.E",
             "image": "photos/sist-direcao/pivos/amortex653110.png",
             "marca": "Amortex",
             "info": "653110",
@@ -1574,7 +1574,7 @@
         },
         {
             "nome": "Pivô",
-            "Lados": "L.D/L.E",
+            "lados": "L.D/L.E",
             "image": "photos/sist-direcao/pivos/pvi1023.png",
             "marca": "Desconhecida",
             "info": "BSP-16020",
@@ -1587,7 +1587,7 @@
         },
         {
             "nome": "Pivô",
-            "Lados": "L.D/L.E",
+            "lados": "L.D/L.E",
             "image": "photos/sist-direcao/pivos/pvi1038.png",
             "marca": "Perfect",
             "info": "PVI-1038",
@@ -1600,7 +1600,7 @@
         },
         {
             "nome": "Pivô",
-            "Lados": "L.D/L.E",
+            "lados": "L.D/L.E",
             "image": "photos/sist-direcao/pivos/pvi1023.png",
             "marca": "Perfect",
             "info": "PVI-1023",
@@ -1613,7 +1613,7 @@
         },
         {
             "nome": "Pivô",
-            "Lados": "L.D/L.E",
+            "lados": "L.D/L.E",
             "image": "photos/sist-direcao/pivos/pvs1023.png",
             "marca": "Perfect",
             "info": "PVS-1023",
@@ -1626,7 +1626,7 @@
         },
         {
             "nome": "Pivô",
-            "Lados": "L.D/L.E",
+            "lados": "L.D/L.E",
             "image": "photos/sist-direcao/pivos/bsp12045.png",
             "marca": "Desconhecida",
             "info": "BSP-12045",
@@ -1639,7 +1639,7 @@
         },
         {
             "nome": "Pivô",
-            "Lados": "L.D/L.E",
+            "lados": "L.D/L.E",
             "image": "photos/sist-direcao/pivos/pvi1026.png",
             "marca": "Perfect",
             "info": "PVI-1026",
@@ -1648,11 +1648,11 @@
             "code": 919,
             "linkApli": "#pvi1026",
             "price": 49.00,
-            "qtd": 1
+            "qtd": 0
         },
         {
             "nome": "Pivô",
-            "Lados": "L.D",
+            "lados": "L.D",
             "image": "photos/sist-direcao/pivos/viemar503192.png",
             "marca": "Viemar",
             "info": "503192",
@@ -1665,7 +1665,7 @@
         },
         {
             "nome": "Pivô",
-            "Lados": "L.D",
+            "lados": "L.D",
             "image": "photos/sist-direcao/pivos/pvi1056.png",
             "marca": "Perfect",
             "info": "PVI-1056",
@@ -1678,7 +1678,7 @@
         },
         {
             "nome": "Pivô",
-            "Lados": "L.D",
+            "lados": "L.D",
             "image": "photos/sist-direcao/pivos/pvi1006.png",
             "marca": "Perfect",
             "info": "PVI-1056",
@@ -1691,7 +1691,7 @@
         },
         {
             "nome": "Pivô",
-            "Lados": "L.D/L.E",
+            "lados": "L.D/L.E",
             "image": "photos/sist-direcao/pivos/amortex53084.png",
             "marca": "Amortex",
             "info": "53084",
@@ -1704,7 +1704,7 @@
         },
         {
             "nome": "Pivô",
-            "Lados": "L.D/L.E",
+            "lados": "L.D/L.E",
             "image": "photos/sist-direcao/pivos/amortex53083.png",
             "marca": "Amortex",
             "info": "53083",

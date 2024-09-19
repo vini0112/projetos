@@ -42,13 +42,13 @@ document.addEventListener('DOMContentLoaded', () =>{
     // filtroTerminais()
 
     //fucao filtrando pesquisa dos pivos suspensao
-    filtroPivos()
+    // filtroPivos()
 
     // fucao filtrando pesquisa das barras axiais
     // filtroBarras()
 
     // fucao filtrando pesquisa dos batedores
-    filtroBatedor()
+    // filtroBatedor()
 
     // funcao filtrando pesquisa das buchas
     filtroBuchas()
@@ -360,186 +360,12 @@ function mostrarInfoFastSearch(){
 
 
 
-// funcao filtrar pesquisa dos pivos
-function filtroPivos(){
-
-    let allBtns = document.querySelectorAll("#btns-pivos button")
-    //console.log(allBtns)
-
-    let allCards = document.querySelectorAll('#row-pivos .card')
-    //console.log(allCards)
-
-
-    // BTN TODOS
-    allBtns[0].addEventListener('click', () =>{
-        for(let c = 0;c < allCards.length;c++){
-            allCards[c].style.display='block'
-        }
-
-        for(let b = 0;b < allBtns.length;b++){
-            if(allBtns[0]){
-                allBtns[b].classList.remove('active')
-                allBtns[0].classList.add('active')
-            }
-        }
-    })
-
-    // BTN fiat
-    allBtns[1].addEventListener('click', () =>{
-        for(let c = 0;c < allCards.length;c++){
-            allCards[c].style.display='block'
-
-            if(!(allCards[c].classList.contains('fiat'))){
-                allCards[c].style.display='none'
-            }
-        } 
-
-        for(let b = 0;b < allBtns.length;b++){
-            if(allBtns[1]){
-                allBtns[b].classList.remove('active')
-                allBtns[1].classList.add('active')
-            }
-        }
-    })
-
-    // BTN vws
-    allBtns[2].addEventListener('click', () =>{
-        for(let c = 0;c < allCards.length;c++){
-            allCards[c].style.display='block'
-
-            if(!(allCards[c].classList.contains('vws'))){
-                allCards[c].style.display='none'
-            }
-        } 
-
-        for(let b = 0;b < allBtns.length;b++){
-            if(allBtns[2]){
-                allBtns[b].classList.remove('active')
-                allBtns[2].classList.add('active')
-            }
-        }
-    })
-
-    // BTN GM
-    allBtns[3].addEventListener('click', () =>{
-        for(let c = 0;c < allCards.length;c++){
-            allCards[c].style.display='block'
-
-            if(!(allCards[c].classList.contains('gm'))){
-                allCards[c].style.display='none'
-            }
-        } 
-
-        for(let b = 0;b < allBtns.length;b++){
-            if(allBtns[3]){
-                allBtns[b].classList.remove('active')
-                allBtns[3].classList.add('active')
-            }
-        }
-    })
-
-    // BTN Ford
-    allBtns[4].addEventListener('click', () =>{
-        for(let c = 0;c < allCards.length;c++){
-            allCards[c].style.display='block'
-
-            if(!(allCards[c].classList.contains('ford'))){
-                allCards[c].style.display='none'
-            }
-        } 
-
-        for(let b = 0;b < allBtns.length;b++){
-            if(allBtns[4]){
-                allBtns[b].classList.remove('active')
-                allBtns[4].classList.add('active')
-            }
-        }
-    })
-
-
-}
 
 
 
 
 
-// fucao filtrando pesquisa dos batedores
-function filtroBatedor(){
-    let allBtns = document.querySelectorAll("#row-batedores #btns-batedores button")
-    //console.log(allBtns)
 
-    let allCards = document.querySelectorAll('#row-batedores .card')
-    //console.log(allCards)
-
-
-    // BTN TODOS
-    allBtns[0].addEventListener('click', () =>{
-        for(let c = 0;c < allCards.length;c++){
-            allCards[c].style.display='block'
-        }
-
-        for(let b = 0;b < allBtns.length;b++){
-            if(allBtns[0]){
-                allBtns[b].classList.remove('active')
-                allBtns[0].classList.add('active')
-            }
-        }
-    })
-
-    // BTN fiat
-    allBtns[1].addEventListener('click', () =>{
-        for(let c = 0;c < allCards.length;c++){
-            allCards[c].style.display='block'
-
-            if(!(allCards[c].classList.contains('fiat'))){
-                allCards[c].style.display='none'
-            }
-        } 
-
-        for(let b = 0;b < allBtns.length;b++){
-            if(allBtns[1]){
-                allBtns[b].classList.remove('active')
-                allBtns[1].classList.add('active')
-            }
-        }
-    })
-
-    // BTN vws
-    allBtns[2].addEventListener('click', () =>{
-        for(let c = 0;c < allCards.length;c++){
-            allCards[c].style.display='block'
-
-            if(!(allCards[c].classList.contains('vws'))){
-                allCards[c].style.display='none'
-            }
-        } 
-
-        for(let b = 0;b < allBtns.length;b++){
-            if(allBtns[2]){
-                allBtns[b].classList.remove('active')
-                allBtns[2].classList.add('active')
-            }
-        }
-    })
-
-    // BTN GM
-    allBtns[3].addEventListener('click', () =>{
-        for(let c = 0;c < allCards.length;c++){
-            allCards[c].style.display='block'
-
-            if(!(allCards[c].classList.contains('gm'))){
-                allCards[c].style.display='none'
-            }
-        } 
-
-        for(let b = 0;b < allBtns.length;b++){
-            if(allBtns[3]){
-                allBtns[b].classList.remove('active')
-                allBtns[3].classList.add('active')
-            }
-        }
-    })
-}
 
 
 // fucao filtrando pesquisa das buchas
