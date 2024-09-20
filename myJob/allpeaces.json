@@ -1752,7 +1752,7 @@
             "position": "Diant.",
             "image": "photos/sist-suspensao/amortecedor/hg33093.png",
             "marca": "NAKATA",
-            "info": "CT",
+            "info": "HG-33093",
             "linha": "Fiat",
             "linhaCode": "fiat",
             "code": 3719,
@@ -2023,7 +2023,7 @@
             "code": 2863,
             "linkApli": "#sampel1319",
             "price": 65.00,
-            "qtd": 1
+            "qtd": 0
         },
         {
             "nome": "Bucha Bandeja",
