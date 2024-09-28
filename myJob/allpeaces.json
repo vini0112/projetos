@@ -2085,7 +2085,7 @@
             "code": 3630,
             "linkApli": "#axios82491441",
             "price": 175,
-            "qtd": 1
+            "qtd": 0
         },
         {
             "nome": "Coxim Motor",
@@ -2287,7 +2287,7 @@
             "code": 2476,
             "linkApli": "#sna393",
             "price": 63.34,
-            "qtd": 1
+            "qtd": 0
             
         },
         {
@@ -2566,7 +2566,7 @@
             "linha": "Fiat",
             "linhaCode": "fiat",
             "code": 2849,
-            "linkApli": "#rn489cp",
+            "linkApli": "#fi91cpa",
             "price": 150.78,
             "qtd": 1
             

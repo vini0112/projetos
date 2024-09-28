@@ -57,6 +57,19 @@ document.addEventListener('DOMContentLoaded', () =>{
     amortecedores()
 
     buchasBandejaSusp()
+
+    coxinsAmort()
+
+    bieletas()
+
+
+    // SESSAO 07
+
+    pastilhasFreio()
+
+    discosFreio()
+
+    sapatasFreio()
 })
 
 // API REQUEST
@@ -1492,7 +1505,7 @@ async function terminaisDirecao(){
         <img src="${dados[i].image}" alt="${dados[i].info}" class="img-fluid">
         <div class="card-body">
             <h5 class="card-title">${dados[i].nome}</h5>
-            <h5 class="card-title">${dados[i].info}</h5>
+            <h5 class="card-title">${dados[i].info} ${dados[i].lados}</h5>
             <p class="card-text">Linha ${dados[i].linha}</p>
 
             <button type="button" class="padraoBtn" data-bs-toggle="modal" data-bs-target="${dados[i].linkApli}">Aplicações</button>
@@ -1959,7 +1972,7 @@ async function batedores(){
         newDiv.innerHTML = `
         <img src="${dados[i].image}" alt="${dados[i].info}" class="img-fluid">
         <div class="card-body">
-            <h5 class="card-title">${dados[i].nome}</h5>
+            <h5 class="card-title">${dados[i].nome} ${dados[i].position}</h5>
             <h5 class="card-title">${dados[i].info}</h5>
             <p class="card-text">Linha ${dados[i].linha}</p>
 
@@ -2223,7 +2236,7 @@ async function amortecedores(){
         newDiv.innerHTML = `
         <img src="${dados[i].image}" alt="${dados[i].info}" class="img-fluid">
         <div class="card-body">
-            <h5 class="card-title">${dados[i].nome}</h5>
+            <h5 class="card-title">${dados[i].nome} ${dados[i].position}</h5>
             <h5 class="card-title">${dados[i].info}</h5>
             <p class="card-text">Linha ${dados[i].linha}</p>
 
@@ -2267,7 +2280,7 @@ async function buchasBandejaSusp(){
         newDiv.innerHTML = `
         <img src="${dados[i].image}" alt="${dados[i].info}" class="img-fluid">
         <div class="card-body">
-            <h5 class="card-title">${dados[i].nome}</h5>
+            <h5 class="card-title">${dados[i].nome} ${dados[i].position}</h5>
             <h5 class="card-title">${dados[i].info}</h5>
             <p class="card-text">Linha ${dados[i].linha}</p>
 
@@ -2382,6 +2395,366 @@ function filtroBuchas(){
 
 }
 
+
+
+// adding coxins motor/amortecedor
+async function coxinsAmort(){
+
+    const dado = await gettingApi()
+    const dados = dado.coxinsAmort
+    // console.log(dados)
+
+
+    for(let i = 0;i < dados.length;i++){
+
+        let newDiv = document.createElement('div')
+        newDiv.classList.add('col-md-3')
+        newDiv.classList.add('card')
+        newDiv.classList.add(dados[i].linhaCode)
+
+        if(dados[i].qtd == 0){
+            newDiv.classList.add('acabou')
+        }
+
+        // if(dados[i].secundLineCode){
+        //     newDiv.classList.add(dados[i].secundLineCode)
+        // }
+
+
+        newDiv.innerHTML = `
+        <img src="${dados[i].image}" alt="${dados[i].info}" class="img-fluid">
+        <div class="card-body">
+            <h5 class="card-title">${dados[i].nome} ${dados[i].position}</h5>
+            <h5 class="card-title">${dados[i].info}</h5>
+            <p class="card-text">Linha ${dados[i].linha}</p>
+
+            <button type="button" class="padraoBtn" data-bs-toggle="modal" data-bs-target="${dados[i].linkApli}">Aplicações</button>
+        </div>
+        
+        `
+
+        rowCoxinsAmort.appendChild(newDiv)
+
+    }
+}
+
+
+
+// adding bieletas
+async function bieletas(){
+
+    const dado = await gettingApi()
+    const dados = dado.bieletas
+    // console.log(dados)
+
+    for(let i = 0;i < dados.length;i++){
+
+        let newDiv = document.createElement('div')
+        newDiv.classList.add('col-md-3')
+        newDiv.classList.add('card')
+        newDiv.classList.add(dados[i].linhaCode)
+
+        if(dados[i].qtd == 0){
+            newDiv.classList.add('acabou')
+        }
+
+        // if(dados[i].secundLineCode){
+        //     newDiv.classList.add(dados[i].secundLineCode)
+        // }
+
+
+        newDiv.innerHTML = `
+        <img src="${dados[i].image}" alt="${dados[i].info}" class="img-fluid">
+        <div class="card-body">
+            <h5 class="card-title">${dados[i].nome}</h5>
+            <h5 class="card-title">${dados[i].info}</h5>
+            <p class="card-text">Linha ${dados[i].linha}</p>
+
+            <button type="button" class="padraoBtn" data-bs-toggle="modal" data-bs-target="${dados[i].linkApli}">Aplicações</button>
+        </div>
+        
+        `
+
+        rowBieleta.appendChild(newDiv)
+
+    }
+}
+
+
+
+
+// SESSAO 07
+
+let rowPastilhas = document.querySelector('#row-pastilhas')
+let rowDiscos = document.querySelector('#row-discos')
+let rowSapatas = document.querySelector('#row-sapatas')
+
+
+
+
+// adding pastilhas
+async function pastilhasFreio(){
+
+    const dado = await gettingApi()
+    const dados = dado.pastilhaFreio
+    // console.log(dados)
+
+
+    for(let i = 0;i < dados.length;i++){
+
+        let newDiv = document.createElement('div')
+        newDiv.classList.add('col-md-3')
+        newDiv.classList.add('card')
+        newDiv.classList.add(dados[i].linhaCode)
+
+        if(dados[i].qtd == 0){
+            newDiv.classList.add('acabou')
+        }
+
+        if(dados[i].secundLineCode){
+            newDiv.classList.add(dados[i].secundLineCode)
+        }
+
+
+        newDiv.innerHTML = `
+        <img src="${dados[i].image}" alt="${dados[i].info}" class="img-fluid">
+        <div class="card-body">
+            <h5 class="card-title">${dados[i].nome} ${dados[i].position}</h5>
+            <h5 class="card-title">${dados[i].info}</h5>
+            <p class="card-text">Linha ${dados[i].linha}</p>
+
+            <button type="button" class="padraoBtn" data-bs-toggle="modal" data-bs-target="${dados[i].linkApli}">Aplicações</button>
+        </div>
+        
+        `
+
+        rowPastilhas.appendChild(newDiv)
+
+    }
+
+    filtroPastilha()
+}
+
+// fucao filtrando pesquisa das pastilhas de freio
+function filtroPastilha(){
+    let allBtns = document.querySelectorAll("#row-pastilhas #btns-pastilha button")
+    //console.log(allBtns)
+
+    let allCards = document.querySelectorAll('#row-pastilhas .card')
+    //console.log(allCards)
+
+
+
+    // BTN TODOS
+    allBtns[0].addEventListener('click', () =>{
+        for(let c = 0;c < allCards.length;c++){
+            allCards[c].style.display='block'
+        }
+
+        for(let b = 0;b < allBtns.length;b++){
+            if(allBtns[0]){
+                allBtns[b].classList.remove('active')
+                allBtns[0].classList.add('active')
+            }
+        }
+    })
+
+    // BTN fiat
+    allBtns[1].addEventListener('click', () =>{
+        for(let c = 0;c < allCards.length;c++){
+            allCards[c].style.display='block'
+
+            if(!(allCards[c].classList.contains('fiat'))){
+                allCards[c].style.display='none'
+                
+            }
+        } 
+
+        for(let b = 0;b < allBtns.length;b++){
+            if(allBtns[1]){
+                allBtns[b].classList.remove('active')
+                allBtns[1].classList.add('active')
+            }
+        }
+    })
+
+    // BTN vws
+    allBtns[2].addEventListener('click', () =>{
+        for(let c = 0;c < allCards.length;c++){
+            allCards[c].style.display='block'
+
+            if(!(allCards[c].classList.contains('vws'))){
+                allCards[c].style.display='none'
+            }
+        } 
+
+        for(let b = 0;b < allBtns.length;b++){
+            if(allBtns[2]){
+                allBtns[b].classList.remove('active')
+                allBtns[2].classList.add('active')
+            }
+        }
+    })
+
+    // BTN GM
+    allBtns[3].addEventListener('click', () =>{
+        for(let c = 0;c < allCards.length;c++){
+            allCards[c].style.display='block'
+
+            if(!(allCards[c].classList.contains('gm'))){
+                allCards[c].style.display='none'
+            }
+        } 
+
+        for(let b = 0;b < allBtns.length;b++){
+            if(allBtns[3]){
+                allBtns[b].classList.remove('active')
+                allBtns[3].classList.add('active')
+            }
+        }
+    })
+
+    // BTN Toyota
+    allBtns[4].addEventListener('click', () =>{
+        for(let c = 0;c < allCards.length;c++){
+            allCards[c].style.display='block'
+
+            if(!(allCards[c].classList.contains('toyota'))){
+                allCards[c].style.display='none'
+            }
+        } 
+
+        for(let b = 0;b < allBtns.length;b++){
+            if(allBtns[4]){
+                allBtns[b].classList.remove('active')
+                allBtns[4].classList.add('active')
+            }
+        }
+    })
+
+    // BTN ford
+    allBtns[5].addEventListener('click', () =>{
+        for(let c = 0;c < allCards.length;c++){
+            allCards[c].style.display='block'
+
+            if(!(allCards[c].classList.contains('ford'))){
+                allCards[c].style.display='none'
+            }
+        } 
+
+        for(let b = 0;b < allBtns.length;b++){
+            if(allBtns[5]){
+                allBtns[b].classList.remove('active')
+                allBtns[5].classList.add('active')
+            }
+        }
+    })
+
+    // BTN citroen
+    allBtns[6].addEventListener('click', () =>{
+        for(let c = 0;c < allCards.length;c++){
+            allCards[c].style.display='block'
+
+            if(!(allCards[c].classList.contains('renault'))){
+                allCards[c].style.display='none'
+            }
+        } 
+
+        for(let b = 0;b < allBtns.length;b++){
+            if(allBtns[6]){
+                allBtns[b].classList.remove('active')
+                allBtns[6].classList.add('active')
+            }
+        }
+    })
+
+}
+
+
+// adding discos freio
+async function discosFreio(){
+
+    const dado = await gettingApi()
+    const dados = dado.discosFreio
+    // console.log(dados)
+
+
+    for(let i = 0;i < dados.length;i++){
+
+        let newDiv = document.createElement('div')
+        newDiv.classList.add('col-md-3')
+        newDiv.classList.add('card')
+        newDiv.classList.add(dados[i].linhaCode)
+
+        if(dados[i].qtd == 0){
+            newDiv.classList.add('acabou')
+        }
+
+        if(dados[i].secundLineCode){
+            newDiv.classList.add(dados[i].secundLineCode)
+        }
+
+
+        newDiv.innerHTML = `
+        <img src="${dados[i].image}" alt="${dados[i].info}" class="img-fluid">
+        <div class="card-body">
+            <h5 class="card-title">${dados[i].nome} ${dados[i].position}</h5>
+            <h5 class="card-title">${dados[i].info}</h5>
+            <p class="card-text">Linha ${dados[i].linha}</p>
+
+            <button type="button" class="padraoBtn" data-bs-toggle="modal" data-bs-target="${dados[i].linkApli}">Aplicações</button>
+        </div>
+        
+        `
+
+        rowDiscos.appendChild(newDiv)
+
+    }
+
+
+}
+
+
+// adding sapatas freio
+async function sapatasFreio(){
+
+    const dado = await gettingApi()
+    const dados = dado.sapatasFreio
+    // console.log(dados)
+
+
+    for(let i = 0;i < dados.length;i++){
+
+        let newDiv = document.createElement('div')
+        newDiv.classList.add('col-md-3')
+        newDiv.classList.add('card')
+        newDiv.classList.add(dados[i].linhaCode)
+
+        if(dados[i].qtd == 0){
+            newDiv.classList.add('acabou')
+        }
+
+        if(dados[i].secundLineCode){
+            newDiv.classList.add(dados[i].secundLineCode)
+        }
+
+
+        newDiv.innerHTML = `
+        <img src="${dados[i].image}" alt="${dados[i].info}" class="img-fluid">
+        <div class="card-body">
+            <h5 class="card-title">${dados[i].nome} ${dados[i].position}</h5>
+            <h5 class="card-title">${dados[i].info}</h5>
+            <p class="card-text">Linha ${dados[i].linha}</p>
+
+            <button type="button" class="padraoBtn" data-bs-toggle="modal" data-bs-target="${dados[i].linkApli}">Aplicações</button>
+        </div>
+        
+        `
+
+        rowSapatas.appendChild(newDiv)
+
+    }
+}
 
 
 
