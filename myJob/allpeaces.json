@@ -3066,6 +3066,206 @@
             "qtd": 1
         }
         
+    ],
+
+
+
+    "cabosEflexiveis": [
+        
+        {
+            "nome": "Cabo Embreagem",
+            "image": "photos/freios/cabos/fnm088j.png",
+            "marca": "Efrari",
+            "info": "FNM088J",
+            "linha": "Fiat",
+            "linhaCode": "fiat",
+            "code": 3554,
+            "linkApli": "#fnm088j",
+            "price": 106.44,
+            "qtd": 1
+        },
+        {
+            "nome": "Cabo Freio Mão",
+            "Lado": "L.D",
+            "image": "photos/freios/cabos/fnm093k.png",
+            "marca": "Efrari",
+            "info": "FNM093K",
+            "linha": "Fiat",
+            "linhaCode": "fiat",
+            "code": 3349,
+            "linkApli": "#fnm093k",
+            "price": 70.00,
+            "qtd": 1
+        },
+        {
+            "nome": "Cabo Freio Mão",
+            "Lado": "L.E",
+            "image": "photos/freios/cabos/fnm093k.png",
+            "marca": "Efrari",
+            "info": "FNM093L",
+            "linha": "Fiat",
+            "linhaCode": "fiat",
+            "code": 3350,
+            "linkApli": "#fnm093l",
+            "price": 70.00,
+            "qtd": 1
+        },
+        {
+            "nome": "Cabo Freio Mão",
+            "Lado": "L.D",
+            "image": "photos/freios/cabos/ef780l.png",
+            "marca": "Efrari",
+            "info": "EF780L",
+            "linha": "Volkswagen",
+            "linhaCode": "vws",
+            "code": "Sem",
+            "linkApli": "#ef780l",
+            "price": 0,
+            "qtd": 1
+        },
+        {
+            "nome": "Cabo Freio Mão",
+            "Lado": "L.E",
+            "image": "photos/freios/cabos/ef780k.png",
+            "marca": "Efrari",
+            "info": "EF780K",
+            "linha": "Volkswagen",
+            "linhaCode": "vws",
+            "code": "Sem",
+            "linkApli": "#ef780k",
+            "price": 0,
+            "qtd": 1
+        },
+        {
+            "nome": "Cabo Freio Mão",
+            "Lado": "L.E",
+            "image": "photos/freios/cabos/cabovel1667379.png",
+            "marca": "Cabovel",
+            "info": "167379",
+            "linha": "Volkswagen",
+            "linhaCode": "vws",
+            "code": "sem",
+            "linkApli": "#cabovel1667379",
+            "price": 0,
+            "qtd": 1
+        },
+        {
+            "nome": "Cabo Freio Mão",
+            "Lado": "L.E",
+            "image": "photos/freios/cabos/cabovel1667379.png",
+            "marca": "Cabovel",
+            "info": "167378",
+            "linha": "Volkswagen",
+            "linhaCode": "vws",
+            "code": "sem",
+            "linkApli": "#cabovel1667379",
+            "price": 0,
+            "qtd": 1
+        },
+        {
+            "nome": "Flexível",
+            "Lado": "Tras.",
+            "image": "photos/freios/cabos/flexivelFox.png",
+            "marca": "Norflex",
+            "linha": "Volkswagen",
+            "linhaCode": "vws",
+            "code": 3201,
+            "linkApli": "#flexivelFox",
+            "price": 30.00,
+            "qtd": 1
+        },
+        {
+            "nome": "Cabo Comando Embreagem",
+            "image": "photos/freios/cabos/caboComando.png",
+            "marca": "Fania",
+            "info": "61107",
+            "linha": "Volkswagen",
+            "linhaCode": "vws",
+            "code": "sem",
+            "linkApli": "#caboComando",
+            "price": 0,
+            "qtd": 1
+        },
+        {
+            "nome": "Cabo Freio",
+            "image": "photos/freios/cabos/fania30340.png",
+            "marca": "Fania",
+            "info": "30340",
+            "linha": "GM",
+            "linhaCode": "gm",
+            "code": "sem",
+            "linkApli": "#fania30340",
+            "price": 0,
+            "qtd": 1
+        },
+        {
+            "nome": "Cabo Freio Mão",
+            "image": "photos/freios/cabos/iks4245.png",
+            "marca": "IKS",
+            "info": "IKS-4245",
+            "linha": "GM",
+            "linhaCode": "gm",
+            "code": "Sem",
+            "linkApli": "#iks4245",
+            "price": 0,
+            "qtd": 1
+        },
+        {
+            "nome": "Flexível Diant.",
+            "Lado": "L.D",
+            "image": "photos/freios/cabos/flexivelD20.png",
+            "marca": "Norflex",
+            "info": "5180082000",
+            "linha": "GM",
+            "linhaCode": "gm",
+            "code": 3200,
+            "linkApli": "#flexivelD20",
+            "price": 81.74,
+            "qtd": 1
+        },
+        {
+            "nome": "Flexível",
+            "Lado": "Diant.",
+            "image": "photos/freios/cabos/flexivelACD10.png",
+            "marca": "Norflex",
+            "info": "5180022000",
+            "linha": "GM",
+            "linhaCode": "gm",
+            "code": 3197,
+            "linkApli": "#flexivelACD10",
+            "price": 65.00,
+            "qtd": 1
+        },
+        {
+            "nome": "Flexível",
+            "Lado": "Tras.",
+            "image": "photos/freios/cabos/norflex4009.png",
+            "marca": "Norflex",
+            "info": "5180021000",
+            "linha": "GM",
+            "linhaCode": "gm",
+            "code": 3196,
+            "linkApli": "#norflex4009",
+            "price": 35.00,
+            "qtd": 1
+        }
+    ],
+
+
+    
+    "acessoriosFreio": [
+        {
+            "nome": "Jogo Feixe Molas",
+            "image": "photos/freios/acessorios-freio/10153.png",
+            "marca": "KitCia",
+            "info": "10153",
+            "linha": "Fiat",
+            "linhaCode": "fiat",
+            "code": 458,
+            "linkApli": "#10153",
+            "price": 55.86,
+            "qtd": 1
+        }
     ]
 
 
