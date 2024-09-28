@@ -3266,7 +3266,481 @@
             "price": 55.86,
             "qtd": 1
         }
+    ],
+
+
+    "cabosDvela": [
+        {
+            "nome": "Cabos Velas",
+            "image": "photos/sist-ignicao/cabos-ignicao/stv09.png",
+            "marca": "NGK",
+            "info": "ST-V09",
+            "linha": "Volkswagen",
+            "linhaCode": "vws",
+            "code": 2920,
+            "linkApli": "#stv09",
+            "price": 123,
+            "qtd": 1
+        },
+        {
+            "nome": "Cabos Velas",
+            "image": "photos/sist-ignicao/cabos-ignicao/caboGol1000.png",
+            "marca": "Marflex",
+            "info": "PBV-309",
+            "linha": "Volkswagen",
+            "linhaCode": "vws",
+            "code": 1057,
+            "linkApli": "#caboGol1000",
+            "price": 91.00,
+            "qtd": 1
+        },
+        {
+            "nome": "Cabos Velas",
+            "image": "photos/sist-ignicao/cabos-ignicao/sct65.png",
+            "marca": "NGK",
+            "info": "SC-T65",
+            "linha": "Fiat",
+            "linhaCode": "fiat",
+            "code": 2011,
+            "linkApli": "#sct65",
+            "price": 113.50,
+            "qtd": 1
+        }
+        
+    ],
+
+
+    "velas": [
+        {
+            "nome": "Velas",
+            "image": "photos/sist-ignicao/velas/46480362.png",
+            "marca": "NGK",
+            "info": "46480362",
+            "linha": "Fiat",
+            "linhaCode": "fiat",
+            "code": 3537,
+            "linkApli": "#46480362",
+            "price": 22.00,
+            "qtd": 1
+        }
+       
+    ],
+
+
+    "bobinasIgnicao": [
+        {
+            "nome": "Bobina Ignição",
+            "image": "photos/sist-ignicao/bobinas/bi0042mm.png",
+            "marca": "Magneti",
+            "info": "BI0042MM",
+            "linha": "GM/Fiat",
+            "linhaCode": "gm",
+            "secundLineCode":"fiat",
+            "code": 3813,
+            "linkApli": "#bi0042mm",
+            "price": 230,
+            "qtd": 1
+        },
+        {
+            "nome": "Bobina Ignição",
+            "image": "photos/sist-ignicao/bobinas/dpl202030.png",
+            "marca": "DPL",
+            "info": "DPL-202030",
+            "linha": "GM",
+            "linhaCode": "gm",
+            "code": 3748,
+            "linkApli": "#dpl202030",
+            "price": 163,
+            "qtd": 1
+        },
+        {
+            "nome": "Bobina Ignição",
+            "image": "photos/sist-ignicao/bobinas/gc4206.png",
+            "marca": "Gauss",
+            "info": "GC-4206",
+            "linha": "Fiat",
+            "linhaCode": "fiat",
+            "code": 3591,
+            "linkApli": "#gc4206",
+            "price": 134,
+            "qtd": 0
+        }
+        
+    ],
+
+
+    "modulosIgnicao": [
+        {
+            "nome": "Modulo Ignição",
+            "image": "photos/sist-ignicao/modulos/4829816.png",
+            "marca": "Kostal",
+            "info": "4829816",
+            "linha": "Volkswagen",
+            "linhaCode": "vws",
+            "code": 2890,
+            "linkApli": "#4829816",
+            "price": 39.22,
+            "qtd": 1
+        },
+        {
+            "nome": "Modulo Ignição",
+            "image": "photos/sist-ignicao/modulos/ga2912.png",
+            "marca": "Gauss",
+            "info": "GA-2912",
+            "linha": "GM",
+            "linhaCode": "gm",
+            "code": 1364,
+            "linkApli": "#ga2912",
+            "price": 96.00,
+            "qtd": 1
+        }
+        
+    ],
+
+
+    "tensoresCorreia": [
+        {
+            "nome": "Tensor Alternador",
+            "image": "photos/sist-carga/tensores/1142.png",
+            "marca": "Nytron",
+            "info": "1142",
+            "linha": "Fiat",
+            "linhaCode": "fiat",
+            "code": "sem",
+            "linkApli": "#1142",
+            "price": 0,
+            "qtd": 1
+        },
+        {
+            "nome": "Tensor Alternador",
+            "image": "photos/sist-carga/tensores/1167.png",
+            "marca": "Nytron",
+            "info": "1167",
+            "linha": "Fiat",
+            "linhaCode": "fiat",
+            "code": "sem",
+            "linkApli": "#1167",
+            "price": 0,
+            "qtd": 1
+        },
+        {
+            "nome": "Tensor Alternador",
+            "image": "photos/sist-carga/tensores/1143.png",
+            "marca": "Nytron",
+            "info": "1143",
+            "linha": "Fiat",
+            "linhaCode": "fiat",
+            "code": "sem",
+            "linkApli": "#1143",
+            "price": 0,
+            "qtd": 1
+        },
+        {
+            "nome": "Tensor Correia Dentada",
+            "image": "photos/sist-carga/tensores/zen12773.png",
+            "marca": "Zen",
+            "info": "12773",
+            "linha": "Volkswagen",
+            "linhaCode": "vws",
+            "code": 2547,
+            "linkApli": "#zen12773",
+            "price": 94.82,
+            "qtd": 1
+        },
+        {
+            "nome": "Tensor Correia Dentada",
+            "image": "photos/sist-carga/tensores/7796.png",
+            "marca": "Nytron",
+            "info": "7796",
+            "linha": "GM/Fiat",
+            "linhaCode": "gm",
+            "secundLineCode":"fiat",
+            "code": 3811,
+            "linkApli": "#7796",
+            "price": 126,
+            "qtd": 0
+        },
+        {
+            "nome": "Tensor Alternador",
+            "image": "photos/sist-carga/tensores/1223.png",
+            "marca": "Nytron",
+            "info": "1223",
+            "linha": "Volkswagen",
+            "linhaCode": "vws",
+            "code": 1792,
+            "linkApli": "#1223",
+            "price": 72.00,
+            "qtd": 1
+        }
+        
+    ],
+
+
+
+    "correiaAlternador": [
+        {
+            "nome": "Correia Alternador",
+            "image": "photos/sist-carga/correias/4pk0675.png",
+            "marca": "Gates",
+            "info": "4PK0675",
+            "linha": "Fiat",
+            "linhaCode": "fiat",
+            "code": 3528,
+            "linkApli": "#4pk0675",
+            "price": 23.81,
+            "qtd": 1
+        },
+        {
+            "nome": "Correia Alternador",
+            "image": "photos/sist-carga/correias/3pk0910.png",
+            "marca": "Gates",
+            "info": "3PK0910",
+            "linha": "Fiat",
+            "linhaCode": "fiat",
+            "code": 789,
+            "linkApli": "#3pk0910",
+            "price": 21.90,
+            "qtd": 1
+        },
+        {
+            "nome": "Correia Alternador",
+            "image": "photos/sist-carga/correias/5pk1190.png",
+            "marca": "Daycon",
+            "info": "5PK1190",
+            "linha": "Fiat",
+            "linhaCode": "fiat",
+            "code": 1115,
+            "linkApli": "#5pk1190",
+            "price": 41.58,
+            "qtd": 1
+        },
+        {
+            "nome": "Correia Alternador",
+            "image": "photos/sist-carga/correias/5pk1165.png",
+            "marca": "Gates",
+            "info": "5PK1165",
+            "linha": "Fiat",
+            "linhaCode": "fiat",
+            "code": 904,
+            "linkApli": "#5pk1165",
+            "price": 61.52,
+            "qtd": 1
+        },
+        {
+            "nome": "Correia Alternador",
+            "image": "photos/sist-carga/correias/5pk1105.png",
+            "marca": "Gates",
+            "info": "5PK1105",
+            "linha": "Fiat/Ford",
+            "linhaCode": "fiat",
+            "secundLineCode":"ford",
+            "code": 3459,
+            "linkApli": "#5pk1105",
+            "price": 36.00,
+            "qtd": 1
+        },
+        {
+            "nome": "Correia Alternador",
+            "image": "photos/sist-carga/correias/5pk1012.png",
+            "marca": "Daycon",
+            "info": "5PK1012",
+            "linha": "Fiat",
+            "linhaCode": "fiat",
+            "code": 1383,
+            "linkApli": "#5pk1012",
+            "price": 28.10,
+            "qtd": 1
+        },
+        {
+            "nome": "Correia Alternador",
+            "image": "photos/sist-carga/correias/5PK1170.png",
+            "marca": "Daycon",
+            "info": "5PK1170",
+            "linha": "Fiat",
+            "linhaCode": "fiat",
+            "code": 3631,
+            "linkApli": "#5PK1170",
+            "price": 42.21,
+            "qtd": 1
+        },
+        {
+            "nome": "Correia Alternador",
+            "image": "photos/sist-carga/correias/4pk0903se.png",
+            "marca": "Gates",
+            "info": "4PK0903SE",
+            "linha": "Fiat/Citroen/Peugeot",
+            "linhaCode": "fiat",
+            "code": 3059,
+            "linkApli": "#4pk0903se",
+            "price": 90.56,
+            "qtd": 1
+        },
+        {
+            "nome": "Correia Alternador",
+            "image": "photos/sist-carga/correias/6pk0870.png",
+            "marca": "Gates",
+            "info": "6PK0870",
+            "linha": "Volkswagen",
+            "linhaCode": "vws",
+            "code": 3759,
+            "linkApli": "#6pk0870",
+            "price": 34.00,
+            "qtd": 1
+        },
+        {
+            "nome": "Correia Alternador",
+            "image": "photos/sist-carga/correias/6pk1740.png",
+            "marca": "Gates",
+            "info": "6PK1740",
+            "linha": "Volkswagen/Ford",
+            "linhaCode": "vws",
+            "secundLineCode":"ford",
+            "code": "sem",
+            "linkApli": "#6pk1740",
+            "price": 0,
+            "qtd": 1
+        },
+        {
+            "nome": "Correia Alternador",
+            "image": "photos/sist-carga/correias/6pk2270.png",
+            "marca": "Daycon",
+            "info": "6PK2270",
+            "linha": "Volkswagen",
+            "linhaCode": "vws",
+            "code": "Sem",
+            "linkApli": "#6pk2270",
+            "price": 0,
+            "qtd": 1
+        },
+        {
+            "nome": "Correia Elástica",
+            "image": "photos/sist-carga/correias/5pk1030sf.png",
+            "marca": "Gates",
+            "info": "5PK1030SF",
+            "linha": "GM",
+            "linhaCode": "gm",
+            "code": 2777,
+            "linkApli": "#5pk1030sf",
+            "price": 84.45,
+            "qtd": 1
+        }
+        
+    ],
+
+
+
+    "correiasDentada": [
+        {
+            "nome": "Correia Dentada",
+            "image": "photos/sist-carga/correia-dent/ct462.png",
+            "marca": "Continental",
+            "info": "CT-462",
+            "linha": "Fiat",
+            "linhaCode": "fiat",
+            "code": "sem",
+            "linkApli": "#ct462",
+            "price": 0,
+            "qtd": 1
+        },
+        {
+            "nome": "Correia Dentada",
+            "image": "photos/sist-carga/correia-dent/138shpn150.png",
+            "marca": "Daycon",
+            "info": "138SHPN150",
+            "linha": "Fiat",
+            "linhaCode": "fiat",
+            "code": 669,
+            "linkApli": "#138shpn150",
+            "price": 29.00,
+            "qtd": 1
+        },
+        {
+            "nome": "Correia Dentada",
+            "image": "photos/sist-carga/correia-dent/40859x22xs.png",
+            "marca": "Gates",
+            "info": "40859X22XS",
+            "linha": "Fiat",
+            "linhaCode": "fiat",
+            "code": 980,
+            "linkApli": "#40859x22xs",
+            "price": 65.00,
+            "qtd": 1
+        },
+        {
+            "nome": "Correia Dentada",
+            "image": "photos/sist-carga/correia-dent/7086768.png",
+            "marca": "7086768",
+            "info": "7086768",
+            "linha": "Fiat",
+            "linhaCode": "fiat",
+            "code": "Sem",
+            "linkApli": "#7086768",
+            "price": 0,
+            "qtd": 1
+        },
+        {
+            "nome": "Correia Dentada",
+            "image": "photos/sist-carga/correia-dent/111sp170h.png",
+            "marca": "Daycon",
+            "info": "111SP170H",
+            "linha": "GM/Fiat",
+            "linhaCode": "gm",
+            "secundLineCode":"fiat",
+            "code": 1330,
+            "linkApli": "#111sp170h",
+            "price": 55.00,
+            "qtd": 0
+        }
+        
+    
+    ],
+
+
+
+    "reguladorVolt": [
+        {
+            "nome": "Regulador Voltagem",
+            "image": "photos/sist-carga/reg-voltagem/ga202.png",
+            "marca": "Gauss",
+            "info": "GA-202",
+            "linha": "GM",
+            "linhaCode": "gm",
+            "code": 277,
+            "linkApli": "#ga202",
+            "price": 26.00,
+            "qtd": 1
+        }
+    ],
+
+
+
+    "estatores": [
+        {
+            "nome": "Estator 90A 14V",
+            "image": "photos/sist-carga/estatores/ar701352.png",
+            "marca": "",
+            "info": "AR-352",
+            "linha": "Fiat/Ford/Volskwagen",
+            "linhaCode": "fiat",
+            "code": 3668,
+            "linkApli": "#ar701352",
+            "price": 322,
+            "qtd": 1
+        },
+        {
+            "nome": "Estator 85A 12V",
+            "image": "photos/sist-carga/estatores/30009automax.png",
+            "marca": "Automax",
+            "info": "30009",
+            "linha": "Fiat",
+            "linhaCode": "fiat",
+            "code": "sem",
+            "linkApli": "#automax30009",
+            "price": 0,
+            "qtd": 1
+        }
     ]
+    
 
 
 

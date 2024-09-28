@@ -1621,7 +1621,6 @@ function filtroTerminais(){
 
 
 
-
 // adding barra axiais
 async function barraAxiais(){
 
@@ -2488,7 +2487,11 @@ async function bieletas(){
 let rowPastilhas = document.querySelector('#row-pastilhas')
 let rowDiscos = document.querySelector('#row-discos')
 let rowSapatas = document.querySelector('#row-sapatas')
-
+let rowCilindros = document.querySelector('#row-cilindros')
+let rowTamboresFreio = document.querySelector('#row-tambores')
+let rowReparos = document.querySelector('#row-reparos')
+let rowCabos = document.querySelector('#row-cabos')
+let rowAcessoriosFreio = document.querySelector('#row-acessorios-freio')
 
 
 
@@ -2755,6 +2758,30 @@ async function sapatasFreio(){
 
     }
 }
+
+
+
+
+
+
+// SESSAO 08
+
+let rowCabosVela = document.querySelector('#row-cabo-vela')
+let rowVelaIgnicao = document.querySelector('#row-vela-ignicao')
+let rowBobinas = document.querySelector('#row-bobinas')
+let rowModoloIgnicao = document.querySelector('#row-modolo-ignicao')
+
+
+
+
+
+// SESSAO 09
+
+let rowTensores = document.querySelector('#row-tensores')
+let rowCorreiaAlter = document.querySelector('#row-correia-alter')
+let rowCorreiaDent = document.querySelector('#row-correia-dent')
+let rowRegVolt = document.querySelector('#row-reg-volt')
+let rowEstator = document.querySelector('#row-estatores')
 
 
 
