@@ -2620,6 +2620,7 @@
         {
             "nome": "Bomba Embreagem",
             "image": "photos/freios/cilindros/bombaEmbreLuk.png",
+            "position": "",
             "marca": "LUK",
             "info": "512 0070 10 0 A1",
             "linha": "Fiat",
@@ -2633,6 +2634,7 @@
             "nome": "Bomba Embreagem",
             "image": "photos/freios/cilindros/5120174100A1.png",
             "marca": "LUK",
+            "position": "",
             "info": "512 0174 10 0 A1",
             "linha": "Fiat",
             "linhaCode": "fiat",
@@ -2645,6 +2647,8 @@
             "nome": "Cilindro Mestre Embreagem",
             "image": "photos/freios/cilindros/cilinMestreEmbre.png",
             "marca": "LUK",
+            "position": "",
+            "info": "",
             "linha": "Fiat",
             "linhaCode": "fiat",
             "code": 3854,
@@ -2704,8 +2708,8 @@
             "image": "photos/freios/tambores/rpta02330.png",
             "marca": "TRW",
             "info": "RPTA-02330",
-            "linha": "Volkswagen",
-            "linhaCode": "vws",
+            "linha": "GM",
+            "linhaCode": "gm",
             "code": 3338,
             "linkApli": "#rpta02330",
             "price": 154.50,
@@ -2815,6 +2819,7 @@
         {
             "nome": "Reparo Pinça Freio",
             "image": "photos/freios/reparos/reparoToro.png",
+            "position": "",
             "marca": "ProKit",
             "info": "reparoToro",
             "linha": "Fiat",
@@ -2840,8 +2845,9 @@
         {
             "nome": "Reparo Sapata Freio",
             "image": "photos/freios/reparos/jgMolasPalio.png",
+            "position": "",
             "marca": "ProKit",
-            "info": "JogoMolas",
+            "info": "",
             "linha": "Fiat",
             "linhaCode": "fiat",
             "code": 2536,
@@ -2878,6 +2884,7 @@
         },
         {
             "nome": "Kit Trava Pastilha Freio",
+            "position": "",
             "image": "photos/freios/reparos/8871061.png",
             "marca": "Brasil-Componente",
             "info": "8871061",
@@ -2916,6 +2923,7 @@
         },
         {
             "nome": "Reparo Pinça Freio",
+            "position": "",
             "image": "photos/freios/reparos/reparoOnix.png",
             "marca": "Prospar",
             "info": "0112.940.000",
@@ -2928,9 +2936,10 @@
         },
         {
             "nome": "JG Molas Sapata Freio",
+            "position": "",
             "image": "photos/freios/reparos/reparoSapata.png",
             "marca": "ProKit",
-            "info": "JogoMolas",
+            "info": "",
             "linha": "GM",
             "linhaCode": "gm",
             "code": 2535,
@@ -2966,6 +2975,7 @@
         },
         {
             "nome": "Reparo Pinça Freio",
+            "position": "",
             "image": "photos/freios/reparos/reparoClio.png",
             "marca": "Prospar",
             "info": "0112.943.000",
@@ -2978,6 +2988,7 @@
         },
         {
             "nome": "Reparo Pinça Freio",
+            "position": "",
             "image": "photos/freios/reparos/reparoGol.png",
             "marca": "ProKit",
             "info": "6108.004.000",
@@ -2990,6 +3001,7 @@
         },
         {
             "nome": "Reparo Pinça Freio",
+            "position": "",
             "image": "photos/freios/reparos/reparoGolG6.png",
             "marca": "ProKit",
             "info": "6180.007.000",
@@ -3002,6 +3014,7 @@
         },
         {
             "nome": "Parafuso Pinça Freio",
+            "position": "",
             "image": "photos/freios/reparos/PFallen.png",
             "marca": "ProKit",
             "info": "0090.028.000",
@@ -3014,7 +3027,7 @@
         },
         {
             "nome": "Reparo Freio",
-            "position": "Centralizador",
+            "position": "",
             "image": "photos/freios/reparos/reparoCent.png",
             "marca": "Sem",
             "info": "Reparo Centralizador",
@@ -3028,9 +3041,10 @@
         },
         {
             "nome": "Reparo Pinça Freio",
+            "position": "",
             "image": "photos/freios/reparos/repCorsel0194a.png",
             "marca": "Sem",
-            "info": "reparoPincaFreio",
+            "info": "",
             "linha": "Fiat/Ford",
             "linhaCode": "fiat",
             "secundLineCode":"ford",
@@ -3055,9 +3069,10 @@
         },
         {
             "nome": "Reparo Pinça Freio",
+            "position": "",
             "image": "photos/freios/reparos/reparoFord.png",
             "marca": "Sem",
-            "info": "reparoPincaFreio",
+            "info": "",
             "linha": "Fiat",
             "linhaCode": "fiat",
             "code": "sem",
@@ -3074,6 +3089,7 @@
         
         {
             "nome": "Cabo Embreagem",
+            "Lado": "",
             "image": "photos/freios/cabos/fnm088j.png",
             "marca": "Efrari",
             "info": "FNM088J",
@@ -3151,7 +3167,7 @@
         },
         {
             "nome": "Cabo Freio Mão",
-            "Lado": "L.E",
+            "Lado": "L.D",
             "image": "photos/freios/cabos/cabovel1667379.png",
             "marca": "Cabovel",
             "info": "167378",
@@ -3167,6 +3183,7 @@
             "Lado": "Tras.",
             "image": "photos/freios/cabos/flexivelFox.png",
             "marca": "Norflex",
+            "info":"",
             "linha": "Volkswagen",
             "linhaCode": "vws",
             "code": 3201,
@@ -3176,6 +3193,7 @@
         },
         {
             "nome": "Cabo Comando Embreagem",
+            "Lado": "",
             "image": "photos/freios/cabos/caboComando.png",
             "marca": "Fania",
             "info": "61107",
@@ -3188,6 +3206,7 @@
         },
         {
             "nome": "Cabo Freio",
+            "Lado": "",
             "image": "photos/freios/cabos/fania30340.png",
             "marca": "Fania",
             "info": "30340",
@@ -3200,6 +3219,7 @@
         },
         {
             "nome": "Cabo Freio Mão",
+            "Lado": "",
             "image": "photos/freios/cabos/iks4245.png",
             "marca": "IKS",
             "info": "IKS-4245",
