@@ -3759,9 +3759,385 @@
             "price": 0,
             "qtd": 1
         }
-    ]
+    ],
+
+
+    "bendix": [
+        {
+            "nome": "Impulsor",
+            "image": "photos/sist-partida/impulsor/0846.png",
+            "marca": "Zen",
+            "info": "0846",
+            "linha": "Fiat",
+            "linhaCode": "fiat",
+            "code": 564,
+            "linkApli": "#0846",
+            "price": 52.63,
+            "qtd": 1
+        },
+        {
+            "nome": "Impulsor",
+            "image": "photos/sist-partida/impulsor/0743.png",
+            "marca": "Zen",
+            "info": "0743",
+            "linha": "Fiat",
+            "linhaCode": "fiat",
+            "code": "sem",
+            "linkApli": "#0743",
+            "price": 0,
+            "qtd": 1
+        },
+        {
+            "nome": "Impulsor",
+            "image": "photos/sist-partida/impulsor/0843.png",
+            "marca": "Zen",
+            "info": "0843",
+            "linha": "GM",
+            "linhaCode": "gm",
+            "secundLineCode":"renault",
+            "code": "sem",
+            "linkApli": "#0843",
+            "price": 0,
+            "qtd": 1
+        },
+        {
+            "nome": "Impulsor",
+            "image": "photos/sist-partida/impulsor/1745.png",
+            "marca": "Zen",
+            "info": "1745",
+            "linha": "GM",
+            "linhaCode": "gm",
+            "code": 4675,
+            "linkApli": "#1745",
+            "price": 0,
+            "qtd": 1
+        },
+        {
+            "nome": "Impulsor",
+            "image": "photos/sist-partida/impulsor/9901180.png",
+            "marca": "BZM",
+            "info": "9901180",
+            "linha": "GM",
+            "linhaCode": "gm",
+            "code": "sem",
+            "linkApli": "#9901180",
+            "price": 0,
+            "qtd": 1
+        },
+        {
+            "nome": "Impulsor",
+            "image": "photos/sist-partida/impulsor/0942.png",
+            "marca": "Kheller",
+            "info": "0942",
+            "linha": "Volkswagen",
+            "linhaCode": "vws",
+            "code": 274,
+            "linkApli": "#0942",
+            "price": 56.00,
+            "qtd": 1
+        }
+        
+    ],
     
 
+    "portaEscovas": [
+        {
+            "nome": "Porta Escovas",
+            "image": "photos/sist-partida/escovas/A11712V.png",
+            "marca": "Sulcarbon",
+            "info": "A-117-12V",
+            "linha": "Fiat/Ford/Volskwagen",
+            "linhaCode": "fiat",
+            "code": "sem",
+            "linkApli": "#A11712V",
+            "price": 0,
+            "qtd": 1
+        },
+        {
+            "nome": "Porta Escovas",
+            "image": "photos/sist-partida/escovas/myr1094.png",
+            "marca": "MYR",
+            "info": "MYR-1094",
+            "linha": "Fiat",
+            "linhaCode": "fiat",
+            "code": 296,
+            "linkApli": "#myr1094",
+            "price": 21.00,
+            "qtd": 1
+        },
+        {
+            "nome": "Porta Escovas",
+            "image": "photos/sist-partida/escovas/A11812V.png",
+            "marca": "Sulcarbon",
+            "info": "A-118-12V",
+            "linha": "Fiat/GM/Volkswagen",
+            "linhaCode": "fiat",
+            "code": 1972,
+            "linkApli": "#A11812V",
+            "price": 30.00,
+            "qtd": 1
+        },
+        {
+            "nome": "Porta Escovas",
+            "image": "photos/sist-partida/escovas/my71051.png",
+            "marca": "MYR",
+            "info": "MY-71051",
+            "linha": "Volkswagen",
+            "linhaCode": "vws",
+            "code": 1971,
+            "linkApli": "#my71051",
+            "price": 25.00,
+            "qtd": 1
+        },
+        {
+            "nome": "Porta Escovas",
+            "image": "photos/sist-partida/escovas/A13012V.png",
+            "marca": "Sulcarbon",
+            "info": "A13012V",
+            "linha": "GM/Ford",
+            "linhaCode": "gm",
+            "secundLineCode": "ford",
+            "code": 1974,
+            "linkApli": "#A13012V",
+            "price": 65.00,
+            "qtd": 1
+        },
+        {
+            "nome": "Porta Escovas",
+            "image": "photos/sist-partida/escovas/my71033-4.png",
+            "marca": "MYR",
+            "info": "MY-71033/4",
+            "linha": "GM/Mercedes",
+            "linhaCode": "gm",
+            "code": "sem",
+            "linkApli": "#my71033-4",
+            "price": 0,
+            "qtd": 1
+        }
+        
+    ],
+
+
+    "acessoriosMotorPart": [
+        {
+            "nome": "Bucha Motor Partida",
+            "image": "photos/sist-partida/acessorios-partida/buchaPerkis.png",
+            "marca": "",
+            "info": "Motor Perkins",
+            "linha": "GM/Ford",
+            "linhaCode": "gm",
+            "code": "sem",
+            "linkApli": "#buchaPerkis",
+            "price": 0,
+            "qtd": 1
+        },
+        {
+            "nome": "Bucha Motor Partida",
+            "image": "photos/sist-partida/acessorios-partida/buchaMaxion.png",
+            "marca": "",
+            "info": "Motor Maxion",
+            "linha": "GM/Ford",
+            "linhaCode": "",
+            "code": 2702,
+            "linkApli": "#buchaMaxion",
+            "price": 23.00,
+            "qtd": 1
+        },
+        {
+            "nome": "Bucha Motor Partida",
+            "image": "photos/sist-partida/acessorios-partida/4403.png",
+            "marca": "Unifap",
+            "info": "4.403",
+            "linha": "GM/Ford",
+            "linhaCode": "gm",
+            "code": "sem",
+            "linkApli": "#4403",
+            "price": 0,
+            "qtd": 1
+        },
+        {
+            "nome": "Bucha Motor Partida",
+            "image": "photos/sist-partida/acessorios-partida/arruelaPerkins.png",
+            "marca": "",
+            "info": "Motor Perkins",
+            "linha": "Universal",
+            "linhaCode": "",
+            "code": "sem",
+            "linkApli": "#arruelaPerkins",
+            "price": 0,
+            "qtd": 1
+        }
+        
+    ],
+
+
+
+    "bombasDgua":[
+        {
+            "nome": "Bomba D'Agua",
+            "image": "photos/arrefecimento/bombas-agua/90000316.png",
+            "marca": "Schadek",
+            "info": "90000316",
+            "linha": "Fiat",
+            "linhaCode": "fiat",
+            "code": 3598,
+            "linkApli": "#90000316",
+            "price": 111,
+            "qtd": 1
+        },
+        {
+            "nome": "Bomba D'Agua",
+            "image": "photos/arrefecimento/bombas-agua/90000520.png",
+            "marca": "Schadek",
+            "info": "90000520",
+            "linha": "Fiat",
+            "linhaCode": "fiat",
+            "code": 3708,
+            "linkApli": "#90000520",
+            "price": 98.54,
+            "qtd": 1
+        },
+        {
+            "nome": "Bomba D'Agua",
+            "image": "photos/arrefecimento/bombas-agua/204000.png",
+            "marca": "Indisa",
+            "info": "204000",
+            "linha": "Volkswagen/Ford",
+            "linhaCode": "vws",
+            "secundLineCode":"ford",
+            "code": 3009,
+            "linkApli": "#204000",
+            "price": 115.78,
+            "qtd": 1
+        },
+        {
+            "nome": "Bomba D'Agua",
+            "image": "photos/arrefecimento/bombas-agua/454002.png",
+            "marca": "Indisa",
+            "info": "454002",
+            "linha": "Volkswagen",
+            "linhaCode": "vws",
+            "code": "sem",
+            "linkApli": "#454002",
+            "price": 0,
+            "qtd": 1
+        }
+        
+    ],
+
+
+
+    "reservatorioDagua": [
+        {
+            "nome": "Radiador",
+            "image": "photos/arrefecimento/reservatorios/g1028.png",
+            "marca": "Gonel",
+            "info": "G-1028",
+            "linha": "Volkswagen",
+            "linhaCode": "vws",
+            "code": 1153,
+            "linkApli": "#g1028",
+            "price": 83.87,
+            "qtd": 1
+        },
+        {
+            "nome": "Radiador",
+            "image": "photos/arrefecimento/reservatorios/g1002.png",
+            "marca": "Gonel",
+            "info": "G-1002",
+            "linha": "Volkswagen",
+            "linhaCode": "vws",
+            "code": 15,
+            "linkApli": "#g1002",
+            "price": 28.00,
+            "qtd": 1
+        },
+        {
+            "nome": "Coxim Radiador",
+            "image": "photos/arrefecimento/reservatorios/coximRadiador.png",
+            "marca": "ProKit",
+            "info": "",
+            "linha": "Volkswagen",
+            "linhaCode": "vws",
+            "code": 2854,
+            "linkApli": "#coximRadiador",
+            "price": 77.80,
+            "qtd": 1
+        },
+        {
+            "nome": "Reserv. Limpador Vidro",
+            "image": "photos/arrefecimento/reservatorios/g1220.png",
+            "marca": "Gonel",
+            "info": "G-1220",
+            "linha": "GM",
+            "linhaCode": "gm",
+            "code": 558,
+            "linkApli": "#g1220",
+            "price": 55.00,
+            "qtd": 1
+        }
+        
+    ],
+
+
+
+    "valvulasTermo": [
+        {
+            "nome": "Válvula Termostática",
+            "image": "photos/arrefecimento/valvulas/401120882.png",
+            "marca": "Iguaçu",
+            "info": "401.1208-82",
+            "linha": "Fiat",
+            "linhaCode": "fiat",
+            "code": 780,
+            "linkApli": "#401120882",
+            "price": 0,
+            "qtd": 1
+        },
+        {
+            "nome": "Cotovelo Válvula Termo.",
+            "image": "photos/arrefecimento/valvulas/1514.png",
+            "marca": "Dofab",
+            "info": "1514",
+            "linha": "Volkswagen",
+            "linhaCode": "vws",
+            "code": 2864,
+            "linkApli": "#1514",
+            "price": 10.00,
+            "qtd": 1
+        }
+        
+    ],
+
+
+    
+    "eletroventiladores": [
+        {
+            "nome": "Eletroventilador",
+            "image": "photos/arrefecimento/ventoinhas/bau100303.png",
+            "marca": "Bauen",
+            "info": "BAU-100303",
+            "linha": "Fiat/GM",
+            "linhaCode": "fiat",
+            "code": 1617,
+            "linkApli": "#bau100303",
+            "price": 330,
+            "qtd": 1
+        },
+        {
+            "nome": "Eletroventilador",
+            "image": "photos/arrefecimento/ventoinhas/mq0878.png",
+            "marca": "MQ",
+            "info": "MQ-0878",
+            "linha": "GM",
+            "linhaCode": "gm",
+            "code": 3737,
+            "linkApli": "#mq0878",
+            "price": 458,
+            "qtd": 1
+        }
+        
+    ]
 
 
 }
