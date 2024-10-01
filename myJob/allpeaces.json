@@ -4137,6 +4137,328 @@
             "qtd": 1
         }
         
+    ],
+
+
+
+    "canosDagua": [
+            {
+                "nome": "Mangote Sup. Radiador",
+                "image": "photos/arrefecimento/canos/MM8123.png",
+                "marca": "Jamaica",
+                "info": "MM-8123",
+                "linha": "GM",
+                "linhaCode": "gm",
+                "code": 3752,
+                "linkApli": "#MM8123",
+                "price": 42.53,
+                "qtd": 1
+            },
+            {
+                "nome": "Mangote Sup. Radiador",
+                "image": "photos/arrefecimento/canos/lion8702.png",
+                "marca": "",
+                "info": "Lion-8702",
+                "linha": "GM",
+                "linhaCode": "gm",
+                "code": 3751,
+                "linkApli": "#lion8702",
+                "price": 57.38,
+                "qtd": 1
+            },
+            {
+                "nome": "Mangote Bomba D'Agua",
+                "image": "photos/arrefecimento/canos/67197.png",
+                "marca": "Uniflex",
+                "info": "67197",
+                "linha": "GM",
+                "linhaCode": "gm",
+                "code": 3424,
+                "linkApli": "#67197",
+                "price": 25.40,
+                "qtd": 1
+            },
+            {
+                "nome": "Mangote Bomba D'Agua",
+                "image": "photos/arrefecimento/canos/67166.png",
+                "marca": "Uniflex",
+                "info": "67166",
+                "linha": "GM",
+                "linhaCode": "gm",
+                "code": 3423,
+                "linkApli": "#67166",
+                "price": 35.46,
+                "qtd": 1
+            },
+            {
+                "nome": "Mangote Sup. Radiador",
+                "image": "photos/arrefecimento/canos/67186.png",
+                "marca": "Uniflex",
+                "info": "67186",
+                "linha": "GM",
+                "linhaCode": "gm",
+                "code": "sem",
+                "linkApli": "#67186",
+                "price": 0,
+                "qtd": 1
+            },
+            {
+                "nome": "Mangote Coletor Admissão",
+                "image": "photos/arrefecimento/canos/67313.png",
+                "marca": "Uniflex",
+                "info": "67313",
+                "linha": "GM",
+                "linhaCode": "gm",
+                "code": 3428,
+                "linkApli": "#67313",
+                "price": 31.38,
+                "qtd": 1
+            },
+            {
+                "nome": "Mangote Sup. Radiador",
+                "image": "photos/arrefecimento/canos/67101.png",
+                "marca": "Uniflex",
+                "info": "67101",
+                "linha": "GM",
+                "linhaCode": "gm",
+                "code": 3420,
+                "linkApli": "#67101",
+                "price": 64.62,
+                "qtd": 1
+            },
+            {
+                "nome": "Mangote Infe. Radiador",
+                "image": "photos/arrefecimento/canos/67092.png",
+                "marca": "Uniflex",
+                "info": "67092",
+                "linha": "GM",
+                "linhaCode": "gm",
+                "code": 3419,
+                "linkApli": "#67092",
+                "price": 87.58,
+                "qtd": 1
+            },
+            {
+                "nome": "Mangote Bomba D'Agua ao Termostato",
+                "image": "photos/arrefecimento/canos/67076.png",
+                "marca": "Uniflex",
+                "info": "67076",
+                "linha": "Fiat",
+                "linhaCode": "fiat",
+                "code": 3415,
+                "linkApli": "#67076",
+                "price": 31.02,
+                "qtd": 1
+            },
+            {
+                "nome": "Mangote Bomba D'Agua ao Termostato",
+                "image": "photos/arrefecimento/canos/67086.png",
+                "marca": "Uniflex",
+                "info": "67086",
+                "linha": "Fiat",
+                "linhaCode": "fiat",
+                "code": 3418,
+                "linkApli": "#67086",
+                "price": 25.43,
+                "qtd": 1
+            },
+            {
+                "nome": "Mangote Infe. Radiador",
+                "image": "photos/arrefecimento/canos/67079.png",
+                "marca": "Uniflex",
+                "info": "67079",
+                "linha": "Fiat",
+                "linhaCode": "fiat",
+                "code": 3417,
+                "linkApli": "#67079",
+                "price": 35.00,
+                "qtd": 1
+            },
+            {
+                "nome": "Mangote Bomba D'Agua ao Termostato",
+                "image": "photos/arrefecimento/canos/67274.png",
+                "marca": "Uniflex",
+                "info": "67274",
+                "linha": "Fiat",
+                "linhaCode": "fiat",
+                "code": 3426,
+                "linkApli": "#67274",
+                "price": 40.00,
+                "qtd": 1
+            },
+            {
+                "nome": "Mangote Sup. Radiador",
+                "image": "photos/arrefecimento/canos/67208.png",
+                "marca": "Uniflex",
+                "info": "67208",
+                "linha": "Fiat",
+                "linhaCode": "fiat",
+                "code": 3425,
+                "linkApli": "#67208",
+                "price": 62.83,
+                "qtd": 1
+            },
+            {
+                "nome": "Mangote Sup. Radiador",
+                "image": "photos/arrefecimento/canos/67365.png",
+                "marca": "Uniflex",
+                "info": "67365",
+                "linha": "Fiat",
+                "linhaCode": "fiat",
+                "code": 3429,
+                "linkApli": "#67365",
+                "price": 241.78,
+                "qtd": 1
+            },
+            {
+                "nome": "Mangote Reserv. Expanssão",
+                "image": "photos/arrefecimento/canos/67136.png",
+                "marca": "Uniflex",
+                "info": "67136",
+                "linha": "Ford",
+                "linhaCode": "ford",
+                "code": 3421,
+                "linkApli": "#67136",
+                "price": 76.65,
+                "qtd": 1
+            }
+            
+    ],
+
+
+
+    "tubosDagua": [
+        {
+            "nome": "Tubo D'Agua",
+            "image": "photos/arrefecimento/tubos/mg115.png",
+            "marca": "MG",
+            "info": "MG-115",
+            "linha": "GM",
+            "linhaCode": "gm",
+            "code": "sem",
+            "linkApli": "#mg115",
+            "price": 0,
+            "qtd": 1
+        },
+        {
+            "nome": "Tubo D'Agua",
+            "image": "photos/arrefecimento/tubos/7020.png",
+            "marca": "Wisa",
+            "info": "7020",
+            "linha": "GM",
+            "linhaCode": "gm",
+            "code": 494,
+            "linkApli": "#7020",
+            "price": 30.00,
+            "qtd": 1
+        },
+        {
+            "nome": "Tubo D'Agua",
+            "image": "photos/arrefecimento/tubos/7074.png",
+            "marca": "Wisa",
+            "info": "7074",
+            "linha": "GM",
+            "linhaCode": "gm",
+            "code": 2858,
+            "linkApli": "#7074",
+            "price": 25.00,
+            "qtd": 1
+        },
+        {
+            "nome": "Tubo D'Agua",
+            "image": "photos/arrefecimento/tubos/FTB-0552.png",
+            "marca": "FatalKits",
+            "info": "FTB-0552",
+            "linha": "Fiat",
+            "linhaCode": "fiat",
+            "code": "sem",
+            "linkApli": "#FTB-0552",
+            "price": 0,
+            "qtd": 1
+        },
+        {
+            "nome": "Tubo D'Agua",
+            "image": "photos/arrefecimento/tubos/FTB-0647.png",
+            "marca": "FatalKits",
+            "info": "FTB-0647",
+            "linha": "Fiat",
+            "linhaCode": "fiat",
+            "code": "sem",
+            "linkApli": "#FTB-0647",
+            "price": 0,
+            "qtd": 1
+        }
+        
+    ],
+
+
+    "resistenciaEletro": [
+        {
+            "nome": "Resistência Eletroventilador",
+            "image": "photos/arrefecimento/acessorios/arev06007.png",
+            "marca": "",
+            "info": "AREV06007",
+            "linha": "Ford",
+            "linhaCode": "ford",
+            "code": 2254,
+            "linkApli": "#arev06007",
+            "price": 103.87,
+            "qtd": 1
+        },
+        {
+            "nome": "Resistência Eletroventilador",
+            "image": "photos/arrefecimento/acessorios/88re7788.png",
+            "marca": "Poliar",
+            "info": "88RE7788",
+            "linha": "Volkswagen",
+            "linhaCode": "vws",
+            "code": 2585,
+            "linkApli": "#88re7788",
+            "price": 94.00,
+            "qtd": 1
+        }
+        
+    ],
+
+
+    
+    "diversasArrefeci": [
+        {
+            "nome": "Cavalete D'Agua",
+            "image": "photos/arrefecimento/acessorios/7008.png",
+            "marca": "Wisa",
+            "info": "7008",
+            "linha": "Volkswagen",
+            "linhaCode": "vws",
+            "code": 2717,
+            "linkApli": "#7008",
+            "price": 45.00,
+            "qtd": 1
+        },
+        {
+            "nome": "Válvula Expanssão",
+            "image": "photos/arrefecimento/acessorios/88va400823.png",
+            "marca": "Poliar",
+            "info": "88VA400823",
+            "linha": "Fiat",
+            "linhaCode": "fiat",
+            "code": 2369,
+            "linkApli": "#88va400823",
+            "price": 181.40,
+            "qtd": 1
+        },
+        {
+            "nome": "Conexão L Mangote",
+            "image": "photos/arrefecimento/acessorios/conexaoL.png",
+            "marca": "",
+            "info": "",
+            "linha": "Universal",
+            "linhaCode": "",
+            "code": 3754,
+            "linkApli": "#conexaoL",
+            "price": 20.00,
+            "qtd": 1
+        }
     ]
 
 
