@@ -3922,8 +3922,8 @@
         {
             "nome": "Bucha Motor Partida",
             "image": "photos/sist-partida/acessorios-partida/buchaPerkis.png",
-            "marca": "",
             "info": "Motor Perkins",
+            "marca": "",
             "linha": "GM/Ford",
             "linhaCode": "gm",
             "code": "sem",
@@ -3934,17 +3934,17 @@
         {
             "nome": "Bucha Motor Partida",
             "image": "photos/sist-partida/acessorios-partida/buchaMaxion.png",
-            "marca": "",
             "info": "Motor Maxion",
+            "marca": "",
             "linha": "GM/Ford",
-            "linhaCode": "",
+            "linhaCode": "gm",
             "code": 2702,
             "linkApli": "#buchaMaxion",
             "price": 23.00,
             "qtd": 1
         },
         {
-            "nome": "Bucha Motor Partida",
+            "nome": "Garfo Motor Partida",
             "image": "photos/sist-partida/acessorios-partida/4403.png",
             "marca": "Unifap",
             "info": "4.403",
@@ -3956,12 +3956,12 @@
             "qtd": 1
         },
         {
-            "nome": "Bucha Motor Partida",
+            "nome": "Arruela Motor Partida",
             "image": "photos/sist-partida/acessorios-partida/arruelaPerkins.png",
             "marca": "",
             "info": "Motor Perkins",
             "linha": "Universal",
-            "linhaCode": "",
+            "linhaCode": "universal",
             "code": "sem",
             "linkApli": "#arruelaPerkins",
             "price": 0,
