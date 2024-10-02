@@ -4459,6 +4459,340 @@
             "price": 20.00,
             "qtd": 1
         }
+    ],
+
+
+    "bicosInjecao": [
+        {
+            "nome": "Bico Injeção",
+            "image": "photos/sist-combust/bicos/mbdz111.png",
+            "marca": "Meca Brasil",
+            "info": "MBDZ111",
+            "linha": "GM",
+            "linhaCode": "gm",
+            "code": 2255,
+            "linkApli": "#mbdz111",
+            "price": 249.56,
+            "qtd": 1
+        },
+        {
+            "nome": "Bico Injeção",
+            "image": "photos/sist-combust/bicos/0280155966.png",
+            "marca": "Bosch",
+            "info": "0280155966",
+            "linha": "GM",
+            "linhaCode": "gm",
+            "code": "sem",
+            "linkApli": "#0280155966",
+            "price": 0,
+            "qtd": 1
+        },
+        {
+            "nome": "Bico Injeção",
+            "image": "photos/sist-combust/bicos/stkm176.png",
+            "marca": "Rainha da Sete",
+            "info": "STKM176",
+            "linha": "Volkswagen",
+            "linhaCode": "vws",
+            "code": 3023,
+            "linkApli": "#stkm176",
+            "price": 85.00,
+            "qtd": 1
+        }
+        
+    ],
+
+
+
+    "bombaCombust": [
+        {
+            "nome": "Bomba Combustível",
+            "image": "photos/sist-combust/bomba-combust/dpl180981.png",
+            "marca": "DPL",
+            "info": "DPL-180981",
+            "linha": "Fiat/Renault/Peugeot",
+            "linhaCode": "fiat",
+            "code": 3440,
+            "linkApli": "#dpl180981",
+            "price": 495,
+            "qtd": 1
+        }
+        
+    ],
+
+
+
+    "flangeBombaCombust": [
+        {
+            "nome": "Flange",
+            "image": "photos/sist-combust/flanges/t03006.png",
+            "marca": "TSA",
+            "info": "T-03006",
+            "linha": "GM",
+            "linhaCode": "gm",
+            "code": 1976,
+            "linkApli": "#t03006",
+            "price": 55.00,
+            "qtd": 1
+        },
+        {
+            "nome": "Flange",
+            "image": "photos/sist-combust/flanges/t030024.png",
+            "marca": "TSA",
+            "info": "T-030024",
+            "linha": "Volkswagen",
+            "linhaCode": "vws",
+            "code": 1975,
+            "linkApli": "#t030024",
+            "price": 36.00,
+            "qtd": 1
+        }
+        
+    ],
+
+
+
+    "acessoriosArrefeci": [
+        {
+            "nome": "Borracha do Flange",
+            "image": "photos/sist-combust/acessorios-combust/vp7030.png",
+            "marca": "VP",
+            "info": "VP-7030",
+            "linha": "Fiat",
+            "linhaCode": "fiat",
+            "code": 90,
+            "linkApli": "#vp7030",
+            "price": 17.00,
+            "qtd": 1
+        },
+        {
+            "nome": "Atuador Marcha Lenta",
+            "image": "photos/sist-combust/acessorios-combust/dpl808901.png",
+            "marca": "DPL",
+            "info": "DPL-808901",
+            "linha": "Fiat",
+            "linhaCode": "fiat",
+            "code": 510,
+            "linkApli": "#dpl808901",
+            "price": 100,
+            "qtd": 1
+        },
+        {
+            "nome": "Corpo Borboleta",
+            "image": "photos/sist-combust/acessorios-combust/GTEF3611.png",
+            "marca": "Magneti",
+            "info": "GTEF3611",
+            "linha": "Fiat",
+            "linhaCode": "fiat",
+            "code": 1896,
+            "linkApli": "#GTEF3611",
+            "price": 746.66,
+            "qtd": 1
+        }
+       
+    ],
+
+
+    "discosEmbreagem": [
+        
+        {
+            "nome": "Kit Disco Embreagem",
+            "image": "photos/sist-transmi/disco-embre/620323600.png",
+            "marca": "LUK",
+            "info": "620323600",
+            "linha": "GM",
+            "linhaCode": "gm",
+            "code": "Sem",
+            "linkApli": "#620323600",
+            "price": 0,
+            "qtd": 1
+        },
+        {
+            "nome": "Kit Disco Embreagem",
+            "image": "photos/sist-transmi/disco-embre/6222086000.png",
+            "marca": "LUK",
+            "info": "6222086000",
+            "linha": "GM",
+            "linhaCode": "gm",
+            "code": 3670,
+            "linkApli": "#6222086000",
+            "price": 627.73,
+            "qtd": 1
+        }
+       
+    ],
+
+
+
+    "reparoCambioTrabulador": [
+        {
+            "nome": "Kit Alavanca Câmbio",
+            "image": "photos/sist-transmi/reparos/35870.png",
+            "marca": "Amortex",
+            "info": "35870",
+            "linha": "Volkswagen",
+            "linhaCode": "vws",
+            "code": 1277,
+            "linkApli": "#35870",
+            "price": 10.00,
+            "qtd": 1
+        },
+        {
+            "nome": "Kit Alavanca Alta",
+            "image": "photos/sist-transmi/reparos/35882.png",
+            "marca": "",
+            "info": "35882",
+            "linha": "Fiat",
+            "linhaCode": "fiat",
+            "code": 1278,
+            "linkApli": "#35882",
+            "price": 46.60,
+            "qtd": 1
+        },
+        {
+            "nome": "Kit Alavanca Baixa",
+            "image": "photos/sist-transmi/reparos/35883.png",
+            "marca": "",
+            "info": "35883",
+            "linha": "Fiat",
+            "linhaCode": "fiat",
+            "code": 1279,
+            "linkApli": "#35883",
+            "price": 46.60,
+            "qtd": 1
+        },
+        {
+            "nome": "Kit Alavanca",
+            "image": "photos/sist-transmi/reparos/8509.png",
+            "marca": "Talifama",
+            "info": "8509",
+            "linha": "Fiat",
+            "linhaCode": "fiat",
+            "code": "sem",
+            "linkApli": "#8509",
+            "price": 0,
+            "qtd": 1
+        },
+        {
+            "nome": "Kit Reparo Alavanca",
+            "image": "photos/sist-transmi/reparos/35881.png",
+            "marca": "Talifama",
+            "info": "35881",
+            "linha": "Fiat",
+            "linhaCode": "fiat",
+            "code": 2578,
+            "linkApli": "#35881",
+            "price": 26.12,
+            "qtd": 1
+        },
+        {
+            "nome": "Pino Conexão Trambulador",
+            "image": "photos/sist-transmi/reparos/tl8766.png",
+            "marca": "Talifama",
+            "info": "TL-8766",
+            "linha": "GM",
+            "linhaCode": "gm",
+            "code": "sem",
+            "linkApli": "#tl8766",
+            "price": 0,
+            "qtd": 1
+        },
+        {
+            "nome": "Alavanca Trambulador",
+            "image": "photos/sist-transmi/reparos/alavancaCobalt.png",
+            "marca": "",
+            "info": "0692.140.000",
+            "linha": "GM",
+            "linhaCode": "gm",
+            "code": 2533,
+            "linkApli": "#alavancaCobalt",
+            "price": 64.84,
+            "qtd": 1
+        },
+        {
+            "nome": "Alavanca Trambulador",
+            "image": "photos/sist-transmi/reparos/34944.png",
+            "marca": "Amortex",
+            "info": "34944",
+            "linha": "GM",
+            "linhaCode": "gm",
+            "code": 3410,
+            "linkApli": "#34944",
+            "price": 41.12,
+            "qtd": 1
+        },
+        {
+            "nome": "Terminal Engate",
+            "image": "photos/sist-transmi/reparos/terminalEngate.png",
+            "marca": "",
+            "info": "",
+            "linha": "GM",
+            "linhaCode": "gm",
+            "code": 1156,
+            "linkApli": "#terminalEngate",
+            "price": 45.00,
+            "qtd": 1
+        }
+    ],
+
+
+
+    "cubosRoda": [
+        {
+            "nome": "Cubo Roda",
+            "position": "Tras.",
+            "image": "photos/sist-rodagem/cubos/hfct38.png",
+            "marca": "Hipper-Freios",
+            "info": "HFCT-38",
+            "linha": "Fiat",
+            "linhaCode": "fiat",
+            "code": 27,
+            "linkApli": "#hfct38",
+            "price": 146.75,
+            "qtd": 1
+        },
+        {
+            "nome": "Cubo Roda",
+            "position": "Diant.",
+            "image": "photos/sist-rodagem/cubos/hfcd31.png",
+            "marca": "Hipper-Freios",
+            "info": "HFCT-31",
+            "linha": "Fiat",
+            "linhaCode": "fiat",
+            "code": 2009,
+            "linkApli": "#hfcd31",
+            "price": 66.00,
+            "qtd": 1
+        },
+        {
+            "nome": "Cubo Roda",
+            "position": "Diant.",
+            "image": "photos/sist-rodagem/cubos/cr77.png",
+            "marca": "HBR",
+            "info": "CR-77",
+            "linha": "Fiat",
+            "linhaCode": "fiat",
+            "code": 3305,
+            "linkApli": "#cr77",
+            "price": 230,
+            "qtd": 1
+        },
+        {
+            "nome": "Cubo Roda",
+            "position": "Diant.",
+            "image": "photos/sist-rodagem/cubos/al804.png",
+            "marca": "IMA",
+            "info": "AL-804",
+            "linha": "Volkswagen",
+            "linhaCode": "vws",
+            "code": 1218,
+            "linkApli": "#al804",
+            "price": 92.00,
+            "qtd": 1
+        }
+
+
+
     ]
 
 
