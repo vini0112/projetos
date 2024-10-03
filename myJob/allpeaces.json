@@ -690,7 +690,7 @@
             "code": 439,
             "linkApli": "#arl4150",
             "price": 19.44,
-            "qtd": 1
+            "qtd": 0
         },
         {
             "nome": "Filtro de Ar",
@@ -4793,6 +4793,483 @@
 
 
 
+    ],
+
+
+    "pontasEixo": [
+        {
+            "nome": "Ponta Eixo",
+            "position": "Tras.",
+            "image": "photos/sist-rodagem/ponta-eixo/pe5.png",
+            "marca": "HBR",
+            "info": "PE5",
+            "linha": "GM",
+            "linhaCode": "gm",
+            "code": 3306,
+            "linkApli": "#pe5",
+            "price": 80.00,
+            "qtd": 1
+        },
+        {
+            "nome": "Ponta Eixo",
+            "position": "Tras.",
+            "image": "photos/sist-rodagem/ponta-eixo/AL101.png",
+            "marca": "IMA",
+            "info": "AL-101",
+            "linha": "GM",
+            "linhaCode": "gm",
+            "code": 2779,
+            "linkApli": "#al101",
+            "price": 119.64,
+            "qtd": 1
+        },
+        {
+            "nome": "Ponta Eixo",
+            "position": "Tras.",
+            "image": "photos/sist-rodagem/ponta-eixo/AL801.png",
+            "marca": "IMA",
+            "info": "AL-801",
+            "linha": "Volkswagen",
+            "linhaCode": "vws",
+            "code": 3164,
+            "linkApli": "#al801",
+            "price": 100,
+            "qtd": 1
+        },
+        {
+            "nome": "Ponta Eixo",
+            "position": "Tras.",
+            "image": "photos/sist-rodagem/ponta-eixo/AL521.png",
+            "marca": "IMA",
+            "info": "AL-521",
+            "linha": "Volkswagen",
+            "linhaCode": "vws",
+            "code": 2723,
+            "linkApli": "#al521",
+            "price": 108.69,
+            "qtd": 1
+        },
+        {
+            "nome": "Ponta Eixo",
+            "position": "Tras.",
+            "image": "photos/sist-rodagem/ponta-eixo/AL649.png",
+            "marca": "IMA",
+            "info": "AL-649",
+            "linha": "Fiat",
+            "linhaCode": "fiat",
+            "code": "Sem",
+            "linkApli": "#al649",
+            "price": 0,
+            "qtd": 1
+        }
+        
+    ],
+
+
+
+    "juntasHomocinetica": [
+        {
+            "nome": "Junta Homocinética Fixa",
+            "image": "photos/sist-rodagem/juntas/JHC03128.png",
+            "marca": "Cofap",
+            "info": "JHC03128",
+            "linha": "Fiat",
+            "linhaCode": "fiat",
+            "code": 3461,
+            "linkApli": "#JHC03128",
+            "price": 245,
+            "qtd": 1
+        },
+        {
+            "nome": "Junta Homocinética Fixa",
+            "image": "photos/sist-rodagem/juntas/HC007.png",
+            "marca": "Volda",
+            "info": "HC007",
+            "linha": "Fiat/Citroen/Peugeot",
+            "linhaCode": "fiat",
+            "code": 3100,
+            "linkApli": "#HC007",
+            "price": 254.53,
+            "qtd": 1
+        },
+        {
+            "nome": "Junta Homocinética Fixa",
+            "image": "photos/sist-rodagem/juntas/MA22211409.png",
+            "marca": "MotorAço",
+            "info": "MA22211409",
+            "linha": "Fiat",
+            "linhaCode": "fiat",
+            "code": 2843,
+            "linkApli": "#MA22211409",
+            "price": 223.22,
+            "qtd": 1
+        },
+        {
+            "nome": "Junta Homocinética Fixa",
+            "image": "photos/sist-rodagem/juntas/JHC01112.png",
+            "marca": "Cofap",
+            "info": "JHC01112",
+            "linha": "Volkswagen",
+            "linhaCode": "vws",
+            "code": 2825,
+            "linkApli": "#JHC01112",
+            "price": 176,
+            "qtd": 1
+        },
+        {
+            "nome": "Junta Homocinética Fixa",
+            "image": "photos/sist-rodagem/juntas/NJH030580.png",
+            "marca": "NAKATA",
+            "info": "NJH030580",
+            "linha": "GM",
+            "linhaCode": "gm",
+            "code": 3848,
+            "linkApli": "#NJH030580",
+            "price": 214.63,
+            "qtd": 1
+        },
+        {
+            "nome": "Junta Homocinética Fixa",
+            "image": "photos/sist-rodagem/juntas/ALB1355499A.png",
+            "marca": "Albarus",
+            "info": "ALB1355499A",
+            "linha": "GM",
+            "linhaCode": "gm",
+            "code": "sem",
+            "linkApli": "#ALB1355499A",
+            "price": 0,
+            "qtd": 1
+        },
+        {
+            "nome": "Junta Homocinética Fixa",
+            "image": "photos/sist-rodagem/juntas/VKJA410224A.png",
+            "marca": "SKF",
+            "info": "VKJA41024A",
+            "linha": "GM",
+            "linhaCode": "gm",
+            "code": 2428,
+            "linkApli": "#VKJA41024A",
+            "price": 142.58,
+            "qtd": 1
+        },
+        {
+            "nome": "Junta Homocinética Fixa",
+            "image": "photos/sist-rodagem/juntas/H19880.png",
+            "marca": "Kictech",
+            "info": "H19880",
+            "linha": "Renault",
+            "linhaCode": "renault",
+            "code": "sem",
+            "linkApli": "#H19880",
+            "price": 0,
+            "qtd": 1
+        }
+        
+    ],
+
+
+
+    "rolamentosRoda": [
+        {
+            "nome": "Rolamento Roda",
+            "position": "Diant.",
+            "image": "photos/sist-rodagem/rolamento-roda/alr0036.png",
+            "marca": "IMA",
+            "info": "ALR-0036",
+            "linha": "Volkswagen/Ford",
+            "linhaCode": "vws",
+            "secundLineCode":"ford",
+            "code": 3757,
+            "linkApli": "#alr0036",
+            "price": 82.72,
+            "qtd": 1
+        },
+        {
+            "nome": "Rolamento Roda",
+            "position": "Diant.",
+            "image": "photos/sist-rodagem/rolamento-roda/IR18088.png",
+            "marca": "IRB",
+            "info": "IR18088",
+            "linha": "Fiat",
+            "linhaCode": "fiat",
+            "code": 3614,
+            "linkApli": "#IR18088",
+            "price": 88.90,
+            "qtd": 1
+        },
+        {
+            "nome": "Rolamento Roda",
+            "position": "Diant.",
+            "image": "photos/sist-rodagem/rolamento-roda/VKBC20022.png",
+            "marca": "SKF",
+            "info": "VKBC20022",
+            "linha": "Fiat/Citroen/Peugeot",
+            "linhaCode": "fiat",
+            "code": 3267,
+            "linkApli": "#VKBC20022",
+            "price": 592,
+            "qtd": 1
+        },
+        {
+            "nome": "Rolamento Roda",
+            "position": "Diant.",
+            "image": "photos/sist-rodagem/rolamento-roda/633313.png",
+            "marca": "Vetor",
+            "info": "633313",
+            "linha": "Fiat",
+            "linhaCode": "fiat",
+            "code": "sem",
+            "linkApli": "#633313",
+            "price": 0,
+            "qtd": 1
+        },
+        {
+            "nome": "Rolamento Roda",
+            "position": "Diant. Exter.",
+            "image": "photos/sist-rodagem/rolamento-roda/12649-610.png",
+            "marca": "RCC",
+            "info": "12649-610",
+            "linha": "GM",
+            "linhaCode": "gm",
+            "code": "Sem",
+            "linkApli": "#12649-610",
+            "price": 0,
+            "qtd": 1
+        }
+        
+    ],
+
+
+
+    "rolamentoDiversos": [
+        {
+            "nome": "Rolamento",
+            "image": "photos/sist-rodagem/diversos/6207.png",
+            "marca": "Cobra",
+            "info": "6207",
+            "linha": "Universal",
+            "code": 2917,
+            "linkApli": "#6207",
+            "price": 30.00,
+            "qtd": 1
+        },
+        {
+            "nome": "Rolamento",
+            "image": "photos/sist-rodagem/diversos/6206.png",
+            "marca": "Cobra",
+            "info": "6206",
+            "linha": "Universal",
+            "code": 2918,
+            "linkApli": "#6206",
+            "price": 35.00,
+            "qtd": 1
+        },
+        {
+            "nome": "Rolamento",
+            "image": "photos/sist-rodagem/diversos/6202.png",
+            "marca": "Cobra",
+            "info": "6202",
+            "linha": "Universal",
+            "code": "sem",
+            "linkApli": "#6202",
+            "price": 0,
+            "qtd": 1
+        },
+        {
+            "nome": "Rolamento",
+            "image": "photos/sist-rodagem/diversos/67048-10.png",
+            "marca": "Vetor",
+            "info": "67048-10",
+            "linha": "Universal",
+            "code": "sem",
+            "linkApli": "#67048-10",
+            "price": 0,
+            "qtd": 1
+        },
+        {
+            "nome": "Rolamento",
+            "image": "photos/sist-rodagem/diversos/6302-2RS.png",
+            "marca": "RCC",
+            "info": "6302-2RS",
+            "linha": "Universal",
+            "code": "Sem",
+            "linkApli": "#6302-2RS",
+            "price": 0,
+            "qtd": 1
+        },
+        {
+            "nome": "Trizeta",
+            "image": "photos/sist-rodagem/diversos/IR28408.png",
+            "marca": "IRB",
+            "info": "IR28408",
+            "linha": "Fiat",
+            "code": "sem",
+            "linkApli": "#IR28408",
+            "price": 0,
+            "qtd": 1
+        }
+       
+    ],
+
+
+
+    "bojosTras": [
+        {
+            "nome": "Bojo Tras.",
+            "image": "photos/escapamentos/bojos/21528.png",
+            "marca": "Scapex",
+            "info": "21528",
+            "linha": "Fiat",
+            "linhaCode": "fiat",
+            "code": 3773,
+            "linkApli": "#21528",
+            "price": 199.25,
+            "qtd": 1
+        },
+        {
+            "nome": "Bojo Tras.",
+            "image": "photos/escapamentos/bojos/21557.png",
+            "marca": "Scapex",
+            "info": "21557",
+            "linha": "Fiat",
+            "linhaCode": "fiat",
+            "code": 3731,
+            "linkApli": "#21557",
+            "price": 252.38,
+            "qtd": 1
+        },
+        {
+            "nome": "Bojo Tras.",
+            "image": "photos/escapamentos/bojos/21519.png",
+            "marca": "Scapex",
+            "info": "21519",
+            "linha": "Fiat",
+            "linhaCode": "fiat",
+            "code": 3570,
+            "linkApli": "#21519",
+            "price": 156.85,
+            "qtd": 1
+        },
+        {
+            "nome": "Bojo Tras.",
+            "image": "photos/escapamentos/bojos/FT4204T.png",
+            "marca": "Mastra",
+            "info": "FT4204T",
+            "linha": "Fiat",
+            "linhaCode": "fiat",
+            "code": 619,
+            "linkApli": "#FT4204T",
+            "price": 185.53,
+            "qtd": 1
+        },
+        {
+            "nome": "Bojo Tras.",
+            "image": "photos/escapamentos/bojos/FT4213T.png",
+            "marca": "Mastra",
+            "info": "FT4213T",
+            "linha": "Fiat",
+            "linhaCode": "fiat",
+            "code": 519,
+            "linkApli": "#FT4213T",
+            "price": 196,
+            "qtd": 1
+        },
+        {
+            "nome": "Bojo Tras.",
+            "image": "photos/escapamentos/bojos/21524.png",
+            "marca": "Scapex",
+            "info": "21524",
+            "linha": "Fiat",
+            "linhaCode": "fiat",
+            "code": 3730,
+            "linkApli": "#21524",
+            "price": 223.81,
+            "qtd": 1
+        },
+        {
+            "nome": "Bojo Tras.",
+            "image": "photos/escapamentos/bojos/GM2606T.png",
+            "marca": "Mastra",
+            "info": "GM2606T",
+            "linha": "GM",
+            "linhaCode": "gm",
+            "code": 1818,
+            "linkApli": "#GM2606T",
+            "price": 110.23,
+            "qtd": 1
+        },
+        {
+            "nome": "Bojo Tras.",
+            "image": "photos/escapamentos/bojos/GM2609T.png",
+            "marca": "Mastra",
+            "info": "GM2609T",
+            "linha": "GM",
+            "linhaCode": "gm",
+            "code": 523,
+            "linkApli": "#GM2609T",
+            "price": 160,
+            "qtd": 1
+        },
+        {
+            "nome": "Bojo Tras.",
+            "image": "photos/escapamentos/bojos/41502.png",
+            "marca": "Scapex",
+            "info": "41502",
+            "linha": "GM",
+            "linhaCode": "gm",
+            "code": 3573,
+            "linkApli": "#41502",
+            "price": 147.25,
+            "qtd": 1
+        },
+        {
+            "nome": "Bojo Tras.",
+            "image": "photos/escapamentos/bojos/GM2821T.png",
+            "marca": "Mastra",
+            "info": "GM2821T",
+            "linha": "GM",
+            "linhaCode": "gm",
+            "code": 2663,
+            "linkApli": "#GM2821T",
+            "price": 275.06,
+            "qtd": 1
+        },
+        {
+            "nome": "Bojo Tras.",
+            "image": "photos/escapamentos/bojos/VW0482T.png",
+            "marca": "Mastra",
+            "info": "VW0482T",
+            "linha": "Volkswagen",
+            "linhaCode": "vws",
+            "code": "Sem",
+            "linkApli": "#VW0482T",
+            "price": 0,
+            "qtd": 1
+        },
+        {
+            "nome": "Bojo Tras.",
+            "image": "photos/escapamentos/bojos/61549.png",
+            "marca": "Scapex",
+            "info": "61549",
+            "linha": "Volkswagen",
+            "linhaCode": "vws",
+            "code": 1267,
+            "linkApli": "#61549",
+            "price": 200,
+            "qtd": 1
+        },
+        {
+            "nome": "Bojo Tras.",
+            "image": "photos/escapamentos/bojos/VW0486T.png",
+            "marca": "Mastra",
+            "info": "VW0486T",
+            "linha": "Volkswagen",
+            "linhaCode": "vws",
+            "code": 3851,
+            "linkApli": "#VW0486T",
+            "price": 271.69,
+            "qtd": 1
+        }
     ]
 
 
