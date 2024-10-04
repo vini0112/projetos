@@ -5270,6 +5270,508 @@
             "price": 271.69,
             "qtd": 1
         }
+    ],
+
+
+    "canosIntermediario": [
+
+        {
+            "nome": "Intermediário",
+            "image": "photos/escapamentos/inter/20144.png",
+            "marca": "Scapex",
+            "info": "20144",
+            "linha": "Fiat",
+            "linhaCode": "fiat",
+            "code": 3728,
+            "linkApli": "#20144",
+            "price": 188.35,
+            "qtd": 1
+        },
+        {
+            "nome": "Intermediário",
+            "image": "photos/escapamentos/inter/20100.png",
+            "marca": "Scapex",
+            "info": "20100",
+            "linha": "Fiat",
+            "linhaCode": "fiat",
+            "code": 3726,
+            "linkApli": "#20100",
+            "price": 102.25,
+            "qtd": 1
+        },
+        {
+            "nome": "Intermediário",
+            "image": "photos/escapamentos/inter/21281.png",
+            "marca": "Scapex",
+            "info": "21281",
+            "linha": "Fiat",
+            "linhaCode": "fiat",
+            "code": 3729,
+            "linkApli": "#21281",
+            "price": 98.83,
+            "qtd": 1
+        },
+        {
+            "nome": "Intermediário",
+            "image": "photos/escapamentos/inter/FT4413M.png",
+            "marca": "Mastra",
+            "info": "FT4413M",
+            "linha": "Fiat",
+            "linhaCode": "fiat",
+            "code": 2338,
+            "linkApli": "#FT4413M",
+            "price": 150,
+            "qtd": 0
+        },
+        {
+            "nome": "Intermediário",
+            "image": "photos/escapamentos/inter/FT4210E.png",
+            "marca": "Mastra",
+            "info": "FT4210E",
+            "linha": "Fiat",
+            "linhaCode": "fiat",
+            "code": 2238,
+            "linkApli": "#FT4210E",
+            "price": 99.50,
+            "qtd": 1
+        },
+        {
+            "nome": "Intermediário",
+            "image": "photos/escapamentos/inter/FT4208M.png",
+            "marca": "Mastra",
+            "info": "FT4208M",
+            "linha": "Fiat",
+            "linhaCode": "fiat",
+            "code": 881,
+            "linkApli": "#FT4208M",
+            "price": 135,
+            "qtd": 1
+        },
+        {
+            "nome": "Intermediário",
+            "image": "photos/escapamentos/inter/20102.png",
+            "marca": "Scapex",
+            "info": "20102",
+            "linha": "Fiat",
+            "linhaCode": "fiat",
+            "code": 3727,
+            "linkApli": "#20102",
+            "price": 120.35,
+            "qtd": 1
+        },
+        {
+            "nome": "Intermediário C/Flexível",
+            "image": "photos/escapamentos/inter/20732.png",
+            "marca": "Scapex",
+            "info": "20732",
+            "linha": "Fiat",
+            "linhaCode": "fiat",
+            "code": 3772,
+            "linkApli": "#20732",
+            "price": 214.27,
+            "qtd": 1
+        },
+        {
+            "nome": "Intermediário",
+            "image": "photos/escapamentos/inter/41268.png",
+            "marca": "Scapex",
+            "info": "41268",
+            "linha": "GM",
+            "linhaCode": "gm",
+            "code": 3732,
+            "linkApli": "#41268",
+            "price": 85.70,
+            "qtd": 1
+        },
+        {
+            "nome": "Intermediário",
+            "image": "photos/escapamentos/inter/40124.png",
+            "marca": "Scapex",
+            "info": "40124",
+            "linha": "GM",
+            "linhaCode": "gm",
+            "code": 3774,
+            "linkApli": "#40124",
+            "price": 152.51,
+            "qtd": 1
+        },
+        {
+            "nome": "Intermediário",
+            "image": "photos/escapamentos/inter/GM2601M.png",
+            "marca": "Mastra",
+            "info": "GM2601M",
+            "linha": "GM",
+            "linhaCode": "gm",
+            "code": 621,
+            "linkApli": "#GM2601M",
+            "price": 145.56,
+            "qtd": 0
+        },
+        {
+            "nome": "Intermediário",
+            "image": "photos/escapamentos/inter/GM2606E.png",
+            "marca": "Mastra",
+            "info": "GM2606E",
+            "linha": "GM",
+            "linhaCode": "gm",
+            "code": 623,
+            "linkApli": "#GM2606E",
+            "price": 86.87,
+            "qtd": 1
+        },
+        {
+            "nome": "Intermediário",
+            "image": "photos/escapamentos/inter/GM2803F.png",
+            "marca": "Mastra",
+            "info": "GM2803F",
+            "linha": "GM",
+            "linhaCode": "gm",
+            "code": 2241,
+            "linkApli": "#GM2803F",
+            "price": 70.88,
+            "qtd": 1
+        },
+        {
+            "nome": "Intermediário",
+            "image": "photos/escapamentos/inter/GM2806M.png",
+            "marca": "Mastra",
+            "info": "GM2806M",
+            "linha": "GM",
+            "linhaCode": "gm",
+            "code": 2662,
+            "linkApli": "#GM2806M",
+            "price": 246.62,
+            "qtd": 1
+        },
+        {
+            "nome": "Intermediário",
+            "image": "photos/escapamentos/inter/GM2809F.png",
+            "marca": "Mastra",
+            "info": "GM2809F",
+            "linha": "GM",
+            "linhaCode": "gm",
+            "code": "sem",
+            "linkApli": "#GM2809F",
+            "price": 0,
+            "qtd": 1
+        },
+        {
+            "nome": "Intermediário C/Flexível",
+            "image": "photos/escapamentos/inter/GM2605E.png",
+            "marca": "Mastra",
+            "info": "GM2605E",
+            "linha": "GM",
+            "linhaCode": "gm",
+            "code": 3622,
+            "linkApli": "#GM2605E",
+            "price": 293,
+            "qtd": 1
+        },
+        {
+            "nome": "Intermediário",
+            "image": "photos/escapamentos/inter/GM2804S.png",
+            "marca": "Mastra",
+            "info": "GM2804S",
+            "linha": "GM",
+            "linhaCode": "gm",
+            "code": 2242,
+            "linkApli": "#GM2804S",
+            "price": 130,
+            "qtd": 1
+        },
+        {
+            "nome": "Intermediário",
+            "image": "photos/escapamentos/inter/VW0320M.png",
+            "marca": "Mastra",
+            "info": "VW0320M",
+            "linha": "Volkswagen",
+            "linhaCode": "vws",
+            "code": 3830,
+            "linkApli": "#VW0320M",
+            "price": 278.29,
+            "qtd": 1
+        },
+        {
+            "nome": "Intermediário",
+            "image": "photos/escapamentos/inter/VW0403E.png",
+            "marca": "Mastra",
+            "info": "VW0403E",
+            "linha": "Volkswagen",
+            "linhaCode": "vws",
+            "code": 3251,
+            "linkApli": "#VW0403E",
+            "price": 95.67,
+            "qtd": 0
+        },
+        {
+            "nome": "Intermediário",
+            "image": "photos/escapamentos/inter/61278.png",
+            "marca": "Scapex",
+            "info": "61278",
+            "linha": "Volkswagen",
+            "linhaCode": "vws",
+            "code": 3575,
+            "linkApli": "#61278",
+            "price": 89.38,
+            "qtd": 1
+        },
+        {
+            "nome": "Intermediário",
+            "image": "photos/escapamentos/inter/61278.png",
+            "marca": "Mastra",
+            "info": "VW0405E",
+            "linha": "Volkswagen",
+            "linhaCode": "vws",
+            "code": 3850,
+            "linkApli": "#VW0405E",
+            "price": 100,
+            "qtd": 1
+        },
+        {
+            "nome": "Intermediário",
+            "image": "photos/escapamentos/inter/VW0421M.png",
+            "marca": "Mastra",
+            "info": "VW0421M",
+            "linha": "Volkswagen",
+            "linhaCode": "vws",
+            "code": 2347,
+            "linkApli": "#VW0421M",
+            "price": 195.51,
+            "qtd": 1
+        },
+        {
+            "nome": "Intermediário",
+            "image": "photos/escapamentos/inter/VW0307E.png",
+            "marca": "Mastra",
+            "info": "VW0307E",
+            "linha": "Volkswagen",
+            "linhaCode": "vws",
+            "code": 1266,
+            "linkApli": "#VW0307E",
+            "price": 76.71,
+            "qtd": 1
+        },
+        {
+            "nome": "Intermediário",
+            "image": "photos/escapamentos/inter/VW0417M.png",
+            "marca": "Mastra",
+            "info": "VW0417M",
+            "linha": "Volkswagen",
+            "linhaCode": "vws",
+            "code": 1268,
+            "linkApli": "#VW0417M",
+            "price": 199.26,
+            "qtd": 1
+        }
+        
+    ],
+
+
+    "coxinsEscap": [
+        {
+            "nome": "Coxim",
+            "position":"Tras.",
+            "image": "photos/escapamentos/coxins/DV9528V.png",
+            "marca": "Mastra",
+            "info": "DV9528V",
+            "linha": "Fiat",
+            "linhaCode": "fiat",
+            "code": 3156,
+            "linkApli": "#DV9528V",
+            "price": 7.00,
+            "qtd": 1
+        },
+        {
+            "nome": "Coxim",
+            "position":"Tras.",
+            "image": "photos/escapamentos/coxins/DV9079V.png",
+            "marca": "Mastra",
+            "info": "DV9079V",
+            "linha": "Fiat",
+            "linhaCode": "fiat",
+            "code": 3539,
+            "linkApli": "#DV9079V",
+            "price": 6.50,
+            "qtd": 1
+        },
+        {
+            "nome": "Coxim",
+            "position":"Tras.",
+            "image": "photos/escapamentos/coxins/DV9904V.png",
+            "marca": "Mastra",
+            "info": "DV9904V",
+            "linha": "Fiat",
+            "linhaCode": "fiat",
+            "code": 3155,
+            "linkApli": "#DV9904V",
+            "price": 6.00,
+            "qtd": 1
+        },
+        {
+            "nome": "Coxim",
+            "position":"Inter.",
+            "image": "photos/escapamentos/coxins/DV9114V.png",
+            "marca": "Mastra",
+            "info": "DV9114V",
+            "linha": "Fiat",
+            "linhaCode": "fiat",
+            "code": 3154,
+            "linkApli": "#DV9114V",
+            "price": 4.50,
+            "qtd": 1
+        },
+        {
+            "nome": "Coxim Silencioso",
+            "position":"Inter.",
+            "image": "photos/escapamentos/coxins/DV9117V.png",
+            "marca": "Mastra",
+            "info": "DV9117V",
+            "linha": "Fiat",
+            "linhaCode": "fiat",
+            "code": "sem",
+            "linkApli": "#DV9117V",
+            "price": 0,
+            "qtd": 1
+        },
+        {
+            "nome": "Coxim",
+            "position":"Tras.",
+            "image": "photos/escapamentos/coxins/DV9083V.png",
+            "marca": "Mastra",
+            "info": "DV9083V",
+            "linha": "Fiat",
+            "linhaCode": "fiat",
+            "code": 3540,
+            "linkApli": "#DV9083V",
+            "price": 6.00,
+            "qtd": 1
+        },
+        {
+            "nome": "Coxim",
+            "position":"Tras.",
+            "image": "photos/escapamentos/coxins/DV9084V.png",
+            "marca": "Mastra",
+            "info": "DV9084V",
+            "linha": "Fiat",
+            "linhaCode": "fiat",
+            "code": 3541,
+            "linkApli": "#DV9084V",
+            "price": 4.00,
+            "qtd": 1
+        },
+        {
+            "nome": "Coxim",
+            "position":"Inter.",
+            "image": "photos/escapamentos/coxins/DV9294V.png",
+            "marca": "Mastra",
+            "info": "DV9294V",
+            "linha": "Fiat",
+            "linhaCode": "fiat",
+            "code": "sem",
+            "linkApli": "#DV9294V",
+            "price": 0,
+            "qtd": 1
+        },
+        {
+            "nome": "Coxim",
+            "position":"Tras.",
+            "image": "photos/escapamentos/coxins/DV9903V.png",
+            "marca": "Mastra",
+            "info": "DV9903V",
+            "linha": "Fiat",
+            "linhaCode": "fiat",
+            "code": "sem",
+            "linkApli": "#DV9903V",
+            "price": 0,
+            "qtd": 1
+        },
+        {
+            "nome": "Coxim Caveirinha",
+            "position":"",
+            "image": "photos/escapamentos/coxins/DV9102V.png",
+            "marca": "Mastra",
+            "info": "DV9102V",
+            "linha": "Volkswagen",
+            "linhaCode": "vws",
+            "code": 3542,
+            "linkApli": "#DV9102V",
+            "price": 4.00,
+            "qtd": 1
+        },
+        {
+            "nome": "Coxim Caveirão",
+            "position":"",
+            "image": "photos/escapamentos/coxins/DV9723V.png",
+            "marca": "Mastra",
+            "info": "DV9723V",
+            "linha": "Volkswagen",
+            "linhaCode": "vws",
+            "code": 3544,
+            "linkApli": "#DV9723V",
+            "price": 4.00,
+            "qtd": 1
+        },
+        {
+            "nome": "Coxim",
+            "position":"Diant.",
+            "image": "photos/escapamentos/coxins/DV9784V.png",
+            "marca": "Mastra",
+            "info": "DV9784V",
+            "linha": "GM",
+            "linhaCode": "gm",
+            "code": "sem",
+            "linkApli": "#DV9784V",
+            "price": 0,
+            "qtd": 1
+        },
+        {
+            "nome": "Coxim",
+            "position":"Tras.",
+            "image": "photos/escapamentos/coxins/DV9087V.png",
+            "marca": "Mastra",
+            "info": "DV9087V",
+            "linha": "GM",
+            "linhaCode": "gm",
+            "code": 3829,
+            "linkApli": "#DV9087V",
+            "price": 6.00,
+            "qtd": 1
+        },
+        {
+            "nome": "Coxim",
+            "position":"Tras.",
+            "image": "photos/escapamentos/coxins/DV9089V.png",
+            "marca": "Mastra",
+            "info": "DV9089V",
+            "linha": "GM",
+            "linhaCode": "gm",
+            "code": 3852,
+            "linkApli": "#DV9089V",
+            "price": 7.18,
+            "qtd": 1
+        }
+        
+    ],
+
+
+
+    "acessoriosEscap": [
+        {
+            "nome": "Flexível",
+            "image": "photos/escapamentos/acessorios/flexivel.png",
+            "marca": "Mastra",
+            "linha":"Universal",
+            "price": 122,
+            "qtd": 1
+        },
+        {
+            "nome": "Coxim",
+            "image": "photos/escapamentos/acessorios/abracadeira.png",
+            "marca": "Mastra",
+            "linha": "Universal",
+            "price": 7.50,
+            "qtd": 1
+        }
     ]
 
 
