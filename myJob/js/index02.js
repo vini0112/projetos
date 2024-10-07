@@ -154,6 +154,7 @@ async function addCardsOleo(){
         let oleoCards = document.createElement('div')
         oleoCards.classList.add('col-md-3')
         oleoCards.classList.add('card')
+        // oleoCards.classList.add('fade-in-active')
         oleoCards.classList.add('projeto-oleo')
         oleoCards.classList.add(dadosOleo[i].marca)
 
@@ -201,8 +202,14 @@ function filtroIniciar(){
         }
         
         for(let c = 0;c < allCards.length;c++){
-            allCards[c].style.display='block'
-            
+            // allCards[c].style.display='block'
+
+            allCards[c].classList.remove('positionAbsolute')
+            allCards[c].classList.remove('fade-out-active')
+
+
+            // allCards[c].classList.add('fade-in-active')
+
         }
     })
 
@@ -219,9 +226,28 @@ function filtroIniciar(){
         
         // filtrando
         for(let c = 0;c < allCards.length;c++){
-            allCards[c].style.display='block'
+            // allCards[c].style.display='block'
+            //  ACTIVITING 
+            allCards[c].classList.remove('positionAbsolute')
+            allCards[c].classList.remove('fade-out-active')
+
+            allCards[c].classList.add('fade-in-active')
+
             if(!(allCards[c]).classList.contains('Lubrax')){
-                allCards[c].style.display='none'
+
+
+                // first click 
+                allCards[c].classList.remove('fade-in-active')
+                allCards[c].classList.add('fade-out-active')
+
+                
+
+                setTimeout(function(){
+                    allCards[c].classList.add('positionAbsolute')
+                }, )
+
+
+                // allCards[c].style.display='none'
             }
             
         }
@@ -240,9 +266,26 @@ function filtroIniciar(){
         
         // filtrando
         for(let c = 0;c < allCards.length;c++){
-            allCards[c].style.display='block'
+            // allCards[c].style.display='block'
+            allCards[c].classList.remove('positionAbsolute')
+            allCards[c].classList.remove('fade-out-active')
+
+            allCards[c].classList.add('fade-in-active')
+
             if(!(allCards[c]).classList.contains('Selenia')){
-                allCards[c].style.display='none'
+                // allCards[c].style.display='none'
+
+                // first click 
+                allCards[c].classList.remove('fade-in-active')
+                allCards[c].classList.add('fade-out-active')
+
+                
+
+                setTimeout(function(){
+                    allCards[c].classList.add('positionAbsolute')
+                }, )
+
+
             }
             
         }
@@ -261,9 +304,26 @@ function filtroIniciar(){
         
         // filtrando
         for(let c = 0;c < allCards.length;c++){
-            allCards[c].style.display='block'
+            // allCards[c].style.display='block'
+            allCards[c].classList.remove('positionAbsolute')
+            allCards[c].classList.remove('fade-out-active')
+
+            allCards[c].classList.add('fade-in-active')
+
             if(!(allCards[c]).classList.contains('Mobil')){
-                allCards[c].style.display='none'
+                // allCards[c].style.display='none'
+
+
+                // first click 
+                allCards[c].classList.remove('fade-in-active')
+                allCards[c].classList.add('fade-out-active')
+
+                
+                setTimeout(function(){
+                    allCards[c].classList.add('positionAbsolute')
+                },)
+
+            
             }
             
         }
@@ -282,9 +342,24 @@ function filtroIniciar(){
         
         // elaion
         for(let c = 0;c < allCards.length;c++){
-            allCards[c].style.display='block'
+            // allCards[c].style.display='block'
+            allCards[c].classList.remove('positionAbsolute')
+            allCards[c].classList.remove('fade-out-active')
+
+            allCards[c].classList.add('fade-in-active')
+
+            // filtrando por marca
             if(!(allCards[c]).classList.contains('Elaion')){
-                allCards[c].style.display='none'
+                // allCards[c].style.display='none'
+
+                // first click 
+                allCards[c].classList.remove('fade-in-active')
+                allCards[c].classList.add('fade-out-active')
+
+
+                setTimeout(function(){
+                    allCards[c].classList.add('positionAbsolute')
+                })
             }
             
         }
@@ -304,9 +379,24 @@ function filtroIniciar(){
         
         // filtrando
         for(let c = 0;c < allCards.length;c++){
-            allCards[c].style.display='block'
+            // allCards[c].style.display='block'
+            allCards[c].classList.remove('positionAbsolute')
+            allCards[c].classList.remove('fade-out-active')
+
+            allCards[c].classList.add('fade-in-active')
+
+            // filtrando por marca
             if(!(allCards[c]).classList.contains('Lubel')){
-                allCards[c].style.display='none'
+                // allCards[c].style.display='none'
+
+                // first click 
+                allCards[c].classList.remove('fade-in-active')
+                allCards[c].classList.add('fade-out-active')
+
+
+                setTimeout(function(){
+                    allCards[c].classList.add('positionAbsolute')
+                })
             }
             
         }
@@ -418,7 +508,10 @@ function filtrarMarcas(){
         }
         
         for(let c = 0;c < allCards.length;c++){
-            allCards[c].style.display='block'
+            // allCards[c].style.display='block'
+
+            allCards[c].classList.remove('positionAbsolute')
+            allCards[c].classList.remove('fade-out-active')
             
         }
     })
@@ -435,9 +528,25 @@ function filtrarMarcas(){
         
         // filtrando
         for(let c = 0;c < allCards.length;c++){
-            allCards[c].style.display='block'
+            // allCards[c].style.display='block'
+            allCards[c].classList.remove('positionAbsolute')
+            allCards[c].classList.remove('fade-out-active')
+
+            allCards[c].classList.add('fade-in-active')
+
+
             if(!(allCards[c]).classList.contains('Lubrax')){
-                allCards[c].style.display='none'
+                // allCards[c].style.display='none'
+
+                // first click 
+                allCards[c].classList.remove('fade-in-active')
+                allCards[c].classList.add('fade-out-active')
+
+
+                setTimeout(function(){
+                    allCards[c].classList.add('positionAbsolute')
+                }, )
+
             }
             
         }
@@ -455,9 +564,26 @@ function filtrarMarcas(){
         
         // filtrando
         for(let c = 0;c < allCards.length;c++){
-            allCards[c].style.display='block'
+            // allCards[c].style.display='block'
+
+            allCards[c].classList.remove('positionAbsolute')
+            allCards[c].classList.remove('fade-out-active')
+
+            allCards[c].classList.add('fade-in-active')
+
+
             if(!(allCards[c]).classList.contains('Selenia')){
-                allCards[c].style.display='none'
+                // allCards[c].style.display='none'
+
+                // first click 
+                allCards[c].classList.remove('fade-in-active')
+                allCards[c].classList.add('fade-out-active')
+
+
+                setTimeout(function(){
+                    allCards[c].classList.add('positionAbsolute')
+                }, )
+
             }
             
         }
@@ -475,9 +601,27 @@ function filtrarMarcas(){
         
         // filtrando
         for(let c = 0;c < allCards.length;c++){
-            allCards[c].style.display='block'
+            // allCards[c].style.display='block'
+
+            allCards[c].classList.remove('positionAbsolute')
+            allCards[c].classList.remove('fade-out-active')
+
+            allCards[c].classList.add('fade-in-active')
+
+
             if(!(allCards[c]).classList.contains('Mobil')){
-                allCards[c].style.display='none'
+                // allCards[c].style.display='none'
+
+                // first click 
+                allCards[c].classList.remove('fade-in-active')
+                allCards[c].classList.add('fade-out-active')
+
+
+                setTimeout(function(){
+                    allCards[c].classList.add('positionAbsolute')
+                }, )
+
+
             }
             
         }
@@ -495,9 +639,26 @@ function filtrarMarcas(){
         
         // filtrando
         for(let c = 0;c < allCards.length;c++){
-            allCards[c].style.display='block'
+            // allCards[c].style.display='block'
+
+            allCards[c].classList.remove('positionAbsolute')
+            allCards[c].classList.remove('fade-out-active')
+
+            allCards[c].classList.add('fade-in-active')
+
+
             if(!(allCards[c]).classList.contains('Elaion')){
-                allCards[c].style.display='none'
+                // allCards[c].style.display='none'
+
+                // first click 
+                allCards[c].classList.remove('fade-in-active')
+                allCards[c].classList.add('fade-out-active')
+
+
+                setTimeout(function(){
+                    allCards[c].classList.add('positionAbsolute')
+                }, )
+
             }
             
         }
@@ -515,9 +676,26 @@ function filtrarMarcas(){
         
         // filtrando
         for(let c = 0;c < allCards.length;c++){
-            allCards[c].style.display='block'
+            // allCards[c].style.display='block'
+
+            allCards[c].classList.remove('positionAbsolute')
+            allCards[c].classList.remove('fade-out-active')
+
+            allCards[c].classList.add('fade-in-active')
+
+
             if(!(allCards[c]).classList.contains('Lubel')){
-                allCards[c].style.display='none'
+                // allCards[c].style.display='none'
+
+                // first click 
+                allCards[c].classList.remove('fade-in-active')
+                allCards[c].classList.add('fade-out-active')
+
+
+                setTimeout(function(){
+                    allCards[c].classList.add('positionAbsolute')
+                }, )
+
             }
             
         }
@@ -632,8 +810,11 @@ function filtrarFiltrosOleo(){
             }
         }
 
+        // FILTRANDO
         for(let c = 0;c < allCards.length;c++){
-            allCards[c].style.display='block'
+            allCards[c].classList.remove('positionAbsolute')
+            allCards[c].classList.remove('fade-out-active')
+
         }
 
         
@@ -643,7 +824,7 @@ function filtrarFiltrosOleo(){
     allBtns[1].addEventListener('click', () =>{
         for(let c = 0;c < allCards.length;c++){
             // mostrar todos antes de filtrar 
-            allCards[c].style.display='block'
+            // allCards[c].style.display='block'
 
             //replecing btn active
             for(let b = 0;b < allBtns.length;b++){
@@ -654,10 +835,21 @@ function filtrarFiltrosOleo(){
             }
 
 
+
             //filtrando
+            allCards[c].classList.remove('positionAbsolute')
+            allCards[c].classList.remove('fade-out-active')
+            allCards[c].classList.add('fade-in-active') 
+
             if(!(allCards[c].classList.contains('fiat'))){
-                allCards[c].style.display='none'
-                
+
+                allCards[c].classList.remove('fade-in-active')
+                allCards[c].classList.add('fade-out-active')
+
+                setTimeout(function(){
+                    allCards[c].classList.add('positionAbsolute')
+                }, )
+
             }
         }
     })
@@ -667,7 +859,7 @@ function filtrarFiltrosOleo(){
 
         for(let c = 0;c < allCards.length;c++){
             // mostrar todos antes de filtrar 
-            allCards[c].style.display='block'
+            // allCards[c].style.display='block'
 
             //replecing btn active
             for(let b = 0;b < allBtns.length;b++){
@@ -679,8 +871,18 @@ function filtrarFiltrosOleo(){
 
 
             //filtrando
+            allCards[c].classList.remove('positionAbsolute')
+            allCards[c].classList.remove('fade-out-active')
+            allCards[c].classList.add('fade-in-active') 
+
             if(!(allCards[c].classList.contains('gm'))){
-                allCards[c].style.display='none'
+            
+                allCards[c].classList.remove('fade-in-active')
+                allCards[c].classList.add('fade-out-active')
+
+                setTimeout(function(){
+                    allCards[c].classList.add('positionAbsolute')
+                }, )
                 
             }
         }
@@ -691,7 +893,6 @@ function filtrarFiltrosOleo(){
 
         for(let c = 0;c < allCards.length;c++){
             // mostrar todos antes de filtrar 
-            allCards[c].style.display='block'
 
             //replecing btn active
             for(let b = 0;b < allBtns.length;b++){
@@ -703,8 +904,17 @@ function filtrarFiltrosOleo(){
 
 
             //filtrando
+            allCards[c].classList.remove('positionAbsolute')
+            allCards[c].classList.remove('fade-out-active')
+            allCards[c].classList.add('fade-in-active')
+
             if(!(allCards[c].classList.contains('vws'))){
-                allCards[c].style.display='none'
+                allCards[c].classList.remove('fade-in-active')
+                allCards[c].classList.add('fade-out-active')
+
+                setTimeout(function(){
+                    allCards[c].classList.add('positionAbsolute')
+                }, )
                 
             }
         }
@@ -715,7 +925,7 @@ function filtrarFiltrosOleo(){
 
         for(let c = 0;c < allCards.length;c++){
             // mostrar todos antes de filtrar 
-            allCards[c].style.display='block'
+
 
             //replecing btn active
             for(let b = 0;b < allBtns.length;b++){
@@ -727,8 +937,18 @@ function filtrarFiltrosOleo(){
 
 
             //filtrando
+            allCards[c].classList.remove('positionAbsolute')
+            allCards[c].classList.remove('fade-out-active')
+            allCards[c].classList.add('fade-in-active')
+
             if(!(allCards[c].classList.contains('toyota'))){
-                allCards[c].style.display='none'
+
+                allCards[c].classList.remove('fade-in-active')
+                allCards[c].classList.add('fade-out-active')
+
+                setTimeout(function(){
+                    allCards[c].classList.add('positionAbsolute')
+                }, )
                 
             }
         }
@@ -751,8 +971,18 @@ function filtrarFiltrosOleo(){
 
 
             //filtrando
+            allCards[c].classList.remove('positionAbsolute')
+            allCards[c].classList.remove('fade-out-active')
+            allCards[c].classList.add('fade-in-active')
+
             if(!(allCards[c].classList.contains('renault'))){
-                allCards[c].style.display='none'
+                
+                allCards[c].classList.remove('fade-in-active')
+                allCards[c].classList.add('fade-out-active')
+
+                setTimeout(function(){
+                    allCards[c].classList.add('positionAbsolute')
+                }, )
                 
             }
         }
@@ -775,8 +1005,18 @@ function filtrarFiltrosOleo(){
 
 
             //filtrando
+            allCards[c].classList.remove('positionAbsolute')
+            allCards[c].classList.remove('fade-out-active')
+            allCards[c].classList.add('fade-in-active')
+
             if(!(allCards[c].classList.contains('ford'))){
-                allCards[c].style.display='none'
+                
+                allCards[c].classList.remove('fade-in-active')
+                allCards[c].classList.add('fade-out-active')
+
+                setTimeout(function(){
+                    allCards[c].classList.add('positionAbsolute')
+                }, )
                 
             }
         }
@@ -853,7 +1093,8 @@ function filtrandoPesados(){
 
         // filtrando filtros 
         for(let c = 0;c < allCards.length;c++){
-            allCards[c].style.display='block'
+            allCards[c].classList.remove('positionAbsolute')
+            allCards[c].classList.remove('fade-out-active')
         }
 
 
@@ -875,11 +1116,21 @@ function filtrandoPesados(){
 
 
         // filtrando filtros 
+
         for(let c = 0;c < allCards.length;c++){
-            allCards[c].style.display='block'
+            
+            allCards[c].classList.remove('positionAbsolute')
+            allCards[c].classList.remove('fade-out-active')
+            allCards[c].classList.add('fade-in-active')
 
             if(!(allCards[c].classList.contains('ford-pesado'))){
-                allCards[c].style.display='none'
+
+                allCards[c].classList.remove('fade-in-active')
+                allCards[c].classList.add('fade-out-active')
+
+                setTimeout(function(){
+                    allCards[c].classList.add('positionAbsolute')
+                }, )
                 
             }
         }
@@ -899,11 +1150,21 @@ function filtrandoPesados(){
 
 
         // filtrando filtros 
+
         for(let c = 0;c < allCards.length;c++){
-            allCards[c].style.display='block'
+           
+            allCards[c].classList.remove('positionAbsolute')
+            allCards[c].classList.remove('fade-out-active')
+            allCards[c].classList.add('fade-in-active')
 
             if(!(allCards[c].classList.contains('hyundai'))){
-                allCards[c].style.display='none'
+                
+                allCards[c].classList.remove('fade-in-active')
+                allCards[c].classList.add('fade-out-active')
+
+                setTimeout(function(){
+                    allCards[c].classList.add('positionAbsolute')
+                }, )
                 
             }
         }
@@ -921,13 +1182,23 @@ function filtrandoPesados(){
             }
         }
 
-
         // filtrando filtros
+        
+
         for(let c = 0;c < allCards.length;c++){
-            allCards[c].style.display='block'
+
+            allCards[c].classList.remove('positionAbsolute')
+            allCards[c].classList.remove('fade-out-active')
+            allCards[c].classList.add('fade-in-active')
 
             if(!(allCards[c].classList.contains('benz'))){
-                allCards[c].style.display='none'
+                
+                allCards[c].classList.remove('fade-in-active')
+                allCards[c].classList.add('fade-out-active')
+
+                setTimeout(function(){
+                    allCards[c].classList.add('positionAbsolute')
+                }, )
                 
             }
         }
@@ -948,10 +1219,19 @@ function filtrandoPesados(){
 
         // filtrando filtros
         for(let c = 0;c < allCards.length;c++){
-            allCards[c].style.display='block'
+            
+            allCards[c].classList.remove('positionAbsolute')
+            allCards[c].classList.remove('fade-out-active')
+            allCards[c].classList.add('fade-in-active')
 
             if(!(allCards[c].classList.contains('gm-pesado'))){
-                allCards[c].style.display='none'
+                
+                allCards[c].classList.remove('fade-in-active')
+                allCards[c].classList.add('fade-out-active')
+
+                setTimeout(function(){
+                    allCards[c].classList.add('positionAbsolute')
+                }, )
                 
             }
         }
@@ -1022,9 +1302,12 @@ function combustSimples(){
     // BTN TODOS
     allBtns[0].addEventListener('click', () =>{
         for(let c = 0;c < allCards.length;c++){
-            allCards[c].style.display='block'
+            
+            allCards[c].classList.remove('positionAbsolute')
+            allCards[c].classList.remove('fade-out-active')
         }
 
+        // REPLACING ACTIVE BTN
         for(let b = 0;b < allBtns.length;b++){
             if(allBtns[0]){
                 allBtns[b].classList.remove('active')
@@ -1036,13 +1319,25 @@ function combustSimples(){
     // BTN GM 
     allBtns[1].addEventListener('click', () =>{
         for(let c = 0;c < allCards.length;c++){
-            allCards[c].style.display='block'
+            
+            // filtrando
+            allCards[c].classList.remove('positionAbsolute')
+            allCards[c].classList.remove('fade-out-active')
+            allCards[c].classList.add('fade-in-active')
 
             if(!(allCards[c].classList.contains('gm'))){
-                allCards[c].style.display='none'
+                
+                allCards[c].classList.remove('fade-in-active')
+                allCards[c].classList.add('fade-out-active')
+
+                setTimeout(function(){
+                    allCards[c].classList.add('positionAbsolute')
+                }, )
+
             }
         } 
 
+        // replacing active btn
         for(let b = 0;b < allBtns.length;b++){
             if(allBtns[1]){
                 allBtns[b].classList.remove('active')
@@ -1054,10 +1349,21 @@ function combustSimples(){
     // BTN FIAT 
     allBtns[2].addEventListener('click', () =>{
         for(let c = 0;c < allCards.length;c++){
-            allCards[c].style.display='block'
+            
+            // filtrando
+            allCards[c].classList.remove('positionAbsolute')
+            allCards[c].classList.remove('fade-out-active')
+            allCards[c].classList.add('fade-in-active')
 
             if(!(allCards[c].classList.contains('fiat'))){
-                allCards[c].style.display='none'
+                
+                allCards[c].classList.remove('fade-in-active')
+                allCards[c].classList.add('fade-out-active')
+
+                setTimeout(function(){
+                    allCards[c].classList.add('positionAbsolute')
+                }, )
+
             }
         } 
 
@@ -1072,10 +1378,20 @@ function combustSimples(){
     // BTN vws
     allBtns[3].addEventListener('click', () =>{
         for(let c = 0;c < allCards.length;c++){
-            allCards[c].style.display='block'
+            
+            // filtrando
+            allCards[c].classList.remove('positionAbsolute')
+            allCards[c].classList.remove('fade-out-active')
+            allCards[c].classList.add('fade-in-active')
 
             if(!(allCards[c].classList.contains('vws'))){
-                allCards[c].style.display='none'
+                
+                allCards[c].classList.remove('fade-in-active')
+                allCards[c].classList.add('fade-out-active')
+
+                setTimeout(function(){
+                    allCards[c].classList.add('positionAbsolute')
+                }, )
             }
         } 
 
@@ -1090,10 +1406,21 @@ function combustSimples(){
     // BTN ford
     allBtns[4].addEventListener('click', () =>{
         for(let c = 0;c < allCards.length;c++){
-            allCards[c].style.display='block'
+            
+            // filtrando
+            allCards[c].classList.remove('positionAbsolute')
+            allCards[c].classList.remove('fade-out-active')
+            allCards[c].classList.add('fade-in-active')
 
             if(!(allCards[c].classList.contains('ford'))){
-                allCards[c].style.display='none'
+                
+                allCards[c].classList.remove('fade-in-active')
+                allCards[c].classList.add('fade-out-active')
+
+                setTimeout(function(){
+                    allCards[c].classList.add('positionAbsolute')
+                }, )
+
             }
         } 
 
@@ -1166,7 +1493,9 @@ function combustPesados(){
     // BTN TODOS
     allBtns[0].addEventListener('click', () =>{
         for(let c = 0;c < allCards.length;c++){
-            allCards[c].style.display='block'
+            
+            allCards[c].classList.remove('positionAbsolute')
+            allCards[c].classList.remove('fade-out-active')
         }
 
         for(let b = 0;b < allBtns.length;b++){
@@ -1180,13 +1509,25 @@ function combustPesados(){
     // BTN GM 
     allBtns[1].addEventListener('click', () =>{
         for(let c = 0;c < allCards.length;c++){
-            allCards[c].style.display='block'
+            
+            // filtrando
+            allCards[c].classList.remove('positionAbsolute')
+            allCards[c].classList.remove('fade-out-active')
+            allCards[c].classList.add('fade-in-active')
 
             if(!(allCards[c].classList.contains('gm'))){
-                allCards[c].style.display='none'
+                
+                allCards[c].classList.remove('fade-in-active')
+                allCards[c].classList.add('fade-out-active')
+
+                setTimeout(function(){
+                    allCards[c].classList.add('positionAbsolute')
+                }, )
+
             }
         } 
 
+        // active btn
         for(let b = 0;b < allBtns.length;b++){
             if(allBtns[1]){
                 allBtns[b].classList.remove('active')
@@ -1198,13 +1539,25 @@ function combustPesados(){
     // BTN toyota
     allBtns[2].addEventListener('click', () =>{
         for(let c = 0;c < allCards.length;c++){
-            allCards[c].style.display='block'
+            
+            // filtrando
+            allCards[c].classList.remove('positionAbsolute')
+            allCards[c].classList.remove('fade-out-active')
+            allCards[c].classList.add('fade-in-active')
 
             if(!(allCards[c].classList.contains('toyota'))){
-                allCards[c].style.display='none'
+                
+                allCards[c].classList.remove('fade-in-active')
+                allCards[c].classList.add('fade-out-active')
+
+                setTimeout(function(){
+                    allCards[c].classList.add('positionAbsolute')
+                }, )
+
             }
         } 
 
+        // active btn
         for(let b = 0;b < allBtns.length;b++){
             if(allBtns[2]){
                 allBtns[b].classList.remove('active')
@@ -1216,13 +1569,25 @@ function combustPesados(){
     // BTN MERCEDEZ
     allBtns[3].addEventListener('click', () =>{
         for(let c = 0;c < allCards.length;c++){
-            allCards[c].style.display='block'
+            
+            // filtrando
+            allCards[c].classList.remove('positionAbsolute')
+            allCards[c].classList.remove('fade-out-active')
+            allCards[c].classList.add('fade-in-active')
 
             if(!(allCards[c].classList.contains('benz'))){
-                allCards[c].style.display='none'
+                
+                allCards[c].classList.remove('fade-in-active')
+                allCards[c].classList.add('fade-out-active')
+
+                setTimeout(function(){
+                    allCards[c].classList.add('positionAbsolute')
+                }, )
+
             }
         } 
-
+        
+        // active btn
         for(let b = 0;b < allBtns.length;b++){
             if(allBtns[3]){
                 allBtns[b].classList.remove('active')
@@ -1234,10 +1599,21 @@ function combustPesados(){
     // BTN FORD
     allBtns[4].addEventListener('click', () =>{
         for(let c = 0;c < allCards.length;c++){
-            allCards[c].style.display='block'
+            
+            // filtrando
+            allCards[c].classList.remove('positionAbsolute')
+            allCards[c].classList.remove('fade-out-active')
+            allCards[c].classList.add('fade-in-active')
 
             if(!(allCards[c].classList.contains('ford'))){
-                allCards[c].style.display='none'
+                
+                allCards[c].classList.remove('fade-in-active')
+                allCards[c].classList.add('fade-out-active')
+
+                setTimeout(function(){
+                    allCards[c].classList.add('positionAbsolute')
+                }, )
+
             }
         } 
 
@@ -1316,7 +1692,9 @@ function arMotor(){
     // BTN TODOS
     allBtns[0].addEventListener('click', () =>{
         for(let c = 0;c < allCards.length;c++){
-            allCards[c].style.display='block'
+            
+            allCards[c].classList.remove('positionAbsolute')
+            allCards[c].classList.remove('fade-out-active')
         }
 
         for(let b = 0;b < allBtns.length;b++){
@@ -1330,13 +1708,25 @@ function arMotor(){
     // BTN GM
     allBtns[1].addEventListener('click', () =>{
         for(let c = 0;c < allCards.length;c++){
-            allCards[c].style.display='block'
+            
+            // filtrando
+            allCards[c].classList.remove('positionAbsolute')
+            allCards[c].classList.remove('fade-out-active')
+            allCards[c].classList.add('fade-in-active')
 
             if(!(allCards[c].classList.contains('gm'))){
-                allCards[c].style.display='none'
+                
+                allCards[c].classList.remove('fade-in-active')
+                allCards[c].classList.add('fade-out-active')
+
+                setTimeout(function(){
+                    allCards[c].classList.add('positionAbsolute')
+                }, )
+
             }
         } 
 
+        // active btn
         for(let b = 0;b < allBtns.length;b++){
             if(allBtns[1]){
                 allBtns[b].classList.remove('active')
@@ -1348,13 +1738,25 @@ function arMotor(){
     // BTN VWS
     allBtns[2].addEventListener('click', () =>{
         for(let c = 0;c < allCards.length;c++){
-            allCards[c].style.display='block'
+            
+            // filtrando
+            allCards[c].classList.remove('positionAbsolute')
+            allCards[c].classList.remove('fade-out-active')
+            allCards[c].classList.add('fade-in-active')
 
             if(!(allCards[c].classList.contains('vws'))){
-                allCards[c].style.display='none'
+                
+                allCards[c].classList.remove('fade-in-active')
+                allCards[c].classList.add('fade-out-active')
+
+                setTimeout(function(){
+                    allCards[c].classList.add('positionAbsolute')
+                }, )
+
             }
         } 
 
+        // active btn
         for(let b = 0;b < allBtns.length;b++){
             if(allBtns[2]){
                 allBtns[b].classList.remove('active')
@@ -1366,10 +1768,21 @@ function arMotor(){
     // BTN FIAT
     allBtns[3].addEventListener('click', () =>{
         for(let c = 0;c < allCards.length;c++){
-            allCards[c].style.display='block'
+            
+            // filtrando
+            allCards[c].classList.remove('positionAbsolute')
+            allCards[c].classList.remove('fade-out-active')
+            allCards[c].classList.add('fade-in-active')
 
             if(!(allCards[c].classList.contains('fiat'))){
-                allCards[c].style.display='none'
+                
+                allCards[c].classList.remove('fade-in-active')
+                allCards[c].classList.add('fade-out-active')
+
+                setTimeout(function(){
+                    allCards[c].classList.add('positionAbsolute')
+                }, )
+
             }
         } 
 
@@ -1384,10 +1797,21 @@ function arMotor(){
     // BTN FORD
     allBtns[4].addEventListener('click', () =>{
         for(let c = 0;c < allCards.length;c++){
-            allCards[c].style.display='block'
+            
+            // filtrando
+            allCards[c].classList.remove('positionAbsolute')
+            allCards[c].classList.remove('fade-out-active')
+            allCards[c].classList.add('fade-in-active')
 
             if(!(allCards[c].classList.contains('ford'))){
-                allCards[c].style.display='none'
+                
+                allCards[c].classList.remove('fade-in-active')
+                allCards[c].classList.add('fade-out-active')
+
+                setTimeout(function(){
+                    allCards[c].classList.add('positionAbsolute')
+                }, )
+
             }
         } 
 
@@ -1402,13 +1826,24 @@ function arMotor(){
     // BTN RENAULT
     allBtns[5].addEventListener('click', () =>{
         for(let c = 0;c < allCards.length;c++){
-            allCards[c].style.display='block'
+            
+            // filtrando
+            allCards[c].classList.remove('positionAbsolute')
+            allCards[c].classList.remove('fade-out-active')
+            allCards[c].classList.add('fade-in-active')
 
             if(!(allCards[c].classList.contains('renault'))){
-                allCards[c].style.display='none'
+                
+                allCards[c].classList.remove('fade-in-active')
+                allCards[c].classList.add('fade-out-active')
+
+                setTimeout(function(){
+                    allCards[c].classList.add('positionAbsolute')
+                }, )
             }
         } 
 
+        // active btn
         for(let b = 0;b < allBtns.length;b++){
             if(allBtns[5]){
                 allBtns[b].classList.remove('active')
@@ -1420,13 +1855,24 @@ function arMotor(){
     // BTN mecedez
     allBtns[6].addEventListener('click', () =>{
         for(let c = 0;c < allCards.length;c++){
-            allCards[c].style.display='block'
+            
+            // filtrando
+            allCards[c].classList.remove('positionAbsolute')
+            allCards[c].classList.remove('fade-out-active')
+            allCards[c].classList.add('fade-in-active')
 
             if(!(allCards[c].classList.contains('benz'))){
-                allCards[c].style.display='none'
+                
+                allCards[c].classList.remove('fade-in-active')
+                allCards[c].classList.add('fade-out-active')
+
+                setTimeout(function(){
+                    allCards[c].classList.add('positionAbsolute')
+                }, )
             }
         } 
 
+        // active btn
         for(let b = 0;b < allBtns.length;b++){
             if(allBtns[6]){
                 allBtns[b].classList.remove('active')
@@ -1579,7 +2025,9 @@ function filtroTerminais(){
      // BTN TODOS
     allBtns[0].addEventListener('click', () =>{
         for(let c = 0;c < allCards.length;c++){
-            allCards[c].style.display='block'
+            
+            allCards[c].classList.remove('positionAbsolute')
+            allCards[c].classList.remove('fade-out-active')
         }
 
         for(let b = 0;b < allBtns.length;b++){
@@ -1593,13 +2041,24 @@ function filtroTerminais(){
     // BTN fiat
     allBtns[1].addEventListener('click', () =>{
         for(let c = 0;c < allCards.length;c++){
-            allCards[c].style.display='block'
+            
+            // filtrando
+            allCards[c].classList.remove('positionAbsolute')
+            allCards[c].classList.remove('fade-out-active')
+            allCards[c].classList.add('fade-in-active')
 
             if(!(allCards[c].classList.contains('fiat'))){
-                allCards[c].style.display='none'
+                
+                allCards[c].classList.remove('fade-in-active')
+                allCards[c].classList.add('fade-out-active')
+
+                setTimeout(function(){
+                    allCards[c].classList.add('positionAbsolute')
+                }, )
             }
         } 
 
+        // active btn
         for(let b = 0;b < allBtns.length;b++){
             if(allBtns[1]){
                 allBtns[b].classList.remove('active')
@@ -1611,10 +2070,21 @@ function filtroTerminais(){
     // BTN vws
     allBtns[2].addEventListener('click', () =>{
         for(let c = 0;c < allCards.length;c++){
-            allCards[c].style.display='block'
+            
+            // filtrando
+            allCards[c].classList.remove('positionAbsolute')
+            allCards[c].classList.remove('fade-out-active')
+            allCards[c].classList.add('fade-in-active')
 
             if(!(allCards[c].classList.contains('vws'))){
-                allCards[c].style.display='none'
+                
+                allCards[c].classList.remove('fade-in-active')
+                allCards[c].classList.add('fade-out-active')
+
+                setTimeout(function(){
+                    allCards[c].classList.add('positionAbsolute')
+                }, )
+
             }
         } 
 
@@ -1629,10 +2099,21 @@ function filtroTerminais(){
     // BTN GM
     allBtns[3].addEventListener('click', () =>{
         for(let c = 0;c < allCards.length;c++){
-            allCards[c].style.display='block'
+            
+            // filtrando
+            allCards[c].classList.remove('positionAbsolute')
+            allCards[c].classList.remove('fade-out-active')
+            allCards[c].classList.add('fade-in-active')
 
             if(!(allCards[c].classList.contains('gm'))){
-                allCards[c].style.display='none'
+                
+                allCards[c].classList.remove('fade-in-active')
+                allCards[c].classList.add('fade-out-active')
+
+                setTimeout(function(){
+                    allCards[c].classList.add('positionAbsolute')
+                }, )
+
             }
         } 
 
@@ -1647,10 +2128,21 @@ function filtroTerminais(){
     // BTN nissan
     allBtns[4].addEventListener('click', () =>{
         for(let c = 0;c < allCards.length;c++){
-            allCards[c].style.display='block'
+            
+            // filtrando
+            allCards[c].classList.remove('positionAbsolute')
+            allCards[c].classList.remove('fade-out-active')
+            allCards[c].classList.add('fade-in-active')
 
             if(!(allCards[c].classList.contains('nissan'))){
-                allCards[c].style.display='none'
+                
+                allCards[c].classList.remove('fade-in-active')
+                allCards[c].classList.add('fade-out-active')
+
+                setTimeout(function(){
+                    allCards[c].classList.add('positionAbsolute')
+                }, )
+
             }
         } 
 
@@ -1661,7 +2153,6 @@ function filtroTerminais(){
             }
         }
     })
-
 
 
 }
@@ -1726,7 +2217,9 @@ function filtroBarras(){
     // BTN TODOS
     allBtns[0].addEventListener('click', () =>{
         for(let c = 0;c < allCards.length;c++){
-            allCards[c].style.display='block'
+            
+            allCards[c].classList.remove('positionAbsolute')
+            allCards[c].classList.remove('fade-out-active')
         }
 
         for(let b = 0;b < allBtns.length;b++){
@@ -1740,14 +2233,25 @@ function filtroBarras(){
     // BTN fiat
     allBtns[1].addEventListener('click', () =>{
         for(let c = 0;c < allCards.length;c++){
-            allCards[c].style.display='block'
+            
+            // filtrando 
+            allCards[c].classList.remove('positionAbsolute')
+            allCards[c].classList.remove('fade-out-active')
+            allCards[c].classList.add('fade-in-active')
 
             if(!(allCards[c].classList.contains('fiat'))){
-                allCards[c].style.display='none'
+                
+                allCards[c].classList.remove('fade-in-active')
+                allCards[c].classList.add('fade-out-active')
+
+                setTimeout(function(){
+                    allCards[c].classList.add('positionAbsolute')
+                }, )
                 
             }
         } 
 
+        // active btn
         for(let b = 0;b < allBtns.length;b++){
             if(allBtns[1]){
                 allBtns[b].classList.remove('active')
@@ -1759,13 +2263,25 @@ function filtroBarras(){
     // BTN vws
     allBtns[2].addEventListener('click', () =>{
         for(let c = 0;c < allCards.length;c++){
-            allCards[c].style.display='block'
+            
+            // filtrando 
+            allCards[c].classList.remove('positionAbsolute')
+            allCards[c].classList.remove('fade-out-active')
+            allCards[c].classList.add('fade-in-active')
 
             if(!(allCards[c].classList.contains('vws'))){
-                allCards[c].style.display='none'
+                
+                allCards[c].classList.remove('fade-in-active')
+                allCards[c].classList.add('fade-out-active')
+
+                setTimeout(function(){
+                    allCards[c].classList.add('positionAbsolute')
+                }, )
+
             }
         } 
 
+        // active btn
         for(let b = 0;b < allBtns.length;b++){
             if(allBtns[2]){
                 allBtns[b].classList.remove('active')
@@ -1777,13 +2293,25 @@ function filtroBarras(){
     // BTN GM
     allBtns[3].addEventListener('click', () =>{
         for(let c = 0;c < allCards.length;c++){
-            allCards[c].style.display='block'
+            
+            // filtrando 
+            allCards[c].classList.remove('positionAbsolute')
+            allCards[c].classList.remove('fade-out-active')
+            allCards[c].classList.add('fade-in-active')
 
             if(!(allCards[c].classList.contains('gm'))){
-                allCards[c].style.display='none'
+                
+                allCards[c].classList.remove('fade-in-active')
+                allCards[c].classList.add('fade-out-active')
+
+                setTimeout(function(){
+                    allCards[c].classList.add('positionAbsolute')
+                }, )
+
             }
         } 
 
+        // active btn
         for(let b = 0;b < allBtns.length;b++){
             if(allBtns[3]){
                 allBtns[b].classList.remove('active')
@@ -1795,10 +2323,21 @@ function filtroBarras(){
     // BTN Ford
     allBtns[4].addEventListener('click', () =>{
         for(let c = 0;c < allCards.length;c++){
-            allCards[c].style.display='block'
+            
+            // filtrando 
+            allCards[c].classList.remove('positionAbsolute')
+            allCards[c].classList.remove('fade-out-active')
+            allCards[c].classList.add('fade-in-active')
 
             if(!(allCards[c].classList.contains('ford'))){
-                allCards[c].style.display='none'
+                
+                allCards[c].classList.remove('fade-in-active')
+                allCards[c].classList.add('fade-out-active')
+
+                setTimeout(function(){
+                    allCards[c].classList.add('positionAbsolute')
+                }, )
+
             }
         } 
 
@@ -1871,7 +2410,9 @@ function filtroEstabili(){
      // BTN TODOS
     allBtns[0].addEventListener('click', () =>{
         for(let c = 0;c < allCards.length;c++){
-            allCards[c].style.display='block'
+            
+            allCards[c].classList.remove('positionAbsolute')
+            allCards[c].classList.remove('fade-out-active')
         }
 
         for(let b = 0;b < allBtns.length;b++){
@@ -1885,14 +2426,26 @@ function filtroEstabili(){
     // BTN fiat
     allBtns[1].addEventListener('click', () =>{
         for(let c = 0;c < allCards.length;c++){
-            allCards[c].style.display='block'
+            
+            // filtrando 
+            allCards[c].classList.remove('positionAbsolute')
+            allCards[c].classList.remove('fade-out-active')
+            allCards[c].classList.add('fade-in-active')
 
             if(!(allCards[c].classList.contains('fiat'))){
-                allCards[c].style.display='none'
+                
+                allCards[c].classList.remove('fade-in-active')
+                allCards[c].classList.add('fade-out-active')
+
+                setTimeout(function(){
+                    allCards[c].classList.add('positionAbsolute')
+                }, )
+
                 
             }
         } 
 
+        // btn active
         for(let b = 0;b < allBtns.length;b++){
             if(allBtns[1]){
                 allBtns[b].classList.remove('active')
@@ -1904,10 +2457,21 @@ function filtroEstabili(){
     // BTN vws
     allBtns[2].addEventListener('click', () =>{
         for(let c = 0;c < allCards.length;c++){
-            allCards[c].style.display='block'
+            
+            // filtrando 
+            allCards[c].classList.remove('positionAbsolute')
+            allCards[c].classList.remove('fade-out-active')
+            allCards[c].classList.add('fade-in-active')
 
             if(!(allCards[c].classList.contains('vws'))){
-                allCards[c].style.display='none'
+                
+                allCards[c].classList.remove('fade-in-active')
+                allCards[c].classList.add('fade-out-active')
+
+                setTimeout(function(){
+                    allCards[c].classList.add('positionAbsolute')
+                }, )
+
             }
         } 
 
@@ -1922,10 +2486,21 @@ function filtroEstabili(){
     // BTN GM
     allBtns[3].addEventListener('click', () =>{
         for(let c = 0;c < allCards.length;c++){
-            allCards[c].style.display='block'
+            
+            // filtrando 
+            allCards[c].classList.remove('positionAbsolute')
+            allCards[c].classList.remove('fade-out-active')
+            allCards[c].classList.add('fade-in-active')
 
             if(!(allCards[c].classList.contains('gm'))){
-                allCards[c].style.display='none'
+                
+                allCards[c].classList.remove('fade-in-active')
+                allCards[c].classList.add('fade-out-active')
+
+                setTimeout(function(){
+                    allCards[c].classList.add('positionAbsolute')
+                }, )
+
             }
         } 
 
@@ -2046,7 +2621,9 @@ function filtroBatedor(){
     // BTN TODOS
     allBtns[0].addEventListener('click', () =>{
         for(let c = 0;c < allCards.length;c++){
-            allCards[c].style.display='block'
+            
+            allCards[c].classList.remove('positionAbsolute')
+            allCards[c].classList.remove('fade-out-active')
         }
 
         for(let b = 0;b < allBtns.length;b++){
@@ -2060,13 +2637,25 @@ function filtroBatedor(){
     // BTN fiat
     allBtns[1].addEventListener('click', () =>{
         for(let c = 0;c < allCards.length;c++){
-            allCards[c].style.display='block'
+            
+            // filtrando 
+            allCards[c].classList.remove('positionAbsolute')
+            allCards[c].classList.remove('fade-out-active')
+            allCards[c].classList.add('fade-in-active')
 
             if(!(allCards[c].classList.contains('fiat'))){
-                allCards[c].style.display='none'
+                
+                allCards[c].classList.remove('fade-in-active')
+                allCards[c].classList.add('fade-out-active')
+
+                setTimeout(function(){
+                    allCards[c].classList.add('positionAbsolute')
+                }, )
+
             }
         } 
 
+        // active btn
         for(let b = 0;b < allBtns.length;b++){
             if(allBtns[1]){
                 allBtns[b].classList.remove('active')
@@ -2078,10 +2667,21 @@ function filtroBatedor(){
     // BTN vws
     allBtns[2].addEventListener('click', () =>{
         for(let c = 0;c < allCards.length;c++){
-            allCards[c].style.display='block'
+            
+            // filtrando 
+            allCards[c].classList.remove('positionAbsolute')
+            allCards[c].classList.remove('fade-out-active')
+            allCards[c].classList.add('fade-in-active')
 
             if(!(allCards[c].classList.contains('vws'))){
-                allCards[c].style.display='none'
+                
+                allCards[c].classList.remove('fade-in-active')
+                allCards[c].classList.add('fade-out-active')
+
+                setTimeout(function(){
+                    allCards[c].classList.add('positionAbsolute')
+                }, )
+
             }
         } 
 
@@ -2096,10 +2696,21 @@ function filtroBatedor(){
     // BTN GM
     allBtns[3].addEventListener('click', () =>{
         for(let c = 0;c < allCards.length;c++){
-            allCards[c].style.display='block'
+            
+            // filtrando 
+            allCards[c].classList.remove('positionAbsolute')
+            allCards[c].classList.remove('fade-out-active')
+            allCards[c].classList.add('fade-in-active')
 
             if(!(allCards[c].classList.contains('gm'))){
-                allCards[c].style.display='none'
+                
+                allCards[c].classList.remove('fade-in-active')
+                allCards[c].classList.add('fade-out-active')
+
+                setTimeout(function(){
+                    allCards[c].classList.add('positionAbsolute')
+                }, )
+
             }
         } 
 
@@ -2168,7 +2779,9 @@ function filtroPivos(){
     // BTN TODOS
     allBtns[0].addEventListener('click', () =>{
         for(let c = 0;c < allCards.length;c++){
-            allCards[c].style.display='block'
+            
+            allCards[c].classList.remove('positionAbsolute')
+            allCards[c].classList.remove('fade-out-active')
         }
 
         for(let b = 0;b < allBtns.length;b++){
@@ -2182,10 +2795,21 @@ function filtroPivos(){
     // BTN fiat
     allBtns[1].addEventListener('click', () =>{
         for(let c = 0;c < allCards.length;c++){
-            allCards[c].style.display='block'
+            
+            // filtrando
+            allCards[c].classList.remove('positionAbsolute')
+            allCards[c].classList.remove('fade-out-active')
+            allCards[c].classList.add('fade-in-active')
 
             if(!(allCards[c].classList.contains('fiat'))){
-                allCards[c].style.display='none'
+                
+                allCards[c].classList.remove('fade-in-active')
+                allCards[c].classList.add('fade-out-active')
+
+                setTimeout(function(){
+                    allCards[c].classList.add('positionAbsolute')
+                }, )
+
             }
         } 
 
@@ -2200,13 +2824,25 @@ function filtroPivos(){
     // BTN vws
     allBtns[2].addEventListener('click', () =>{
         for(let c = 0;c < allCards.length;c++){
-            allCards[c].style.display='block'
+            
+            // filtrando
+            allCards[c].classList.remove('positionAbsolute')
+            allCards[c].classList.remove('fade-out-active')
+            allCards[c].classList.add('fade-in-active')
 
             if(!(allCards[c].classList.contains('vws'))){
-                allCards[c].style.display='none'
+                
+                allCards[c].classList.remove('fade-in-active')
+                allCards[c].classList.add('fade-out-active')
+
+                setTimeout(function(){
+                    allCards[c].classList.add('positionAbsolute')
+                }, )
+
             }
         } 
 
+        // btn active
         for(let b = 0;b < allBtns.length;b++){
             if(allBtns[2]){
                 allBtns[b].classList.remove('active')
@@ -2218,13 +2854,25 @@ function filtroPivos(){
     // BTN GM
     allBtns[3].addEventListener('click', () =>{
         for(let c = 0;c < allCards.length;c++){
-            allCards[c].style.display='block'
+            
+            // filtrando
+            allCards[c].classList.remove('positionAbsolute')
+            allCards[c].classList.remove('fade-out-active')
+            allCards[c].classList.add('fade-in-active')
 
             if(!(allCards[c].classList.contains('gm'))){
-                allCards[c].style.display='none'
+                
+                allCards[c].classList.remove('fade-in-active')
+                allCards[c].classList.add('fade-out-active')
+
+                setTimeout(function(){
+                    allCards[c].classList.add('positionAbsolute')
+                }, )
+
             }
         } 
 
+        // active btn
         for(let b = 0;b < allBtns.length;b++){
             if(allBtns[3]){
                 allBtns[b].classList.remove('active')
@@ -2236,10 +2884,21 @@ function filtroPivos(){
     // BTN Ford
     allBtns[4].addEventListener('click', () =>{
         for(let c = 0;c < allCards.length;c++){
-            allCards[c].style.display='block'
+            
+             // filtrando
+             allCards[c].classList.remove('positionAbsolute')
+             allCards[c].classList.remove('fade-out-active')
+             allCards[c].classList.add('fade-in-active')
 
             if(!(allCards[c].classList.contains('ford'))){
-                allCards[c].style.display='none'
+                
+                allCards[c].classList.remove('fade-in-active')
+                allCards[c].classList.add('fade-out-active')
+
+                setTimeout(function(){
+                    allCards[c].classList.add('positionAbsolute')
+                }, )
+
             }
         } 
 
@@ -2354,7 +3013,9 @@ function filtroBuchas(){
     // BTN TODOS
     allBtns[0].addEventListener('click', () =>{
         for(let c = 0;c < allCards.length;c++){
-            allCards[c].style.display='block'
+            
+            allCards[c].classList.remove('positionAbsolute')
+            allCards[c].classList.remove('fade-out-active')
         }
 
         for(let b = 0;b < allBtns.length;b++){
@@ -2368,14 +3029,26 @@ function filtroBuchas(){
     // BTN fiat
     allBtns[1].addEventListener('click', () =>{
         for(let c = 0;c < allCards.length;c++){
-            allCards[c].style.display='block'
+            
+            // filtrando
+            allCards[c].classList.remove('positionAbsolute')
+            allCards[c].classList.remove('fade-out-active')
+            allCards[c].classList.add('fade-in-active')
 
             if(!(allCards[c].classList.contains('fiat'))){
-                allCards[c].style.display='none'
+                
+                allCards[c].classList.remove('fade-in-active')
+                allCards[c].classList.add('fade-out-active')
+
+                setTimeout(function(){
+                    allCards[c].classList.add('positionAbsolute')
+                }, )
+
                 
             }
         } 
 
+        // active btn
         for(let b = 0;b < allBtns.length;b++){
             if(allBtns[1]){
                 allBtns[b].classList.remove('active')
@@ -2387,13 +3060,25 @@ function filtroBuchas(){
     // BTN vws
     allBtns[2].addEventListener('click', () =>{
         for(let c = 0;c < allCards.length;c++){
-            allCards[c].style.display='block'
+            
+            // filtrando
+            allCards[c].classList.remove('positionAbsolute')
+            allCards[c].classList.remove('fade-out-active')
+            allCards[c].classList.add('fade-in-active')
 
             if(!(allCards[c].classList.contains('vws'))){
-                allCards[c].style.display='none'
+                
+                allCards[c].classList.remove('fade-in-active')
+                allCards[c].classList.add('fade-out-active')
+
+                setTimeout(function(){
+                    allCards[c].classList.add('positionAbsolute')
+                }, )
+
             }
         } 
 
+        // active btn
         for(let b = 0;b < allBtns.length;b++){
             if(allBtns[2]){
                 allBtns[b].classList.remove('active')
@@ -2405,10 +3090,21 @@ function filtroBuchas(){
     // BTN GM
     allBtns[3].addEventListener('click', () =>{
         for(let c = 0;c < allCards.length;c++){
-            allCards[c].style.display='block'
+            
+            // filtrando
+            allCards[c].classList.remove('positionAbsolute')
+            allCards[c].classList.remove('fade-out-active')
+            allCards[c].classList.add('fade-in-active')
 
             if(!(allCards[c].classList.contains('gm'))){
-                allCards[c].style.display='none'
+                
+                allCards[c].classList.remove('fade-in-active')
+                allCards[c].classList.add('fade-out-active')
+
+                setTimeout(function(){
+                    allCards[c].classList.add('positionAbsolute')
+                }, )
+
             }
         } 
 
@@ -2423,10 +3119,21 @@ function filtroBuchas(){
     // BTN Ford
     allBtns[4].addEventListener('click', () =>{
         for(let c = 0;c < allCards.length;c++){
-            allCards[c].style.display='block'
+            
+            // filtrando
+            allCards[c].classList.remove('positionAbsolute')
+            allCards[c].classList.remove('fade-out-active')
+            allCards[c].classList.add('fade-in-active')
 
             if(!(allCards[c].classList.contains('ford'))){
-                allCards[c].style.display='none'
+                
+                allCards[c].classList.remove('fade-in-active')
+                allCards[c].classList.add('fade-out-active')
+
+                setTimeout(function(){
+                    allCards[c].classList.add('positionAbsolute')
+                }, )
+
             }
         } 
 
@@ -2598,7 +3305,9 @@ function filtroPastilha(){
     // BTN TODOS
     allBtns[0].addEventListener('click', () =>{
         for(let c = 0;c < allCards.length;c++){
-            allCards[c].style.display='block'
+            
+            allCards[c].classList.remove('positionAbsolute')
+            allCards[c].classList.remove('fade-out-active')
         }
 
         for(let b = 0;b < allBtns.length;b++){
@@ -2612,14 +3321,25 @@ function filtroPastilha(){
     // BTN fiat
     allBtns[1].addEventListener('click', () =>{
         for(let c = 0;c < allCards.length;c++){
-            allCards[c].style.display='block'
+            
+            // filtrando
+            allCards[c].classList.remove('positionAbsolute')
+            allCards[c].classList.remove('fade-out-active')
+            allCards[c].classList.add('fade-in-active')
 
             if(!(allCards[c].classList.contains('fiat'))){
-                allCards[c].style.display='none'
+                
+                allCards[c].classList.remove('fade-in-active')
+                allCards[c].classList.add('fade-out-active')
+
+                setTimeout(function(){
+                    allCards[c].classList.add('positionAbsolute')
+                }, )
                 
             }
         } 
 
+        // btn active
         for(let b = 0;b < allBtns.length;b++){
             if(allBtns[1]){
                 allBtns[b].classList.remove('active')
@@ -2631,13 +3351,25 @@ function filtroPastilha(){
     // BTN vws
     allBtns[2].addEventListener('click', () =>{
         for(let c = 0;c < allCards.length;c++){
-            allCards[c].style.display='block'
+            
+            // filtrando
+            allCards[c].classList.remove('positionAbsolute')
+            allCards[c].classList.remove('fade-out-active')
+            allCards[c].classList.add('fade-in-active')
 
             if(!(allCards[c].classList.contains('vws'))){
-                allCards[c].style.display='none'
+                
+                allCards[c].classList.remove('fade-in-active')
+                allCards[c].classList.add('fade-out-active')
+
+                setTimeout(function(){
+                    allCards[c].classList.add('positionAbsolute')
+                }, )
+
             }
         } 
 
+        // active btn
         for(let b = 0;b < allBtns.length;b++){
             if(allBtns[2]){
                 allBtns[b].classList.remove('active')
@@ -2649,13 +3381,25 @@ function filtroPastilha(){
     // BTN GM
     allBtns[3].addEventListener('click', () =>{
         for(let c = 0;c < allCards.length;c++){
-            allCards[c].style.display='block'
+            
+            // filtrando
+            allCards[c].classList.remove('positionAbsolute')
+            allCards[c].classList.remove('fade-out-active')
+            allCards[c].classList.add('fade-in-active')
 
             if(!(allCards[c].classList.contains('gm'))){
-                allCards[c].style.display='none'
+                
+                allCards[c].classList.remove('fade-in-active')
+                allCards[c].classList.add('fade-out-active')
+
+                setTimeout(function(){
+                    allCards[c].classList.add('positionAbsolute')
+                }, )
+
             }
         } 
 
+        // btn active
         for(let b = 0;b < allBtns.length;b++){
             if(allBtns[3]){
                 allBtns[b].classList.remove('active')
@@ -2667,13 +3411,25 @@ function filtroPastilha(){
     // BTN Toyota
     allBtns[4].addEventListener('click', () =>{
         for(let c = 0;c < allCards.length;c++){
-            allCards[c].style.display='block'
+           
+            // filtrando
+            allCards[c].classList.remove('positionAbsolute')
+            allCards[c].classList.remove('fade-out-active')
+            allCards[c].classList.add('fade-in-active')
 
             if(!(allCards[c].classList.contains('toyota'))){
-                allCards[c].style.display='none'
+                
+                allCards[c].classList.remove('fade-in-active')
+                allCards[c].classList.add('fade-out-active')
+
+                setTimeout(function(){
+                    allCards[c].classList.add('positionAbsolute')
+                }, )
+
             }
         } 
 
+        // active btn
         for(let b = 0;b < allBtns.length;b++){
             if(allBtns[4]){
                 allBtns[b].classList.remove('active')
@@ -2685,10 +3441,21 @@ function filtroPastilha(){
     // BTN ford
     allBtns[5].addEventListener('click', () =>{
         for(let c = 0;c < allCards.length;c++){
-            allCards[c].style.display='block'
+            
+            // filtrando
+            allCards[c].classList.remove('positionAbsolute')
+            allCards[c].classList.remove('fade-out-active')
+            allCards[c].classList.add('fade-in-active')
 
             if(!(allCards[c].classList.contains('ford'))){
-                allCards[c].style.display='none'
+                
+                allCards[c].classList.remove('fade-in-active')
+                allCards[c].classList.add('fade-out-active')
+
+                setTimeout(function(){
+                    allCards[c].classList.add('positionAbsolute')
+                }, )
+
             }
         } 
 
@@ -2703,13 +3470,25 @@ function filtroPastilha(){
     // BTN citroen
     allBtns[6].addEventListener('click', () =>{
         for(let c = 0;c < allCards.length;c++){
-            allCards[c].style.display='block'
+            
+            // filtrando
+            allCards[c].classList.remove('positionAbsolute')
+            allCards[c].classList.remove('fade-out-active')
+            allCards[c].classList.add('fade-in-active')
 
             if(!(allCards[c].classList.contains('renault'))){
-                allCards[c].style.display='none'
+                
+                allCards[c].classList.remove('fade-in-active')
+                allCards[c].classList.add('fade-out-active')
+
+                setTimeout(function(){
+                    allCards[c].classList.add('positionAbsolute')
+                }, )
+
             }
         } 
 
+        // btn active
         for(let b = 0;b < allBtns.length;b++){
             if(allBtns[6]){
                 allBtns[b].classList.remove('active')
@@ -2945,7 +3724,9 @@ function filtroReparo(){
     // BTN TODOS
     allBtns[0].addEventListener('click', () =>{
         for(let c = 0;c < allCards.length;c++){
-            allCards[c].style.display='block'
+            
+            allCards[c].classList.remove('positionAbsolute')
+            allCards[c].classList.remove('fade-out-active')
         }
 
         for(let b = 0;b < allBtns.length;b++){
@@ -2959,14 +3740,26 @@ function filtroReparo(){
     // BTN fiat
     allBtns[1].addEventListener('click', () =>{
         for(let c = 0;c < allCards.length;c++){
-            allCards[c].style.display='block'
+            
+            // filtrando
+            allCards[c].classList.remove('positionAbsolute')
+            allCards[c].classList.remove('fade-out-active')
+            allCards[c].classList.add('fade-in-active')
 
             if(!(allCards[c].classList.contains('fiat'))){
-                allCards[c].style.display='none'
+                
+                allCards[c].classList.remove('fade-in-active')
+                allCards[c].classList.add('fade-out-active')
+
+                setTimeout(function(){
+                    allCards[c].classList.add('positionAbsolute')
+                }, )
+
                 
             }
         } 
 
+        // BTN ACTIVE
         for(let b = 0;b < allBtns.length;b++){
             if(allBtns[1]){
                 allBtns[b].classList.remove('active')
@@ -2978,13 +3771,25 @@ function filtroReparo(){
     // BTN vws
     allBtns[2].addEventListener('click', () =>{
         for(let c = 0;c < allCards.length;c++){
-            allCards[c].style.display='block'
+            
+            // filtrando
+            allCards[c].classList.remove('positionAbsolute')
+            allCards[c].classList.remove('fade-out-active')
+            allCards[c].classList.add('fade-in-active')
 
             if(!(allCards[c].classList.contains('vws'))){
-                allCards[c].style.display='none'
+                
+                allCards[c].classList.remove('fade-in-active')
+                allCards[c].classList.add('fade-out-active')
+
+                setTimeout(function(){
+                    allCards[c].classList.add('positionAbsolute')
+                }, )
+
             }
         } 
 
+        // active btn
         for(let b = 0;b < allBtns.length;b++){
             if(allBtns[2]){
                 allBtns[b].classList.remove('active')
@@ -2996,13 +3801,25 @@ function filtroReparo(){
     // BTN GM
     allBtns[3].addEventListener('click', () =>{
         for(let c = 0;c < allCards.length;c++){
-            allCards[c].style.display='block'
+            
+            // filtrando
+            allCards[c].classList.remove('positionAbsolute')
+            allCards[c].classList.remove('fade-out-active')
+            allCards[c].classList.add('fade-in-active')
 
             if(!(allCards[c].classList.contains('gm'))){
-                allCards[c].style.display='none'
+               
+                allCards[c].classList.remove('fade-in-active')
+                allCards[c].classList.add('fade-out-active')
+
+                setTimeout(function(){
+                    allCards[c].classList.add('positionAbsolute')
+                }, )
+
             }
         } 
 
+        // btn active
         for(let b = 0;b < allBtns.length;b++){
             if(allBtns[3]){
                 allBtns[b].classList.remove('active')
@@ -3014,13 +3831,25 @@ function filtroReparo(){
     // BTN ford
     allBtns[4].addEventListener('click', () =>{
         for(let c = 0;c < allCards.length;c++){
-            allCards[c].style.display='block'
+            
+            // filtrando
+            allCards[c].classList.remove('positionAbsolute')
+            allCards[c].classList.remove('fade-out-active')
+            allCards[c].classList.add('fade-in-active')
 
             if(!(allCards[c].classList.contains('ford'))){
-                allCards[c].style.display='none'
+                
+                allCards[c].classList.remove('fade-in-active')
+                allCards[c].classList.add('fade-out-active')
+
+                setTimeout(function(){
+                    allCards[c].classList.add('positionAbsolute')
+                }, )
+
             }
         } 
 
+        // btn active
         for(let b = 0;b < allBtns.length;b++){
             if(allBtns[4]){
                 allBtns[b].classList.remove('active')
@@ -3032,10 +3861,21 @@ function filtroReparo(){
     // BTN renault
     allBtns[5].addEventListener('click', () =>{
         for(let c = 0;c < allCards.length;c++){
-            allCards[c].style.display='block'
+            
+            // filtrando
+            allCards[c].classList.remove('positionAbsolute')
+            allCards[c].classList.remove('fade-out-active')
+            allCards[c].classList.add('fade-in-active')
 
             if(!(allCards[c].classList.contains('renault'))){
-                allCards[c].style.display='none'
+                
+                allCards[c].classList.remove('fade-in-active')
+                allCards[c].classList.add('fade-out-active')
+
+                setTimeout(function(){
+                    allCards[c].classList.add('positionAbsolute')
+                }, )
+
             }
         } 
 
@@ -3107,7 +3947,9 @@ function filtroCabos(){
     // BTN TODOS
     allBtns[0].addEventListener('click', () =>{
         for(let c = 0;c < allCards.length;c++){
-            allCards[c].style.display='block'
+            
+            allCards[c].classList.remove('positionAbsolute')
+            allCards[c].classList.remove('fade-out-active')
         }
 
         for(let b = 0;b < allBtns.length;b++){
@@ -3121,14 +3963,25 @@ function filtroCabos(){
     // BTN fiat
     allBtns[1].addEventListener('click', () =>{
         for(let c = 0;c < allCards.length;c++){
-            allCards[c].style.display='block'
+            
+            // filtrando
+            allCards[c].classList.remove('positionAbsolute')
+            allCards[c].classList.remove('fade-out-active')
+            allCards[c].classList.add('fade-in-active')
 
             if(!(allCards[c].classList.contains('fiat'))){
-                allCards[c].style.display='none'
+                
+                allCards[c].classList.remove('fade-in-active')
+                allCards[c].classList.add('fade-out-active')
+
+                setTimeout(function(){
+                    allCards[c].classList.add('positionAbsolute')
+                }, )
                 
             }
         } 
 
+        // btn active
         for(let b = 0;b < allBtns.length;b++){
             if(allBtns[1]){
                 allBtns[b].classList.remove('active')
@@ -3140,13 +3993,25 @@ function filtroCabos(){
     // BTN vws
     allBtns[2].addEventListener('click', () =>{
         for(let c = 0;c < allCards.length;c++){
-            allCards[c].style.display='block'
+            
+            // filtrando
+            allCards[c].classList.remove('positionAbsolute')
+            allCards[c].classList.remove('fade-out-active')
+            allCards[c].classList.add('fade-in-active')
 
             if(!(allCards[c].classList.contains('vws'))){
-                allCards[c].style.display='none'
+                
+                allCards[c].classList.remove('fade-in-active')
+                allCards[c].classList.add('fade-out-active')
+
+                setTimeout(function(){
+                    allCards[c].classList.add('positionAbsolute')
+                }, )
+
             }
         } 
 
+        // btn active
         for(let b = 0;b < allBtns.length;b++){
             if(allBtns[2]){
                 allBtns[b].classList.remove('active')
@@ -3158,10 +4023,21 @@ function filtroCabos(){
     // BTN GM
     allBtns[3].addEventListener('click', () =>{
         for(let c = 0;c < allCards.length;c++){
-            allCards[c].style.display='block'
+            
+            // filtrando
+            allCards[c].classList.remove('positionAbsolute')
+            allCards[c].classList.remove('fade-out-active')
+            allCards[c].classList.add('fade-in-active')
 
             if(!(allCards[c].classList.contains('gm'))){
-                allCards[c].style.display='none'
+                
+                allCards[c].classList.remove('fade-in-active')
+                allCards[c].classList.add('fade-out-active')
+
+                setTimeout(function(){
+                    allCards[c].classList.add('positionAbsolute')
+                }, )
+
             }
         } 
 
@@ -3494,7 +4370,9 @@ function filtroCorreiaAlter(){
     // BTN TODOS
     allBtns[0].addEventListener('click', () =>{
         for(let c = 0;c < allCards.length;c++){
-            allCards[c].style.display='block'
+            
+            allCards[c].classList.remove('positionAbsolute')
+            allCards[c].classList.remove('fade-out-active')
         }
 
         for(let b = 0;b < allBtns.length;b++){
@@ -3508,14 +4386,26 @@ function filtroCorreiaAlter(){
     // BTN fiat
     allBtns[1].addEventListener('click', () =>{
         for(let c = 0;c < allCards.length;c++){
-            allCards[c].style.display='block'
+            
+            // filtrando
+            allCards[c].classList.remove('positionAbsolute')
+            allCards[c].classList.remove('fade-out-active')
+            allCards[c].classList.add('fade-in-active')
 
             if(!(allCards[c].classList.contains('fiat'))){
-                allCards[c].style.display='none'
+                
+                allCards[c].classList.remove('fade-in-active')
+                allCards[c].classList.add('fade-out-active')
+
+                setTimeout(function(){
+                    allCards[c].classList.add('positionAbsolute')
+                }, )
+
                 
             }
         } 
 
+        // btn active
         for(let b = 0;b < allBtns.length;b++){
             if(allBtns[1]){
                 allBtns[b].classList.remove('active')
@@ -3528,13 +4418,25 @@ function filtroCorreiaAlter(){
     // BTN GM
     allBtns[2].addEventListener('click', () =>{
         for(let c = 0;c < allCards.length;c++){
-            allCards[c].style.display='block'
+            
+            // filtrando
+            allCards[c].classList.remove('positionAbsolute')
+            allCards[c].classList.remove('fade-out-active')
+            allCards[c].classList.add('fade-in-active')
 
             if(!(allCards[c].classList.contains('gm'))){
-                allCards[c].style.display='none'
+                
+                allCards[c].classList.remove('fade-in-active')
+                allCards[c].classList.add('fade-out-active')
+
+                setTimeout(function(){
+                    allCards[c].classList.add('positionAbsolute')
+                }, )
+
             }
         } 
 
+        // btn active
         for(let b = 0;b < allBtns.length;b++){
             if(allBtns[2]){
                 allBtns[b].classList.remove('active')
@@ -3546,13 +4448,25 @@ function filtroCorreiaAlter(){
     // BTN vws
     allBtns[3].addEventListener('click', () =>{
         for(let c = 0;c < allCards.length;c++){
-            allCards[c].style.display='block'
+            
+            // filtrando
+            allCards[c].classList.remove('positionAbsolute')
+            allCards[c].classList.remove('fade-out-active')
+            allCards[c].classList.add('fade-in-active')
 
             if(!(allCards[c].classList.contains('vws'))){
-                allCards[c].style.display='none'
+                
+                allCards[c].classList.remove('fade-in-active')
+                allCards[c].classList.add('fade-out-active')
+
+                setTimeout(function(){
+                    allCards[c].classList.add('positionAbsolute')
+                }, )
+
             }
         } 
 
+        // btn active
         for(let b = 0;b < allBtns.length;b++){
             if(allBtns[3]){
                 allBtns[b].classList.remove('active')
@@ -3565,13 +4479,25 @@ function filtroCorreiaAlter(){
     // BTN ford
     allBtns[4].addEventListener('click', () =>{
         for(let c = 0;c < allCards.length;c++){
-            allCards[c].style.display='block'
+            
+            // filtrando
+            allCards[c].classList.remove('positionAbsolute')
+            allCards[c].classList.remove('fade-out-active')
+            allCards[c].classList.add('fade-in-active')
 
             if(!(allCards[c].classList.contains('ford'))){
-                allCards[c].style.display='none'
+                
+                allCards[c].classList.remove('fade-in-active')
+                allCards[c].classList.add('fade-out-active')
+
+                setTimeout(function(){
+                    allCards[c].classList.add('positionAbsolute')
+                }, )
+
             }
         } 
 
+        // btn active
         for(let b = 0;b < allBtns.length;b++){
             if(allBtns[4]){
                 allBtns[b].classList.remove('active')
@@ -3795,7 +4721,7 @@ async function portaEscovas(){
     }
 }
 
-
+// adding acessorios motor partida
 async function acessoriosPart(){
     const dado = await gettingApi()
     const dados = dado.acessoriosMotorPart
@@ -3926,7 +4852,7 @@ async function reservatorio(){
     }
 }
 
-
+// adding valvulasTermo
 async function valvulasTermo(){
 
     const dado = await gettingApi()

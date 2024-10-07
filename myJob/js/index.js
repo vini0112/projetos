@@ -106,7 +106,23 @@ document.addEventListener('DOMContentLoaded', () =>{
 // },
 
 
+// ALL BTNS FUNCTION
+//allCards[c].classList.remove('positionAbsolute')
+//allCards[c].classList.remove('fade-out-active')
 
+
+// FUNCTION BEFORE IF 
+// allCards[c].classList.remove('positionAbsolute')
+// allCards[c].classList.remove('fade-out-active')
+// allCards[c].classList.add('fade-in-active')
+
+
+// FUNCTION INSIDE IF
+// allCards[c].classList.remove('fade-in-active')
+// allCards[c].classList.add('fade-out-active')
+// setTimeout(function(){
+//     allCards[c].classList.add('positionAbsolute')
+// }, )
 
 
 

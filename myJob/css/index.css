@@ -14,6 +14,10 @@
     --btnApli: #0688c4;
     --corMontadoras: #06aaf6;
 }
+body{
+    position: relative;
+    overflow-x: hidden;
+}
 
 
 /* stylos globals */
