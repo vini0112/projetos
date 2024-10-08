@@ -163,6 +163,13 @@ document.addEventListener('DOMContentLoaded', () =>{
     // SESSAO 15
 
     bojos()
+
+    intermediarios()
+
+    conxinsEscap()
+
+    acessoriosEscap()
+
 })
 
 // API REQUEST
@@ -5943,3 +5950,374 @@ function filtroBojos(){
 
 
 
+
+// adding intermediarios
+async function intermediarios(){
+
+    const dado = await gettingApi()
+    const dados = dado.canosIntermediario
+    // console.log(dados)
+
+    for(let i = 0;i < dados.length;i++){
+
+        let newDiv = document.createElement('div')
+        newDiv.classList.add('col-md-3')
+        newDiv.classList.add('card')
+        newDiv.classList.add(dados[i].linhaCode)
+
+        if(dados[i].qtd == 0){
+            newDiv.classList.add('acabou')
+        }
+
+        // if(dados[i].secundLineCode){
+        //     newDiv.classList.add(dados[i].secundLineCode)
+        // }
+
+
+        newDiv.innerHTML = `
+        <img src="${dados[i].image}" alt="${dados[i].info}" class="img-fluid">
+        <div class="card-body">
+            <h5 class="card-title">${dados[i].nome}</h5>
+            <h5 class="card-title">${dados[i].info}</h5>
+            <p class="card-text">Linha ${dados[i].linha}</p>
+
+            <button type="button" class="padraoBtn" data-bs-toggle="modal" data-bs-target="${dados[i].linkApli}">Aplicações</button>
+        </div>
+        
+        `
+
+        rowInter.appendChild(newDiv)
+
+    }
+
+    filtroInter()
+
+}
+
+
+// funcao filtrando pesquisa dos intermediarios
+function filtroInter(){
+    let allBtns = document.querySelectorAll("#row-inter #btns-inter button")
+    //console.log(allBtns)
+
+    let allCards = document.querySelectorAll('#row-inter .card')
+    //console.log(allCards)
+
+
+      // BTN TODOS
+      allBtns[0].addEventListener('click', () =>{
+        for(let c = 0;c < allCards.length;c++){
+            
+            allCards[c].classList.remove('positionAbsolute')
+            allCards[c].classList.remove('fade-out-active')
+        }
+
+        for(let b = 0;b < allBtns.length;b++){
+            if(allBtns[0]){
+                allBtns[b].classList.remove('active')
+                allBtns[0].classList.add('active')
+            }
+        }
+    })
+
+
+    // BTN fiat
+    allBtns[1].addEventListener('click', () =>{
+        for(let c = 0;c < allCards.length;c++){
+            
+             // filtrando
+             allCards[c].classList.remove('positionAbsolute')
+             allCards[c].classList.remove('fade-out-active')
+             allCards[c].classList.add('fade-in-active')
+
+            if(!(allCards[c].classList.contains('fiat'))){
+                
+                allCards[c].classList.remove('fade-in-active')
+                allCards[c].classList.add('fade-out-active')
+
+                setTimeout(function(){
+                    allCards[c].classList.add('positionAbsolute')
+                }, )
+                
+            }
+        } 
+
+        // btn active
+        for(let b = 0;b < allBtns.length;b++){
+            if(allBtns[1]){
+                allBtns[b].classList.remove('active')
+                allBtns[1].classList.add('active')
+            }
+        }
+    })
+
+
+    // BTN gm
+    allBtns[2].addEventListener('click', () =>{
+        for(let c = 0;c < allCards.length;c++){
+            
+            // filtrando
+            allCards[c].classList.remove('positionAbsolute')
+            allCards[c].classList.remove('fade-out-active')
+            allCards[c].classList.add('fade-in-active')
+
+            if(!(allCards[c].classList.contains('gm'))){
+                
+                allCards[c].classList.remove('fade-in-active')
+                allCards[c].classList.add('fade-out-active')
+
+                setTimeout(function(){
+                    allCards[c].classList.add('positionAbsolute')
+                }, )
+
+            }
+        } 
+
+        // btn active
+        for(let b = 0;b < allBtns.length;b++){
+            if(allBtns[2]){
+                allBtns[b].classList.remove('active')
+                allBtns[2].classList.add('active')
+            }
+        }
+    })
+
+
+    // BTN vws
+    allBtns[3].addEventListener('click', () =>{
+        for(let c = 0;c < allCards.length;c++){
+            
+            // filtrando
+            allCards[c].classList.remove('positionAbsolute')
+            allCards[c].classList.remove('fade-out-active')
+            allCards[c].classList.add('fade-in-active')
+
+            if(!(allCards[c].classList.contains('vws'))){
+                
+                allCards[c].classList.remove('fade-in-active')
+                allCards[c].classList.add('fade-out-active')
+
+                setTimeout(function(){
+                    allCards[c].classList.add('positionAbsolute')
+                }, )
+
+            }
+        } 
+
+        // btn active
+        for(let b = 0;b < allBtns.length;b++){
+            if(allBtns[3]){
+                allBtns[b].classList.remove('active')
+                allBtns[3].classList.add('active')
+            }
+        }
+    })
+
+}
+
+
+
+// adding coxins escapamento
+async function conxinsEscap(){
+
+    const dado = await gettingApi()
+    const dados = dado.coxinsEscap
+    // console.log(dados)
+
+    for(let i = 0;i < dados.length;i++){
+
+        let newDiv = document.createElement('div')
+        newDiv.classList.add('col-md-3')
+        newDiv.classList.add('card')
+        newDiv.classList.add(dados[i].linhaCode)
+
+        if(dados[i].qtd == 0){
+            newDiv.classList.add('acabou')
+        }
+
+        // if(dados[i].secundLineCode){
+        //     newDiv.classList.add(dados[i].secundLineCode)
+        // }
+
+
+        newDiv.innerHTML = `
+        <img src="${dados[i].image}" alt="${dados[i].info}" class="img-fluid">
+        <div class="card-body">
+            <h5 class="card-title">${dados[i].nome} ${dados[i].position}</h5>
+            <h5 class="card-title">${dados[i].info}</h5>
+            <p class="card-text">Linha ${dados[i].linha}</p>
+
+            <button type="button" class="padraoBtn" data-bs-toggle="modal" data-bs-target="${dados[i].linkApli}">Aplicações</button>
+        </div>
+        
+        `
+
+        rowCoxinsEscap.appendChild(newDiv)
+
+    }
+
+    filtroCoxinEscap()
+}
+
+
+//funcao filtrando pesquisa dos coxins escapes
+function filtroCoxinEscap(){
+
+    let allBtns = document.querySelectorAll("#row-coxin-escap #btns-coxins-escap button")
+    //console.log(allBtns)
+
+    let allCards = document.querySelectorAll('#row-coxin-escap .card')
+    //console.log(allCards)
+
+
+     // BTN TODOS
+     allBtns[0].addEventListener('click', () =>{
+        for(let c = 0;c < allCards.length;c++){
+            
+            allCards[c].classList.remove('positionAbsolute')
+            allCards[c].classList.remove('fade-out-active')
+        }
+
+        for(let b = 0;b < allBtns.length;b++){
+            if(allBtns[0]){
+                allBtns[b].classList.remove('active')
+                allBtns[0].classList.add('active')
+            }
+        }
+    })
+
+
+    // BTN fiat
+    allBtns[1].addEventListener('click', () =>{
+        for(let c = 0;c < allCards.length;c++){
+            
+            // filtrando
+            allCards[c].classList.remove('positionAbsolute')
+            allCards[c].classList.remove('fade-out-active')
+            allCards[c].classList.add('fade-in-active')
+
+            if(!(allCards[c].classList.contains('fiat'))){
+                
+                allCards[c].classList.remove('fade-in-active')
+                allCards[c].classList.add('fade-out-active')
+
+                setTimeout(function(){
+                    allCards[c].classList.add('positionAbsolute')
+                }, )
+                
+            }
+        } 
+
+        // btn active
+        for(let b = 0;b < allBtns.length;b++){
+            if(allBtns[1]){
+                allBtns[b].classList.remove('active')
+                allBtns[1].classList.add('active')
+            }
+        }
+    })
+
+
+    // BTN gm
+    allBtns[2].addEventListener('click', () =>{
+        for(let c = 0;c < allCards.length;c++){
+            
+            // filtrando
+            allCards[c].classList.remove('positionAbsolute')
+            allCards[c].classList.remove('fade-out-active')
+            allCards[c].classList.add('fade-in-active')
+
+            if(!(allCards[c].classList.contains('gm'))){
+                
+                allCards[c].classList.remove('fade-in-active')
+                allCards[c].classList.add('fade-out-active')
+
+                setTimeout(function(){
+                    allCards[c].classList.add('positionAbsolute')
+                }, )
+
+            }
+        } 
+
+        // btn active
+        for(let b = 0;b < allBtns.length;b++){
+            if(allBtns[2]){
+                allBtns[b].classList.remove('active')
+                allBtns[2].classList.add('active')
+            }
+        }
+    })
+
+
+    // BTN vws
+    allBtns[3].addEventListener('click', () =>{
+        for(let c = 0;c < allCards.length;c++){
+            
+            // filtrando
+            allCards[c].classList.remove('positionAbsolute')
+            allCards[c].classList.remove('fade-out-active')
+            allCards[c].classList.add('fade-in-active')
+
+            if(!(allCards[c].classList.contains('vws'))){
+                
+                allCards[c].classList.remove('fade-in-active')
+                allCards[c].classList.add('fade-out-active')
+
+                setTimeout(function(){
+                    allCards[c].classList.add('positionAbsolute')
+                }, )
+
+            }
+        } 
+
+        for(let b = 0;b < allBtns.length;b++){
+            if(allBtns[3]){
+                allBtns[b].classList.remove('active')
+                allBtns[3].classList.add('active')
+            }
+        }
+    })
+
+
+}
+
+
+
+// adding acessorios dos escapes
+async function acessoriosEscap(){
+
+    const dado = await gettingApi()
+    const dados = dado.acessoriosEscap
+    // console.log(dados)
+
+
+    for(let i = 0;i < dados.length;i++){
+
+        let newDiv = document.createElement('div')
+        newDiv.classList.add('col-md-3')
+        newDiv.classList.add('card')
+        newDiv.classList.add(dados[i].linhaCode)
+
+        if(dados[i].qtd == 0){
+            newDiv.classList.add('acabou')
+        }
+
+        // if(dados[i].secundLineCode){
+        //     newDiv.classList.add(dados[i].secundLineCode)
+        // }
+
+
+        newDiv.innerHTML = `
+        <img src="${dados[i].image}" alt="${dados[i].info}" class="img-fluid">
+        <div class="card-body">
+            <h5 class="card-title">${dados[i].nome}</h5>
+            <p class="card-text">Linha ${dados[i].linha}</p>
+
+        </div>
+        
+        `
+
+        rowAcessoriosEscap.appendChild(newDiv)
+
+    }
+}
