@@ -232,8 +232,18 @@
             "code": 2638,
             "linkApli": "#psl619",
             "price": 15.00,
-            "qtd": 1
+            "qtd": 1,
+
+            "aplicacoes":[
+                {
+                    "codeApli": "psl619",
+                    "montadora": "GM",
+                    "carros": ["Corsa", "Celta", "Prisma", "Agile", "Cobalt", "Onix", "Monza", "Montana", "Meriva", "Chevette", "Astra", "S-10", "Spin"],
+                    "anoApli": ["1994..", "2001..", "1.0 e 1.4 Flex 2009..", "1.4 2009-2014", "...", "1.0 e 1.4 Flex 2009..", "1982-1996", "2011..", "2003..", "1980-1995", "1.8 e 2.0 1994-2004", "2.2 e 2.4 1999..", "1.8 2012.."]
+                }
+            ]
         },
+
         {
             "nome": "Filtro de Óleo",
             "image": "photos/filtros/oleo/WO133.png",
@@ -245,8 +255,35 @@
             "code": "Sem",
             "linkApli": "#wo133",
             "price": 0,
-            "qtd": 1
+            "qtd": 1,
+            "aplicacoes":[
+                {
+                    "codeApli": "wo133",
+                    "montadora": "FIAT",
+                    "carros": ["Toro"],
+                    "anoApli":["Flex 2.4 16v 2016"]
+                }
+            ],
+            "aplicacoesTwo":[
+                {
+                     "montadora": "JEEP",
+                     "carros": ["Compass"],
+                     "anoApli":["2.0 16v 2012.."]
+                }
+                
+            ],
+
+            "aplicacoesThree":[
+                {
+                    "montadora": "GM",
+                    "carros": ["Cruze"],
+                     "anoApli":["1.4 2016.."]
+
+                }
+            ]
+
         },
+
         {
             "nome": "Filtro de Óleo",
             "image": "photos/filtros/oleo/psl55.jpg",
@@ -257,8 +294,18 @@
             "code": 554,
             "linkApli": "#psl55",
             "price": 15.50,
-            "qtd": 1
+            "qtd": 1,
+            "aplicacoes":[
+                {
+                    "codeApli": "psl55",
+                    "montadora": "FIAT",
+                    "carros": ["Fiorino", "Grand-Siena", "Idea", "Mobi", "Palio-Weekend", "Palio", "Doblo",
+                    "Punto", "Siena", "Strada", "Uno", "Honda Civic"],
+                    "anoApli": ["2002..", "1.4 2012..", "1.4 2005..", "1.0 2016..", "1.0, 1.3 2000..", "2000..", "1.3 16v 2001-2006, 1.4 8v 2009-2015", "1.4 2007..", "2000..", "2002..", "2000..", "..."]
+                }
+            ]
         },
+
         {
             "nome": "Filtro de Óleo",
             "image": "photos/filtros/oleo/psl56.jpg",
@@ -270,8 +317,27 @@
             "code": 3495,
             "linkApli": "#psl56",
             "price": 23.61,
-            "qtd": 1
+            "qtd": 1,
+            "aplicacoes":[
+                {
+                    "codeApli": "psl56",
+                    "montadora": "FIAT",
+                    "carros": ["Argo", "Cronos", "Mobi", "Strada", "Uno"],
+                    "anoApli": ["2017-2020", "2018-2020", "2018-2020", "2020", "2016-2020"]
+                }
+            ],
+
+            "aplicacoesTwo":[
+                {
+                     "montadora": "RENAULT",
+                     "carros": ["Fluence", "Logan", "Sandero"],
+                     "anoApli":["2.0 2013-2018", "1.0 2017-2020", "1.0 2017-2020"]
+                }
+                
+            ]
+
         },
+
         {
             "nome": "Filtro de Óleo",
             "image": "photos/filtros/oleo/pel118.jpg",
@@ -282,8 +348,17 @@
             "code": 3778,
             "linkApli": "#pel118",
             "price": 42.00,
-            "qtd": 1
+            "qtd": 1,
+            "aplicacoes":[
+                {
+                    "codeApli": "pel118",
+                    "montadora": "FIAT",
+                    "carros": ["Punto", "Linea", "Bravo"],
+                    "anoApli": ["1.4 JET/T-JET/ATTRACTIVE 2009-2017", "1.4 T-JET 2008-2012", "1.4 T-JET 2011-2016"]
+                }
+            ]
         },
+
         {
             "nome": "Filtro de Óleo",
             "image": "photos/filtros/oleo/tm1.jpg",
@@ -294,8 +369,34 @@
             "code": 3779,
             "linkApli": "#tm1",
             "price": 18.00,
-            "qtd": 1
+            "qtd": 1,
+            "aplicacoes":[
+                {
+                    "codeApli": "tm1",
+                    "montadora": "FIAT",
+                    "carros": ["Elba", "Fiorino", "Prêmio"],
+                    "anoApli": ["1986-1996", "1978-2004", "1985-1994"]
+                }
+            ],
+            "aplicacoesTwo":[
+                {
+                     "montadora": "FORD",
+                     "carros": ["Ranger", "Courier", "Ecosport", "Escort", "Fiesta", "Focus", "Ka", "Maverick"],
+                     "anoApli":["2000..", "2000..", "2.0 2003..", "1983-2003", "1996..", "2000..", "1997-2013", "1.6 e 3.0 1973-1979"]
+                }
+                
+            ],
+
+            "aplicacoesThree":[
+                {
+                    "montadora": "Volkswagen",
+                    "carros": ["Gol", "Saveiro"],
+                     "anoApli":["1.0 e 1.6 1990-1996", "1.6 1990-1995"]
+
+                }
+            ]
         },
+
         {
             "nome": "Filtro de Óleo",
             "image": "photos/filtros/oleo/wo170.png",
@@ -306,8 +407,17 @@
             "code": 3777,
             "linkApli": "#wo170",
             "price": 19.00,
-            "qtd": 1
+            "qtd": 1,
+            "aplicacoes":[
+                {
+                    "codeApli": "wo170",
+                    "montadora": "FIAT",
+                    "carros": ["Strada", "Siena", "Palio-Weekend", "Palio", "Uno", "Marea", "Marea-Weekend"],
+                    "anoApli": ["1.6 1999-2002", "1.6 1998-2004", "1.6 1999-2003", "1.6 1996-2004", "1.0 e 1.5 1997-2004", "2000..", "1999.."]
+                }
+            ]
         },
+
         {
             "nome": "Filtro de Óleo",
             "image": "photos/filtros/oleo/wo909.png",
@@ -318,8 +428,17 @@
             "code": 3778,
             "linkApli": "#woe909",
             "price": 42.00,
-            "qtd": 1
+            "qtd": 1,
+            "aplicacoes":[
+                {
+                    "codeApli": "woe909",
+                    "montadora": "FIAT",
+                    "carros": ["Bravo", "Punto", "Linea"],
+                    "anoApli": ["T-JET 2011..", "T-JET 2009..", "T-JET 2008.."]
+                }
+            ]
         },
+
         {
             "nome": "Filtro de Óleo",
             "image": "photos/filtros/oleo/w421.png",
@@ -330,8 +449,34 @@
             "code": 3068,
             "linkApli": "#wo421",
             "price": 38.00,
-            "qtd": 1
+            "qtd": 1,
+            "aplicacoes":[
+                {
+                    "codeApli": "wo421",
+                    "montadora": "FIAT",
+                    "carros": ["Ducato"],
+                    "anoApli": ["2.3 2009.."]
+                }
+            ],
+            "aplicacoesTwo":[
+                {
+                     "montadora": "CITROEN",
+                     "carros": ["Jumper"],
+                     "anoApli":["2.3 2009.."]
+                }
+                
+            ],
+
+            "aplicacoesThree":[
+                {
+                    "montadora": "PEUGEOT",
+                    "carros": ["Boxer"],
+                     "anoApli":["2.3 2009.."]
+
+                }
+            ]
         },
+
         {
             "nome": "Filtro de Óleo",
             "image": "photos/filtros/oleo/psl560.jpg",
@@ -342,8 +487,18 @@
             "code": 245,
             "linkApli": "#psl560",
             "price": 17.00,
-            "qtd": 1
+            "qtd": 1,
+            "aplicacoes":[
+                {
+                    "codeApli": "psl560",
+                    "montadora": "Volkswagen",
+                    "carros": ["Fox", "Gol", "Golf", "Kombi", "Parati", "Polo", "Saveiro", "Space-Cross", "SpaceFox", "Voyage"],
+                    "anoApli": ["2003-2020", "1997-2020", "2002-2014", "2006-2014", "1997-1998", "2002-2015", "2008-2014", "2011-2018", "2006-2020", "2009-2020"]
+                }
+            ]
+        
         },
+        
         {
             "nome": "Filtro de Óleo",
             "image": "photos/filtros/oleo/psl145.jpg",
@@ -354,7 +509,15 @@
             "code": 1204,
             "linkApli": "#psl145",
             "price": 17.89,
-            "qtd": 1
+            "qtd": 1,
+            "aplicacoes":[
+                {
+                    "codeApi": "",
+                    "montadora": "",
+                    "carros": [""],
+                    "anoApli": [""]
+                }
+            ]
         },
         {
             "nome": "Filtro de Óleo",
@@ -366,7 +529,15 @@
             "code": 3780,
             "linkApli": "#psl127",
             "price": 24.00,
-            "qtd": 1
+            "qtd": 1,
+            "aplicacoes":[
+                {
+                    "codeApi": "",
+                    "montadora": "",
+                    "carros": [""],
+                    "anoApli": [""]
+                }
+            ]
         },
         {
             "nome": "Filtro de Óleo",
@@ -378,7 +549,15 @@
             "code": 1256,
             "linkApli": "#pel803",
             "price": 22.00,
-            "qtd": 1
+            "qtd": 1,
+            "aplicacoes":[
+                {
+                    "codeApi": "",
+                    "montadora": "",
+                    "carros": [""],
+                    "anoApli": [""]
+                }
+            ]
         },
         {
             "nome": "Filtro de Óleo",
@@ -390,7 +569,15 @@
             "code": 1668,
             "linkApli": "#w752",
             "price": 32.00,
-            "qtd": 1
+            "qtd": 1,
+            "aplicacoes":[
+                {
+                    "codeApi": "",
+                    "montadora": "",
+                    "carros": [""],
+                    "anoApli": [""]
+                }
+            ]
         },
         {
             "nome": "Filtro de Óleo",
@@ -402,7 +589,15 @@
             "code": 1092,
             "linkApli": "#psl77",
             "price": 44.00,
-            "qtd": 0
+            "qtd": 0,
+            "aplicacoes":[
+                {
+                    "codeApi": "",
+                    "montadora": "",
+                    "carros": [""],
+                    "anoApli": [""]
+                }
+            ]
         }
         
     ],
@@ -5773,6 +5968,8 @@
             "qtd": 1
         }
     ]
+
+    
 
 
 }

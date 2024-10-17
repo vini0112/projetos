@@ -24,6 +24,7 @@ body{
 .container{
     padding: 5px 20px;
 }
+
 .titles-sessoes{
     text-align: center;
     font-family: 'Times New Roman', Times, serif;
@@ -281,6 +282,14 @@ body{
     row-gap: 1rem;
     
 }
+
+.ulListas{
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    row-gap: 1rem;
+}
+
 #lista-aplicacoes li{
     font-size: 1.1rem;
 }
@@ -293,6 +302,7 @@ body{
     font-weight: bold;
     font-size: 1.1rem;
 }
+
 .modal-footer{
     display: flex;
     justify-content: space-between;

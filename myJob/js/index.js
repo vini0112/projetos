@@ -17,69 +17,6 @@ document.addEventListener('DOMContentLoaded', () =>{
         location.reload()
     })
 
-    // funcao filtrando pesquisa oleos da primeira pagina
-    // filtroIniciar()
-
-    // funcao filtrando pesquisa dos oleos
-    // filtrarMarcas()
-
-    // fucao dos filtros de oleo simples
-    // filtrarFiltrosOleo()
-
-    // fucao dos filtros de oleo pesado
-    // filtrandoPesados()
-
-    // funcao filtrando pesquisa dos filtros-combustivel simples
-    // combustSimples()
-
-    // funcao filtrando pesquisa dos filtros-combustivel simples
-    // combustPesados()
-
-    // funcao filtrando pesquisa dos filtros-ar-motor
-    // arMotor()
-
-    // fucao filtrando pesquisa dos terminais de direcao
-    // filtroTerminais()
-
-    //fucao filtrando pesquisa dos pivos suspensao
-    // filtroPivos()
-
-    // fucao filtrando pesquisa das barras axiais
-    // filtroBarras()
-
-    // fucao filtrando pesquisa dos batedores
-    // filtroBatedor()
-
-    // funcao filtrando pesquisa das buchas
-    // filtroBuchas()
-
-    // funcao filtrando pesquisa dos estabilizadores
-    // filtroEstabili()
-
-    // funcao filtrando pesquisa das pastilhas freio
-    // filtroPastilha()
-
-    //fucao filtrando pesquisa dos reparos
-    // filtroReparo()
-
-    // fucao filtrando pesquisa dos cabos
-    // filtroCabos()
-
-    // fucao filtrando pesquisa dos canos
-    // filtroCanos()
-
-    // fucao filtrando pesquisa dos cabos
-    // filtroCorreiaAlter()
-
-    //funcao filtrando pesquisa dos bojos
-    // filtroBojos()
-
-    // funcao filtrando pesquisa intermediarios
-    // filtroInter()
-
-    // funcao filtrando pesquisa coxins escapes
-    // filtroCoxinEscap()
-
 
     // funcoes do fast-search para mostrar pagina
     mostrarInfoFastSearch()
@@ -89,40 +26,6 @@ document.addEventListener('DOMContentLoaded', () =>{
 
 })
 
-
-//  ESTRUTURA JSON
-// {
-//     "nome": "",
-//     "Lado": "",
-//     "image": "",
-//     "marca": "",
-//     "info": "",
-//     "linha": "",
-//     "linhaCode": "",
-//     "code": "",
-//     "linkApli": "#",
-//     "price": 0,
-//     "qtd": 1
-// },
-
-
-// ALL BTNS FUNCTION
-//allCards[c].classList.remove('positionAbsolute')
-//allCards[c].classList.remove('fade-out-active')
-
-
-// FUNCTION BEFORE IF 
-// allCards[c].classList.remove('positionAbsolute')
-// allCards[c].classList.remove('fade-out-active')
-// allCards[c].classList.add('fade-in-active')
-
-
-// FUNCTION INSIDE IF
-// allCards[c].classList.remove('fade-in-active')
-// allCards[c].classList.add('fade-out-active')
-// setTimeout(function(){
-//     allCards[c].classList.add('positionAbsolute')
-// }, )
 
 
 
@@ -373,10 +276,6 @@ function mostrarInfoFastSearch(){
 
 
 
-
-
-
-
 // logica offcanvas 
 document.addEventListener('DOMContentLoaded', () =>{
 
@@ -535,33 +434,6 @@ function carouselBanners(){
 
 
 }
-
-
-
-
-// PARTE DO UPDATE DA PAGINA
-// FAZENDO REQUESTS DE JSONS
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
