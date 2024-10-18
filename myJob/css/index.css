@@ -282,13 +282,13 @@ body{
     row-gap: 1rem;
     
 }
-
+/* 
 .ulListas{
     list-style: none;
     display: flex;
     flex-direction: column;
     row-gap: 1rem;
-}
+} */
 
 #lista-aplicacoes li{
     font-size: 1.1rem;

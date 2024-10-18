@@ -802,6 +802,7 @@ async function addFiltroOleoSimp(){
     dialogoOleoSimples()
 }
 
+
 // fucao filtrar pesquisa de filtros de oleo
 function filtrarFiltrosOleo(){
 
@@ -1038,9 +1039,7 @@ function filtrarFiltrosOleo(){
 }
 
 
-
-
-// funcao mostrando dialogo oleos simples
+// funcao mostrando dialog oleos simples
 async function dialogoOleoSimples(){
     
     const dado = await gettingApi()
@@ -1101,13 +1100,12 @@ async function dialogoOleoSimples(){
     }
 
 
-    addingCarros(await dados)
+    carsEapli1(await dados)
     
 }
 
-
-// adding carros AND aplicacoes 
-async function addingCarros(dados){
+// adding carros AND aplicacoes of dialog
+async function carsEapli1(dados){
 
     // console.log(dados)
     let allModalBody = document.querySelectorAll('.modal-body .ulListas')
@@ -1265,17 +1263,6 @@ async function addingCarros(dados){
 
 
 
-
-
-
-
-
-
-
-
-
-
-
 // adding filtros oleo pesado
 async function addFiltroOleoPesado(){
 
@@ -1318,7 +1305,11 @@ async function addFiltroOleoPesado(){
 
     }
 
+    // funcao filtro dos btns
     filtrandoPesados()
+
+    // chamando dialog
+    dialogFiltrosOleoPesado()
 }
 
 // funcao filtrar pesquisa dos filtros pesados
@@ -1489,6 +1480,229 @@ function filtrandoPesados(){
 
 }
 
+// dialog filtro oleo pesados
+async function dialogFiltrosOleoPesado(){
+    const dado = await gettingApi()
+    const dados = dado.filtroOleoPesado
+    // console.log(dados)
+
+
+    for(let i = 0;i < dados.length;i++){
+
+        // console.log(dados.length)
+
+        // dados especificos
+        code = await dados[i].aplicacoes[0].codeApli
+        montadora = await dados[i].aplicacoes[0].montadora
+        nameProduct = await dados[i].info
+        marcaProduct = await dados[i].marca
+        codeProduct = await dados[i].code
+        montadora = await dados[i].aplicacoes[0].montadora
+        // console.log(code)
+
+        // console.log("esse é o "+ i)
+        let modalDialog = document.createElement('div')
+
+        modalDialog.innerHTML = `
+
+    <div class="modal fade thisModal" id="${code}" aria-hidden="true" aria-labelledby="modal-filtro-label" tabindex="-1" >
+        <div class="modal-dialog modal-dialog-scrollable">
+
+            <div class="modal-content" id="modal-content">
+
+                <div class="modal-header">
+                    <h2>Aplicações</h2>
+                    <button class="btn-close" type="button" data-bs-dismiss="modal" aria-label="close"></button>
+                </div>
+                <div class="modal-body">
+                    <h5>${nameProduct}</h5>   
+
+                    <ul id="lista-aplicacoes" class="filtroOleoPesado">
+                        <li class="montadora">${montadora}:</li>
+
+                    </ul>
+
+                </div>
+                <div class="modal-footer">
+                    <p><span class="carro">Marca:</span> <span class="marcas">${marcaProduct}</span></p>
+                    <p class="carro">C-${codeProduct}</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    `
+        
+        body.append(modalDialog)
+
+
+    }
+
+    carsEapli2(await dados)
+}
+
+// adding cars and aplications in dialog
+async function carsEapli2(dados){
+    // console.log(dados)
+
+    let allModalBody = document.querySelectorAll('.modal-body .filtroOleoPesado')
+
+
+    let cont = 0
+
+    for(let i = 0;i < dados.length;i++){
+
+        
+        // APLICAÇÕES
+        let aplicacao = await dados[i].aplicacoes[0].anoApli
+        let aplicacoesTwo = await dados[i].aplicacoesTwo
+        let aplicacoesThree = await dados[i].aplicacoesThree
+
+
+        // ADDING CARROS 1
+         let carros = await dados[i].aplicacoes[0].carros
+
+         carros.map((carro, index) =>{
+
+             
+            let liLista = document.createElement('li')
+            liLista.classList.add(`listCars`)
+ 
+            liLista.innerHTML = `
+              <span class="carro">${carro}: </span>
+ 
+                 `
+            //  console.log(liLista)
+
+            allModalBody[i].appendChild(liLista)
+                
+         })
+
+         
+         // ADDING APLICACOES 1
+        let allLis = document.querySelectorAll(`.modal-body .filtroOleoPesado .listCars`)
+        // console.log(allLis.length)
+        
+        aplicacao.forEach((apli) =>{
+            cont += 1
+
+            let spanLi = document.createElement('span')
+            spanLi.innerHTML = `${apli}`
+            // console.log(cont)
+            allLis[cont - 1].append(spanLi)
+        })
+
+
+        // SE EXISTIR APLICACAO DOIS
+        if(aplicacoesTwo){
+
+            // console.log(aplicacaoTwo[0].carros)
+            montadoraTwo = await aplicacoesTwo[0].montadora
+            carrosTwo = await aplicacoesTwo[0].carros
+            anoApliTwo = await aplicacoesTwo[0].anoApli
+
+            // console.log(carrosTwo)
+        //    ADDING MONTADORA 2
+            let liMontTwo = document.createElement('li')
+            liMontTwo.classList.add(`montadora`)
+            liMontTwo.innerHTML = `
+                <li class="montadora">${montadoraTwo}:</li>
+                `
+            allModalBody[i].appendChild(liMontTwo)
+
+
+            // ADDING CARROS 2
+            carrosTwo.map((carroTwo) =>{
+
+                let liListaTwo = document.createElement('li')
+                liListaTwo.classList.add(`listCars`)
+
+                liListaTwo.innerHTML = `
+                <span class="carro">${carroTwo}: </span>
+                    `
+                
+                allModalBody[i].appendChild(liListaTwo)
+            })
+
+
+            // ADDING APLICAÇAO 2
+            let allLisTwo = document.querySelectorAll(`.modal-body .filtroOleoPesado .listCars`)
+
+            anoApliTwo.forEach((apliTwo) =>{
+
+                cont += 1
+
+                let spanLiTwo = document.createElement('span')
+                spanLiTwo.innerHTML = `${apliTwo}`
+                // console.log(cont)
+                allLisTwo[cont - 1].append(spanLiTwo)
+            })
+
+        }
+
+
+        // SE EXISTIR APLICACAO TRES
+        if(aplicacoesThree){
+    
+            montadoraThree = await aplicacoesThree[0].montadora
+            carrosThree = await aplicacoesThree[0].carros
+            anoApliThree = await aplicacoesThree[0].anoApli
+
+
+            //  ADDING MONTADORA 3
+            let liMontThree = document.createElement('li')
+            liMontThree.classList.add(`montadora`)
+            liMontThree.innerHTML = `
+                <li class="montadora">${montadoraThree}:</li>
+                `
+            allModalBody[i].appendChild(liMontThree)
+
+
+            // ADDING CARROS 3
+            carrosThree.map((carroThree) =>{
+
+                let liListaThree = document.createElement('li')
+                liListaThree.classList.add(`listCars`)
+
+                liListaThree.innerHTML = `
+                <span class="carro">${carroThree}: </span>
+                    `
+                
+                allModalBody[i].appendChild(liListaThree)
+            })
+
+
+            // ADDING APLICAÇAO 3
+            let allLisThree = document.querySelectorAll(`.modal-body .filtroOleoPesado .listCars`)
+
+            anoApliThree.forEach((apliThree) =>{
+
+                cont += 1
+
+                let spanLiThree = document.createElement('span')
+                spanLiThree.innerHTML = `${apliThree}`
+                // console.log(cont)
+                allLisThree[cont - 1].append(spanLiThree)
+            })
+
+
+
+        }
+        
+
+
+    }
+
+    // console.log(allModalBody[23])
+
+}
+
+
+
+
+
+// SESSAO 03
+
 
 
 // adding filtro combust simples
@@ -1537,8 +1751,12 @@ async function filtroCombustSimples() {
 
     }
 
-
+    // funcao de filtrar dos btns
     combustSimples()
+
+    // mostrando dialog
+    dialogFiltroCombustSimple()
+
 }
 
 // funcao filtrar pesquisa dos filtros combustivel simples
@@ -1685,6 +1903,225 @@ function combustSimples(){
     
 }
 
+// dialog filtro combust simples
+async function dialogFiltroCombustSimple(){
+    const dado = await gettingApi()
+    const dados = dado.filtroCombustSimples
+    // console.log(dados)
+
+    for(let i = 0;i < dados.length;i++){
+        // console.log(dados.length)
+
+        // dados especificos
+        code = await dados[i].aplicacoes[0].codeApli
+        montadora = await dados[i].aplicacoes[0].montadora
+        nameProduct = await dados[i].info
+        marcaProduct = await dados[i].marca
+        codeProduct = await dados[i].code
+        montadora = await dados[i].aplicacoes[0].montadora
+
+
+
+        let modalDialog = document.createElement('div')
+
+        modalDialog.innerHTML = `
+
+    <div class="modal fade thisModal" id="${code}" aria-hidden="true" aria-labelledby="modal-filtro-label" tabindex="-1" >
+        <div class="modal-dialog modal-dialog-scrollable">
+
+            <div class="modal-content" id="modal-content">
+
+                <div class="modal-header">
+                    <h2>Aplicações</h2>
+                    <button class="btn-close" type="button" data-bs-dismiss="modal" aria-label="close"></button>
+                </div>
+                <div class="modal-body">
+                    <h5>${nameProduct}</h5>   
+
+                    <ul id="lista-aplicacoes" class="filtroCombustSimple">
+                        <li class="montadora">${montadora}:</li>
+
+                    </ul>
+
+                </div>
+                <div class="modal-footer">
+                    <p><span class="carro">Marca:</span> <span class="marcas">${marcaProduct}</span></p>
+                    <p class="carro">C-${codeProduct}</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    `
+        
+        body.append(modalDialog)
+
+    }
+
+    carsEapli3(await dados)
+
+
+}
+
+// adding cars and aplications in dialog
+async function carsEapli3(dados){
+    // console.log(dados)
+
+    let allModalBody = document.querySelectorAll('.modal-body .filtroCombustSimple')
+
+
+    let cont = 0
+
+    for(let i = 0;i < dados.length;i++){
+
+        
+        // APLICAÇÕES
+        let aplicacao = await dados[i].aplicacoes[0].anoApli
+        let aplicacoesTwo = await dados[i].aplicacoesTwo
+        let aplicacoesThree = await dados[i].aplicacoesThree
+
+
+        // ADDING CARROS 1
+         let carros = await dados[i].aplicacoes[0].carros
+
+         carros.map((carro, index) =>{
+
+             
+            let liLista = document.createElement('li')
+            liLista.classList.add(`listCars`)
+ 
+            liLista.innerHTML = `
+              <span class="carro">${carro}: </span>
+ 
+                 `
+            //  console.log(liLista)
+
+            allModalBody[i].appendChild(liLista)
+                
+         })
+
+         
+         // ADDING APLICACOES 1
+        let allLis = document.querySelectorAll(`.modal-body .filtroCombustSimple .listCars`)
+        // console.log(allLis.length)
+        
+        aplicacao.forEach((apli) =>{
+            cont += 1
+
+            let spanLi = document.createElement('span')
+            spanLi.innerHTML = `${apli}`
+            // console.log(cont)
+            allLis[cont - 1].append(spanLi)
+        })
+
+        
+        
+        // SE EXISTIR APLICACAO DOIS
+        if(aplicacoesTwo){
+
+            // console.log(aplicacaoTwo[0].carros)
+            montadoraTwo = await aplicacoesTwo[0].montadora
+            carrosTwo = await aplicacoesTwo[0].carros
+            anoApliTwo = await aplicacoesTwo[0].anoApli
+
+            // console.log(carrosTwo)
+        //    ADDING MONTADORA 2
+            let liMontTwo = document.createElement('li')
+            liMontTwo.classList.add(`montadora`)
+            liMontTwo.innerHTML = `
+                <li class="montadora">${montadoraTwo}:</li>
+                `
+            allModalBody[i].appendChild(liMontTwo)
+
+
+            // ADDING CARROS 2
+            carrosTwo.map((carroTwo) =>{
+
+                let liListaTwo = document.createElement('li')
+                liListaTwo.classList.add(`listCars`)
+
+                liListaTwo.innerHTML = `
+                <span class="carro">${carroTwo}: </span>
+                    `
+                
+                allModalBody[i].appendChild(liListaTwo)
+            })
+
+
+            // ADDING APLICAÇAO 2
+            let allLisTwo = document.querySelectorAll(`.modal-body .filtroCombustSimple .listCars`)
+
+            anoApliTwo.forEach((apliTwo) =>{
+
+                cont += 1
+
+                let spanLiTwo = document.createElement('span')
+                spanLiTwo.innerHTML = `${apliTwo}`
+                // console.log(cont)
+                allLisTwo[cont - 1].append(spanLiTwo)
+            })
+
+        }
+
+
+        // SE EXISTIR APLICACAO TRES
+        if(aplicacoesThree){
+    
+            montadoraThree = await aplicacoesThree[0].montadora
+            carrosThree = await aplicacoesThree[0].carros
+            anoApliThree = await aplicacoesThree[0].anoApli
+
+
+            //  ADDING MONTADORA 3
+            let liMontThree = document.createElement('li')
+            liMontThree.classList.add(`montadora`)
+            liMontThree.innerHTML = `
+                <li class="montadora">${montadoraThree}:</li>
+                `
+            allModalBody[i].appendChild(liMontThree)
+
+
+            // ADDING CARROS 3
+            carrosThree.map((carroThree) =>{
+
+                let liListaThree = document.createElement('li')
+                liListaThree.classList.add(`listCars`)
+
+                liListaThree.innerHTML = `
+                <span class="carro">${carroThree}: </span>
+                    `
+                
+                allModalBody[i].appendChild(liListaThree)
+            })
+
+
+            // ADDING APLICAÇAO 3
+            let allLisThree = document.querySelectorAll(`.modal-body .filtroCombustSimple .listCars`)
+
+            anoApliThree.forEach((apliThree) =>{
+
+                cont += 1
+
+                let spanLiThree = document.createElement('span')
+                spanLiThree.innerHTML = `${apliThree}`
+                // console.log(cont)
+                allLisThree[cont - 1].append(spanLiThree)
+            })
+
+
+
+        }
+        
+
+
+
+
+    }
+
+}
+
+
+
 
 
 // adding filtro combust pesado
@@ -1729,7 +2166,11 @@ async function filtroCombustPesado(){
 
     }
 
+    // funcao de filtrar dos btns
     combustPesados()
+
+    // exibindo dialog
+    dialogFiltroCombustPesado()
 }
 
 // funcao filtrar pesquisa dos filtros combustivel simples
@@ -1877,6 +2318,219 @@ function combustPesados(){
 
 
 
+
+}
+
+async function dialogFiltroCombustPesado(){
+    const dado = await gettingApi()
+    const dados = dado.filtroCombustPesado
+    // console.log(dados)
+
+
+    for(let i = 0;i < dados.length;i++){
+        // console.log(dados.length)
+
+        // dados especificos
+        code = await dados[i].aplicacoes[0].codeApli
+        montadora = await dados[i].aplicacoes[0].montadora
+        nameProduct = await dados[i].info
+        marcaProduct = await dados[i].marca
+        codeProduct = await dados[i].code
+        montadora = await dados[i].aplicacoes[0].montadora
+
+
+        let modalDialog = document.createElement('div')
+
+        modalDialog.innerHTML = `
+
+    <div class="modal fade thisModal" id="${code}" aria-hidden="true" aria-labelledby="modal-filtro-label" tabindex="-1" >
+        <div class="modal-dialog modal-dialog-scrollable">
+
+            <div class="modal-content" id="modal-content">
+
+                <div class="modal-header">
+                    <h2>Aplicações</h2>
+                    <button class="btn-close" type="button" data-bs-dismiss="modal" aria-label="close"></button>
+                </div>
+                <div class="modal-body">
+                    <h5>${nameProduct}</h5>   
+
+                    <ul id="lista-aplicacoes" class="filtroCombustPesado">
+                        <li class="montadora">${montadora}:</li>
+
+                    </ul>
+
+                </div>
+                <div class="modal-footer">
+                    <p><span class="carro">Marca:</span> <span class="marcas">${marcaProduct}</span></p>
+                    <p class="carro">C-${codeProduct}</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    `
+        
+        body.append(modalDialog)
+
+    }
+
+    carsEapli4(dados)
+}
+
+async function carsEapli4(dados){
+    // console.log(dados)
+
+    // filtroCombustPesado
+
+    let allModalBody = document.querySelectorAll('.modal-body .filtroCombustPesado')
+    // console.log(allModalBody)
+
+    let cont = 0
+
+    for(let i = 0;i < dados.length;i++){
+
+        // APLICAÇÕES
+        let aplicacao = await dados[i].aplicacoes[0].anoApli
+        let aplicacoesTwo = await dados[i].aplicacoesTwo
+        let aplicacoesThree = await dados[i].aplicacoesThree
+
+
+        // ADDING CARROS 1
+         let carros = await dados[i].aplicacoes[0].carros
+
+         carros.map((carro, index) =>{
+
+             
+            let liLista = document.createElement('li')
+            liLista.classList.add(`listCars`)
+ 
+            liLista.innerHTML = `
+              <span class="carro">${carro}: </span>
+ 
+                 `
+            //  console.log(liLista)
+
+            allModalBody[i].appendChild(liLista)
+                
+         })
+
+         
+         // ADDING APLICACOES 1
+        let allLis = document.querySelectorAll(`.modal-body .filtroCombustPesado .listCars`)
+        // console.log(allLis.length)
+        
+        aplicacao.forEach((apli) =>{
+            cont += 1
+
+            let spanLi = document.createElement('span')
+            spanLi.innerHTML = `${apli}`
+            // console.log(cont)
+            allLis[cont - 1].append(spanLi)
+        })
+
+
+
+        // SE EXISTIR APLICACAO DOIS
+        if(aplicacoesTwo){
+
+            // console.log(aplicacaoTwo[0].carros)
+            montadoraTwo = await aplicacoesTwo[0].montadora
+            carrosTwo = await aplicacoesTwo[0].carros
+            anoApliTwo = await aplicacoesTwo[0].anoApli
+
+            // console.log(carrosTwo)
+        //    ADDING MONTADORA 2
+            let liMontTwo = document.createElement('li')
+            liMontTwo.classList.add(`montadora`)
+            liMontTwo.innerHTML = `
+                <li class="montadora">${montadoraTwo}:</li>
+                `
+            allModalBody[i].appendChild(liMontTwo)
+
+
+            // ADDING CARROS 2
+            carrosTwo.map((carroTwo) =>{
+
+                let liListaTwo = document.createElement('li')
+                liListaTwo.classList.add(`listCars`)
+
+                liListaTwo.innerHTML = `
+                <span class="carro">${carroTwo}: </span>
+                    `
+                
+                allModalBody[i].appendChild(liListaTwo)
+            })
+
+
+            // ADDING APLICAÇAO 2
+            let allLisTwo = document.querySelectorAll(`.modal-body .filtroCombustPesado .listCars`)
+
+            anoApliTwo.forEach((apliTwo) =>{
+
+                cont += 1
+
+                let spanLiTwo = document.createElement('span')
+                spanLiTwo.innerHTML = `${apliTwo}`
+                // console.log(cont)
+                allLisTwo[cont - 1].append(spanLiTwo)
+            })
+
+        }
+
+
+
+        // SE EXISTIR APLICACAO TRES
+        if(aplicacoesThree){
+    
+            montadoraThree = await aplicacoesThree[0].montadora
+            carrosThree = await aplicacoesThree[0].carros
+            anoApliThree = await aplicacoesThree[0].anoApli
+
+
+            //  ADDING MONTADORA 3
+            let liMontThree = document.createElement('li')
+            liMontThree.classList.add(`montadora`)
+            liMontThree.innerHTML = `
+                <li class="montadora">${montadoraThree}:</li>
+                `
+            allModalBody[i].appendChild(liMontThree)
+
+
+            // ADDING CARROS 3
+            carrosThree.map((carroThree) =>{
+
+                let liListaThree = document.createElement('li')
+                liListaThree.classList.add(`listCars`)
+
+                liListaThree.innerHTML = `
+                <span class="carro">${carroThree}: </span>
+                    `
+                
+                allModalBody[i].appendChild(liListaThree)
+            })
+
+
+            // ADDING APLICAÇAO 3
+            let allLisThree = document.querySelectorAll(`.modal-body .filtroCombustPesado .listCars`)
+
+            anoApliThree.forEach((apliThree) =>{
+
+                cont += 1
+
+                let spanLiThree = document.createElement('span')
+                spanLiThree.innerHTML = `${apliThree}`
+                // console.log(cont)
+                allLisThree[cont - 1].append(spanLiThree)
+            })
+
+
+
+        }
+
+
+
+    }
 
 }
 
