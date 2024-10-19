@@ -2535,8 +2535,17 @@
             "code": 3485,
             "linkApli": "#batedor400",
             "price": 16.00,
-            "qtd": 1
+            "qtd": 1,
+            "aplicacoes":[
+                {
+                    "codeApli": "batedor400",
+                    "montadora": "GM",
+                    "carros": ["Corsa", "Celta"],
+                    "anoApli": ["2000..", "2000.."]
+                }
+            ]
         },
+
         {
             "nome": "Batente",
             "position": "Diant.",
@@ -2548,8 +2557,18 @@
             "code": "sem",
             "linkApli": "#ksc04205s",
             "price": 0,
-            "qtd": 1
+            "qtd": 1,
+            "aplicacoes":[
+                {
+                    "codeApli": "ksc04205s",
+                    "montadora": "GM",
+                    "carros": ["Astra"],
+                    "anoApli": ["1998-2008"]
+                }
+            ]
+
         },
+
         {
             "nome": "Kit-Batedor",
             "position": "Diant.",
@@ -2561,8 +2580,18 @@
             "code": 3817,
             "linkApli": "#nk0371",
             "price": 74.00,
-            "qtd": 1
+            "qtd": 1,
+            "aplicacoes":[
+                {
+                    "codeApli": "nk0371",
+                    "montadora": "GM",
+                    "carros": ["Onix", "Onix-Plus"],
+                    "anoApli": ["2019..", "2019.."]
+                }
+            ]
+
         },
+
         {
             "nome": "Kit-Batedor",
             "position": "Diant.",
@@ -2574,7 +2603,16 @@
             "code": 114,
             "linkApli": "#batedor500",
             "price": 16.00,
-            "qtd": 1
+            "qtd": 1,
+            "aplicacoes":[
+                {
+                    "codeApli": "batedor500",
+                    "montadora": "FIAT",
+                    "carros": ["Uno", "Prêmio", "Elba"],
+                    "anoApli": ["1993..", "1993..", "1993.."]
+                }
+            ]
+
         },
         {
             "nome": "Kit-Batedor",
@@ -2582,13 +2620,41 @@
             "image": "photos/sist-suspensao/batedores/batedor501.png",
             "marca": "Brasil-Componente",
             "info": "501.185-1",
-            "linha": "Fiat",
+            "linha": "Fiat/Citroen/Peugeot",
             "linhaCode": "fiat",
             "code": 3486,
             "linkApli": "#batedor501",
             "price": 53.31,
-            "qtd": 1
+            "qtd": 1,
+            "aplicacoes":[
+                {
+                    "codeApli": "batedor501",
+                    "montadora": "FIAT",
+                    "carros": ["Ducato"],
+                    "anoApli": ["1994-2017"]
+                }
+            ],
+
+            "aplicacoesTwo":[
+                {
+                     "montadora": "CITROEN",
+                     "carros": ["Jumper"],
+                     "anoApli":["1999-2017"]
+                }
+                
+            ],
+
+            "aplicacoesThree":[
+                {
+                    "montadora": "PEUGEOT",
+                    "carros": ["Boxer"],
+                     "anoApli":["1999-2017"]
+                }
+            ]
+
+
         },
+
         {
             "nome": "Kit-Batedor",
             "position": "Diant.",
@@ -2600,8 +2666,18 @@
             "code": 1638,
             "linkApli": "#ksc03116s",
             "price": 50.00,
-            "qtd": 1
+            "qtd": 1,
+            "aplicacoes":[
+                {
+                    "codeApli": "ksc03116s",
+                    "montadora": "FIAT",
+                    "carros": ["Palio", "Grand-Siena", "Siena", "Uno"],
+                    "anoApli": ["2011-2019", "2012-2022", "2012-2019", "2010-2022"]
+                }
+            ]
+
         },
+
         {
             "nome": "Kit-Batedor",
             "position": "Tras.",
@@ -2613,21 +2689,41 @@
             "code": "sem",
             "linkApli": "#sk117s",
             "price": 0,
-            "qtd": 1
+            "qtd": 1,
+            "aplicacoes":[
+                {
+                    "codeApli": "sk117s",
+                    "montadora": "FIAT",
+                    "carros": ["Fiorino"],
+                    "anoApli": ["1994-2013"]
+                }
+            ]
+
         },
+
         {
             "nome": "Kit-Batedor",
             "position": "Diant.",
             "image": "photos/sist-suspensao/batedores/mb4122s.png",
             "marca": "Mobensani",
             "info": "MB-4122S",
-            "linha": "GM",
-            "linhaCode": "gm",
+            "linha": "Fiat",
+            "linhaCode": "fiat",
             "code": "sem",
             "linkApli": "#mb4122s",
             "price": 0,
-            "qtd": 1
+            "qtd": 1,
+            "aplicacoes":[
+                {
+                    "codeApli": "mb4122s",
+                    "montadora": "FIAT",
+                    "carros": ["Idea", "Palio", "Siena"],
+                    "anoApli": ["2006-2016", "1996-2011", "1998-2011"]
+                }
+            ]
+
         },
+
         {
             "nome": "Kit-Batedor",
             "position": "Diant.",
@@ -2639,8 +2735,18 @@
             "code": 1244,
             "linkApli": "#batedor200",
             "price": 18.50,
-            "qtd": 1
+            "qtd": 1,
+            "aplicacoes":[
+                {
+                    "codeApli": "batedor200",
+                    "montadora": "Volkswagen",
+                    "carros": ["Gol", "Parati", "Saveiro"],
+                    "anoApli": ["1998..", "1998..", "1998.."]
+                }
+            ]
+
         },
+
         {
             "nome": "Kit-Batedor",
             "position": "Diant.",
@@ -2652,7 +2758,16 @@
             "code": 1981,
             "linkApli": "#amortex35254",
             "price": 40.00,
-            "qtd": 1
+            "qtd": 1,
+            "aplicacoes":[
+                {
+                    "codeApli": "amortex35254",
+                    "montadora": "Volkswagen",
+                    "carros": ["CrossFox", "Fox", "Polo", "SpaceFox"],
+                    "anoApli": ["2005-2009", "2003-2009", "2003-2019", "2006-2009"]
+                }
+            ]
+
         }
     ],
 
@@ -2670,8 +2785,18 @@
             "code": 357,
             "linkApli": "#pvi1031",
             "price": 40.00,
-            "qtd": 1
+            "qtd": 1,
+            "aplicacoes":[
+                {
+                    "codeApli": "pvi1031",
+                    "montadora": "FIAT",
+                    "carros": ["147", "Elba", "Uno", "Fiorino", "Panorama", "Prêmio"],
+                    "anoApli": ["1976-1984", "1987-1992", "1994-2011", "1987-2011", "1980-1984", "1986-1992"]
+                }
+            ]
+
         },
+
         {
             "nome": "Pivô",
             "lados": "L.D/L.E",
@@ -2683,8 +2808,18 @@
             "code": 2584,
             "linkApli": "#653110",
             "price": 33.00,
-            "qtd": 1
+            "qtd": 1,
+            "aplicacoes":[
+                {
+                    "codeApli": "653110",
+                    "montadora": "FIAT",
+                    "carros": ["Uno", "147", "Elba", "Fiorino", "Panorama", "Prêmio"],
+                    "anoApli": ["1994-2013", "1976-1986", "1987-1996", "1981-2004", "1980-1986", "1986-1994"]
+                }
+            ]
+
         },
+
         {
             "nome": "Pivô",
             "lados": "L.D/L.E",
@@ -2696,8 +2831,18 @@
             "code": "Sem",
             "linkApli": "#bps16020",
             "price": 0,
-            "qtd": 1
+            "qtd": 1,
+            "aplicacoes":[
+                {
+                    "codeApli": "bps16020",
+                    "montadora": "FIAT",
+                    "carros": ["Uno", "Prêmio", "147", "Elba", "Fiorino", "Panorama"],
+                    "anoApli": ["1984-2011", "1986-1992", "1976-1988", "1987-1992", "1985-2011", "1976-1984"]
+                }
+            ]
+
         },
+
         {
             "nome": "Pivô",
             "lados": "L.D/L.E",
@@ -2709,8 +2854,18 @@
             "code": 3837,
             "linkApli": "#pvi1038",
             "price": 55.14,
-            "qtd": 0
+            "qtd": 0,
+            "aplicacoes":[
+                {
+                    "codeApli": "pvi1038",
+                    "montadora": "FIAT",
+                    "carros": ["Palio", "Palio-Weekend", "Siena", "Strada"],
+                    "anoApli": ["1996-1999", "1996-1999", "1996-1999", "1996-1999"]
+                }
+            ]
+
         },
+
         {
             "nome": "Pivô",
             "lados": "L.D/L.E",
@@ -2722,8 +2877,18 @@
             "code": "Sem",
             "linkApli": "#pvi1023",
             "price": 0,
-            "qtd": 1
+            "qtd": 1,
+            "aplicacoes":[
+                {
+                    "codeApli": "pvi1023",
+                    "montadora": "GM",
+                    "carros": ["Chevy-500", "Chevette", "Marajo"],
+                    "anoApli": ["1983-1995", "1973-1993", "1980-1989"]
+                }
+            ]
+
         },
+
         {
             "nome": "Pivô",
             "lados": "L.D/L.E",
@@ -2735,8 +2900,18 @@
             "code": "Sem",
             "linkApli": "#pvs1023",
             "price": 0,
-            "qtd": 1
+            "qtd": 1,
+            "aplicacoes":[
+                {
+                    "codeApli": "pvs1023",
+                    "montadora": "GM",
+                    "carros": ["Chevy-500", "Chevette", "Marajo"],
+                    "anoApli": ["1983-1995", "1973-1993", "1980-1989"]
+                }
+            ]
+
         },
+
         {
             "nome": "Pivô",
             "lados": "L.D/L.E",
@@ -2748,8 +2923,18 @@
             "code": 1730,
             "linkApli": "#bsp12045",
             "price": 55.00,
-            "qtd": 1
+            "qtd": 1,
+            "aplicacoes":[
+                {
+                    "codeApli": "bsp12045",
+                    "montadora": "GM",
+                    "carros": ["Chevy-500", "Chevette", "Marajo"],
+                    "anoApli": ["1983-1995", "1973-1993", "1980-1989"]
+                }
+            ]
+
         },
+
         {
             "nome": "Pivô",
             "lados": "L.D/L.E",
@@ -2761,8 +2946,18 @@
             "code": 919,
             "linkApli": "#pvi1026",
             "price": 49.00,
-            "qtd": 0
+            "qtd": 0,
+            "aplicacoes":[
+                {
+                    "codeApli": "pvi1026",
+                    "montadora": "GM",
+                    "carros": ["Celta", "Corsa", "Classic", "Pick-Up", "Prisma"],
+                    "anoApli": ["2001-2011", "1998-2002", "2002-2009", "1998-2008", "2006-2009"]
+                }
+            ]
+
         },
+
         {
             "nome": "Pivô",
             "lados": "L.D",
@@ -2774,8 +2969,18 @@
             "code": 3681,
             "linkApli": "#503192",
             "price": 85.00,
-            "qtd": 1
+            "qtd": 1,
+            "aplicacoes":[
+                {
+                    "codeApli": "503192",
+                    "montadora": "Volkswagen",
+                    "carros": ["Gol", "Fox", "Saveiro", "Voyage"],
+                    "anoApli": ["2008-2013", "2008-2013", "2009-2013", "2009-2013"]
+                }
+            ]
+
         },
+
         {
             "nome": "Pivô",
             "lados": "L.D",
@@ -2787,8 +2992,18 @@
             "code": 3321,
             "linkApli": "#pvi1056",
             "price": 65.40,
-            "qtd": 1
+            "qtd": 1,
+            "aplicacoes":[
+                {
+                    "codeApli": "pvi1056",
+                    "montadora": "Volkswagen",
+                    "carros": ["Gol", "Saveiro", "Voyage", "Fox", "Up", "SpaceFox"],
+                    "anoApli": ["2008-2019", "2009-2019", "2009-2019", "2009-2019", "2014-2021", "2011-2015"]
+                }
+            ]
+
         },
+
         {
             "nome": "Pivô",
             "lados": "L.D",
@@ -2800,8 +3015,18 @@
             "code": 410,
             "linkApli": "#pvi1006",
             "price": 50.00,
-            "qtd": 1
+            "qtd": 1,
+            "aplicacoes":[
+                {
+                    "codeApli": "pvi1006",
+                    "montadora": "Volkswagen",
+                    "carros": ["Gol", "Saveiro", "Parati"],
+                    "anoApli": ["1995-1997", "1995-1997", "1995-1997"]
+                }
+            ]
+
         },
+
         {
             "nome": "Pivô",
             "lados": "L.D/L.E",
@@ -2813,8 +3038,18 @@
             "code": "sem",
             "linkApli": "#53084",
             "price": 0,
-            "qtd": 1
+            "qtd": 1,
+            "aplicacoes":[
+                {
+                    "codeApli": "53084",
+                    "montadora": "FORD",
+                    "carros": ["F-250", "F-350", "F-1000", "F-4000", "F-14000"],
+                    "anoApli": ["2005-2012", "1998-2011", "1979-1998", "1998-2011", "1981-1987"]
+                }
+            ]
+
         },
+
         {
             "nome": "Pivô",
             "lados": "L.D/L.E",
@@ -2826,7 +3061,16 @@
             "code": "sem",
             "linkApli": "#53083",
             "price": 0,
-            "qtd": 1
+            "qtd": 1,
+            "aplicacoes":[
+                {
+                    "codeApli": "53083",
+                    "montadora": "FORD",
+                    "carros": ["F-250", "F-350", "F-4000"],
+                    "anoApli": ["2005-2012", "1998-2011", "1998-2011"]
+                }
+            ]
+
         }
 
     ],
@@ -2844,7 +3088,16 @@
             "code": 128,
             "linkApli": "#ac30728",
             "price": 132,
-            "qtd": 1
+            "qtd": 1,
+            "aplicacoes":[
+                {
+                    "codeApli": "ac30728",
+                    "montadora": "GM",
+                    "carros": ["Classic", "Corsa", "Celta", "Prisma"],
+                    "anoApli": ["2003-2012", "1994..", "2000-2014", "2010-2012"]
+                }
+            ]
+
         },
 
         {
@@ -2858,8 +3111,18 @@
             "code": 699,
             "linkApli": "#ct30826",
             "price": 130,
-            "qtd": 1
+            "qtd": 1,
+            "aplicacoes":[
+                {
+                    "codeApli": "ct30826",
+                    "montadora": "Volkswagen",
+                    "carros": ["Voyage", "Gol-Furgão", "Parati", "Saveiro"],
+                    "anoApli": ["1982-1995", "1980-1997", "1982-1996", "1980.. exeto G5"]
+                }
+            ]
+
         },
+
         {
             "nome": "Amortecedor",
             "position": "Diant.",
@@ -2871,8 +3134,18 @@
             "code": 3719,
             "linkApli": "#hg33093",
             "price": 275.80,
-            "qtd": 1
+            "qtd": 1,
+            "aplicacoes":[
+                {
+                    "codeApli": "hg33093",
+                    "montadora": "FIAT",
+                    "carros": ["Strada", "Strada"],
+                    "anoApli": ["2001-2013", "COM ABS 2014-2020"]
+                }
+            ]
+
         },
+
         {
             "nome": "Amortecedor",
             "position": "Diant.",
@@ -2884,7 +3157,16 @@
             "code": "Sem",
             "linkApli": "#hg33098",
             "price": 250,
-            "qtd": 1
+            "qtd": 1,
+            "aplicacoes":[
+                {
+                    "codeApli": "hg33098",
+                    "montadora": "FIAT",
+                    "carros": ["Fiorino"],
+                    "anoApli": ["2013-2016"]
+                }
+            ]
+
         }
     ],
 
@@ -2901,7 +3183,15 @@
             "code": 2759,
             "linkApli": "#br15201101508",
             "price": 70.00,
-            "qtd": 1
+            "qtd": 1,
+            "aplicacoes":[
+                {
+                    "codeApli": "",
+                    "montadora": "",
+                    "carros": [""],
+                    "anoApli": [""]
+                }
+            ]
         },
         {
             "nome": "Bucha Bandeja Infe.",
