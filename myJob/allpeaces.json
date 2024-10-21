@@ -4593,15 +4593,16 @@
             "qtd": 1,
             "aplicacoes":[
                 {
-                    "codeApli": "",
-                    "montadora": "",
-                    "carros": [""],
-                    "anoApli": [""]
+                    "codeApli": "rn489cp",
+                    "montadora": "RENAULT",
+                    "carros": ["Kwid"],
+                    "anoApli": ["2017.."]
                 }
             ]
 
             
         },
+
         {
             "nome": "Sapata Freio",
             "position": "Tras.",
@@ -4613,7 +4614,16 @@
             "code": 2849,
             "linkApli": "#fi91cpa",
             "price": 150.78,
-            "qtd": 1
+            "qtd": 1,
+            "aplicacoes":[
+                {
+                    "codeApli": "fi91cpa",
+                    "montadora": "FORD",
+                    "carros": ["Fiorino-Furgão", "Palio", "Palio-Weekend", "Strada-Adventure", "Strada"],
+                    "anoApli": ["2006-2013", "1996-2001", "2010-2016", "1998-2010", "1998-2012"]
+                }
+            ]
+
             
         }
         
@@ -4633,8 +4643,18 @@
             "code": 167,
             "linkApli": "#005760",
             "price": 36.81,
-            "qtd": 1
+            "qtd": 1,
+            "aplicacoes":[
+                {
+                    "codeApli": "005760",
+                    "montadora": "FIAT",
+                    "carros": ["Elba", "Fiorino", "Uno-Mille", "Prêmio", "Uno", "Uno-Vivace/Way"],
+                    "anoApli": ["1984-1996", "1985-2006", "1990-2004", "1985-1995", "1984..", "2010-2015"]
+                }
+            ]
+
         },
+
         {
             "nome": "Cilindro Freio",
             "position": "Tras.",
@@ -4646,8 +4666,18 @@
             "code": 2299,
             "linkApli": "#rccr01400",
             "price": 36.77,
-            "qtd": 1
+            "qtd": 1,
+            "aplicacoes":[
+                {
+                    "codeApli": "rccr01400",
+                    "montadora": "FIAT",
+                    "carros": ["Fiorino", "Uno", "Uno-Mille"],
+                    "anoApli": ["1988-1993", "1987-2003", "1995-2008"]
+                }
+            ]
+
         },
+
         {
             "nome": "Cilindro Freio",
             "position": "Tras.",
@@ -4660,8 +4690,27 @@
             "code": 3758,
             "linkApli": "#k1027",
             "price": 40.00,
-            "qtd": 1
+            "qtd": 1,
+            "aplicacoes":[
+                {
+                    "codeApli": "k1027",
+                    "montadora": "FIAT",
+                    "carros": ["Palio", "Siena", "Uno", "Uno-Mille"],
+                    "anoApli": ["1999..", "1999..", "2008-2010", "2011.."]
+                }
+            ],
+
+            "aplicacoesTwo":[
+                {
+                     "montadora": "FORD",
+                     "carros": ["Fiesta"],
+                     "anoApli":["2003.."]
+                }
+                
+            ]
+
         },
+
         {
             "nome": "Bomba Embreagem",
             "image": "photos/freios/cilindros/bombaEmbreLuk.png",
@@ -4673,8 +4722,18 @@
             "code":3853 ,
             "linkApli": "#bombaEmbreLuk",
             "price": 113,
-            "qtd": 1
+            "qtd": 1,
+            "aplicacoes":[
+                {
+                    "codeApli": "bombaEmbreLuk",
+                    "montadora": "FIAT",
+                    "carros": ["Grand-Siena", "Siena", "Palio", "Strada"],
+                    "anoApli": ["(Motor - EVO) 1.4 2012..", "(Motor - EVO) 1.4 2012..", "(Motor - EVO) 1.4 2012..", "(Motor - EVO) 1.4 2012.."]
+                }
+            ]
+
         },
+
         {
             "nome": "Bomba Embreagem",
             "image": "photos/freios/cilindros/5120174100A1.png",
@@ -4686,8 +4745,18 @@
             "code": 2385,
             "linkApli": "#5120174100A1",
             "price": 135.33,
-            "qtd": 1
+            "qtd": 1,
+            "aplicacoes":[
+                {
+                    "codeApli": "5120174100A1",
+                    "montadora": "FIAT",
+                    "carros": ["Doblo", "Palio", "Palio-Weekend", "Siena", "Strada"],
+                    "anoApli": ["FIRE 2002..", "FIRE 1996-2010", "FIRE 2000..", "1999..", "2001.."]
+                }
+            ]
+
         },
+
         {
             "nome": "Cilindro Mestre Embreagem",
             "image": "photos/freios/cilindros/cilinMestreEmbre.png",
@@ -4699,8 +4768,18 @@
             "code": 3854,
             "linkApli": "#cilinMestreEmbre",
             "price": 124,
-            "qtd": 1
+            "qtd": 1,
+            "aplicacoes":[
+                {
+                    "codeApli": "cilinMestreEmbre",
+                    "montadora": "FIAT",
+                    "carros": ["Argo", "Cronos", "Grand-Siena", "Idea", "Mobi", "Palio-Attractive", "Siena", "Strada", "Uno"],
+                    "anoApli": ["2017..", "2017..", "2012..", "2010..", "2017..", "2010..", "2010..", "2010..", "2017.."]
+                }
+            ]
+
         },
+
         {
             "nome": "Cilindro Freio",
             "position": "Tras.",
@@ -4712,8 +4791,18 @@
             "code": 3672,
             "linkApli": "#k1009",
             "price": 47.16,
-            "qtd": 1
+            "qtd": 1,
+            "aplicacoes":[
+                {
+                    "codeApli": "k1009",
+                    "montadora": "FORD",
+                    "carros": ["Escort", "Fiesta", "Ka"],
+                    "anoApli": ["1983-1992", "1996..", "1997.."]
+                }
+            ]
+
         },
+
         {
             "nome": "Cilindro Freio",
             "position": "Tras.",
@@ -4725,8 +4814,18 @@
             "code": 3126,
             "linkApli": "#controil3530",
             "price": 205.50,
-            "qtd": 1
+            "qtd": 1,
+            "aplicacoes":[
+                {
+                    "codeApli": "controil3530",
+                    "montadora": "NISSAN",
+                    "carros": ["Frontier"],
+                    "anoApli": ["2003-2007"]
+                }
+            ]
+
         },
+
         {
             "nome": "Reparo Cilindro Mestre",
             "position": "Tras.",
@@ -4739,7 +4838,34 @@
             "code": 1907,
             "linkApli": "#C1092",
             "price": 138.30,
-            "qtd": 0
+            "qtd": 0,
+            "aplicacoes":[
+                {
+                    "codeApli": "C1092",
+                    "montadora": "FORD",
+                    "carros": ["F-1000", "F-2000"],
+                    "anoApli": ["1979-1992", "1980-1987"]
+                }
+            ],
+
+            "aplicacoesTwo":[
+                {
+                     "montadora": "GM",
+                     "carros": ["A-10", "A-20", "C-10", "C-20", "D-20", "Veraneio"],
+                     "anoApli":["1979-1988", "1985-1988", "1973-1988", "1985-1988", "1985-1988", "1973-1988"]
+                }
+                
+            ],
+
+            "aplicacoesThree":[
+                {
+                    "montadora": "AGRALE",
+                    "carros": ["1600", "1800"],
+                     "anoApli":["1986-1989", "1988-1989"]
+                }
+            ]
+
+
         }
         
     ],
@@ -4758,8 +4884,18 @@
             "code": 3338,
             "linkApli": "#rpta02330",
             "price": 154.50,
-            "qtd": 1
+            "qtd": 1,
+            "aplicacoes":[
+                {
+                    "codeApli": "rpta02330",
+                    "montadora": "GM",
+                    "carros": ["Onix", "Prisma"],
+                    "anoApli": ["2013-2018", "2013-2018"]
+                }
+            ]
+
         },
+
         {
             "nome": "Tambor Freio",
             "position": "Tras.",
@@ -4771,8 +4907,18 @@
             "code": "Sem",
             "linkApli": "#hf51d",
             "price": 0,
-            "qtd": 1
+            "qtd": 1,
+            "aplicacoes":[
+                {
+                    "codeApli": "hf51d",
+                    "montadora": "GM",
+                    "carros": ["Cobalt", "Sonic"],
+                    "anoApli": ["1.4 2012.. e 1.8 2013..", "1.6 2012.."]
+                }
+            ]
+
         },
+
         {
             "nome": "Tambor Freio",
             "position": "Tras.",
@@ -4784,8 +4930,18 @@
             "code": "Sem",
             "linkApli": "#hf08a",
             "price": 0,
-            "qtd": 1
+            "qtd": 1,
+            "aplicacoes":[
+                {
+                    "codeApli": "hf08a",
+                    "montadora": "Volkswagen",
+                    "carros": ["Fox", "CrossFox", "Polo", "SpaceFox", "Space-Cross"],
+                    "anoApli": ["2004..", "1.6 2005-2018", "2002-2015", "2006-2019", "2012-2017"]
+                }
+            ]
+
         },
+
         {
             "nome": "Tambor Freio",
             "position": "Tras.",
@@ -4797,8 +4953,18 @@
             "code": 363,
             "linkApli": "#hf36",
             "price": 81.60,
-            "qtd": 1
+            "qtd": 1,
+            "aplicacoes":[
+                {
+                    "codeApli": "hf36",
+                    "montadora": "FIAT",
+                    "carros": ["Fiorino", "Palio", "Prêmio", "Siena", "Uno", "Uno-Mille"],
+                    "anoApli": ["1985-1993", "1996..", "1985-1995", "1997..", "1985..", "1990-2013"]
+                }
+            ]
+
         },
+
         {
             "nome": "Tambor Freio",
             "position": "Diant.",
@@ -4810,7 +4976,33 @@
             "code": "Sem",
             "linkApli": "#hf41a",
             "price": 0,
-            "qtd": 1
+            "qtd": 1,
+            "aplicacoes":[
+                {
+                    "codeApli": "hf41a",
+                    "montadora": "FIAT",
+                    "carros": ["Ducato"],
+                    "anoApli": ["aro-15 2010.."]
+                }
+            ],
+
+            "aplicacoesTwo":[
+                {
+                     "montadora": "CITROEN",
+                     "carros": ["Jumper"],
+                     "anoApli":["2010.."]
+                }
+                
+            ],
+
+            "aplicacoesThree":[
+                {
+                    "montadora": "PEUGEOT",
+                    "carros": ["Boxer"],
+                     "anoApli":["2010.."]
+                }
+            ]
+
         },
         {
             "nome": "Tambor Freio",
@@ -4823,7 +5015,16 @@
             "code": 996,
             "linkApli": "#hf37a",
             "price": 120.50,
-            "qtd": 1
+            "qtd": 1,
+            "aplicacoes":[
+                {
+                    "codeApli": "hf37a",
+                    "montadora": "FIAT",
+                    "carros": ["Cronos", "Argo", "Grand-Siena", "Palio", "Punto", "Uno", "Novo-Uno"],
+                    "anoApli": ["2018..", "2018..", "COM ABS 2012..", "2012..", "2008-2017..", "2003..", "2010.."]
+                }
+            ]
+
         }
         
 
@@ -4845,7 +5046,34 @@
             "code": 3435,
             "linkApli": "#8871973",
             "price": 69.33,
-            "qtd": 1
+            "qtd": 1,
+            "aplicacoes":[
+                {
+                    "codeApli": "8871973",
+                    "montadora": "FIAT",
+                    "carros": ["Ducato"],
+                    "anoApli": ["1998-2002"]
+                }
+            ],
+
+            "aplicacoesTwo":[
+                {
+                     "montadora": "CITROEN",
+                     "carros": ["Jumper"],
+                     "anoApli":["1998-2002"]
+                }
+                
+            ],
+
+            "aplicacoesThree":[
+                {
+                    "montadora": "PEUGEOT",
+                    "carros": ["Boxer"],
+                     "anoApli":["1998-2002"]
+                }
+            ]
+
+
         },
         {
             "nome": "Reparo Pino",
@@ -4859,8 +5087,18 @@
             "code": 337,
             "linkApli": "#8871231",
             "price": 11.00,
-            "qtd": 1
+            "qtd": 1,
+            "aplicacoes":[
+                {
+                    "codeApli": "8871231",
+                    "montadora": "FIAT e GM",
+                    "carros": ["Modelos Fiat e GM"],
+                    "anoApli": ["..."]
+                }
+            ]
+
         },
+
         {
             "nome": "Reparo Pinça Freio",
             "image": "photos/freios/reparos/reparoToro.png",
@@ -4872,8 +5110,28 @@
             "code": 3180,
             "linkApli": "#reparoToro",
             "price": 60.00,
-            "qtd": 1
+            "qtd": 1,
+            "aplicacoes":[
+                {
+                    "codeApli": "reparoToro",
+                    "montadora": "FIAT",
+                    "carros": ["Toro"],
+                    "anoApli": ["2016-2022"]
+                }
+            ],
+
+            "aplicacoesTwo":[
+                {
+                     "montadora": "JEEP",
+                     "carros": ["Renegade", "Compass"],
+                     "anoApli":["2015-2021", "2016-2021"]
+                }
+                
+            ]
+
+
         },
+
         {
             "nome": "Reg. Freio Auto",
             "position": "C/ABS",
@@ -4885,8 +5143,19 @@
             "code": 1958,
             "linkApli": "#regFreioAutoPalio",
             "price": 77.00,
-            "qtd": 1
+            "qtd": 1,
+            "aplicacoes":[
+                {
+                    "codeApli": "regFreioAutoPalio",
+                    "montadora": "FIAT",
+                    "carros": ["Marea", "Brava", "Palio-Weekend"],
+                    "anoApli": ["1999-2007", "2000-2003", "1996-2002"]
+                }
+            ]
+
+
         },
+
         {
             "nome": "Reparo Sapata Freio",
             "image": "photos/freios/reparos/jgMolasPalio.png",
@@ -4898,8 +5167,19 @@
             "code": 2536,
             "linkApli": "#jgMolasPalio",
             "price": 55.00,
-            "qtd": 1
+            "qtd": 1,
+            "aplicacoes":[
+                {
+                    "codeApli": "jgMolasPalio",
+                    "montadora": "FIAT",
+                    "carros": ["Marea", "Brava", "Palio-Weekend"],
+                    "anoApli": ["1999-2007", "2000-2003", "1996-2002"]
+                }
+            ]
+
+
         },
+
         {
             "nome": "Reparo Parcial Freio",
             "position": "Diant.",
@@ -4912,8 +5192,28 @@
             "code": 3436,
             "linkApli": "#rpp407",
             "price": 41.50,
-            "qtd": 1
+            "qtd": 1,
+            "aplicacoes":[
+                {
+                    "codeApli": "rpp407",
+                    "montadora": "FORD",
+                    "carros": ["Del Rey", "Pampa", "Monza"],
+                    "anoApli": ["1983-1991", "1983-1997", "1981-1987"]
+                }
+            ],
+
+            "aplicacoesTwo":[
+                {
+                     "montadora": "FIAT",
+                     "carros": ["Elba", "Fiorino", "Uno", "Prêmio"],
+                     "anoApli":["1996..", "1988-1993", "1984-1988", "1985-1996"]
+                }
+                
+            ]
+
+
         },
+
         {
             "nome": "Reparo Parcial Freio",
             "position": "Diant.",
@@ -4925,8 +5225,18 @@
             "code": 3438,
             "linkApli": "#8972941",
             "price": 28.26,
-            "qtd": 1
+            "qtd": 1,
+            "aplicacoes":[
+                {
+                    "codeApli": "8972941",
+                    "montadora": "FIAT",
+                    "carros": ["Doblo", "Fiorino", "Idea", "Palio", "Punto", "Tempra", "Uno" "Strada"],
+                    "anoApli": ["...", "...", "...", "...", "...", "...", "...", "..."]
+                }
+            ]
+
         },
+
         {
             "nome": "Kit Trava Pastilha Freio",
             "position": "",
@@ -4938,8 +5248,18 @@
             "code": 335,
             "linkApli": "#8871061",
             "price": 25.57,
-            "qtd": 1
+            "qtd": 1,
+            "aplicacoes":[
+                {
+                    "codeApli": "8871061",
+                    "montadora": "GM",
+                    "carros": ["A/C/D - 10/20"],
+                    "anoApli": ["..."]
+                }
+            ]
+
         },
+
         {
             "nome": "Acionador Auto. Freio",
             "position": "L.D",
@@ -4951,8 +5271,18 @@
             "code": 3202,
             "linkApli": "#acionador",
             "price": 27.80,
-            "qtd": 1
+            "qtd": 1,
+            "aplicacoes":[
+                {
+                    "codeApli": "acionador",
+                    "montadora": "GM",
+                    "carros": ["A/C/D - 10/20"],
+                    "anoApli": ["..."]
+                }
+            ]
+
         },
+
         {
             "nome": "Acionador Auto. Freio",
             "position": "L.E",
@@ -4964,8 +5294,18 @@
             "code": 3203,
             "linkApli": "#acionador",
             "price": 27.80,
-            "qtd": 1
+            "qtd": 1,
+            "aplicacoes":[
+                {
+                    "codeApli": "acionador",
+                    "montadora": "GM",
+                    "carros": ["A/C/D - 10/20"],
+                    "anoApli": ["..."]
+                }
+            ]
+
         },
+
         {
             "nome": "Reparo Pinça Freio",
             "position": "",
@@ -4977,8 +5317,18 @@
             "code": 3179,
             "linkApli": "#reparoOnix",
             "price": 60.60,
-            "qtd": 1
+            "qtd": 1,
+            "aplicacoes":[
+                {
+                    "codeApli": "reparoOnix",
+                    "montadora": "GM",
+                    "carros": ["Cobalt", "Onix", "Spin", "Prisma", "Sonic"],
+                    "anoApli": ["2011-2020", "2013-2016", "2013-2022", "2013-2019", "2012-2014"]
+                }
+            ]
+
         },
+
         {
             "nome": "JG Molas Sapata Freio",
             "position": "",
@@ -4990,8 +5340,18 @@
             "code": 2535,
             "linkApli": "#reparoSapata",
             "price": 35.50,
-            "qtd": 1
+            "qtd": 1,
+            "aplicacoes":[
+                {
+                    "codeApli": "reparoSapata",
+                    "montadora": "GM",
+                    "carros": ["Onix", "Prisma"],
+                    "anoApli": ["2012..", "2012.."]
+                }
+            ]
+
         },
+
         {
             "nome": "Reg. Freio Auto.",
             "position": "Tras.",
@@ -5003,8 +5363,18 @@
             "code": 2530,
             "linkApli": "#regFreioAuto",
             "price": 40.84,
-            "qtd": 1
+            "qtd": 1,
+            "aplicacoes":[
+                {
+                    "codeApli": "regFreioAuto",
+                    "montadora": "GM",
+                    "carros": ["Astra", "Corsa", "Agile"],
+                    "anoApli": ["1995-1996", "1994-2012", "2009-2014"]
+                }
+            ]
+
         },
+
         {
             "nome": "Sangrador",
             "position": "Diant.",
@@ -5016,8 +5386,18 @@
             "code": "sem",
             "linkApli": "#sangrador",
             "price": 0,
-            "qtd": 1
+            "qtd": 1,
+            "aplicacoes":[
+                {
+                    "codeApli": "sangrador",
+                    "montadora": "GM",
+                    "carros": ["Monza", "Kadett", "Ipanema", "Chevette"],
+                    "anoApli": ["...", "...", "...", "..."]
+                }
+            ]
+
         },
+
         {
             "nome": "Reparo Pinça Freio",
             "position": "",
@@ -5029,8 +5409,18 @@
             "code": 3181,
             "linkApli": "#reparoClio",
             "price": 58.65,
-            "qtd": 1
+            "qtd": 1,
+            "aplicacoes":[
+                {
+                    "codeApli": "reparoClio",
+                    "montadora": "RENAULT",
+                    "carros": ["Clio", "Logan", "Sandero"],
+                    "anoApli": ["1997-2016", "2008-2013", "2008-2013"]
+                }
+            ]
+
         },
+
         {
             "nome": "Reparo Pinça Freio",
             "position": "",
@@ -5042,8 +5432,18 @@
             "code": 2537,
             "linkApli": "#reparoGol",
             "price": 52.47,
-            "qtd": 1
+            "qtd": 1,
+            "aplicacoes":[
+                {
+                    "codeApli": "reparoGol",
+                    "montadora": "Volkswagen",
+                    "carros": ["Gol", "Saveiro", "Parati"],
+                    "anoApli": ["1995-2012", "1995-2012", "1995-2012"]
+                }
+            ]
+
         },
+
         {
             "nome": "Reparo Pinça Freio",
             "position": "",
@@ -5055,8 +5455,18 @@
             "code": 3206,
             "linkApli": "#reparoGolG6",
             "price": 26.00,
-            "qtd": 1
+            "qtd": 1,
+            "aplicacoes":[
+                {
+                    "codeApli": "reparoGolG6",
+                    "montadora": "Volkswagen",
+                    "carros": ["Gol", "Voyage", "Saveiro"],
+                    "anoApli": ["2012..", "2012..", "2012.."]
+                }
+            ]
+
         },
+
         {
             "nome": "Parafuso Pinça Freio",
             "position": "",
@@ -5068,8 +5478,18 @@
             "code": 1956,
             "linkApli": "#PFallen",
             "price": 16.00,
-            "qtd": 1
+            "qtd": 1,
+            "aplicacoes":[
+                {
+                    "codeApli": "PFallen",
+                    "montadora": "FORD",
+                    "carros": ["F-4000", "F-2000"],
+                    "anoApli": ["1985-1995", "..."]
+                }
+            ]
+
         },
+
         {
             "nome": "Reparo Freio",
             "position": "",
@@ -5082,8 +5502,27 @@
             "code": "sem",
             "linkApli": "#reparoCent",
             "price": 0,
-            "qtd": 1
+            "qtd": 1,
+            "aplicacoes":[
+                {
+                    "codeApli": "reparoCent",
+                    "montadora": "FORD",
+                    "carros": ["F-100", "F-1000"],
+                    "anoApli": ["...", "..."]
+                }
+            ],
+
+            "aplicacoesTwo":[
+                {
+                     "montadora": "GM",
+                     "carros": ["C-10"],
+                     "anoApli":["..."]
+                }
+                
+            ]
+
         },
+
         {
             "nome": "Reparo Pinça Freio",
             "position": "",
@@ -5096,8 +5535,27 @@
             "code": "sem",
             "linkApli": "#repCorsel0194a",
             "price": 0,
-            "qtd": 1
+            "qtd": 1,
+            "aplicacoes":[
+                {
+                    "codeApli": "repCorsel0194a",
+                    "montadora": "FORD",
+                    "carros": ["Corsel 2", "Belina Del Rey"],
+                    "anoApli": ["1981-1986", "1981-1989"]
+                }
+            ],
+
+            "aplicacoesTwo":[
+                {
+                     "montadora": "FIAT",
+                     "carros": ["Uno", "Fiorino", "Panorama", "147"],
+                     "anoApli":["1987-1988", "1978-1988", "1980-1987", "1976-1987"]
+                }
+                
+            ]
+
         },
+
         {
             "nome": "Reparo Pinça Freio",
             "position": "Diant.",
@@ -5110,20 +5568,48 @@
             "code": 3437,
             "linkApli": "#8971498",
             "price": 73.87,
-            "qtd": 1
+            "qtd": 1,
+            "aplicacoes":[
+                {
+                    "codeApli": "8971498",
+                    "montadora": "FIAT",
+                    "carros": ["F-1000", "A/C/D-20"],
+                    "anoApli": ["1993-1996", "1993-1998"]
+                }
+            ],
+
+            "aplicacoesTwo":[
+                {
+                     "montadora": "FIAT",
+                     "carros": ["Bonanza", "Grand-Blazer", "Silverado", "Veraneio"],
+                     "anoApli":["1993-1996", "1998..", "1997-2001", "1993-1996"]
+                }
+                
+            ]
+
         },
+
         {
             "nome": "Reparo Pinça Freio",
             "position": "",
             "image": "photos/freios/reparos/reparoFord.png",
             "marca": "Sem",
             "info": "",
-            "linha": "Fiat",
-            "linhaCode": "fiat",
+            "linha": "Ford",
+            "linhaCode": "ford",
             "code": "sem",
             "linkApli": "#reparoFord",
             "price": 0,
-            "qtd": 1
+            "qtd": 1,
+            "aplicacoes":[
+                {
+                    "codeApli": "reparoFord",
+                    "montadora": "FORD",
+                    "carros": ["F-250", "F-350", "F-4000"],
+                    "anoApli": ["...", "...", "..."]
+                }
+            ]
+
         }
         
     ],
@@ -5143,8 +5629,17 @@
             "code": 3554,
             "linkApli": "#fnm088j",
             "price": 106.44,
-            "qtd": 1
+            "qtd": 1,
+            "aplicacoes":[
+                {
+                    "codeApli": "fnm088j",
+                    "montadora": "FIAT",
+                    "carros": ["Novo-Uno"],
+                    "anoApli": ["ATTRACTIVE/SPORTING/VIVACE/WAY 2011.."]
+                }
+            ]
         },
+
         {
             "nome": "Cabo Freio Mão",
             "Lado": "L.D",
@@ -5156,8 +5651,18 @@
             "code": 3349,
             "linkApli": "#fnm093k",
             "price": 70.00,
-            "qtd": 1
+            "qtd": 1,
+            "aplicacoes":[
+                {
+                    "codeApli": "fnm093k",
+                    "montadora": "FIAT",
+                    "carros": ["Novo-Uno"],
+                    "anoApli": ["ATTRACTIVE/SPORTING/VIVACE/WAY 2011.."]
+                }
+            ]
+
         },
+
         {
             "nome": "Cabo Freio Mão",
             "Lado": "L.E",
@@ -5169,8 +5674,18 @@
             "code": 3350,
             "linkApli": "#fnm093l",
             "price": 70.00,
-            "qtd": 1
+            "qtd": 1,
+            "aplicacoes":[
+                {
+                    "codeApli": "fnm093l",
+                    "montadora": "FIAT",
+                    "carros": ["Novo-Uno"],
+                    "anoApli": ["ATTRACTIVE/SPORTING/VIVACE/WAY 2011.."]
+                }
+            ]
+
         },
+
         {
             "nome": "Cabo Freio Mão",
             "Lado": "L.D",
@@ -5182,8 +5697,18 @@
             "code": "Sem",
             "linkApli": "#ef780l",
             "price": 0,
-            "qtd": 1
+            "qtd": 1,
+            "aplicacoes":[
+                {
+                    "codeApli": "ef780l",
+                    "montadora": "Volkswagen",
+                    "carros": ["Saveiro"],
+                    "anoApli": ["2009-2013"]
+                }
+            ]
+
         },
+
         {
             "nome": "Cabo Freio Mão",
             "Lado": "L.E",
@@ -5195,8 +5720,18 @@
             "code": "Sem",
             "linkApli": "#ef780k",
             "price": 0,
-            "qtd": 1
+            "qtd": 1,
+            "aplicacoes":[
+                {
+                    "codeApli": "ef780k",
+                    "montadora": "Volkswagen",
+                    "carros": ["Saveiro"],
+                    "anoApli": ["2009-2013"]
+                }
+            ]
+
         },
+
         {
             "nome": "Cabo Freio Mão",
             "Lado": "L.E",
@@ -5208,8 +5743,18 @@
             "code": "sem",
             "linkApli": "#cabovel1667379",
             "price": 0,
-            "qtd": 1
+            "qtd": 1,
+            "aplicacoes":[
+                {
+                    "codeApli": "cabovel1667379",
+                    "montadora": "Volkswagen",
+                    "carros": ["Saveiro"],
+                    "anoApli": ["2009-2016"]
+                }
+            ]
+
         },
+
         {
             "nome": "Cabo Freio Mão",
             "Lado": "L.D",
@@ -5221,8 +5766,18 @@
             "code": "sem",
             "linkApli": "#cabovel1667379",
             "price": 0,
-            "qtd": 1
+            "qtd": 1,
+            "aplicacoes":[
+                {
+                    "codeApli": "cabovel1667379",
+                    "montadora": "Volkswagen",
+                    "carros": ["Saveiro"],
+                    "anoApli": ["2009-2016"]
+                }
+            ]
+
         },
+
         {
             "nome": "Flexível",
             "Lado": "Tras.",
@@ -5234,8 +5789,18 @@
             "code": 3201,
             "linkApli": "#flexivelFox",
             "price": 30.00,
-            "qtd": 1
+            "qtd": 1,
+            "aplicacoes":[
+                {
+                    "codeApli": "flexivelFox",
+                    "montadora": "Volkswagen",
+                    "carros": ["Fox", "Polo", "CrossFox"],
+                    "anoApli": ["2005-2010", "2005-2014", "2005-2014"]
+                }
+            ]
+
         },
+
         {
             "nome": "Cabo Comando Embreagem",
             "Lado": "",
@@ -5247,8 +5812,18 @@
             "code": "sem",
             "linkApli": "#caboComando",
             "price": 0,
-            "qtd": 1
+            "qtd": 1,
+            "aplicacoes":[
+                {
+                    "codeApli": "caboComando",
+                    "montadora": "Volkswagen",
+                    "carros": ["Kombi"],
+                    "anoApli": ["1960-2013"]
+                }
+            ]
+
         },
+
         {
             "nome": "Cabo Freio",
             "Lado": "",
@@ -5260,8 +5835,18 @@
             "code": "sem",
             "linkApli": "#fania30340",
             "price": 0,
-            "qtd": 1
+            "qtd": 1,
+            "aplicacoes":[
+                {
+                    "codeApli": "fania30340",
+                    "montadora": "GM",
+                    "carros": ["A-10", "A-20", "A-40", "C-20", "D-10", "D-20", "D-40"],
+                    "anoApli": ["1993-1995", "1993-1995", "1993-1995", "1993-1995", "1993-1995", "1992-1996", "1992-1996"]
+                }
+            ]
+
         },
+
         {
             "nome": "Cabo Freio Mão",
             "Lado": "",
@@ -5273,8 +5858,18 @@
             "code": "Sem",
             "linkApli": "#iks4245",
             "price": 0,
-            "qtd": 1
+            "qtd": 1,
+            "aplicacoes":[
+                {
+                    "codeApli": "iks4245",
+                    "montadora": "GM",
+                    "carros": ["A/C/D-10"],
+                    "anoApli": ["1985-1988"]
+                }
+            ]
+
         },
+
         {
             "nome": "Flexível Diant.",
             "Lado": "L.D",
@@ -5286,8 +5881,18 @@
             "code": 3200,
             "linkApli": "#flexivelD20",
             "price": 81.74,
-            "qtd": 1
+            "qtd": 1,
+            "aplicacoes":[
+                {
+                    "codeApli": "flexivelD20",
+                    "montadora": "GM",
+                    "carros": ["A/C/D-20"],
+                    "anoApli": ["1985-1992"]
+                }
+            ]
+
         },
+
         {
             "nome": "Flexível",
             "Lado": "Diant.",
@@ -5299,8 +5904,18 @@
             "code": 3197,
             "linkApli": "#flexivelACD10",
             "price": 65.00,
-            "qtd": 1
+            "qtd": 1,
+            "aplicacoes":[
+                {
+                    "codeApli": "flexivelACD10",
+                    "montadora": "GM",
+                    "carros": ["A/C/D-10"],
+                    "anoApli": ["1979-1989"]
+                }
+            ]
+
         },
+
         {
             "nome": "Flexível",
             "Lado": "Tras.",
@@ -5312,7 +5927,16 @@
             "code": 3196,
             "linkApli": "#norflex4009",
             "price": 35.00,
-            "qtd": 1
+            "qtd": 1,
+            "aplicacoes":[
+                {
+                    "codeApli": "norflex4009",
+                    "montadora": "GM",
+                    "carros": ["A/C/D-10"],
+                    "anoApli": ["1979-1989"]
+                }
+            ]
+
         }
     ],
 
@@ -5329,7 +5953,15 @@
             "code": 458,
             "linkApli": "#10153",
             "price": 55.86,
-            "qtd": 1
+            "qtd": 1,
+            "aplicacoes":[
+                {
+                    "codeApli": "10153",
+                    "montadora": "FIAT",
+                    "carros": ["Uno", "Elba"],
+                    "anoApli": ["1984-2016", "1985-1996"]
+                }
+            ]
         }
     ],
 
@@ -5345,7 +5977,15 @@
             "code": 2920,
             "linkApli": "#stv09",
             "price": 123,
-            "qtd": 1
+            "qtd": 1,
+            "aplicacoes":[
+                {
+                    "codeApli": "",
+                    "montadora": "",
+                    "carros": [""],
+                    "anoApli": [""]
+                }
+            ]
         },
         {
             "nome": "Cabos Velas",
