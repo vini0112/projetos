@@ -3186,13 +3186,16 @@
             "qtd": 1,
             "aplicacoes":[
                 {
-                    "codeApli": "",
-                    "montadora": "",
-                    "carros": [""],
-                    "anoApli": [""]
+                    "codeApli": "br15201101508",
+                    "montadora": "GM",
+                    "carros": ["Meriva", "Corsa", "Montana"],
+                    "anoApli": ["1.8 2003-2012", "1.8 2002-2009", "1.8 2003-2010"]
                 }
             ]
+
+
         },
+
         {
             "nome": "Bucha Bandeja Infe.",
             "position": "Diant.",
@@ -3204,8 +3207,18 @@
             "code": "sem",
             "linkApli": "#sampel3701",
             "price": 0,
-            "qtd": 1
+            "qtd": 1,
+            "aplicacoes":[
+                {
+                    "codeApli": "sampel3701",
+                    "montadora": "GM",
+                    "carros": ["Chevy", "Chevette", "Marajo"],
+                    "anoApli": ["1984-1995", "1973-1993", "1981-1989"]
+                }
+            ]
+
         },
+
         {
             "nome": "Bucha Bandeja Sup.",
             "position": "Diant.",
@@ -3217,8 +3230,18 @@
             "code": "sem",
             "linkApli": "#sampel3702",
             "price": 0,
-            "qtd": 1
+            "qtd": 1,
+            "aplicacoes":[
+                {
+                    "codeApli": "sampel3702",
+                    "montadora": "GM",
+                    "carros": ["Chevy", "Chevette", "Marajo"],
+                    "anoApli": ["1984-1995", "1973-1993", "1981-1989"]
+                }
+            ]
+
         },
+
         {
             "nome": "Bucha Bandeja",
             "position": "Diant.",
@@ -3230,8 +3253,18 @@
             "code": 3691,
             "linkApli": "#mb1135",
             "price": 16.46,
-            "qtd": 1
+            "qtd": 1,
+            "aplicacoes":[
+                {
+                    "codeApli": "mb1135",
+                    "montadora": "GM",
+                    "carros": ["Celta", "Agile", "Corsa", "Prisma"],
+                    "anoApli": ["2001-2015", "2010-2014", "1994-2001", "2006-2012"]
+                }
+            ]
+
         },
+
         {
             "nome": "Bucha Eixo",
             "position": "Tras.",
@@ -3243,8 +3276,18 @@
             "code": 543,
             "linkApli": "#mb1136",
             "price": 30.00,
-            "qtd": 1
+            "qtd": 1,
+            "aplicacoes":[
+                {
+                    "codeApli": "mb1136",
+                    "montadora": "GM",
+                    "carros": ["Corsa", "Celta", "Prisma"],
+                    "anoApli": ["1994-2001", "2001-2015", "2006-2012"]
+                }
+            ]
+
         },
+
         {
             "nome": "Bucha Eixo",
             "position": "Tras.",
@@ -3256,8 +3299,18 @@
             "code": "sem",
             "linkApli": "#sampel3003",
             "price": 0,
-            "qtd": 1
+            "qtd": 1,
+            "aplicacoes":[
+                {
+                    "codeApli": "sampel3003",
+                    "montadora": "GM",
+                    "carros": ["Corsa", "Celta", "Prisma", "Classic"],
+                    "anoApli": ["1994-2001", "2001-2015", "2006-2012", "2004-2016"]
+                }
+            ]
+
         },
+
         {
             "nome": "Bucha Bandeja",
             "position": "Diant.",
@@ -3269,8 +3322,18 @@
             "code": "sem",
             "linkApli": "#nb13006",
             "price": 0,
-            "qtd": 1
+            "qtd": 1,
+            "aplicacoes":[
+                {
+                    "codeApli": "nb13006",
+                    "montadora": "GM",
+                    "carros": ["Corsa", "Corsa-Sedan", "Meriva", "Montana"],
+                    "anoApli": ["2002-2012", "2002-2012", "2002-2012", "2002-2012"]
+                }
+            ]
+
         },
+
         {
             "nome": "Bucha Bandeja",
             "position": "Tras.",
@@ -3282,8 +3345,18 @@
             "code": "sem",
             "linkApli": "#sampel4883",
             "price": 0,
-            "qtd": 1
+            "qtd": 1,
+            "aplicacoes":[
+                {
+                    "codeApli": "sampel4883",
+                    "montadora": "Volkswagen",
+                    "carros": ["Gol", "Passat", "Golf"],
+                    "anoApli": ["2008-2013", "2008-2012", "2008-2013"]
+                }
+            ]
+
         },
+
         {
             "nome": "Bucha Bandeja",
             "position": "Diant.",
@@ -3295,8 +3368,18 @@
             "code": 2724,
             "linkApli": "#nb11004",
             "price": 34.74,
-            "qtd": 1
+            "qtd": 1,
+            "aplicacoes":[
+                {
+                    "codeApli": "nb11004",
+                    "montadora": "Volkswagen",
+                    "carros": ["Golf"],
+                    "anoApli": ["1999-2014"]
+                }
+            ]
+
         },
+
         {
             "nome": "Bucha Bandeja",
             "position": "Diant.",
@@ -3308,8 +3391,18 @@
             "code": 3664,
             "linkApli": "#mb364",
             "price": 18.11,
-            "qtd": 1
+            "qtd": 1,
+            "aplicacoes":[
+                {
+                    "codeApli": "mb364",
+                    "montadora": "Volkswagen",
+                    "carros": ["Fox", "CrossFox", "Gol", "Golf", "Passat", "Voyage", "SpaceFox", "Up", "Polo"],
+                    "anoApli": ["2011-2019", "2011-2018", "2009-2019", "1994-2007", "1994-1997", "2009-2019", "2011-2019", "2014-2019", "1996-2019"]
+                }
+            ]
+
         },
+
         {
             "nome": "Bucha Tras. Bandeja",
             "position": "Diant.",
@@ -3321,8 +3414,18 @@
             "code": 3663,
             "linkApli": "#mb365a",
             "price": 30.00,
-            "qtd": 1
+            "qtd": 1,
+            "aplicacoes":[
+                {
+                    "codeApli": "mb365a",
+                    "montadora": "Volkswagen",
+                    "carros": ["Fox", "CrossFox", "Gol", "Golf", "Passat", "Voyage", "SpaceFox", "Up", "Polo"],
+                    "anoApli": ["2011-2019", "2011-2018", "2009-2019", "1994-2007", "1994-1997", "2009-2019", "2011-2019", "2014-2019", "1996-2019"]
+                }
+            ]
+
         },
+
         {
             "nome": "Bucha Bandeja",
             "position": "Diant.",
@@ -3334,8 +3437,18 @@
             "code": 2729,
             "linkApli": "#nb11003",
             "price": 33.00,
-            "qtd": 1
+            "qtd": 1,
+            "aplicacoes":[
+                {
+                    "codeApli": "nb11003",
+                    "montadora": "Volkswagen",
+                    "carros": ["CrossFox", "Fox", "Polo", "SpaceFox"],
+                    "anoApli": ["2005-2014", "2005-2014", "2002-2014", "2006-2014"]
+                }
+            ]
+
         },
+
         {
             "nome": "Bucha Tras. Bandeja",
             "position": "Diant.",
@@ -3348,8 +3461,27 @@
             "code": "sem",
             "linkApli": "#br15501101737",
             "price": 0,
-            "qtd": 1
+            "qtd": 1,
+            "aplicacoes":[
+                {
+                    "codeApli": "br15501101737",
+                    "montadora": "FORD",
+                    "carros": ["Escort", "Ka", "Verona"],
+                    "anoApli": ["1993-2003", "1997-2013", "1993-1996"]
+                }
+            ],
+
+            "aplicacoesTwo":[
+                {
+                     "montadora": "Volskwagen",
+                     "carros": ["Logus", "Pointer"],
+                     "anoApli":["1993-1996", "1993-1996"]
+                }
+                
+            ]
+
         },
+
         {
             "nome": "Bucha Bandeja",
             "position": "Diant.",
@@ -3361,8 +3493,18 @@
             "code": 915,
             "linkApli": "#sampel2734",
             "price": 22.00,
-            "qtd": 1
+            "qtd": 1,
+            "aplicacoes":[
+                {
+                    "codeApli": "sampel2734",
+                    "montadora": "FORD",
+                    "carros": ["Escort", "Ka", "Fiesta"],
+                    "anoApli": ["2003-2008", "2008-2013", "2002-2014"]
+                }
+            ]
+
         },
+
         {
             "nome": "Bucha Bandeja",
             "position": "Diant.",
@@ -3374,8 +3516,18 @@
             "code": "sem",
             "linkApli": "#sampel2727",
             "price": 0,
-            "qtd": 1
+            "qtd": 1,
+            "aplicacoes":[
+                {
+                    "codeApli": "sampel2727",
+                    "montadora": "FORD",
+                    "carros": ["Focus"],
+                    "anoApli": ["2000-2009"]
+                }
+            ]
+
         },
+
         {
             "nome": "Bucha Bandeja",
             "position": "Diant.",
@@ -3387,8 +3539,18 @@
             "code": 2263,
             "linkApli": "#mb460",
             "price": 22.00,
-            "qtd": 1
+            "qtd": 1,
+            "aplicacoes":[
+                {
+                    "codeApli": "mb460",
+                    "montadora": "FIAT",
+                    "carros": ["Palio", "Doblo", "Siena", "Strada"],
+                    "anoApli": ["1996-2011", "2002-2004", "1998-2011", "1999-2004"]
+                }
+            ]
+
         },
+
         {
             "nome": "Bucha Amortecedor",
             "position": "Tras.",
@@ -3400,8 +3562,18 @@
             "code": "Sem",
             "linkApli": "#br16301101129",
             "price": 0,
-            "qtd": 1
+            "qtd": 1,
+            "aplicacoes":[
+                {
+                    "codeApli": "br16301101129",
+                    "montadora": "FIAT",
+                    "carros": ["Ducato"],
+                    "anoApli": ["1997-2014"]
+                }
+            ]
+
         },
+
         {
             "nome": "Bucha Eixo",
             "position": "Tras.",
@@ -3413,8 +3585,18 @@
             "code": 1572,
             "linkApli": "#sampel1138",
             "price": 72.74,
-            "qtd": 1
+            "qtd": 1,
+            "aplicacoes":[
+                {
+                    "codeApli": "sampel1138",
+                    "montadora": "FIAT",
+                    "carros": ["Cronos", "Bravo", "Argo", "Grand-Siena", "Idea", "Linea", "Mobi", "Palio", "Punto", "Uno"],
+                    "anoApli": ["2018-2019", "2011-2016", "2017-2019", "2012-2019", "2006-2016", "2009-2016", "2017-2019", "2012-2017", "2008-2017", "2011-2019"]
+                }
+            ]
+
         },
+
         {
             "nome": "Bucha Eixo",
             "position": "Tras.",
@@ -3426,8 +3608,18 @@
             "code": 2863,
             "linkApli": "#sampel1319",
             "price": 65.00,
-            "qtd": 0
+            "qtd": 0,
+            "aplicacoes":[
+                {
+                    "codeApli": "sampel1319",
+                    "montadora": "FIAT",
+                    "carros": ["Palio", "Siena"],
+                    "anoApli": ["1.6 1996-2017", "1.6 1996-2016"]
+                }
+            ]
+
         },
+
         {
             "nome": "Bucha Bandeja",
             "position": "Tras.",
@@ -3439,8 +3631,18 @@
             "code": 165,
             "linkApli": "#mb413",
             "price": 11.00,
-            "qtd": 1
+            "qtd": 1,
+            "aplicacoes":[
+                {
+                    "codeApli": "mb413",
+                    "montadora": "FIAT",
+                    "carros": ["Fiorino", "147", "Prêmio", "Uno", "Uno-Mille"],
+                    "anoApli": ["1983-1988", "1983-1986", "1985-1987", "1984-1996", "..."]
+                }
+            ]
+
         },
+
         {
             "nome": "Bucha Braço Tensor",
             "position": "Diant.",
@@ -3452,8 +3654,18 @@
             "code": 1163,
             "linkApli": "#mb416",
             "price": 8.00,
-            "qtd": 1
+            "qtd": 1,
+            "aplicacoes":[
+                {
+                    "codeApli": "mb416",
+                    "montadora": "FIAT",
+                    "carros": ["Elba", "Fiorino", "Prêmio", "Uno", "Uno-Mille"],
+                    "anoApli": ["1986-1994", "1988-2019", "1985-1994", "1984-1996", "1997-2013"]
+                }
+            ]
+
         },
+
         {
             "nome": "Bucha Tras. Bandeja",
             "position": "Diant.",
@@ -3466,7 +3678,17 @@
             "code": 3838,
             "linkApli": "#mb467",
             "price": 60.80,
-            "qtd": 1
+            "qtd": 1,
+            "aplicacoes":[
+                {
+                    "codeApli": "mb467",
+                    "montadora": "FIAT",
+                    "carros": ["Palio", "Siena"],
+                    "anoApli": ["1996-2000", "1998-2000"]
+                }
+            ]
+
+
         }
         
     ],
@@ -3488,8 +3710,18 @@
             "code": 3630,
             "linkApli": "#axios82491441",
             "price": 175,
-            "qtd": 0
+            "qtd": 0,
+            "aplicacoes":[
+                {
+                    "codeApli": "axios82491441",
+                    "montadora": "FIAT",
+                    "carros": ["Idea", "Doblo", "Palio", "Palio-Weekend", "Siena", "Strada"],
+                    "anoApli": ["2005-2013", "2001..", "1996.. Exeto novo palio", "1997..", "2002..", "1999.."]
+                }
+            ]
+
         },
+
         {
             "nome": "Coxim Motor",
             "position": "Diant.",
@@ -3502,8 +3734,18 @@
             "code": 3770,
             "linkApli": "#mb434",
             "price": 90.96,
-            "qtd": 1
+            "qtd": 1,
+            "aplicacoes":[
+                {
+                    "codeApli": "mb434",
+                    "montadora": "FIAT",
+                    "carros": ["Elba", "Fiorino", "Prêmio", "Uno"],
+                    "anoApli": ["1986-1996", "1988-2013", "1985-1995", "1986-2001"]
+                }
+            ]
+
         },
+
         {
             "nome": "Coxim Motor",
             "position": "Diant.",
@@ -3516,8 +3758,18 @@
             "code": 1908,
             "linkApli": "#mb4440",
             "price": 277.58,
-            "qtd": 1
+            "qtd": 1,
+            "aplicacoes":[
+                {
+                    "codeApli": "mb4440",
+                    "montadora": "FIAT",
+                    "carros": ["Grand-Siena", "Palio", "Strada"],
+                    "anoApli": ["2013..", "2013..", "2013.."]
+                }
+            ]
+
         },
+
         {
             "nome": "Coxim",
             "position": "Tras.",
@@ -3530,8 +3782,18 @@
             "code": 2646,
             "linkApli": "#br13504301688",
             "price": 70.82,
-            "qtd": 1
+            "qtd": 1,
+            "aplicacoes":[
+                {
+                    "codeApli": "br13504301688",
+                    "montadora": "FORD",
+                    "carros": ["Fiesta", "Ecosport"],
+                    "anoApli": ["2002-2010", "2003-2012"]
+                }
+            ]
+
         },
+
         {
             "nome": "Coxim Câmbio",
             "position": "Diant.",
@@ -3543,7 +3805,16 @@
             "code": "sem",
             "linkApli": "#sampel3027",
             "price": 0,
-            "qtd": 1
+            "qtd": 1,
+            "aplicacoes":[
+                {
+                    "codeApli": "sampel3027",
+                    "montadora": "GM",
+                    "carros": ["Montana", "Prisma", "Agile", "Celta", "Classic", "Corsa"],
+                    "anoApli": ["2011-2018", "2008-2012", "2010-2014", "2001-2016", "2004-2016", "1994-2003"]
+                }
+            ]
+
         }
         
         
@@ -3562,8 +3833,17 @@
             "code": 3169,
             "linkApli": "#kbt0314",
             "price": 40.00,
-            "qtd": 1
+            "qtd": 1,
+            "aplicacoes":[
+                {
+                    "codeApli": "kbt0314",
+                    "montadora": "GM",
+                    "carros": ["Prisma", "Onix", "Spin", "Cobalt", "Sonic"],
+                    "anoApli": ["2013-2016", "2012-2016", "2012-2016", "2011-2016", "2012-2014"]
+                }
+            ]
         },
+
         {
             "nome": "Bieleta",
             "image": "photos/sist-suspensao/bieletas/btc04119.png",
@@ -3574,10 +3854,20 @@
             "code": 3818,
             "linkApli": "#btc04119",
             "price": 71.00,
-            "qtd": 1
+            "qtd": 1,
+            "aplicacoes":[
+                {
+                    "codeApli": "btc04119",
+                    "montadora": "GM",
+                    "carros": ["Prisma", "Onix", "Spin", "Cobalt", "Sonic", "Sonic", "Vectra", "Zafira"],
+                    "anoApli": ["2013-2016", "2013-2022", "2012-2018", "2011-2016", "2012-2014", "1999-2011", "2006-2011", "2001-2012"]
+                }
+            ]
+
         }
         
     ],
+
 
 
     "pastilhaFreio": [
@@ -3592,9 +3882,18 @@
             "code": 2023,
             "linkApli": "#sna525",
             "price": 36.77,
-            "qtd": 1
+            "qtd": 1,
+            "aplicacoes":[
+                {
+                    "codeApli": "sna525",
+                    "montadora": "GM",
+                    "carros": ["Siena", "Palio", "Palio-Weekend", "Uno"],
+                    "anoApli": ["1999..", "1999..", "1999..", "..."]
+                }
+            ]
             
         },
+
         {
             "nome": "Pastilha",
             "position": "Tras.",
@@ -3606,9 +3905,36 @@
             "code": 429,
             "linkApli": "#p501",
             "price": 66.00,
-            "qtd": 1
+            "qtd": 1,
+            "aplicacoes":[
+                {
+                    "codeApli": "p501",
+                    "montadora": "FIAT",
+                    "carros": ["Ducato"],
+                    "anoApli": ["2001-2005"]
+                }
+            ],
+
+            "aplicacoesTwo":[
+                {
+                     "montadora": "CITROEN",
+                     "carros": ["Jumper"],
+                     "anoApli":["2001-2005"]
+                }
+                
+            ],
+
+            "aplicacoesThree":[
+                {
+                    "montadora": "PEUGEOT",
+                    "carros": ["Boxer"],
+                     "anoApli":["2002-2005"]
+                }
+            ]
+
             
         },
+
         {
             "nome": "Pastilha",
             "position": "Tras.",
@@ -3620,9 +3946,36 @@
             "code": 3003,
             "linkApli": "#sna564",
             "price": 71.61,
-            "qtd": 1
+            "qtd": 1,
+            "aplicacoes":[
+                {
+                    "codeApli": "sna564",
+                    "montadora": "FIAT",
+                    "carros": ["Ducato"],
+                    "anoApli": ["2001-2018"]
+                }
+            ],
+
+            "aplicacoesTwo":[
+                {
+                     "montadora": "CITROEN",
+                     "carros": ["Jumper"],
+                     "anoApli":["2001-2018"]
+                }
+                
+            ],
+
+            "aplicacoesThree":[
+                {
+                    "montadora": "PEUGEOT",
+                    "carros": ["Boxer"],
+                     "anoApli":["2002-2018"]
+                }
+            ]
+
             
         },
+
         {
             "nome": "Pastilha",
             "position": "Tras.",
@@ -3634,9 +3987,36 @@
             "code": 372,
             "linkApli": "#lig564",
             "price": 66.00,
-            "qtd": 1
+            "qtd": 1,
+            "aplicacoes":[
+                {
+                    "codeApli": "lig564",
+                    "montadora": "FIAT",
+                    "carros": ["Ducato"],
+                    "anoApli": ["2001-2018"]
+                }
+            ],
+
+            "aplicacoesTwo":[
+                {
+                     "montadora": "CITROEN",
+                     "carros": ["Jumper"],
+                     "anoApli":["2001-2018"]
+                }
+                
+            ],
+
+            "aplicacoesThree":[
+                {
+                    "montadora": "PEUGEOT",
+                    "carros": ["Boxer"],
+                     "anoApli":["2001-2018"]
+                }
+            ]
+
             
         },
+
         {
             "nome": "Pastilha",
             "position": "Diant.",
@@ -3648,9 +4028,36 @@
             "code": 3464,
             "linkApli": "#pd652b",
             "price": 270,
-            "qtd": 1
+            "qtd": 1,
+            "aplicacoes":[
+                {
+                    "codeApli": "pd652b",
+                    "montadora": "FIAT",
+                    "carros": ["Ducato"],
+                    "anoApli": ["2001-2018"]
+                }
+            ],
+
+            "aplicacoesTwo":[
+                {
+                     "montadora": "CITROEN",
+                     "carros": ["Jumper"],
+                     "anoApli":["2001-2018"]
+                }
+                
+            ],
+
+            "aplicacoesThree":[
+                {
+                    "montadora": "PEUGEOT",
+                    "carros": ["Boxer"],
+                     "anoApli":["2001-2018"]
+                }
+            ]
+
             
         },
+
         {
             "nome": "Pastilha",
             "position": "Diant.",
@@ -3662,9 +4069,19 @@
             "code": 3783,
             "linkApli": "#sna540",
             "price": 100,
-            "qtd": 1
+            "qtd": 1,
+            "aplicacoes":[
+                {
+                    "codeApli": "sna540",
+                    "montadora": "FIAT",
+                    "carros": ["Strada"],
+                    "anoApli": ["2020-2024"]
+                }
+            ]
+
             
         },
+
         {
             "nome": "Pastilha",
             "position": "Diant.",
@@ -3676,9 +4093,19 @@
             "code": 433,
             "linkApli": "#P-68",
             "price": 65.00,
-            "qtd": 1
+            "qtd": 1,
+            "aplicacoes":[
+                {
+                    "codeApli": "P-68",
+                    "montadora": "FIAT",
+                    "carros": ["Idea", "Palio", "Palio-Weekend", "Strada", "Punto", "Siena"],
+                    "anoApli": ["2005-2010", "1997-2010", "2010..", "2002-2010", "2007-2012", "2003-2010"]
+                }
+            ]
+
             
         },
+
         {
             "nome": "Pastilha",
             "position": "Diant.",
@@ -3690,9 +4117,19 @@
             "code": 2476,
             "linkApli": "#sna393",
             "price": 63.34,
-            "qtd": 0
+            "qtd": 0,
+            "aplicacoes":[
+                {
+                    "codeApli": "sna393",
+                    "montadora": "GM",
+                    "carros": ["Onix", "Cobalt", "Prisma"],
+                    "anoApli": ["2012..", "2012..", "2012.."]
+                }
+            ]
+
             
         },
+
         {
             "nome": "Pastilha",
             "position": "Diant.",
@@ -3705,9 +4142,28 @@
             "code": 847,
             "linkApli": "#nkf1054p",
             "price": 61.00,
-            "qtd": 1
+            "qtd": 1,
+            "aplicacoes":[
+                {
+                    "codeApli": "nkf1054p",
+                    "montadora": "GM",
+                    "carros": ["Ipanema", "Corsa"],
+                    "anoApli": ["1996-1997", "1995-2002"]
+                }
+            ],
+
+            "aplicacoesTwo":[
+                {
+                     "montadora": "Volkswagen",
+                     "carros": ["Gol", "Kadett", "Parati", "Saveiro"],
+                     "anoApli":["1994-2009", "1996-1997", "1996-2009", "1995-2009"]
+                }
+                
+            ]
+
             
         },
+
         {
             "nome": "Pastilha",
             "position": "Diant.",
@@ -3720,9 +4176,28 @@
             "code": 2814,
             "linkApli": "#sna134",
             "price": 71.63,
-            "qtd": 1
+            "qtd": 1,
+            "aplicacoes":[
+                {
+                    "codeApli": "sna134",
+                    "montadora": "GM",
+                    "carros": ["A-20", "C-20", "D-20"],
+                    "anoApli": ["1993-1994", "1993-1994", "1993-1994"]
+                }
+            ],
+
+            "aplicacoesTwo":[
+                {
+                     "montadora": "FORD",
+                     "carros": ["F-1000"],
+                     "anoApli":["1993-1994"]
+                }
+                
+            ]
+
             
         },
+
         {
             "nome": "Pastilha",
             "position": "Diant.",
@@ -3735,9 +4210,28 @@
             "code": 2384,
             "linkApli": "#P19C",
             "price": 75.00,
-            "qtd": 1
+            "qtd": 1,
+            "aplicacoes":[
+                {
+                    "codeApli": "P19C",
+                    "montadora": "GM",
+                    "carros": ["A-10", "C-10", "D-10", "D-20", "Bonanza", "Veraneio"],
+                    "anoApli": ["1980-1989", "1979-1989", "1985-1992", "1985-1992", "1990-1994", "1979-1994"]
+                }
+            ],
+
+            "aplicacoesTwo":[
+                {
+                     "montadora": "FORD",
+                     "carros": ["F-1000", "F-2000"],
+                     "anoApli":["1979-1994", "1981-1985"]
+                }
+                
+            ]
+
             
         },
+
         {
             "nome": "Pastilha",
             "position": "Diant.",
@@ -3749,9 +4243,19 @@
             "code": 3671,
             "linkApli": "#p58",
             "price": 114,
-            "qtd": 1
+            "qtd": 1,
+            "aplicacoes":[
+                {
+                    "codeApli": "p58",
+                    "montadora": "Volkswagen",
+                    "carros": ["Gol", "Polo", "Fox", "Golf", "Saveiro", "Voyage", "Up", "CrossFox", "SpaceFox"],
+                    "anoApli": ["2016-2018", "2013-2014", "2016-2018", "2002-2007", "2016-2024", "2016-2018", "2015-2018", "2008-2009", "2015-2019"]
+                }
+            ]
+
             
         },
+
         {
             "nome": "Pastilha",
             "position": "Diant.",
@@ -3763,9 +4267,19 @@
             "code": 111,
             "linkApli": "#p1346",
             "price": 93.50,
-            "qtd": 1
+            "qtd": 1,
+            "aplicacoes":[
+                {
+                    "codeApli": "p1346",
+                    "montadora": "Volkswagen",
+                    "carros": ["Gol", "Saveiro", "Parati"],
+                    "anoApli": ["2012..", "2015..", "2012.."]
+                }
+            ]
+
             
         },
+
         {
             "nome": "Pastilha",
             "position": "Tras.",
@@ -3777,9 +4291,19 @@
             "code": "Sem",
             "linkApli": "#nkf1283p",
             "price": 0,
-            "qtd": 1
+            "qtd": 1,
+            "aplicacoes":[
+                {
+                    "codeApli": "nkf1283p",
+                    "montadora": "Volkswagen",
+                    "carros": ["Jetta"],
+                    "anoApli": ["2011-2018"]
+                }
+            ]
+
             
         },
+
         {
             "nome": "Pastilha",
             "position": "Diant.",
@@ -3791,9 +4315,19 @@
             "code": 2817,
             "linkApli": "#sna465",
             "price": 70.32,
-            "qtd": 1
+            "qtd": 1,
+            "aplicacoes":[
+                {
+                    "codeApli": "sna465",
+                    "montadora": "FORD",
+                    "carros": ["Logan", "Sandero"],
+                    "anoApli": ["2014-2017", "2014.."]
+                }
+            ]
+
             
         },
+
         {
             "nome": "Pastilha",
             "position": "Diant.",
@@ -3805,9 +4339,19 @@
             "code": 3286,
             "linkApli": "#syl2235",
             "price": 75.00,
-            "qtd": 0
+            "qtd": 0,
+            "aplicacoes":[
+                {
+                    "codeApli": "syl2235",
+                    "montadora": "FORD",
+                    "carros": ["Fiesta", "Ka"],
+                    "anoApli": ["2010..", "2014.."]
+                }
+            ]
+
             
         },
+
         {
             "nome": "Pastilha",
             "position": "Diant.",
@@ -3819,9 +4363,19 @@
             "code": 2816,
             "linkApli": "#sna462",
             "price": 79.00,
-            "qtd": 1
+            "qtd": 1,
+            "aplicacoes":[
+                {
+                    "codeApli": "sna462",
+                    "montadora": "RENAULT",
+                    "carros": ["Captur", "Duster"],
+                    "anoApli": ["1.6 2017..", "1.6 2012.."]
+                }
+            ]
+
             
         },
+
         {
             "nome": "Pastilha",
             "position": "Diant.",
@@ -3833,9 +4387,19 @@
             "code": 2475,
             "linkApli": "#sna455",
             "price": 80.19,
-            "qtd": 1
+            "qtd": 1,
+            "aplicacoes":[
+                {
+                    "codeApli": "sna455",
+                    "montadora": "RENAULT",
+                    "carros": ["Kwid"],
+                    "anoApli": ["2017-2019"]
+                }
+            ]
+
             
         },
+
         {
             "nome": "Pastilha",
             "position": "Diant.",
@@ -3847,9 +4411,19 @@
             "code": 2815,
             "linkApli": "#sna1319",
             "price": 57.00,
-            "qtd": 1
+            "qtd": 1,
+            "aplicacoes":[
+                {
+                    "codeApli": "sna1319",
+                    "montadora": "TOYOTA",
+                    "carros": ["Corolla SE-G", "Corolla XEI", "Corolla-XLI", "Corolla Fielder"],
+                    "anoApli": ["2002-2008", "2002-2008", "2002-2008", "2004-2008"]
+                }
+            ]
+
             
         },
+
         {
             "nome": "Pastilha",
             "position": "Diant.",
@@ -3861,7 +4435,17 @@
             "code": "Sem",
             "linkApli": "#syl1387",
             "price": 0,
-            "qtd": 1
+            "qtd": 1,
+            "aplicacoes":[
+                {
+                    "codeApli": "syl1387",
+                    "montadora": "TOYOTA",
+                    "carros": ["Corolla Fielder", "Corolla XEI", "Corolla XLI"],
+                    "anoApli": ["2002-2008", "2002-2005", "2002-2007"]
+                }
+            ]
+
+
             
         }
         
@@ -3881,9 +4465,18 @@
             "code": 1618,
             "linkApli": "#rpdi00420",
             "price": 100,
-            "qtd": 1
+            "qtd": 1,
+            "aplicacoes":[
+                {
+                    "codeApli": "rpdi00420",
+                    "montadora": "GM",
+                    "carros": ["Celta", "Corsa", "Prisma"],
+                    "anoApli": ["2000-2018", "1993-2006", "2009-2013"]
+                }
+            ]
             
         },
+
         {
             "nome": "Disco Freio",
             "position": "Diant.",
@@ -3895,9 +4488,19 @@
             "code": 1662,
             "linkApli": "#hf51n",
             "price": 120.88,
-            "qtd": 1
+            "qtd": 1,
+            "aplicacoes":[
+                {
+                    "codeApli": "hf51n",
+                    "montadora": "GM",
+                    "carros": ["Spin"],
+                    "anoApli": ["2017.."]
+                }
+            ]
+
             
         },
+
         {
             "nome": "Disco Freio",
             "position": "Diant.",
@@ -3909,9 +4512,19 @@
             "code": 798,
             "linkApli": "#hf02a",
             "price": 52.00,
-            "qtd": 1
+            "qtd": 1,
+            "aplicacoes":[
+                {
+                    "codeApli": "hf02a",
+                    "montadora": "Volkswagen",
+                    "carros": ["Gol", "Parati", "Quantum", "Santana", "Saveiro"],
+                    "anoApli": ["2000-2017", "1998..", "1983-1993", "1990-1994", "1992-2009"]
+                }
+            ]
+
             
         },
+
         {
             "nome": "Disco Freio",
             "position": "Diant.",
@@ -3923,9 +4536,20 @@
             "code": 3217,
             "linkApli": "#hf87e",
             "price": 212.14,
-            "qtd": 1
+            "qtd": 1,
+            "aplicacoes":[
+                {
+                    "codeApli": "hf87e",
+                    "montadora": "Volkswagen",
+                    "carros": ["Gol", "Saveiro", "Voyage"],
+                    "anoApli": ["2013-2019", "2014-2018", "2012-2019"]
+                }
+            ]
+
+
             
         },
+
         {
             "nome": "Disco Freio",
             "position": "Diant.",
@@ -3937,7 +4561,16 @@
             "code": "Sem",
             "linkApli": "#rcdi10800",
             "price": 0,
-            "qtd": 1
+            "qtd": 1,
+            "aplicacoes":[
+                {
+                    "codeApli": "rcdi10800",
+                    "montadora": "Volkswagen",
+                    "carros": ["Gol", "Saveiro", "Voyage"],
+                    "anoApli": ["2013-2019", "2014-2018", "2012-2019"]
+                }
+            ]
+
             
         }
         
@@ -3957,7 +4590,16 @@
             "code": 2211,
             "linkApli": "#rn489cp",
             "price": 227.09,
-            "qtd": 1
+            "qtd": 1,
+            "aplicacoes":[
+                {
+                    "codeApli": "",
+                    "montadora": "",
+                    "carros": [""],
+                    "anoApli": [""]
+                }
+            ]
+
             
         },
         {
