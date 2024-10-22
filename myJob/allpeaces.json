@@ -5075,6 +5075,7 @@
 
 
         },
+
         {
             "nome": "Reparo Pino",
             "position": "Guarda Pó",
@@ -5292,12 +5293,12 @@
             "linha": "GM",
             "linhaCode": "gm",
             "code": 3203,
-            "linkApli": "#acionador",
+            "linkApli": "#acionadorE",
             "price": 27.80,
             "qtd": 1,
             "aplicacoes":[
                 {
-                    "codeApli": "acionador",
+                    "codeApli": "acionadorE",
                     "montadora": "GM",
                     "carros": ["A/C/D - 10/20"],
                     "anoApli": ["..."]
@@ -5764,12 +5765,12 @@
             "linha": "Volkswagen",
             "linhaCode": "vws",
             "code": "sem",
-            "linkApli": "#cabovel1667379",
+            "linkApli": "#cabovel1667378",
             "price": 0,
             "qtd": 1,
             "aplicacoes":[
                 {
-                    "codeApli": "cabovel1667379",
+                    "codeApli": "cabovel1667378",
                     "montadora": "Volkswagen",
                     "carros": ["Saveiro"],
                     "anoApli": ["2009-2016"]

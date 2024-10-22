@@ -6312,7 +6312,7 @@ async function carsEapli18(dados){
         // APLICAÇÕES
         let aplicacao = await dados[i].aplicacoes[0].anoApli
         let aplicacoesTwo = await dados[i].aplicacoesTwo
-        // let aplicacoesThree = await dados[i].aplicacoesThree
+        let aplicacoesThree = await dados[i].aplicacoesThree
 
 
         // ADDING CARROS 1
@@ -6349,9 +6349,107 @@ async function carsEapli18(dados){
         })
 
 
+        // SE EXISTIER APLICACAO DOIS
+        if(aplicacoesTwo){
+
+            // console.log(aplicacaoTwo[0].carros)
+            montadoraTwo = await aplicacoesTwo[0].montadora
+            carrosTwo = await aplicacoesTwo[0].carros
+            anoApliTwo = await aplicacoesTwo[0].anoApli
+
+        //    ADDING MONTADORA 2
+            let liMontTwo = document.createElement('li')
+            liMontTwo.classList.add(`montadora`)
+            liMontTwo.innerHTML = `
+                <li class="montadora">${montadoraTwo}:</li>
+                `
+            allModalBody[i].appendChild(liMontTwo)
+
+
+            // ADDING CARROS 2
+            carrosTwo.map((carroTwo) =>{
+
+                let liListaTwo = document.createElement('li')
+                liListaTwo.classList.add(`listCars`)
+
+                liListaTwo.innerHTML = `
+                <span class="carro">${carroTwo}: </span>
+                    `
+                
+                allModalBody[i].appendChild(liListaTwo)
+            })
+
+
+            // ADDING APLICAÇAO 2
+            let allLisTwo = document.querySelectorAll(`.modal-body .pastilhasFreio .listCars`)
+
+            anoApliTwo.forEach((apliTwo) =>{
+
+                cont += 1
+
+                let spanLiTwo = document.createElement('span')
+                spanLiTwo.innerHTML = `${apliTwo}`
+                // console.log(cont)
+                allLisTwo[cont - 1].append(spanLiTwo)
+            })
+
+        }
+
+
+         // SE EXISTIR APLICACAO TRES
+         if(aplicacoesThree){
+    
+            montadoraThree = await aplicacoesThree[0].montadora
+            carrosThree = await aplicacoesThree[0].carros
+            anoApliThree = await aplicacoesThree[0].anoApli
+
+
+            //  ADDING MONTADORA 3
+            let liMontThree = document.createElement('li')
+            liMontThree.classList.add(`montadora`)
+            liMontThree.innerHTML = `
+                <li class="montadora">${montadoraThree}:</li>
+                `
+            allModalBody[i].appendChild(liMontThree)
+
+
+            // ADDING CARROS 3
+            carrosThree.map((carroThree) =>{
+
+                let liListaThree = document.createElement('li')
+                liListaThree.classList.add(`listCars`)
+
+                liListaThree.innerHTML = `
+                <span class="carro">${carroThree}: </span>
+                    `
+                
+                allModalBody[i].appendChild(liListaThree)
+            })
+
+
+            // ADDING APLICAÇAO 3
+            let allLisThree = document.querySelectorAll(`.modal-body .pastilhasFreio .listCars`)
+
+            anoApliThree.forEach((apliThree) =>{
+
+                cont += 1
+
+                let spanLiThree = document.createElement('span')
+                spanLiThree.innerHTML = `${apliThree}`
+                // console.log(cont)
+                allLisThree[cont - 1].append(spanLiThree)
+            })
+
+
+
+        }
+
+
     }
 
 }
+
+
 
 
 
@@ -6396,11 +6494,129 @@ async function discosFreio(){
 
     }
 
+    // dialog 
+    dialogDiscosFreio()
+
+}
+
+// dialog discos freio
+async function dialogDiscosFreio(){
+
+    const dado = await gettingApi()
+    const dados = dado.discosFreio
+    // console.log(dados)
+
+    for(let i = 0;i < dados.length;i++){
+        // console.log(dados.length)
+
+        // dados especificos
+        code = await dados[i].aplicacoes[0].codeApli
+        montadora = await dados[i].aplicacoes[0].montadora
+        nameProduct = await dados[i].info
+        marcaProduct = await dados[i].marca
+        codeProduct = await dados[i].code
+        montadora = await dados[i].aplicacoes[0].montadora
+
+
+        let modalDialog = document.createElement('div')
+
+        modalDialog.innerHTML = `
+
+    <div class="modal fade thisModal" id="${code}" aria-hidden="true" aria-labelledby="modal-filtro-label" tabindex="-1" >
+        <div class="modal-dialog modal-dialog-scrollable">
+
+            <div class="modal-content" id="modal-content">
+
+                <div class="modal-header">
+                    <h2>Aplicações</h2>
+                    <button class="btn-close" type="button" data-bs-dismiss="modal" aria-label="close"></button>
+                </div>
+                <div class="modal-body">
+                    <h5>${nameProduct}</h5>   
+
+                    <ul id="lista-aplicacoes" class="discosFreio">
+                        <li class="montadora">${montadora}:</li>
+
+                    </ul>
+
+                </div>
+                <div class="modal-footer">
+                    <p><span class="carro">Marca:</span> <span class="marcas">${marcaProduct}</span></p>
+                    <p class="carro">C-${codeProduct}</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    `
+        
+        body.append(modalDialog)
+
+    }
+
+    // aplications
+    carsEapli19(dados)
+}
+
+// adding cars and aplications in dialog
+async function carsEapli19(dados){
+    
+    let allModalBody = document.querySelectorAll('.modal-body .discosFreio')
+    // console.log(allModalBody)
+
+    let cont = 0
+
+    for(let i = 0;i < dados.length;i++){
+
+        // APLICAÇÕES
+        let aplicacao = await dados[i].aplicacoes[0].anoApli
+        // let aplicacoesTwo = await dados[i].aplicacoesTwo
+        // let aplicacoesThree = await dados[i].aplicacoesThree
+
+
+        // ADDING CARROS 1
+         let carros = await dados[i].aplicacoes[0].carros
+
+         carros.map((carro, index) =>{
+
+             
+            let liLista = document.createElement('li')
+            liLista.classList.add(`listCars`)
+ 
+            liLista.innerHTML = `
+              <span class="carro">${carro}: </span>
+ 
+                 `
+            //  console.log(liLista)
+
+            allModalBody[i].appendChild(liLista)
+                
+         })
+
+         
+         // ADDING APLICACOES 1
+        let allLis = document.querySelectorAll(`.modal-body .discosFreio .listCars`)
+        // console.log(allLis.length)
+        
+        aplicacao.forEach((apli) =>{
+            cont += 1
+
+            let spanLi = document.createElement('span')
+            spanLi.innerHTML = `${apli}`
+            // console.log(cont)
+            allLis[cont - 1].append(spanLi)
+        })
+
+
+    }
 
 }
 
 
-// adding sapatas freio
+
+
+
+// adding sapatas freio 
 async function sapatasFreio(){
 
     const dado = await gettingApi()
@@ -6439,10 +6655,134 @@ async function sapatasFreio(){
         rowSapatas.appendChild(newDiv)
 
     }
+
+    // dialog
+    dialogSapatas()
+}
+
+// dialog sapatas de freio
+async function dialogSapatas(){
+
+    const dado = await gettingApi()
+    const dados = dado.sapatasFreio
+    // console.log(dados)
+
+    for(let i = 0;i < dados.length;i++){
+        // console.log(dados.length)
+
+        // dados especificos
+        code = await dados[i].aplicacoes[0].codeApli
+        montadora = await dados[i].aplicacoes[0].montadora
+        nameProduct = await dados[i].info
+        marcaProduct = await dados[i].marca
+        codeProduct = await dados[i].code
+        montadora = await dados[i].aplicacoes[0].montadora
+
+
+        let modalDialog = document.createElement('div')
+
+        modalDialog.innerHTML = `
+
+    <div class="modal fade thisModal" id="${code}" aria-hidden="true" aria-labelledby="modal-filtro-label" tabindex="-1" >
+        <div class="modal-dialog modal-dialog-scrollable">
+
+            <div class="modal-content" id="modal-content">
+
+                <div class="modal-header">
+                    <h2>Aplicações</h2>
+                    <button class="btn-close" type="button" data-bs-dismiss="modal" aria-label="close"></button>
+                </div>
+                <div class="modal-body">
+                    <h5>${nameProduct}</h5>   
+
+                    <ul id="lista-aplicacoes" class="sapatasFreio">
+                        <li class="montadora">${montadora}:</li>
+
+                    </ul>
+
+                </div>
+                <div class="modal-footer">
+                    <p><span class="carro">Marca:</span> <span class="marcas">${marcaProduct}</span></p>
+                    <p class="carro">C-${codeProduct}</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    `
+        
+        body.append(modalDialog)
+
+    }
+
+    // aplications
+    carsEapli20(dados)
+}
+
+// adding cars and aplications in dialog
+async function carsEapli20(dados){
+    // console.log(dados)
+
+
+    let allModalBody = document.querySelectorAll('.modal-body .sapatasFreio')
+    // console.log(allModalBody)
+
+    let cont = 0
+
+    for(let i = 0;i < dados.length;i++){
+
+        // APLICAÇÕES
+        let aplicacao = await dados[i].aplicacoes[0].anoApli
+        // let aplicacoesTwo = await dados[i].aplicacoesTwo
+        // let aplicacoesThree = await dados[i].aplicacoesThree
+
+
+        // ADDING CARROS 1
+         let carros = await dados[i].aplicacoes[0].carros
+
+         carros.map((carro, index) =>{
+
+             
+            let liLista = document.createElement('li')
+            liLista.classList.add(`listCars`)
+ 
+            liLista.innerHTML = `
+              <span class="carro">${carro}: </span>
+ 
+                 `
+            //  console.log(liLista)
+
+            allModalBody[i].appendChild(liLista)
+                
+         })
+
+         
+         // ADDING APLICACOES 1
+        let allLis = document.querySelectorAll(`.modal-body .sapatasFreio .listCars`)
+        // console.log(allLis.length)
+        
+        aplicacao.forEach((apli) =>{
+            cont += 1
+
+            let spanLi = document.createElement('span')
+            spanLi.innerHTML = `${apli}`
+            // console.log(cont)
+            allLis[cont - 1].append(spanLi)
+        })
+
+
+    }
+
+
+
 }
 
 
-// adding cilindros freio
+
+
+
+
+// adding cilindros freio 
 async function cilindrosFreio(){
 
     const dado = await gettingApi()
@@ -6480,7 +6820,224 @@ async function cilindrosFreio(){
         rowCilindros.appendChild(newDiv)
 
     }
+
+    // dialog
+    dialogCilindros()
 }
+
+// dialog cilindros
+async function dialogCilindros(){
+
+    const dado = await gettingApi()
+    const dados = dado.cilindros
+    // console.log(dados)
+
+    for(let i = 0;i < dados.length;i++){
+        // console.log(dados.length)
+
+        // dados especificos
+        code = await dados[i].aplicacoes[0].codeApli
+        montadora = await dados[i].aplicacoes[0].montadora
+        nameProduct = await dados[i].info
+        marcaProduct = await dados[i].marca
+        codeProduct = await dados[i].code
+        montadora = await dados[i].aplicacoes[0].montadora
+
+
+        let modalDialog = document.createElement('div')
+
+        modalDialog.innerHTML = `
+
+    <div class="modal fade thisModal" id="${code}" aria-hidden="true" aria-labelledby="modal-filtro-label" tabindex="-1" >
+        <div class="modal-dialog modal-dialog-scrollable">
+
+            <div class="modal-content" id="modal-content">
+
+                <div class="modal-header">
+                    <h2>Aplicações</h2>
+                    <button class="btn-close" type="button" data-bs-dismiss="modal" aria-label="close"></button>
+                </div>
+                <div class="modal-body">
+                    <h5>${nameProduct}</h5>   
+
+                    <ul id="lista-aplicacoes" class="cilindros">
+                        <li class="montadora">${montadora}:</li>
+
+                    </ul>
+
+                </div>
+                <div class="modal-footer">
+                    <p><span class="carro">Marca:</span> <span class="marcas">${marcaProduct}</span></p>
+                    <p class="carro">C-${codeProduct}</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    `
+        
+        body.append(modalDialog)
+
+    }
+
+    // aplications
+    carsEapli21(dados)
+}
+
+// adding cars and aplications in dialog
+async function carsEapli21(dados){
+    
+    let allModalBody = document.querySelectorAll('.modal-body .cilindros')
+    // console.log(allModalBody)
+
+    let cont = 0
+
+    for(let i = 0;i < dados.length;i++){
+
+        // APLICAÇÕES
+        let aplicacao = await dados[i].aplicacoes[0].anoApli
+        let aplicacoesTwo = await dados[i].aplicacoesTwo
+        let aplicacoesThree = await dados[i].aplicacoesThree
+
+
+        // ADDING CARROS 1
+         let carros = await dados[i].aplicacoes[0].carros
+
+         carros.map((carro, index) =>{
+
+             
+            let liLista = document.createElement('li')
+            liLista.classList.add(`listCars`)
+ 
+            liLista.innerHTML = `
+              <span class="carro">${carro}: </span>
+ 
+                 `
+            //  console.log(liLista)
+
+            allModalBody[i].appendChild(liLista)
+                
+         })
+
+         
+         // ADDING APLICACOES 1
+        let allLis = document.querySelectorAll(`.modal-body .cilindros .listCars`)
+        // console.log(allLis.length)
+        
+        aplicacao.forEach((apli) =>{
+            cont += 1
+
+            let spanLi = document.createElement('span')
+            spanLi.innerHTML = `${apli}`
+            // console.log(cont)
+            allLis[cont - 1].append(spanLi)
+        })
+
+
+
+        // SE EXISTIER APLICACAO DOIS
+        if(aplicacoesTwo){
+
+            // console.log(aplicacaoTwo[0].carros)
+            montadoraTwo = await aplicacoesTwo[0].montadora
+            carrosTwo = await aplicacoesTwo[0].carros
+            anoApliTwo = await aplicacoesTwo[0].anoApli
+
+        //    ADDING MONTADORA 2
+            let liMontTwo = document.createElement('li')
+            liMontTwo.classList.add(`montadora`)
+            liMontTwo.innerHTML = `
+                <li class="montadora">${montadoraTwo}:</li>
+                `
+            allModalBody[i].appendChild(liMontTwo)
+
+
+            // ADDING CARROS 2
+            carrosTwo.map((carroTwo) =>{
+
+                let liListaTwo = document.createElement('li')
+                liListaTwo.classList.add(`listCars`)
+
+                liListaTwo.innerHTML = `
+                <span class="carro">${carroTwo}: </span>
+                    `
+                
+                allModalBody[i].appendChild(liListaTwo)
+            })
+
+
+            // ADDING APLICAÇAO 2
+            let allLisTwo = document.querySelectorAll(`.modal-body .cilindros .listCars`)
+
+            anoApliTwo.forEach((apliTwo) =>{
+
+                cont += 1
+
+                let spanLiTwo = document.createElement('span')
+                spanLiTwo.innerHTML = `${apliTwo}`
+                // console.log(cont)
+                allLisTwo[cont - 1].append(spanLiTwo)
+            })
+
+        }
+
+
+         // SE EXISTIR APLICACAO TRES
+         if(aplicacoesThree){
+    
+            montadoraThree = await aplicacoesThree[0].montadora
+            carrosThree = await aplicacoesThree[0].carros
+            anoApliThree = await aplicacoesThree[0].anoApli
+
+
+            //  ADDING MONTADORA 3
+            let liMontThree = document.createElement('li')
+            liMontThree.classList.add(`montadora`)
+            liMontThree.innerHTML = `
+                <li class="montadora">${montadoraThree}:</li>
+                `
+            allModalBody[i].appendChild(liMontThree)
+
+
+            // ADDING CARROS 3
+            carrosThree.map((carroThree) =>{
+
+                let liListaThree = document.createElement('li')
+                liListaThree.classList.add(`listCars`)
+
+                liListaThree.innerHTML = `
+                <span class="carro">${carroThree}: </span>
+                    `
+                
+                allModalBody[i].appendChild(liListaThree)
+            })
+
+
+            // ADDING APLICAÇAO 3
+            let allLisThree = document.querySelectorAll(`.modal-body .cilindros .listCars`)
+
+            anoApliThree.forEach((apliThree) =>{
+
+                cont += 1
+
+                let spanLiThree = document.createElement('span')
+                spanLiThree.innerHTML = `${apliThree}`
+                // console.log(cont)
+                allLisThree[cont - 1].append(spanLiThree)
+            })
+
+
+
+        }
+
+
+    }
+
+
+}
+
+
+
 
 
 
@@ -6522,7 +7079,227 @@ async function tamboresFreio(){
         rowTamboresFreio.appendChild(newDiv)
 
     }
+
+    // dialog
+    dialogTambores()
 }
+
+// dialog tambores freio
+async function dialogTambores(){
+
+    const dado = await gettingApi()
+    const dados = dado.tamboresFreio
+    // console.log(dados)
+
+
+    for(let i = 0;i < dados.length;i++){
+        // console.log(dados.length)
+
+        // dados especificos
+        code = await dados[i].aplicacoes[0].codeApli
+        montadora = await dados[i].aplicacoes[0].montadora
+        nameProduct = await dados[i].info
+        marcaProduct = await dados[i].marca
+        codeProduct = await dados[i].code
+        montadora = await dados[i].aplicacoes[0].montadora
+
+
+        let modalDialog = document.createElement('div')
+
+        modalDialog.innerHTML = `
+
+    <div class="modal fade thisModal" id="${code}" aria-hidden="true" aria-labelledby="modal-filtro-label" tabindex="-1" >
+        <div class="modal-dialog modal-dialog-scrollable">
+
+            <div class="modal-content" id="modal-content">
+
+                <div class="modal-header">
+                    <h2>Aplicações</h2>
+                    <button class="btn-close" type="button" data-bs-dismiss="modal" aria-label="close"></button>
+                </div>
+                <div class="modal-body">
+                    <h5>${nameProduct}</h5>   
+
+                    <ul id="lista-aplicacoes" class="tambores">
+                        <li class="montadora">${montadora}:</li>
+
+                    </ul>
+
+                </div>
+                <div class="modal-footer">
+                    <p><span class="carro">Marca:</span> <span class="marcas">${marcaProduct}</span></p>
+                    <p class="carro">C-${codeProduct}</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    `
+        
+        body.append(modalDialog)
+
+    }
+
+    // aplications
+    carsEapli22(dados)
+}
+
+// adding cars and aplications in dialog
+async function carsEapli22(dados){
+    
+    let allModalBody = document.querySelectorAll('.modal-body .tambores')
+    // console.log(allModalBody)
+
+    let cont = 0
+
+    for(let i = 0;i < dados.length;i++){
+
+        // APLICAÇÕES
+        let aplicacao = await dados[i].aplicacoes[0].anoApli
+        let aplicacoesTwo = await dados[i].aplicacoesTwo
+        let aplicacoesThree = await dados[i].aplicacoesThree
+
+
+        // ADDING CARROS 1
+         let carros = await dados[i].aplicacoes[0].carros
+
+         carros.map((carro, index) =>{
+
+             
+            let liLista = document.createElement('li')
+            liLista.classList.add(`listCars`)
+ 
+            liLista.innerHTML = `
+              <span class="carro">${carro}: </span>
+ 
+                 `
+            //  console.log(liLista)
+
+            allModalBody[i].appendChild(liLista)
+                
+         })
+
+         
+         // ADDING APLICACOES 1
+        let allLis = document.querySelectorAll(`.modal-body .tambores .listCars`)
+        // console.log(allLis.length)
+        
+        aplicacao.forEach((apli) =>{
+            cont += 1
+
+            let spanLi = document.createElement('span')
+            spanLi.innerHTML = `${apli}`
+            // console.log(cont)
+            allLis[cont - 1].append(spanLi)
+        })
+
+
+
+        // SE EXISTIER APLICACAO DOIS
+        if(aplicacoesTwo){
+
+            // console.log(aplicacaoTwo[0].carros)
+            montadoraTwo = await aplicacoesTwo[0].montadora
+            carrosTwo = await aplicacoesTwo[0].carros
+            anoApliTwo = await aplicacoesTwo[0].anoApli
+
+        //    ADDING MONTADORA 2
+            let liMontTwo = document.createElement('li')
+            liMontTwo.classList.add(`montadora`)
+            liMontTwo.innerHTML = `
+                <li class="montadora">${montadoraTwo}:</li>
+                `
+            allModalBody[i].appendChild(liMontTwo)
+
+
+            // ADDING CARROS 2
+            carrosTwo.map((carroTwo) =>{
+
+                let liListaTwo = document.createElement('li')
+                liListaTwo.classList.add(`listCars`)
+
+                liListaTwo.innerHTML = `
+                <span class="carro">${carroTwo}: </span>
+                    `
+                
+                allModalBody[i].appendChild(liListaTwo)
+            })
+
+
+            // ADDING APLICAÇAO 2
+            let allLisTwo = document.querySelectorAll(`.modal-body .tambores .listCars`)
+
+            anoApliTwo.forEach((apliTwo) =>{
+
+                cont += 1
+
+                let spanLiTwo = document.createElement('span')
+                spanLiTwo.innerHTML = `${apliTwo}`
+                // console.log(cont)
+                allLisTwo[cont - 1].append(spanLiTwo)
+            })
+
+        }
+
+
+         // SE EXISTIR APLICACAO TRES
+         if(aplicacoesThree){
+    
+            montadoraThree = await aplicacoesThree[0].montadora
+            carrosThree = await aplicacoesThree[0].carros
+            anoApliThree = await aplicacoesThree[0].anoApli
+
+
+            //  ADDING MONTADORA 3
+            let liMontThree = document.createElement('li')
+            liMontThree.classList.add(`montadora`)
+            liMontThree.innerHTML = `
+                <li class="montadora">${montadoraThree}:</li>
+                `
+            allModalBody[i].appendChild(liMontThree)
+
+
+            // ADDING CARROS 3
+            carrosThree.map((carroThree) =>{
+
+                let liListaThree = document.createElement('li')
+                liListaThree.classList.add(`listCars`)
+
+                liListaThree.innerHTML = `
+                <span class="carro">${carroThree}: </span>
+                    `
+                
+                allModalBody[i].appendChild(liListaThree)
+            })
+
+
+            // ADDING APLICAÇAO 3
+            let allLisThree = document.querySelectorAll(`.modal-body .tambores .listCars`)
+
+            anoApliThree.forEach((apliThree) =>{
+
+                cont += 1
+
+                let spanLiThree = document.createElement('span')
+                spanLiThree.innerHTML = `${apliThree}`
+                // console.log(cont)
+                allLisThree[cont - 1].append(spanLiThree)
+            })
+
+
+
+        }
+
+
+    }
+
+
+}
+
+
+
+
+
 
 
 // adding reparos freio
@@ -6565,7 +7342,11 @@ async function reparosFreio(){
 
     }
 
+    // acao de filtrar dos btns
     filtroReparo()
+
+    // dialog
+    dialogReparos()
 }
 
 // fucao filtrando pesquisa dos reparos
@@ -6745,6 +7526,219 @@ function filtroReparo(){
 
 }
 
+// dialog reparos
+async function dialogReparos(){
+
+    const dado = await gettingApi()
+    const dados = dado.reparosFreio
+    // console.log(dados)
+
+    for(let i = 0;i < dados.length;i++){
+        // console.log(dados.length)
+
+        // dados especificos
+        code = await dados[i].aplicacoes[0].codeApli
+        montadora = await dados[i].aplicacoes[0].montadora
+        nameProduct = await dados[i].info
+        marcaProduct = await dados[i].marca
+        codeProduct = await dados[i].code
+        montadora = await dados[i].aplicacoes[0].montadora
+
+
+        let modalDialog = document.createElement('div')
+
+        modalDialog.innerHTML = `
+
+    <div class="modal fade thisModal" id="${code}" aria-hidden="true" aria-labelledby="modal-filtro-label" tabindex="-1" >
+        <div class="modal-dialog modal-dialog-scrollable">
+
+            <div class="modal-content" id="modal-content">
+
+                <div class="modal-header">
+                    <h2>Aplicações</h2>
+                    <button class="btn-close" type="button" data-bs-dismiss="modal" aria-label="close"></button>
+                </div>
+                <div class="modal-body">
+                    <h5>${nameProduct}</h5>   
+
+                    <ul id="lista-aplicacoes" class="reparosFreio">
+                        <li class="montadora">${montadora}:</li>
+
+                    </ul>
+
+                </div>
+                <div class="modal-footer">
+                    <p><span class="carro">Marca:</span> <span class="marcas">${marcaProduct}</span></p>
+                    <p class="carro">C-${codeProduct}</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    `
+        
+        body.append(modalDialog)
+
+    }
+
+    // aplications 
+    carsEapli23(dados)
+}
+
+// adding cars and aplications in dialog
+async function carsEapli23(dados){
+    
+    let allModalBody = document.querySelectorAll('.modal-body .reparosFreio')
+    // console.log(allModalBody)
+
+    let cont = 0
+
+    for(let i = 0;i < dados.length;i++){
+
+        // APLICAÇÕES
+        let aplicacao = await dados[i].aplicacoes[0].anoApli
+        let aplicacoesTwo = await dados[i].aplicacoesTwo
+        let aplicacoesThree = await dados[i].aplicacoesThree
+
+
+        // ADDING CARROS 1
+         let carros = await dados[i].aplicacoes[0].carros
+
+         carros.map((carro, index) =>{
+
+             
+            let liLista = document.createElement('li')
+            liLista.classList.add(`listCars`)
+ 
+            liLista.innerHTML = `
+              <span class="carro">${carro}: </span>
+ 
+                 `
+            //  console.log(liLista)
+
+            allModalBody[i].appendChild(liLista)
+                
+         })
+
+         
+         // ADDING APLICACOES 1
+        let allLis = document.querySelectorAll(`.modal-body .reparosFreio .listCars`)
+        // console.log(allLis.length)
+        
+        aplicacao.forEach((apli) =>{
+            cont += 1
+
+            let spanLi = document.createElement('span')
+            spanLi.innerHTML = `${apli}`
+            // console.log(cont)
+            allLis[cont - 1].append(spanLi)
+        })
+
+
+        
+        // SE EXISTIER APLICACAO DOIS
+        if(aplicacoesTwo){
+
+            // console.log(aplicacaoTwo[0].carros)
+            montadoraTwo = await aplicacoesTwo[0].montadora
+            carrosTwo = await aplicacoesTwo[0].carros
+            anoApliTwo = await aplicacoesTwo[0].anoApli
+
+        //    ADDING MONTADORA 2
+            let liMontTwo = document.createElement('li')
+            liMontTwo.classList.add(`montadora`)
+            liMontTwo.innerHTML = `
+                <li class="montadora">${montadoraTwo}:</li>
+                `
+            allModalBody[i].appendChild(liMontTwo)
+
+
+            // ADDING CARROS 2
+            carrosTwo.map((carroTwo) =>{
+
+                let liListaTwo = document.createElement('li')
+                liListaTwo.classList.add(`listCars`)
+
+                liListaTwo.innerHTML = `
+                <span class="carro">${carroTwo}: </span>
+                    `
+                
+                allModalBody[i].appendChild(liListaTwo)
+            })
+
+
+            // ADDING APLICAÇAO 2
+            let allLisTwo = document.querySelectorAll(`.modal-body .reparosFreio .listCars`)
+
+            anoApliTwo.forEach((apliTwo) =>{
+
+                cont += 1
+
+                let spanLiTwo = document.createElement('span')
+                spanLiTwo.innerHTML = `${apliTwo}`
+                // console.log(cont)
+                allLisTwo[cont - 1].append(spanLiTwo)
+            })
+
+        }
+
+
+
+        // SE EXISTIR APLICACAO TRES
+        if(aplicacoesThree){
+    
+            montadoraThree = await aplicacoesThree[0].montadora
+            carrosThree = await aplicacoesThree[0].carros
+            anoApliThree = await aplicacoesThree[0].anoApli
+
+
+            //  ADDING MONTADORA 3
+            let liMontThree = document.createElement('li')
+            liMontThree.classList.add(`montadora`)
+            liMontThree.innerHTML = `
+                <li class="montadora">${montadoraThree}:</li>
+                `
+            allModalBody[i].appendChild(liMontThree)
+
+
+            // ADDING CARROS 3
+            carrosThree.map((carroThree) =>{
+
+                let liListaThree = document.createElement('li')
+                liListaThree.classList.add(`listCars`)
+
+                liListaThree.innerHTML = `
+                <span class="carro">${carroThree}: </span>
+                    `
+                
+                allModalBody[i].appendChild(liListaThree)
+            })
+
+
+            // ADDING APLICAÇAO 3
+            let allLisThree = document.querySelectorAll(`.modal-body .reparosFreio .listCars`)
+
+            anoApliThree.forEach((apliThree) =>{
+
+                cont += 1
+
+                let spanLiThree = document.createElement('span')
+                spanLiThree.innerHTML = `${apliThree}`
+                // console.log(cont)
+                allLisThree[cont - 1].append(spanLiThree)
+            })
+
+
+
+        }
+
+
+
+    }
+}
+
+
+
 
 
 // adding cabos freio 
@@ -6786,7 +7780,12 @@ async function cabosFreio(){
 
     }
 
+    // acao filtrar dos btns
     filtroCabos()
+
+    // dialog
+    dialogCabosFreio()
+
 }
 
 // fucao filtrando pesquisa dos cabos
@@ -6907,6 +7906,125 @@ function filtroCabos(){
 
 }
 
+// dialog cabos de freios
+async function dialogCabosFreio(){
+    const dado = await gettingApi()
+    const dados = dado.cabosEflexiveis
+    // console.log(dados)
+
+
+    for(let i = 0;i < dados.length;i++){
+        // console.log(dados.length)
+
+        // dados especificos
+        code = await dados[i].aplicacoes[0].codeApli
+        montadora = await dados[i].aplicacoes[0].montadora
+        nameProduct = await dados[i].info
+        marcaProduct = await dados[i].marca
+        codeProduct = await dados[i].code
+        montadora = await dados[i].aplicacoes[0].montadora
+
+
+        let modalDialog = document.createElement('div')
+
+        modalDialog.innerHTML = `
+
+    <div class="modal fade thisModal" id="${code}" aria-hidden="true" aria-labelledby="modal-filtro-label" tabindex="-1" >
+        <div class="modal-dialog modal-dialog-scrollable">
+
+            <div class="modal-content" id="modal-content">
+
+                <div class="modal-header">
+                    <h2>Aplicações</h2>
+                    <button class="btn-close" type="button" data-bs-dismiss="modal" aria-label="close"></button>
+                </div>
+                <div class="modal-body">
+                    <h5>${nameProduct}</h5>   
+
+                    <ul id="lista-aplicacoes" class="cabosFreio">
+                        <li class="montadora">${montadora}:</li>
+
+                    </ul>
+
+                </div>
+                <div class="modal-footer">
+                    <p><span class="carro">Marca:</span> <span class="marcas">${marcaProduct}</span></p>
+                    <p class="carro">C-${codeProduct}</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    `
+        
+        body.append(modalDialog)
+
+    }
+
+    // aplications
+    carsEapli24(dados)
+
+}
+
+// adding cars and aplications in dialog
+async function carsEapli24(dados){
+    
+
+    let allModalBody = document.querySelectorAll('.modal-body .cabosFreio')
+    // console.log(allModalBody)
+
+    let cont = 0
+
+    for(let i = 0;i < dados.length;i++){
+
+        // APLICAÇÕES
+        let aplicacao = await dados[i].aplicacoes[0].anoApli
+        // let aplicacoesTwo = await dados[i].aplicacoesTwo
+        // let aplicacoesThree = await dados[i].aplicacoesThree
+
+
+        // ADDING CARROS 1
+         let carros = await dados[i].aplicacoes[0].carros
+
+         carros.map((carro, index) =>{
+
+             
+            let liLista = document.createElement('li')
+            liLista.classList.add(`listCars`)
+ 
+            liLista.innerHTML = `
+              <span class="carro">${carro}: </span>
+ 
+                 `
+            //  console.log(liLista)
+
+            allModalBody[i].appendChild(liLista)
+                
+         })
+
+         
+         // ADDING APLICACOES 1
+        let allLis = document.querySelectorAll(`.modal-body .cabosFreio .listCars`)
+        // console.log(allLis.length)
+        
+        aplicacao.forEach((apli) =>{
+            cont += 1
+
+            let spanLi = document.createElement('span')
+            spanLi.innerHTML = `${apli}`
+            // console.log(cont)
+            allLis[cont - 1].append(spanLi)
+        })
+
+
+    }
+
+
+}
+
+
+
+
 
 
 // adding acessorios freio
@@ -6946,11 +8064,129 @@ async function acessoriosFreio() {
         rowAcessoriosFreio.appendChild(newDiv)
 
     }
+// dialog
+    dialogAcessorioFreio()
+}
+
+// dialog acessorios do freio
+async function dialogAcessorioFreio(){
+
+    const dado = await gettingApi()
+    const dados = dado.acessoriosFreio
+    // console.log(dados)
+
+    for(let i = 0;i < dados.length;i++){
+        // console.log(dados.length)
+
+        // dados especificos
+        code = await dados[i].aplicacoes[0].codeApli
+        montadora = await dados[i].aplicacoes[0].montadora
+        nameProduct = await dados[i].info
+        marcaProduct = await dados[i].marca
+        codeProduct = await dados[i].code
+        montadora = await dados[i].aplicacoes[0].montadora
+
+
+        let modalDialog = document.createElement('div')
+
+        modalDialog.innerHTML = `
+
+    <div class="modal fade thisModal" id="${code}" aria-hidden="true" aria-labelledby="modal-filtro-label" tabindex="-1" >
+        <div class="modal-dialog modal-dialog-scrollable">
+
+            <div class="modal-content" id="modal-content">
+
+                <div class="modal-header">
+                    <h2>Aplicações</h2>
+                    <button class="btn-close" type="button" data-bs-dismiss="modal" aria-label="close"></button>
+                </div>
+                <div class="modal-body">
+                    <h5>${nameProduct}</h5>   
+
+                    <ul id="lista-aplicacoes" class="acessorioFreio">
+                        <li class="montadora">${montadora}:</li>
+
+                    </ul>
+
+                </div>
+                <div class="modal-footer">
+                    <p><span class="carro">Marca:</span> <span class="marcas">${marcaProduct}</span></p>
+                    <p class="carro">C-${codeProduct}</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    `
+        
+        body.append(modalDialog)
+
+    }
+
+    // aplications
+    carsEapli25(dados)
+}
+
+// adding cars and aplications in dialog
+async function carsEapli25(dados){
+    
+    let allModalBody = document.querySelectorAll('.modal-body .acessorioFreio')
+    // console.log(allModalBody)
+
+    let cont = 0
+
+    for(let i = 0;i < dados.length;i++){
+
+        // APLICAÇÕES
+        let aplicacao = await dados[i].aplicacoes[0].anoApli
+        let aplicacoesTwo = await dados[i].aplicacoesTwo
+        let aplicacoesThree = await dados[i].aplicacoesThree
+
+
+        // ADDING CARROS 1
+         let carros = await dados[i].aplicacoes[0].carros
+
+         carros.map((carro, index) =>{
+
+             
+            let liLista = document.createElement('li')
+            liLista.classList.add(`listCars`)
+ 
+            liLista.innerHTML = `
+              <span class="carro">${carro}: </span>
+ 
+                 `
+            //  console.log(liLista)
+
+            allModalBody[i].appendChild(liLista)
+                
+         })
+
+         
+         // ADDING APLICACOES 1
+        let allLis = document.querySelectorAll(`.modal-body .acessorioFreio .listCars`)
+        // console.log(allLis.length)
+        
+        aplicacao.forEach((apli) =>{
+            cont += 1
+
+            let spanLi = document.createElement('span')
+            spanLi.innerHTML = `${apli}`
+            // console.log(cont)
+            allLis[cont - 1].append(spanLi)
+        })
+
+
+    }
+
+
+
 }
 
 
 
-// SESSAO 08
+
+// SESSAO 08 
 
 let rowCabosVela = document.querySelector('#row-cabo-vela')
 let rowVelaIgnicao = document.querySelector('#row-vela-ignicao')
