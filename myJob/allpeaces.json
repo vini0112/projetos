@@ -3877,8 +3877,8 @@
             "image": "photos/freios/pastilhas/sna525.png",
             "marca": "Speed-Break",
             "info": "SNA-525/P-60",
-            "linha": "GM",
-            "linhaCode": "gm",
+            "linha": "Fiat",
+            "linhaCode": "fiat",
             "code": 2023,
             "linkApli": "#sna525",
             "price": 36.77,
@@ -3886,7 +3886,7 @@
             "aplicacoes":[
                 {
                     "codeApli": "sna525",
-                    "montadora": "GM",
+                    "montadora": "FIAT",
                     "carros": ["Siena", "Palio", "Palio-Weekend", "Uno"],
                     "anoApli": ["1999..", "1999..", "1999..", "..."]
                 }
@@ -5230,7 +5230,7 @@
                 {
                     "codeApli": "8972941",
                     "montadora": "FIAT",
-                    "carros": ["Doblo", "Fiorino", "Idea", "Palio", "Punto", "Tempra", "Uno" "Strada"],
+                    "carros": ["Doblo", "Fiorino", "Idea", "Palio", "Punto", "Tempra", "Uno", "Strada"],
                     "anoApli": ["...", "...", "...", "...", "...", "...", "...", "..."]
                 }
             ]
