@@ -6313,8 +6313,8 @@
             "image": "photos/sist-carga/tensores/1223.png",
             "marca": "Nytron",
             "info": "1223",
-            "linha": "Volkswagen",
-            "linhaCode": "vws",
+            "linha": "GM",
+            "linhaCode": "gm",
             "code": 1792,
             "linkApli": "#1223",
             "price": 72.00,
@@ -6322,7 +6322,7 @@
             "aplicacoes":[
                 {
                     "codeApli": "1223",
-                    "montadora": "Volkswagen",
+                    "montadora": "GM",
                     "carros": ["Corsa", "Celta", "Prisma"],
                     "anoApli": ["1994-2002", "2001-2008", "2009.."]
                 }
@@ -6801,7 +6801,7 @@
             "image": "photos/sist-carga/estatores/ar701352.png",
             "marca": "",
             "info": "AR-352",
-            "linha": "Fiat/Ford/Volskwagen",
+            "linha": "Fiat/Ford",
             "linhaCode": "fiat",
             "code": 3668,
             "linkApli": "#ar701352",
@@ -6857,7 +6857,7 @@
             "image": "photos/sist-partida/impulsor/0846.png",
             "marca": "Zen",
             "info": "0846",
-            "linha": "Fiat",
+            "linha": "Fiat/Citroen",
             "linhaCode": "fiat",
             "code": 564,
             "linkApli": "#0846",
@@ -6865,14 +6865,24 @@
             "qtd": 1,
             "aplicacoes":[
                 {
-                    "codeApli": "",
-                    "montadora": "",
-                    "carros": [""],
-                    "anoApli": [""]
+                    "codeApli": "0846",
+                    "montadora": "FIAT",
+                    "carros": ["Palio", "Palio-Weekend", "Siena", "Strada", "Uno"],
+                    "anoApli": ["2000-2017", "1978-2004", "1998-2016", "1999-2004", "1996.."]
                 }
+            ],
+
+            "aplicacoesTwo":[
+                {
+                     "montadora": "CITROEN",
+                     "carros": ["Berlingo", "Xantia", "Congo"],
+                     "anoApli":["1998-2019", "1994-2001", "..."]
+                }
+                
             ]
 
         },
+
         {
             "nome": "Impulsor",
             "image": "photos/sist-partida/impulsor/0743.png",
@@ -6883,21 +6893,50 @@
             "code": "sem",
             "linkApli": "#0743",
             "price": 0,
-            "qtd": 1
+            "qtd": 1,
+            "aplicacoes":[
+                {
+                    "codeApli": "0743",
+                    "montadora": "FIAT",
+                    "carros": ["174", "Duna", "Fiorino", "Uno", "Uno-Vivace"],
+                    "anoApli": ["...", "...", "...", "...", "..."]
+                }
+            ]
+
         },
+
         {
             "nome": "Impulsor",
             "image": "photos/sist-partida/impulsor/0843.png",
             "marca": "Zen",
             "info": "0843",
-            "linha": "GM",
+            "linha": "GM/Renault",
             "linhaCode": "gm",
             "secundLineCode":"renault",
             "code": "sem",
             "linkApli": "#0843",
             "price": 0,
-            "qtd": 1
+            "qtd": 1,
+            "aplicacoes":[
+                {
+                    "codeApli": "0843",
+                    "montadora": "GM",
+                    "carros": ["Corsa", "Celta"],
+                    "anoApli": ["1994-2021", "2000-2019"]
+                }
+            ],
+
+            "aplicacoesTwo":[
+                {
+                     "montadora": "RENAULT",
+                     "carros": ["Megane", "Scenic", "R19", "Clio", "Kangoo", "Laguna"],
+                     "anoApli":["1996-2018", "1999-2017", "1994-2015", "1998-2016", "1994-2019", "2000-2012"]
+                }
+                
+            ]
+
         },
+
         {
             "nome": "Impulsor",
             "image": "photos/sist-partida/impulsor/1745.png",
@@ -6908,8 +6947,18 @@
             "code": 4675,
             "linkApli": "#1745",
             "price": 0,
-            "qtd": 1
+            "qtd": 1,
+            "aplicacoes":[
+                {
+                    "codeApli": "1745",
+                    "montadora": "GM",
+                    "carros": ["Celta", "Classic", "Cobalt", "Cruze", "Montana", "Novo-Prisma", "Onix", "Spin", "Agile"],
+                    "anoApli": ["...", "...", "...", "...", "...", "2013-2018", "2013-2018", "...", "..."]
+                }
+            ]
+
         },
+
         {
             "nome": "Impulsor",
             "image": "photos/sist-partida/impulsor/9901180.png",
@@ -6920,8 +6969,18 @@
             "code": "sem",
             "linkApli": "#9901180",
             "price": 0,
-            "qtd": 1
+            "qtd": 1,
+            "aplicacoes":[
+                {
+                    "codeApli": "9901180",
+                    "montadora": "GM",
+                    "carros": ["D-20", "D-40", "D-6000"],
+                    "anoApli": ["...", "...", "..."]
+                }
+            ]
+
         },
+
         {
             "nome": "Impulsor",
             "image": "photos/sist-partida/impulsor/0942.png",
@@ -6932,7 +6991,16 @@
             "code": 274,
             "linkApli": "#0942",
             "price": 56.00,
-            "qtd": 1
+            "qtd": 1,
+            "aplicacoes":[
+                {
+                    "codeApli": "0942",
+                    "montadora": "Volkswagen",
+                    "carros": ["Gol", "Parati", "Saveiro"],
+                    "anoApli": ["Motor (AP) 1.6 1999", "Motor (AP) 1.6 1999", "Motor (AP) 1.6 1999"]
+                }
+            ]
+
         }
         
     ],
@@ -6944,13 +7012,41 @@
             "image": "photos/sist-partida/escovas/A11712V.png",
             "marca": "Sulcarbon",
             "info": "A-117-12V",
-            "linha": "Fiat/Ford/Volskwagen",
+            "linha": "Volskwagen/Fiat/Ford",
             "linhaCode": "fiat",
             "code": "sem",
             "linkApli": "#A11712V",
             "price": 0,
-            "qtd": 1
+            "qtd": 1,
+            "aplicacoes":[
+                {
+                    "codeApli": "A11712V",
+                    "montadora": "Volskwagen",
+                    "carros": ["Parati", "Golf", "Passat"],
+                    "anoApli": ["...", "...", "..."]
+                }
+            ],
+
+            "aplicacoesTwo":[
+                {
+                     "montadora": "FIAT",
+                     "carros": ["Palio", "Siena", "Strada", "Bravo", "Doblo", "Palio-Weekend", "Ducato"],
+                    "anoApli": ["...", "...", "...", "...", "...", "...", "..."]
+                }
+                
+            ],
+
+            "aplicacoesThree":[
+                {
+                    "montadora": "FORD",
+                    "carros": ["Escort"],
+                     "anoApli":["..."]
+                }
+            ]
+
+
         },
+
         {
             "nome": "Porta Escovas",
             "image": "photos/sist-partida/escovas/myr1094.png",
@@ -6961,20 +7057,58 @@
             "code": 296,
             "linkApli": "#myr1094",
             "price": 21.00,
-            "qtd": 1
+            "qtd": 1,
+            "aplicacoes":[
+                {
+                    "codeApli": "myr1094",
+                    "montadora": "FIAT",
+                    "carros": ["Palio", "Palio-Weekend"],
+                    "anoApli": ["1991-2013", "..."]
+                }
+            ]
+
         },
+
         {
             "nome": "Porta Escovas",
             "image": "photos/sist-partida/escovas/A11812V.png",
             "marca": "Sulcarbon",
             "info": "A-118-12V",
-            "linha": "Fiat/GM/Volkswagen",
+            "linha": "Volkswagen/GM/Fiat",
             "linhaCode": "fiat",
             "code": 1972,
             "linkApli": "#A11812V",
             "price": 30.00,
-            "qtd": 1
+            "qtd": 1,
+            "aplicacoes":[
+                {
+                    "codeApli": "A11812V",
+                    "montadora": "Volkswagen",
+                    "carros": ["Parati", "Golf", "Voyage", "Saveiro", "Quantum"],
+                    "anoApli": ["...", "...", "...", "...", "..."]
+                }
+            ],
+
+            "aplicacoesTwo":[
+                {
+                     "montadora": "GM",
+                     "carros": ["Omega", "Vectra", "Blazer", "Ipanema", "Astra", "Kadett"],
+                    "anoApli": ["...", "...", "...", "...", "...", "..."]
+                }
+                
+            ],
+
+            "aplicacoesThree":[
+                {
+                    "montadora": "FIAT",
+                    "carros": ["Tempra"],
+                     "anoApli":["..."]
+                }
+            ]
+
+
         },
+
         {
             "nome": "Porta Escovas",
             "image": "photos/sist-partida/escovas/my71051.png",
@@ -6985,21 +7119,50 @@
             "code": 1971,
             "linkApli": "#my71051",
             "price": 25.00,
-            "qtd": 1
+            "qtd": 1,
+            "aplicacoes":[
+                {
+                    "codeApli": "my71051",
+                    "montadora": "Volkswagen",
+                    "carros": ["Passat", "Pointer", "Gol", "Polo", "Parati", "Golf"],
+                    "anoApli": ["...", "...", "...", "...", "...", "..."]
+                }
+            ]
+
         },
+
         {
             "nome": "Porta Escovas",
             "image": "photos/sist-partida/escovas/A13012V.png",
             "marca": "Sulcarbon",
             "info": "A13012V",
-            "linha": "GM/Ford",
+            "linha": "Ford/GM",
             "linhaCode": "gm",
             "secundLineCode": "ford",
             "code": 1974,
             "linkApli": "#A13012V",
             "price": 65.00,
-            "qtd": 1
+            "qtd": 1,
+            "aplicacoes":[
+                {
+                    "codeApli": "A13012V",
+                    "montadora": "FORD",
+                    "carros": ["Ranger", "Cargo 1722", "Cargo 1716", "F-1000", "Cargo 1416", "F-14000", "F-100", "F-1000"],
+                    "anoApli": ["...", "...", "...", "...", "...", "...", "...", "..."]
+                }
+            ],
+
+            "aplicacoesTwo":[
+                {
+                     "montadora": "GM",
+                     "carros": ["D-20", "Blazer DLX", "S-10", "Silverado"],
+                    "anoApli": ["...", "...", "...", "..."]
+                }
+                
+            ]
+
         },
+
         {
             "nome": "Porta Escovas",
             "image": "photos/sist-partida/escovas/my71033-4.png",
@@ -7010,7 +7173,17 @@
             "code": "sem",
             "linkApli": "#my71033-4",
             "price": 0,
-            "qtd": 1
+            "qtd": 1,
+            "aplicacoes":[
+                {
+                    "codeApli": "my71033-4",
+                    "montadora": "GM",
+                    "carros": ["D-20", "D-6000", "Modelos Mercedes-Benz", "Modelos Agrale"],
+                    "anoApli": ["...", "...", "...", "..."]
+                }
+            ]
+
+
         }
         
     ],
@@ -7027,32 +7200,70 @@
             "code": "sem",
             "linkApli": "#buchaPerkis",
             "price": 0,
-            "qtd": 1
+            "qtd": 1,
+            "aplicacoes":[
+                {
+                    "codeApli": "buchaPerkis",
+                    "montadora": "GM",
+                    "carros": ["D-20", "D-40", "D-60"],
+                    "anoApli": ["...", "...", "..."]
+                }
+            ],
+            "aplicacoesTwo":[
+                {
+                     "montadora": "FORD",
+                     "carros": ["F-1000", "F-4000"],
+                    "anoApli": ["...", "..."]
+                }
+                
+            ]
+
         },
+
         {
             "nome": "Bucha Motor Partida",
             "image": "photos/sist-partida/acessorios-partida/buchaMaxion.png",
             "info": "Motor Maxion",
             "marca": "",
-            "linha": "GM/Ford",
+            "linha": "GM",
             "linhaCode": "gm",
             "code": 2702,
             "linkApli": "#buchaMaxion",
             "price": 23.00,
-            "qtd": 1
+            "qtd": 1,
+            "aplicacoes":[
+                {
+                    "codeApli": "buchaMaxion",
+                    "montadora": "GM",
+                    "carros": ["Caminhões"],
+                    "anoApli": ["..."]
+                }
+            ]
+
         },
+
         {
             "nome": "Garfo Motor Partida",
             "image": "photos/sist-partida/acessorios-partida/4403.png",
             "marca": "Unifap",
             "info": "4.403",
-            "linha": "GM/Ford",
+            "linha": "Diversas",
             "linhaCode": "gm",
             "code": "sem",
             "linkApli": "#4403",
             "price": 0,
-            "qtd": 1
+            "qtd": 1,
+            "aplicacoes":[
+                {
+                    "codeApli": "4403",
+                    "montadora": "Diversas",
+                    "carros": [""],
+                    "anoApli": [""]
+                }
+            ]
+
         },
+
         {
             "nome": "Arruela Motor Partida",
             "image": "photos/sist-partida/acessorios-partida/arruelaPerkins.png",
@@ -7063,7 +7274,17 @@
             "code": "sem",
             "linkApli": "#arruelaPerkins",
             "price": 0,
-            "qtd": 1
+            "qtd": 1,
+            "aplicacoes":[
+                {
+                    "codeApli": "arruelaPerkins",
+                    "montadora": "Universal",
+                    "carros": [""],
+                    "anoApli": [""]
+                }
+            ]
+
+
         }
         
     ],
