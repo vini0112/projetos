@@ -10185,13 +10185,14 @@
             "qtd": 1,
             "aplicacoes":[
                     {
-                        "codeApli": "",
-                        "montadora": "",
-                        "carros": [""],
-                        "anoApli": [""]
+                        "codeApli": "DV9528V",
+                        "montadora": "FIAT",
+                        "carros": ["Doblo", "Grand-Siena", "Palio-Weekend", "Punto", "Siena"],
+                        "anoApli": ["2002..", "2011..", "1998..", "2008..", "1997.."]
                     }
                 ]
         },
+
         {
             "nome": "Coxim",
             "position":"Tras.",
@@ -10203,8 +10204,18 @@
             "code": 3539,
             "linkApli": "#DV9079V",
             "price": 6.50,
-            "qtd": 1
+            "qtd": 1,
+            "aplicacoes":[
+                    {
+                        "codeApli": "DV9079V",
+                        "montadora": "FIAT",
+                        "carros": ["Strada", "Idea"],
+                        "anoApli": ["1998..", "2006.."]
+                    }
+                ]
+
         },
+
         {
             "nome": "Coxim",
             "position":"Tras.",
@@ -10216,8 +10227,18 @@
             "code": 3155,
             "linkApli": "#DV9904V",
             "price": 6.00,
-            "qtd": 1
+            "qtd": 1,
+            "aplicacoes":[
+                    {
+                        "codeApli": "DV9904V",
+                        "montadora": "FIAT",
+                        "carros": ["Grand-Siena", "Doblo", "Idea", "Palio", "Palio-Weekend"],
+                        "anoApli": ["2011..", "2002..", "2006..", "2009..", "1998.."]
+                    }
+                ]
+
         },
+
         {
             "nome": "Coxim",
             "position":"Inter.",
@@ -10229,8 +10250,18 @@
             "code": 3154,
             "linkApli": "#DV9114V",
             "price": 4.50,
-            "qtd": 1
+            "qtd": 1,
+            "aplicacoes":[
+                    {
+                        "codeApli": "DV9114V",
+                        "montadora": "FIAT",
+                        "carros": ["Elba", "Fiorino", "Pick-Up", "Prêmio", "Uno"],
+                        "anoApli": ["1985-1996", "1988..", "1988-2002", "1985-1996", "1988.."]
+                    }
+                ]
+
         },
+
         {
             "nome": "Coxim Silencioso",
             "position":"Inter.",
@@ -10242,8 +10273,18 @@
             "code": "sem",
             "linkApli": "#DV9117V",
             "price": 0,
-            "qtd": 1
+            "qtd": 1,
+            "aplicacoes":[
+                    {
+                        "codeApli": "DV9117V",
+                        "montadora": "FIAT",
+                        "carros": ["Elba", "Prêmio", "Uno"],
+                        "anoApli": ["1985-1996", "1984-1995", "1984-2010"]
+                    }
+                ]
+
         },
+
         {
             "nome": "Coxim",
             "position":"Tras.",
@@ -10255,8 +10296,18 @@
             "code": 3540,
             "linkApli": "#DV9083V",
             "price": 6.00,
-            "qtd": 1
+            "qtd": 1,
+            "aplicacoes":[
+                    {
+                        "codeApli": "DV9083V",
+                        "montadora": "FIAT",
+                        "carros": ["Palio", "Uno"],
+                        "anoApli": ["1996..", "2010.."]
+                    }
+                ]
+
         },
+
         {
             "nome": "Coxim",
             "position":"Tras.",
@@ -10268,8 +10319,18 @@
             "code": 3541,
             "linkApli": "#DV9084V",
             "price": 4.00,
-            "qtd": 1
+            "qtd": 1,
+            "aplicacoes":[
+                    {
+                        "codeApli": "DV9084V",
+                        "montadora": "FIAT",
+                        "carros": ["Palio", "Palio-Weekend", "Siena"],
+                        "anoApli": ["1996..", "1998..", "2001.."]
+                    }
+                ]
+
         },
+
         {
             "nome": "Coxim",
             "position":"Inter.",
@@ -10281,8 +10342,18 @@
             "code": "sem",
             "linkApli": "#DV9294V",
             "price": 0,
-            "qtd": 1
+            "qtd": 1,
+            "aplicacoes":[
+                    {
+                        "codeApli": "DV9294V",
+                        "montadora": "FIAT",
+                        "carros": ["Diversas"],
+                        "anoApli": ["..."]
+                    }
+                ]
+
         },
+
         {
             "nome": "Coxim",
             "position":"Tras.",
@@ -10294,34 +10365,82 @@
             "code": "sem",
             "linkApli": "#DV9903V",
             "price": 0,
-            "qtd": 1
+            "qtd": 1,
+            "aplicacoes":[
+                    {
+                        "codeApli": "DV9903V",
+                        "montadora": "FIAT",
+                        "carros": ["Toro"],
+                        "anoApli": ["2016.."]
+                    }
+                ]
+
         },
+
         {
             "nome": "Coxim Caveirinha",
             "position":"",
             "image": "photos/escapamentos/coxins/DV9102V.png",
             "marca": "Mastra",
             "info": "DV9102V",
-            "linha": "Volkswagen",
+            "linha": "Volkswagen/Ford",
             "linhaCode": "vws",
             "code": 3542,
             "linkApli": "#DV9102V",
             "price": 4.00,
-            "qtd": 1
+            "qtd": 1,
+            "aplicacoes":[
+                    {
+                        "codeApli": "DV9102V",
+                        "montadora": "Volkswagen",
+                        "carros": ["Gol", "Kombi", "Parati"],
+                        "anoApli": ["1985..", "1992..", "1982.."]
+                    }
+                ],
+
+                "aplicacoesTwo":[
+                    {
+                         "montadora": "FORD",
+                         "carros": ["Escort", "Verona", "Versailles"],
+                        "anoApli": ["1993..", "1993-1996", "1991-1996"]
+                    }
+                    
+                ]
+
         },
+
         {
             "nome": "Coxim Caveirão",
             "position":"",
             "image": "photos/escapamentos/coxins/DV9723V.png",
             "marca": "Mastra",
             "info": "DV9723V",
-            "linha": "Volkswagen",
+            "linha": "Volkswagen/Ford",
             "linhaCode": "vws",
             "code": 3544,
             "linkApli": "#DV9723V",
             "price": 4.00,
-            "qtd": 1
+            "qtd": 1,
+            "aplicacoes":[
+                    {
+                        "codeApli": "DV9723V",
+                        "montadora": "Volkswagen",
+                        "carros": ["Diversos"],
+                        "anoApli": ["..."]
+                    }
+                ],
+
+                "aplicacoesTwo":[
+                    {
+                         "montadora": "FORD",
+                         "carros": ["Escort", "Verona"],
+                        "anoApli": ["1993..", "1992.."]
+                    }
+                    
+                ]
+
         },
+
         {
             "nome": "Coxim",
             "position":"Diant.",
@@ -10333,8 +10452,18 @@
             "code": "sem",
             "linkApli": "#DV9784V",
             "price": 0,
-            "qtd": 1
+            "qtd": 1,
+            "aplicacoes":[
+                    {
+                        "codeApli": "DV9784V",
+                        "montadora": "GM",
+                        "carros": ["Cobalt", "Onix", "Prisma", "Sonic", "Spin"],
+                        "anoApli": ["2011..", "2012..", "2013..", "2013..", "2012.."]
+                    }
+                ]
+
         },
+
         {
             "nome": "Coxim",
             "position":"Tras.",
@@ -10346,8 +10475,18 @@
             "code": 3829,
             "linkApli": "#DV9087V",
             "price": 6.00,
-            "qtd": 1
+            "qtd": 1,
+            "aplicacoes":[
+                    {
+                        "codeApli": "DV9087V",
+                        "montadora": "GM",
+                        "carros": ["Astra", "Cruze", "Meriva", "Montana", "Vectra"],
+                        "anoApli": ["1998..", "2012..", "2002..", "2003..", "2001.."]
+                    }
+                ]
+
         },
+
         {
             "nome": "Coxim",
             "position":"Tras.",
@@ -10359,7 +10498,16 @@
             "code": 3852,
             "linkApli": "#DV9089V",
             "price": 7.18,
-            "qtd": 1
+            "qtd": 1,
+            "aplicacoes":[
+                    {
+                        "codeApli": "DV9089V",
+                        "montadora": "GM",
+                        "carros": ["Corsa", "Celta"],
+                        "anoApli": ["...", "..."]
+                    }
+                ]
+
         }
         
     ],
@@ -10374,6 +10522,7 @@
             "linha":"Universal",
             "price": 122,
             "qtd": 1
+            
         },
         {
             "nome": "Coxim",
