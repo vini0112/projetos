@@ -2777,7 +2777,33 @@
                 }
             ]
 
+        },
+
+        {
+            "nome": "Kit-Batedor",
+            "position": "Diant.",
+            "image": "photos/sist-suspensao/batedores/NK0308B.png",
+            "marca": "NAKATA",
+            "info": "NK0308B",
+            "linha": "GM",
+            "linhaCode": "gm",
+            "code": 3859,
+            "linkApli": "#NK0308B",
+            "price": 17.50,
+            "qtd": 1,
+            "aplicacoes":[
+                {
+                    "codeApli": "NK0308B",
+                    "montadora": "GM",
+                    "carros": ["Celta", "Classic", "Corsa", "Prisma"],
+                    "anoApli": ["2001-2007", "2002-2015", "1994-2002", "2006-2013"]
+                }
+            ]
+
         }
+
+
+
     ],
 
 
@@ -6888,19 +6914,19 @@
 
         {
             "nome": "Correia Dentada",
-            "image": "photos/sist-carga/correia-dent/111sp170h.png",
-            "marca": "Daycon",
-            "info": "111SP170H",
+            "image": "photos/sist-carga/correia-dent/40433X17XS.png",
+            "marca": "Gates",
+            "info": "40433X17XS",
             "linha": "GM/Fiat",
             "linhaCode": "gm",
             "secundLineCode":"fiat",
-            "code": 1330,
-            "linkApli": "#111sp170h",
-            "price": 55.00,
-            "qtd": 0,
+            "code": 1103,
+            "linkApli": "#40433X17XS",
+            "price": 49.50,
+            "qtd": 1,
             "aplicacoes":[
                 {
-                    "codeApli": "111sp170h",
+                    "codeApli": "40433X17XS",
                     "montadora": "GM",
                     "carros": ["Agile", "Celta", "Meriva", "Montana", "Prisma"],
                     "anoApli": ["2010..", "2001..", "1.8 2002..", "2004..", "2006.."]
@@ -6936,6 +6962,29 @@
                     "montadora": "Volkswagen",
                     "carros": ["Fox", "Gol", "Polo", "Golf", "Kombi", "Saveiro","SpaceFox", "Voyage"],
                     "anoApli": ["2009-2018", "2009-2016", "2009-2014", "2009-2014", "2009-2012", "2009-2016", "2009-2014", "2009-2015"]
+                }
+            ]
+
+
+        },
+
+        {
+            "nome": "Correia Dentada",
+            "image": "photos/sist-carga/correia-dent/40956X22XS.png",
+            "marca": "Gates",
+            "info": "40956X22XS",
+            "linha": "Fiat",
+            "linhaCode": "fiat",
+            "code": 854,
+            "linkApli": "#40956X22XS",
+            "price": 67.00,
+            "qtd": 1,
+            "aplicacoes":[
+                {
+                    "codeApli": "40956X22XS",
+                    "montadora": "FIAT",
+                    "carros": ["Fiorino", "Linea", "Palio", "Punto", "Siena", "Strada", "Uno"],
+                    "anoApli": ["FIRE 2002..", "1.4 16v 2001..", "FIRE 2001..", "1.4 16v TJET 2009..", "FIRE 2001..", "FIRE 2001..", "FIRE 2001.."]
                 }
             ]
 
