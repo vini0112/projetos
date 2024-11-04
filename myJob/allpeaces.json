@@ -184,7 +184,7 @@
             "marca": "Zetta",
             "info": "50 Ámpere",
             "price": 315,
-            "qtd": 1
+            "qtd": 0
         },
         {
             "nome": "Batéria",
@@ -1588,7 +1588,7 @@
             "code": 100,
             "linkApli": "#tdi1002",
             "price": 45.00,
-            "qtd": 1,
+            "qtd": 0,
             "aplicacoes":[
                 {
                     "codeApli": "tdi1002",
@@ -1649,9 +1649,9 @@
         {
             "nome": "Terminal Direção",
             "image": "photos/sist-direcao/terminais/tdi0149.png",
-            "marca": "Viemar",
+            "marca": "Perfect",
             "info": "TDI-0149",
-            "lados": "L.D",
+            "lados": "L.E",
             "linha": "Fiat",
             "linhaCode": "fiat",
             "code": "Sem",
@@ -1680,7 +1680,7 @@
             "code": "Sem",
             "linkApli": "#n6012",
             "price": 0,
-            "qtd": 1,
+            "qtd": 0,
             "aplicacoes":[
                 {
                     "codeApli": "n6012",
@@ -1749,7 +1749,7 @@
             "code": 1230,
             "linkApli": "#33604",
             "price": 42.00,
-            "qtd": 1,
+            "qtd": 0,
             "aplicacoes":[
                 {
                     "codeApli": "33604",
@@ -1834,7 +1834,7 @@
             "nome": "Terminal Direção",
             "image": "photos/sist-direcao/terminais/nakata1027.png",
             "marca": "NAKATA",
-            "info": "1027",
+            "info": "N-1027",
             "lados": "L.D/L.E",
             "linha": "Volkswagen",
             "linhaCode": "vws",
@@ -1920,7 +1920,7 @@
             "code": "Sem",
             "linkApli": "#tdi1088",
             "price": 0,
-            "qtd": 1,
+            "qtd": 0,
             "aplicacoes":[
                 {
                     "codeApli": "tdi1088",
