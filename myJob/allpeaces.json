@@ -1985,7 +1985,7 @@
             "nome": "Barra Axial",
             "image": "photos/sist-direcao/barras/axial63542.png",
             "marca": "Amortex",
-            "info": "63542",
+            "info": "68542",
             "sistema": "Hidráulico",
             "linha": "Fiat",
             "linhaCode": "fiat",
@@ -1995,7 +1995,7 @@
             "qtd": 1,
             "aplicacoes":[
                 {
-                    "codeApli": "63542",
+                    "codeApli": "68542",
                     "montadora": "FIAT",
                     "carros": ["Fiorino", "Uno-Vivace"],
                     "anoApli": ["2013..", "2010"]
@@ -3166,7 +3166,7 @@
             "code": 3719,
             "linkApli": "#hg33093",
             "price": 275.80,
-            "qtd": 1,
+            "qtd": 0,
             "aplicacoes":[
                 {
                     "codeApli": "hg33093",
@@ -4149,7 +4149,7 @@
             "code": 2476,
             "linkApli": "#sna393",
             "price": 63.34,
-            "qtd": 0,
+            "qtd": 1,
             "aplicacoes":[
                 {
                     "codeApli": "sna393",
@@ -4342,8 +4342,8 @@
             "image": "photos/freios/pastilhas/sna465.png",
             "marca": "Speed-Break",
             "info": "SNA-465",
-            "linha": "Ford",
-            "linhaCode": "ford",
+            "linha": "Renault",
+            "linhaCode": "renault",
             "code": 2817,
             "linkApli": "#sna465",
             "price": 70.32,
@@ -4351,7 +4351,7 @@
             "aplicacoes":[
                 {
                     "codeApli": "sna465",
-                    "montadora": "FORD",
+                    "montadora": "RENAULT",
                     "carros": ["Logan", "Sandero"],
                     "anoApli": ["2014-2017", "2014.."]
                 }
@@ -4512,7 +4512,7 @@
             "position": "Diant.",
             "image": "photos/freios/pastilhas/SYL1195.png",
             "marca": "SYL",
-            "info": "SNA-324",
+            "info": "SYL-1195",
             "linha": "Fiat",
             "linhaCode": "fiat",
             "code": 3291,
@@ -4798,7 +4798,7 @@
             "code": 167,
             "linkApli": "#005760",
             "price": 36.81,
-            "qtd": 1,
+            "qtd": 0,
             "aplicacoes":[
                 {
                     "codeApli": "005760",
@@ -4845,7 +4845,7 @@
             "code": 3758,
             "linkApli": "#k1027",
             "price": 40.00,
-            "qtd": 1,
+            "qtd": 0,
             "aplicacoes":[
                 {
                     "codeApli": "k1027",
@@ -6202,7 +6202,7 @@
             "code": 3537,
             "linkApli": "#46480362",
             "price": 22.00,
-            "qtd": 1,
+            "qtd": 0,
             "aplicacoes":[
                 {
                     "codeApli": "46480362",
@@ -6213,7 +6213,7 @@
             ]
 
         }
-       
+    
     ],
 
 
@@ -6281,7 +6281,7 @@
             "code": 3591,
             "linkApli": "#gc4206",
             "price": 134,
-            "qtd": 0,
+            "qtd": 1,
             "aplicacoes":[
                 {
                     "codeApli": "gc4206",
@@ -7040,7 +7040,7 @@
             "code": 564,
             "linkApli": "#0846",
             "price": 52.63,
-            "qtd": 1,
+            "qtd": 0,
             "aplicacoes":[
                 {
                     "codeApli": "0846",
@@ -7313,7 +7313,7 @@
             "nome": "Porta Escovas",
             "image": "photos/sist-partida/escovas/A13012V.png",
             "marca": "Sulcarbon",
-            "info": "A13012V",
+            "info": "A-130-12V",
             "linha": "Ford/GM",
             "linhaCode": "gm",
             "secundLineCode": "ford",
@@ -7595,7 +7595,7 @@
             "code": 1153,
             "linkApli": "#g1028",
             "price": 83.87,
-            "qtd": 1,
+            "qtd": 0,
             "aplicacoes":[
                 {
                     "codeApli": "g1028",

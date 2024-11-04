@@ -12008,7 +12008,7 @@ async function carsEapli43(dados){
 
 
 
- 
+
 // adding resistencias 
 async function resistencias(){
 
@@ -15396,8 +15396,6 @@ async function carsEapli59(dados){
 
 
 }
-
-
 
 
 
