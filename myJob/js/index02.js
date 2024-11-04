@@ -12635,6 +12635,7 @@ async function carsEapli47(dados){
         let aplicacao = await dados[i].aplicacoes[0].anoApli
         let aplicacoesTwo = await dados[i].aplicacoesTwo
         let aplicacoesThree = await dados[i].aplicacoesThree
+        let apaplicacoesFour = await dados[i].aplicacoesFour
 
 
         // ADDING CARROS 1
@@ -12661,6 +12662,7 @@ async function carsEapli47(dados){
         let allLis = document.querySelectorAll(`.modal-body .bombaCombust .listCars`)
         // console.log(allLis.length)
         
+
         aplicacao.forEach((apli) =>{
             cont += 1
 
@@ -12719,7 +12721,7 @@ async function carsEapli47(dados){
         }
 
 
-        // SE EXISTIR APLICACAO TRES
+        // SE EXISTIR APLICACAO TRES 
         if(aplicacoesThree){
     
             montadoraThree = await aplicacoesThree[0].montadora
@@ -12761,6 +12763,55 @@ async function carsEapli47(dados){
                 spanLiThree.innerHTML = `${apliThree}`
                 // console.log(cont)
                 allLisThree[cont - 1].append(spanLiThree)
+            })
+
+
+
+        }
+
+
+        // SE EXISTIR APLICACAO QUATRO
+        if(apaplicacoesFour){
+    
+            montadoraFour = await aplicacoesThree[0].montadora
+            carrosFour = await aplicacoesThree[0].carros
+            anoApliFour = await aplicacoesThree[0].anoApli
+
+
+            //  ADDING MONTADORA 3
+            let liMontFour = document.createElement('li')
+            liMontFour.classList.add(`montadora`)
+            liMontFour.innerHTML = `
+                <li class="montadora">${montadoraFour}:</li>
+                `
+            allModalBody[i].appendChild(liMontFour)
+
+
+            // ADDING CARROS 3
+            carrosThree.map((carroFour) =>{
+
+                let liListaFour = document.createElement('li')
+                liListaFour.classList.add(`listCars`)
+
+                liListaFour.innerHTML = `
+                <span class="carro">${carroFour}: </span>
+                    `
+                
+                allModalBody[i].appendChild(liListaFour)
+            })
+
+
+            // ADDING APLICAÇAO 3
+            let allLisFour = document.querySelectorAll(`.modal-body .bombaCombust .listCars`)
+
+            anoApliFour.forEach((apliFour) =>{
+
+                cont += 1
+
+                let spanLiFour = document.createElement('span')
+                spanLiFour.innerHTML = `${apliFour}`
+                // console.log(cont)
+                allLisFour[cont - 1].append(spanLiFour)
             })
 
 

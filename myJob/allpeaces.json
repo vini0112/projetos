@@ -184,7 +184,7 @@
             "marca": "Zetta",
             "info": "50 Ámpere",
             "price": 315,
-            "qtd": 1
+            "qtd": 0
         },
         {
             "nome": "Batéria",
@@ -1588,7 +1588,7 @@
             "code": 100,
             "linkApli": "#tdi1002",
             "price": 45.00,
-            "qtd": 1,
+            "qtd": 0,
             "aplicacoes":[
                 {
                     "codeApli": "tdi1002",
@@ -1649,9 +1649,9 @@
         {
             "nome": "Terminal Direção",
             "image": "photos/sist-direcao/terminais/tdi0149.png",
-            "marca": "Viemar",
+            "marca": "Perfect",
             "info": "TDI-0149",
-            "lados": "L.D",
+            "lados": "L.E",
             "linha": "Fiat",
             "linhaCode": "fiat",
             "code": "Sem",
@@ -1680,7 +1680,7 @@
             "code": "Sem",
             "linkApli": "#n6012",
             "price": 0,
-            "qtd": 1,
+            "qtd": 0,
             "aplicacoes":[
                 {
                     "codeApli": "n6012",
@@ -1749,7 +1749,7 @@
             "code": 1230,
             "linkApli": "#33604",
             "price": 42.00,
-            "qtd": 1,
+            "qtd": 0,
             "aplicacoes":[
                 {
                     "codeApli": "33604",
@@ -1834,7 +1834,7 @@
             "nome": "Terminal Direção",
             "image": "photos/sist-direcao/terminais/nakata1027.png",
             "marca": "NAKATA",
-            "info": "1027",
+            "info": "N-1027",
             "lados": "L.D/L.E",
             "linha": "Volkswagen",
             "linhaCode": "vws",
@@ -1920,7 +1920,7 @@
             "code": "Sem",
             "linkApli": "#tdi1088",
             "price": 0,
-            "qtd": 1,
+            "qtd": 0,
             "aplicacoes":[
                 {
                     "codeApli": "tdi1088",
@@ -2436,7 +2436,31 @@
                 }
             ]
 
+        },
+
+        {
+            "nome": "Estabilizador Diant.",
+            "image": "photos/sist-direcao/estabilizadores/KITCIA10017.png",
+            "marca": "KitCia",
+            "info": "10017",
+            "linha": "Fiat",
+            "linhaCode": "fiat",
+            "code": 3863,
+            "linkApli": "#10017",
+            "price": 25.00,
+            "qtd": 1,
+            "aplicacoes":[
+                {
+                    "codeApli": "10017",
+                    "montadora": "FIAT",
+                    "carros": ["Doblo", "Palio", "Strada"],
+                    "anoApli": ["2001..", "2001..", "2001.."]
+                }
+            ]
+
         }
+
+
     ],
 
 
@@ -2777,7 +2801,33 @@
                 }
             ]
 
+        },
+
+        {
+            "nome": "Kit-Batedor",
+            "position": "Diant.",
+            "image": "photos/sist-suspensao/batedores/NK0308B.png",
+            "marca": "NAKATA",
+            "info": "NK0308B",
+            "linha": "GM",
+            "linhaCode": "gm",
+            "code": 3859,
+            "linkApli": "#NK0308B",
+            "price": 17.50,
+            "qtd": 1,
+            "aplicacoes":[
+                {
+                    "codeApli": "NK0308B",
+                    "montadora": "GM",
+                    "carros": ["Celta", "Classic", "Corsa", "Prisma"],
+                    "anoApli": ["2001-2007", "2002-2015", "1994-2002", "2006-2013"]
+                }
+            ]
+
         }
+
+
+
     ],
 
 
@@ -3844,6 +3894,29 @@
                     "montadora": "GM",
                     "carros": ["Montana", "Prisma", "Agile", "Celta", "Classic", "Corsa"],
                     "anoApli": ["2011-2018", "2008-2012", "2010-2014", "2001-2016", "2004-2016", "1994-2003"]
+                }
+            ]
+
+        },
+
+        {
+            "nome": "Coxim",
+            "position": "Diant.",
+            "image": "photos/sist-suspensao/coxins/MB1114.png",
+            "marca": "Mobensani",
+            "info": "MB-1114",
+            "linha": "GM",
+            "linhaCode": "gm",
+            "code": 3860,
+            "linkApli": "#MB1114",
+            "price": 35.00,
+            "qtd": 1,
+            "aplicacoes":[
+                {
+                    "codeApli": "MB1114",
+                    "montadora": "GM",
+                    "carros": ["Prisma", "Celta", "Classic", "Corsa"],
+                    "anoApli": ["2006-2007", "2001-2007", "2003-2007", "1994-2001"]
                 }
             ]
 
@@ -6888,19 +6961,19 @@
 
         {
             "nome": "Correia Dentada",
-            "image": "photos/sist-carga/correia-dent/111sp170h.png",
-            "marca": "Daycon",
-            "info": "111SP170H",
+            "image": "photos/sist-carga/correia-dent/40433X17XS.png",
+            "marca": "Gates",
+            "info": "40433X17XS",
             "linha": "GM/Fiat",
             "linhaCode": "gm",
             "secundLineCode":"fiat",
-            "code": 1330,
-            "linkApli": "#111sp170h",
-            "price": 55.00,
-            "qtd": 0,
+            "code": 1103,
+            "linkApli": "#40433X17XS",
+            "price": 49.50,
+            "qtd": 1,
             "aplicacoes":[
                 {
-                    "codeApli": "111sp170h",
+                    "codeApli": "40433X17XS",
                     "montadora": "GM",
                     "carros": ["Agile", "Celta", "Meriva", "Montana", "Prisma"],
                     "anoApli": ["2010..", "2001..", "1.8 2002..", "2004..", "2006.."]
@@ -6936,6 +7009,29 @@
                     "montadora": "Volkswagen",
                     "carros": ["Fox", "Gol", "Polo", "Golf", "Kombi", "Saveiro","SpaceFox", "Voyage"],
                     "anoApli": ["2009-2018", "2009-2016", "2009-2014", "2009-2014", "2009-2012", "2009-2016", "2009-2014", "2009-2015"]
+                }
+            ]
+
+
+        },
+
+        {
+            "nome": "Correia Dentada",
+            "image": "photos/sist-carga/correia-dent/40956X22XS.png",
+            "marca": "Gates",
+            "info": "40956X22XS",
+            "linha": "Fiat",
+            "linhaCode": "fiat",
+            "code": 854,
+            "linkApli": "#40956X22XS",
+            "price": 67.00,
+            "qtd": 1,
+            "aplicacoes":[
+                {
+                    "codeApli": "40956X22XS",
+                    "montadora": "FIAT",
+                    "carros": ["Fiorino", "Linea", "Palio", "Punto", "Siena", "Strada", "Uno"],
+                    "anoApli": ["FIRE 2002..", "1.4 16v 2001..", "FIRE 2001..", "1.4 16v TJET 2009..", "FIRE 2001..", "FIRE 2001..", "FIRE 2001.."]
                 }
             ]
 
@@ -8457,6 +8553,53 @@
                     }
                 ]
 
+        },
+
+        {
+            "nome": "Bomba Combustível",
+            "image": "photos/sist-combust/bomba-combust/WB022A.png",
+            "marca": "Weber",
+            "info": "WB022A",
+            "linha": "Fiat/GM/VW/Ford",
+            "linhaCode": "fiat",
+            "code": 3529,
+            "linkApli": "#WB022A",
+            "price": 154,
+            "qtd": 1,
+            "aplicacoes":[
+                    {
+                        "codeApli": "WB022A",
+                        "montadora": "FIAT - Modelos FLEX",
+                        "carros": ["Doblo", "Fiorino-Furgão", "Idea", "Linea", "Palio", "Palio-Weekend", "Punto", "Siena", "Strada", "Uno-Mille"],
+                        "anoApli": ["2006-2016", "2004-2013", "2005-2016", "2008-2016", "2003-2016", "2003-2014", "2007-2017", "2003-2016", "2006-2014", "2005-2013"]
+                    }
+                ],
+
+                "aplicacoesTwo":[
+                    {
+                         "montadora": "GM - Modelos FLEX",
+                         "carros": ["Agile", "Celta", "Classic", "Corsa-Sedan", "Meriva", "Montana", "Prisma", "Vectra"],
+                        "anoApli": ["2009-2014", "2005-2015", "2005-2015", "2008-2009", "2008-2012", "2007-2012", "2006-2013", "2005-2011"]
+                    }
+                    
+                ],
+    
+                "aplicacoesThree":[
+                    {
+                        "montadora": "Volkswagen - Modelos FLEX",
+                        "carros": ["CrossFox", "Fox", "Gol", "Parati", "Golf","Kombi", "Polo", "Saveiro", "SpaceFox", "Voyage"],
+                         "anoApli":["2005-2014", "2003-2014", "2003-2012", "2003-2012", "2006-2013", "2006-2013", "2004-2014", "2003-2009", "2008-2014", "2008-2016"]
+                    }
+                ],
+    
+                "aplicacoesFour":[
+                    {
+                        "montadora": "FORD - Modelos FLEX",
+                        "carros": ["Courier", "Ecosport", "Fiesta", "Focus", "Ka"],
+                         "anoApli":["2007-2013", "2007-2017", "2010-2014", "2010-2013", "2008-2014"]
+                    }
+                ]
+
         }
         
     ],
@@ -8503,6 +8646,28 @@
                         "montadora": "FIAT",
                         "carros": ["Palio", "Siena", "Strada"],
                         "anoApli": ["1997-2001", "1997-2001", "1997-2001"]
+                    }
+                ]
+
+        },
+
+        {
+            "nome": "Flange",
+            "image": "photos/sist-combust/flanges/T030038.png",
+            "marca": "TSA",
+            "info": "T-030038",
+            "linha": "GM",
+            "linhaCode": "gm",
+            "code": 3862,
+            "linkApli": "#T030038",
+            "price": 57.50,
+            "qtd": 1,
+            "aplicacoes":[
+                    {
+                        "codeApli": "T030038",
+                        "montadora": "GM",
+                        "carros": ["Agile", "Celta", "Classic", "Corsa", "Meriva", "Montana", "Prisma", "Vectra"],
+                        "anoApli": ["2010-2014", "2007-2014", "2007-2014", "2009-2012", "2009-2012", "2009-2014", "2007-2014", "2009-2011"]
                     }
                 ]
 
@@ -8573,6 +8738,50 @@
                         "montadora": "FIAT",
                         "carros": ["Palio", "Uno"],
                         "anoApli": ["FLEX 2012-2022", "FLEX 2011-2022"]
+                    }
+                ]
+
+        },
+
+        {
+            "nome": "Sensor Nível Combustível",
+            "image": "photos/sist-combust/acessorios-combust/T010128.png",
+            "marca": "TSA",
+            "info": "T010128",
+            "linha": "Fiat",
+            "linhaCode": "fiat",
+            "code": 3861,
+            "linkApli": "#T010128",
+            "price": 87.00,
+            "qtd": 1,
+            "aplicacoes":[
+                    {
+                        "codeApli": "T010128",
+                        "montadora": "FIAT",
+                        "carros": ["Strada"],
+                        "anoApli": ["FLEX 2007-2013"]
+                    }
+                ]
+
+        },
+
+        {
+            "nome": "Sensor Nível Combustível",
+            "image": "photos/sist-combust/acessorios-combust/T010122.png",
+            "marca": "TSA",
+            "info": "T010122",
+            "linha": "Fiat",
+            "linhaCode": "fiat",
+            "code": 2571,
+            "linkApli": "#T010122",
+            "price": 94.00,
+            "qtd": 1,
+            "aplicacoes":[
+                    {
+                        "codeApli": "T010122",
+                        "montadora": "FIAT",
+                        "carros": ["Uno"],
+                        "anoApli": ["2006-2013"]
                     }
                 ]
 
