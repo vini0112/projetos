@@ -1990,7 +1990,7 @@
             "linha": "Fiat",
             "linhaCode": "fiat",
             "code": 1241,
-            "linkApli": "#63542",
+            "linkApli": "#68542",
             "price": 55.00,
             "qtd": 1,
             "aplicacoes":[
@@ -2189,6 +2189,86 @@
                     "anoApli": ["2003-2012", "2002-2014", "2008-2014"]
                 }
             ]
+
+        },
+
+        {
+            "nome": "Barra Axial",
+            "image": "photos/sist-direcao/barras/68022.png",
+            "marca": "Amortex",
+            "info": "68022",
+            "sistema": "Hidráulico",
+            "linha": "Fiat",
+            "linhaCode": "fiat",
+            "code": 3430,
+            "linkApli": "#68022",
+            "price": 55.38,
+            "qtd": 1,
+            "aplicacoes":[
+                {
+                    "codeApli": "68022",
+                    "montadora": "FIAT",
+                    "carros": ["Idea", "Palio", "Siena", "Strada", "Tempra"],
+                    "anoApli": ["2006-2016", "2001-2011", "2001-2007", "2003-2019", "1991-1998"]
+                }
+            ]
+
+        },
+
+        {
+            "nome": "Barra Axial",
+            "image": "photos/sist-direcao/barras/JARB0022.png",
+            "marca": "TRW",
+            "info": "JARB0022",
+            "sistema": "Mecânico",
+            "linha": "Ford/GM",
+            "linhaCode": "ford",
+            "secundLineCode":"gm",
+            "code": 923,
+            "linkApli": "#JARB0022",
+            "price": 54.00,
+            "qtd": 1,
+            "aplicacoes":[
+                {
+                    "codeApli": "JARB0022",
+                    "montadora": "FORD",
+                    "carros": ["Courier", "Fiesta"],
+                    "anoApli": ["1997-2013", "1995-2006"]
+                }
+            ],
+
+            "aplicacoesTwo":[
+                {
+                     "montadora": "GM",
+                     "carros": ["Corsa"],
+                     "anoApli":["1994-1999"]
+                }
+                
+            ]
+
+        },
+
+        {
+            "nome": "Barra Axial",
+            "image": "photos/sist-direcao/barras/68177.png",
+            "marca": "Amortex",
+            "info": "68177",
+            "sistema": "Hidráulico",
+            "linha": "GM",
+            "linhaCode": "gm",
+            "code": 3434,
+            "linkApli": "#68177",
+            "price": 63.05,
+            "qtd": 1,
+            "aplicacoes":[
+                {
+                    "codeApli": "68177",
+                    "montadora": "GM",
+                    "carros": ["Corsa", "Meriva", "Montana"],
+                    "anoApli": ["2002-2012", "2002-2012", "2003-2010"]
+                }
+            ]
+
 
         }
 
