@@ -8310,7 +8310,7 @@ async function carsEapli26(dados){
 
         // APLICAÇÕES
         let aplicacao = await dados[i].aplicacoes[0].anoApli
-        // let aplicacoesTwo = await dados[i].aplicacoesTwo
+        let aplicacoesTwo = await dados[i].aplicacoesTwo
         // let aplicacoesThree = await dados[i].aplicacoesThree
 
 
@@ -8346,6 +8346,53 @@ async function carsEapli26(dados){
             // console.log(cont)
             allLis[cont - 1].append(spanLi)
         })
+
+
+        // SE EXISTIER APLICACAO DOIS
+        if(aplicacoesTwo){
+
+            // console.log(aplicacaoTwo[0].carros)
+            montadoraTwo = await aplicacoesTwo[0].montadora
+            carrosTwo = await aplicacoesTwo[0].carros
+            anoApliTwo = await aplicacoesTwo[0].anoApli
+
+        //    ADDING MONTADORA 2
+            let liMontTwo = document.createElement('li')
+            liMontTwo.classList.add(`montadora`)
+            liMontTwo.innerHTML = `
+                <li class="montadora">${montadoraTwo}:</li>
+                `
+            allModalBody[i].appendChild(liMontTwo)
+
+
+            // ADDING CARROS 2
+            carrosTwo.map((carroTwo) =>{
+
+                let liListaTwo = document.createElement('li')
+                liListaTwo.classList.add(`listCars`)
+
+                liListaTwo.innerHTML = `
+                <span class="carro">${carroTwo}: </span>
+                    `
+                
+                allModalBody[i].appendChild(liListaTwo)
+            })
+
+
+            // ADDING APLICAÇAO 2
+            let allLisTwo = document.querySelectorAll(`.modal-body .cabosVela .listCars`)
+
+            anoApliTwo.forEach((apliTwo) =>{
+
+                cont += 1
+
+                let spanLiTwo = document.createElement('span')
+                spanLiTwo.innerHTML = `${apliTwo}`
+                // console.log(cont)
+                allLisTwo[cont - 1].append(spanLiTwo)
+            })
+
+        }
 
 
     }

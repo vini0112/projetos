@@ -3521,6 +3521,29 @@
 
         {
             "nome": "Bucha Bandeja",
+            "position": "Tras.",
+            "image": "photos/sist-suspensao/buchas/sampel4883.png",
+            "marca": "Sampel",
+            "info": "Sampel-4893",
+            "linha": "Volkswagen",
+            "linhaCode": "vws",
+            "code": 1549,
+            "linkApli": "#sampel4893",
+            "price": 38.26,
+            "qtd": 1,
+            "aplicacoes":[
+                {
+                    "codeApli": "sampel4893",
+                    "montadora": "Volkswagen",
+                    "carros": ["Fox", "Gol","Golf" , "Passat", "Saveiro", "SpaceFox", "Up", "Voyage"],
+                    "anoApli": ["2013-2018", "2008-2012", "1994-2014", "1994-1997", "2009-2012", "2013-2017", "2014-2018", "2008-2018"]
+                }
+            ]
+
+        },
+
+        {
+            "nome": "Bucha Bandeja",
             "position": "Diant.",
             "image": "photos/sist-suspensao/buchas/nb11004.png",
             "marca": "NAKATA",
@@ -6337,6 +6360,60 @@
                     "carros": ["Grand-Siena", "Mobi", "Palio", "Uno", "Uno-Attractive"],
                     "anoApli": ["2016-2024", "2016-2024", "2012-2017", "2010-2016", "2015-2016"]
                 }
+            ]
+
+        },
+
+        {
+            "nome": "Cabos Velas",
+            "image": "photos/sist-ignicao/cabos-ignicao/SC-T09.png",
+            "marca": "NGK",
+            "info": "SC-T09",
+            "linha": "Fiat",
+            "linhaCode": "fiat",
+            "code": 1251,
+            "linkApli": "#sct09",
+            "price": 100.26,
+            "qtd": 1,
+            "aplicacoes":[
+                {
+                    "codeApli": "sct09",
+                    "montadora": "FIAT",
+                    "carros": ["Doblo", "Idea", "Palio", "Siena", "Strada", "Uno-Mille", "Uno"],
+                    "anoApli": ["1.4 2007-2024", "2005-2024", "2004-2024", "1950-2024", "1950-2024", "2006-2024", "2008-2024"]
+                }
+            ]
+
+        },
+
+        {
+            "nome": "Cabos Velas",
+            "image": "photos/sist-ignicao/cabos-ignicao/SC-G73.png",
+            "marca": "NGK",
+            "info": "SC-G73",
+            "linha": "GM/Fiat",
+            "linhaCode": "gm",
+            "secundLineCode":"fiat",
+            "code": 503,
+            "linkApli": "#scg73",
+            "price": 125.33,
+            "qtd": 1,
+            "aplicacoes":[
+                {
+                    "codeApli": "scg73",
+                    "montadora": "GM",
+                    "carros": ["Agile", "Blazer", "Celta", "Classic", "Cobalt", "Corsa", "Meriva", "Montana","Prisma", "S-10", "Spin"],
+                    "anoApli": ["2009-2014", "2007-2011", "2000-2024", "2003-2024", "2011-2024", "1995-2012", "2002-2012", "2003-2012", "2006-2013", "2007-2024", "2012-2024"]
+                }
+            ],
+
+            "aplicacoesTwo":[
+                {
+                     "montadora": "FIAT",
+                     "carros": ["Doblo", "Idea", "Palio", "Siena", "Strada"],
+                     "anoApli":["1.8 2003-2010", "1.8 2006-2010", "1.8 2003-2010", "1.8 2003-2010", "1.8 2003-2008"]
+                }
+                
             ]
 
         }
