@@ -288,6 +288,22 @@ body{
 .btnBuy:hover{
     background-color: #032e85;
 }
+.btnBuyAlone{
+    width: 100%;
+    border: none;
+    padding: 0.1rem .8rem;
+    color: white;
+    font-weight: bold;
+    font-size: 1rem;
+    border-radius: 5px;
+    background-color: var(--btnApli);
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
 
 .priceBuy{
     color: white;
@@ -313,6 +329,7 @@ body{
     border: none;
     display: flex;
     justify-content: center;
+    background-color: transparent;
 }
 
 
@@ -367,7 +384,7 @@ body{
     }
 }
 
-/*  */
+/* DIMINUINDO OS BTNS APLICACAO E BUY PARA TABLET */
 @media (min-width: 770px ) and (max-width: 990px){
     .padraoBtn{
         padding: 0;

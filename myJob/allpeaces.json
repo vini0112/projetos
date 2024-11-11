@@ -42,7 +42,7 @@
             "image": "photos/oleos/seleniakpower5w30.png",
             "marca": "Selenia",
             "info": "Sintético",
-            "price": 42.00,
+            "price": 36.00,
             "qtd": 1
         },
         {
@@ -51,7 +51,7 @@
             "image": "photos/oleos/selenia15w40.png",
             "marca": "Selenia",
             "info": "Semi-Sintético",
-            "price": 35.00,
+            "price": 33.00,
             "qtd": 10
         },
         {
@@ -133,7 +133,7 @@
             "marca": "Classic-Line",
             "info": "Mineral",
             "price": 26.46,
-            "qtd": 1
+            "qtd": 0
         },
         {
             "nome": "Óleo",
@@ -1703,7 +1703,7 @@
             "code": 738,
             "linkApli": "#tdi1083",
             "price": 42.50,
-            "qtd": 1,
+            "qtd": 0,
             "aplicacoes":[
                 {
                     "codeApli": "tdi1083",
@@ -2727,6 +2727,7 @@
             ]
 
         },
+
         {
             "nome": "Kit-Batedor",
             "position": "Diant.",
@@ -2824,7 +2825,7 @@
             "linhaCode": "fiat",
             "code": "sem",
             "linkApli": "#mb4122s",
-            "price": 0,
+            "price": 25.00,
             "qtd": 1,
             "aplicacoes":[
                 {

@@ -173,6 +173,12 @@ async function addCardsOleo(){
             <h5 class="card-title">${dadosOleo[i].nome} ${dadosOleo[i].marca} ${dadosOleo[i].viscosidade}</h5>
             <p class="card-text">${dadosOleo[i].info}</p>
         </div>
+        <div class='card-footer'>
+            <button class="btnBuyAlone">
+            <span class="priceBuy">${dadosOleo[i].price.toFixed(2).replace('.',',')}</span>
+            <span class="txtBuy">Comprar</span>
+            </button>
+        </div>
 
 
         `
@@ -433,8 +439,14 @@ async function addBattery(){
         newDiv.innerHTML = `
         <img src="${dadoBatery[i].image}" alt="${dadoBatery[i].info}" class="img-fluid">
         <div class="card-body">
-        <h5 class="card-title">${dadoBatery[i].nome}</h5>
-        <p class="card-text">${dadoBatery[i].info}</p>
+            <h5 class="card-title">${dadoBatery[i].nome}</h5>
+            <p class="card-text">${dadoBatery[i].info}</p>
+        </div>
+        <div class='card-footer'>
+            <button class="btnBuyAlone">
+            <span class="priceBuy">${dadoBatery[i].price.toFixed(2).replace('.',',')}</span>
+            <span class="txtBuy">Comprar</span>
+            </button>
         </div>
         `
 
@@ -482,6 +494,12 @@ async function addOleo2(){
             <h5 class="card-title">${dadosOleo[i].nome} ${dadosOleo[i].marca} ${dadosOleo[i].viscosidade}</h5>
             <p class="card-text">${dadosOleo[i].info}</p>
         </div>
+        <div class='card-footer'>
+            <button class="btnBuyAlone">
+            <span class="priceBuy">${dadosOleo[i].price.toFixed(2).replace('.',',')}</span>
+            <span class="txtBuy">Comprar</span>
+            </button>
+        </div>
         `
 
 
@@ -490,7 +508,6 @@ async function addOleo2(){
     }
     filtrarMarcas()
 }
-
 
 // funcao filtrar pesquisa dos oleos! 
 function filtrarMarcas(){
@@ -731,6 +748,13 @@ async function addFluidos(){
         newDiv.innerHTML = `
         <img src="${dadoFluido[i].image}" alt="${dadoFluido[i].viscosidade}" class="img-fluid">
         <h5 class="card-title">${dadoFluido[i].nome} ${dadoFluido[i].viscosidade}</h5>
+
+        <div class='card-footer'>
+            <button class="btnBuyAlone">
+            <span class="priceBuy">${dadoFluido[i].price.toFixed(2).replace('.',',')}</span>
+            <span class="txtBuy">Comprar</span>
+            </button>
+        </div>
         `
 
 
@@ -1306,7 +1330,12 @@ async function addFiltroOleoPesado(){
         </div>
 
         <div class='card-footer'>
-            <button type="button" class="padraoBtn" data-bs-toggle="modal" data-bs-target="${dados[i].linkApli}">Aplicações</button>
+            <button type="button" class="padraoBtn" data-bs-toggle="modal" data-bs-target="${dados[i].linkApli}"><span class="btnTxtAplicacoes">Aplicações</span></button>
+
+            <button class="btnBuy">
+                <span class="priceBuy">${dados[i].price.toFixed(2).replace('.',',')}</span>
+                <span class="txtBuy">Comprar</span>
+            </button>
         </div>
         
         `
@@ -1754,7 +1783,12 @@ async function filtroCombustSimples() {
         </div>
 
         <div class='card-footer'>
-            <button type="button" class="padraoBtn" data-bs-toggle="modal" data-bs-target="${dados[i].linkApli}">Aplicações</button>
+            <button type="button" class="padraoBtn" data-bs-toggle="modal" data-bs-target="${dados[i].linkApli}"><span class="btnTxtAplicacoes">Aplicações</span></button>
+
+            <button class="btnBuy">
+                <span class="priceBuy">${dados[i].price.toFixed(2).replace('.',',')}</span>
+                <span class="txtBuy">Comprar</span>
+            </button>
         </div>
         
         `
@@ -2172,7 +2206,12 @@ async function filtroCombustPesado(){
         </div>
 
         <div class='card-footer'>
-            <button type="button" class="padraoBtn" data-bs-toggle="modal" data-bs-target="${dados[i].linkApli}">Aplicações</button>
+            <button type="button" class="padraoBtn" data-bs-toggle="modal" data-bs-target="${dados[i].linkApli}"><span class="btnTxtAplicacoes">Aplicações</span></button>
+
+            <button class="btnBuy">
+                <span class="priceBuy">${dados[i].price.toFixed(2).replace('.',',')}</span>
+                <span class="txtBuy">Comprar</span>
+            </button>
         </div>
         
         `
@@ -2592,7 +2631,12 @@ async function filtroArMotor(){
         </div>
 
         <div class='card-footer'>
-            <button type="button" class="padraoBtn" data-bs-toggle="modal" data-bs-target="${dados[i].linkApli}">Aplicações</button>
+            <button type="button" class="padraoBtn" data-bs-toggle="modal" data-bs-target="${dados[i].linkApli}"><span class="btnTxtAplicacoes">Aplicações</span></button>
+
+            <button class="btnBuy">
+                <span class="priceBuy">${dados[i].price.toFixed(2).replace('.',',')}</span>
+                <span class="txtBuy">Comprar</span>
+            </button>
         </div>
         
         `
@@ -3009,7 +3053,12 @@ async function filtroArCabine(){
         </div>
 
         <div class='card-footer'>
-            <button type="button" class="padraoBtn" data-bs-toggle="modal" data-bs-target="${dados[i].linkApli}">Aplicações</button>
+            <button type="button" class="padraoBtn" data-bs-toggle="modal" data-bs-target="${dados[i].linkApli}"><span class="btnTxtAplicacoes">Aplicações</span></button>
+
+            <button class="btnBuy">
+                <span class="priceBuy">${dados[i].price.toFixed(2).replace('.',',')}</span>
+                <span class="txtBuy">Comprar</span>
+            </button>
         </div>
         
         `
@@ -3170,7 +3219,12 @@ async function mangotesAr(){
         </div>
         
         <div class='card-footer'>
-            <button type="button" class="padraoBtn" data-bs-toggle="modal" data-bs-target="${dados[i].linkApli}">Aplicações</button>
+            <button type="button" class="padraoBtn" data-bs-toggle="modal" data-bs-target="${dados[i].linkApli}"><span class="btnTxtAplicacoes">Aplicações</span></button>
+
+            <button class="btnBuy">
+                <span class="priceBuy">${dados[i].price.toFixed(2).replace('.',',')}</span>
+                <span class="txtBuy">Comprar</span>
+            </button>
         </div>
         `
 
@@ -3335,7 +3389,12 @@ async function terminaisDirecao(){
             
         </div>
         <div class='card-footer'>
-            <button type="button" class="padraoBtn" data-bs-toggle="modal" data-bs-target="${dados[i].linkApli}">Aplicações</button>
+            <button type="button" class="padraoBtn" data-bs-toggle="modal" data-bs-target="${dados[i].linkApli}"><span class="btnTxtAplicacoes">Aplicações</span></button>
+
+            <button class="btnBuy">
+                <span class="priceBuy">${dados[i].price.toFixed(2).replace('.',',')}</span>
+                <span class="txtBuy">Comprar</span>
+            </button>
         </div>
         
         `
@@ -3645,7 +3704,12 @@ async function barraAxiais(){
 
         </div>
         <div class='card-footer'>
-            <button type="button" class="padraoBtn" data-bs-toggle="modal" data-bs-target="${dados[i].linkApli}">Aplicações</button>
+            <button type="button" class="padraoBtn" data-bs-toggle="modal" data-bs-target="${dados[i].linkApli}"><span class="btnTxtAplicacoes">Aplicações</span></button>
+
+            <button class="btnBuy">
+                <span class="priceBuy">${dados[i].price.toFixed(2).replace('.',',')}</span>
+                <span class="txtBuy">Comprar</span>
+            </button>
         </div>
         
         `
@@ -4056,7 +4120,12 @@ async function estabilazadores(){
         </div>
         
         <div class='card-footer'>
-            <button type="button" class="padraoBtn" data-bs-toggle="modal" data-bs-target="${dados[i].linkApli}">Aplicações</button>
+            <button type="button" class="padraoBtn" data-bs-toggle="modal" data-bs-target="${dados[i].linkApli}"><span class="btnTxtAplicacoes">Aplicações</span></button>
+
+            <button class="btnBuy">
+                <span class="priceBuy">${dados[i].price.toFixed(2).replace('.',',')}</span>
+                <span class="txtBuy">Comprar</span>
+            </button>
         </div>
         `
 
@@ -4338,7 +4407,12 @@ async function buchaCaixaDirecao(){
         </div>
 
         <div class='card-footer'>
-            <button type="button" class="padraoBtn" data-bs-toggle="modal" data-bs-target="${dados[i].linkApli}">Aplicações</button>
+            <button type="button" class="padraoBtn" data-bs-toggle="modal" data-bs-target="${dados[i].linkApli}"><span class="btnTxtAplicacoes">Aplicações</span></button>
+
+            <button class="btnBuy">
+                <span class="priceBuy">${dados[i].price.toFixed(2).replace('.',',')}</span>
+                <span class="txtBuy">Comprar</span>
+            </button>
         </div>
         
         `
@@ -4510,7 +4584,13 @@ async function batedores(){
         </div>
 
         <div class='card-footer'>
-            <button type="button" class="padraoBtn" data-bs-toggle="modal" data-bs-target="${dados[i].linkApli}">Aplicações</button>
+            <button type="button" class="padraoBtn" data-bs-toggle="modal" data-bs-target="${dados[i].linkApli}"><span class="btnTxtAplicacoes">Aplicações</span></button>
+
+            <button class="btnBuy">
+                <span class="priceBuy">${dados[i].price.toFixed(2).replace('.',',')}</span>
+                <span class="txtBuy">Comprar</span>
+            </button>
+
         </div>
         
         `
@@ -4887,7 +4967,12 @@ async function pivos(){
         </div>
         
         <div class='card-footer'>
-            <button type="button" class="padraoBtn" data-bs-toggle="modal" data-bs-target="${dados[i].linkApli}">Aplicações</button>
+            <button type="button" class="padraoBtn" data-bs-toggle="modal" data-bs-target="${dados[i].linkApli}"><span class="btnTxtAplicacoes">Aplicações</span></button>
+
+            <button class="btnBuy">
+                <span class="priceBuy">${dados[i].price.toFixed(2).replace('.',',')}</span>
+                <span class="txtBuy">Comprar</span>
+            </button>
         </div>
         `
 
@@ -5198,7 +5283,12 @@ async function amortecedores(){
             <p class="card-text">Linha ${dados[i].linha}</p>
         </div>
         <div class='card-footer'>
-            <button type="button" class="padraoBtn" data-bs-toggle="modal" data-bs-target="${dados[i].linkApli}">Aplicações</button>
+            <button type="button" class="padraoBtn" data-bs-toggle="modal" data-bs-target="${dados[i].linkApli}"><span class="btnTxtAplicacoes">Aplicações</span></button>
+
+            <button class="btnBuy">
+                <span class="priceBuy">${dados[i].price.toFixed(2).replace('.',',')}</span>
+                <span class="txtBuy">Comprar</span>
+            </button>
         </div>
         `
 
@@ -5355,7 +5445,12 @@ async function buchasBandejaSusp(){
             <p class="card-text">Linha ${dados[i].linha}</p>
         </div>
         <div class='card-footer'>
-            <button type="button" class="padraoBtn" data-bs-toggle="modal" data-bs-target="${dados[i].linkApli}">Aplicações</button>
+            <button type="button" class="padraoBtn" data-bs-toggle="modal" data-bs-target="${dados[i].linkApli}"><span class="btnTxtAplicacoes">Aplicações</span></button>
+
+            <button class="btnBuy">
+                <span class="priceBuy">${dados[i].price.toFixed(2).replace('.',',')}</span>
+                <span class="txtBuy">Comprar</span>
+            </button>
         </div>
         `
 
@@ -5717,7 +5812,12 @@ async function coxinsAmort(){
         </div>
         
         <div class='card-footer'>
-            <button type="button" class="padraoBtn" data-bs-toggle="modal" data-bs-target="${dados[i].linkApli}">Aplicações</button>
+            <button type="button" class="padraoBtn" data-bs-toggle="modal" data-bs-target="${dados[i].linkApli}"><span class="btnTxtAplicacoes">Aplicações</span></button>
+
+            <button class="btnBuy">
+                <span class="priceBuy">${dados[i].price.toFixed(2).replace('.',',')}</span>
+                <span class="txtBuy">Comprar</span>
+            </button>
         </div>
         `
 
@@ -5876,7 +5976,12 @@ async function bieletas(){
             <p class="card-text">Linha ${dados[i].linha}</p>
         </div>
         <div class='card-footer'>
-            <button type="button" class="padraoBtn" data-bs-toggle="modal" data-bs-target="${dados[i].linkApli}">Aplicações</button>
+            <button type="button" class="padraoBtn" data-bs-toggle="modal" data-bs-target="${dados[i].linkApli}"><span class="btnTxtAplicacoes">Aplicações</span></button>
+
+            <button class="btnBuy">
+                <span class="priceBuy">${dados[i].price.toFixed(2).replace('.',',')}</span>
+                <span class="txtBuy">Comprar</span>
+            </button>
         </div>
         `
 
@@ -6053,7 +6158,12 @@ async function pastilhasFreio(){
             
         </div>
         <div class='card-footer'>
-            <button type="button" class="padraoBtn" data-bs-toggle="modal" data-bs-target="${dados[i].linkApli}">Aplicações</button>
+            <button type="button" class="padraoBtn" data-bs-toggle="modal" data-bs-target="${dados[i].linkApli}"><span class="btnTxtAplicacoes">Aplicações</span></button>
+
+            <button class="btnBuy">
+                <span class="priceBuy">${dados[i].price.toFixed(2).replace('.',',')}</span>
+                <span class="txtBuy">Comprar</span>
+            </button>
         </div>
         
         `
@@ -6524,7 +6634,12 @@ async function discosFreio(){
             <p class="card-text">Linha ${dados[i].linha}</p>
         </div>
         <div class='card-footer'>
-            <button type="button" class="padraoBtn" data-bs-toggle="modal" data-bs-target="${dados[i].linkApli}">Aplicações</button>
+            <button type="button" class="padraoBtn" data-bs-toggle="modal" data-bs-target="${dados[i].linkApli}"><span class="btnTxtAplicacoes">Aplicações</span></button>
+
+            <button class="btnBuy">
+                <span class="priceBuy">${dados[i].price.toFixed(2).replace('.',',')}</span>
+                <span class="txtBuy">Comprar</span>
+            </button>
         </div>
         `
 
@@ -6686,7 +6801,12 @@ async function sapatasFreio(){
             <p class="card-text">Linha ${dados[i].linha}</p>
         </div>
         <div class='card-footer'>
-            <button type="button" class="padraoBtn" data-bs-toggle="modal" data-bs-target="${dados[i].linkApli}">Aplicações</button>
+            <button type="button" class="padraoBtn" data-bs-toggle="modal" data-bs-target="${dados[i].linkApli}"><span class="btnTxtAplicacoes">Aplicações</span></button>
+
+            <button class="btnBuy">
+                <span class="priceBuy">${dados[i].price.toFixed(2).replace('.',',')}</span>
+                <span class="txtBuy">Comprar</span>
+            </button>
         </div>
         `
 
@@ -6853,7 +6973,12 @@ async function cilindrosFreio(){
             
         </div>
         <div class='card-footer'>
-            <button type="button" class="padraoBtn" data-bs-toggle="modal" data-bs-target="${dados[i].linkApli}">Aplicações</button>
+            <button type="button" class="padraoBtn" data-bs-toggle="modal" data-bs-target="${dados[i].linkApli}"><span class="btnTxtAplicacoes">Aplicações</span></button>
+
+            <button class="btnBuy">
+                <span class="priceBuy">${dados[i].price.toFixed(2).replace('.',',')}</span>
+                <span class="txtBuy">Comprar</span>
+            </button>
         </div>
         `
 
@@ -7112,7 +7237,12 @@ async function tamboresFreio(){
             <p class="card-text">Linha ${dados[i].linha}</p>
         </div>
         <div class='card-footer'>
-            <button type="button" class="padraoBtn" data-bs-toggle="modal" data-bs-target="${dados[i].linkApli}">Aplicações</button>
+            <button type="button" class="padraoBtn" data-bs-toggle="modal" data-bs-target="${dados[i].linkApli}"><span class="btnTxtAplicacoes">Aplicações</span></button>
+
+            <button class="btnBuy">
+                <span class="priceBuy">${dados[i].price.toFixed(2).replace('.',',')}</span>
+                <span class="txtBuy">Comprar</span>
+            </button>
         </div>
         `
 
@@ -7374,7 +7504,12 @@ async function reparosFreio(){
             <p class="card-text">Linha ${dados[i].linha}</p>
         </div>
         <div class='card-footer'>
-            <button type="button" class="padraoBtn" data-bs-toggle="modal" data-bs-target="${dados[i].linkApli}">Aplicações</button>
+            <button type="button" class="padraoBtn" data-bs-toggle="modal" data-bs-target="${dados[i].linkApli}"><span class="btnTxtAplicacoes">Aplicações</span></button>
+
+            <button class="btnBuy">
+                <span class="priceBuy">${dados[i].price.toFixed(2).replace('.',',')}</span>
+                <span class="txtBuy">Comprar</span>
+            </button>
         </div>
         `
 
@@ -7812,7 +7947,12 @@ async function cabosFreio(){
             <p class="card-text">Linha ${dados[i].linha}</p>
         </div>
         <div class='card-footer'>
-            <button type="button" class="padraoBtn" data-bs-toggle="modal" data-bs-target="${dados[i].linkApli}">Aplicações</button>
+            <button type="button" class="padraoBtn" data-bs-toggle="modal" data-bs-target="${dados[i].linkApli}"><span class="btnTxtAplicacoes">Aplicações</span></button>
+
+            <button class="btnBuy">
+                <span class="priceBuy">${dados[i].price.toFixed(2).replace('.',',')}</span>
+                <span class="txtBuy">Comprar</span>
+            </button>
         </div>
         `
 
@@ -8097,7 +8237,12 @@ async function acessoriosFreio() {
             <p class="card-text">Linha ${dados[i].linha}</p>
         </div>
         <div class='card-footer'>
-            <button type="button" class="padraoBtn" data-bs-toggle="modal" data-bs-target="${dados[i].linkApli}">Aplicações</button>
+            <button type="button" class="padraoBtn" data-bs-toggle="modal" data-bs-target="${dados[i].linkApli}"><span class="btnTxtAplicacoes">Aplicações</span></button>
+
+            <button class="btnBuy">
+                <span class="priceBuy">${dados[i].price.toFixed(2).replace('.',',')}</span>
+                <span class="txtBuy">Comprar</span>
+            </button>
         </div>
         `
 
@@ -8266,7 +8411,12 @@ async function cabosVela(){
             <p class="card-text">Linha ${dados[i].linha}</p>
         </div>
         <div class='card-footer'>
-            <button type="button" class="padraoBtn" data-bs-toggle="modal" data-bs-target="${dados[i].linkApli}">Aplicações</button>
+            <button type="button" class="padraoBtn" data-bs-toggle="modal" data-bs-target="${dados[i].linkApli}"><span class="btnTxtAplicacoes">Aplicações</span></button>
+
+            <button class="btnBuy">
+                <span class="priceBuy">${dados[i].price.toFixed(2).replace('.',',')}</span>
+                <span class="txtBuy">Comprar</span>
+            </button>
         </div>
         `
 
@@ -8476,7 +8626,12 @@ async function velas(){
             <p class="card-text">Linha ${dados[i].linha}</p>
         </div>
         <div class='card-footer'>
-            <button type="button" class="padraoBtn" data-bs-toggle="modal" data-bs-target="${dados[i].linkApli}">Aplicações</button>
+            <button type="button" class="padraoBtn" data-bs-toggle="modal" data-bs-target="${dados[i].linkApli}"><span class="btnTxtAplicacoes">Aplicações</span></button>
+
+            <button class="btnBuy">
+                <span class="priceBuy">${dados[i].price.toFixed(2).replace('.',',')}</span>
+                <span class="txtBuy">Comprar</span>
+            </button>
         </div>
         `
 
@@ -8640,7 +8795,12 @@ async function bobinas(){
             <p class="card-text">Linha ${dados[i].linha}</p>
         </div>
         <div class='card-footer'>
-            <button type="button" class="padraoBtn" data-bs-toggle="modal" data-bs-target="${dados[i].linkApli}">Aplicações</button>
+            <button type="button" class="padraoBtn" data-bs-toggle="modal" data-bs-target="${dados[i].linkApli}"><span class="btnTxtAplicacoes">Aplicações</span></button>
+
+            <button class="btnBuy">
+                <span class="priceBuy">${dados[i].price.toFixed(2).replace('.',',')}</span>
+                <span class="txtBuy">Comprar</span>
+            </button>
         </div>
         `
 
@@ -8852,7 +9012,12 @@ async function modulosIgnicao(){
             <p class="card-text">Linha ${dados[i].linha}</p>
         </div>
         <div class='card-footer'>
-            <button type="button" class="padraoBtn" data-bs-toggle="modal" data-bs-target="${dados[i].linkApli}">Aplicações</button>
+            <button type="button" class="padraoBtn" data-bs-toggle="modal" data-bs-target="${dados[i].linkApli}"><span class="btnTxtAplicacoes">Aplicações</span></button>
+
+            <button class="btnBuy">
+                <span class="priceBuy">${dados[i].price.toFixed(2).replace('.',',')}</span>
+                <span class="txtBuy">Comprar</span>
+            </button>
         </div>
         `
 
@@ -9023,7 +9188,12 @@ async function tensores(){
             <p class="card-text">Linha ${dados[i].linha}</p>
         </div>
         <div class='card-footer'>
-            <button type="button" class="padraoBtn" data-bs-toggle="modal" data-bs-target="${dados[i].linkApli}">Aplicações</button>
+            <button type="button" class="padraoBtn" data-bs-toggle="modal" data-bs-target="${dados[i].linkApli}"><span class="btnTxtAplicacoes">Aplicações</span></button>
+
+            <button class="btnBuy">
+                <span class="priceBuy">${dados[i].price.toFixed(2).replace('.',',')}</span>
+                <span class="txtBuy">Comprar</span>
+            </button>
         </div>
         `
 
@@ -9235,7 +9405,12 @@ async function correiaAlter(){
             <p class="card-text">Linha ${dados[i].linha}</p>
         </div>
         <div class='card-footer'>
-            <button type="button" class="padraoBtn" data-bs-toggle="modal" data-bs-target="${dados[i].linkApli}">Aplicações</button>
+            <button type="button" class="padraoBtn" data-bs-toggle="modal" data-bs-target="${dados[i].linkApli}"><span class="btnTxtAplicacoes">Aplicações</span></button>
+
+            <button class="btnBuy">
+                <span class="priceBuy">${dados[i].price.toFixed(2).replace('.',',')}</span>
+                <span class="txtBuy">Comprar</span>
+            </button>
         </div>
         `
 
@@ -9655,7 +9830,12 @@ async function correiaDentada(){
             <p class="card-text">Linha ${dados[i].linha}</p>
         </div>
         <div class='card-footer'>
-            <button type="button" class="padraoBtn" data-bs-toggle="modal" data-bs-target="${dados[i].linkApli}">Aplicações</button>
+            <button type="button" class="padraoBtn" data-bs-toggle="modal" data-bs-target="${dados[i].linkApli}"><span class="btnTxtAplicacoes">Aplicações</span></button>
+
+            <button class="btnBuy">
+                <span class="priceBuy">${dados[i].price.toFixed(2).replace('.',',')}</span>
+                <span class="txtBuy">Comprar</span>
+            </button>
         </div>
         `
 
@@ -9860,7 +10040,12 @@ async function regVoltagem(){
             <p class="card-text">Linha ${dados[i].linha}</p>
         </div>
         <div class='card-footer'>
-            <button type="button" class="padraoBtn" data-bs-toggle="modal" data-bs-target="${dados[i].linkApli}">Aplicações</button>
+            <button type="button" class="padraoBtn" data-bs-toggle="modal" data-bs-target="${dados[i].linkApli}"><span class="btnTxtAplicacoes">Aplicações</span></button>
+
+            <button class="btnBuy">
+                <span class="priceBuy">${dados[i].price.toFixed(2).replace('.',',')}</span>
+                <span class="txtBuy">Comprar</span>
+            </button>
         </div>
         
         `
@@ -10022,7 +10207,12 @@ async function estatores(){
             <p class="card-text">Linha ${dados[i].linha}</p>
         </div>
         <div class='card-footer'>
-            <button type="button" class="padraoBtn" data-bs-toggle="modal" data-bs-target="${dados[i].linkApli}">Aplicações</button>
+            <button type="button" class="padraoBtn" data-bs-toggle="modal" data-bs-target="${dados[i].linkApli}"><span class="btnTxtAplicacoes">Aplicações</span></button>
+
+            <button class="btnBuy">
+                <span class="priceBuy">${dados[i].price.toFixed(2).replace('.',',')}</span>
+                <span class="txtBuy">Comprar</span>
+            </button>
         </div>
         `
 
@@ -10235,7 +10425,12 @@ async function inpulsores(){
             <p class="card-text">Linha ${dados[i].linha}</p>
         </div>
         <div class='card-footer'>
-            <button type="button" class="padraoBtn" data-bs-toggle="modal" data-bs-target="${dados[i].linkApli}">Aplicações</button>
+            <button type="button" class="padraoBtn" data-bs-toggle="modal" data-bs-target="${dados[i].linkApli}"><span class="btnTxtAplicacoes">Aplicações</span></button>
+
+            <button class="btnBuy">
+                <span class="priceBuy">${dados[i].price.toFixed(2).replace('.',',')}</span>
+                <span class="txtBuy">Comprar</span>
+            </button>
         </div>
         `
 
@@ -10444,7 +10639,12 @@ async function portaEscovas(){
             <p class="card-text">Linha ${dados[i].linha}</p>
         </div>
         <div class='card-footer'>
-            <button type="button" class="padraoBtn" data-bs-toggle="modal" data-bs-target="${dados[i].linkApli}">Aplicações</button>
+            <button type="button" class="padraoBtn" data-bs-toggle="modal" data-bs-target="${dados[i].linkApli}"><span class="btnTxtAplicacoes">Aplicações</span></button>
+
+            <button class="btnBuy">
+                <span class="priceBuy">${dados[i].price.toFixed(2).replace('.',',')}</span>
+                <span class="txtBuy">Comprar</span>
+            </button>
         </div>
         `
 
@@ -10703,7 +10903,12 @@ async function acessoriosPart(){
             <p class="card-text">Linha ${dados[i].linha}</p>
         </div>
         <div class='card-footer'>
-            <button type="button" class="padraoBtn" data-bs-toggle="modal" data-bs-target="${dados[i].linkApli}">Aplicações</button>
+            <button type="button" class="padraoBtn" data-bs-toggle="modal" data-bs-target="${dados[i].linkApli}"><span class="btnTxtAplicacoes">Aplicações</span></button>
+
+            <button class="btnBuy">
+                <span class="priceBuy">${dados[i].price.toFixed(2).replace('.',',')}</span>
+                <span class="txtBuy">Comprar</span>
+            </button>
         </div>
         `
 
@@ -10874,7 +11079,7 @@ async function carsEapli37(dados){
 
 
 }
- 
+
 
 
 
@@ -10922,7 +11127,12 @@ async function bombasDagua(){
             <p class="card-text">Linha ${dados[i].linha}</p>
         </div>
         <div class='card-footer'>
-            <button type="button" class="padraoBtn" data-bs-toggle="modal" data-bs-target="${dados[i].linkApli}">Aplicações</button>
+            <button type="button" class="padraoBtn" data-bs-toggle="modal" data-bs-target="${dados[i].linkApli}"><span class="btnTxtAplicacoes">Aplicações</span></button>
+
+            <button class="btnBuy">
+                <span class="priceBuy">${dados[i].price.toFixed(2).replace('.',',')}</span>
+                <span class="txtBuy">Comprar</span>
+            </button>
         </div>
         `
 
@@ -11132,7 +11342,12 @@ async function reservatorio(){
             <p class="card-text">Linha ${dados[i].linha}</p>
         </div>
         <div class='card-footer'>
-            <button type="button" class="padraoBtn" data-bs-toggle="modal" data-bs-target="${dados[i].linkApli}">Aplicações</button>
+            <button type="button" class="padraoBtn" data-bs-toggle="modal" data-bs-target="${dados[i].linkApli}"><span class="btnTxtAplicacoes">Aplicações</span></button>
+
+            <button class="btnBuy">
+                <span class="priceBuy">${dados[i].price.toFixed(2).replace('.',',')}</span>
+                <span class="txtBuy">Comprar</span>
+            </button>
         </div>
         `
 
@@ -11296,7 +11511,12 @@ async function valvulasTermo(){
             <p class="card-text">Linha ${dados[i].linha}</p>
         </div>
         <div class='card-footer'>
-            <button type="button" class="padraoBtn" data-bs-toggle="modal" data-bs-target="${dados[i].linkApli}">Aplicações</button>
+            <button type="button" class="padraoBtn" data-bs-toggle="modal" data-bs-target="${dados[i].linkApli}"><span class="btnTxtAplicacoes">Aplicações</span></button>
+
+            <button class="btnBuy">
+                <span class="priceBuy">${dados[i].price.toFixed(2).replace('.',',')}</span>
+                <span class="txtBuy">Comprar</span>
+            </button>
         </div>
         `
 
@@ -11459,7 +11679,12 @@ async function ventoinhas(){
             <p class="card-text">Linha ${dados[i].linha}</p>
         </div>
         <div class='card-footer'>
-            <button type="button" class="padraoBtn" data-bs-toggle="modal" data-bs-target="${dados[i].linkApli}">Aplicações</button>
+            <button type="button" class="padraoBtn" data-bs-toggle="modal" data-bs-target="${dados[i].linkApli}"><span class="btnTxtAplicacoes">Aplicações</span></button>
+
+            <button class="btnBuy">
+                <span class="priceBuy">${dados[i].price.toFixed(2).replace('.',',')}</span>
+                <span class="txtBuy">Comprar</span>
+            </button>
         </div>
         `
 
@@ -11671,7 +11896,12 @@ async function canosDagua(){
             <p class="card-text">Linha ${dados[i].linha}</p>
         </div>
         <div class='card-footer'>
-            <button type="button" class="padraoBtn" data-bs-toggle="modal" data-bs-target="${dados[i].linkApli}">Aplicações</button>
+            <button type="button" class="padraoBtn" data-bs-toggle="modal" data-bs-target="${dados[i].linkApli}"><span class="btnTxtAplicacoes">Aplicações</span></button>
+
+            <button class="btnBuy">
+                <span class="priceBuy">${dados[i].price.toFixed(2).replace('.',',')}</span>
+                <span class="txtBuy">Comprar</span>
+            </button>
         </div>
         `
 
@@ -11960,7 +12190,12 @@ async function tubosDagua(){
             <p class="card-text">Linha ${dados[i].linha}</p>
         </div>
         <div class='card-footer'>
-            <button type="button" class="padraoBtn" data-bs-toggle="modal" data-bs-target="${dados[i].linkApli}">Aplicações</button>
+            <button type="button" class="padraoBtn" data-bs-toggle="modal" data-bs-target="${dados[i].linkApli}"><span class="btnTxtAplicacoes">Aplicações</span></button>
+
+            <button class="btnBuy">
+                <span class="priceBuy">${dados[i].price.toFixed(2).replace('.',',')}</span>
+                <span class="txtBuy">Comprar</span>
+            </button>
         </div>
         
         `
@@ -12126,7 +12361,12 @@ async function resistencias(){
             <p class="card-text">Linha ${dados[i].linha}</p>
         </div>
         <div class='card-footer'>
-            <button type="button" class="padraoBtn" data-bs-toggle="modal" data-bs-target="${dados[i].linkApli}">Aplicações</button>
+            <button type="button" class="padraoBtn" data-bs-toggle="modal" data-bs-target="${dados[i].linkApli}"><span class="btnTxtAplicacoes">Aplicações</span></button>
+
+            <button class="btnBuy">
+                <span class="priceBuy">${dados[i].price.toFixed(2).replace('.',',')}</span>
+                <span class="txtBuy">Comprar</span>
+            </button>
         </div>
         `
 
@@ -12291,7 +12531,12 @@ async function acessoriosArref(){
             <p class="card-text">Linha ${dados[i].linha}</p>
         </div>
         <div class='card-footer'>
-            <button type="button" class="padraoBtn" data-bs-toggle="modal" data-bs-target="${dados[i].linkApli}">Aplicações</button>
+            <button type="button" class="padraoBtn" data-bs-toggle="modal" data-bs-target="${dados[i].linkApli}"><span class="btnTxtAplicacoes">Aplicações</span></button>
+
+            <button class="btnBuy">
+                <span class="priceBuy">${dados[i].price.toFixed(2).replace('.',',')}</span>
+                <span class="txtBuy">Comprar</span>
+            </button>
         </div>
         `
 
@@ -12467,7 +12712,12 @@ async function bicos(){
             <p class="card-text">Linha ${dados[i].linha}</p>
         </div>
         <div class='card-footer'>
-            <button type="button" class="padraoBtn" data-bs-toggle="modal" data-bs-target="${dados[i].linkApli}">Aplicações</button>
+            <button type="button" class="padraoBtn" data-bs-toggle="modal" data-bs-target="${dados[i].linkApli}"><span class="btnTxtAplicacoes">Aplicações</span></button>
+
+            <button class="btnBuy">
+                <span class="priceBuy">${dados[i].price.toFixed(2).replace('.',',')}</span>
+                <span class="txtBuy">Comprar</span>
+            </button>
         </div>
         `
 
@@ -12634,7 +12884,12 @@ async function bombaCombustivel(){
             <p class="card-text">Linha ${dados[i].linha}</p>
         </div>
         <div class='card-footer'>
-            <button type="button" class="padraoBtn" data-bs-toggle="modal" data-bs-target="${dados[i].linkApli}">Aplicações</button>
+            <button type="button" class="padraoBtn" data-bs-toggle="modal" data-bs-target="${dados[i].linkApli}"><span class="btnTxtAplicacoes">Aplicações</span></button>
+
+            <button class="btnBuy">
+                <span class="priceBuy">${dados[i].price.toFixed(2).replace('.',',')}</span>
+                <span class="txtBuy">Comprar</span>
+            </button>
         </div>
         `
 
@@ -12950,7 +13205,12 @@ async function flangesBomb(){
             <p class="card-text">Linha ${dados[i].linha}</p>
         </div>
         <div class='card-footer'>
-            <button type="button" class="padraoBtn" data-bs-toggle="modal" data-bs-target="${dados[i].linkApli}">Aplicações</button>
+            <button type="button" class="padraoBtn" data-bs-toggle="modal" data-bs-target="${dados[i].linkApli}"><span class="btnTxtAplicacoes">Aplicações</span></button>
+
+            <button class="btnBuy">
+                <span class="priceBuy">${dados[i].price.toFixed(2).replace('.',',')}</span>
+                <span class="txtBuy">Comprar</span>
+            </button>
         </div>
         `
 
@@ -13114,7 +13374,12 @@ async function acessoriosCombustivel(){
             <p class="card-text">Linha ${dados[i].linha}</p>
         </div>
         <div class='card-footer'>
-            <button type="button" class="padraoBtn" data-bs-toggle="modal" data-bs-target="${dados[i].linkApli}">Aplicações</button>
+            <button type="button" class="padraoBtn" data-bs-toggle="modal" data-bs-target="${dados[i].linkApli}"><span class="btnTxtAplicacoes">Aplicações</span></button>
+
+            <button class="btnBuy">
+                <span class="priceBuy">${dados[i].price.toFixed(2).replace('.',',')}</span>
+                <span class="txtBuy">Comprar</span>
+            </button>
         </div>
         `
 
@@ -13285,7 +13550,12 @@ async function discosEmbre(){
             <p class="card-text">Linha ${dados[i].linha}</p>
         </div>
         <div class='card-footer'>
-            <button type="button" class="padraoBtn" data-bs-toggle="modal" data-bs-target="${dados[i].linkApli}">Aplicações</button>
+            <button type="button" class="padraoBtn" data-bs-toggle="modal" data-bs-target="${dados[i].linkApli}"><span class="btnTxtAplicacoes">Aplicações</span></button>
+
+            <button class="btnBuy">
+                <span class="priceBuy">${dados[i].price.toFixed(2).replace('.',',')}</span>
+                <span class="txtBuy">Comprar</span>
+            </button>
         </div>
         `
 
@@ -13450,7 +13720,12 @@ async function reparosTrambCambio(){
             <p class="card-text">Linha ${dados[i].linha}</p>
         </div>
         <div class='card-footer'>
-            <button type="button" class="padraoBtn" data-bs-toggle="modal" data-bs-target="${dados[i].linkApli}">Aplicações</button>
+            <button type="button" class="padraoBtn" data-bs-toggle="modal" data-bs-target="${dados[i].linkApli}"><span class="btnTxtAplicacoes">Aplicações</span></button>
+
+            <button class="btnBuy">
+                <span class="priceBuy">${dados[i].price.toFixed(2).replace('.',',')}</span>
+                <span class="txtBuy">Comprar</span>
+            </button>
         </div>
         `
 
@@ -13626,7 +13901,12 @@ async function cubosRoda(){
             <p class="card-text">Linha ${dados[i].linha}</p>
         </div>
         <div class='card-footer'>
-            <button type="button" class="padraoBtn" data-bs-toggle="modal" data-bs-target="${dados[i].linkApli}">Aplicações</button>
+            <button type="button" class="padraoBtn" data-bs-toggle="modal" data-bs-target="${dados[i].linkApli}"><span class="btnTxtAplicacoes">Aplicações</span></button>
+
+            <button class="btnBuy">
+                <span class="priceBuy">${dados[i].price.toFixed(2).replace('.',',')}</span>
+                <span class="txtBuy">Comprar</span>
+            </button>
         </div>
         `
 
@@ -13791,7 +14071,12 @@ async function pontasEixo(){
             <p class="card-text">Linha ${dados[i].linha}</p>
         </div>
         <div class='card-footer'>
-            <button type="button" class="padraoBtn" data-bs-toggle="modal" data-bs-target="${dados[i].linkApli}">Aplicações</button>
+            <button type="button" class="padraoBtn" data-bs-toggle="modal" data-bs-target="${dados[i].linkApli}"><span class="btnTxtAplicacoes">Aplicações</span></button>
+
+            <button class="btnBuy">
+                <span class="priceBuy">${dados[i].price.toFixed(2).replace('.',',')}</span>
+                <span class="txtBuy">Comprar</span>
+            </button>
         </div>
         `
 
@@ -13954,7 +14239,12 @@ async function juntasHomo(){
             <p class="card-text">Linha ${dados[i].linha}</p>
         </div>
         <div class='card-footer'>
-            <button type="button" class="padraoBtn" data-bs-toggle="modal" data-bs-target="${dados[i].linkApli}">Aplicações</button>
+            <button type="button" class="padraoBtn" data-bs-toggle="modal" data-bs-target="${dados[i].linkApli}"><span class="btnTxtAplicacoes">Aplicações</span></button>
+
+            <button class="btnBuy">
+                <span class="priceBuy">${dados[i].price.toFixed(2).replace('.',',')}</span>
+                <span class="txtBuy">Comprar</span>
+            </button>
         </div>
         `
 
@@ -14218,7 +14508,12 @@ async function rolamentoRoda(){
             <p class="card-text">Linha ${dados[i].linha}</p>
         </div>
         <div class='card-footer'>
-            <button type="button" class="padraoBtn" data-bs-toggle="modal" data-bs-target="${dados[i].linkApli}">Aplicações</button>
+            <button type="button" class="padraoBtn" data-bs-toggle="modal" data-bs-target="${dados[i].linkApli}"><span class="btnTxtAplicacoes">Aplicações</span></button>
+
+            <button class="btnBuy">
+                <span class="priceBuy">${dados[i].price.toFixed(2).replace('.',',')}</span>
+                <span class="txtBuy">Comprar</span>
+            </button>
         </div>
         `
 
@@ -14485,7 +14780,12 @@ async function rolamentoDiversos(){
             <p class="card-text">Linha ${dados[i].linha}</p>
         </div>
         <div class='card-footer'>
-            <button type="button" class="padraoBtn" data-bs-toggle="modal" data-bs-target="${dados[i].linkApli}">Aplicações</button>
+            <button type="button" class="padraoBtn" data-bs-toggle="modal" data-bs-target="${dados[i].linkApli}"><span class="btnTxtAplicacoes">Aplicações</span></button>
+
+            <button class="btnBuy">
+                <span class="priceBuy">${dados[i].price.toFixed(2).replace('.',',')}</span>
+                <span class="txtBuy">Comprar</span>
+            </button>
         </div>
         
         `
@@ -14661,7 +14961,12 @@ async function bojos(){
             <p class="card-text">Linha ${dados[i].linha}</p>
         </div>
         <div class='card-footer'>
-            <button type="button" class="padraoBtn" data-bs-toggle="modal" data-bs-target="${dados[i].linkApli}">Aplicações</button>
+            <button type="button" class="padraoBtn" data-bs-toggle="modal" data-bs-target="${dados[i].linkApli}"><span class="btnTxtAplicacoes">Aplicações</span></button>
+
+            <button class="btnBuy">
+                <span class="priceBuy">${dados[i].price.toFixed(2).replace('.',',')}</span>
+                <span class="txtBuy">Comprar</span>
+            </button>
         </div>
         `
 
@@ -14948,7 +15253,12 @@ async function intermediarios(){
             <p class="card-text">Linha ${dados[i].linha}</p>
         </div>
         <div class='card-footer'>
-            <button type="button" class="padraoBtn" data-bs-toggle="modal" data-bs-target="${dados[i].linkApli}">Aplicações</button>
+            <button type="button" class="padraoBtn" data-bs-toggle="modal" data-bs-target="${dados[i].linkApli}"><span class="btnTxtAplicacoes">Aplicações</span></button>
+
+            <button class="btnBuy">
+                <span class="priceBuy">${dados[i].price.toFixed(2).replace('.',',')}</span>
+                <span class="txtBuy">Comprar</span>
+            </button>
         </div>
         `
 
@@ -15235,7 +15545,12 @@ async function conxinsEscap(){
             <p class="card-text">Linha ${dados[i].linha}</p>
         </div>
         <div class='card-footer'>
-            <button type="button" class="padraoBtn" data-bs-toggle="modal" data-bs-target="${dados[i].linkApli}">Aplicações</button>
+            <button type="button" class="padraoBtn" data-bs-toggle="modal" data-bs-target="${dados[i].linkApli}"><span class="btnTxtAplicacoes">Aplicações</span></button>
+
+            <button class="btnBuy">
+                <span class="priceBuy">${dados[i].price.toFixed(2).replace('.',',')}</span>
+                <span class="txtBuy">Comprar</span>
+            </button>
         </div>
         `
 
