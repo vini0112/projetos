@@ -232,24 +232,25 @@ body{
 
 
 
-/* area oleos */
-#area-oleos{
-    display: none;
+
+
+
+/* CARD STRUCTURE */
+.card{
+    border: none;
+    border-radius: none;
+    transition: .6s ease-in-out;
+    background-color: transparent;
+    z-index: 5;
 }
 
-/* sessao filtros OLEO */
-#area-filtros{
-    display: none;
+.card:hover{
+    border: 1px solid black;
+    transform: scale(1.05);
+    z-index: 1;
+    box-shadow: 2px 2px 10px black;
 }
 
-
-/* SESSAO FLUIDO FREIO */
-#area-oleo-freio{
-    display: none;
-}
-
-
-/* MODAIS */
 .card-body{
     display: flex;
     flex-direction: column;
@@ -258,14 +259,60 @@ body{
 
 .padraoBtn{
     border: none;
-    padding: 0.5rem 1rem;
+    padding: 0.2rem 1rem;
     background-color: var(--btnApli);
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+    width: 100%;
+}
+.padraoBtn:hover{
+    background-color: #032e85;
+}
+
+.btnBuy{
+    width: 100%;
+    border: none;
+    padding: 0.2rem 1rem;
+    color: white;
+    font-weight: bold;
+    font-size: 1rem;
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+    background-color: var(--btnApli);
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.btnBuy:hover{
+    background-color: #032e85;
+}
+
+.priceBuy{
+    color: white;
+    text-shadow: 2px 2px 3px black;
+    font-weight: bold;
+    font-size: 1.1rem;
+}
+.txtBuy{
     color: white;
     text-shadow: 2px 2px 3px black;
     font-weight: bold;
     font-size: 1rem;
-    border-radius: 5px;
-    
+}
+
+.btnTxtAplicacoes{
+    color: white;
+    text-shadow: 2px 2px 3px black;
+    font-weight: bold;
+    font-size: 1.1rem;
+}
+
+.card-footer{
+    border: none;
+    display: flex;
+    justify-content: center;
 }
 
 
@@ -282,13 +329,7 @@ body{
     row-gap: 1rem;
     
 }
-/* 
-.ulListas{
-    list-style: none;
-    display: flex;
-    flex-direction: column;
-    row-gap: 1rem;
-} */
+
 
 #lista-aplicacoes li{
     font-size: 1.1rem;
@@ -308,15 +349,7 @@ body{
     justify-content: space-between;
 }
 
-/* SESSAO FILTROS COMBUSTIVEL */
-#area-filtro-combus{
-    display: none;
-}
 
-/* SESSAO FILTROS DE AR */
-#area-filtro-ar{
-    display: none;
-}
 
 
 
@@ -334,11 +367,20 @@ body{
     }
 }
 
+/*  */
+@media (min-width: 770px ) and (max-width: 990px){
+    .padraoBtn{
+        padding: 0;
+    }
+    .btnBuy{
+        padding: .2rem .5rem;
+    }
+}
 
 
 /* MEDIAS QUERIES BoxBtnsDoFiltro*/
 @media (max-width: 768px){
-   
+
     /* global */
     .btn-mobile-wrap{
         display: flex;
@@ -356,7 +398,7 @@ body{
         width: 100%;
     }
 
-   
+
 
 }
 

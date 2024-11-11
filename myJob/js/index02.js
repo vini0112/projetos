@@ -173,6 +173,8 @@ async function addCardsOleo(){
             <h5 class="card-title">${dadosOleo[i].nome} ${dadosOleo[i].marca} ${dadosOleo[i].viscosidade}</h5>
             <p class="card-text">${dadosOleo[i].info}</p>
         </div>
+
+
         `
 
 
@@ -779,7 +781,16 @@ async function addFiltroOleoSimp(){
             <h5 class="card-title">${dados[i].info}</h5>
             <p class="card-text">Linha ${dados[i].linha}</p>
 
-            <button type="button" class="padraoBtn" data-bs-toggle="modal" data-bs-target="${dados[i].linkApli}">Aplicações</button>
+            
+        </div>
+
+        <div class='card-footer'>
+            <button type="button" class="padraoBtn" data-bs-toggle="modal" data-bs-target="${dados[i].linkApli}"><span class="btnTxtAplicacoes">Aplicações</span></button>
+
+            <button class="btnBuy">
+            <span class="priceBuy">${dados[i].price.toFixed(2).replace('.',',')}</span>
+            <span class="txtBuy">Comprar</span>
+            </button>
         </div>
         
         `
@@ -801,7 +812,6 @@ async function addFiltroOleoSimp(){
 
     dialogoOleoSimples()
 }
-
 
 // fucao filtrar pesquisa de filtros de oleo
 function filtrarFiltrosOleo(){
@@ -1037,7 +1047,6 @@ function filtrarFiltrosOleo(){
     })
 
 }
-
 
 // funcao mostrando dialog oleos simples
 async function dialogoOleoSimples(){
@@ -1294,7 +1303,9 @@ async function addFiltroOleoPesado(){
             <h5 class="card-title">${dados[i].nome}</h5>
             <h5 class="card-title">${dados[i].info}</h5>
             <p class="card-text">Linha ${dados[i].linha}</p>
+        </div>
 
+        <div class='card-footer'>
             <button type="button" class="padraoBtn" data-bs-toggle="modal" data-bs-target="${dados[i].linkApli}">Aplicações</button>
         </div>
         
@@ -1740,7 +1751,9 @@ async function filtroCombustSimples() {
             <h5 class="card-title">${dados[i].nome}</h5>
             <h5 class="card-title">${dados[i].info}</h5>
             <p class="card-text">Linha ${dados[i].linha}</p>
+        </div>
 
+        <div class='card-footer'>
             <button type="button" class="padraoBtn" data-bs-toggle="modal" data-bs-target="${dados[i].linkApli}">Aplicações</button>
         </div>
         
@@ -2156,6 +2169,9 @@ async function filtroCombustPesado(){
             <h5 class="card-title">${dados[i].info}</h5>
             <p class="card-text">Linha ${dados[i].linha}</p>
 
+        </div>
+
+        <div class='card-footer'>
             <button type="button" class="padraoBtn" data-bs-toggle="modal" data-bs-target="${dados[i].linkApli}">Aplicações</button>
         </div>
         
@@ -2573,7 +2589,9 @@ async function filtroArMotor(){
             <h5 class="card-title">${dados[i].nome}</h5>
             <h5 class="card-title">${dados[i].info}</h5>
             <p class="card-text">Linha ${dados[i].linha}</p>
+        </div>
 
+        <div class='card-footer'>
             <button type="button" class="padraoBtn" data-bs-toggle="modal" data-bs-target="${dados[i].linkApli}">Aplicações</button>
         </div>
         
@@ -2988,7 +3006,9 @@ async function filtroArCabine(){
             <h5 class="card-title">${dados[i].nome}</h5>
             <h5 class="card-title">${dados[i].info}</h5>
             <p class="card-text">Linha ${dados[i].linha}</p>
+        </div>
 
+        <div class='card-footer'>
             <button type="button" class="padraoBtn" data-bs-toggle="modal" data-bs-target="${dados[i].linkApli}">Aplicações</button>
         </div>
         
@@ -3147,9 +3167,11 @@ async function mangotesAr(){
             <h5 class="card-title">${dados[i].info}</h5>
             <p class="card-text">Linha ${dados[i].linha}</p>
 
-            <button type="button" class="padraoBtn" data-bs-toggle="modal" data-bs-target="${dados[i].linkApli}">Aplicações</button>
         </div>
         
+        <div class='card-footer'>
+            <button type="button" class="padraoBtn" data-bs-toggle="modal" data-bs-target="${dados[i].linkApli}">Aplicações</button>
+        </div>
         `
 
         rowMangotesAr.appendChild(newDiv)
@@ -3310,6 +3332,9 @@ async function terminaisDirecao(){
             <h5 class="card-title">${dados[i].info} ${dados[i].lados}</h5>
             <p class="card-text">Linha ${dados[i].linha}</p>
 
+            
+        </div>
+        <div class='card-footer'>
             <button type="button" class="padraoBtn" data-bs-toggle="modal" data-bs-target="${dados[i].linkApli}">Aplicações</button>
         </div>
         
@@ -3618,6 +3643,8 @@ async function barraAxiais(){
             <p class="card-text">${dados[i].sistema}</p>
             <p class="card-text">Linha ${dados[i].linha}</p>
 
+        </div>
+        <div class='card-footer'>
             <button type="button" class="padraoBtn" data-bs-toggle="modal" data-bs-target="${dados[i].linkApli}">Aplicações</button>
         </div>
         
@@ -4026,9 +4053,11 @@ async function estabilazadores(){
             <h5 class="card-title">${dados[i].info}</h5>
             <p class="card-text">Linha ${dados[i].linha}</p>
 
-            <button type="button" class="padraoBtn" data-bs-toggle="modal" data-bs-target="${dados[i].linkApli}">Aplicações</button>
         </div>
         
+        <div class='card-footer'>
+            <button type="button" class="padraoBtn" data-bs-toggle="modal" data-bs-target="${dados[i].linkApli}">Aplicações</button>
+        </div>
         `
 
         rowEstabilizadores.appendChild(newDiv)
@@ -4306,7 +4335,9 @@ async function buchaCaixaDirecao(){
             <h5 class="card-title">${dados[i].nome}</h5>
             <h5 class="card-title">${dados[i].info}</h5>
             <p class="card-text">Linha ${dados[i].linha}</p>
+        </div>
 
+        <div class='card-footer'>
             <button type="button" class="padraoBtn" data-bs-toggle="modal" data-bs-target="${dados[i].linkApli}">Aplicações</button>
         </div>
         
@@ -4476,7 +4507,9 @@ async function batedores(){
             <h5 class="card-title">${dados[i].nome} ${dados[i].position}</h5>
             <h5 class="card-title">${dados[i].info}</h5>
             <p class="card-text">Linha ${dados[i].linha}</p>
+        </div>
 
+        <div class='card-footer'>
             <button type="button" class="padraoBtn" data-bs-toggle="modal" data-bs-target="${dados[i].linkApli}">Aplicações</button>
         </div>
         
@@ -4851,10 +4884,11 @@ async function pivos(){
             <h5 class="card-title">${dados[i].nome}</h5>
             <h5 class="card-title">${dados[i].info} - ${dados[i].lados}</h5>
             <p class="card-text">Linha ${dados[i].linha}</p>
-
-            <button type="button" class="padraoBtn" data-bs-toggle="modal" data-bs-target="${dados[i].linkApli}">Aplicações</button>
         </div>
         
+        <div class='card-footer'>
+            <button type="button" class="padraoBtn" data-bs-toggle="modal" data-bs-target="${dados[i].linkApli}">Aplicações</button>
+        </div>
         `
 
         rowPivos.appendChild(newDiv)
@@ -5162,10 +5196,10 @@ async function amortecedores(){
             <h5 class="card-title">${dados[i].nome} ${dados[i].position}</h5>
             <h5 class="card-title">${dados[i].info}</h5>
             <p class="card-text">Linha ${dados[i].linha}</p>
-
+        </div>
+        <div class='card-footer'>
             <button type="button" class="padraoBtn" data-bs-toggle="modal" data-bs-target="${dados[i].linkApli}">Aplicações</button>
         </div>
-        
         `
 
         rowAmortecedores.appendChild(newDiv)
@@ -5319,10 +5353,10 @@ async function buchasBandejaSusp(){
             <h5 class="card-title">${dados[i].nome} ${dados[i].position}</h5>
             <h5 class="card-title">${dados[i].info}</h5>
             <p class="card-text">Linha ${dados[i].linha}</p>
-
+        </div>
+        <div class='card-footer'>
             <button type="button" class="padraoBtn" data-bs-toggle="modal" data-bs-target="${dados[i].linkApli}">Aplicações</button>
         </div>
-        
         `
 
         rowBuchas.appendChild(newDiv)
@@ -5680,10 +5714,11 @@ async function coxinsAmort(){
             <h5 class="card-title">${dados[i].nome} ${dados[i].position}</h5>
             <h5 class="card-title">${dados[i].info}</h5>
             <p class="card-text">Linha ${dados[i].linha}</p>
-
-            <button type="button" class="padraoBtn" data-bs-toggle="modal" data-bs-target="${dados[i].linkApli}">Aplicações</button>
         </div>
         
+        <div class='card-footer'>
+            <button type="button" class="padraoBtn" data-bs-toggle="modal" data-bs-target="${dados[i].linkApli}">Aplicações</button>
+        </div>
         `
 
         rowCoxinsAmort.appendChild(newDiv)
@@ -5839,10 +5874,10 @@ async function bieletas(){
             <h5 class="card-title">${dados[i].nome}</h5>
             <h5 class="card-title">${dados[i].info}</h5>
             <p class="card-text">Linha ${dados[i].linha}</p>
-
+        </div>
+        <div class='card-footer'>
             <button type="button" class="padraoBtn" data-bs-toggle="modal" data-bs-target="${dados[i].linkApli}">Aplicações</button>
         </div>
-        
         `
 
         rowBieleta.appendChild(newDiv)
@@ -6015,6 +6050,9 @@ async function pastilhasFreio(){
             <h5 class="card-title">${dados[i].info}</h5>
             <p class="card-text">Linha ${dados[i].linha}</p>
 
+            
+        </div>
+        <div class='card-footer'>
             <button type="button" class="padraoBtn" data-bs-toggle="modal" data-bs-target="${dados[i].linkApli}">Aplicações</button>
         </div>
         
@@ -6484,10 +6522,10 @@ async function discosFreio(){
             <h5 class="card-title">${dados[i].nome} ${dados[i].position}</h5>
             <h5 class="card-title">${dados[i].info}</h5>
             <p class="card-text">Linha ${dados[i].linha}</p>
-
+        </div>
+        <div class='card-footer'>
             <button type="button" class="padraoBtn" data-bs-toggle="modal" data-bs-target="${dados[i].linkApli}">Aplicações</button>
         </div>
-        
         `
 
         rowDiscos.appendChild(newDiv)
@@ -6646,10 +6684,10 @@ async function sapatasFreio(){
             <h5 class="card-title">${dados[i].nome} ${dados[i].position}</h5>
             <h5 class="card-title">${dados[i].info}</h5>
             <p class="card-text">Linha ${dados[i].linha}</p>
-
+        </div>
+        <div class='card-footer'>
             <button type="button" class="padraoBtn" data-bs-toggle="modal" data-bs-target="${dados[i].linkApli}">Aplicações</button>
         </div>
-        
         `
 
         rowSapatas.appendChild(newDiv)
@@ -6812,9 +6850,11 @@ async function cilindrosFreio(){
             <h5 class="card-title">${dados[i].info}</h5>
             <p class="card-text">Linha ${dados[i].linha}</p>
 
+            
+        </div>
+        <div class='card-footer'>
             <button type="button" class="padraoBtn" data-bs-toggle="modal" data-bs-target="${dados[i].linkApli}">Aplicações</button>
         </div>
-        
         `
 
         rowCilindros.appendChild(newDiv)
@@ -7070,10 +7110,10 @@ async function tamboresFreio(){
             <h5 class="card-title">${dados[i].nome} ${dados[i].position}</h5>
             <h5 class="card-title">${dados[i].info}</h5>
             <p class="card-text">Linha ${dados[i].linha}</p>
-
+        </div>
+        <div class='card-footer'>
             <button type="button" class="padraoBtn" data-bs-toggle="modal" data-bs-target="${dados[i].linkApli}">Aplicações</button>
         </div>
-        
         `
 
         rowTamboresFreio.appendChild(newDiv)
@@ -7332,10 +7372,10 @@ async function reparosFreio(){
             <h5 class="card-title">${dados[i].nome} ${dados[i].position}</h5>
             <h5 class="card-title">${dados[i].info}</h5>
             <p class="card-text">Linha ${dados[i].linha}</p>
-
+        </div>
+        <div class='card-footer'>
             <button type="button" class="padraoBtn" data-bs-toggle="modal" data-bs-target="${dados[i].linkApli}">Aplicações</button>
         </div>
-        
         `
 
         rowReparosFreio.appendChild(newDiv)
@@ -7770,10 +7810,10 @@ async function cabosFreio(){
             <h5 class="card-title">${dados[i].nome} ${dados[i].Lado}</h5>
             <h5 class="card-title">${dados[i].info}</h5>
             <p class="card-text">Linha ${dados[i].linha}</p>
-
+        </div>
+        <div class='card-footer'>
             <button type="button" class="padraoBtn" data-bs-toggle="modal" data-bs-target="${dados[i].linkApli}">Aplicações</button>
         </div>
-        
         `
 
         rowCabos.appendChild(newDiv)
@@ -8055,10 +8095,10 @@ async function acessoriosFreio() {
             <h5 class="card-title">${dados[i].nome}</h5>
             <h5 class="card-title">${dados[i].info}</h5>
             <p class="card-text">Linha ${dados[i].linha}</p>
-
+        </div>
+        <div class='card-footer'>
             <button type="button" class="padraoBtn" data-bs-toggle="modal" data-bs-target="${dados[i].linkApli}">Aplicações</button>
         </div>
-        
         `
 
         rowAcessoriosFreio.appendChild(newDiv)
@@ -8224,10 +8264,10 @@ async function cabosVela(){
             <h5 class="card-title">${dados[i].nome}</h5>
             <h5 class="card-title">${dados[i].info}</h5>
             <p class="card-text">Linha ${dados[i].linha}</p>
-
+        </div>
+        <div class='card-footer'>
             <button type="button" class="padraoBtn" data-bs-toggle="modal" data-bs-target="${dados[i].linkApli}">Aplicações</button>
         </div>
-        
         `
 
         rowCabosVela.appendChild(newDiv)
@@ -8434,10 +8474,10 @@ async function velas(){
             <h5 class="card-title">${dados[i].nome}</h5>
             <h5 class="card-title">${dados[i].info}</h5>
             <p class="card-text">Linha ${dados[i].linha}</p>
-
+        </div>
+        <div class='card-footer'>
             <button type="button" class="padraoBtn" data-bs-toggle="modal" data-bs-target="${dados[i].linkApli}">Aplicações</button>
         </div>
-        
         `
 
         rowVelaIgnicao.appendChild(newDiv)
@@ -8598,10 +8638,10 @@ async function bobinas(){
             <h5 class="card-title">${dados[i].nome}</h5>
             <h5 class="card-title">${dados[i].info}</h5>
             <p class="card-text">Linha ${dados[i].linha}</p>
-
+        </div>
+        <div class='card-footer'>
             <button type="button" class="padraoBtn" data-bs-toggle="modal" data-bs-target="${dados[i].linkApli}">Aplicações</button>
         </div>
-        
         `
 
         rowBobinas.appendChild(newDiv)
@@ -8810,10 +8850,10 @@ async function modulosIgnicao(){
             <h5 class="card-title">${dados[i].nome}</h5>
             <h5 class="card-title">${dados[i].info}</h5>
             <p class="card-text">Linha ${dados[i].linha}</p>
-
+        </div>
+        <div class='card-footer'>
             <button type="button" class="padraoBtn" data-bs-toggle="modal" data-bs-target="${dados[i].linkApli}">Aplicações</button>
         </div>
-        
         `
 
         rowModoloIgnicao.appendChild(newDiv)
@@ -8944,7 +8984,6 @@ async function carsEapli29(dados){
 
 
 
-
 // SESSAO 09 
 
 let rowTensores = document.querySelector('#row-tensores')
@@ -8982,10 +9021,10 @@ async function tensores(){
             <h5 class="card-title">${dados[i].nome}</h5>
             <h5 class="card-title">${dados[i].info}</h5>
             <p class="card-text">Linha ${dados[i].linha}</p>
-
+        </div>
+        <div class='card-footer'>
             <button type="button" class="padraoBtn" data-bs-toggle="modal" data-bs-target="${dados[i].linkApli}">Aplicações</button>
         </div>
-        
         `
 
         rowTensores.appendChild(newDiv)
@@ -9166,7 +9205,6 @@ async function carsEapli30(dados){
 
 
 
-
 // adding correias Alternador
 async function correiaAlter(){
     const dado = await gettingApi()
@@ -9195,10 +9233,10 @@ async function correiaAlter(){
             <h5 class="card-title">${dados[i].nome}</h5>
             <h5 class="card-title">${dados[i].info}</h5>
             <p class="card-text">Linha ${dados[i].linha}</p>
-
+        </div>
+        <div class='card-footer'>
             <button type="button" class="padraoBtn" data-bs-toggle="modal" data-bs-target="${dados[i].linkApli}">Aplicações</button>
         </div>
-        
         `
 
         rowCorreiaAlter.appendChild(newDiv)
@@ -9615,10 +9653,10 @@ async function correiaDentada(){
             <h5 class="card-title">${dados[i].nome}</h5>
             <h5 class="card-title">${dados[i].info}</h5>
             <p class="card-text">Linha ${dados[i].linha}</p>
-
+        </div>
+        <div class='card-footer'>
             <button type="button" class="padraoBtn" data-bs-toggle="modal" data-bs-target="${dados[i].linkApli}">Aplicações</button>
         </div>
-        
         `
 
         rowCorreiaDent.appendChild(newDiv)
@@ -9820,7 +9858,8 @@ async function regVoltagem(){
             <h5 class="card-title">${dados[i].nome}</h5>
             <h5 class="card-title">${dados[i].info}</h5>
             <p class="card-text">Linha ${dados[i].linha}</p>
-
+        </div>
+        <div class='card-footer'>
             <button type="button" class="padraoBtn" data-bs-toggle="modal" data-bs-target="${dados[i].linkApli}">Aplicações</button>
         </div>
         
@@ -9952,7 +9991,6 @@ async function carsEapli33(dados){
 
 
 
-
 // adding estatores 
 async function estatores(){
 
@@ -9982,10 +10020,10 @@ async function estatores(){
             <h5 class="card-title">${dados[i].nome}</h5>
             <h5 class="card-title">${dados[i].info}</h5>
             <p class="card-text">Linha ${dados[i].linha}</p>
-
+        </div>
+        <div class='card-footer'>
             <button type="button" class="padraoBtn" data-bs-toggle="modal" data-bs-target="${dados[i].linkApli}">Aplicações</button>
         </div>
-        
         `
 
         rowEstator.appendChild(newDiv)
@@ -10195,10 +10233,10 @@ async function inpulsores(){
             <h5 class="card-title">${dados[i].nome}</h5>
             <h5 class="card-title">${dados[i].info}</h5>
             <p class="card-text">Linha ${dados[i].linha}</p>
-
+        </div>
+        <div class='card-footer'>
             <button type="button" class="padraoBtn" data-bs-toggle="modal" data-bs-target="${dados[i].linkApli}">Aplicações</button>
         </div>
-        
         `
 
         rowImpulsores.appendChild(newDiv)
@@ -10404,10 +10442,10 @@ async function portaEscovas(){
             <h5 class="card-title">${dados[i].nome}</h5>
             <h5 class="card-title">${dados[i].info}</h5>
             <p class="card-text">Linha ${dados[i].linha}</p>
-
+        </div>
+        <div class='card-footer'>
             <button type="button" class="padraoBtn" data-bs-toggle="modal" data-bs-target="${dados[i].linkApli}">Aplicações</button>
         </div>
-        
         `
 
         rowPortaEscovas.appendChild(newDiv)
@@ -10663,10 +10701,10 @@ async function acessoriosPart(){
             <h5 class="card-title">${dados[i].nome}</h5>
             <h5 class="card-title">${dados[i].info}</h5>
             <p class="card-text">Linha ${dados[i].linha}</p>
-
+        </div>
+        <div class='card-footer'>
             <button type="button" class="padraoBtn" data-bs-toggle="modal" data-bs-target="${dados[i].linkApli}">Aplicações</button>
         </div>
-        
         `
 
         rowAcessoriosPart.appendChild(newDiv)
@@ -10882,10 +10920,10 @@ async function bombasDagua(){
             <h5 class="card-title">${dados[i].nome}</h5>
             <h5 class="card-title">${dados[i].info}</h5>
             <p class="card-text">Linha ${dados[i].linha}</p>
-
+        </div>
+        <div class='card-footer'>
             <button type="button" class="padraoBtn" data-bs-toggle="modal" data-bs-target="${dados[i].linkApli}">Aplicações</button>
         </div>
-        
         `
 
         rowBombasDagua.appendChild(newDiv)
@@ -11092,10 +11130,10 @@ async function reservatorio(){
             <h5 class="card-title">${dados[i].nome}</h5>
             <h5 class="card-title">${dados[i].info}</h5>
             <p class="card-text">Linha ${dados[i].linha}</p>
-
+        </div>
+        <div class='card-footer'>
             <button type="button" class="padraoBtn" data-bs-toggle="modal" data-bs-target="${dados[i].linkApli}">Aplicações</button>
         </div>
-        
         `
 
         rowReservatorios.appendChild(newDiv)
@@ -11256,10 +11294,10 @@ async function valvulasTermo(){
             <h5 class="card-title">${dados[i].nome}</h5>
             <h5 class="card-title">${dados[i].info}</h5>
             <p class="card-text">Linha ${dados[i].linha}</p>
-
+        </div>
+        <div class='card-footer'>
             <button type="button" class="padraoBtn" data-bs-toggle="modal" data-bs-target="${dados[i].linkApli}">Aplicações</button>
         </div>
-        
         `
 
         rowValvulas.appendChild(newDiv)
@@ -11419,10 +11457,10 @@ async function ventoinhas(){
             <h5 class="card-title">${dados[i].nome}</h5>
             <h5 class="card-title">${dados[i].info}</h5>
             <p class="card-text">Linha ${dados[i].linha}</p>
-
+        </div>
+        <div class='card-footer'>
             <button type="button" class="padraoBtn" data-bs-toggle="modal" data-bs-target="${dados[i].linkApli}">Aplicações</button>
         </div>
-        
         `
 
         rowVentoinha.appendChild(newDiv)
@@ -11631,10 +11669,10 @@ async function canosDagua(){
             <h5 class="card-title">${dados[i].nome}</h5>
             <h5 class="card-title">${dados[i].info}</h5>
             <p class="card-text">Linha ${dados[i].linha}</p>
-
+        </div>
+        <div class='card-footer'>
             <button type="button" class="padraoBtn" data-bs-toggle="modal" data-bs-target="${dados[i].linkApli}">Aplicações</button>
         </div>
-        
         `
 
         rowCanos.appendChild(newDiv)
@@ -11920,7 +11958,8 @@ async function tubosDagua(){
             <h5 class="card-title">${dados[i].nome}</h5>
             <h5 class="card-title">${dados[i].info}</h5>
             <p class="card-text">Linha ${dados[i].linha}</p>
-
+        </div>
+        <div class='card-footer'>
             <button type="button" class="padraoBtn" data-bs-toggle="modal" data-bs-target="${dados[i].linkApli}">Aplicações</button>
         </div>
         
@@ -12085,10 +12124,10 @@ async function resistencias(){
             <h5 class="card-title">${dados[i].nome}</h5>
             <h5 class="card-title">${dados[i].info}</h5>
             <p class="card-text">Linha ${dados[i].linha}</p>
-
+        </div>
+        <div class='card-footer'>
             <button type="button" class="padraoBtn" data-bs-toggle="modal" data-bs-target="${dados[i].linkApli}">Aplicações</button>
         </div>
-        
         `
 
         rowResistencia.appendChild(newDiv)
@@ -12250,10 +12289,10 @@ async function acessoriosArref(){
             <h5 class="card-title">${dados[i].nome}</h5>
             <h5 class="card-title">${dados[i].info}</h5>
             <p class="card-text">Linha ${dados[i].linha}</p>
-
+        </div>
+        <div class='card-footer'>
             <button type="button" class="padraoBtn" data-bs-toggle="modal" data-bs-target="${dados[i].linkApli}">Aplicações</button>
         </div>
-        
         `
 
         rowAcessoriosArref.appendChild(newDiv)
@@ -12426,10 +12465,10 @@ async function bicos(){
             <h5 class="card-title">${dados[i].nome}</h5>
             <h5 class="card-title">${dados[i].info}</h5>
             <p class="card-text">Linha ${dados[i].linha}</p>
-
+        </div>
+        <div class='card-footer'>
             <button type="button" class="padraoBtn" data-bs-toggle="modal" data-bs-target="${dados[i].linkApli}">Aplicações</button>
         </div>
-        
         `
 
         rowBicos.appendChild(newDiv)
@@ -12593,10 +12632,10 @@ async function bombaCombustivel(){
             <h5 class="card-title">${dados[i].nome}</h5>
             <h5 class="card-title">${dados[i].info}</h5>
             <p class="card-text">Linha ${dados[i].linha}</p>
-
+        </div>
+        <div class='card-footer'>
             <button type="button" class="padraoBtn" data-bs-toggle="modal" data-bs-target="${dados[i].linkApli}">Aplicações</button>
         </div>
-        
         `
 
         rowBombaCombust.appendChild(newDiv)
@@ -12909,10 +12948,10 @@ async function flangesBomb(){
             <h5 class="card-title">${dados[i].nome}</h5>
             <h5 class="card-title">${dados[i].info}</h5>
             <p class="card-text">Linha ${dados[i].linha}</p>
-
+        </div>
+        <div class='card-footer'>
             <button type="button" class="padraoBtn" data-bs-toggle="modal" data-bs-target="${dados[i].linkApli}">Aplicações</button>
         </div>
-        
         `
 
         rowFlange.appendChild(newDiv)
@@ -13073,10 +13112,10 @@ async function acessoriosCombustivel(){
             <h5 class="card-title">${dados[i].nome}</h5>
             <h5 class="card-title">${dados[i].info}</h5>
             <p class="card-text">Linha ${dados[i].linha}</p>
-
+        </div>
+        <div class='card-footer'>
             <button type="button" class="padraoBtn" data-bs-toggle="modal" data-bs-target="${dados[i].linkApli}">Aplicações</button>
         </div>
-        
         `
 
         rowAcessoriosCombust.appendChild(newDiv)
@@ -13244,10 +13283,10 @@ async function discosEmbre(){
             <h5 class="card-title">${dados[i].nome}</h5>
             <h5 class="card-title">${dados[i].info}</h5>
             <p class="card-text">Linha ${dados[i].linha}</p>
-
+        </div>
+        <div class='card-footer'>
             <button type="button" class="padraoBtn" data-bs-toggle="modal" data-bs-target="${dados[i].linkApli}">Aplicações</button>
         </div>
-        
         `
 
         rowDiscosEmbre.appendChild(newDiv)
@@ -13409,10 +13448,10 @@ async function reparosTrambCambio(){
             <h5 class="card-title">${dados[i].nome}</h5>
             <h5 class="card-title">${dados[i].info}</h5>
             <p class="card-text">Linha ${dados[i].linha}</p>
-
+        </div>
+        <div class='card-footer'>
             <button type="button" class="padraoBtn" data-bs-toggle="modal" data-bs-target="${dados[i].linkApli}">Aplicações</button>
         </div>
-        
         `
 
         rowReparosCeT.appendChild(newDiv)
@@ -13585,10 +13624,10 @@ async function cubosRoda(){
             <h5 class="card-title">${dados[i].nome}</h5>
             <h5 class="card-title">${dados[i].info}</h5>
             <p class="card-text">Linha ${dados[i].linha}</p>
-
+        </div>
+        <div class='card-footer'>
             <button type="button" class="padraoBtn" data-bs-toggle="modal" data-bs-target="${dados[i].linkApli}">Aplicações</button>
         </div>
-        
         `
 
         rowCubos.appendChild(newDiv)
@@ -13750,10 +13789,10 @@ async function pontasEixo(){
             <h5 class="card-title">${dados[i].nome}</h5>
             <h5 class="card-title">${dados[i].info}</h5>
             <p class="card-text">Linha ${dados[i].linha}</p>
-
+        </div>
+        <div class='card-footer'>
             <button type="button" class="padraoBtn" data-bs-toggle="modal" data-bs-target="${dados[i].linkApli}">Aplicações</button>
         </div>
-        
         `
 
         rowPontas.appendChild(newDiv)
@@ -13913,10 +13952,10 @@ async function juntasHomo(){
             <h5 class="card-title">${dados[i].nome}</h5>
             <h5 class="card-title">${dados[i].info}</h5>
             <p class="card-text">Linha ${dados[i].linha}</p>
-
+        </div>
+        <div class='card-footer'>
             <button type="button" class="padraoBtn" data-bs-toggle="modal" data-bs-target="${dados[i].linkApli}">Aplicações</button>
         </div>
-        
         `
 
         rowJuntas.appendChild(newDiv)
@@ -14177,10 +14216,10 @@ async function rolamentoRoda(){
             <h5 class="card-title">${dados[i].nome}</h5>
             <h5 class="card-title">${dados[i].info}</h5>
             <p class="card-text">Linha ${dados[i].linha}</p>
-
+        </div>
+        <div class='card-footer'>
             <button type="button" class="padraoBtn" data-bs-toggle="modal" data-bs-target="${dados[i].linkApli}">Aplicações</button>
         </div>
-        
         `
 
         rowRolamentosRoda.appendChild(newDiv)
@@ -14444,7 +14483,8 @@ async function rolamentoDiversos(){
             <h5 class="card-title">${dados[i].nome}</h5>
             <h5 class="card-title">${dados[i].info}</h5>
             <p class="card-text">Linha ${dados[i].linha}</p>
-
+        </div>
+        <div class='card-footer'>
             <button type="button" class="padraoBtn" data-bs-toggle="modal" data-bs-target="${dados[i].linkApli}">Aplicações</button>
         </div>
         
@@ -14619,10 +14659,10 @@ async function bojos(){
             <h5 class="card-title">${dados[i].nome}</h5>
             <h5 class="card-title">${dados[i].info}</h5>
             <p class="card-text">Linha ${dados[i].linha}</p>
-
+        </div>
+        <div class='card-footer'>
             <button type="button" class="padraoBtn" data-bs-toggle="modal" data-bs-target="${dados[i].linkApli}">Aplicações</button>
         </div>
-        
         `
 
         rowBojos.appendChild(newDiv)
@@ -14906,10 +14946,10 @@ async function intermediarios(){
             <h5 class="card-title">${dados[i].nome}</h5>
             <h5 class="card-title">${dados[i].info}</h5>
             <p class="card-text">Linha ${dados[i].linha}</p>
-
+        </div>
+        <div class='card-footer'>
             <button type="button" class="padraoBtn" data-bs-toggle="modal" data-bs-target="${dados[i].linkApli}">Aplicações</button>
         </div>
-        
         `
 
         rowInter.appendChild(newDiv)
@@ -15193,10 +15233,10 @@ async function conxinsEscap(){
             <h5 class="card-title">${dados[i].nome} ${dados[i].position}</h5>
             <h5 class="card-title">${dados[i].info}</h5>
             <p class="card-text">Linha ${dados[i].linha}</p>
-
+        </div>
+        <div class='card-footer'>
             <button type="button" class="padraoBtn" data-bs-toggle="modal" data-bs-target="${dados[i].linkApli}">Aplicações</button>
         </div>
-        
         `
 
         rowCoxinsEscap.appendChild(newDiv)
@@ -15542,19 +15582,5 @@ async function acessoriosEscap(){
 
 
 //  FIM DA INTEGRAÇÃO DA API !!!
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 

@@ -26,8 +26,8 @@
 }
 .acabou:hover{
     opacity: 1 !important;
-    content: "Esgotado!";
 }
+
 .space-around-card{
     display: flex;
     justify-content: space-around;
@@ -35,6 +35,7 @@
 .space-around-card .card{
     margin-bottom: 20px;
 }
+
 .marcas{
     color: var(--marcas);
     font-weight: bold;
@@ -45,27 +46,9 @@
 }
 
 
-.card{
-    border: none;
-    border-radius: none;
-    transition: .6s ease-in-out;
-    background-color: transparent;
-    z-index: 5;
-}
 
-.card:hover{
-    border: 1px solid black;
-    transform: scale(1.05);
-    z-index: 1;
-    box-shadow: 2px 2px 10px black;
-}
 
-/* fades */
-/* #row-inicio-oleos{
-    position: relative;
-    overflow: hidden;
-} */
-
+/* fades of the cards */
 
 .fade-out-active{
     opacity: 0;
@@ -120,19 +103,17 @@
 }
 
 .myOffCanvas ul li a{
-   display: flex;
-   justify-content: center;
-   height: 100%;
-   align-items: center;
-   text-decoration: none;
-   font-weight: bold;
-   color: white;
-   text-shadow: 2px 2px 2px black;
-   font-size: 1.1rem;
-   
+    display: flex;
+    justify-content: center;
+    height: 100%;
+    align-items: center;
+    text-decoration: none;
+    font-weight: bold;
+    color: white;
+    text-shadow: 2px 2px 2px black;
+    font-size: 1.1rem;
 
 }
-
 
 
 #offcanvas-body{
@@ -175,6 +156,36 @@
     height: 100%;
     align-items: center;
     padding: 0;
+}
+
+/* SESSÕES (PAGES) */
+
+/* area oleos */
+#area-oleos{
+    display: none;
+}
+
+
+/* sessao filtros OLEO */
+#area-filtros{
+    display: none;
+}
+
+
+/* SESSAO FLUIDO FREIO */
+#area-oleo-freio{
+    display: none;
+}
+
+
+/* SESSAO FILTROS COMBUSTIVEL */
+#area-filtro-combus{
+    display: none;
+}
+
+/* SESSAO FILTROS DE AR */
+#area-filtro-ar{
+    display: none;
 }
 
 
@@ -257,7 +268,8 @@ footer{
     margin-bottom: 2.5rem;
     
 }
-/*  */
+
+
 .box-footer h5{ 
     color: #0cc1d5;
     text-shadow: 2px 2px 2px black;
