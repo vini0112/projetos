@@ -129,7 +129,7 @@ const api = 'allpeaces.json'
 async function gettingApi(){
     const resp = await fetch(api)
     const dado = await resp.json()
-    // console.log(dado.oleos[1].marca)
+    
     return dado
     
     
@@ -141,7 +141,6 @@ gettingApi()
 // SESSÃO 00 
 const estruturaOleo = document.querySelector('#row-inicio-oleos')
 const estruturaBatery = document.querySelector('#row-inicio-baterias')
-
 
 
 // adding oleos
@@ -160,6 +159,7 @@ async function addCardsOleo(){
         // oleoCards.classList.add('fade-in-active')
         oleoCards.classList.add('projeto-oleo')
         oleoCards.classList.add(dadosOleo[i].marca)
+        oleoCards.id = dadosOleo[i].id
 
         if(dadosOleo[i].qtd == 0){
             oleoCards.classList.add('acabou')
@@ -173,24 +173,23 @@ async function addCardsOleo(){
             <h5 class="card-title">${dadosOleo[i].nome} ${dadosOleo[i].marca} ${dadosOleo[i].viscosidade}</h5>
             <p class="card-text">${dadosOleo[i].info}</p>
         </div>
-        <div class='card-footer'>
+        <div class='card-footer' >
             <button class="btnBuyAlone">
-            <span class="priceBuy">${dadosOleo[i].price.toFixed(2).replace('.',',')}</span>
-            <span class="txtBuy">Comprar</span>
+                <span class="priceBuy">${dadosOleo[i].price.toFixed(2).replace('.',',')}</span>
+                <span class="txtBuy">Comprar</span>
             </button>
         </div>
 
-
         `
 
-
+        
         estruturaOleo.appendChild(oleoCards)
         
     }
 
     filtroIniciar()
-    
 }
+
 
 // funcao filtrar oleos da primeira pagina
 function filtroIniciar(){
@@ -418,6 +417,7 @@ function filtroIniciar(){
 
 
 
+
 // adding batteries
 async function addBattery(){
     const dado = await gettingApi()
@@ -431,6 +431,8 @@ async function addBattery(){
         newDiv.classList.add('col-md-3')
         newDiv.classList.add('card')
         newDiv.classList.add(dadoBatery[i].marca)
+        newDiv.id = dadoBatery[i].id
+
 
         if(dadoBatery[i].qtd == 0){
             newDiv.classList.add('acabou')
@@ -482,6 +484,8 @@ async function addOleo2(){
         oleoCards.classList.add('card')
         oleoCards.classList.add('projeto-oleo')
         oleoCards.classList.add(dadosOleo[i].marca)
+        oleoCards.id = dadosOleo[i].id
+
 
         if(dadosOleo[i].qtd == 0){
             oleoCards.classList.add('acabou')
@@ -495,7 +499,7 @@ async function addOleo2(){
             <p class="card-text">${dadosOleo[i].info}</p>
         </div>
         <div class='card-footer'>
-            <button class="btnBuyAlone">
+            <button class="btnBuyAlone" id="${i}">
             <span class="priceBuy">${dadosOleo[i].price.toFixed(2).replace('.',',')}</span>
             <span class="txtBuy">Comprar</span>
             </button>
@@ -740,6 +744,7 @@ async function addFluidos(){
         newDiv.classList.add('col-md-3')
         newDiv.classList.add('card')
         newDiv.classList.add(dadoFluido[i].marca)
+        newDiv.id = dadoFluido[i].id
 
         if(dadoFluido[i].qtd == 0){
             newDiv.classList.add('acabou')
@@ -750,7 +755,7 @@ async function addFluidos(){
         <h5 class="card-title">${dadoFluido[i].nome} ${dadoFluido[i].viscosidade}</h5>
 
         <div class='card-footer'>
-            <button class="btnBuyAlone">
+            <button class="btnBuyAlone" id="${i}">
             <span class="priceBuy">${dadoFluido[i].price.toFixed(2).replace('.',',')}</span>
             <span class="txtBuy">Comprar</span>
             </button>
@@ -788,6 +793,7 @@ async function addFiltroOleoSimp(){
         newDiv.classList.add('card')
         newDiv.classList.add('projeto-filtro-oleo')
         newDiv.classList.add(dados[i].linhaCode)
+        newDiv.id = dados[i].id
 
         if(dados[i].qtd == 0){
             newDiv.classList.add('acabou')
@@ -812,8 +818,8 @@ async function addFiltroOleoSimp(){
             <button type="button" class="padraoBtn" data-bs-toggle="modal" data-bs-target="${dados[i].linkApli}"><span class="btnTxtAplicacoes">Aplicações</span></button>
 
             <button class="btnBuy">
-            <span class="priceBuy">${dados[i].price.toFixed(2).replace('.',',')}</span>
-            <span class="txtBuy">Comprar</span>
+                <span class="priceBuy">${dados[i].price.toFixed(2).replace('.',',')}</span>
+                <span class="txtBuy">Comprar</span>
             </button>
         </div>
         
@@ -1311,6 +1317,8 @@ async function addFiltroOleoPesado(){
         newDiv.classList.add('card')
         newDiv.classList.add('filtros-pesados')
         newDiv.classList.add(dados[i].linhaCode)
+        newDiv.id = dados[i].id
+
 
         if(dados[i].qtd == 0){
             newDiv.classList.add('acabou')
@@ -1760,6 +1768,8 @@ async function filtroCombustSimples() {
         newDiv.classList.add('card')
         newDiv.classList.add('filtro-simples')
         newDiv.classList.add(dados[i].linhaCode)
+        newDiv.id = dados[i].id
+
 
         if(dados[i].qtd == 0){
             newDiv.classList.add('acabou')
@@ -2186,6 +2196,8 @@ async function filtroCombustPesado(){
         newDiv.classList.add('card')
         newDiv.classList.add('filtro-pesado')
         newDiv.classList.add(dados[i].linhaCode)
+        newDiv.id = dados[i].id
+
 
         if(dados[i].qtd == 0){
             newDiv.classList.add('acabou')
@@ -2616,6 +2628,8 @@ async function filtroArMotor(){
         newDiv.classList.add('card')
         newDiv.classList.add('filtro-ar-motor')
         newDiv.classList.add(dados[i].linhaCode)
+        newDiv.id = dados[i].id
+
 
         if(dados[i].qtd == 0){
             newDiv.classList.add('acabou')
@@ -3038,6 +3052,8 @@ async function filtroArCabine(){
         newDiv.classList.add('col-md-3')
         newDiv.classList.add('card')
         newDiv.classList.add(dados[i].linhaCode)
+        newDiv.id = dados[i].id
+
 
         if(dados[i].qtd == 0){
             newDiv.classList.add('acabou')
@@ -3203,6 +3219,8 @@ async function mangotesAr(){
         newDiv.classList.add('col-md-3')
         newDiv.classList.add('card')
         newDiv.classList.add(dados[i].linhaCode)
+        newDiv.id = dados[i].id
+
 
         if(dados[i].qtd == 0){
             newDiv.classList.add('acabou')
@@ -3373,6 +3391,8 @@ async function terminaisDirecao(){
         newDiv.classList.add('col-md-3')
         newDiv.classList.add('card')
         newDiv.classList.add(dados[i].linhaCode)
+        newDiv.id = dados[i].id
+
 
         if(dados[i].qtd == 0){
             newDiv.classList.add('acabou')
@@ -3684,6 +3704,8 @@ async function barraAxiais(){
         newDiv.classList.add('col-md-3')
         newDiv.classList.add('card')
         newDiv.classList.add(dados[i].linhaCode)
+        newDiv.id = dados[i].id
+
 
         if(dados[i].qtd == 0){
             newDiv.classList.add('acabou')
@@ -4100,6 +4122,8 @@ async function estabilazadores(){
         newDiv.classList.add('col-md-3')
         newDiv.classList.add('card')
         newDiv.classList.add(dados[i].linhaCode)
+        newDiv.id = dados[i].id
+
 
         if(dados[i].qtd == 0){
             newDiv.classList.add('acabou')
@@ -4388,6 +4412,8 @@ async function buchaCaixaDirecao(){
         newDiv.classList.add('col-md-3')
         newDiv.classList.add('card')
         newDiv.classList.add(dados[i].linhaCode)
+        newDiv.id = dados[i].id
+
 
         if(dados[i].qtd == 0){
             newDiv.classList.add('acabou')
@@ -4565,6 +4591,8 @@ async function batedores(){
         newDiv.classList.add('col-md-3')
         newDiv.classList.add('card')
         newDiv.classList.add(dados[i].linhaCode)
+        newDiv.id = dados[i].id
+
 
         if(dados[i].qtd == 0){
             newDiv.classList.add('acabou')
@@ -4948,6 +4976,8 @@ async function pivos(){
         newDiv.classList.add('col-md-3')
         newDiv.classList.add('card')
         newDiv.classList.add(dados[i].linhaCode)
+        newDiv.id = dados[i].id
+
 
         if(dados[i].qtd == 0){
             newDiv.classList.add('acabou')
@@ -5265,6 +5295,8 @@ async function amortecedores(){
         newDiv.classList.add('col-md-3')
         newDiv.classList.add('card')
         newDiv.classList.add(dados[i].linhaCode)
+        newDiv.id = dados[i].id
+
 
         if(dados[i].qtd == 0){
             newDiv.classList.add('acabou')
@@ -5427,6 +5459,8 @@ async function buchasBandejaSusp(){
         newDiv.classList.add('col-md-3')
         newDiv.classList.add('card')
         newDiv.classList.add(dados[i].linhaCode)
+        newDiv.id = dados[i].id
+
 
         if(dados[i].qtd == 0){
             newDiv.classList.add('acabou')
@@ -5793,6 +5827,8 @@ async function coxinsAmort(){
         newDiv.classList.add('col-md-3')
         newDiv.classList.add('card')
         newDiv.classList.add(dados[i].linhaCode)
+        newDiv.id = dados[i].id
+
 
         if(dados[i].qtd == 0){
             newDiv.classList.add('acabou')
@@ -5958,6 +5994,8 @@ async function bieletas(){
         newDiv.classList.add('col-md-3')
         newDiv.classList.add('card')
         newDiv.classList.add(dados[i].linhaCode)
+        newDiv.id = dados[i].id
+
 
         if(dados[i].qtd == 0){
             newDiv.classList.add('acabou')
@@ -6138,6 +6176,8 @@ async function pastilhasFreio(){
         newDiv.classList.add('col-md-3')
         newDiv.classList.add('card')
         newDiv.classList.add(dados[i].linhaCode)
+        newDiv.id = dados[i].id
+
 
         if(dados[i].qtd == 0){
             newDiv.classList.add('acabou')
@@ -6616,6 +6656,8 @@ async function discosFreio(){
         newDiv.classList.add('col-md-3')
         newDiv.classList.add('card')
         newDiv.classList.add(dados[i].linhaCode)
+        newDiv.id = dados[i].id
+
 
         if(dados[i].qtd == 0){
             newDiv.classList.add('acabou')
@@ -6783,6 +6825,8 @@ async function sapatasFreio(){
         newDiv.classList.add('col-md-3')
         newDiv.classList.add('card')
         newDiv.classList.add(dados[i].linhaCode)
+        newDiv.id = dados[i].id
+
 
         if(dados[i].qtd == 0){
             newDiv.classList.add('acabou')
@@ -6953,6 +6997,8 @@ async function cilindrosFreio(){
         newDiv.classList.add('col-md-3')
         newDiv.classList.add('card')
         newDiv.classList.add(dados[i].linhaCode)
+        newDiv.id = dados[i].id
+
 
         if(dados[i].qtd == 0){
             newDiv.classList.add('acabou')
@@ -7219,6 +7265,8 @@ async function tamboresFreio(){
         newDiv.classList.add('col-md-3')
         newDiv.classList.add('card')
         newDiv.classList.add(dados[i].linhaCode)
+        newDiv.id = dados[i].id
+
 
         if(dados[i].qtd == 0){
             newDiv.classList.add('acabou')
@@ -7486,6 +7534,8 @@ async function reparosFreio(){
         newDiv.classList.add('col-md-3')
         newDiv.classList.add('card')
         newDiv.classList.add(dados[i].linhaCode)
+        newDiv.id = dados[i].id
+
 
         if(dados[i].qtd == 0){
             newDiv.classList.add('acabou')
@@ -7929,6 +7979,8 @@ async function cabosFreio(){
         newDiv.classList.add('col-md-3')
         newDiv.classList.add('card')
         newDiv.classList.add(dados[i].linhaCode)
+        newDiv.id = dados[i].id
+
 
         if(dados[i].qtd == 0){
             newDiv.classList.add('acabou')
@@ -8219,6 +8271,8 @@ async function acessoriosFreio() {
         newDiv.classList.add('col-md-3')
         newDiv.classList.add('card')
         newDiv.classList.add(dados[i].linhaCode)
+        newDiv.id = dados[i].id
+
 
         if(dados[i].qtd == 0){
             newDiv.classList.add('acabou')
@@ -8393,6 +8447,8 @@ async function cabosVela(){
         newDiv.classList.add('col-md-3')
         newDiv.classList.add('card')
         newDiv.classList.add(dados[i].linhaCode)
+        newDiv.id = dados[i].id
+
 
         if(dados[i].qtd == 0){
             newDiv.classList.add('acabou')
@@ -8608,6 +8664,8 @@ async function velas(){
         newDiv.classList.add('col-md-3')
         newDiv.classList.add('card')
         newDiv.classList.add(dados[i].linhaCode)
+        newDiv.id = dados[i].id
+
 
         if(dados[i].qtd == 0){
             newDiv.classList.add('acabou')
@@ -8777,6 +8835,8 @@ async function bobinas(){
         newDiv.classList.add('col-md-3')
         newDiv.classList.add('card')
         newDiv.classList.add(dados[i].linhaCode)
+        newDiv.id = dados[i].id
+
 
         if(dados[i].qtd == 0){
             newDiv.classList.add('acabou')
@@ -8994,6 +9054,8 @@ async function modulosIgnicao(){
         newDiv.classList.add('col-md-3')
         newDiv.classList.add('card')
         newDiv.classList.add(dados[i].linhaCode)
+        newDiv.id = dados[i].id
+
 
         if(dados[i].qtd == 0){
             newDiv.classList.add('acabou')
@@ -9170,6 +9232,8 @@ async function tensores(){
         newDiv.classList.add('col-md-3')
         newDiv.classList.add('card')
         newDiv.classList.add(dados[i].linhaCode)
+        newDiv.id = dados[i].id
+
 
         if(dados[i].qtd == 0){
             newDiv.classList.add('acabou')
@@ -9387,6 +9451,8 @@ async function correiaAlter(){
         newDiv.classList.add('col-md-3')
         newDiv.classList.add('card')
         newDiv.classList.add(dados[i].linhaCode)
+        newDiv.id = dados[i].id
+
 
         if(dados[i].qtd == 0){
             newDiv.classList.add('acabou')
@@ -9812,6 +9878,8 @@ async function correiaDentada(){
         newDiv.classList.add('col-md-3')
         newDiv.classList.add('card')
         newDiv.classList.add(dados[i].linhaCode)
+        newDiv.id = dados[i].id
+
 
         if(dados[i].qtd == 0){
             newDiv.classList.add('acabou')
@@ -10022,6 +10090,8 @@ async function regVoltagem(){
         newDiv.classList.add('col-md-3')
         newDiv.classList.add('card')
         newDiv.classList.add(dados[i].linhaCode)
+        newDiv.id = dados[i].id
+
 
         if(dados[i].qtd == 0){
             newDiv.classList.add('acabou')
@@ -10189,6 +10259,8 @@ async function estatores(){
         newDiv.classList.add('col-md-3')
         newDiv.classList.add('card')
         newDiv.classList.add(dados[i].linhaCode)
+        newDiv.id = dados[i].id
+
 
         if(dados[i].qtd == 0){
             newDiv.classList.add('acabou')
@@ -10407,6 +10479,8 @@ async function inpulsores(){
         newDiv.classList.add('col-md-3')
         newDiv.classList.add('card')
         newDiv.classList.add(dados[i].linhaCode)
+        newDiv.id = dados[i].id
+
 
         if(dados[i].qtd == 0){
             newDiv.classList.add('acabou')
@@ -10621,6 +10695,8 @@ async function portaEscovas(){
         newDiv.classList.add('col-md-3')
         newDiv.classList.add('card')
         newDiv.classList.add(dados[i].linhaCode)
+        newDiv.id = dados[i].id
+
 
         if(dados[i].qtd == 0){
             newDiv.classList.add('acabou')
@@ -10885,6 +10961,8 @@ async function acessoriosPart(){
         newDiv.classList.add('col-md-3')
         newDiv.classList.add('card')
         newDiv.classList.add(dados[i].linhaCode)
+        newDiv.id = dados[i].id
+
 
         if(dados[i].qtd == 0){
             newDiv.classList.add('acabou')
@@ -11109,6 +11187,8 @@ async function bombasDagua(){
         newDiv.classList.add('col-md-3')
         newDiv.classList.add('card')
         newDiv.classList.add(dados[i].linhaCode)
+        newDiv.id = dados[i].id
+
 
         if(dados[i].qtd == 0){
             newDiv.classList.add('acabou')
@@ -11324,6 +11404,8 @@ async function reservatorio(){
         newDiv.classList.add('col-md-3')
         newDiv.classList.add('card')
         newDiv.classList.add(dados[i].linhaCode)
+        newDiv.id = dados[i].id
+
 
         if(dados[i].qtd == 0){
             newDiv.classList.add('acabou')
@@ -11493,6 +11575,8 @@ async function valvulasTermo(){
         newDiv.classList.add('col-md-3')
         newDiv.classList.add('card')
         newDiv.classList.add(dados[i].linhaCode)
+        newDiv.id = dados[i].id
+
 
         if(dados[i].qtd == 0){
             newDiv.classList.add('acabou')
@@ -11661,6 +11745,8 @@ async function ventoinhas(){
         newDiv.classList.add('col-md-3')
         newDiv.classList.add('card')
         newDiv.classList.add(dados[i].linhaCode)
+        newDiv.id = dados[i].id
+
 
         if(dados[i].qtd == 0){
             newDiv.classList.add('acabou')
@@ -11878,6 +11964,8 @@ async function canosDagua(){
         newDiv.classList.add('col-md-3')
         newDiv.classList.add('card')
         newDiv.classList.add(dados[i].linhaCode)
+        newDiv.id = dados[i].id
+
 
         if(dados[i].qtd == 0){
             newDiv.classList.add('acabou')
@@ -12172,6 +12260,8 @@ async function tubosDagua(){
         newDiv.classList.add('col-md-3')
         newDiv.classList.add('card')
         newDiv.classList.add(dados[i].linhaCode)
+        newDiv.id = dados[i].id
+
 
         if(dados[i].qtd == 0){
             newDiv.classList.add('acabou')
@@ -12343,6 +12433,8 @@ async function resistencias(){
         newDiv.classList.add('col-md-3')
         newDiv.classList.add('card')
         newDiv.classList.add(dados[i].linhaCode)
+        newDiv.id = dados[i].id
+
 
         if(dados[i].qtd == 0){
             newDiv.classList.add('acabou')
@@ -12513,6 +12605,8 @@ async function acessoriosArref(){
         newDiv.classList.add('col-md-3')
         newDiv.classList.add('card')
         newDiv.classList.add(dados[i].linhaCode)
+        newDiv.id = dados[i].id
+
 
         if(dados[i].qtd == 0){
             newDiv.classList.add('acabou')
@@ -12694,6 +12788,8 @@ async function bicos(){
         newDiv.classList.add('col-md-3')
         newDiv.classList.add('card')
         newDiv.classList.add(dados[i].linhaCode)
+        newDiv.id = dados[i].id
+
 
         if(dados[i].qtd == 0){
             newDiv.classList.add('acabou')
@@ -12866,6 +12962,8 @@ async function bombaCombustivel(){
         newDiv.classList.add('col-md-3')
         newDiv.classList.add('card')
         newDiv.classList.add(dados[i].linhaCode)
+        newDiv.id = dados[i].id
+
 
         if(dados[i].qtd == 0){
             newDiv.classList.add('acabou')
@@ -13187,6 +13285,8 @@ async function flangesBomb(){
         newDiv.classList.add('col-md-3')
         newDiv.classList.add('card')
         newDiv.classList.add(dados[i].linhaCode)
+        newDiv.id = dados[i].id
+
 
         if(dados[i].qtd == 0){
             newDiv.classList.add('acabou')
@@ -13356,6 +13456,8 @@ async function acessoriosCombustivel(){
         newDiv.classList.add('col-md-3')
         newDiv.classList.add('card')
         newDiv.classList.add(dados[i].linhaCode)
+        newDiv.id = dados[i].id
+
 
         if(dados[i].qtd == 0){
             newDiv.classList.add('acabou')
@@ -13532,6 +13634,8 @@ async function discosEmbre(){
         newDiv.classList.add('col-md-3')
         newDiv.classList.add('card')
         newDiv.classList.add(dados[i].linhaCode)
+        newDiv.id = dados[i].id
+
 
         if(dados[i].qtd == 0){
             newDiv.classList.add('acabou')
@@ -13702,6 +13806,8 @@ async function reparosTrambCambio(){
         newDiv.classList.add('col-md-3')
         newDiv.classList.add('card')
         newDiv.classList.add(dados[i].linhaCode)
+        newDiv.id = dados[i].id
+
 
         if(dados[i].qtd == 0){
             newDiv.classList.add('acabou')
@@ -13883,6 +13989,8 @@ async function cubosRoda(){
         newDiv.classList.add('col-md-3')
         newDiv.classList.add('card')
         newDiv.classList.add(dados[i].linhaCode)
+        newDiv.id = dados[i].id
+
 
         if(dados[i].qtd == 0){
             newDiv.classList.add('acabou')
@@ -14053,6 +14161,8 @@ async function pontasEixo(){
         newDiv.classList.add('col-md-3')
         newDiv.classList.add('card')
         newDiv.classList.add(dados[i].linhaCode)
+        newDiv.id = dados[i].id
+
 
         if(dados[i].qtd == 0){
             newDiv.classList.add('acabou')
@@ -14221,6 +14331,8 @@ async function juntasHomo(){
         newDiv.classList.add('col-md-3')
         newDiv.classList.add('card')
         newDiv.classList.add(dados[i].linhaCode)
+        newDiv.id = dados[i].id
+
 
         if(dados[i].qtd == 0){
             newDiv.classList.add('acabou')
@@ -14490,6 +14602,8 @@ async function rolamentoRoda(){
         newDiv.classList.add('col-md-3')
         newDiv.classList.add('card')
         newDiv.classList.add(dados[i].linhaCode)
+        newDiv.id = dados[i].id
+
 
         if(dados[i].qtd == 0){
             newDiv.classList.add('acabou')
@@ -14762,6 +14876,8 @@ async function rolamentoDiversos(){
         newDiv.classList.add('col-md-3')
         newDiv.classList.add('card')
         newDiv.classList.add(dados[i].linhaCode)
+        newDiv.id = dados[i].id
+
 
         if(dados[i].qtd == 0){
             newDiv.classList.add('acabou')
@@ -14943,6 +15059,8 @@ async function bojos(){
         newDiv.classList.add('col-md-3')
         newDiv.classList.add('card')
         newDiv.classList.add(dados[i].linhaCode)
+        newDiv.id = dados[i].id
+
 
         if(dados[i].qtd == 0){
             newDiv.classList.add('acabou')
@@ -15235,6 +15353,8 @@ async function intermediarios(){
         newDiv.classList.add('col-md-3')
         newDiv.classList.add('card')
         newDiv.classList.add(dados[i].linhaCode)
+        newDiv.id = dados[i].id
+
 
         if(dados[i].qtd == 0){
             newDiv.classList.add('acabou')
@@ -15527,6 +15647,8 @@ async function conxinsEscap(){
         newDiv.classList.add('col-md-3')
         newDiv.classList.add('card')
         newDiv.classList.add(dados[i].linhaCode)
+        newDiv.id = dados[i].id
+
 
         if(dados[i].qtd == 0){
             newDiv.classList.add('acabou')
@@ -15868,6 +15990,8 @@ async function acessoriosEscap(){
         newDiv.classList.add('col-md-3')
         newDiv.classList.add('card')
         newDiv.classList.add(dados[i].linhaCode)
+        newDiv.id = dados[i].id
+
 
         if(dados[i].qtd == 0){
             newDiv.classList.add('acabou')
@@ -15885,6 +16009,12 @@ async function acessoriosEscap(){
             <p class="card-text">Linha ${dados[i].linha}</p>
 
         </div>
+        <div class='card-footer'>
+            <button class="btnBuyAlone">
+                <span class="priceBuy">${dados[i].price.toFixed(2).replace('.',',')}</span>
+                <span class="txtBuy">Comprar</span>
+            </button>
+        </div>
         
         `
 
@@ -15895,7 +16025,79 @@ async function acessoriosEscap(){
 
 
 
-
 //  FIM DA INTEGRAÇÃO DA API !!!
+
+
+
+
+// CART SHOPPING
+
+let listCards = []
+let carts = []
+
+
+let cartPart = document.querySelector('.cartPart')
+
+// cartPart.addEventListener('click', () =>{
+//     body.classList.toggle('activingCart')
+// })
+
+
+
+// inside cart shopping
+let listaDoCart = document.querySelector('.listCart')
+let iconQtdPecas = document.querySelector('.qtdPecas')
+
+
+
+// Capturando Index dos produtos
+document.addEventListener('click', (event) =>{
+    let positionClicked = event.target
+
+    if(positionClicked.classList.contains('btnBuyAlone') || positionClicked.classList.contains('btnBuy')){
+        const product_id = positionClicked.closest('.card').id
+        // alert(product_id)
+
+        addToCart(product_id)
+    }
+
+})
+
+
+
+function addToCart(product_id){
+    let positionThisProductInCart = carts.findIndex((value) => value.product_id == product_id)
+
+    if(carts.length <= 0){
+        carts = [
+            {
+                product_id: product_id,
+                quantity: 1
+            }
+        ]
+    }else if(positionThisProductInCart < 0){
+        carts.push(
+            {
+                product_id: product_id,
+                quantity: 1
+            }
+        )
+    }else{
+        carts[positionThisProductInCart].quantity = carts[positionThisProductInCart].quantity + 1
+    }
+
+    console.log(carts)
+}
+
+
+
+
+
+
+
+let listCart  = document.querySelector('.listCart')
+
+
+
 
 

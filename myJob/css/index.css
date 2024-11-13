@@ -13,6 +13,7 @@
     --corDropdown:#06bbaf;
     --btnApli: #0688c4;
     --corMontadoras: #06aaf6;
+    --corCart: #234d8b;
 }
 body{
     position: relative;
@@ -98,9 +99,6 @@ body{
     justify-content: space-between;
 }
 
-#logo{
-    margin-right: 25px;
-}
 
 
 #title-princ{
@@ -108,8 +106,38 @@ body{
     color: white;
     font-weight: bold;
     text-shadow: 1px 1px 1px black;
-    font-size: 1.6rem;
+    font-size: 2.2rem;
 }
+
+.cartPart{
+    position: relative;
+    cursor: pointer;
+}
+.qtdPecas{
+    background-color: red;
+    height: 22px;
+    width: 22px;
+    border-radius: 50%;
+    font-weight: bold;
+    font-size: 1rem;
+    color: white;
+
+    position: absolute;
+    left: 40%;
+    top: 50%;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#cartShop{
+    color: white;
+    margin-right: 20px;
+    text-shadow: 2px 2px 2px black;
+    font-size: 2.3rem;
+}
+
 #collapsee{
     margin-right: 15px;
     
@@ -126,6 +154,71 @@ body{
 #corpo-dropdown a{
     text-align: center;
 }
+
+/* aside cart shopping */
+
+.cartStructure{
+    position: absolute;
+    width: 300px;
+    height: 76vh;
+    left: 100%;
+    top: 4.3%;
+    bottom: 0;
+    z-index: 2;
+    transition: .7s ease-in-out;
+    background-color: var(--corCart);
+    
+}
+.cartStructure h4{
+    color: white;
+}
+.listCart{
+    display: flex;
+}
+
+.checkout{
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+}
+.checkout div{
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+.checkout .total{
+    background-color: green;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    
+}
+.checkout .total .valorCompra{
+    font-weight: bold;
+    font-size: 1.1rem;
+}
+.checkout .total .txtCompra{
+    font-weight: bold;
+    font-size: 1rem;
+}
+
+.checkout .closeShopping{
+    background-color: red;
+    color: white;
+    font-weight: bold;
+    font-size: 1rem;
+}
+
+
+
+.activingCart .cartStructure{
+    left: calc(100% - 300px);
+}
+
 
 /* fast search */
 #estrutura-fast-src{
@@ -310,12 +403,14 @@ body{
     text-shadow: 2px 2px 3px black;
     font-weight: bold;
     font-size: 1.1rem;
+    pointer-events: none;
 }
 .txtBuy{
     color: white;
     text-shadow: 2px 2px 3px black;
     font-weight: bold;
     font-size: 1rem;
+    pointer-events: none;
 }
 
 .btnTxtAplicacoes{

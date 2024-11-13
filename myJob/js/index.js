@@ -2,7 +2,6 @@
 // onload 
 document.addEventListener('DOMContentLoaded', () =>{
 
-    //alert(`Sistema ainda em manutenção`)
     // FUCAO AO CLICAR NO TITULO PRINCIPAL
 
     let allSessoes = document.querySelectorAll('main .sessao')
@@ -31,38 +30,31 @@ document.addEventListener('DOMContentLoaded', () =>{
 
 // funcao das sessoes da pagina
 function mostrarInfoFastSearch(){
-    // all links A clicando no LI
+    // all links clicando no (LI)
     let allSetLinks = document.querySelectorAll(`.dropdown-menu .setLink`)
     //console.log(allSetLinks)
 
-    // all links dos filtros clicando no LI
+    // all links dos filtros clicando no (LI)
     let allLinksFiltros = document.querySelectorAll('#drop-filtro .btnFiltros')
     //console.log(allLinksFiltros)
-
-
 
 
     
     // SESSOES
     let allSessoes = document.querySelectorAll('main .sessao')
-    //console.log(allSessoes)
 
     // SEM OS DROPS-DOWN
     let estruturasNAV = document.querySelectorAll('#estrutura-fast-src .estrutura')
-    //console.log(estruturasNAV)
-
 
     // DROPS-DOWN - filtros
     let allLinkDrop = document.querySelectorAll(`.dropdown-menu .dropdown-link`)
-    //console.log(allLinkDrop)
 
     // DROPS de todos os departamento
     let allDepart = document.querySelectorAll('.dropdown-menu .no-mobile')
-    //console.log(allDepart)
 
 
 
-    // ACAO DOS DROPS-DOWN -filtros
+    // ACAO DOS DROPS-DOWN - filtros
 
     // mostrando filtros de oleos 
     allLinkDrop[0].addEventListener(`click`, () =>{
@@ -103,9 +95,7 @@ function mostrarInfoFastSearch(){
         }
     })
 
-    
 
-    
 
 
     // ACAO DOS LINKS SEM DROP-DOWN
@@ -149,8 +139,6 @@ function mostrarInfoFastSearch(){
             }
             
         }
-
-        
     })
 
     // mostrando sistema de freios
@@ -195,11 +183,9 @@ function mostrarInfoFastSearch(){
             allSessoes[c].style.display='none'
             allSessoes[10].style.display='block'
 
-
             if(allSetLinks[5]){
                 window.location.href = '#area-sistema-partida'
             }
-           
         }
     })
 
@@ -208,7 +194,6 @@ function mostrarInfoFastSearch(){
         for(let c = 0;c < allSessoes.length;c++){
             allSessoes[c].style.display='none'
             allSessoes[11].style.display='block'
-
 
             if(allSetLinks[6]){
                 window.location.href = '#area-arrefecimento'
@@ -221,7 +206,6 @@ function mostrarInfoFastSearch(){
         for(let c = 0;c < allSessoes.length;c++){
             allSessoes[c].style.display='none'
             allSessoes[12].style.display='block'
-
 
             if(allSetLinks[7]){
                 window.location.href = '#area-combustivel'
@@ -269,8 +253,6 @@ function mostrarInfoFastSearch(){
         }
     })
     
-
-    
 }
 
 
@@ -280,7 +262,7 @@ function mostrarInfoFastSearch(){
 document.addEventListener('DOMContentLoaded', () =>{
 
     let myOffCanvas = document.querySelectorAll('.myOffCanvas')
-    //console.log(myOffCanvas)
+
 
     let bsOffCanvas = new bootstrap.Offcanvas(myOffCanvas[0]);
     let bsOffCanvas2 = new bootstrap.Offcanvas(myOffCanvas[1]);
@@ -394,13 +376,6 @@ document.addEventListener('DOMContentLoaded', () =>{
         bsOffCanvas12.toggle()
     })
 
-    
-
-    // document.querySelector('.btn-open-offcanvas').addEventListener('click', (e) =>{
-    //     e.preventDefault();
-    //     e.stopPropagation();
-    //     bsOffCanvas.toggle();
-    // })
 
 })
 
@@ -408,11 +383,10 @@ document.addEventListener('DOMContentLoaded', () =>{
 // links dos carousel banners
 function carouselBanners(){
     const btnsBanner = document.querySelectorAll('.carousel-item .link-banner')
-    //console.log(btnsBanner)
 
     // SESSOES
     let allSessoes = document.querySelectorAll('main .sessao')
-    //console.log(allSessoes)
+    
 
     btnsBanner[0].addEventListener('click', () =>{
         for(let c = 0; c < allSessoes.length; c++){
@@ -434,6 +408,10 @@ function carouselBanners(){
 
 
 }
+
+
+
+
 
 
 
