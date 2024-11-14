@@ -566,15 +566,20 @@ body{
     #row-oleos .card img{
         width: 100%;
     }
-
+    
     /* sidebar cart shop */
     .cartStructure{
-        width: 350px;
+        width: 380px;
         bottom: 0;
+        
     }
 
     .activingCart .cartStructure{
-        left: calc(100% - 350px);
+        left: calc(100% - 380px);
+
+        &.body{
+            overflow-y: hidden;
+        }
     }
 
 

@@ -500,10 +500,12 @@ footer{
         transition: .8s ease-in;
     }
 
+    
     /* sidebar cart shop */
     .cartStructure{
         width: 100vw;
         bottom: 0;
+        
     }
 
     .activingCart .cartStructure{

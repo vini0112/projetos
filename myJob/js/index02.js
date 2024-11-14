@@ -16045,10 +16045,20 @@ let listCart  = document.querySelector('.listCart')
 
 cartPart.addEventListener('click', () =>{
     body.classList.toggle('activingCart')
+
+    // tirando o scroll y do mobile
+    if(window.innerWidth <= 480){
+        body.style.overflowY="hidden"
+    }
+
+    
 })
+
 
 closeShopping.addEventListener('click', () =>{
     body.classList.toggle('activingCart')
+    body.style.overflowY="scroll"
+
 })
 
 
