@@ -1,6 +1,8 @@
 
 let body = document.querySelector('body')
 
+let listCards = []
+
 // on reload function
 document.addEventListener('DOMContentLoaded', () =>{
     // SESSAO 00
@@ -131,8 +133,6 @@ async function gettingApi(){
     const dado = await resp.json()
     
     return dado
-    
-    
 }
 
 gettingApi()
@@ -152,6 +152,7 @@ async function addCardsOleo(){
     // console.log(dadosOleo.length)
 
     for(let i = 0;i < dadosOleo.length;i++){
+        listCards.push(dadosOleo[i])
 
         let oleoCards = document.createElement('div')
         oleoCards.classList.add('col-md-3')
@@ -189,7 +190,6 @@ async function addCardsOleo(){
 
     filtroIniciar()
 }
-
 
 // funcao filtrar oleos da primeira pagina
 function filtroIniciar(){
@@ -426,6 +426,8 @@ async function addBattery(){
 
 
     for(let i = 0;i < dadoBatery.length;i++){
+        listCards.push(dadoBatery[i])
+
 
         let newDiv = document.createElement('div')
         newDiv.classList.add('col-md-3')
@@ -739,6 +741,7 @@ async function addFluidos(){
 
 
     for(let i = 0;i < dadoFluido.length;i++){
+        listCards.push(dadoFluido[i])
 
         let newDiv = document.createElement('div')
         newDiv.classList.add('col-md-3')
@@ -787,6 +790,8 @@ async function addFiltroOleoSimp(){
 
 
     for(let i = 0;i < dados.length;i++){
+        listCards.push(dados[i])
+
 
         let newDiv = document.createElement('div')
         newDiv.classList.add('col-md-3')
@@ -1311,6 +1316,8 @@ async function addFiltroOleoPesado(){
 
 
     for(let i = 0;i < dados.length;i++){
+        listCards.push(dados[i])
+
 
         let newDiv = document.createElement('div')
         newDiv.classList.add('col-md-3')
@@ -1762,6 +1769,8 @@ async function filtroCombustSimples() {
 
 
     for(let i = 0;i < dados.length;i++){
+        listCards.push(dados[i])
+
 
         let newDiv = document.createElement('div')
         newDiv.classList.add('col-md-3')
@@ -2190,6 +2199,8 @@ async function filtroCombustPesado(){
 
 
     for(let i = 0;i < dados.length;i++){
+        listCards.push(dados[i])
+
 
         let newDiv = document.createElement('div')
         newDiv.classList.add('col-md-3')
@@ -2622,6 +2633,8 @@ async function filtroArMotor(){
 
 
     for(let i = 0;i < dados.length;i++){
+        listCards.push(dados[i])
+
 
         let newDiv = document.createElement('div')
         newDiv.classList.add('col-md-3')
@@ -3047,6 +3060,8 @@ async function filtroArCabine(){
 
 
     for(let i = 0;i < dados.length;i++){
+        listCards.push(dados[i])
+
 
         let newDiv = document.createElement('div')
         newDiv.classList.add('col-md-3')
@@ -3214,6 +3229,8 @@ async function mangotesAr(){
 
 
     for(let i = 0;i < dados.length;i++){
+        listCards.push(dados[i])
+
 
         let newDiv = document.createElement('div')
         newDiv.classList.add('col-md-3')
@@ -3386,6 +3403,8 @@ async function terminaisDirecao(){
     // console.log(dados)
 
     for(let i = 0;i < dados.length;i++){
+        listCards.push(dados[i])
+
 
         let newDiv = document.createElement('div')
         newDiv.classList.add('col-md-3')
@@ -3699,6 +3718,8 @@ async function barraAxiais(){
 
 
     for(let i = 0;i < dados.length;i++){
+        listCards.push(dados[i])
+
 
         let newDiv = document.createElement('div')
         newDiv.classList.add('col-md-3')
@@ -4117,6 +4138,8 @@ async function estabilazadores(){
 
 
     for(let i = 0;i < dados.length;i++){
+        listCards.push(dados[i])
+
 
         let newDiv = document.createElement('div')
         newDiv.classList.add('col-md-3')
@@ -4407,6 +4430,8 @@ async function buchaCaixaDirecao(){
 
 
     for(let i = 0;i < dados.length;i++){
+        listCards.push(dados[i])
+
 
         let newDiv = document.createElement('div')
         newDiv.classList.add('col-md-3')
@@ -4586,6 +4611,8 @@ async function batedores(){
     // console.log(dados)
 
     for(let i = 0;i < dados.length;i++){
+        listCards.push(dados[i])
+
 
         let newDiv = document.createElement('div')
         newDiv.classList.add('col-md-3')
@@ -4971,6 +4998,8 @@ async function pivos(){
 
 
     for(let i = 0;i < dados.length;i++){
+        listCards.push(dados[i])
+
 
         let newDiv = document.createElement('div')
         newDiv.classList.add('col-md-3')
@@ -5290,6 +5319,8 @@ async function amortecedores(){
 
 
     for(let i = 0;i < dados.length;i++){
+        listCards.push(dados[i])
+
 
         let newDiv = document.createElement('div')
         newDiv.classList.add('col-md-3')
@@ -5454,6 +5485,8 @@ async function buchasBandejaSusp(){
 
 
     for(let i = 0;i < dados.length;i++){
+        listCards.push(dados[i])
+
 
         let newDiv = document.createElement('div')
         newDiv.classList.add('col-md-3')
@@ -5822,6 +5855,8 @@ async function coxinsAmort(){
 
 
     for(let i = 0;i < dados.length;i++){
+        listCards.push(dados[i])
+
 
         let newDiv = document.createElement('div')
         newDiv.classList.add('col-md-3')
@@ -5989,6 +6024,8 @@ async function bieletas(){
     // console.log(dados)
 
     for(let i = 0;i < dados.length;i++){
+        listCards.push(dados[i])
+
 
         let newDiv = document.createElement('div')
         newDiv.classList.add('col-md-3')
@@ -6171,6 +6208,8 @@ async function pastilhasFreio(){
 
 
     for(let i = 0;i < dados.length;i++){
+        listCards.push(dados[i])
+
 
         let newDiv = document.createElement('div')
         newDiv.classList.add('col-md-3')
@@ -6651,6 +6690,8 @@ async function discosFreio(){
 
 
     for(let i = 0;i < dados.length;i++){
+        listCards.push(dados[i])
+
 
         let newDiv = document.createElement('div')
         newDiv.classList.add('col-md-3')
@@ -6820,6 +6861,8 @@ async function sapatasFreio(){
 
 
     for(let i = 0;i < dados.length;i++){
+        listCards.push(dados[i])
+
 
         let newDiv = document.createElement('div')
         newDiv.classList.add('col-md-3')
@@ -6992,6 +7035,8 @@ async function cilindrosFreio(){
     // console.log(dados)
 
     for(let i = 0;i < dados.length;i++){
+        listCards.push(dados[i])
+
 
         let newDiv = document.createElement('div')
         newDiv.classList.add('col-md-3')
@@ -7260,6 +7305,8 @@ async function tamboresFreio(){
     // console.log(dados)
 
     for(let i = 0;i < dados.length;i++){
+        listCards.push(dados[i])
+
 
         let newDiv = document.createElement('div')
         newDiv.classList.add('col-md-3')
@@ -7529,6 +7576,8 @@ async function reparosFreio(){
 
 
     for(let i = 0;i < dados.length;i++){
+        listCards.push(dados[i])
+
 
         let newDiv = document.createElement('div')
         newDiv.classList.add('col-md-3')
@@ -7974,6 +8023,8 @@ async function cabosFreio(){
     // console.log(dados)
 
     for(let i = 0;i < dados.length;i++){
+        listCards.push(dados[i])
+
 
         let newDiv = document.createElement('div')
         newDiv.classList.add('col-md-3')
@@ -8266,6 +8317,8 @@ async function acessoriosFreio() {
     // console.log(dados)
 
     for(let i = 0;i < dados.length;i++){
+        listCards.push(dados[i])
+
 
         let newDiv = document.createElement('div')
         newDiv.classList.add('col-md-3')
@@ -8442,6 +8495,8 @@ async function cabosVela(){
     // console.log(dados)
 
     for(let i = 0;i < dados.length;i++){
+        listCards.push(dados[i])
+
 
         let newDiv = document.createElement('div')
         newDiv.classList.add('col-md-3')
@@ -8659,6 +8714,8 @@ async function velas(){
     // console.log(dados)
 
     for(let i = 0;i < dados.length;i++){
+        listCards.push(dados[i])
+
 
         let newDiv = document.createElement('div')
         newDiv.classList.add('col-md-3')
@@ -8830,6 +8887,8 @@ async function bobinas(){
     // console.log(dados)
 
     for(let i = 0;i < dados.length;i++){
+        listCards.push(dados[i])
+
 
         let newDiv = document.createElement('div')
         newDiv.classList.add('col-md-3')
@@ -9049,6 +9108,8 @@ async function modulosIgnicao(){
 
 
     for(let i = 0;i < dados.length;i++){
+        listCards.push(dados[i])
+
 
         let newDiv = document.createElement('div')
         newDiv.classList.add('col-md-3')
@@ -9227,6 +9288,8 @@ async function tensores(){
     // console.log(dados)
 
     for(let i = 0;i < dados.length;i++){
+        listCards.push(dados[i])
+
 
         let newDiv = document.createElement('div')
         newDiv.classList.add('col-md-3')
@@ -9446,6 +9509,8 @@ async function correiaAlter(){
     // console.log(dados)
 
     for(let i = 0;i < dados.length;i++){
+        listCards.push(dados[i])
+
 
         let newDiv = document.createElement('div')
         newDiv.classList.add('col-md-3')
@@ -9873,6 +9938,8 @@ async function correiaDentada(){
     // console.log(dados)
 
     for(let i = 0;i < dados.length;i++){
+        listCards.push(dados[i])
+
 
         let newDiv = document.createElement('div')
         newDiv.classList.add('col-md-3')
@@ -10085,6 +10152,8 @@ async function regVoltagem(){
     // console.log(dados)
 
     for(let i = 0;i < dados.length;i++){
+        listCards.push(dados[i])
+
 
         let newDiv = document.createElement('div')
         newDiv.classList.add('col-md-3')
@@ -10254,6 +10323,8 @@ async function estatores(){
     // console.log(dados)
 
     for(let i = 0;i < dados.length;i++){
+        listCards.push(dados[i])
+
 
         let newDiv = document.createElement('div')
         newDiv.classList.add('col-md-3')
@@ -10474,6 +10545,8 @@ async function inpulsores(){
     // console.log(dados)
 
     for(let i = 0;i < dados.length;i++){
+        listCards.push(dados[i])
+
 
         let newDiv = document.createElement('div')
         newDiv.classList.add('col-md-3')
@@ -10690,6 +10763,8 @@ async function portaEscovas(){
     // console.log(dados)
 
     for(let i = 0;i < dados.length;i++){
+        listCards.push(dados[i])
+
 
         let newDiv = document.createElement('div')
         newDiv.classList.add('col-md-3')
@@ -10956,6 +11031,8 @@ async function acessoriosPart(){
 
 
     for(let i = 0;i < dados.length;i++){
+        listCards.push(dados[i])
+
 
         let newDiv = document.createElement('div')
         newDiv.classList.add('col-md-3')
@@ -11182,6 +11259,8 @@ async function bombasDagua(){
     // console.log(dados)
     
     for(let i = 0;i < dados.length;i++){
+        listCards.push(dados[i])
+
 
         let newDiv = document.createElement('div')
         newDiv.classList.add('col-md-3')
@@ -11399,6 +11478,8 @@ async function reservatorio(){
 
 
     for(let i = 0;i < dados.length;i++){
+        listCards.push(dados[i])
+
 
         let newDiv = document.createElement('div')
         newDiv.classList.add('col-md-3')
@@ -11570,6 +11651,8 @@ async function valvulasTermo(){
 
 
     for(let i = 0;i < dados.length;i++){
+        listCards.push(dados[i])
+
 
         let newDiv = document.createElement('div')
         newDiv.classList.add('col-md-3')
@@ -11740,6 +11823,8 @@ async function ventoinhas(){
     // console.log(dados)
 
     for(let i = 0;i < dados.length;i++){
+        listCards.push(dados[i])
+
 
         let newDiv = document.createElement('div')
         newDiv.classList.add('col-md-3')
@@ -11959,6 +12044,8 @@ async function canosDagua(){
     // console.log(dados)
 
     for(let i = 0;i < dados.length;i++){
+        listCards.push(dados[i])
+
 
         let newDiv = document.createElement('div')
         newDiv.classList.add('col-md-3')
@@ -12255,6 +12342,8 @@ async function tubosDagua(){
 
 
     for(let i = 0;i < dados.length;i++){
+        listCards.push(dados[i])
+
 
         let newDiv = document.createElement('div')
         newDiv.classList.add('col-md-3')
@@ -12428,6 +12517,8 @@ async function resistencias(){
     // console.log(dados)
 
     for(let i = 0;i < dados.length;i++){
+        listCards.push(dados[i])
+
 
         let newDiv = document.createElement('div')
         newDiv.classList.add('col-md-3')
@@ -12600,6 +12691,8 @@ async function acessoriosArref(){
     // console.log(dados)
 
     for(let i = 0;i < dados.length;i++){
+        listCards.push(dados[i])
+
 
         let newDiv = document.createElement('div')
         newDiv.classList.add('col-md-3')
@@ -12783,6 +12876,8 @@ async function bicos(){
 
 
     for(let i = 0;i < dados.length;i++){
+        listCards.push(dados[i])
+
 
         let newDiv = document.createElement('div')
         newDiv.classList.add('col-md-3')
@@ -12957,6 +13052,8 @@ async function bombaCombustivel(){
     // console.log(dados)
 
     for(let i = 0;i < dados.length;i++){
+        listCards.push(dados[i])
+
 
         let newDiv = document.createElement('div')
         newDiv.classList.add('col-md-3')
@@ -13280,6 +13377,8 @@ async function flangesBomb(){
     // console.log(dados)
 
     for(let i = 0;i < dados.length;i++){
+        listCards.push(dados[i])
+
 
         let newDiv = document.createElement('div')
         newDiv.classList.add('col-md-3')
@@ -13451,6 +13550,8 @@ async function acessoriosCombustivel(){
 
 
     for(let i = 0;i < dados.length;i++){
+        listCards.push(dados[i])
+
 
         let newDiv = document.createElement('div')
         newDiv.classList.add('col-md-3')
@@ -13629,6 +13730,8 @@ async function discosEmbre(){
     // console.log(dados)
 
     for(let i = 0;i < dados.length;i++){
+        listCards.push(dados[i])
+
 
         let newDiv = document.createElement('div')
         newDiv.classList.add('col-md-3')
@@ -13801,6 +13904,8 @@ async function reparosTrambCambio(){
     // console.log(dados)
 
     for(let i = 0;i < dados.length;i++){
+        listCards.push(dados[i])
+
 
         let newDiv = document.createElement('div')
         newDiv.classList.add('col-md-3')
@@ -13984,6 +14089,8 @@ async function cubosRoda(){
     // console.log(dados)
 
     for(let i = 0;i < dados.length;i++){
+        listCards.push(dados[i])
+
 
         let newDiv = document.createElement('div')
         newDiv.classList.add('col-md-3')
@@ -14156,6 +14263,8 @@ async function pontasEixo(){
     // console.log(dados)
 
     for(let i = 0;i < dados.length;i++){
+        listCards.push(dados[i])
+
 
         let newDiv = document.createElement('div')
         newDiv.classList.add('col-md-3')
@@ -14326,6 +14435,8 @@ async function juntasHomo(){
 
 
     for(let i = 0;i < dados.length;i++){
+        listCards.push(dados[i])
+
 
         let newDiv = document.createElement('div')
         newDiv.classList.add('col-md-3')
@@ -14597,6 +14708,8 @@ async function rolamentoRoda(){
 
 
     for(let i = 0;i < dados.length;i++){
+        listCards.push(dados[i])
+
 
         let newDiv = document.createElement('div')
         newDiv.classList.add('col-md-3')
@@ -14871,6 +14984,8 @@ async function rolamentoDiversos(){
 
 
     for(let i = 0;i < dados.length;i++){
+        listCards.push(dados[i])
+
 
         let newDiv = document.createElement('div')
         newDiv.classList.add('col-md-3')
@@ -15054,6 +15169,8 @@ async function bojos(){
 
 
     for(let i = 0;i < dados.length;i++){
+        listCards.push(dados[i])
+
 
         let newDiv = document.createElement('div')
         newDiv.classList.add('col-md-3')
@@ -15348,6 +15465,8 @@ async function intermediarios(){
     // console.log(dados)
 
     for(let i = 0;i < dados.length;i++){
+        listCards.push(dados[i])
+
 
         let newDiv = document.createElement('div')
         newDiv.classList.add('col-md-3')
@@ -15642,6 +15761,8 @@ async function conxinsEscap(){
     // console.log(dados)
 
     for(let i = 0;i < dados.length;i++){
+        listCards.push(dados[i])
+
 
         let newDiv = document.createElement('div')
         newDiv.classList.add('col-md-3')
@@ -15985,6 +16106,8 @@ async function acessoriosEscap(){
 
 
     for(let i = 0;i < dados.length;i++){
+        listCards.push(dados[i])
+
 
         let newDiv = document.createElement('div')
         newDiv.classList.add('col-md-3')
@@ -16032,13 +16155,20 @@ async function acessoriosEscap(){
 
 // CART SHOPPING
 
-let listCards = []
+
+console.log(listCards)
+
+
+
+
+
+
 let carts = []
 
 
 let cartPart = document.querySelector('.cartPart')
 let closeShopping = document.querySelector('.closeShopping')
-let listCart  = document.querySelector('.listCart')
+// let listCart  = document.querySelector('.listCart')
 
 
 // ativando e desativando cart shop list
@@ -16105,25 +16235,44 @@ function addToCart(product_id){
         carts[positionThisProductInCart].quantity = carts[positionThisProductInCart].quantity + 1
     }
 
-    console.log(carts)
+    // console.log(carts)
+    addToCartHtml()
 }
 
 
+// adding structure html inside the cart
 function addToCartHtml(){
-    listCart.innerHTML = ''
+    listaDoCart.innerHTML = ''
+    let totalQtd = 0
+
+
     if(carts.length > 0){
         carts.forEach((card) => {
-            let liCard = document.createElement('li')
-            liCard.innerHTML = `
-            
-            `
+            let positionProduct = listCards.findIndex((value) => value.id == card.product_id)
+            totalQtd = totalQtd + card.quantity
 
+            // console.log(positionProduct)
+            let info = listCards[positionProduct]
+
+            let liCart = document.createElement('li')
+            liCart.innerHTML = `
+                <img src="${info.image}" alt="" class="imgOfCart"> <span>${info.nome} ${info.info}</span> <div class="itemQtd"> <button>+</button> <span class="cartQtdNum">${card.quantity}</span><span> <button>-</button></div>
+
+            `
+            listaDoCart.appendChild(liCart)
         })
     }
 
-
-
+    iconQtdPecas.innerHTML = totalQtd
 }
+
+
+// listaDoCart.addEventListener('click', (event) =>{
+//     let positionClicked = event.target
+//     if(positionClicked.classList.contains('minus') || positionClicked.classList.contains('plus')){
+
+//     }
+// })
 
 
 
