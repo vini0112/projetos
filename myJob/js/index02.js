@@ -16037,14 +16037,23 @@ let carts = []
 
 
 let cartPart = document.querySelector('.cartPart')
-
-// cartPart.addEventListener('click', () =>{
-//     body.classList.toggle('activingCart')
-// })
+let closeShopping = document.querySelector('.closeShopping')
+let listCart  = document.querySelector('.listCart')
 
 
+// ativando e desativando cart shop list
 
-// inside cart shopping
+cartPart.addEventListener('click', () =>{
+    body.classList.toggle('activingCart')
+})
+
+closeShopping.addEventListener('click', () =>{
+    body.classList.toggle('activingCart')
+})
+
+
+
+// INSIDE cart shopping
 let listaDoCart = document.querySelector('.listCart')
 let iconQtdPecas = document.querySelector('.qtdPecas')
 
@@ -16090,12 +16099,25 @@ function addToCart(product_id){
 }
 
 
+function addToCartHtml(){
+    listCart.innerHTML = ''
+    if(carts.length > 0){
+        carts.forEach((card) => {
+            let liCard = document.createElement('li')
+            liCard.innerHTML = `
+            
+            `
+
+        })
+    }
+
+
+
+}
 
 
 
 
-
-let listCart  = document.querySelector('.listCart')
 
 
 

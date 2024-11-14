@@ -476,8 +476,8 @@ footer{
         font-size: 1.3rem;
     } 
     #logo{
-        width: 50px;
-        height: 50px;
+        width: 60px;
+        height: 60px;
     } 
 
     /* FADE IN AND OUT */
@@ -498,6 +498,16 @@ footer{
         opacity: 1;
         visibility: visible;
         transition: .8s ease-in;
+    }
+
+    /* sidebar cart shop */
+    .cartStructure{
+        width: 100vw;
+        bottom: 0;
+    }
+
+    .activingCart .cartStructure{
+        left: calc(100% - 100%);
     }
     
 }
