@@ -6953,10 +6953,10 @@
             "linha": "GM/Fiat",
             "linhaCode": "gm",
             "secundLineCode":"fiat",
-            "code": 3811,
+            "code": 1302,
             "linkApli": "#7796",
-            "price": 126,
-            "qtd": 0,
+            "price": 94.03,
+            "qtd": 1,
             "aplicacoes":[
                 {
                     "codeApli": "7796",
