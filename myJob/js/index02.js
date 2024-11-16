@@ -16151,28 +16151,18 @@ async function acessoriosEscap(){
 //  FIM DA INTEGRAÇÃO DA API !!!
 
 
+// console.log(listCards)
 
 
 // CART SHOPPING
 
-
-console.log(listCards)
-
-
-
-
-
-
+// array do shop cart
 let carts = []
-
 
 let cartPart = document.querySelector('.cartPart')
 let closeShopping = document.querySelector('.closeShopping')
-// let listCart  = document.querySelector('.listCart')
-
 
 // ativando e desativando cart shop list
-
 cartPart.addEventListener('click', () =>{
     body.classList.toggle('activingCart')
 
@@ -16183,7 +16173,6 @@ cartPart.addEventListener('click', () =>{
 
     
 })
-
 
 closeShopping.addEventListener('click', () =>{
     body.classList.toggle('activingCart')
@@ -16196,26 +16185,27 @@ closeShopping.addEventListener('click', () =>{
 // INSIDE cart shopping
 let listaDoCart = document.querySelector('.listCart')
 let iconQtdPecas = document.querySelector('.qtdPecas')
-
-
+let valorCompra = document.querySelector('.valorCompra')
 
 // Capturando Index dos produtos
 document.addEventListener('click', (event) =>{
     let positionClicked = event.target
-
+    
     if(positionClicked.classList.contains('btnBuyAlone') || positionClicked.classList.contains('btnBuy')){
-        const product_id = positionClicked.closest('.card').id
-        // alert(product_id)
 
+        const product_id = positionClicked.closest('.card').id
+        
+        // console.log(key)
         addToCart(product_id)
     }
 
 })
 
 
-
-function addToCart(product_id){
+// definindo quantidade se ja existir ou nao
+function addToCart(product_id, cont){
     let positionThisProductInCart = carts.findIndex((value) => value.product_id == product_id)
+    // let positionThisProductInCart = carts.findIndex((value) => value.price == price)
 
     if(carts.length <= 0){
         carts = [
@@ -16233,30 +16223,37 @@ function addToCart(product_id){
         )
     }else{
         carts[positionThisProductInCart].quantity = carts[positionThisProductInCart].quantity + 1
+        
+
+        
+        // console.log(listCards[key])
     }
 
-    // console.log(carts)
+    
     addToCartHtml()
 }
-
 
 // adding structure html inside the cart
 function addToCartHtml(){
     listaDoCart.innerHTML = ''
     let totalQtd = 0
-
+    let totalPrice = 0
 
     if(carts.length > 0){
-        carts.forEach((card) => {
-            let positionProduct = listCards.findIndex((value) => value.id == card.product_id)
-            totalQtd = totalQtd + card.quantity
+        carts.forEach((card, key) => {
+            
+            totalQtd += card.quantity
+            
 
-            // console.log(positionProduct)
+            let positionProduct = listCards.findIndex((value) => value.id == card.product_id)
             let info = listCards[positionProduct]
+            totalPrice += info.price
 
             let liCart = document.createElement('li')
+            liCart.dataset.id = card.product_id
+
             liCart.innerHTML = `
-                <img src="${info.image}" alt="" class="imgOfCart"> <span>${info.nome} ${info.info}</span> <div class="itemQtd"> <button>+</button> <span class="cartQtdNum">${card.quantity}</span><span> <button>-</button></div>
+                <img src="${info.image}" alt="" class="imgOfCart"> <span>${info.nome} ${info.info}</span> <div class="itemQtd"> <button onclick="changeQtd(${key}, ${card.quantity + 1})">+</button> <span class="cartQtdNum">${card.quantity}</span> <button class="minus" onclick="changeQtd(${key}, ${card.quantity - 1})">-</button></div>
 
             `
             listaDoCart.appendChild(liCart)
@@ -16264,17 +16261,24 @@ function addToCartHtml(){
     }
 
     iconQtdPecas.innerHTML = totalQtd
+    valorCompra.innerHTML = totalPrice.toFixed(2).replace('.',',')
 }
 
+// somando e deletando de acordo com os btns
+function changeQtd(key, quantity){
+    
+    
 
-// listaDoCart.addEventListener('click', (event) =>{
-//     let positionClicked = event.target
-//     if(positionClicked.classList.contains('minus') || positionClicked.classList.contains('plus')){
+    if(quantity == 0){
+        carts.splice(key, 1)
+    }else{
+        carts[key].quantity = quantity
+        // listCards[key].precoUni = quantity * produtos[key].precoUni
+        
+    }
 
-//     }
-// })
-
-
+    addToCartHtml()
+}
 
 
 
