@@ -16190,43 +16190,47 @@ let valorCompra = document.querySelector('.valorCompra')
 // Capturando Index dos produtos
 document.addEventListener('click', (event) =>{
     let positionClicked = event.target
+    let seAcabou = positionClicked.closest('.acabou')
     
-    if(positionClicked.classList.contains('btnBuyAlone') || positionClicked.classList.contains('btnBuy')){
+    if(seAcabou){
+        alert('Esse item acabou')
+    }
+    else if(positionClicked.classList.contains('btnBuyAlone') || positionClicked.classList.contains('btnBuy')){
 
         const product_id = positionClicked.closest('.card').id
-        
-        // console.log(key)
         addToCart(product_id)
     }
-
 })
 
 
 // definindo quantidade se ja existir ou nao
-function addToCart(product_id, cont){
+function addToCart(product_id){
     let positionThisProductInCart = carts.findIndex((value) => value.product_id == product_id)
-    // let positionThisProductInCart = carts.findIndex((value) => value.price == price)
 
     if(carts.length <= 0){
         carts = [
             {
                 product_id: product_id,
-                quantity: 1
+                quantity: 1,
+                price: listCards[product_id - 1].price
             }
         ]
+        // console.log(listCards[product_id - 1])
     }else if(positionThisProductInCart < 0){
         carts.push(
             {
                 product_id: product_id,
-                quantity: 1
+                quantity: 1,
+                price: listCards[product_id - 1].price
             }
         )
+        // console.log(carts)
+
     }else{
         carts[positionThisProductInCart].quantity = carts[positionThisProductInCart].quantity + 1
-        
+        carts[positionThisProductInCart].price = carts[positionThisProductInCart].quantity * listCards[product_id - 1].price
 
-        
-        // console.log(listCards[key])
+        // console.log(carts)
     }
 
     
@@ -16239,42 +16243,48 @@ function addToCartHtml(){
     let totalQtd = 0
     let totalPrice = 0
 
-    if(carts.length > 0){
-        carts.forEach((card, key) => {
-            
-            totalQtd += card.quantity
-            
+    // if(carts.length > 0){
+    carts.forEach((card, key) => {
 
-            let positionProduct = listCards.findIndex((value) => value.id == card.product_id)
-            let info = listCards[positionProduct]
-            totalPrice += info.price
+        totalQtd += card.quantity
+        let id = card.product_id
+        totalPrice += card.price
+
+        let positionProduct = listCards.findIndex((value) => value.id == card.product_id)
+        let info = listCards[positionProduct]
+        
+        // console.log(carts)
+
+        if(carts.length > 0){
 
             let liCart = document.createElement('li')
             liCart.dataset.id = card.product_id
 
             liCart.innerHTML = `
-                <img src="${info.image}" alt="" class="imgOfCart"> <span>${info.nome} ${info.info}</span> <div class="itemQtd"> <button onclick="changeQtd(${key}, ${card.quantity + 1})">+</button> <span class="cartQtdNum">${card.quantity}</span> <button class="minus" onclick="changeQtd(${key}, ${card.quantity - 1})">-</button></div>
+                <img src="${info.image}" alt="" class="imgOfCart"> <span>${info.nome} ${info.info}</span> <div class="itemQtd"> <button onclick="changeQtd(${key}, ${card.quantity + 1}, ${id})"><i class="fa-solid fa-plus"></i></button> <span class="cartQtdNum">${card.quantity}</span> <button class="minus" onclick="changeQtd(${key}, ${card.quantity - 1}, ${id})"><i class="fa-solid fa-minus"></i></button></div>
 
             `
             listaDoCart.appendChild(liCart)
-        })
-    }
+
+        }
+
+    })
+    
 
     iconQtdPecas.innerHTML = totalQtd
     valorCompra.innerHTML = totalPrice.toFixed(2).replace('.',',')
 }
 
+
 // somando e deletando de acordo com os btns
-function changeQtd(key, quantity){
-    
-    
+function changeQtd(key, quantity, id){
 
     if(quantity == 0){
         carts.splice(key, 1)
     }else{
-        carts[key].quantity = quantity
-        // listCards[key].precoUni = quantity * produtos[key].precoUni
         
+        carts[key].quantity = quantity
+        carts[key].price = quantity * listCards[id - 1].price
     }
 
     addToCartHtml()
