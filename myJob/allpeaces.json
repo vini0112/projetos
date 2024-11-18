@@ -266,7 +266,7 @@
         {
             "id": 26,
             "nome": "Filtro de Óleo",
-            "image": "photos/filtros/oleo/filtro619.jpg",
+            "image": "photos/filtros/oleo/filtro619.png",
             "marca": "Tecfil",
             "info": "PSL-619",
             "linha": "GM",
@@ -330,7 +330,7 @@
         {
             "id": 28,
             "nome": "Filtro de Óleo",
-            "image": "photos/filtros/oleo/psl55.jpg",
+            "image": "photos/filtros/oleo/psl55.png",
             "marca": "Tecfil",
             "info": "PSL-55",
             "linha": "Fiat",
@@ -353,7 +353,7 @@
         {
             "id": 29,
             "nome": "Filtro de Óleo",
-            "image": "photos/filtros/oleo/psl56.jpg",
+            "image": "photos/filtros/oleo/psl56.png",
             "marca": "Tecfil",
             "info": "PSL-56",
             "linha": "Fiat/Renault",
@@ -386,7 +386,7 @@
         {
             "id": 30,
             "nome": "Filtro de Óleo",
-            "image": "photos/filtros/oleo/pel118.jpg",
+            "image": "photos/filtros/oleo/pel118.png",
             "marca": "Tecfil",
             "info": "PEL-118",
             "linha": "Fiat",
@@ -408,7 +408,7 @@
         {
             "id": 31,
             "nome": "Filtro de Óleo",
-            "image": "photos/filtros/oleo/tm1.jpg",
+            "image": "photos/filtros/oleo/tm1.png",
             "marca": "Tecfil",
             "info": "TM1",
             "linha": "Diversas Linhas",
@@ -530,7 +530,7 @@
         {
             "id": 35,
             "nome": "Filtro de Óleo",
-            "image": "photos/filtros/oleo/psl560.jpg",
+            "image": "photos/filtros/oleo/psl560.png",
             "marca": "Tecfil",
             "info": "PSL-560",
             "linha": "Volkswagen",
@@ -553,7 +553,7 @@
         {
             "id": 36,
             "nome": "Filtro de Óleo",
-            "image": "photos/filtros/oleo/psl145.jpg",
+            "image": "photos/filtros/oleo/psl145.png",
             "marca": "Tecfil",
             "info": "PSL-145",
             "linha": "Ford",
@@ -575,7 +575,7 @@
         {
             "id": 37,
             "nome": "Filtro de Óleo",
-            "image": "photos/filtros/oleo/psl127.jpg",
+            "image": "photos/filtros/oleo/psl127.png",
             "marca": "Tecfil",
             "info": "PSL-127",
             "linha": "Toyota",
@@ -597,7 +597,7 @@
         {
             "id": 38,
             "nome": "Filtro de Óleo",
-            "image": "photos/filtros/oleo/pel803.jpg",
+            "image": "photos/filtros/oleo/pel803.png",
             "marca": "Tecfil",
             "info": "PEL-803",
             "linha": "Toyota",
@@ -641,7 +641,7 @@
         {
             "id": 40,
             "nome": "Filtro de Óleo",
-            "image": "photos/filtros/oleo/psl77.jpg",
+            "image": "photos/filtros/oleo/psl77.png",
             "marca": "Tecfil",
             "info": "PSL-77",
             "linha": "Renault",
@@ -690,7 +690,7 @@
         {
             "id": 42,
             "nome": "Filtro de Óleo",
-            "image": "photos/filtros/oleo/psl332.jpg",
+            "image": "photos/filtros/oleo/psl332.png",
             "marca": "Tecfil",
             "info": "PSL-332",
             "linha": "Hyundai",
@@ -743,7 +743,7 @@
         {
             "id": 44,
             "nome": "Filtro de Óleo",
-            "image": "photos/filtros/oleo/psl962.jpg",
+            "image": "photos/filtros/oleo/psl962.png",
             "marca": "Tecfil",
             "info": "PSL-962",
             "linha": "Ford/GM/VW",
@@ -784,7 +784,7 @@
         {
             "id": 45,
             "nome": "Filtro de Óleo",
-            "image": "photos/filtros/oleo/psl280.jpg",
+            "image": "photos/filtros/oleo/psl280.png",
             "marca": "Tecfil",
             "info": "PSL-280",
             "linha": "Ford/VW",
@@ -857,7 +857,7 @@
         {
             "id": 47,
             "nome": "Filtro de Óleo",
-            "image": "photos/filtros/oleo/pl364.jpg",
+            "image": "photos/filtros/oleo/pl364.png",
             "marca": "Tecfil",
             "info": "PL-364",
             "linha": "Mercedes",
@@ -879,7 +879,7 @@
         {
             "id": 48,
             "nome": "Filtro de Óleo",
-            "image": "photos/filtros/oleo/pel2002.jpg",
+            "image": "photos/filtros/oleo/pel2002.png",
             "marca": "Tecfil",
             "info": "PEL-2002",
             "linha": "Mercedes",
@@ -901,7 +901,7 @@
         {
             "id": 49,
             "nome": "Filtro de Óleo",
-            "image": "photos/filtros/oleo/pel2003.jpg",
+            "image": "photos/filtros/oleo/pel2003.png",
             "marca": "Tecfil",
             "info": "PEL-2003",
             "linha": "Mercedes",
@@ -928,7 +928,7 @@
         {
             "id": 50,
             "nome": "Filtro Combustível",
-            "image": "photos/filtros/combustivel/gi41.jpg",
+            "image": "photos/filtros/combustivel/gi41.png",
             "marca": "Tecfil",
             "info": "GI41",
             "linha": "Fiat",
@@ -950,7 +950,7 @@
         {
             "id": 51,
             "nome": "Filtro Combustível",
-            "image": "photos/filtros/combustivel/gi04-7.jpg",
+            "image": "photos/filtros/combustivel/gi04-7.png",
             "marca": "Tecfil",
             "info": "GI04-7",
             "linha": "Fiat/GM/FORD",
@@ -993,7 +993,7 @@
         {
             "id": 52,
             "nome": "Filtro Combustível",
-            "image": "photos/filtros/combustivel/gi04-7.jpg",
+            "image": "photos/filtros/combustivel/gi04-7.png",
             "marca": "Tecfil",
             "info": "GI40/7",
             "linha": "Fiat",
@@ -1016,7 +1016,7 @@
         {
             "id": 53,
             "nome": "Filtro Combustível",
-            "image": "photos/filtros/combustivel/gi12-7.jpg",
+            "image": "photos/filtros/combustivel/gi12-7.png",
             "marca": "Tecfil",
             "info": "GI12/7",
             "linha": "Volkswagen",
@@ -1039,7 +1039,7 @@
         {
             "id": 54,
             "nome": "Filtro Combustível",
-            "image": "photos/filtros/combustivel/gi08-1.jpg",
+            "image": "photos/filtros/combustivel/gi08-1.png",
             "marca": "Tecfil",
             "info": "GI08/1",
             "linha": "Volkswagen",
@@ -1098,7 +1098,7 @@
         {
             "id": 56,
             "nome": "Filtro Combustível",
-            "image": "photos/filtros/combustivel/pc2-155.jpg",
+            "image": "photos/filtros/combustivel/pc2-155.png",
             "marca": "Tecfil",
             "info": "PC2/155",
             "linha": "GM/Ford",
@@ -1131,7 +1131,7 @@
         {
             "id": 57,
             "nome": "Filtro Combustível",
-            "image": "photos/filtros/combustivel/psc496.jpg",
+            "image": "photos/filtros/combustivel/psc496.png",
             "marca": "Tecfil",
             "info": "PSC-496",
             "linha": "GM/Ford/Fiat",
@@ -1172,7 +1172,7 @@
         {
             "id": 58,
             "nome": "Filtro Combustível",
-            "image": "photos/filtros/combustivel/pc953.jpg",
+            "image": "photos/filtros/combustivel/pc953.png",
             "marca": "Tecfil",
             "info": "PC-953",
             "linha": "Toyota",
@@ -1195,7 +1195,7 @@
         {
             "id": 59,
             "nome": "Filtro Combustível",
-            "image": "photos/filtros/combustivel/pec3022.jpg",
+            "image": "photos/filtros/combustivel/pec3022.png",
             "marca": "Tecfil",
             "info": "PEC-3022",
             "linha": "Mercedes",
@@ -1218,7 +1218,7 @@
         {
             "id": 60,
             "nome": "Filtro Combustível",
-            "image": "photos/filtros/combustivel/psc72-2.jpg",
+            "image": "photos/filtros/combustivel/psc72-2.png",
             "marca": "Tecfil",
             "info": "PSC-72/2",
             "linha": "Ford/Volskwagen",
@@ -1276,7 +1276,7 @@
         {
             "id": 62,
             "nome": "Filtro de Ar",
-            "image": "photos/filtros/ar/arl4150.jpg",
+            "image": "photos/filtros/ar/arl4150.png",
             "marca": "Tecfil",
             "info": "ARL-4150",
             "linha": "Fiat",
@@ -1299,7 +1299,7 @@
         {
             "id": 63,
             "nome": "Filtro de Ar",
-            "image": "photos/filtros/ar/arl4151.jpg",
+            "image": "photos/filtros/ar/arl4151.png",
             "marca": "Tecfil",
             "info": "ARL-4151",
             "linha": "Fiat",
@@ -1321,7 +1321,7 @@
         {
             "id": 64,
             "nome": "Filtro de Ar",
-            "image": "photos/filtros/ar/arl4147.jpg",
+            "image": "photos/filtros/ar/arl4147.png",
             "marca": "Tecfil",
             "info": "ARL-4147",
             "linha": "Fiat",
@@ -1344,7 +1344,7 @@
         {
             "id": 65,
             "nome": "Filtro de Ar",
-            "image": "photos/filtros/ar/arl2147.jpg",
+            "image": "photos/filtros/ar/arl2147.png",
             "marca": "Tecfil",
             "info": "AR-2147",
             "linha": "Fiat",
@@ -1367,7 +1367,7 @@
         {
             "id": 66,
             "nome": "Filtro de Ar",
-            "image": "photos/filtros/ar/arl8832.jpg",
+            "image": "photos/filtros/ar/arl8832.png",
             "marca": "Tecfil",
             "info": "ARL-8832",
             "linha": "GM",
@@ -1424,7 +1424,7 @@
         {
             "id": 68,
             "nome": "Filtro de Ar",
-            "image": "photos/filtros/ar/arl6096.jpg",
+            "image": "photos/filtros/ar/arl6096.png",
             "marca": "Tecfil",
             "info": "ARL-6096",
             "linha": "Volkswagen",
@@ -1447,7 +1447,7 @@
         {
             "id": 69,
             "nome": "Filtro de Ar",
-            "image": "photos/filtros/ar/fap7007.jpg",
+            "image": "photos/filtros/ar/fap7007.png",
             "marca": "Wega",
             "info": "FAP-7007",
             "linha": "Volkswagen",
@@ -1470,7 +1470,7 @@
         {
             "id": 70,
             "nome": "Filtro de Ar",
-            "image": "photos/filtros/ar/art5051.jpg",
+            "image": "photos/filtros/ar/art5051.png",
             "marca": "Tecfil",
             "info": "ART-5051",
             "linha": "Renault",
@@ -1543,7 +1543,7 @@
         {
             "id": 73,
             "nome": "Filtro Ar Cabine",
-            "image": "photos/filtros/ar/acp003.jpg",
+            "image": "photos/filtros/ar/acp003.png",
             "marca": "Tecfil",
             "info": "ACP-003",
             "linha": "GM",
@@ -1566,7 +1566,7 @@
         {
             "id": 74,
             "nome": "Filtro Ar Cabine",
-            "image": "photos/filtros/ar/acp906.jpg",
+            "image": "photos/filtros/ar/acp906.png",
             "marca": "Tecfil",
             "info": "ACP-906",
             "linha": "Fiat",
@@ -1689,7 +1689,7 @@
         {
             "id": 79,
             "nome": "Terminal Direção",
-            "image": "photos/sist-direcao/terminais/amortex.jpg",
+            "image": "photos/sist-direcao/terminais/amortex.png",
             "marca": "Amortex",
             "info": "33295",
             "lados": "L.E",
