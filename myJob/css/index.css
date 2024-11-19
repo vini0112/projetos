@@ -527,10 +527,33 @@ body{
     justify-content: space-between;
 }
 
+/* toast (produto acabou) */
 
+#liveToast{
+    background-color: #f12121;
+    color: white;
+    height: 65px;
+}
 
+.txtToast{
+    color: white;
+    font-size: 1.2rem;
+    text-shadow: 1px 1px 1px black;
+    font-weight: bold;
+}
+/* toast (btn finalizar)  */
+#liveToast2{
+    background-color: #01B0F5;
+    color: white;
+    height: 65px;
+}
 
-
+.txtToast2{
+    color: white;
+    font-size: 1.2rem;
+    text-shadow: 1px 1px 1px black;
+    font-weight: bold;
+}
 
 
 /* media do banner moura */

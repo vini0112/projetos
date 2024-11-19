@@ -16190,18 +16190,26 @@ let valorCompra = document.querySelector('.valorCompra')
 // Capturando Index dos produtos
 document.addEventListener('click', (event) =>{
     let positionClicked = event.target
-    let seAcabou = positionClicked.closest('.acabou')
-    
-    if(seAcabou){
-        alert('Esse item acabou')
+
+    let seAcabouProduct = positionClicked.closest('.acabou')
+    let btnBuyAloneClicked = positionClicked.classList.contains('btnBuyAlone')
+    let btnBuyClicked = positionClicked.classList.contains('btnBuy')
+
+    if(btnBuyClicked && seAcabouProduct || btnBuyAloneClicked && seAcabouProduct){
+        // mostrar notifications toast
+        const toastBody = document.querySelector('#liveToast')
+
+        const toast = new bootstrap.Toast(toastBody, {
+            delay: 3000 // Tempo em milissegundos
+        });
+        toast.show()
     }
-    else if(positionClicked.classList.contains('btnBuyAlone') || positionClicked.classList.contains('btnBuy')){
+    else if(btnBuyAloneClicked || btnBuyClicked){
 
         const product_id = positionClicked.closest('.card').id
         addToCart(product_id)
     }
 })
-
 
 // definindo quantidade se ja existir ou nao
 function addToCart(product_id){
@@ -16290,7 +16298,19 @@ function changeQtd(key, quantity, id){
     addToCartHtml()
 }
 
+// se clicado no btn finalizar dentro do cart
+let btnTotal = document.querySelector('.total')
 
+btnTotal.addEventListener('click', () =>{
+
+    const toastBody2 = document.querySelector('#liveToast2')
+
+    const toast2 = new bootstrap.Toast(toastBody2, {
+        delay: 3000 // Tempo em milissegundos
+    });
+
+    toast2.show()
+})
 
 
 

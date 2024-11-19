@@ -500,6 +500,17 @@ footer{
         transition: .8s ease-in;
     }
 
+    /* cart border para mobile */
+    .btnBuyAlone{
+        border-top-left-radius: 0;
+        border-top-right-radius: 0;
+    }
+    .padraoBtn{
+        border-top-left-radius: 0;
+    }
+    .btnBuy{
+        border-top-right-radius: 0;
+    }
     
     /* sidebar cart shop */
     .cartStructure{
@@ -511,6 +522,17 @@ footer{
     .activingCart .cartStructure{
         left: calc(100% - 100%);
     }
+
+
+    /* toast warn  */
+    #liveToast{
+        background-color: #f12121;
+        color: white;
+        height: 60px;
+        
+        
+    }
+
     
 }
 
