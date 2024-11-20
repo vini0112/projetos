@@ -166,7 +166,7 @@ body{
     position: fixed;
     left: 100%;
     top: 0;
-    bottom: 8px;
+    bottom: 0;
     z-index: 5;
     width: 400px;
     /* height: 90vh; */
@@ -188,15 +188,22 @@ body{
 }
 
 .listCart{
+    height: 100%;
     list-style: none;
     display: flex;
     flex-direction: column;
+    overflow-y: scroll;
     color: white;
     font-size: 1.1rem;
     padding-left: 10px;
+    padding-bottom: 6rem;
+    scrollbar-width: none;
 }
+.listCart::-webkit-scrollbar {
+    display: none; /* Chrome, Safari e Edge */
+}
+
 .listCart li{
-    height: 100%;
     display: flex;
     justify-content: space-between;
     align-items: center;
