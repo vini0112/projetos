@@ -16151,13 +16151,16 @@ async function acessoriosEscap(){
 //  FIM DA INTEGRAÇÃO DA API !!!
 
 
-// console.log(listCards)
+console.log(listCards)
 
 
 // CART SHOPPING
 
 // array do shop cart
 let carts = []
+
+// SEGUNDO CART ARRAY PARA USAR NA FUNCAO DE DENTRO DO CART
+let cartsPrice = []
 
 let cartPart = document.querySelector('.cartPart')
 let closeShopping = document.querySelector('.closeShopping')
@@ -16187,7 +16190,7 @@ let listaDoCart = document.querySelector('.listCart')
 let iconQtdPecas = document.querySelector('.qtdPecas')
 let valorCompra = document.querySelector('.valorCompra')
 
-// Capturando Index dos produtos
+// Capturando ID E PRICE dos produtos
 document.addEventListener('click', (event) =>{
     let positionClicked = event.target
 
@@ -16207,38 +16210,65 @@ document.addEventListener('click', (event) =>{
     else if(btnBuyAloneClicked || btnBuyClicked){
 
         const product_id = positionClicked.closest('.card').id
-        addToCart(product_id)
+        const priceTxt = positionClicked.querySelector('.priceBuy').textContent.replace(',','.')
+
+        const priceFloatString = parseFloat(priceTxt).toFixed(2)
+        const priceNum = Number(priceFloatString)
+
+        addToCart(product_id, priceNum)
     }
 })
 
+
+
 // definindo quantidade se ja existir ou nao
-function addToCart(product_id){
+function addToCart(product_id, priceNum){
     let positionThisProductInCart = carts.findIndex((value) => value.product_id == product_id)
 
+    
     if(carts.length <= 0){
         carts = [
             {
                 product_id: product_id,
                 quantity: 1,
-                price: listCards[product_id - 1].price
+                price: priceNum
             }
         ]
-        // console.log(listCards[product_id - 1])
+
+        cartsPrice = [
+            {
+                product_id: product_id,
+                quantity: 1,
+                price: priceNum
+            }
+        ]
+        
+        // console.log(cartsPrice)
     }else if(positionThisProductInCart < 0){
         carts.push(
             {
                 product_id: product_id,
                 quantity: 1,
-                price: listCards[product_id - 1].price
+                price: priceNum
             }
         )
-        // console.log(carts)
+
+        cartsPrice.push(
+            {
+                product_id: product_id,
+                quantity: 1,
+                price: priceNum
+            }
+        )
+        // console.log(cartsPrice)
 
     }else{
         carts[positionThisProductInCart].quantity = carts[positionThisProductInCart].quantity + 1
-        carts[positionThisProductInCart].price = carts[positionThisProductInCart].quantity * listCards[product_id - 1].price
+        carts[positionThisProductInCart].price = carts[positionThisProductInCart].quantity * priceNum
 
-        // console.log(carts)
+        // CART PRICE
+        cartsPrice[positionThisProductInCart].quantity = cartsPrice[positionThisProductInCart].quantity + 1
+
     }
 
     
@@ -16251,17 +16281,17 @@ function addToCartHtml(){
     let totalQtd = 0
     let totalPrice = 0
 
-    // if(carts.length > 0){
+    
     carts.forEach((card, key) => {
 
         totalQtd += card.quantity
-        let id = card.product_id
         totalPrice += card.price
-
+        
+        
         let positionProduct = listCards.findIndex((value) => value.id == card.product_id)
         let info = listCards[positionProduct]
-        
-        // console.log(carts)
+        // console.log(info)
+
 
         if(carts.length > 0){
 
@@ -16269,7 +16299,7 @@ function addToCartHtml(){
             liCart.dataset.id = card.product_id
 
             liCart.innerHTML = `
-                <img src="${info.image}" alt="" class="imgOfCart"> <span>${info.nome} ${info.info}</span> <div class="itemQtd"> <button onclick="changeQtd(${key}, ${card.quantity + 1}, ${id})"><i class="fa-solid fa-plus"></i></button> <span class="cartQtdNum">${card.quantity}</span> <button class="minus" onclick="changeQtd(${key}, ${card.quantity - 1}, ${id})"><i class="fa-solid fa-minus"></i></button></div>
+                <img src="${info.image}" alt="" class="imgOfCart"> <span>${info.nome} ${info.info}</span> <div class="itemQtd"> <button onclick="changeQtd(${key}, ${card.quantity + 1})"><i class="fa-solid fa-plus"></i></button> <span class="cartQtdNum">${card.quantity}</span> <button class="minus" onclick="changeQtd(${key}, ${card.quantity - 1})"><i class="fa-solid fa-minus"></i></button></div>
 
             `
             listaDoCart.appendChild(liCart)
@@ -16285,20 +16315,23 @@ function addToCartHtml(){
 
 
 // somando e deletando de acordo com os btns
-function changeQtd(key, quantity, id){
+// UTILIZANDO O CART PRICE AQUI
+function changeQtd(key, quantity){
+
 
     if(quantity == 0){
         carts.splice(key, 1)
     }else{
         
         carts[key].quantity = quantity
-        carts[key].price = quantity * listCards[id - 1].price
+        carts[key].price = quantity * cartsPrice[key].price
     }
 
     addToCartHtml()
 }
 
-// se clicado no btn finalizar dentro do cart
+
+// se clicado no btn finalizar dentro do cart listCards[id - 1].price
 let btnTotal = document.querySelector('.total')
 
 btnTotal.addEventListener('click', () =>{

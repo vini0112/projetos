@@ -200,7 +200,8 @@ body{
     scrollbar-width: none;
 }
 .listCart::-webkit-scrollbar {
-    display: none; /* Chrome, Safari e Edge */
+    
+    display: none; /*Chrome, Safari e Edge */
 }
 
 .listCart li{
