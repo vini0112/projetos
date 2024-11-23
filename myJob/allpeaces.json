@@ -3046,6 +3046,30 @@
                 }
             ]
 
+        },
+
+        {
+            "id": 463,
+            "nome": "Kit-Batedor",
+            "position": "Tras.",
+            "image": "photos/sist-suspensao/batedores/MB4057S.png",
+            "marca": "Mobensani",
+            "info": "MB-4057S",
+            "linha": "Volkswagen",
+            "linhaCode": "vws",
+            "code": 3872,
+            "linkApli": "#MB4057S",
+            "price": 17.44,
+            "qtd": 1,
+            "aplicacoes":[
+                {
+                    "codeApli": "MB4057S",
+                    "montadora": "Volkswagen",
+                    "carros": ["Gol", "Parati", "Saveiro"],
+                    "anoApli": ["1999-2018", "1998-2012", "1997-2008"]
+                }
+            ]
+
         }
 
 
@@ -4035,9 +4059,8 @@
 
         {
             "id": 173,
-            "nome": "Bucha Tras. Bandeja",
+            "nome": "Bucha Tras. Bandeja L.E",
             "position": "Diant.",
-            "lados": "L.E",
             "image": "photos/sist-suspensao/buchas/mb467.png",
             "marca": "Mobensani",
             "info": "MB-465",
@@ -4057,7 +4080,83 @@
             ]
 
 
+        },
+
+        {
+            "id": 465,
+            "nome": "Bucha Bandeja",
+            "position": "Diant.",
+            "image": "photos/sist-suspensao/buchas/mb460.png",
+            "marca": "Sampel",
+            "info": "Sampel-1302",
+            "linha": "Fiat",
+            "linhaCode": "fiat",
+            "code": 1164,
+            "linkApli": "#sampel1302",
+            "price": 23.47,
+            "qtd": 1,
+            "aplicacoes":[
+                {
+                    "codeApli": "sampel1302",
+                    "montadora": "FIAT",
+                    "carros": ["Argo", "Doblo", "Grand-Siena", "Idea", "Mobi", "Fiorino", "Palio", "Uno", "Strada"],
+                    "anoApli": ["2017-2018", "2002-2017", "2012-2018", "2006-2016", "2016-2018", "2014-2018", "2012-2017", "2010-2018", "1999-2018"]
+                }
+            ]
+
+
+        },
+
+        {
+            "id": 467,
+            "nome": "Bucha Bandeja",
+            "position": "Tras. L.D",
+            "image": "photos/sist-suspensao/buchas/sampel1323a.png",
+            "marca": "Sampel",
+            "info": "Sampel-1323A",
+            "linha": "Fiat",
+            "linhaCode": "fiat",
+            "code": 714,
+            "linkApli": "#sampel1323a",
+            "price": 73.07,
+            "qtd": 1,
+            "aplicacoes":[
+                {
+                    "codeApli": "sampel1323a",
+                    "montadora": "FIAT",
+                    "carros": ["Doblo", "Grand-Siena", "Mobi", "Palio", "Palio Fire", "Uno", "Siena", "Strada"],
+                    "anoApli": ["2002-2018", "2012-2018", "2016-2018", "2012-2017", "2001-2005", "2010-2018", "2001-2005", "1999-2005"]
+                }
+            ]
+
+
+        }, 
+
+        {
+            "id": 468,
+            "nome": "Bucha Bandeja",
+            "position": "Tras. L.E",
+            "image": "photos/sist-suspensao/buchas/sampel1324a.png",
+            "marca": "Sampel",
+            "info": "Sampel-1324A",
+            "linha": "Fiat",
+            "linhaCode": "fiat",
+            "code": 3874,
+            "linkApli": "#sampel1324a",
+            "price": 73.07,
+            "qtd": 1,
+            "aplicacoes":[
+                {
+                    "codeApli": "sampel1324a",
+                    "montadora": "FIAT",
+                    "carros": ["Doblo", "Grand-Siena", "Mobi", "Palio", "Palio Fire", "Uno", "Siena", "Strada"],
+                    "anoApli": ["2002-2018", "2012-2018", "2016-2018", "2012-2017", "2001-2005", "2010-2018", "2001-2005", "1999-2005"]
+                }
+            ]
+
+
         }
+
         
     ],
 
@@ -4208,6 +4307,30 @@
                     "montadora": "GM",
                     "carros": ["Prisma", "Celta", "Classic", "Corsa"],
                     "anoApli": ["2006-2007", "2001-2007", "2003-2007", "1994-2001"]
+                }
+            ]
+
+        },
+
+        {
+            "id": 466,
+            "nome": "Coxim",
+            "position": "Tras.",
+            "image": "photos/sist-suspensao/coxins/sampel4981.png",
+            "marca": "Sampel",
+            "info": "Sampel-4981",
+            "linha": "Volkswagen",
+            "linhaCode": "vws",
+            "code": 3875,
+            "linkApli": "#sampel4981",
+            "price": 132.56,
+            "qtd": 1,
+            "aplicacoes":[
+                {
+                    "codeApli": "sampel4981",
+                    "montadora": "Volskwagen",
+                    "carros": ["Jetta", "Saveiro"],
+                    "anoApli": ["2008-2009", "2009-2017"]
                 }
             ]
 
@@ -7003,6 +7126,39 @@
                     "carros": ["Corsa", "Celta", "Prisma"],
                     "anoApli": ["1994-2002", "2001-2008", "2009.."]
                 }
+            ]
+
+        },
+
+        {
+            "id": 464,
+            "nome": "Tensor Correia Dentada",
+            "image": "photos/sist-carga/tensores/MDTE001.png",
+            "marca": "Mide",
+            "info": "MDTE001",
+            "linha": "GM/Fiat",
+            "linhaCode": "gm",
+            "secundLineCode": "fiat",
+            "code": 3882,
+            "linkApli": "#MDTE001",
+            "price": 84.77,
+            "qtd": 1,
+            "aplicacoes":[
+                {
+                    "codeApli": "MDTE001",
+                    "montadora": "GM",
+                    "carros": ["Agile", "Astra", "Blazer", "Cobalt", "Corsa", "Kadett", "Meriva", "Montana", "Onix", "Prisma", "S-10", "Vectra", "Zafira"],
+                    "anoApli": ["1.4 2009", "1.8 e 2.0 1994-2011", "2.2 e 2.4 2001-2012","1.4 e 1.8 2012", "1.6 e 1.8 1995-2009", "1.8 1996-1998", "1.4 e 1.8 2002-2012", "1.4 e 1.8 2002-2010", "1.0 e 1.4 2012", "1.0 2009 e 1.4 2006", "2.2 e 2.4 1995-2001", "2.0 e 2.2 1993-2011", "2.0 2001-2012"]
+                }
+            ],
+
+            "aplicacoesTwo":[
+                {
+                    "montadora": "FIAT",
+                    "carros": ["Doblo", "Idea", "Palio", "Siena", "Strada", "Punto"],
+                    "anoApli":["1.8 2004-2011", "1.8 2006-2010", "1.8 2004-2011", "1.8 2004-2011", "1.8 2004-2011", "1.8 2008-2010"]
+                }
+                
             ]
 
         }

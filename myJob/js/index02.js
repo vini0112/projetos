@@ -16151,7 +16151,7 @@ async function acessoriosEscap(){
 //  FIM DA INTEGRAÇÃO DA API !!!
 
 
-console.log(listCards)
+// console.log(listCards)
 
 
 // CART SHOPPING
