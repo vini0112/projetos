@@ -26,8 +26,6 @@ document.addEventListener('DOMContentLoaded', () =>{
 })
 
 
-
-
 // funcao das sessoes da pagina
 function mostrarInfoFastSearch(){
     // all links clicando no (LI)
@@ -120,10 +118,6 @@ function mostrarInfoFastSearch(){
             if(allSetLinks[0]){
                 window.location.href = '#area-sistema-direcao'
             }
-        
-            
-            
-
 
         }
     })
@@ -253,10 +247,24 @@ function mostrarInfoFastSearch(){
         }
     })
     
+
+    // acao da pagina login
+
+    let loginBtn = document.querySelector('#loginBtn')
+
+    loginBtn.addEventListener('click', () =>{
+        for(let c = 0;c < allSessoes.length;c++){
+            allSessoes[c].style.display=`none`
+            allSessoes[16].style.display=`block`
+
+            // if(allLinksFiltros[0]){
+            //     window.location.href = '#area-filtros'
+            // }
+            
+        }
+    })
+
 }
-
-
-
 
 // logica offcanvas 
 document.addEventListener('DOMContentLoaded', () =>{
@@ -408,10 +416,5 @@ function carouselBanners(){
 
 
 }
-
-
-
-
-
 
 

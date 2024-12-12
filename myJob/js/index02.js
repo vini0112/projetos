@@ -1,7 +1,7 @@
 
 let body = document.querySelector('body')
 
-let listCards = []
+const listCards = []
 
 // on reload function
 document.addEventListener('DOMContentLoaded', () =>{
@@ -131,8 +131,8 @@ const api = 'allpeaces.json'
 async function gettingApi(){
     const resp = await fetch(api)
     const dado = await resp.json()
-    
     return dado
+
 }
 
 gettingApi()
@@ -784,8 +784,12 @@ let rowFiltroCombustPesado = document.querySelector('#row-filtro-combus')
 
 // adding filtros oleo simples
 async function addFiltroOleoSimp(){
+
+    
     const dado = await gettingApi()
     const dados = dado.filtroOleoSimples
+    
+    
     // console.log(dados)
 
 
@@ -815,8 +819,6 @@ async function addFiltroOleoSimp(){
             <h5 class="card-title">${dados[i].nome}</h5>
             <h5 class="card-title">${dados[i].info}</h5>
             <p class="card-text">Linha ${dados[i].linha}</p>
-
-            
         </div>
 
         <div class='card-footer'>
@@ -830,18 +832,9 @@ async function addFiltroOleoSimp(){
         
         `
 
-
         rowFiltroSimp.appendChild(newDiv)
 
-        
-
-        
-
-    }
-    // (dados[i].code, dados[i].info, dados[i].marca ,dados[i].aplicacoes)
-    // console.log(dados)
-    
-    
+    }   
 
     filtrarFiltrosOleo()
 
@@ -1097,13 +1090,13 @@ async function dialogoOleoSimples(){
         // console.log(dados.length)
 
         // dados especificos
-        code = await dados[i].aplicacoes[0].codeApli
-        montadora = await dados[i].aplicacoes[0].montadora
-        nameProduct = await dados[i].info
-        marcaProduct = await dados[i].marca
-        codeProduct = await dados[i].code
-        montadora = await dados[i].aplicacoes[0].montadora
-        
+        code = dados[i].aplicacoes[0].codeApli
+        montadora = dados[i].aplicacoes[0].montadora
+        nameProduct = dados[i].info
+        marcaProduct = dados[i].marca
+        codeProduct = dados[i].code
+        montadora = dados[i].aplicacoes[0].montadora
+    
 
         // console.log("esse é o "+ i)
         let modalDialog = document.createElement('div')
@@ -1144,7 +1137,7 @@ async function dialogoOleoSimples(){
     }
 
 
-    carsEapli1(await dados)
+    carsEapli1(dados)
     
 }
 
@@ -1175,7 +1168,7 @@ async function carsEapli1(dados){
             liLista.classList.add(`listCars`)
 
             liLista.innerHTML = `
-             <span class="carro">${carro}: </span>
+            <span class="carro">${carro}: </span>
 
                 `
             
@@ -16094,9 +16087,6 @@ async function carsEapli59(dados){
 }
 
 
-
-
-
 // adding acessorios dos escapes 
 async function acessoriosEscap(){
 
@@ -16147,11 +16137,8 @@ async function acessoriosEscap(){
 }
 
 
-
 //  FIM DA INTEGRAÇÃO DA API !!!
 
-
-// console.log(listCards)
 
 
 // CART SHOPPING
@@ -16159,11 +16146,14 @@ async function acessoriosEscap(){
 // array do shop cart
 let carts = []
 
+
 // SEGUNDO CART ARRAY PARA USAR NA FUNCAO DE DENTRO DO CART
 let cartsPrice = []
 
-let cartPart = document.querySelector('.cartPart')
+let cartPart = document.querySelector('.boxCart')
 let closeShopping = document.querySelector('.closeShopping')
+
+
 
 // ativando e desativando cart shop list
 cartPart.addEventListener('click', () =>{
@@ -16344,6 +16334,569 @@ btnTotal.addEventListener('click', () =>{
 
     toast2.show()
 })
+
+
+
+
+// ENVIANDO FORMULARIO DE NOVO PRODUTO
+let sistemaProduct = document.querySelector('#sistemaProduct')
+let formCrud = document.querySelector('#formCrud')
+
+let departamentoEscolhido = document.querySelector('.departamentoEscolhido')
+let produtoEscolhido = document.querySelector('.produtoEscolhido')
+
+
+// FUNCAO DE POST 
+async function postingProduct(endpoint, obj){
+
+    try{
+                        
+        const response = await fetch(`http://localhost:3000/${endpoint}`, {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json',
+            },
+            body: JSON.stringify(obj)
+        })
+
+        if (response.ok) {
+            const data = response.json();
+            console.log('Resposta do servidor:', data);
+            alert('Formulário enviado com sucesso!');
+        } else {
+            console.error('Erro ao enviar o formulário:', response.statusText);
+            alert('Erro ao enviar o formulário.');
+        }
+
+    } catch (error) {
+        console.error('Erro na requisição:', error);
+        alert('Erro ao enviar o formulário.');
+    }
+
+
+}
+
+
+// "id": 26,
+// "nome": "Filtro de Óleo",
+// "image": "photos/filtros/oleo/filtro619.png",
+// "marca": "Tecfil",
+// "info": "PSL-619",
+// "linha": "GM",
+// "linhaCode": "gm",
+// "code": 2638,
+// "linkApli": "#psl619",
+// "price": 15.00,
+// "qtd": 1,
+// criando formulario
+
+
+function creatingForm2(){
+    let produtoEscolhido = document.querySelector('.produtoEscolhido')
+
+    let divBoxForms = document.createElement('form')
+    divBoxForms.classList.add('dadosForm')
+    divBoxForms.innerHTML = `
+    <label>Nome</label>
+    <input type="text" placeholder="Nome do Produto" class="nomeProduto">
+
+    <label>Imagem do Produto</label>
+    <input type="file" class="imgProduto">
+
+    <label>Marca</label>
+    <input type="text" placeholder="Marca do Produto" class="marcaProduto">
+
+    <label>Referência do Producto</label>
+    <input type="text" placeholder="Referência" class="referencia">
+
+    <label>Linha</label>
+    <select class="linhaCarro">
+        <option value="0" disabled selected>Montadora</option>
+        <option value="gm">GM</option>
+        <option value="fiat">FIAT</option>
+        <option value="vws">VOLKSWAGEN</option>
+        <option value="renault">RENAULT</option>
+        <option value="ford">FORD</option>
+        <option value="peugeot">PEUGEOT</option>
+        <option value="citroen">CITROEN</option>
+    </select>
+
+    <label>Código do Produto</label>
+    <input type="number" placeholder="Código.." class="codigo">
+
+    <label>Valor do Produto</label>
+    <input type="number" placeholder="Valor" class="precoProduto">
+
+    <label>Quantidade</label>
+    <input type="text" placeholder="Qtd.." class="qtdProduto">
+
+    <label>Link da aplicação</label>
+    <input type="text" placeholder="qualquer coisa.." class="linkApli">
+
+
+    <div class="boxBtnPost">
+        <button class="btnForm addApli">Add Aplicações</button>
+        <button class="btnForm formDelete">Apagar Tudo</button>
+    </div>
+
+    `
+    produtoEscolhido.appendChild(divBoxForms)
+
+}
+
+
+function addingFormAplication(){
+    let formAplications = document.querySelector('.formAplications')
+    
+    let divBoxForms = document.createElement('form')
+    divBoxForms.innerHTML = `
+    <div class="formAplicacao apliForm">
+        <div class="formsInput">
+            <span class="btnEraseApli">X</span>
+            <input type="text" placeholder="Carro..">
+            <input type="number" placeholder="Ano..">
+        </div>
+    </div>
+
+    <div class="boxBtnsOfApli">
+        <button class="addOneMore">Mais um</button>
+        <button class="btnForm formPost">Postar</button>
+    </div>
+    `
+    formAplications.appendChild(divBoxForms)
+}
+
+function addingSegundFormAplication(){
+    let formAplications = document.querySelector('.formAplications')
+    
+    // primeira linha
+    let divBoxForms = document.createElement('form')
+    divBoxForms.innerHTML = `
+    <div class="formAplicacao apliForm">
+        <div class="formsInput">
+            <span class="btnEraseApli">X</span>
+            <input type="text" placeholder="Carro..">
+            <input type="number" placeholder="Ano..">
+        </div>
+    </div>
+
+    <div class="boxBtnsOfApli">
+        <button class="addOneMore">Mais um</button>
+    </div>
+    `
+    formAplications.appendChild(divBoxForms)
+
+    // segunda linha
+    let secundDivBoxForms = document.createElement('form')
+    secundDivBoxForms.innerHTML = `
+    <div class="formAplicacao apliForm2">
+        <div class="formsInput inputsTwo">
+            <span class="btnEraseApli">X</span>
+            <input type="text" placeholder="Carro..">
+            <input type="number" placeholder="Ano..">
+        </div>
+    </div>
+
+    <div class="boxBtnsOfApli">
+        <button class="addOneMore addTwo">Mais um</button>
+        <button class="btnForm formPost">Postar</button>
+    </div>
+    `
+    formAplications.appendChild(secundDivBoxForms)
+}
+
+
+
+// acao click no primeiro select
+sistemaProduct.addEventListener('change', (event) =>{
+    const valorSelecionado = event.target.value;
+    let departamentoEscolhido = document.querySelector('.departamentoEscolhido')
+
+    if(valorSelecionado == 'oleos'){
+        departamentoEscolhido.innerHTML = ''
+        produtoEscolhido.innerHTML = ''
+
+        // desativando aplications form
+        let aplicationStructure = document.querySelector('.aplicationStructure')
+        aplicationStructure.style.display="none"
+
+        let divBoxForms = document.createElement('div')
+        divBoxForms.classList.add('boxForm')
+        divBoxForms.innerHTML = `
+        
+        <label for="">Departamento</label>
+        <select name="" id="departamento">
+            <option value="0" disabled selected>Escolha o Departamento<option>
+            <option value="oleoMotor">Óleo Motor</option>
+            <option value="fluidoFreio">Fluido Freio</option>
+        </select>
+        `
+        departamentoEscolhido.appendChild(divBoxForms)
+
+        // secund part
+        let departamento = document.querySelector('#departamento')
+
+        departamento.addEventListener('change', (event) =>{
+            const valorSelecionado = event.target.value;
+
+            
+            if(valorSelecionado == 'oleoMotor'){
+                produtoEscolhido.innerHTML = ''
+
+                let divBoxForms = document.createElement('form')
+                divBoxForms.classList.add('dadosForm')
+                divBoxForms.innerHTML = `
+                <label>Nome</label>
+                <input type="text" placeholder="Nome do Produto" class="nomeProduto">
+
+                <label>Imagem do Produto</label>
+                <input type="file" class="imgProduto">
+
+                <label>Marca</label>
+                <input type="text" placeholder="Marca do Produto" class="marcaProduto">
+
+                <label>Tipo do Óleo</label>
+                <select class="tipoOleo">
+                    <option value="0" disabled selected>Tipo</option>
+                    <option value="mineral">Mineral</option>
+                    <option value="sintetico">Sintético</option>
+                    <option value="semisintetico">Semi-Sintético</option>
+                </select>
+
+                <label>Valor do Produto</label>
+                <input type="number" placeholder="Valor" class="precoProduto">
+
+                <label>Quantidade</label>
+                <input type="text" placeholder="Qtd.." class="qtdProduto">
+
+                <div class="boxBtnPost">
+                    <button class="btnForm formPost">Postar</button>
+                    <button class="btnForm formDelete">Apagar Tudo</button>
+                </div>
+
+                `
+                produtoEscolhido.appendChild(divBoxForms)
+
+            }
+            else if(valorSelecionado == 'fluidoFreio'){
+                produtoEscolhido.innerHTML = ''
+
+                let divBoxForms = document.createElement('form')
+                divBoxForms.classList.add('dadosForm')
+                divBoxForms.innerHTML = `
+                <label>Nome</label>
+                <input type="text" placeholder="Nome do Produto" class="nomeProduto">
+
+                <label>Imagem do Produto</label>
+                <input type="file" class="imgProduto">
+
+                <label>Marca</label>
+                <input type="text" placeholder="Marca do Produto" class="marcaProduto">
+
+                <label>Preço</label>
+                <input type="text" placeholder="Preço do Produto" class="precoProduto">
+
+                <label>Quantidade</label>
+                <input type="text" placeholder="Qtd.." class="qtdProduto">
+
+                <div class="boxBtnPost">
+                    <button class="btnForm formPost">Postar</button>
+                    <button class="btnForm formDelete">Apagar Tudo</button>
+                </div>
+
+                `
+                produtoEscolhido.appendChild(divBoxForms)
+                
+            }
+
+
+            // dados
+
+            let formPost = document.querySelector('.formPost')
+            formPost.addEventListener('click', async (event) =>{
+                event.preventDefault()       
+                // pegando valores 
+                const formData = {
+                    nomeProduto: document.querySelector('.nomeProduto').value,
+                    imgProduto: document.querySelector('.imgProduto').value,
+                    marcaProduto: document.querySelector('.marcaProduto').value,
+                    qtdProduto: document.querySelector('.qtdProduto').value,
+                    precoProduto: document.querySelector('.precoProduto').value
+                }
+                
+                
+                // enviando form para o backend!
+                if(valorSelecionado == 'oleoMotor'){
+                    let tipoOleo = document.querySelector('.tipoOleo').value
+                    let endpoint = 'oleos'
+
+                    const obj = {
+                        "nome": formData.nomeProduto,
+                        "image": formData.imgProduto,
+                        "marca": formData.marcaProduto,
+                        "info": tipoOleo,
+                        "price": formData.precoProduto,
+                        "qtd": formData.qtdProduto
+                    }
+
+                    postingProduct(endpoint, obj)
+
+
+                }else{
+                    let endpoint = 'fluido'
+                    const obj = {
+                        "nome": formData.nomeProduto,
+                        "image": formData.imgProduto,
+                        "marca": formData.marcaProduto,
+                        "price": formData.precoProduto,
+                        "qtd": formData.qtdProduto
+                    }                   
+                    postingProduct(endpoint, obj)
+                    
+                }
+
+            })
+
+        })
+        
+
+    }
+
+    else if(valorSelecionado == 'bateria'){
+        departamentoEscolhido.innerHTML = ''
+        produtoEscolhido.innerHTML = ''
+
+        // desativando aplications form
+        let aplicationStructure = document.querySelector('.aplicationStructure')
+        aplicationStructure.style.display="none"
+
+        let divBoxForms = document.createElement('form')
+        divBoxForms.classList.add('dadosForm')
+        divBoxForms.innerHTML = `
+        <label>Nome</label>
+        <input type="text" placeholder="Nome do Produto" class="nomeProduto">
+
+        <label>Imagem do Produto</label>
+        <input type="file" class="imgProduto">
+
+        <label>Marca</label>
+        <input type="text" placeholder="Marca do Produto" class="marcaProduto">
+
+        <label>Preço</label>
+        <input type="text" placeholder="Preço do Produto" class="precoProduto">
+
+        <label>Quantidade</label>
+        <input type="text" placeholder="Qtd.." class="qtdProduto">
+
+        <div class="boxBtnPost">
+            <button class="btnForm formPost">Postar</button>
+            <button class="btnForm formDelete">Apagar Tudo</button>
+        </div>
+
+        `
+        produtoEscolhido.appendChild(divBoxForms)
+
+
+        // enviando para backend
+        let formPost = document.querySelector('.formPost')
+        formPost.addEventListener('click', async (event) =>{
+            event.preventDefault()       
+            // pegando valores 
+            const formData = {
+                nomeProduto: document.querySelector('.nomeProduto').value,
+                imgProduto: document.querySelector('.imgProduto').value,
+                marcaProduto: document.querySelector('.marcaProduto').value,
+                qtdProduto: document.querySelector('.qtdProduto').value,
+                precoProduto: document.querySelector('.precoProduto').value
+            }
+
+            let endpoint = 'baterias'
+            const obj = {
+                "nome": formData.nomeProduto,
+                "image": formData.imgProduto,
+                "marca": formData.marcaProduto,
+                "price": formData.precoProduto,
+                "qtd": formData.qtdProduto
+            }
+            postingProduct(endpoint, obj)
+        })
+
+
+    }
+
+    else if(valorSelecionado == 'filtroOleo'){
+
+        departamentoEscolhido.innerHTML = ''
+        produtoEscolhido.innerHTML = ''
+
+        let divBoxForms = document.createElement('div')
+        divBoxForms.classList.add('boxForm')
+        divBoxForms.innerHTML = `
+        
+        <label for="">Departamento</label>
+        <select name="" id="departamento">
+            <option value="" disabled selected>Escolha o Departamento<option>
+            <option value="filtroSimples">Filtro Óleo Simples</option>
+            <option value="filtroPesado">Filtro Óleo Pesado</option>
+        </select>
+        `
+        departamentoEscolhido.appendChild(divBoxForms)
+
+
+        // secund part
+        let departamento = document.querySelector('#departamento')
+
+        departamento.addEventListener('change', (event) =>{
+            const valorSelecionado = event.target.value;
+
+            if(valorSelecionado == 'filtroSimples'){
+                produtoEscolhido.innerHTML = ''
+
+                creatingForm2()
+
+                // showing table of aplications
+                let btnAddApli = document.querySelector('.addApli')
+                btnAddApli.addEventListener('click', (event) =>{
+                    event.preventDefault()
+
+                    let aplicationStructure = document.querySelector('.aplicationStructure')
+                    aplicationStructure.style.display="block"
+                })
+
+                // qtd de aplications
+                let qtdMontadoras = document.querySelector('.qtdMontadoras')
+                qtdMontadoras.addEventListener('change', (event) =>{
+                    const qtdSelecionado = event.target.value;
+                    let formAplications = document.querySelector('.formAplications')
+
+                    if(qtdSelecionado == '1'){
+                        formAplications.innerHTML = ''
+
+                        addingFormAplication()
+
+                        let addOneMore = document.querySelector('.addOneMore')
+                        let apliForm = document.querySelector('.apliForm')
+
+                        addOneMore.addEventListener('click', (e) =>{
+                        
+                            e.preventDefault()
+                            let newLine = document.createElement('div')
+                            newLine.innerHTML = ` 
+                            <div class="formsInput">
+                                <span class="btnEraseApli">X</span>
+                                <input type="text" placeholder="Carro.." >
+                                <input type="number" placeholder="Ano..">
+                            </div>
+                            `
+                            apliForm.append(newLine)
+                        })
+
+                        // deleting
+                        apliForm.addEventListener('click', (event) =>{
+                            event.preventDefault()
+                            let carApli = event.target.classList.value
+                            let formsInput = document.querySelector('.formsInput')
+
+                            if(carApli == 'btnEraseApli'){
+                                formsInput.remove()
+                            }
+                            
+                        })
+
+                        
+
+                    }
+
+                    else if(qtdSelecionado == '2'){
+                        formAplications.innerHTML = ''
+
+                        addingSegundFormAplication()
+
+                        let addOneMore = document.querySelector('.addOneMore')
+                        let addTwo = document.querySelector('.addTwo')
+                        let apliForm = document.querySelector('.apliForm')
+                        let apliForm2 = document.querySelector('.apliForm2')
+
+                        // ADDING
+                        addOneMore.addEventListener('click', (e) =>{
+                        
+                            e.preventDefault()
+                            let newLine = document.createElement('div')
+                            newLine.innerHTML = `
+                            <div class="formsInput">
+                                <span class="btnEraseApli">X</span>
+                                <input type="text" placeholder="Carro.." >
+                                <input type="number" placeholder="Ano..">
+                            </div>
+                            `
+                            apliForm.append(newLine)
+                        })
+
+                        addTwo.addEventListener('click', (e) =>{
+                        
+                            e.preventDefault()
+                            let newLine = document.createElement('div')
+                            newLine.innerHTML = ` 
+                            <div class="formsInput inputsTwo">
+                                <span class="btnEraseApli">X</span>
+                                <input type="text" placeholder="Carro.." >
+                                <input type="number" placeholder="Ano..">
+                            </div>
+                            `
+                            apliForm2.append(newLine)
+                        })
+
+
+                        // DELETING
+                        apliForm.addEventListener('click', (event) =>{
+                            event.preventDefault()
+                            let carApli = event.target.classList.value
+                            let formsInput = document.querySelector('.formsInput')
+
+                            if(carApli == 'btnEraseApli'){
+                                formsInput.remove()
+                            }
+                            
+                        })
+
+                        apliForm2.addEventListener('click', (event) =>{
+                            event.preventDefault()
+                            let carApli = event.target.classList.value
+                            let formsInput = document.querySelector('.inputsTwo')
+
+                            if(carApli == 'btnEraseApli'){
+                                formsInput.remove()
+                            }
+                            
+                        })
+
+
+                    }
+
+                })
+
+
+                // let formPost = document.querySelector('.formPost')
+                // formPost.addEventListener('click', async (event) =>{
+                //     event.preventDefault()
+                    
+                // })
+
+
+
+            }
+
+        })
+
+    }
+
+    
+
+
+})
+
+
+
 
 
 

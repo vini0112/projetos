@@ -40,8 +40,13 @@
                 </a>
 
                 <div class="cartPart">
-                    <i class="fa-solid fa-cart-shopping" id="cartShop"></i>
-                    <span class="qtdPecas">0</span>
+
+                    <div class="boxCart">
+                        <i class="fa-solid fa-cart-shopping" id="cartShop"></i>
+                        <span class="qtdPecas">0</span>
+                    </div>
+                    <i class="fa-solid fa-user" id="loginBtn"></i>
+
                 </div>
                 
                 <!-- side bar -->
@@ -1866,6 +1871,75 @@
             </div>
         </div>
 
+
+        <div id="area-form" class="sessao">
+            <div class="container" id="containerForm">
+                
+                <div id="conteudoForm">
+                    
+                    <form id="formCrud">
+
+                        <div class="boxForms">
+                            <label for="sistemaProduct">Sistema</label>
+                            <select id="sistemaProduct">
+                                <option value="0" disabled selected>Selecione o sistema do produto</option>
+                                <option value="oleos">Óleos</option>
+                                <option value="bateria">Batéria</option>
+                                <option value="filtroOleo">Filtro Óleo</option>
+                                <option value="filtroCombust">Filtro Combustível</option>
+                                <option value="filtroAr">Filtro Ar</option>
+                                <option value="sistemaDir">Sistema Direção</option>
+                                <option value="sistemaSusp">Sistema Suspensão<option>
+                                <option value="sistemaFreio">Sistema Freio</option>
+                                <option value="sistemaIgnicao">Sistema Ignição</option>
+                                <option value="sistemaCarga">Sistema Carga</option>
+                                <option value="sistemaPartida">Sistema Partida</option>
+                                <option value="arrefecimento">Arrefecimento</option>
+                                <option value="sistemaCombust">Sistema Combustível</option>
+                                <option value="sistemaTransm">Sistema Transmissão</option>
+                                <option value="sistemaRodagem">Sistema Rodagem</option>
+                                <option value="escapes">Escapamentos</option>
+                            </select>
+                        </div>
+
+                        <div class="departamentoEscolhido">
+
+                        </div>
+
+                        <div class="produtoEscolhido">
+
+                        </div>
+                        
+                    </form>
+
+                    
+                </div>
+
+                <div class="aplicationStructure">
+                    <form class="aplicationForm">
+                        
+                        <div class="boxForms">
+                            <label for="">Quantas Montadoras:</label>
+                            <select class="qtdMontadoras">
+                                <option value="0" disabled selected>Número de Montadoras</option>
+                                <option value="1">1</option>
+                                <option value="2">2</option>
+                                <option value="3">3</option>
+                                <option value="4">4</option>
+                            </select>
+                        </div>
+
+                        <div class="formAplications">
+                            
+                        </div>
+                        
+
+                    </form>
+                </div>
+
+
+            </div>
+        </div>
 
 
 

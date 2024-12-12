@@ -115,9 +115,15 @@ body{
 }
 
 .cartPart{
+    display: flex;
+    height: 100%;
+    align-items: center;
+}
+.boxCart{
     position: relative;
     cursor: pointer;
 }
+
 .qtdPecas{
     background-color: red;
     height: 22px;
@@ -128,7 +134,7 @@ body{
     color: white;
 
     position: absolute;
-    left: 40%;
+    left: 45%;
     top: 50%;
 
     display: flex;
@@ -138,9 +144,10 @@ body{
 
 #cartShop{
     color: white;
-    margin-right: 20px;
+    margin-right: 10px;
     text-shadow: 2px 2px 2px black;
-    font-size: 2.3rem;
+    font-size: 2.2rem;
+    padding: 4px;
 }
 
 #collapsee{
@@ -291,6 +298,16 @@ body{
     left: calc(100% - 400px);
 }
 
+/* login icon */
+
+#loginBtn{
+    text-shadow: 2px 2px 2px black;
+    font-size: 2.1rem;
+    margin-right: 15px;
+    color: white;
+    padding: 5px;
+    cursor: pointer;
+}
 
 
 
