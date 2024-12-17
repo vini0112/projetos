@@ -250,7 +250,12 @@
     display: none;
 }
 
+
 /* FORM */
+
+.dadosForm label{
+    font-weight: 500;
+}
 #containerForm{
     width: 100%;
     border: 2px solid green;
@@ -269,6 +274,9 @@
 .boxForm{
     display: flex;
     flex-direction: column;
+}
+.boxForm label{
+    font-weight: 500;
 }
 .dadosForm{
     display: flex;
@@ -304,6 +312,9 @@
     display: flex;
     flex-direction: column;
 }
+.boxForms label{
+    font-weight: 500;
+}
 
 .aplicationStructure{
     max-width: 280px;
@@ -313,8 +324,8 @@
     display: none;
 }
 
-.aplicationForm{
-    border: 2px solid black;
+.formularioApli{
+    /* border: 2px solid black; */
     padding: 5px;
     width: 100%;
     height: 100%;
@@ -324,10 +335,46 @@
     background-color: #0a68d3;
 }
 
-.formAplications{
+.conteudoForm{
     display: flex;
     flex-direction: column;
 }
+
+.firstFormAplication{
+    display: none;
+    flex-direction: column;
+    margin-bottom: 1rem;
+    border: 2px solid blue;
+    padding: 5px;
+    h5{
+        text-align: center;
+    }
+    
+}
+
+.secundFormAplication{
+    display: none;
+    flex-direction: column;
+    margin-bottom: 1rem;
+    border: 2px solid blue;
+    padding: 5px;
+    h5{
+        text-align: center;
+    }
+}
+
+.thirdFormAplication{
+    display: none;
+    flex-direction: column;
+    margin-bottom: 1rem;
+    border: 2px solid blue;
+    padding: 5px;
+    h5{
+        text-align: center;
+    }
+}
+
+
 
 .formAplicacao{
     display: flex;
@@ -343,7 +390,7 @@
     font-size: 1rem;
 }
 
-.formsInput{
+.styleFormInput{
     position: relative;
     display: flex;
     height: 60px;
@@ -373,7 +420,7 @@
     align-items: center;
 }
 
-.formsInput:hover{
+.styleFormInput:hover{
     border: 2px solid #039c95;
     
     .btnEraseApli{
@@ -396,6 +443,49 @@
     font-weight: 500;
 }
 
+
+
+
+/* input radios */
+.titleRadios{
+    text-align: center;
+}
+
+.inputRadios{
+    display: flex;
+    justify-content: space-evenly;
+    padding-bottom: 5px;
+}
+.inputRadios label{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
+
+.inputRadios label input{
+    cursor: pointer;
+}
+
+.segundLine{
+    display: none;
+    padding-bottom: 10px;
+    flex-direction: column;
+}
+.thirdLine{
+    display: none;
+    padding-bottom: 10px;
+    flex-direction: column;
+
+}
+
+.secundLineTitle{
+    color: darkorange;
+    font-weight: 500;
+}
+.thirdLineTitle{
+    color: darkorange;
+    font-weight: 500;
+}
 
 
 /* Footer */

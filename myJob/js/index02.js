@@ -16421,6 +16421,53 @@ function creatingForm2(){
         <option value="citroen">CITROEN</option>
     </select>
 
+    <label class="titleRadios">Mais de uma aplicação?</label>
+    <div class="inputRadios">
+        <label>
+            Não
+            <input type="radio" name="lineCodeRadior" value="radio1" id="firstRadio">
+        </label>
+
+        <label>
+            2
+            <input type="radio" name="lineCodeRadior" value="radio2" id="secundRadio">
+        </label>
+
+        <label>
+            3
+            <input type="radio" name="lineCodeRadior" value="radio3" id="thirdRadio">
+        </label>
+    </div>
+
+    <div class="segundLine">
+    <label class="secundLineTitle">Segunda Linha</label>
+    <select class="linhaCarro ">
+        <option value="0" disabled selected>Montadora</option>
+        <option value="gm">GM</option>
+        <option value="fiat">FIAT</option>
+        <option value="vws">VOLKSWAGEN</option>
+        <option value="renault">RENAULT</option>
+        <option value="ford">FORD</option>
+        <option value="peugeot">PEUGEOT</option>
+        <option value="citroen">CITROEN</option>
+    </select>
+    </div>
+
+    <div class="thirdLine">
+    <label class="thirdLineTitle">Terceira Linha</label>
+    <select class="linhaCarro ">
+        <option value="0" disabled selected>Montadora</option>
+        <option value="gm">GM</option>
+        <option value="fiat">FIAT</option>
+        <option value="vws">VOLKSWAGEN</option>
+        <option value="renault">RENAULT</option>
+        <option value="ford">FORD</option>
+        <option value="peugeot">PEUGEOT</option>
+        <option value="citroen">CITROEN</option>
+    </select>
+    </div>
+
+
     <label>Código do Produto</label>
     <input type="number" placeholder="Código.." class="codigo">
 
@@ -16443,7 +16490,6 @@ function creatingForm2(){
     produtoEscolhido.appendChild(divBoxForms)
 
 }
-
 
 function addingFormAplication(){
     let formAplications = document.querySelector('.formAplications')
@@ -16747,12 +16793,88 @@ sistemaProduct.addEventListener('change', (event) =>{
         let departamento = document.querySelector('#departamento')
 
         departamento.addEventListener('change', (event) =>{
+
             const valorSelecionado = event.target.value;
+            let firstFormAplication = document.querySelector('.firstFormAplication')
+            let secundFormAplication = document.querySelector('.secundFormAplication')
+            let thirdFormAplication = document.querySelector('.thirdFormAplication')
 
             if(valorSelecionado == 'filtroSimples'){
                 produtoEscolhido.innerHTML = ''
 
                 creatingForm2()
+
+                // input radios das montadoras
+                let inputRadios = document.querySelector('.inputRadios')
+
+                
+                // se clicado
+                inputRadios.addEventListener('click', (e) =>{
+                    let radioSelected = e.target.value
+
+                    //se primeiro
+                    if(radioSelected == 'radio1'){
+                        
+                        // ativando linhas no form
+                        let segundLine = document.querySelector('.segundLine')
+                        let thirdLine = document.querySelector('.thirdLine')
+                        segundLine.style.display="none"
+                        thirdLine.style.display="none"
+                        
+                        // ativamento dos forms
+                        firstFormAplication.style.display="flex"
+                        secundFormAplication.style.display="none"
+                        thirdFormAplication.style.display="none"
+                        
+                        // desativando/ativando btn post
+                        let btnPostPrimeiro = document.querySelector('.btnPostPrimeiro')
+                        btnPostPrimeiro.style.display='flex'
+
+                    }
+                    // se segundo
+                    else if(radioSelected == 'radio2'){
+                        // console.log(2)
+                        let segundLine = document.querySelector('.segundLine')
+                        let thirdLine = document.querySelector('.thirdLine')
+                        segundLine.style.display="flex"
+                        thirdLine.style.display="none"
+
+                        // ativamento dos forms
+                        firstFormAplication.style.display="flex"
+                        secundFormAplication.style.display="flex"
+                        thirdFormAplication.style.display="none"
+
+                        // desativando/ativando btn post
+                        let btnPostPrimeiro = document.querySelector('.btnPostPrimeiro')
+                        let btnPostSecund = document.querySelector('.btnPostSecund')
+                        btnPostPrimeiro.style.display='none'
+                        btnPostSecund.style.display='flex'
+                    }
+
+                    // se terceiro 
+                    else if(radioSelected == 'radio3'){
+                        let segundLine = document.querySelector('.segundLine')
+                        let thirdLine = document.querySelector('.thirdLine')
+
+                        // ativando o select no form
+                        segundLine.style.display="flex"
+                        thirdLine.style.display="flex"
+
+                        // ativando form no apli cars
+                        firstFormAplication.style.display="flex"
+                        secundFormAplication.style.display="flex"
+                        thirdFormAplication.style.display="flex"
+
+                        // desativando/ativando btn post
+                        let btnPostPrimeiro = document.querySelector('.btnPostPrimeiro')
+                        let btnPostSecund = document.querySelector('.btnPostSecund')
+                        btnPostPrimeiro.style.display='none'
+                        btnPostSecund.style.display='none'
+                    }
+                    
+                    
+                })
+
 
                 // showing table of aplications
                 let btnAddApli = document.querySelector('.addApli')
@@ -16761,126 +16883,486 @@ sistemaProduct.addEventListener('change', (event) =>{
 
                     let aplicationStructure = document.querySelector('.aplicationStructure')
                     aplicationStructure.style.display="block"
-                })
-
-                // qtd de aplications
-                let qtdMontadoras = document.querySelector('.qtdMontadoras')
-                qtdMontadoras.addEventListener('change', (event) =>{
-                    const qtdSelecionado = event.target.value;
-                    let formAplications = document.querySelector('.formAplications')
-
-                    if(qtdSelecionado == '1'){
-                        formAplications.innerHTML = ''
-
-                        addingFormAplication()
-
-                        let addOneMore = document.querySelector('.addOneMore')
-                        let apliForm = document.querySelector('.apliForm')
-
-                        addOneMore.addEventListener('click', (e) =>{
-                        
-                            e.preventDefault()
-                            let newLine = document.createElement('div')
-                            newLine.innerHTML = ` 
-                            <div class="formsInput">
-                                <span class="btnEraseApli">X</span>
-                                <input type="text" placeholder="Carro.." >
-                                <input type="number" placeholder="Ano..">
-                            </div>
-                            `
-                            apliForm.append(newLine)
-                        })
-
-                        // deleting
-                        apliForm.addEventListener('click', (event) =>{
-                            event.preventDefault()
-                            let carApli = event.target.classList.value
-                            let formsInput = document.querySelector('.formsInput')
-
-                            if(carApli == 'btnEraseApli'){
-                                formsInput.remove()
-                            }
-                            
-                        })
-
-                        
-
-                    }
-
-                    else if(qtdSelecionado == '2'){
-                        formAplications.innerHTML = ''
-
-                        addingSegundFormAplication()
-
-                        let addOneMore = document.querySelector('.addOneMore')
-                        let addTwo = document.querySelector('.addTwo')
-                        let apliForm = document.querySelector('.apliForm')
-                        let apliForm2 = document.querySelector('.apliForm2')
-
-                        // ADDING
-                        addOneMore.addEventListener('click', (e) =>{
-                        
-                            e.preventDefault()
-                            let newLine = document.createElement('div')
-                            newLine.innerHTML = `
-                            <div class="formsInput">
-                                <span class="btnEraseApli">X</span>
-                                <input type="text" placeholder="Carro.." >
-                                <input type="number" placeholder="Ano..">
-                            </div>
-                            `
-                            apliForm.append(newLine)
-                        })
-
-                        addTwo.addEventListener('click', (e) =>{
-                        
-                            e.preventDefault()
-                            let newLine = document.createElement('div')
-                            newLine.innerHTML = ` 
-                            <div class="formsInput inputsTwo">
-                                <span class="btnEraseApli">X</span>
-                                <input type="text" placeholder="Carro.." >
-                                <input type="number" placeholder="Ano..">
-                            </div>
-                            `
-                            apliForm2.append(newLine)
-                        })
-
-
-                        // DELETING
-                        apliForm.addEventListener('click', (event) =>{
-                            event.preventDefault()
-                            let carApli = event.target.classList.value
-                            let formsInput = document.querySelector('.formsInput')
-
-                            if(carApli == 'btnEraseApli'){
-                                formsInput.remove()
-                            }
-                            
-                        })
-
-                        apliForm2.addEventListener('click', (event) =>{
-                            event.preventDefault()
-                            let carApli = event.target.classList.value
-                            let formsInput = document.querySelector('.inputsTwo')
-
-                            if(carApli == 'btnEraseApli'){
-                                formsInput.remove()
-                            }
-                            
-                        })
-
-
-                    }
-
-                })
-
-
-                // let formPost = document.querySelector('.formPost')
-                // formPost.addEventListener('click', async (event) =>{
-                //     event.preventDefault()
                     
-                // })
+
+                })
+
+
+                let apliForm = document.querySelector('.apliForm')
+                let apliForm2 = document.querySelector('.apliForm2')
+                let apliForm3 = document.querySelector('.apliForm3')
+                let boxBtnsOfApli = document.querySelectorAll('.addOneMore')
+
+                // adding
+                if(boxBtnsOfApli[0]){
+                    boxBtnsOfApli[0].addEventListener('click', (e) =>{
+                        e.preventDefault()
+                        // let selected = e.target.classList.value
+    
+                        let newForm = document.createElement('div')
+                        newForm.classList.add('styleFormInput')
+                        newForm.classList.add('formsInput')
+                        
+                        newForm.innerHTML = `
+                        <span class="btnEraseApli">X</span>
+                        <input type="text" placeholder="Carro..">
+                        <input type="number" placeholder="Ano..">
+                        `
+                        apliForm.append(newForm)
+                    })
+
+                }
+                if(boxBtnsOfApli[1]){
+                    boxBtnsOfApli[1].addEventListener('click', (e) =>{
+                        e.preventDefault()
+                        
+                        // let selected = e.target.classList.value
+    
+                        let newForm = document.createElement('div')
+                        newForm.classList.add('styleFormInput')
+                        newForm.classList.add('formsInput2')
+                        newForm.innerHTML = `
+                        <span class="btnEraseApli">X</span>
+                        <input type="text" placeholder="Carro..">
+                        <input type="number" placeholder="Ano..">
+                        `
+                        apliForm2.append(newForm)
+                    })
+                }
+                if(boxBtnsOfApli[2]){
+                    boxBtnsOfApli[2].addEventListener('click', (e) =>{
+                        e.preventDefault()
+                        
+                        // let selected = e.target.classList.value
+    
+                        let newForm = document.createElement('div')
+                        newForm.classList.add('styleFormInput')
+                        newForm.classList.add('formsInput3')
+                        newForm.innerHTML = `
+                        <span class="btnEraseApli">X</span>
+                        <input type="text" placeholder="Carro..">
+                        <input type="number" placeholder="Ano..">
+                        `
+                        apliForm3.append(newForm)
+                    })
+                }
+
+                // deleting carros aplications
+                apliForm.addEventListener('click', (event) =>{
+
+                    event.preventDefault()
+                    let carApli = event.target.classList.value
+                    let formsInput = document.querySelector('.formsInput')
+
+                    if(carApli == 'btnEraseApli'){
+                        formsInput.remove()
+                    }
+                })
+
+                apliForm2.addEventListener('click', (event) =>{
+
+                    event.preventDefault()
+                    let carApli = event.target.classList.value
+                    let formsInput2 = document.querySelector('.formsInput2')
+                    
+                    if(carApli == 'btnEraseApli'){
+                        formsInput2.remove()
+                    }
+                })
+
+                apliForm3.addEventListener('click', (event) =>{
+
+                    event.preventDefault()
+                    let carApli = event.target.classList.value
+                    let formsInput3 = document.querySelector('.formsInput3')
+
+
+                    if(carApli == 'btnEraseApli'){
+                        formsInput3.remove()
+                    }
+                })
+            
+
+                //     // FORMULARIO
+                let formPost = document.querySelectorAll('.formPost')
+
+                formPost[0].addEventListener('click', (e) =>{
+                    e.preventDefault()
+                    console.log('btn one')
+                    const formData = {
+                        nomeProduto: document.querySelector('.nomeProduto').value,
+                        imgProduto: document.querySelector('.imgProduto').value,
+                        marcaProduto: document.querySelector('.marcaProduto').value,
+                        qtdProduto: document.querySelector('.qtdProduto').value,
+                        precoProduto: document.querySelector('.precoProduto').value,
+
+                        referencia: document.querySelector('.referencia').value,
+                        linhaCarro: document.querySelector('.linhaCarro').value,
+                        codigo: document.querySelector('.codigo').value,
+                        linkApli: document.querySelector('.linkApli').value
+                    }
+
+                    const obj = {
+                        "nome": formData.nomeProduto,
+                        "image": formData.imgProduto,
+                        "marca": formData.marcaProduto,
+                        "info": formData.referencia,
+                        "linha": formData.linhaCarro.toUpperCase(),
+                        "linhaCode": formData.linhaCarro.toLowerCase(),
+                        "code": formData.codigo,
+                        "linkApli": '#'+formData.linkApli,
+                        "price": formData.precoProduto,
+                        "qtd": formData.qtdProduto,
+                        
+                    }
+
+                })
+
+                formPost[1].addEventListener('click', (e) =>{
+                    e.preventDefault()
+                    console.log('btn two')
+
+                    const formData = {
+                        nomeProduto: document.querySelector('.nomeProduto').value,
+                        imgProduto: document.querySelector('.imgProduto').value,
+                        marcaProduto: document.querySelector('.marcaProduto').value,
+                        qtdProduto: document.querySelector('.qtdProduto').value,
+                        precoProduto: document.querySelector('.precoProduto').value,
+
+                        referencia: document.querySelector('.referencia').value,
+                        linhaCarro: document.querySelector('.linhaCarro').value,
+                        codigo: document.querySelector('.codigo').value,
+                        linkApli: document.querySelector('.linkApli').value
+                    }
+
+                    const obj = {
+                        "nome": formData.nomeProduto,
+                        "image": formData.imgProduto,
+                        "marca": formData.marcaProduto,
+                        "info": formData.referencia,
+                        "linha": formData.linhaCarro.toUpperCase(),
+                        "linhaCode": formData.linhaCarro.toLowerCase(),
+                        "code": formData.codigo,
+                        "linkApli": '#'+formData.linkApli,
+                        "price": formData.precoProduto,
+                        "qtd": formData.qtdProduto,
+                        
+                    }
+
+                })
+
+                formPost[2].addEventListener('click', (e) =>{
+                    e.preventDefault()
+                    console.log('btn three')
+
+                    const formData = {
+                        nomeProduto: document.querySelector('.nomeProduto').value,
+                        imgProduto: document.querySelector('.imgProduto').value,
+                        marcaProduto: document.querySelector('.marcaProduto').value,
+                        qtdProduto: document.querySelector('.qtdProduto').value,
+                        precoProduto: document.querySelector('.precoProduto').value,
+
+                        referencia: document.querySelector('.referencia').value,
+                        linhaCarro: document.querySelector('.linhaCarro').value,
+                        codigo: document.querySelector('.codigo').value,
+                        linkApli: document.querySelector('.linkApli').value
+                    }
+
+                    const obj = {
+                        "nome": formData.nomeProduto,
+                        "image": formData.imgProduto,
+                        "marca": formData.marcaProduto,
+                        "info": formData.referencia,
+                        "linha": formData.linhaCarro.toUpperCase(),
+                        "linhaCode": formData.linhaCarro.toLowerCase(),
+                        "code": formData.codigo,
+                        "linkApli": '#'+formData.linkApli,
+                        "price": formData.precoProduto,
+                        "qtd": formData.qtdProduto,
+                        
+                    }
+
+                })
+
+            }
+
+            else if(valorSelecionado == 'filtroPesado'){
+                produtoEscolhido.innerHTML = ''
+
+                creatingForm2()
+
+                // input radios das montadoras
+                let inputRadios = document.querySelector('.inputRadios')
+
+                // se clicado
+                inputRadios.addEventListener('click', (e) =>{
+                    let radioSelected = e.target.value
+
+                    //se primeiro
+                    if(radioSelected == 'radio1'){
+                        
+                        // ativando linhas no form
+                        let segundLine = document.querySelector('.segundLine')
+                        let thirdLine = document.querySelector('.thirdLine')
+                        segundLine.style.display="none"
+                        thirdLine.style.display="none"
+                        
+                        // ativamento dos forms
+                        firstFormAplication.style.display="flex"
+                        secundFormAplication.style.display="none"
+                        thirdFormAplication.style.display="none"
+                        
+                        // desativando/ativando btn post
+                        let btnPostPrimeiro = document.querySelector('.btnPostPrimeiro')
+                        btnPostPrimeiro.style.display='flex'
+
+                    }
+                    // se segundo
+                    else if(radioSelected == 'radio2'){
+                        // console.log(2)
+                        let segundLine = document.querySelector('.segundLine')
+                        let thirdLine = document.querySelector('.thirdLine')
+                        segundLine.style.display="flex"
+                        thirdLine.style.display="none"
+
+                        // ativamento dos forms
+                        firstFormAplication.style.display="flex"
+                        secundFormAplication.style.display="flex"
+                        thirdFormAplication.style.display="none"
+
+                        // desativando/ativando btn post
+                        let btnPostPrimeiro = document.querySelector('.btnPostPrimeiro')
+                        let btnPostSecund = document.querySelector('.btnPostSecund')
+                        btnPostPrimeiro.style.display='none'
+                        btnPostSecund.style.display='flex'
+                    }
+
+                    // se terceiro 
+                    else if(radioSelected == 'radio3'){
+                        let segundLine = document.querySelector('.segundLine')
+                        let thirdLine = document.querySelector('.thirdLine')
+
+                        // ativando o select no form
+                        segundLine.style.display="flex"
+                        thirdLine.style.display="flex"
+
+                        // ativando form no apli cars
+                        firstFormAplication.style.display="flex"
+                        secundFormAplication.style.display="flex"
+                        thirdFormAplication.style.display="flex"
+
+                        // desativando/ativando btn post
+                        let btnPostPrimeiro = document.querySelector('.btnPostPrimeiro')
+                        let btnPostSecund = document.querySelector('.btnPostSecund')
+                        btnPostPrimeiro.style.display='none'
+                        btnPostSecund.style.display='none'
+                    }
+                    
+                    
+                })
+
+
+                // showing table of aplications
+                let btnAddApli = document.querySelector('.addApli')
+                btnAddApli.addEventListener('click', (event) =>{
+                    event.preventDefault()
+                    let aplicationStructure = document.querySelector('.aplicationStructure')
+                    aplicationStructure.style.display="block"
+                    
+                })
+
+
+                let apliForm = document.querySelector('.apliForm')
+                let apliForm2 = document.querySelector('.apliForm2')
+                let apliForm3 = document.querySelector('.apliForm3')
+                let boxBtnsOfApli = document.querySelectorAll('.addOneMore')
+
+                // adding
+                if(boxBtnsOfApli[0]){
+                    boxBtnsOfApli[0].addEventListener('click', (e) =>{
+                        e.preventDefault()
+    
+                        let newForm = document.createElement('div')
+                        newForm.classList.add('styleFormInput')
+                        newForm.classList.add('formsInput')
+                        
+                        newForm.innerHTML = `
+                        <span class="btnEraseApli">X</span>
+                        <input type="text" placeholder="Carro..">
+                        <input type="number" placeholder="Ano..">
+                        `
+                        apliForm.append(newForm)
+                    })
+
+                }
+                if(boxBtnsOfApli[1]){
+                    boxBtnsOfApli[1].addEventListener('click', (e) =>{
+                        e.preventDefault()
+                            
+                        let newForm = document.createElement('div')
+                        newForm.classList.add('styleFormInput')
+                        newForm.classList.add('formsInput2')
+                        newForm.innerHTML = `
+                        <span class="btnEraseApli">X</span>
+                        <input type="text" placeholder="Carro..">
+                        <input type="number" placeholder="Ano..">
+                        `
+                        apliForm2.append(newForm)
+                    })
+                }
+                if(boxBtnsOfApli[2]){
+                    boxBtnsOfApli[2].addEventListener('click', (e) =>{
+                        e.preventDefault()
+                            
+                        let newForm = document.createElement('div')
+                        newForm.classList.add('styleFormInput')
+                        newForm.classList.add('formsInput3')
+                        newForm.innerHTML = `
+                        <span class="btnEraseApli">X</span>
+                        <input type="text" placeholder="Carro..">
+                        <input type="number" placeholder="Ano..">
+                        `
+                        apliForm3.append(newForm)
+                    })
+                }
+
+                // deleting carros aplications
+                apliForm.addEventListener('click', (event) =>{
+
+                    event.preventDefault()
+                    let carApli = event.target.classList.value
+                    let formsInput = document.querySelector('.formsInput')
+
+                    if(carApli == 'btnEraseApli'){
+                        formsInput.remove()
+                    }
+                })
+
+                apliForm2.addEventListener('click', (event) =>{
+
+                    event.preventDefault()
+                    let carApli = event.target.classList.value
+                    let formsInput2 = document.querySelector('.formsInput2')
+                    
+                    if(carApli == 'btnEraseApli'){
+                        formsInput2.remove()
+                    }
+                })
+
+                apliForm3.addEventListener('click', (event) =>{
+
+                    event.preventDefault()
+                    let carApli = event.target.classList.value
+                    let formsInput3 = document.querySelector('.formsInput3')
+
+
+                    if(carApli == 'btnEraseApli'){
+                        formsInput3.remove()
+                    }
+                })
+
+
+                
+                //     // FORMULARIO
+                let formPost = document.querySelectorAll('.formPost')
+
+                formPost[0].addEventListener('click', (e) =>{
+                    e.preventDefault()
+                    console.log('btn one')
+                    const formData = {
+                        nomeProduto: document.querySelector('.nomeProduto').value,
+                        imgProduto: document.querySelector('.imgProduto').value,
+                        marcaProduto: document.querySelector('.marcaProduto').value,
+                        qtdProduto: document.querySelector('.qtdProduto').value,
+                        precoProduto: document.querySelector('.precoProduto').value,
+
+                        referencia: document.querySelector('.referencia').value,
+                        linhaCarro: document.querySelector('.linhaCarro').value,
+                        codigo: document.querySelector('.codigo').value,
+                        linkApli: document.querySelector('.linkApli').value
+                    }
+
+                    const obj = {
+                        "nome": formData.nomeProduto,
+                        "image": formData.imgProduto,
+                        "marca": formData.marcaProduto,
+                        "info": formData.referencia,
+                        "linha": formData.linhaCarro.toUpperCase(),
+                        "linhaCode": formData.linhaCarro.toLowerCase(),
+                        "code": formData.codigo,
+                        "linkApli": '#'+formData.linkApli,
+                        "price": formData.precoProduto,
+                        "qtd": formData.qtdProduto,
+                        
+                    }
+
+                })
+
+                formPost[1].addEventListener('click', (e) =>{
+                    e.preventDefault()
+                    console.log('btn two')
+
+                    const formData = {
+                        nomeProduto: document.querySelector('.nomeProduto').value,
+                        imgProduto: document.querySelector('.imgProduto').value,
+                        marcaProduto: document.querySelector('.marcaProduto').value,
+                        qtdProduto: document.querySelector('.qtdProduto').value,
+                        precoProduto: document.querySelector('.precoProduto').value,
+
+                        referencia: document.querySelector('.referencia').value,
+                        linhaCarro: document.querySelector('.linhaCarro').value,
+                        codigo: document.querySelector('.codigo').value,
+                        linkApli: document.querySelector('.linkApli').value
+                    }
+
+                    const obj = {
+                        "nome": formData.nomeProduto,
+                        "image": formData.imgProduto,
+                        "marca": formData.marcaProduto,
+                        "info": formData.referencia,
+                        "linha": formData.linhaCarro.toUpperCase(),
+                        "linhaCode": formData.linhaCarro.toLowerCase(),
+                        "code": formData.codigo,
+                        "linkApli": '#'+formData.linkApli,
+                        "price": formData.precoProduto,
+                        "qtd": formData.qtdProduto,
+                        
+                    }
+
+                })
+
+                formPost[2].addEventListener('click', (e) =>{
+                    e.preventDefault()
+                    console.log('btn three')
+
+                    const formData = {
+                        nomeProduto: document.querySelector('.nomeProduto').value,
+                        imgProduto: document.querySelector('.imgProduto').value,
+                        marcaProduto: document.querySelector('.marcaProduto').value,
+                        qtdProduto: document.querySelector('.qtdProduto').value,
+                        precoProduto: document.querySelector('.precoProduto').value,
+
+                        referencia: document.querySelector('.referencia').value,
+                        linhaCarro: document.querySelector('.linhaCarro').value,
+                        codigo: document.querySelector('.codigo').value,
+                        linkApli: document.querySelector('.linkApli').value
+                    }
+
+                    const obj = {
+                        "nome": formData.nomeProduto,
+                        "image": formData.imgProduto,
+                        "marca": formData.marcaProduto,
+                        "info": formData.referencia,
+                        "linha": formData.linhaCarro.toUpperCase(),
+                        "linhaCode": formData.linhaCarro.toLowerCase(),
+                        "code": formData.codigo,
+                        "linkApli": '#'+formData.linkApli,
+                        "price": formData.precoProduto,
+                        "qtd": formData.qtdProduto,
+                        
+                    }
+
+                })
 
 
 
