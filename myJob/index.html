@@ -45,7 +45,7 @@
                         <i class="fa-solid fa-cart-shopping" id="cartShop"></i>
                         <span class="qtdPecas">0</span>
                     </div>
-                    <i class="fa-solid fa-user" id="loginBtn"></i>
+                    <!-- <i class="fa-solid fa-user" id="loginBtn"></i> -->
 
                 </div>
                 
@@ -1875,10 +1875,19 @@
         <div id="area-form" class="sessao">
             <div class="container" id="containerForm">
                 
-                <div id="conteudoForm">
-                    
-                    <form id="formCrud">
 
+                <div id="conteudoForm">
+
+                    <div class="btnsDev">
+                        <button class="postCrud">Post</button>
+                        <button class="editCrud">Editar</button>
+                        <button class="deleteCrud">Deletar</button>
+                    </div>
+
+                    <form id="PostFormCrud">
+
+                        <!-- POST FORM -->
+                        <h5>Publique um Produto</h5>
                         <div class="boxForms">
                             <label for="sistemaProduct">Sistema</label>
                             <select id="sistemaProduct">
@@ -1889,7 +1898,7 @@
                                 <option value="filtroCombust">Filtro Combustível</option>
                                 <option value="filtroAr">Filtro Ar</option>
                                 <option value="sistemaDir">Sistema Direção</option>
-                                <option value="sistemaSusp">Sistema Suspensão<option>
+                                <option value="sistemaSusp">Sistema Suspensão</option>
                                 <option value="sistemaFreio">Sistema Freio</option>
                                 <option value="sistemaIgnicao">Sistema Ignição</option>
                                 <option value="sistemaCarga">Sistema Carga</option>
@@ -1899,7 +1908,8 @@
                                 <option value="sistemaTransm">Sistema Transmissão</option>
                                 <option value="sistemaRodagem">Sistema Rodagem</option>
                                 <option value="escapes">Escapamentos</option>
-                            </select>
+                            </select> 
+                                
                         </div>
 
                         <div class="departamentoEscolhido">
@@ -1912,6 +1922,65 @@
                         
                     </form>
 
+                    <form id="editFormCrud">
+                        <div class="titleEditCrud">
+                            <h5>Edite um Produto</h5>
+                            <span class="tooltip-target" data-tooltip="Para editar um produto, você precisa do ID do produto, para consegui-lo vá em um produto e aperte no botão de aplicações e coloque o ponteiro do mouse em cima do nome de referência do produto! Se o produto não tem o botão de aplicações, basta colocar o mouse em cima do nome do produto que será mostrado o ID."><i class="fa-solid fa-question"></i></span>
+                        </div>
+
+                        <div class="boxSelecaoProduct">
+                            <label for="">Lista de Produtos</label>
+                            <select id="sistemaProductEdit">
+                                <option value="0" disabled selected>Selecione o Produto</option>
+                                <option value="oleos">Óleos</option>
+                                <option value="baterias">Batéria</option>
+                                <option value="fluidos">Fluidos</option>
+                                <option value="filtrosoleosimples">Filtros Óleo Simples</option>
+                            </select>
+                        </div>
+
+                        <div class="boxIDPRODUCT">
+                            <label for="IDPRODUCT">ID do produto</label>
+                            <input type="number" id="IDPRODUCT" placeholder="Digite o ID">
+                            
+                        </div>
+
+                        <div class="boxAtualizacaoProduct">
+                            
+                        </div>
+
+                    </form >
+
+
+                    <!-- <div class="boxAtualizacaoProduct"> -->
+                    <form id="deleteFormCrud">
+
+                        <div class="titleDeleteFormCrud">
+                            <h5>Delete um Produto</h5>
+                            <span class="tooltip-target2" data-tooltip="Para deletar um produto, você precisa do ID do produto, para consegui-lo vá em um produto e aperte no botão de aplicações e coloque o ponteiro do mouse em cima do nome de referência do produto! Se o produto não tem o botão de aplicações, basta colocar o mouse em cima do nome do produto que será mostrado o ID."><i class="fa-solid fa-question"></i></span>
+                        </div>
+                        
+                        <div class="boxSelecaoProduct">
+                            <label for="">Lista de Produtos</label>
+                            <select id="sistemaProductDelete">
+                                <option value="0" disabled selected>Selecione o Produto</option>
+                                <option value="oleos">Óleos</option>
+                                <option value="baterias">Batéria</option>
+                                <option value="fluidos">Fluidos</option>
+                                <option value="filtrosoleosimples">Filtros Óleo Simples</option>
+                            </select>
+                        </div>
+
+                        <div class="boxIDPRODUCTDELETE">
+                            <label for="IDPRODUCTDELETE">ID do produto</label>
+                            <input type="number" id="IDPRODUCTDELETE" placeholder="Digite o ID">
+                            <div class="boxBtnSearchProduct">
+                                <button class="btnSearchProduct2">Deletar</button>
+                            </div>
+                        </div>
+
+                    </form>
+
                     
                 </div>
 
@@ -1919,7 +1988,6 @@
                 <div class="aplicationStructure">
                     <form class="formularioApli">
                         
-
                         <div class="conteudoForm">
 
                             <!-- primeiro -->
@@ -1929,8 +1997,8 @@
                                 <div class="formAplicacao apliForm">
                                     <div class="styleFormInput formsInput">
                                         <span class="btnEraseApli">X</span>
-                                        <input type="text" placeholder="Carro..">
-                                        <input type="number" placeholder="Ano..">
+                                        <input type="text" placeholder="Carro.." class="inputCarro">
+                                        <input type="text" placeholder="Ano.."  class="inputAnoApli">
                                     </div>
                                 </div>
                                 <div class="boxBtnsOfApli">
@@ -1946,8 +2014,8 @@
                                 <div class="formAplicacao apliForm2">
                                     <div class="styleFormInput formsInput2">
                                         <span class="btnEraseApli">X</span>
-                                        <input type="text" placeholder="Carro..">
-                                        <input type="number" placeholder="Ano..">
+                                        <input type="text" placeholder="Carro.." class="inputCarro2">
+                                        <input type="text" placeholder="Ano.." class="inputAnoApli2">
                                     </div>
                                 </div>
                                 <div class="boxBtnsOfApli">
@@ -1963,8 +2031,8 @@
                                 <div class="formAplicacao apliForm3">
                                     <div class="styleFormInput formsInput3">
                                         <span class="btnEraseApli">X</span>
-                                        <input type="text" placeholder="Carro..">
-                                        <input type="number" placeholder="Ano..">
+                                        <input type="text" placeholder="Carro.." class="inputCarro3">
+                                        <input type="text" placeholder="Ano.." class="inputAnoApli3">
                                     </div>
                                 </div>
                                 <div class="boxBtnsOfApli">
@@ -2070,7 +2138,6 @@
         </div>
     </div>
     
-
 
 </body>
 </html>

@@ -252,17 +252,17 @@ function mostrarInfoFastSearch(){
 
     let loginBtn = document.querySelector('#loginBtn')
 
-    loginBtn.addEventListener('click', () =>{
-        for(let c = 0;c < allSessoes.length;c++){
-            allSessoes[c].style.display=`none`
-            allSessoes[16].style.display=`block`
+    // loginBtn.addEventListener('click', () =>{
+    //     for(let c = 0;c < allSessoes.length;c++){
+    //         allSessoes[c].style.display=`none`
+    //         allSessoes[16].style.display=`block`
 
-            // if(allLinksFiltros[0]){
-            //     window.location.href = '#area-filtros'
-            // }
+    //         // if(allLinksFiltros[0]){
+    //         //     window.location.href = '#area-filtros'
+    //         // }
             
-        }
-    })
+    //     }
+    // })
 
 }
 

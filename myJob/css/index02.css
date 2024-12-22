@@ -251,11 +251,117 @@
 }
 
 
-/* FORM */
+/* btns do CRUD */
+.btnsDev{
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    margin-bottom: 1rem;
+}
+.btnsDev button{
+    border: none;
+    padding: .2rem .9rem;
+    color: white;
+    font-weight: 500;
+    text-shadow: 1px 1px 1px black;
+    border-radius: 5px;
+}
+.postCrud{
+    background-color: green;
+}
+.editCrud{
+    background-color: var(--cor2);
+}
+.deleteCrud{
+    background-color: red;
+}
+
+
+/* BOXES DO CRUD  */
+
+#PostFormCrud{
+    display: none;
+}
+
+
+
+#editFormCrud{
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+
+    h5{
+        text-align: center;
+    }
+}
+.titleEditCrud{
+    display: flex;
+    justify-content: space-around;
+}
+
+.boxSelecaoProduct{
+    display: flex;
+    flex-direction: column;
+}
+
+.boxIDPRODUCT{
+    display: none;
+    flex-direction: column;
+}
+
+.boxIDPRODUCT input{
+    width: 250px;
+    padding-left: 5px;
+    font-size: 1rem;
+}
+
+.boxBtnSearchProduct{
+    display: flex;
+    justify-content: end;
+    margin-top: .8rem;
+}
+.boxBtnSearchProduct button{
+    border: none;
+    padding: .3rem .6rem;
+    background-color:black;
+    font-weight: 500;
+    color: white;
+}
+
+
+
+#deleteFormCrud{
+    display: flex;
+    flex-direction: column;
+    h5{
+        text-align: center;
+    }
+}
+
+.boxIDPRODUCTDELETE{
+    display: none;
+    flex-direction: column;
+}
+
+.boxIDPRODUCTDELETE input{
+    width: 250px;
+    padding-left: 5px;
+    font-size: 1rem;
+}
+
+
+
+/* FORM POST*/
+#PostFormCrud h5{
+    text-align: center;
+    margin-bottom: .5rem;
+}
+
 
 .dadosForm label{
     font-weight: 500;
 }
+
 #containerForm{
     width: 100%;
     border: 2px solid green;
@@ -559,6 +665,118 @@ footer{
     color: #0cc1d5;
     text-shadow: 2px 2px 2px black;
 }
+
+
+
+
+/* TOOLTIP */
+
+.tooltip-target {
+    display: inline-block;
+    cursor: pointer;
+    background-color: gray;
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    text-align: center;
+}
+.tooltip-target2 {
+    display: inline-block;
+    cursor: pointer;
+    background-color: gray;
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    text-align: center;
+}
+.tooltip-target i{
+    color: white;
+    text-shadow: 1px 1px 1px black;
+}
+
+.tooltip-target2 i{
+    color: white;
+    text-shadow: 1px 1px 1px black;
+}
+
+
+
+.tooltip{
+    position: absolute;
+    background-color: #333;
+    color: white;
+    padding: 8px 12px;
+    border-radius: 5px;
+    font-size: 14px;
+    white-space: nowrap;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    z-index: 1000;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.3s ease;
+    font-size: 1rem;
+
+    white-space: normal; /* Permite quebra de linha */
+    max-width: 300px;
+    width: 100%;
+    height: 240px;
+}
+
+.tooltip2{
+    position: absolute;
+    background-color: #333;
+    color: white;
+    padding: 8px 12px;
+    border-radius: 5px;
+    font-size: 14px;
+    white-space: nowrap;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    z-index: 1000;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.3s ease;
+    font-size: 1rem;
+
+    white-space: normal; /* Permite quebra de linha */
+    max-width: 300px;
+    width: 100%;
+    height: 240px;
+}
+
+/* Flecha da tooltip */
+.tooltip::after {
+    content: '';
+    position: absolute;
+    bottom: 100%; /* Ajuste para posicionar a flecha */
+    left: 50%;
+    transform: translateX(-50%);
+    border-width: 6px;
+    border-style: solid;
+    border-color: transparent transparent #333 transparent;
+}
+.tooltip2::after {
+    content: '';
+    position: absolute;
+    bottom: 100%; /* Ajuste para posicionar a flecha */
+    left: 50%;
+    transform: translateX(-50%);
+    border-width: 6px;
+    border-style: solid;
+    border-color: transparent transparent #333 transparent;
+}
+
+
+/* tooltip dois */
+.titleDeleteFormCrud{
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+}
+
+
+
+
+
 
 
 /* MEDIA QUERIES */

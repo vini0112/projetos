@@ -161,6 +161,7 @@ async function addCardsOleo(){
         oleoCards.classList.add('projeto-oleo')
         oleoCards.classList.add(dadosOleo[i].marca)
         oleoCards.id = dadosOleo[i].id
+        
 
         if(dadosOleo[i].qtd == 0){
             oleoCards.classList.add('acabou')
@@ -172,7 +173,7 @@ async function addCardsOleo(){
         <img src="${dadosOleo[i].image}" alt="" class="img-fluid">
         <div class="card-body">
             <h5 class="card-title">${dadosOleo[i].nome} ${dadosOleo[i].marca} ${dadosOleo[i].viscosidade}</h5>
-            <p class="card-text">${dadosOleo[i].info}</p>
+            <p class="card-text" title="${oleoCards.id}" >${dadosOleo[i].info}</p>
         </div>
         <div class='card-footer' >
             <button class="btnBuyAlone">
@@ -434,6 +435,7 @@ async function addBattery(){
         newDiv.classList.add('card')
         newDiv.classList.add(dadoBatery[i].marca)
         newDiv.id = dadoBatery[i].id
+        
 
 
         if(dadoBatery[i].qtd == 0){
@@ -443,7 +445,7 @@ async function addBattery(){
         newDiv.innerHTML = `
         <img src="${dadoBatery[i].image}" alt="${dadoBatery[i].info}" class="img-fluid">
         <div class="card-body">
-            <h5 class="card-title">${dadoBatery[i].nome}</h5>
+            <h5 class="card-title" title="${newDiv.id}">${dadoBatery[i].nome}</h5>
             <p class="card-text">${dadoBatery[i].info}</p>
         </div>
         <div class='card-footer'>
@@ -498,7 +500,7 @@ async function addOleo2(){
         <img src="${dadosOleo[i].image}" alt="" class="img-fluid">
         <div class="card-body">
             <h5 class="card-title">${dadosOleo[i].nome} ${dadosOleo[i].marca} ${dadosOleo[i].viscosidade}</h5>
-            <p class="card-text">${dadosOleo[i].info}</p>
+            <p class="card-text" title="${oleoCards.id}">${dadosOleo[i].info}</p>
         </div>
         <div class='card-footer'>
             <button class="btnBuyAlone" id="${i}">
@@ -755,11 +757,11 @@ async function addFluidos(){
 
         newDiv.innerHTML = `
         <img src="${dadoFluido[i].image}" alt="${dadoFluido[i].viscosidade}" class="img-fluid">
-        <h5 class="card-title">${dadoFluido[i].nome} ${dadoFluido[i].viscosidade}</h5>
+        <h5 class="card-title" title="${newDiv.id}">${dadoFluido[i].nome} ${dadoFluido[i].viscosidade}</h5>
 
         <div class='card-footer'>
             <button class="btnBuyAlone" id="${i}">
-            <span class="priceBuy">${dadoFluido[i].price.toFixed(2).replace('.',',')}</span>
+            <span class="priceBuy" >${dadoFluido[i].price.toFixed(2).replace('.',',')}</span>
             <span class="txtBuy">Comprar</span>
             </button>
         </div>
@@ -1096,7 +1098,7 @@ async function dialogoOleoSimples(){
         marcaProduct = dados[i].marca
         codeProduct = dados[i].code
         montadora = dados[i].aplicacoes[0].montadora
-    
+        idProduct = dados[i].id
 
         // console.log("esse é o "+ i)
         let modalDialog = document.createElement('div')
@@ -1113,7 +1115,7 @@ async function dialogoOleoSimples(){
                     <button class="btn-close" type="button" data-bs-dismiss="modal" aria-label="close"></button>
                 </div>
                 <div class="modal-body">
-                    <h5>${nameProduct}</h5>   
+                    <h5 title="${idProduct}">${nameProduct}</h5>   
 
                     <ul id="lista-aplicacoes" class="ulListas">
                         <li class="montadora">${montadora}:</li>
@@ -1546,7 +1548,7 @@ async function dialogFiltrosOleoPesado(){
         marcaProduct = await dados[i].marca
         codeProduct = await dados[i].code
         montadora = await dados[i].aplicacoes[0].montadora
-        // console.log(code)
+        idProduct = await dados[i].id
 
         // console.log("esse é o "+ i)
         let modalDialog = document.createElement('div')
@@ -1563,7 +1565,7 @@ async function dialogFiltrosOleoPesado(){
                     <button class="btn-close" type="button" data-bs-dismiss="modal" aria-label="close"></button>
                 </div>
                 <div class="modal-body">
-                    <h5>${nameProduct}</h5>   
+                    <h5 title="${idProduct}">${nameProduct}</h5>   
 
                     <ul id="lista-aplicacoes" class="filtroOleoPesado">
                         <li class="montadora">${montadora}:</li>
@@ -1978,7 +1980,7 @@ async function dialogFiltroCombustSimple(){
         marcaProduct = await dados[i].marca
         codeProduct = await dados[i].code
         montadora = await dados[i].aplicacoes[0].montadora
-
+        idProduct = await dados[i].id
 
 
         let modalDialog = document.createElement('div')
@@ -1995,7 +1997,7 @@ async function dialogFiltroCombustSimple(){
                     <button class="btn-close" type="button" data-bs-dismiss="modal" aria-label="close"></button>
                 </div>
                 <div class="modal-body">
-                    <h5>${nameProduct}</h5>   
+                    <h5 title="${idProduct}">${nameProduct}</h5>   
 
                     <ul id="lista-aplicacoes" class="filtroCombustSimple">
                         <li class="montadora">${montadora}:</li>
@@ -2409,7 +2411,7 @@ async function dialogFiltroCombustPesado(){
         marcaProduct = await dados[i].marca
         codeProduct = await dados[i].code
         montadora = await dados[i].aplicacoes[0].montadora
-
+        idProduct = await dados[i].id
 
         let modalDialog = document.createElement('div')
 
@@ -2425,7 +2427,7 @@ async function dialogFiltroCombustPesado(){
                     <button class="btn-close" type="button" data-bs-dismiss="modal" aria-label="close"></button>
                 </div>
                 <div class="modal-body">
-                    <h5>${nameProduct}</h5>   
+                    <h5 title="${idProduct}">${nameProduct}</h5>   
 
                     <ul id="lista-aplicacoes" class="filtroCombustPesado">
                         <li class="montadora">${montadora}:</li>
@@ -2893,7 +2895,7 @@ async function dialogFiltroArMotor(){
         marcaProduct = await dados[i].marca
         codeProduct = await dados[i].code
         montadora = await dados[i].aplicacoes[0].montadora
-
+        idProduct = await dados[i].id
 
         let modalDialog = document.createElement('div')
 
@@ -2909,7 +2911,7 @@ async function dialogFiltroArMotor(){
                     <button class="btn-close" type="button" data-bs-dismiss="modal" aria-label="close"></button>
                 </div>
                 <div class="modal-body">
-                    <h5>${nameProduct}</h5>   
+                    <h5 title="${idProduct}">${nameProduct}</h5>   
 
                     <ul id="lista-aplicacoes" class="filtroArMotor">
                         <li class="montadora">${montadora}:</li>
@@ -3112,7 +3114,7 @@ async function dialogFiltroArCabine(){
         marcaProduct = await dados[i].marca
         codeProduct = await dados[i].code
         montadora = await dados[i].aplicacoes[0].montadora
-
+        idProduct = await dados[i].id
 
         let modalDialog = document.createElement('div')
 
@@ -3128,7 +3130,7 @@ async function dialogFiltroArCabine(){
                     <button class="btn-close" type="button" data-bs-dismiss="modal" aria-label="close"></button>
                 </div>
                 <div class="modal-body">
-                    <h5>${nameProduct}</h5>   
+                    <h5 title="${idProduct}">${nameProduct}</h5>   
 
                     <ul id="lista-aplicacoes" class="filtroArCabine">
                         <li class="montadora">${montadora}:</li>
@@ -3280,7 +3282,7 @@ async function dialogMangoteAr(){
         marcaProduct = await dados[i].marca
         codeProduct = await dados[i].code
         montadora = await dados[i].aplicacoes[0].montadora
-
+        idProduct = await dados[i].id
 
         let modalDialog = document.createElement('div')
 
@@ -3296,7 +3298,7 @@ async function dialogMangoteAr(){
                     <button class="btn-close" type="button" data-bs-dismiss="modal" aria-label="close"></button>
                 </div>
                 <div class="modal-body">
-                    <h5>${nameProduct}</h5>   
+                    <h5 title="${idProduct}">${nameProduct}</h5>   
 
                     <ul id="lista-aplicacoes" class="mangoteAR">
                         <li class="montadora">${montadora}:</li>
@@ -3602,7 +3604,7 @@ async function dialogTerminaisDirecao(){
         marcaProduct = await dados[i].marca
         codeProduct = await dados[i].code
         montadora = await dados[i].aplicacoes[0].montadora
-
+        idProduct = await dados[i].id
 
         let modalDialog = document.createElement('div')
 
@@ -3618,7 +3620,7 @@ async function dialogTerminaisDirecao(){
                     <button class="btn-close" type="button" data-bs-dismiss="modal" aria-label="close"></button>
                 </div>
                 <div class="modal-body">
-                    <h5>${nameProduct}</h5>   
+                    <h5 title="${idProduct}">${nameProduct}</h5>   
 
                     <ul id="lista-aplicacoes" class="terminaisDirecao">
                         <li class="montadora">${montadora}:</li>
@@ -3925,7 +3927,7 @@ async function dialogBarraAxiais(){
         marcaProduct = await dados[i].marca
         codeProduct = await dados[i].code
         montadora = await dados[i].aplicacoes[0].montadora
-
+        idProduct = await dados[i].id
 
         let modalDialog = document.createElement('div')
 
@@ -3941,7 +3943,7 @@ async function dialogBarraAxiais(){
                     <button class="btn-close" type="button" data-bs-dismiss="modal" aria-label="close"></button>
                 </div>
                 <div class="modal-body">
-                    <h5>${nameProduct}</h5>   
+                    <h5 title="${idProduct}">${nameProduct}</h5>   
 
                     <ul id="lista-aplicacoes" class="barrasAxiais">
                         <li class="montadora">${montadora}:</li>
@@ -4312,7 +4314,7 @@ async function dialogEstabilizadores(){
         marcaProduct = await dados[i].marca
         codeProduct = await dados[i].code
         montadora = await dados[i].aplicacoes[0].montadora
-
+        idProduct = await dados[i].id
 
         let modalDialog = document.createElement('div')
 
@@ -4328,7 +4330,7 @@ async function dialogEstabilizadores(){
                     <button class="btn-close" type="button" data-bs-dismiss="modal" aria-label="close"></button>
                 </div>
                 <div class="modal-body">
-                    <h5>${nameProduct}</h5>   
+                    <h5 title="${idProduct}">${nameProduct}</h5>   
 
                     <ul id="lista-aplicacoes" class="estabilizadores">
                         <li class="montadora">${montadora}:</li>
@@ -4485,7 +4487,7 @@ async function dialogBuchaCaixaDir(){
         marcaProduct = await dados[i].marca
         codeProduct = await dados[i].code
         montadora = await dados[i].aplicacoes[0].montadora
-
+        idProduct = await dados[i].id
 
         let modalDialog = document.createElement('div')
 
@@ -4501,7 +4503,7 @@ async function dialogBuchaCaixaDir(){
                     <button class="btn-close" type="button" data-bs-dismiss="modal" aria-label="close"></button>
                 </div>
                 <div class="modal-body">
-                    <h5>${nameProduct}</h5>   
+                    <h5 title="${idProduct}">${nameProduct}</h5>   
 
                     <ul id="lista-aplicacoes" class="buchasCaixaDir">
                         <li class="montadora">${montadora}:</li>
@@ -4785,6 +4787,7 @@ async function dialogBatedores(){
         marcaProduct = await dados[i].marca
         codeProduct = await dados[i].code
         montadora = await dados[i].aplicacoes[0].montadora
+        idProduct = await dados[i].id
 
 
         let modalDialog = document.createElement('div')
@@ -4801,7 +4804,7 @@ async function dialogBatedores(){
                     <button class="btn-close" type="button" data-bs-dismiss="modal" aria-label="close"></button>
                 </div>
                 <div class="modal-body">
-                    <h5>${nameProduct}</h5>   
+                    <h5 title="${idProduct}">${nameProduct}</h5>   
 
                     <ul id="lista-aplicacoes" class="batedores">
                         <li class="montadora">${montadora}:</li>
@@ -5204,6 +5207,7 @@ async function dialogPivos(){
         marcaProduct = await dados[i].marca
         codeProduct = await dados[i].code
         montadora = await dados[i].aplicacoes[0].montadora
+        idProduct = await dados[i].id
 
 
         let modalDialog = document.createElement('div')
@@ -5220,7 +5224,7 @@ async function dialogPivos(){
                     <button class="btn-close" type="button" data-bs-dismiss="modal" aria-label="close"></button>
                 </div>
                 <div class="modal-body">
-                    <h5>${nameProduct}</h5>   
+                    <h5 title="${idProduct}">${nameProduct}</h5>   
 
                     <ul id="lista-aplicacoes" class="pivos">
                         <li class="montadora">${montadora}:</li>
@@ -5371,6 +5375,7 @@ async function dialogAmortecedor(){
         marcaProduct = await dados[i].marca
         codeProduct = await dados[i].code
         montadora = await dados[i].aplicacoes[0].montadora
+        idProduct = await dados[i].id
 
 
         let modalDialog = document.createElement('div')
@@ -5387,7 +5392,7 @@ async function dialogAmortecedor(){
                     <button class="btn-close" type="button" data-bs-dismiss="modal" aria-label="close"></button>
                 </div>
                 <div class="modal-body">
-                    <h5>${nameProduct}</h5>   
+                    <h5 title="${idProduct}">${nameProduct}</h5>   
 
                     <ul id="lista-aplicacoes" class="amortecedores">
                         <li class="montadora">${montadora}:</li>
@@ -5689,6 +5694,7 @@ async function dialogBuchaBandeja(){
         marcaProduct = await dados[i].marca
         codeProduct = await dados[i].code
         montadora = await dados[i].aplicacoes[0].montadora
+        idProduct = await dados[i].id
 
 
         let modalDialog = document.createElement('div')
@@ -5705,7 +5711,7 @@ async function dialogBuchaBandeja(){
                     <button class="btn-close" type="button" data-bs-dismiss="modal" aria-label="close"></button>
                 </div>
                 <div class="modal-body">
-                    <h5>${nameProduct}</h5>   
+                    <h5 title="${idProduct}">${nameProduct}</h5>   
 
                     <ul id="lista-aplicacoes" class="buchaBandeja">
                         <li class="montadora">${montadora}:</li>
@@ -5909,6 +5915,7 @@ async function dialogCoxinAmort(){
         marcaProduct = await dados[i].marca
         codeProduct = await dados[i].code
         montadora = await dados[i].aplicacoes[0].montadora
+        idProduct = await dados[i].id
 
 
         let modalDialog = document.createElement('div')
@@ -5925,7 +5932,7 @@ async function dialogCoxinAmort(){
                     <button class="btn-close" type="button" data-bs-dismiss="modal" aria-label="close"></button>
                 </div>
                 <div class="modal-body">
-                    <h5>${nameProduct}</h5>   
+                    <h5 title="${idProduct}">${nameProduct}</h5>   
 
                     <ul id="lista-aplicacoes" class="coxinsMotor">
                         <li class="montadora">${montadora}:</li>
@@ -6078,6 +6085,7 @@ async function dialogBieletas(){
         marcaProduct = await dados[i].marca
         codeProduct = await dados[i].code
         montadora = await dados[i].aplicacoes[0].montadora
+        idProduct = await dados[i].id
 
 
         let modalDialog = document.createElement('div')
@@ -6094,7 +6102,7 @@ async function dialogBieletas(){
                     <button class="btn-close" type="button" data-bs-dismiss="modal" aria-label="close"></button>
                 </div>
                 <div class="modal-body">
-                    <h5>${nameProduct}</h5>   
+                    <h5 title="${idProduct}">${nameProduct}</h5>   
 
                     <ul id="lista-aplicacoes" class="bieletas">
                         <li class="montadora">${montadora}:</li>
@@ -6476,6 +6484,7 @@ async function dialogPastilhas(){
         marcaProduct = await dados[i].marca
         codeProduct = await dados[i].code
         montadora = await dados[i].aplicacoes[0].montadora
+        idProduct = await dados[i].id
 
 
         let modalDialog = document.createElement('div')
@@ -6492,7 +6501,7 @@ async function dialogPastilhas(){
                     <button class="btn-close" type="button" data-bs-dismiss="modal" aria-label="close"></button>
                 </div>
                 <div class="modal-body">
-                    <h5>${nameProduct}</h5>   
+                    <h5 title="${idProduct}">${nameProduct}</h5>   
 
                     <ul id="lista-aplicacoes" class="pastilhasFreio">
                         <li class="montadora">${montadora}:</li>
@@ -6745,6 +6754,7 @@ async function dialogDiscosFreio(){
         marcaProduct = await dados[i].marca
         codeProduct = await dados[i].code
         montadora = await dados[i].aplicacoes[0].montadora
+        idProduct = await dados[i].id
 
 
         let modalDialog = document.createElement('div')
@@ -6761,7 +6771,7 @@ async function dialogDiscosFreio(){
                     <button class="btn-close" type="button" data-bs-dismiss="modal" aria-label="close"></button>
                 </div>
                 <div class="modal-body">
-                    <h5>${nameProduct}</h5>   
+                    <h5 title="${idProduct}">${nameProduct}</h5>   
 
                     <ul id="lista-aplicacoes" class="discosFreio">
                         <li class="montadora">${montadora}:</li>
@@ -6915,6 +6925,7 @@ async function dialogSapatas(){
         marcaProduct = await dados[i].marca
         codeProduct = await dados[i].code
         montadora = await dados[i].aplicacoes[0].montadora
+        idProduct = await dados[i].id
 
 
         let modalDialog = document.createElement('div')
@@ -6931,7 +6942,7 @@ async function dialogSapatas(){
                     <button class="btn-close" type="button" data-bs-dismiss="modal" aria-label="close"></button>
                 </div>
                 <div class="modal-body">
-                    <h5>${nameProduct}</h5>   
+                    <h5 title="${idProduct}">${nameProduct}</h5>   
 
                     <ul id="lista-aplicacoes" class="sapatasFreio">
                         <li class="montadora">${montadora}:</li>
@@ -7091,6 +7102,7 @@ async function dialogCilindros(){
         marcaProduct = await dados[i].marca
         codeProduct = await dados[i].code
         montadora = await dados[i].aplicacoes[0].montadora
+        idProduct = await dados[i].id
 
 
         let modalDialog = document.createElement('div')
@@ -7107,7 +7119,7 @@ async function dialogCilindros(){
                     <button class="btn-close" type="button" data-bs-dismiss="modal" aria-label="close"></button>
                 </div>
                 <div class="modal-body">
-                    <h5>${nameProduct}</h5>   
+                    <h5 title="${idProduct}">${nameProduct}</h5>   
 
                     <ul id="lista-aplicacoes" class="cilindros">
                         <li class="montadora">${montadora}:</li>
@@ -7360,6 +7372,7 @@ async function dialogTambores(){
         marcaProduct = await dados[i].marca
         codeProduct = await dados[i].code
         montadora = await dados[i].aplicacoes[0].montadora
+        idProduct = await dados[i].id
 
 
         let modalDialog = document.createElement('div')
@@ -7376,7 +7389,7 @@ async function dialogTambores(){
                     <button class="btn-close" type="button" data-bs-dismiss="modal" aria-label="close"></button>
                 </div>
                 <div class="modal-body">
-                    <h5>${nameProduct}</h5>   
+                    <h5 title="${idProduct}">${nameProduct}</h5>   
 
                     <ul id="lista-aplicacoes" class="tambores">
                         <li class="montadora">${montadora}:</li>
@@ -7553,7 +7566,6 @@ async function carsEapli22(dados){
 
 
 }
-
 
 
 
@@ -7810,6 +7822,7 @@ async function dialogReparos(){
         marcaProduct = await dados[i].marca
         codeProduct = await dados[i].code
         montadora = await dados[i].aplicacoes[0].montadora
+        idProduct = await dados[i].id
 
 
         let modalDialog = document.createElement('div')
@@ -7826,7 +7839,7 @@ async function dialogReparos(){
                     <button class="btn-close" type="button" data-bs-dismiss="modal" aria-label="close"></button>
                 </div>
                 <div class="modal-body">
-                    <h5>${nameProduct}</h5>   
+                    <h5 title="${idProduct}">${nameProduct}</h5>   
 
                     <ul id="lista-aplicacoes" class="reparosFreio">
                         <li class="montadora">${montadora}:</li>
@@ -8199,6 +8212,7 @@ async function dialogCabosFreio(){
         marcaProduct = await dados[i].marca
         codeProduct = await dados[i].code
         montadora = await dados[i].aplicacoes[0].montadora
+        idProduct = await dados[i].id
 
 
         let modalDialog = document.createElement('div')
@@ -8215,7 +8229,7 @@ async function dialogCabosFreio(){
                     <button class="btn-close" type="button" data-bs-dismiss="modal" aria-label="close"></button>
                 </div>
                 <div class="modal-body">
-                    <h5>${nameProduct}</h5>   
+                    <h5 title="${idProduct}">${nameProduct}</h5>   
 
                     <ul id="lista-aplicacoes" class="cabosFreio">
                         <li class="montadora">${montadora}:</li>
@@ -8370,6 +8384,7 @@ async function dialogAcessorioFreio(){
         marcaProduct = await dados[i].marca
         codeProduct = await dados[i].code
         montadora = await dados[i].aplicacoes[0].montadora
+        idProduct = await dados[i].id
 
 
         let modalDialog = document.createElement('div')
@@ -8386,7 +8401,7 @@ async function dialogAcessorioFreio(){
                     <button class="btn-close" type="button" data-bs-dismiss="modal" aria-label="close"></button>
                 </div>
                 <div class="modal-body">
-                    <h5>${nameProduct}</h5>   
+                    <h5 title="${idProduct}">${nameProduct}</h5>   
 
                     <ul id="lista-aplicacoes" class="acessorioFreio">
                         <li class="montadora">${montadora}:</li>
@@ -8549,6 +8564,7 @@ async function dialogCabosVela(){
         marcaProduct = await dados[i].marca
         codeProduct = await dados[i].code
         montadora = await dados[i].aplicacoes[0].montadora
+        idProduct = await dados[i].id
 
 
         let modalDialog = document.createElement('div')
@@ -8565,7 +8581,7 @@ async function dialogCabosVela(){
                     <button class="btn-close" type="button" data-bs-dismiss="modal" aria-label="close"></button>
                 </div>
                 <div class="modal-body">
-                    <h5>${nameProduct}</h5>   
+                    <h5 title="${idProduct}">${nameProduct}</h5>   
 
                     <ul id="lista-aplicacoes" class="cabosVela">
                         <li class="montadora">${montadora}:</li>
@@ -8769,6 +8785,7 @@ async function dialogVelas(){
         marcaProduct = await dados[i].marca
         codeProduct = await dados[i].code
         montadora = await dados[i].aplicacoes[0].montadora
+        idProduct = await dados[i].id
 
 
         let modalDialog = document.createElement('div')
@@ -8785,7 +8802,7 @@ async function dialogVelas(){
                     <button class="btn-close" type="button" data-bs-dismiss="modal" aria-label="close"></button>
                 </div>
                 <div class="modal-body">
-                    <h5>${nameProduct}</h5>   
+                    <h5 title="${idProduct}">${nameProduct}</h5>   
 
                     <ul id="lista-aplicacoes" class="velas">
                         <li class="montadora">${montadora}:</li>
@@ -8942,6 +8959,7 @@ async function dialogBobinas(){
         marcaProduct = await dados[i].marca
         codeProduct = await dados[i].code
         montadora = await dados[i].aplicacoes[0].montadora
+        idProduct = await dados[i].id
 
 
         let modalDialog = document.createElement('div')
@@ -8958,7 +8976,7 @@ async function dialogBobinas(){
                     <button class="btn-close" type="button" data-bs-dismiss="modal" aria-label="close"></button>
                 </div>
                 <div class="modal-body">
-                    <h5>${nameProduct}</h5>   
+                    <h5 title="${idProduct}">${nameProduct}</h5>   
 
                     <ul id="lista-aplicacoes" class="bobinas">
                         <li class="montadora">${montadora}:</li>
@@ -9162,6 +9180,7 @@ async function dialogIgnicao(){
         marcaProduct = await dados[i].marca
         codeProduct = await dados[i].code
         montadora = await dados[i].aplicacoes[0].montadora
+        idProduct = await dados[i].id
 
 
         let modalDialog = document.createElement('div')
@@ -9178,7 +9197,7 @@ async function dialogIgnicao(){
                     <button class="btn-close" type="button" data-bs-dismiss="modal" aria-label="close"></button>
                 </div>
                 <div class="modal-body">
-                    <h5>${nameProduct}</h5>   
+                    <h5 title="${idProduct}">${nameProduct}</h5>   
 
                     <ul id="lista-aplicacoes" class="modulosIgnicao">
                         <li class="montadora">${montadora}:</li>
@@ -9343,6 +9362,7 @@ async function dialogTensores(){
         marcaProduct = await dados[i].marca
         codeProduct = await dados[i].code
         montadora = await dados[i].aplicacoes[0].montadora
+        idProduct = await dados[i].id
 
 
         let modalDialog = document.createElement('div')
@@ -9359,7 +9379,7 @@ async function dialogTensores(){
                     <button class="btn-close" type="button" data-bs-dismiss="modal" aria-label="close"></button>
                 </div>
                 <div class="modal-body">
-                    <h5>${nameProduct}</h5>   
+                    <h5 title="${idProduct}">${nameProduct}</h5>   
 
                     <ul id="lista-aplicacoes" class="tensores">
                         <li class="montadora">${montadora}:</li>
@@ -9721,6 +9741,7 @@ async function dialogCorreiaAlter(){
         marcaProduct = await dados[i].marca
         codeProduct = await dados[i].code
         montadora = await dados[i].aplicacoes[0].montadora
+        idProduct = await dados[i].id
 
 
         let modalDialog = document.createElement('div')
@@ -9737,7 +9758,7 @@ async function dialogCorreiaAlter(){
                     <button class="btn-close" type="button" data-bs-dismiss="modal" aria-label="close"></button>
                 </div>
                 <div class="modal-body">
-                    <h5>${nameProduct}</h5>   
+                    <h5 title="${idProduct}">${nameProduct}</h5>   
 
                     <ul id="lista-aplicacoes" class="correiasAlter">
                         <li class="montadora">${montadora}:</li>
@@ -9993,6 +10014,7 @@ async function dialogCorreiaDent(){
         marcaProduct = await dados[i].marca
         codeProduct = await dados[i].code
         montadora = await dados[i].aplicacoes[0].montadora
+        idProduct = await dados[i].id
 
 
         let modalDialog = document.createElement('div')
@@ -10009,7 +10031,7 @@ async function dialogCorreiaDent(){
                     <button class="btn-close" type="button" data-bs-dismiss="modal" aria-label="close"></button>
                 </div>
                 <div class="modal-body">
-                    <h5>${nameProduct}</h5>   
+                    <h5 title="${idProduct}">${nameProduct}</h5>   
 
                     <ul id="lista-aplicacoes" class="correiaDent">
                         <li class="montadora">${montadora}:</li>
@@ -10208,6 +10230,7 @@ async function dialogRegVoltagem(){
         marcaProduct = await dados[i].marca
         codeProduct = await dados[i].code
         montadora = await dados[i].aplicacoes[0].montadora
+        idProduct = await dados[i].id
 
 
         let modalDialog = document.createElement('div')
@@ -10224,7 +10247,7 @@ async function dialogRegVoltagem(){
                     <button class="btn-close" type="button" data-bs-dismiss="modal" aria-label="close"></button>
                 </div>
                 <div class="modal-body">
-                    <h5>${nameProduct}</h5>   
+                    <h5 title="${idProduct}">${nameProduct}</h5>   
 
                     <ul id="lista-aplicacoes" class="regVoltagem">
                         <li class="montadora">${montadora}:</li>
@@ -10377,6 +10400,7 @@ async function dialogEstatores(){
         marcaProduct = await dados[i].marca
         codeProduct = await dados[i].code
         montadora = await dados[i].aplicacoes[0].montadora
+        idProduct = await dados[i].id
 
 
         let modalDialog = document.createElement('div')
@@ -10393,7 +10417,7 @@ async function dialogEstatores(){
                     <button class="btn-close" type="button" data-bs-dismiss="modal" aria-label="close"></button>
                 </div>
                 <div class="modal-body">
-                    <h5>${nameProduct}</h5>   
+                    <h5 title="${idProduct}">${nameProduct}</h5>   
 
                     <ul id="lista-aplicacoes" class="estatores">
                         <li class="montadora">${montadora}:</li>
@@ -10600,6 +10624,7 @@ async function dialogInpulsores(){
         marcaProduct = await dados[i].marca
         codeProduct = await dados[i].code
         montadora = await dados[i].aplicacoes[0].montadora
+        idProduct = await dados[i].id
 
 
         let modalDialog = document.createElement('div')
@@ -10616,7 +10641,7 @@ async function dialogInpulsores(){
                     <button class="btn-close" type="button" data-bs-dismiss="modal" aria-label="close"></button>
                 </div>
                 <div class="modal-body">
-                    <h5>${nameProduct}</h5>   
+                    <h5 title="${idProduct}">${nameProduct}</h5>   
 
                     <ul id="lista-aplicacoes" class="bendix">
                         <li class="montadora">${montadora}:</li>
@@ -10818,6 +10843,7 @@ async function dialogPortaEscovas(){
         marcaProduct = await dados[i].marca
         codeProduct = await dados[i].code
         montadora = await dados[i].aplicacoes[0].montadora
+        idProduct = await dados[i].id
 
 
         let modalDialog = document.createElement('div')
@@ -10834,7 +10860,7 @@ async function dialogPortaEscovas(){
                     <button class="btn-close" type="button" data-bs-dismiss="modal" aria-label="close"></button>
                 </div>
                 <div class="modal-body">
-                    <h5>${nameProduct}</h5>   
+                    <h5 title="${idProduct}">${nameProduct}</h5>   
 
                     <ul id="lista-aplicacoes" class="portaEscova">
                         <li class="montadora">${montadora}:</li>
@@ -11085,6 +11111,7 @@ async function dialogMotorPartida(){
         marcaProduct = await dados[i].marca
         codeProduct = await dados[i].code
         montadora = await dados[i].aplicacoes[0].montadora
+        idProduct = await dados[i].id
 
 
         let modalDialog = document.createElement('div')
@@ -11101,7 +11128,7 @@ async function dialogMotorPartida(){
                     <button class="btn-close" type="button" data-bs-dismiss="modal" aria-label="close"></button>
                 </div>
                 <div class="modal-body">
-                    <h5>${nameProduct}</h5>   
+                    <h5 title="${idProduct}">${nameProduct}</h5>   
 
                     <ul id="lista-aplicacoes" class="acessoriosMotorPart">
                         <li class="montadora">${montadora}:</li>
@@ -11313,6 +11340,7 @@ async function dialogBombaDagua(){
         marcaProduct = await dados[i].marca
         codeProduct = await dados[i].code
         montadora = await dados[i].aplicacoes[0].montadora
+        idProduct = await dados[i].id
 
 
         let modalDialog = document.createElement('div')
@@ -11329,7 +11357,7 @@ async function dialogBombaDagua(){
                     <button class="btn-close" type="button" data-bs-dismiss="modal" aria-label="close"></button>
                 </div>
                 <div class="modal-body">
-                    <h5>${nameProduct}</h5>   
+                    <h5 title="${idProduct}">${nameProduct}</h5>   
 
                     <ul id="lista-aplicacoes" class="bombaDagua">
                         <li class="montadora">${montadora}:</li>
@@ -11532,6 +11560,7 @@ async function dialogReservatorios(){
         marcaProduct = await dados[i].marca
         codeProduct = await dados[i].code
         montadora = await dados[i].aplicacoes[0].montadora
+        idProduct = await dados[i].id
 
 
         let modalDialog = document.createElement('div')
@@ -11548,7 +11577,7 @@ async function dialogReservatorios(){
                     <button class="btn-close" type="button" data-bs-dismiss="modal" aria-label="close"></button>
                 </div>
                 <div class="modal-body">
-                    <h5>${nameProduct}</h5>   
+                    <h5 title="${idProduct}">${nameProduct}</h5>   
 
                     <ul id="lista-aplicacoes" class="reservatorios">
                         <li class="montadora">${montadora}:</li>
@@ -11706,6 +11735,7 @@ async function dialogValvulaTermo(){
         marcaProduct = await dados[i].marca
         codeProduct = await dados[i].code
         montadora = await dados[i].aplicacoes[0].montadora
+        idProduct = await dados[i].id
 
 
         let modalDialog = document.createElement('div')
@@ -11722,7 +11752,7 @@ async function dialogValvulaTermo(){
                     <button class="btn-close" type="button" data-bs-dismiss="modal" aria-label="close"></button>
                 </div>
                 <div class="modal-body">
-                    <h5>${nameProduct}</h5>   
+                    <h5 title="${idProduct}">${nameProduct}</h5>   
 
                     <ul id="lista-aplicacoes" class="valvulasTermo">
                         <li class="montadora">${montadora}:</li>
@@ -11877,6 +11907,7 @@ async function dialogVentoinha(){
         marcaProduct = await dados[i].marca
         codeProduct = await dados[i].code
         montadora = await dados[i].aplicacoes[0].montadora
+        idProduct = await dados[i].id
 
 
         let modalDialog = document.createElement('div')
@@ -11893,7 +11924,7 @@ async function dialogVentoinha(){
                     <button class="btn-close" type="button" data-bs-dismiss="modal" aria-label="close"></button>
                 </div>
                 <div class="modal-body">
-                    <h5>${nameProduct}</h5>   
+                    <h5 title="${idProduct}">${nameProduct}</h5>   
 
                     <ul id="lista-aplicacoes" class="ventoinha">
                         <li class="montadora">${montadora}:</li>
@@ -12220,6 +12251,7 @@ async function dialogCanosDagua(){
         marcaProduct = await dados[i].marca
         codeProduct = await dados[i].code
         montadora = await dados[i].aplicacoes[0].montadora
+        idProduct = await dados[i].id
 
 
         let modalDialog = document.createElement('div')
@@ -12236,7 +12268,7 @@ async function dialogCanosDagua(){
                     <button class="btn-close" type="button" data-bs-dismiss="modal" aria-label="close"></button>
                 </div>
                 <div class="modal-body">
-                    <h5>${nameProduct}</h5>   
+                    <h5 title="${idProduct}">${nameProduct}</h5>   
 
                     <ul id="lista-aplicacoes" class="canosDagua">
                         <li class="montadora">${montadora}:</li>
@@ -12398,6 +12430,7 @@ async function dialogTubosDagua(){
         marcaProduct = await dados[i].marca
         codeProduct = await dados[i].code
         montadora = await dados[i].aplicacoes[0].montadora
+        idProduct = await dados[i].id
 
 
         let modalDialog = document.createElement('div')
@@ -12414,7 +12447,7 @@ async function dialogTubosDagua(){
                     <button class="btn-close" type="button" data-bs-dismiss="modal" aria-label="close"></button>
                 </div>
                 <div class="modal-body">
-                    <h5>${nameProduct}</h5>   
+                    <h5 title="${idProduct}">${nameProduct}</h5>   
 
                     <ul id="lista-aplicacoes" class="tubosDagua">
                         <li class="montadora">${montadora}:</li>
@@ -12571,6 +12604,7 @@ async function dialogResistencia(){
         marcaProduct = await dados[i].marca
         codeProduct = await dados[i].code
         montadora = await dados[i].aplicacoes[0].montadora
+        idProduct = await dados[i].id
 
 
         let modalDialog = document.createElement('div')
@@ -12587,7 +12621,7 @@ async function dialogResistencia(){
                     <button class="btn-close" type="button" data-bs-dismiss="modal" aria-label="close"></button>
                 </div>
                 <div class="modal-body">
-                    <h5>${nameProduct}</h5>   
+                    <h5 title="${idProduct}">${nameProduct}</h5>   
 
                     <ul id="lista-aplicacoes" class="resistencia">
                         <li class="montadora">${montadora}:</li>
@@ -12746,6 +12780,7 @@ async function dialogAcessoriosArref(){
         marcaProduct = await dados[i].marca
         codeProduct = await dados[i].code
         montadora = await dados[i].aplicacoes[0].montadora
+        idProduct = await dados[i].id
 
 
         let modalDialog = document.createElement('div')
@@ -12762,7 +12797,7 @@ async function dialogAcessoriosArref(){
                     <button class="btn-close" type="button" data-bs-dismiss="modal" aria-label="close"></button>
                 </div>
                 <div class="modal-body">
-                    <h5>${nameProduct}</h5>   
+                    <h5 title="${idProduct}">${nameProduct}</h5>   
 
                     <ul id="lista-aplicacoes" class="acessoriosArref">
                         <li class="montadora">${montadora}:</li>
@@ -12932,6 +12967,7 @@ async function dialogBicos(){
         marcaProduct = await dados[i].marca
         codeProduct = await dados[i].code
         montadora = await dados[i].aplicacoes[0].montadora
+        idProduct = await dados[i].id
 
 
         let modalDialog = document.createElement('div')
@@ -12948,7 +12984,7 @@ async function dialogBicos(){
                     <button class="btn-close" type="button" data-bs-dismiss="modal" aria-label="close"></button>
                 </div>
                 <div class="modal-body">
-                    <h5>${nameProduct}</h5>   
+                    <h5 title="${idProduct}">${nameProduct}</h5>   
 
                     <ul id="lista-aplicacoes" class="bicos">
                         <li class="montadora">${montadora}:</li>
@@ -13107,6 +13143,7 @@ async function dialogBombaCombust(){
         marcaProduct = await dados[i].marca
         codeProduct = await dados[i].code
         montadora = await dados[i].aplicacoes[0].montadora
+        idProduct = await dados[i].id
 
 
         let modalDialog = document.createElement('div')
@@ -13123,7 +13160,7 @@ async function dialogBombaCombust(){
                     <button class="btn-close" type="button" data-bs-dismiss="modal" aria-label="close"></button>
                 </div>
                 <div class="modal-body">
-                    <h5>${nameProduct}</h5>   
+                    <h5 title="${idProduct}">${nameProduct}</h5>   
 
                     <ul id="lista-aplicacoes" class="bombaCombust">
                         <li class="montadora">${montadora}:</li>
@@ -13431,6 +13468,7 @@ async function dialogFlangeBomba(){
         marcaProduct = await dados[i].marca
         codeProduct = await dados[i].code
         montadora = await dados[i].aplicacoes[0].montadora
+        idProduct = await dados[i].id
 
 
         let modalDialog = document.createElement('div')
@@ -13447,7 +13485,7 @@ async function dialogFlangeBomba(){
                     <button class="btn-close" type="button" data-bs-dismiss="modal" aria-label="close"></button>
                 </div>
                 <div class="modal-body">
-                    <h5>${nameProduct}</h5>   
+                    <h5 title="${idProduct}">${nameProduct}</h5>   
 
                     <ul id="lista-aplicacoes" class="flangesBomba">
                         <li class="montadora">${montadora}:</li>
@@ -13604,6 +13642,7 @@ async function dialogAcessoriosCombust(){
         marcaProduct = await dados[i].marca
         codeProduct = await dados[i].code
         montadora = await dados[i].aplicacoes[0].montadora
+        idProduct = await dados[i].id
 
 
         let modalDialog = document.createElement('div')
@@ -13620,7 +13659,7 @@ async function dialogAcessoriosCombust(){
                     <button class="btn-close" type="button" data-bs-dismiss="modal" aria-label="close"></button>
                 </div>
                 <div class="modal-body">
-                    <h5>${nameProduct}</h5>   
+                    <h5 title="${idProduct}">${nameProduct}</h5>   
 
                     <ul id="lista-aplicacoes" class="acessoriosCombust">
                         <li class="montadora">${montadora}:</li>
@@ -13784,6 +13823,7 @@ async function dialogDiscosEmbre(){
         marcaProduct = await dados[i].marca
         codeProduct = await dados[i].code
         montadora = await dados[i].aplicacoes[0].montadora
+        idProduct = await dados[i].id
 
 
         let modalDialog = document.createElement('div')
@@ -13800,7 +13840,7 @@ async function dialogDiscosEmbre(){
                     <button class="btn-close" type="button" data-bs-dismiss="modal" aria-label="close"></button>
                 </div>
                 <div class="modal-body">
-                    <h5>${nameProduct}</h5>   
+                    <h5 title="${idProduct}">${nameProduct}</h5>   
 
                     <ul id="lista-aplicacoes" class="discosEmbre">
                         <li class="montadora">${montadora}:</li>
@@ -13958,6 +13998,7 @@ async function dialogReparosTrambCambio(){
         marcaProduct = await dados[i].marca
         codeProduct = await dados[i].code
         montadora = await dados[i].aplicacoes[0].montadora
+        idProduct = await dados[i].id
 
 
         let modalDialog = document.createElement('div')
@@ -13974,7 +14015,7 @@ async function dialogReparosTrambCambio(){
                     <button class="btn-close" type="button" data-bs-dismiss="modal" aria-label="close"></button>
                 </div>
                 <div class="modal-body">
-                    <h5>${nameProduct}</h5>   
+                    <h5 title="${idProduct}">${nameProduct}</h5>   
 
                     <ul id="lista-aplicacoes" class="reparoTrambCamb">
                         <li class="montadora">${montadora}:</li>
@@ -14143,6 +14184,7 @@ async function dialogCubosRoda(){
         marcaProduct = await dados[i].marca
         codeProduct = await dados[i].code
         montadora = await dados[i].aplicacoes[0].montadora
+        idProduct = await dados[i].id
 
 
         let modalDialog = document.createElement('div')
@@ -14159,7 +14201,7 @@ async function dialogCubosRoda(){
                     <button class="btn-close" type="button" data-bs-dismiss="modal" aria-label="close"></button>
                 </div>
                 <div class="modal-body">
-                    <h5>${nameProduct}</h5>   
+                    <h5 title="${idProduct}">${nameProduct}</h5>   
 
                     <ul id="lista-aplicacoes" class="cubosRoda">
                         <li class="montadora">${montadora}:</li>
@@ -14317,6 +14359,7 @@ async function dialogPontaEixo(){
         marcaProduct = await dados[i].marca
         codeProduct = await dados[i].code
         montadora = await dados[i].aplicacoes[0].montadora
+        idProduct = await dados[i].id
 
 
         let modalDialog = document.createElement('div')
@@ -14333,7 +14376,7 @@ async function dialogPontaEixo(){
                     <button class="btn-close" type="button" data-bs-dismiss="modal" aria-label="close"></button>
                 </div>
                 <div class="modal-body">
-                    <h5>${nameProduct}</h5>   
+                    <h5 title="${idProduct}">${nameProduct}</h5>   
 
                     <ul id="lista-aplicacoes" class="pontaEixos">
                         <li class="montadora">${montadora}:</li>
@@ -14489,6 +14532,7 @@ async function dialogJuntasHomo(){
         marcaProduct = await dados[i].marca
         codeProduct = await dados[i].code
         montadora = await dados[i].aplicacoes[0].montadora
+        idProduct = await dados[i].id
 
 
         let modalDialog = document.createElement('div')
@@ -14505,7 +14549,7 @@ async function dialogJuntasHomo(){
                     <button class="btn-close" type="button" data-bs-dismiss="modal" aria-label="close"></button>
                 </div>
                 <div class="modal-body">
-                    <h5>${nameProduct}</h5>   
+                    <h5 title="${idProduct}">${nameProduct}</h5>   
 
                     <ul id="lista-aplicacoes" class="juntasHomo">
                         <li class="montadora">${montadora}:</li>
@@ -14763,6 +14807,7 @@ async function dialogRolamentoRoda(){
         marcaProduct = await dados[i].marca
         codeProduct = await dados[i].code
         montadora = await dados[i].aplicacoes[0].montadora
+        idProduct = await dados[i].id
 
 
         let modalDialog = document.createElement('div')
@@ -14779,7 +14824,7 @@ async function dialogRolamentoRoda(){
                     <button class="btn-close" type="button" data-bs-dismiss="modal" aria-label="close"></button>
                 </div>
                 <div class="modal-body">
-                    <h5>${nameProduct}</h5>   
+                    <h5 title="${idProduct}">${nameProduct}</h5>   
 
                     <ul id="lista-aplicacoes" class="rolamentoRoda">
                         <li class="montadora">${montadora}:</li>
@@ -15039,6 +15084,7 @@ async function dialogRolamentDiver(){
         marcaProduct = await dados[i].marca
         codeProduct = await dados[i].code
         montadora = await dados[i].aplicacoes[0].montadora
+        idProduct = await dados[i].id
 
 
         let modalDialog = document.createElement('div')
@@ -15055,7 +15101,7 @@ async function dialogRolamentDiver(){
                     <button class="btn-close" type="button" data-bs-dismiss="modal" aria-label="close"></button>
                 </div>
                 <div class="modal-body">
-                    <h5>${nameProduct}</h5>   
+                    <h5 title="${idProduct}">${nameProduct}</h5>   
 
                     <ul id="lista-aplicacoes" class="rolamentosDiver">
                         <li class="montadora">${montadora}:</li>
@@ -15345,6 +15391,7 @@ async function dialogBojos(){
         marcaProduct = await dados[i].marca
         codeProduct = await dados[i].code
         montadora = await dados[i].aplicacoes[0].montadora
+        idProduct = await dados[i].id
 
 
         let modalDialog = document.createElement('div')
@@ -15361,7 +15408,7 @@ async function dialogBojos(){
                     <button class="btn-close" type="button" data-bs-dismiss="modal" aria-label="close"></button>
                 </div>
                 <div class="modal-body">
-                    <h5>${nameProduct}</h5>   
+                    <h5 title="${idProduct}">${nameProduct}</h5>   
 
                     <ul id="lista-aplicacoes" class="bojos">
                         <li class="montadora">${montadora}:</li>
@@ -15643,6 +15690,7 @@ async function dialogIntermediario(){
         marcaProduct = await dados[i].marca
         codeProduct = await dados[i].code
         montadora = await dados[i].aplicacoes[0].montadora
+        idProduct = await dados[i].id
 
 
         let modalDialog = document.createElement('div')
@@ -15659,7 +15707,7 @@ async function dialogIntermediario(){
                     <button class="btn-close" type="button" data-bs-dismiss="modal" aria-label="close"></button>
                 </div>
                 <div class="modal-body">
-                    <h5>${nameProduct}</h5>   
+                    <h5 title="${idProduct}">${nameProduct}</h5>   
 
                     <ul id="lista-aplicacoes" class="intermediario">
                         <li class="montadora">${montadora}:</li>
@@ -15941,6 +15989,7 @@ async function dialogConxinsEscap(){
         marcaProduct = await dados[i].marca
         codeProduct = await dados[i].code
         montadora = await dados[i].aplicacoes[0].montadora
+        idProduct = await dados[i].id
 
 
         let modalDialog = document.createElement('div')
@@ -15957,7 +16006,7 @@ async function dialogConxinsEscap(){
                     <button class="btn-close" type="button" data-bs-dismiss="modal" aria-label="close"></button>
                 </div>
                 <div class="modal-body">
-                    <h5>${nameProduct}</h5>   
+                    <h5 title="${idProduct}">${nameProduct}</h5>   
 
                     <ul id="lista-aplicacoes" class="coxinsEscap">
                         <li class="montadora">${montadora}:</li>
@@ -16087,6 +16136,8 @@ async function carsEapli59(dados){
 }
 
 
+
+
 // adding acessorios dos escapes 
 async function acessoriosEscap(){
 
@@ -16118,7 +16169,7 @@ async function acessoriosEscap(){
         newDiv.innerHTML = `
         <img src="${dados[i].image}" alt="${dados[i].info}" class="img-fluid">
         <div class="card-body">
-            <h5 class="card-title">${dados[i].nome}</h5>
+            <h5 class="card-title" title="${newDiv.id}">${dados[i].nome}</h5>
             <p class="card-text">Linha ${dados[i].linha}</p>
 
         </div>
@@ -16338,8 +16389,46 @@ btnTotal.addEventListener('click', () =>{
 
 
 
+
+// ESCOLHENDO OPERACAO CRUD!
+
+let btnsDev = document.querySelector('.btnsDev')
+
+btnsDev.addEventListener('click', (e) =>{
+    e.preventDefault()
+    let selectedBtn = e.target.classList.value
+
+    // pages forms
+    let PostFormCrud = document.querySelector('#PostFormCrud')
+    let editFormCrud = document.querySelector('#editFormCrud')
+    let deleteFormCrud = document.querySelector('#deleteFormCrud')
+    
+    if(selectedBtn == 'postCrud'){
+        editFormCrud.style.display="none"
+        deleteFormCrud.style.display="none"
+        PostFormCrud.style.display="block"
+        
+
+    }else if(selectedBtn == 'editCrud'){
+        PostFormCrud.style.display="none"
+        deleteFormCrud.style.display="none"
+        editFormCrud.style.display="block"
+
+    }else if(selectedBtn == 'deleteCrud'){
+        PostFormCrud.style.display="none"
+        deleteFormCrud.style.display="block"
+        editFormCrud.style.display="none"
+    }
+
+})
+
+
+
+
 // ENVIANDO FORMULARIO DE NOVO PRODUTO
 let sistemaProduct = document.querySelector('#sistemaProduct')
+
+
 let formCrud = document.querySelector('#formCrud')
 
 let departamentoEscolhido = document.querySelector('.departamentoEscolhido')
@@ -16376,21 +16465,7 @@ async function postingProduct(endpoint, obj){
 
 }
 
-
-// "id": 26,
-// "nome": "Filtro de Óleo",
-// "image": "photos/filtros/oleo/filtro619.png",
-// "marca": "Tecfil",
-// "info": "PSL-619",
-// "linha": "GM",
-// "linhaCode": "gm",
-// "code": 2638,
-// "linkApli": "#psl619",
-// "price": 15.00,
-// "qtd": 1,
-// criando formulario
-
-
+// criando form do POST
 function creatingForm2(){
     let produtoEscolhido = document.querySelector('.produtoEscolhido')
 
@@ -16441,7 +16516,7 @@ function creatingForm2(){
 
     <div class="segundLine">
     <label class="secundLineTitle">Segunda Linha</label>
-    <select class="linhaCarro ">
+    <select class="linhaCarro2">
         <option value="0" disabled selected>Montadora</option>
         <option value="gm">GM</option>
         <option value="fiat">FIAT</option>
@@ -16455,7 +16530,7 @@ function creatingForm2(){
 
     <div class="thirdLine">
     <label class="thirdLineTitle">Terceira Linha</label>
-    <select class="linhaCarro ">
+    <select class="linhaCarro3 ">
         <option value="0" disabled selected>Montadora</option>
         <option value="gm">GM</option>
         <option value="fiat">FIAT</option>
@@ -16491,69 +16566,9 @@ function creatingForm2(){
 
 }
 
-function addingFormAplication(){
-    let formAplications = document.querySelector('.formAplications')
-    
-    let divBoxForms = document.createElement('form')
-    divBoxForms.innerHTML = `
-    <div class="formAplicacao apliForm">
-        <div class="formsInput">
-            <span class="btnEraseApli">X</span>
-            <input type="text" placeholder="Carro..">
-            <input type="number" placeholder="Ano..">
-        </div>
-    </div>
-
-    <div class="boxBtnsOfApli">
-        <button class="addOneMore">Mais um</button>
-        <button class="btnForm formPost">Postar</button>
-    </div>
-    `
-    formAplications.appendChild(divBoxForms)
-}
-
-function addingSegundFormAplication(){
-    let formAplications = document.querySelector('.formAplications')
-    
-    // primeira linha
-    let divBoxForms = document.createElement('form')
-    divBoxForms.innerHTML = `
-    <div class="formAplicacao apliForm">
-        <div class="formsInput">
-            <span class="btnEraseApli">X</span>
-            <input type="text" placeholder="Carro..">
-            <input type="number" placeholder="Ano..">
-        </div>
-    </div>
-
-    <div class="boxBtnsOfApli">
-        <button class="addOneMore">Mais um</button>
-    </div>
-    `
-    formAplications.appendChild(divBoxForms)
-
-    // segunda linha
-    let secundDivBoxForms = document.createElement('form')
-    secundDivBoxForms.innerHTML = `
-    <div class="formAplicacao apliForm2">
-        <div class="formsInput inputsTwo">
-            <span class="btnEraseApli">X</span>
-            <input type="text" placeholder="Carro..">
-            <input type="number" placeholder="Ano..">
-        </div>
-    </div>
-
-    <div class="boxBtnsOfApli">
-        <button class="addOneMore addTwo">Mais um</button>
-        <button class="btnForm formPost">Postar</button>
-    </div>
-    `
-    formAplications.appendChild(secundDivBoxForms)
-}
 
 
-
-// acao click no primeiro select
+// POST METHOD
 sistemaProduct.addEventListener('change', (event) =>{
     const valorSelecionado = event.target.value;
     let departamentoEscolhido = document.querySelector('.departamentoEscolhido')
@@ -16771,7 +16786,6 @@ sistemaProduct.addEventListener('change', (event) =>{
     }
 
     else if(valorSelecionado == 'filtroOleo'){
-
         departamentoEscolhido.innerHTML = ''
         produtoEscolhido.innerHTML = ''
 
@@ -16789,7 +16803,7 @@ sistemaProduct.addEventListener('change', (event) =>{
         departamentoEscolhido.appendChild(divBoxForms)
 
 
-        // secund part
+        // secund part ESCOLHENDO DEPARTAMENTO
         let departamento = document.querySelector('#departamento')
 
         departamento.addEventListener('change', (event) =>{
@@ -16799,14 +16813,17 @@ sistemaProduct.addEventListener('change', (event) =>{
             let secundFormAplication = document.querySelector('.secundFormAplication')
             let thirdFormAplication = document.querySelector('.thirdFormAplication')
 
+            let aplicationStructure = document.querySelector('.aplicationStructure')
+
             if(valorSelecionado == 'filtroSimples'){
                 produtoEscolhido.innerHTML = ''
+                aplicationStructure.style.display="none"
+
 
                 creatingForm2()
 
                 // input radios das montadoras
                 let inputRadios = document.querySelector('.inputRadios')
-
                 
                 // se clicado
                 inputRadios.addEventListener('click', (e) =>{
@@ -16831,6 +16848,7 @@ sistemaProduct.addEventListener('change', (event) =>{
                         btnPostPrimeiro.style.display='flex'
 
                     }
+
                     // se segundo
                     else if(radioSelected == 'radio2'){
                         // console.log(2)
@@ -16881,10 +16899,7 @@ sistemaProduct.addEventListener('change', (event) =>{
                 btnAddApli.addEventListener('click', (event) =>{
                     event.preventDefault()
 
-                    let aplicationStructure = document.querySelector('.aplicationStructure')
                     aplicationStructure.style.display="block"
-                    
-
                 })
 
 
@@ -16905,8 +16920,8 @@ sistemaProduct.addEventListener('change', (event) =>{
                         
                         newForm.innerHTML = `
                         <span class="btnEraseApli">X</span>
-                        <input type="text" placeholder="Carro..">
-                        <input type="number" placeholder="Ano..">
+                        <input type="text" placeholder="Carro.." class="inputCarro">
+                        <input type="text" placeholder="Ano.." class="inputAnoApli">
                         `
                         apliForm.append(newForm)
                     })
@@ -16915,16 +16930,14 @@ sistemaProduct.addEventListener('change', (event) =>{
                 if(boxBtnsOfApli[1]){
                     boxBtnsOfApli[1].addEventListener('click', (e) =>{
                         e.preventDefault()
-                        
-                        // let selected = e.target.classList.value
-    
+                            
                         let newForm = document.createElement('div')
                         newForm.classList.add('styleFormInput')
                         newForm.classList.add('formsInput2')
                         newForm.innerHTML = `
                         <span class="btnEraseApli">X</span>
-                        <input type="text" placeholder="Carro..">
-                        <input type="number" placeholder="Ano..">
+                        <input type="text" placeholder="Carro.." class="inputCarro2">
+                        <input type="text" placeholder="Ano.." class="inputAnoApli2">
                         `
                         apliForm2.append(newForm)
                     })
@@ -16940,8 +16953,8 @@ sistemaProduct.addEventListener('change', (event) =>{
                         newForm.classList.add('formsInput3')
                         newForm.innerHTML = `
                         <span class="btnEraseApli">X</span>
-                        <input type="text" placeholder="Carro..">
-                        <input type="number" placeholder="Ano..">
+                        <input type="text" placeholder="Carro.." class="inputCarro3">
+                        <input type="text" placeholder="Ano.." class="inputAnoApli3">
                         `
                         apliForm3.append(newForm)
                     })
@@ -16983,24 +16996,47 @@ sistemaProduct.addEventListener('change', (event) =>{
                 })
             
 
-                //     // FORMULARIO
+                // FORMULARIO
                 let formPost = document.querySelectorAll('.formPost')
 
                 formPost[0].addEventListener('click', (e) =>{
                     e.preventDefault()
-                    console.log('btn one')
+
+                    let endpoint = 'filtrosOleoSimples'
+
+                    let carros = document.querySelectorAll('.inputCarro')
+                    let inputAnoApli = document.querySelectorAll('.inputAnoApli')
+                    let allCarros = []
+                    let carsAnoAplies = []
+
+                    // taking the cars name
+                    carros.forEach(carro =>{
+                        if(carro.value.trim() !== ''){
+                            allCarros.push(carro.value)
+                        }
+                    })
+
+                    // taking the ano apli
+                    inputAnoApli.forEach(anoApli =>{
+                        if(anoApli.value.trim() !== ''){
+                            carsAnoAplies.push(anoApli.value)
+                        }
+                    })
+
+
                     const formData = {
                         nomeProduto: document.querySelector('.nomeProduto').value,
                         imgProduto: document.querySelector('.imgProduto').value,
                         marcaProduto: document.querySelector('.marcaProduto').value,
                         qtdProduto: document.querySelector('.qtdProduto').value,
                         precoProduto: document.querySelector('.precoProduto').value,
-
                         referencia: document.querySelector('.referencia').value,
                         linhaCarro: document.querySelector('.linhaCarro').value,
                         codigo: document.querySelector('.codigo').value,
-                        linkApli: document.querySelector('.linkApli').value
+                        linkApli: document.querySelector('.linkApli').value,
+                        
                     }
+
 
                     const obj = {
                         "nome": formData.nomeProduto,
@@ -17013,14 +17049,62 @@ sistemaProduct.addEventListener('change', (event) =>{
                         "linkApli": '#'+formData.linkApli,
                         "price": formData.precoProduto,
                         "qtd": formData.qtdProduto,
-                        
+                        "aplicacoes": [
+                            {
+                                "codeApli": formData.linkApli,
+                                "montadora": formData.linhaCarro.toUpperCase(),
+                                "carros": allCarros,
+                                "anoApli": carsAnoAplies
+                            }
+                        ]
                     }
 
+                    postingProduct(endpoint, obj)
+                    
                 })
 
                 formPost[1].addEventListener('click', (e) =>{
                     e.preventDefault()
-                    console.log('btn two')
+                    let endpoint = 'filtrosOleoSimples'
+
+                    let carros = document.querySelectorAll('.inputCarro')
+                    let carros2 = document.querySelectorAll('.inputCarro2')
+                    let inputAnoApli = document.querySelectorAll('.inputAnoApli')
+                    let inputAnoApli2 = document.querySelectorAll('.inputAnoApli2')
+
+                    let allCarros = []
+                    let allCarros2 = []
+                    let carsAnoAplies = []
+                    let carsAnoAplies2 = []
+
+                    // taking the cars name 1
+                    carros.forEach(carro =>{
+                        if(carro.value.trim() !== ''){
+                            allCarros.push(carro.value)
+                        }
+                    })
+
+                    // taking the cars name 2
+                    carros2.forEach(carro =>{
+                        if(carro.value.trim() !== ''){
+                            allCarros2.push(carro.value)
+                        }
+                    })
+
+                    // taking the ano apli 1
+                    inputAnoApli.forEach(anoApli =>{
+                        if(anoApli.value.trim() !== ''){
+                            carsAnoAplies.push(anoApli.value)
+                        }
+                    })
+
+                    // taking the ano apli 1
+                    inputAnoApli2.forEach(anoApli =>{
+                        if(anoApli.value.trim() !== ''){
+                            carsAnoAplies2.push(anoApli.value)
+                        }
+                    })
+
 
                     const formData = {
                         nomeProduto: document.querySelector('.nomeProduto').value,
@@ -17028,9 +17112,9 @@ sistemaProduct.addEventListener('change', (event) =>{
                         marcaProduto: document.querySelector('.marcaProduto').value,
                         qtdProduto: document.querySelector('.qtdProduto').value,
                         precoProduto: document.querySelector('.precoProduto').value,
-
                         referencia: document.querySelector('.referencia').value,
                         linhaCarro: document.querySelector('.linhaCarro').value,
+                        linhaCarro2: document.querySelector('.linhaCarro2').value,
                         codigo: document.querySelector('.codigo').value,
                         linkApli: document.querySelector('.linkApli').value
                     }
@@ -17042,18 +17126,93 @@ sistemaProduct.addEventListener('change', (event) =>{
                         "info": formData.referencia,
                         "linha": formData.linhaCarro.toUpperCase(),
                         "linhaCode": formData.linhaCarro.toLowerCase(),
+                        "secundLineCode": formData.linhaCarro2.toLowerCase(),
                         "code": formData.codigo,
                         "linkApli": '#'+formData.linkApli,
                         "price": formData.precoProduto,
                         "qtd": formData.qtdProduto,
-                        
+                        "aplicacoes": [
+                            {
+                                "codeApli": formData.linkApli,
+                                "montadora": formData.linhaCarro.toUpperCase(),
+                                "carros": allCarros,
+                                "anoApli": carsAnoAplies
+                            }
+                        ],
+                        "aplicacoesTwo": [
+                            {
+                                "montadora": formData.linhaCarro2.toUpperCase(),
+                                "carros": allCarros2,
+                                "anoApli": carsAnoAplies2
+                            }
+                        ]
+
                     }
+
+                    postingProduct(endpoint, obj)
 
                 })
 
                 formPost[2].addEventListener('click', (e) =>{
                     e.preventDefault()
-                    console.log('btn three')
+                    let endpoint = 'filtrosOleoSimples'
+                    
+                    let carros = document.querySelectorAll('.inputCarro')
+                    let carros2 = document.querySelectorAll('.inputCarro2')
+                    let carros3 = document.querySelectorAll('.inputCarro3')
+                    let inputAnoApli = document.querySelectorAll('.inputAnoApli')
+                    let inputAnoApli2 = document.querySelectorAll('.inputAnoApli2')
+                    let inputAnoApli3 = document.querySelectorAll('.inputAnoApli3')
+
+                    let allCarros = []
+                    let allCarros2 = []
+                    let allCarros3 = []
+                    let carsAnoAplies = []
+                    let carsAnoAplies2 = []
+                    let carsAnoAplies3 = []
+
+                    // taking the cars name 1
+                    carros.forEach(carro =>{
+                        if(carro.value.trim() !== ''){
+                            allCarros.push(carro.value)
+                        }
+                    })
+
+                    // taking the cars name 2
+                    carros2.forEach(carro =>{
+                        if(carro.value.trim() !== ''){
+                            allCarros2.push(carro.value)
+                        }
+                    })
+
+                    // taking the cars name 3
+                    carros3.forEach(carro =>{
+                        if(carro.value.trim() !== ''){
+                            allCarros3.push(carro.value)
+                        }
+                    })
+
+                    // taking the ano apli 1
+                    inputAnoApli.forEach(anoApli =>{
+                        if(anoApli.value.trim() !== ''){
+                            carsAnoAplies.push(anoApli.value)
+                        }
+                    })
+
+                    // taking the ano apli 2
+                    inputAnoApli2.forEach(anoApli =>{
+                        if(anoApli.value.trim() !== ''){
+                            carsAnoAplies2.push(anoApli.value)
+                        }
+                    })
+
+                    // taking the ano apli 2
+                    inputAnoApli3.forEach(anoApli =>{
+                        if(anoApli.value.trim() !== ''){
+                            carsAnoAplies3.push(anoApli.value)
+                        }
+                    })
+
 
                     const formData = {
                         nomeProduto: document.querySelector('.nomeProduto').value,
@@ -17061,9 +17220,10 @@ sistemaProduct.addEventListener('change', (event) =>{
                         marcaProduto: document.querySelector('.marcaProduto').value,
                         qtdProduto: document.querySelector('.qtdProduto').value,
                         precoProduto: document.querySelector('.precoProduto').value,
-
                         referencia: document.querySelector('.referencia').value,
                         linhaCarro: document.querySelector('.linhaCarro').value,
+                        linhaCarro2: document.querySelector('.linhaCarro2').value,
+                        linhaCarro3: document.querySelector('.linhaCarro3').value,
                         codigo: document.querySelector('.codigo').value,
                         linkApli: document.querySelector('.linkApli').value
                     }
@@ -17075,12 +17235,37 @@ sistemaProduct.addEventListener('change', (event) =>{
                         "info": formData.referencia,
                         "linha": formData.linhaCarro.toUpperCase(),
                         "linhaCode": formData.linhaCarro.toLowerCase(),
+                        "secundLineCode": formData.linhaCarro2.toLowerCase(),
+                        "thirdLineCode": formData.linhaCarro3.toLowerCase(),
                         "code": formData.codigo,
                         "linkApli": '#'+formData.linkApli,
                         "price": formData.precoProduto,
                         "qtd": formData.qtdProduto,
-                        
+                        "aplicacoes": [
+                            {
+                                "codeApli": formData.linkApli,
+                                "montadora": formData.linhaCarro.toUpperCase(),
+                                "carros": allCarros,
+                                "anoApli": carsAnoAplies
+                            }
+                        ],
+                        "aplicacoesTwo": [
+                            {
+                                "montadora": formData.linhaCarro2.toUpperCase(),
+                                "carros": allCarros2,
+                                "anoApli": carsAnoAplies2
+                            }
+                        ],
+                        "aplicacoesThree": [
+                            {
+                                "montadora": formData.linhaCarro3.toUpperCase(),
+                                "carros": allCarros3,
+                                "anoApli": carsAnoAplies3
+                            }
+                        ]
                     }
+
+                    postingProduct(endpoint, obj)
 
                 })
 
@@ -17088,6 +17273,8 @@ sistemaProduct.addEventListener('change', (event) =>{
 
             else if(valorSelecionado == 'filtroPesado'){
                 produtoEscolhido.innerHTML = ''
+                aplicationStructure.style.display="none"
+                
 
                 creatingForm2()
 
@@ -17166,7 +17353,6 @@ sistemaProduct.addEventListener('change', (event) =>{
                 let btnAddApli = document.querySelector('.addApli')
                 btnAddApli.addEventListener('click', (event) =>{
                     event.preventDefault()
-                    let aplicationStructure = document.querySelector('.aplicationStructure')
                     aplicationStructure.style.display="block"
                     
                 })
@@ -17381,6 +17567,596 @@ sistemaProduct.addEventListener('change', (event) =>{
 
 
 
+// EDIT METHOD
+let sistemaProductEdit = document.querySelector('#sistemaProductEdit')
 
 
 
+// funcao PUT 
+async function updateProduct(endpoint, id, dataUpdated){
+
+    
+    try {
+        const response = await fetch(`http://localhost:3000/${endpoint}/${id}`, {
+            method: 'PUT',
+            headers: {
+                'Content-Type': 'application/json',
+            },
+            body: JSON.stringify(dataUpdated),
+        });
+
+        if (!response.ok) {
+            const error = await response.json();
+            console.error('Erro:', error.message);
+            return;
+        }
+
+        const data = await response.json();
+        alert('Sucesso na Atualização!')
+        console.log('Item atualizado:', data);
+
+    } catch (error) {
+        console.error('Erro na requisição:', error);
+        alert('Erro na Atualização!')
+    }
+
+
+}
+
+// buscando produto por id
+async function gettingProductById(endpoint, id){
+
+    // const response = await fetch(`http://localhost:3000/${endpoint}/${id}`);
+    try {
+        const response = await fetch(`http://localhost:3000/${endpoint}/${id}`, {
+
+            method: 'GET',
+            headers: {
+                'Content-Type': 'application/json', // Cabeçalhos necessários
+            },
+        });
+    
+        if(!response.ok){
+            throw new Error(`Erro na requisição: ${response.statusText}`);
+        }
+        
+        const item = await response.json();
+        return item;
+
+
+    } catch(error){
+        console.error('Erro ao buscar dados por ID:', error);
+        throw error;
+
+    }
+    
+
+}
+
+let boxIDPRODUCT = document.querySelector('.boxIDPRODUCT')
+let boxAtualizacaoProduct = document.querySelector('.boxAtualizacaoProduct')
+// let boxBtnSearchProduct = document.querySelector('.boxBtnSearchProduct')
+
+
+//<div class="boxBtnSearchProduct">
+    //<button class="btnSearchProduct">Buscar</button>
+//</div>
+
+sistemaProductEdit.addEventListener('change', (event) =>{
+
+    let selectedProduct = event.target.value
+
+    boxIDPRODUCT.style.display="flex"
+    let IDPRODUCT = document.querySelector('#IDPRODUCT')
+    
+    IDPRODUCT.value = ''
+    IDPRODUCT.focus()
+
+    if(selectedProduct == 'oleos'){
+        boxAtualizacaoProduct.innerHTML = ''
+
+        let boxBtnSearchProduct = document.createElement('div')
+        boxBtnSearchProduct.classList.add('boxBtnSearchProduct')
+
+        boxBtnSearchProduct.innerHTML = `
+        <button class="btnSearchProduct">Buscar</button>
+        `
+        boxIDPRODUCT.appendChild(boxBtnSearchProduct)
+        
+        let btnSearchProduct = document.querySelector('.btnSearchProduct')
+
+
+        btnSearchProduct.addEventListener('click', (e) =>{
+            e.preventDefault()
+            let idDigitado = IDPRODUCT.value
+
+            // chamando o fetch
+            gettingProductById(selectedProduct, idDigitado).then(item =>{
+
+                if(item){
+                    boxAtualizacaoProduct.innerHTML = ''
+
+                    console.log(item)
+                    let divUpdate = document.createElement('div')
+                    divUpdate.innerHTML = `
+                    <div class="dadosForm">
+                        <label>Nome Produto</label>
+                        <input type="text" placeholder="Produto" value="${item.nome}" class="newName">
+
+                        <label>Tipo do Óleo</label>
+                        <select class="tipoOleo">
+                            <option value="${item.info}" selected>${item.info}</option>
+                            <option value="mineral">Mineral</option>
+                            <option value="sintetico">Sintético</option>
+                            <option value="semisintetico">Semi-Sintético</option>
+                        </select>
+
+                        <label>Marca</label>
+                        <input type="text" placeholder="Marca do Produto" class="marcaProduto" value="${item.marca}">
+
+                        <label>Valor do Produto</label>
+                        <input type="number" placeholder="Valor" class="precoProduto" value="${item.price}">
+
+                        <label>Quantidade</label>
+                        <input type="text" placeholder="Qtd.." class="qtdProduto" value="${item.qtd}">
+
+                    </div>
+
+                    <button class="atualizarProduto">Atualizar</button>
+                    `
+                    boxAtualizacaoProduct.appendChild(divUpdate)
+
+
+                    // criando o novo form! para dá update!
+
+                    let btnAtualizarProduto = document.querySelector('.atualizarProduto')
+                    
+                    btnAtualizarProduto.addEventListener('click', (e) =>{
+                        e.preventDefault()
+
+                        const formData = {
+                            nomeProduto: document.querySelector('.newName').value,
+                            marcaProduto: document.querySelector('.marcaProduto').value,
+                            tipoOleo: document.querySelector('.tipoOleo').value,
+                            qtdProduto: document.querySelector('.qtdProduto').value,
+                            precoProduto: document.querySelector('.precoProduto').value
+                        }
+
+                        const obj = {
+                            "nome": formData.nomeProduto,
+                            "marca": formData.marcaProduto,
+                            "info": formData.tipoOleo,
+                            "price": formData.precoProduto,
+                            "qtd": formData.qtdProduto
+                        }
+
+                        // updateProduct(selectedProduct, idDigitado, obj)
+                    })
+                    
+
+
+                }else{
+                    alert('Produto não encontrado!')
+                }
+            })
+        })
+
+
+        
+
+    }
+
+    if(selectedProduct == 'baterias'){
+        boxAtualizacaoProduct.innerHTML = ''
+
+        btnSearchProduct.addEventListener('click', (e) =>{
+            e.preventDefault()
+            let idDigitado = IDPRODUCT.value
+
+            // chamando o fetch
+            gettingProductById(selectedProduct, idDigitado).then(item =>{
+                
+                if(item){
+                    boxAtualizacaoProduct.innerHTML = ''
+
+                    console.log(item)
+                    let divUpdate = document.createElement('div')
+                    divUpdate.innerHTML = `
+                    <div class="dadosForm">
+                        <label>Nome Produto</label>
+                        <input type="text" placeholder="Produto" value="${item.nome}" class="newName">
+
+                        <label>Marca</label>
+                        <input type="text" placeholder="Marca do Produto" class="marcaProduto" value="${item.marca}">
+
+                        <label>Valor do Produto</label>
+                        <input type="number" placeholder="Valor" class="precoProduto" value="${item.price}">
+
+                        <label>Quantidade</label>
+                        <input type="text" placeholder="Qtd.." class="qtdProduto" value="${item.qtd}">
+
+                    </div>
+
+                    <button class="atualizarProduto">Atualizar</button>
+                    `
+                    boxAtualizacaoProduct.appendChild(divUpdate)
+
+
+                    // criando o novo form! para dá update!
+
+                    let btnAtualizarProduto = document.querySelector('.atualizarProduto')
+                    
+                    btnAtualizarProduto.addEventListener('click', (e) =>{
+                        e.preventDefault()
+
+                        const formData = {
+                            nomeProduto: document.querySelector('.newName').value,
+                            marcaProduto: document.querySelector('.marcaProduto').value,
+                            qtdProduto: document.querySelector('.qtdProduto').value,
+                            precoProduto: document.querySelector('.precoProduto').value
+                        }
+
+                        const obj = {
+                            "nome": formData.nomeProduto,
+                            "marca": formData.marcaProduto,
+                            "price": formData.precoProduto,
+                            "qtd": formData.qtdProduto
+                        }
+
+                        // updateProduct(selectedProduct, idDigitado, obj)
+                    })
+                    
+                }else{
+                    alert('Produto não encontrado!')
+                }
+            })
+        })
+
+
+    }
+
+    if(selectedProduct == 'fluidos'){
+        boxAtualizacaoProduct.innerHTML = ''
+
+        btnSearchProduct.addEventListener('click', (e) =>{
+            e.preventDefault()
+            let idDigitado = IDPRODUCT.value
+
+            // chamando o fetch
+            gettingProductById(selectedProduct, idDigitado).then(item =>{
+
+                if(item){
+                    boxAtualizacaoProduct.innerHTML = ''
+
+                    console.log(item)
+                    let divUpdate = document.createElement('div')
+                    divUpdate.innerHTML = `
+                    <div class="dadosForm">
+                        <label>Nome Produto</label>
+                        <input type="text" placeholder="Produto" value="${item.nome}" class="newName">
+
+                        <label>Marca</label>
+                        <input type="text" placeholder="Marca do Produto" class="marcaProduto" value="${item.marca}">
+
+                        <label>Valor do Produto</label>
+                        <input type="number" placeholder="Valor" class="precoProduto" value="${item.price}">
+
+                        <label>Quantidade</label>
+                        <input type="text" placeholder="Qtd.." class="qtdProduto" value="${item.qtd}">
+
+                    </div>
+
+                    <button class="atualizarProduto">Atualizar</button>
+                    `
+                    boxAtualizacaoProduct.appendChild(divUpdate)
+
+
+                    // criando o novo form! para dá update!
+
+                    let btnAtualizarProduto = document.querySelector('.atualizarProduto')
+                    
+                    btnAtualizarProduto.addEventListener('click', (e) =>{
+                        e.preventDefault()
+
+                        const formData = {
+                            nomeProduto: document.querySelector('.newName').value,
+                            marcaProduto: document.querySelector('.marcaProduto').value,
+                            qtdProduto: document.querySelector('.qtdProduto').value,
+                            precoProduto: document.querySelector('.precoProduto').value
+                        }
+
+                        const obj = {
+                            "nome": formData.nomeProduto,
+                            "marca": formData.marcaProduto,
+                            "price": formData.precoProduto,
+                            "qtd": formData.qtdProduto
+                        }
+
+                        updateProduct(selectedProduct, idDigitado, obj)
+                    })
+                    
+                }else{
+                    alert('Produto não encontrado!')
+                }
+            })
+        })
+
+
+    }
+
+    if(selectedProduct == 'filtrosoleosimples'){
+
+        boxAtualizacaoProduct.innerHTML = ''
+
+        btnSearchProduct.addEventListener('click', (e) =>{
+            e.preventDefault()
+            let idDigitado = IDPRODUCT.value
+
+            // chamando o fetch
+            gettingProductById(selectedProduct, idDigitado).then(item =>{
+
+                if(item){
+                    boxAtualizacaoProduct.innerHTML = ''
+
+                    console.log(item)
+                    let divUpdate = document.createElement('div')
+                    divUpdate.innerHTML = `
+                    <div class="dadosForm">
+                        <label>Nome Produto</label>
+                        <input type="text" placeholder="Produto" value="${item.nome}" class="newName">
+
+                        <label>Marca</label>
+                        <input type="text" placeholder="Marca do Produto" class="marcaProduto" value="${item.marca}">
+
+                        <label>Referência do Producto</label>
+                        <input type="text" placeholder="Referência" class="referencia" value="${item.info}">
+
+                        <label>Valor do Produto</label>
+                        <input type="number" placeholder="Valor" class="precoProduto" value="${item.price}">
+
+                        <label>Código do Produto</label>
+                        <input type="number" placeholder="Código.." class="codigo" value="${item.code}">
+
+                        <label>Quantidade</label>
+                        <input type="text" placeholder="Qtd.." class="qtdProduto" value="${item.qtd}">
+                    </div>
+
+                    <button class="atualizarProduto">Atualizar</button>
+                    `
+                    boxAtualizacaoProduct.appendChild(divUpdate)
+
+
+                    // criando o novo form! para dá update!
+
+                    let btnAtualizarProduto = document.querySelector('.atualizarProduto')
+                    
+                    btnAtualizarProduto.addEventListener('click', (e) =>{
+                        e.preventDefault()
+
+                        const formData = {
+                            nomeProduto: document.querySelector('.newName').value,
+                            marcaProduto: document.querySelector('.marcaProduto').value,
+                            qtdProduto: document.querySelector('.qtdProduto').value,
+                            precoProduto: document.querySelector('.precoProduto').value,
+                            referencia: document.querySelector('.referencia').value,
+                            codigo: document.querySelector('.codigo').value,
+
+                        }
+
+                        const obj = {
+                            "nome": formData.nomeProduto,
+                            "marca": formData.marcaProduto,
+                            "price": formData.precoProduto,
+                            "info": formData.referencia,
+                            "code": formData.codigo,
+                            "qtd": formData.qtdProduto
+                        }
+                        
+                        updateProduct(selectedProduct, idDigitado, obj)
+                    })
+                    
+                }else{
+                    alert('Produto não encontrado!')
+                }
+            })
+        })
+
+    }
+
+
+
+})
+
+
+
+
+
+
+
+
+// DELETE
+let sistemaProductDelete = document.querySelector('#sistemaProductDelete')
+
+// funcao delete
+async function deletingProduct(endpoint, id){
+
+    try {
+        const response = await fetch(`http://localhost:3000/${endpoint}/${id}`, {
+            method: 'DELETE',
+        });
+
+        if (response.ok) {
+            alert(`Item ${id} deletado com sucesso!`);
+
+        } else {
+            alert('Erro ao deletar o item!');
+        }
+
+    } catch (error) {
+        console.log('Erro de conexão:', error);
+    }
+
+}
+
+
+sistemaProductDelete.addEventListener('click', (e) =>{
+
+    let selectedProduct = e.target.value
+    let boxIDPRODUCTDELETE = document.querySelector('.boxIDPRODUCTDELETE')
+
+    if(selectedProduct == 'oleos'){
+        boxIDPRODUCTDELETE.style.display="flex"
+
+        let InputIDPRODUCTDELETE = document.querySelector('#IDPRODUCTDELETE')
+        let btnSearchProduct2 = document.querySelector('.btnSearchProduct2')
+
+        btnSearchProduct2.addEventListener('click', (e) =>{
+            e.preventDefault()
+            let idDigitado = InputIDPRODUCTDELETE.value
+
+            gettingProductById(selectedProduct, idDigitado).then(item =>{
+                if(item){
+                    deletingProduct(selectedProduct, idDigitado)
+
+                }else{
+                    alert('Produto não encontrado!')
+                }
+            
+            })
+        })
+
+    }
+
+    else if(selectedProduct == 'baterias'){
+        boxIDPRODUCTDELETE.style.display="flex"
+
+        let InputIDPRODUCTDELETE = document.querySelector('#IDPRODUCTDELETE')
+        let btnSearchProduct2 = document.querySelector('.btnSearchProduct2')
+
+        btnSearchProduct2.addEventListener('click', (e) =>{
+            e.preventDefault()
+            let idDigitado = InputIDPRODUCTDELETE.value
+
+            gettingProductById(selectedProduct, idDigitado).then(item =>{
+                if(item){
+                    deletingProduct(selectedProduct, idDigitado)
+
+                }else{
+                    alert('Produto não encontrado!')
+                }
+            
+            })
+        })
+
+    }
+
+    else if(selectedProduct == 'fluidos'){
+        boxIDPRODUCTDELETE.style.display="flex"
+
+        let InputIDPRODUCTDELETE = document.querySelector('#IDPRODUCTDELETE')
+        let btnSearchProduct2 = document.querySelector('.btnSearchProduct2')
+
+        btnSearchProduct2.addEventListener('click', (e) =>{
+            e.preventDefault()
+            let idDigitado = InputIDPRODUCTDELETE.value
+
+            gettingProductById(selectedProduct, idDigitado).then(item =>{
+                if(item){
+                    deletingProduct(selectedProduct, idDigitado)
+
+                }else{
+                    alert('Produto não encontrado!')
+                }
+            
+            })
+        })
+
+    }
+
+    else if(selectedProduct == 'filtrosoleosimples'){
+        boxIDPRODUCTDELETE.style.display="flex"
+
+        let InputIDPRODUCTDELETE = document.querySelector('#IDPRODUCTDELETE')
+        let btnSearchProduct2 = document.querySelector('.btnSearchProduct2')
+
+        btnSearchProduct2.addEventListener('click', (e) =>{
+            e.preventDefault()
+            let idDigitado = InputIDPRODUCTDELETE.value
+
+            gettingProductById(selectedProduct, idDigitado).then(item =>{
+                if(item){
+                    deletingProduct(selectedProduct, idDigitado)
+
+                }else{
+                    alert('Produto não encontrado!')
+                }
+            
+            })
+        })
+
+    }
+
+
+})
+
+
+
+
+
+
+
+
+
+
+
+
+// TOOLTIP LOGIC
+let boxTitleEditCrud = document.querySelector('.titleEditCrud')
+let tooltipTarget = document.querySelector('.tooltip-target')
+
+let tooltip = document.createElement('div')
+tooltip.classList.add('tooltip')
+tooltip.textContent = tooltipTarget.getAttribute('data-tooltip');
+boxTitleEditCrud.appendChild(tooltip);
+
+// ativando no hover
+tooltipTarget.addEventListener('mouseenter', (e) => {
+    const rect = tooltipTarget.getBoundingClientRect();
+    tooltip.style.top = `${rect.bottom + window.scrollY}px`;
+    tooltip.style.left = `${rect.left + rect.width / 2 - tooltip.offsetWidth / 2}px`;
+
+    tooltip.style.opacity = '1';
+    tooltip.style.pointerEvents = 'auto';
+});
+// desativando
+tooltipTarget.addEventListener('mouseleave', () => {
+    tooltip.style.opacity = '0';
+    tooltip.style.pointerEvents = 'none';
+});
+
+
+
+// tooltip 2
+let boxTitleDeleteFormCrud = document.querySelector('.titleDeleteFormCrud')
+let tooltipTarget2 = document.querySelector('.tooltip-target2')
+
+let tooltip2 = document.createElement('div')
+tooltip2.classList.add('tooltip')
+tooltip2.textContent = tooltipTarget.getAttribute('data-tooltip');
+boxTitleDeleteFormCrud.appendChild(tooltip2)
+
+// ativando no hover
+tooltipTarget2.addEventListener('mouseenter', (e) => {
+    const rect = tooltipTarget2.getBoundingClientRect();
+    tooltip2.style.top = `${rect.bottom + window.scrollY}px`;
+    tooltip2.style.left = `${rect.left + rect.width / 2 - tooltip2.offsetWidth / 2}px`;
+
+    tooltip2.style.opacity = '1';
+    tooltip2.style.pointerEvents = 'auto';
+});
+
+// desativando
+tooltipTarget2.addEventListener('mouseleave', () => {
+    tooltip2.style.opacity = '0';
+    tooltip2.style.pointerEvents = 'none';
+});
