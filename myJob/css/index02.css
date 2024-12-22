@@ -280,7 +280,8 @@
 /* BOXES DO CRUD  */
 
 #PostFormCrud{
-    display: none;
+    display: flex;
+    flex-direction: column;
 }
 
 
@@ -331,7 +332,7 @@
 
 
 #deleteFormCrud{
-    display: flex;
+    display: none;
     flex-direction: column;
     h5{
         text-align: center;
@@ -451,6 +452,7 @@
     flex-direction: column;
     margin-bottom: 1rem;
     border: 2px solid blue;
+    border-radius: 5px;
     padding: 5px;
     h5{
         text-align: center;
@@ -463,6 +465,7 @@
     flex-direction: column;
     margin-bottom: 1rem;
     border: 2px solid blue;
+    border-radius: 5px;
     padding: 5px;
     h5{
         text-align: center;
@@ -474,6 +477,7 @@
     flex-direction: column;
     margin-bottom: 1rem;
     border: 2px solid blue;
+    border-radius: 5px;
     padding: 5px;
     h5{
         text-align: center;
@@ -491,7 +495,7 @@
 
 .formAplicacao input{
     height: 30px;
-    width: 90px;
+    width: 100px;
     padding-left: 5px;
     font-size: 1rem;
 }
@@ -528,7 +532,7 @@
 
 .styleFormInput:hover{
     border: 2px solid #039c95;
-    
+    border-radius: 8px;
     .btnEraseApli{
         display: flex;
     }

@@ -1,1 +1,187 @@
-{"oleos":[{"id":5,"nome":"Óleo KPower","viscosidade":"5w30","image":"photos/oleos/seleniakpower5w30.png","marca":"Selenia","info":"Sintético","price":36,"qtd":1},{"id":6,"nome":"Óleo Performer","viscosidade":"15w40","image":"photos/oleos/selenia15w40.png","marca":"Selenia","info":"Semi-Sintético","price":33,"qtd":10},{"id":7,"nome":"Óleo","viscosidade":"5w40","image":"photos/oleos/elaion5w40.png","marca":"Elaion","info":"Sintético","price":46,"qtd":0},{"id":8,"nome":"Óleo","viscosidade":"10w40","image":"photos/oleos/elaion10w40.png","marca":"Elaion","info":"Semi-Sintético","price":40,"qtd":10},{"id":9,"nome":"zetta","image":"photos/oleos/mobil5w30.png","marca":"Mobil","info":"Sintético","price":42.74,"qtd":10},{"id":10,"nome":"Óleo","viscosidade":"15w40","image":"photos/oleos/mobil15w40-4l.png","marca":"Mobil","info":"Mineral","price":125,"qtd":0}],"baterias":[{"id":17,"nome":"peroba","image":"photos/baterias/moura60.png","marca":"Moura","price":515,"qtd":0},{"id":18,"nome":"peroba","image":"photos/baterias/zeta2.png","marca":"Zetta","price":388,"qtd":0},{"id":19,"nome":"Batéria","image":"photos/baterias/zeta2.png","marca":"Zetta","info":"50 Ámpere","price":315,"qtd":0},{"id":21,"nome":"Batéria","image":"photos/baterias/zetta45.png","marca":"Zetta","info":"45 Ámpere","price":326,"qtd":0},{"id":22,"nome":"Batéria heliar","image":"photos/baterias/heliar.png","marca":"Heliar","price":"500","qtd":"0"},{"id":23,"nome":"Batéria","image":"photos/baterias/america.png","marca":"America","info":"50 Ámpere","price":325,"qtd":0},{"id":24,"nome":"Batéria","image":"photos/baterias/america.png","marca":"America","info":"60 Ámpere","price":315,"qtd":0}],"fluidos":[{"id":25,"nome":"Fluido freio","image":"photos/oleos/fluido-freio.png","marca":"Lubrax","price":"16","qtd":"0"}],"filtroOleoSimples":[{"id":26,"nome":"Filtro de Oleo","image":"photos/filtros/oleo/filtro619.png","marca":"Tecfil","info":"PSL-619","linha":"GM","linhaCode":"gm","code":"2638","linkApli":"#psl619","price":"15","qtd":"1"},{"id":27,"nome":"vini","image":"","marca":"lubel","info":"10","linha":"RENAULT","linhaCode":"renault","code":"10","linkApli":"#lail","price":"400","qtd":"2","aplicacoes":[{"codeApli":"lail","montadora":"RENAULT","carros":["vini"],"anoApli":["1000"]}]}]}
+{
+    "oleos": [
+        {
+            "id": 5,
+            "nome": "Óleo KPower",
+            "viscosidade": "5w30",
+            "image": "photos/oleos/seleniakpower5w30.png",
+            "marca": "Selenia",
+            "info": "Sintético",
+            "price": 36,
+            "qtd": 1
+        },
+        {
+            "id": 6,
+            "nome": "Óleo Performer",
+            "viscosidade": "15w40",
+            "image": "photos/oleos/selenia15w40.png",
+            "marca": "Selenia",
+            "info": "Semi-Sintético",
+            "price": 33,
+            "qtd": 10
+        },
+        {
+            "id": 7,
+            "nome": "Óleo",
+            "viscosidade": "5w40",
+            "image": "photos/oleos/elaion5w40.png",
+            "marca": "Elaion",
+            "info": "Sintético",
+            "price": 46,
+            "qtd": 0
+        },
+        {
+            "id": 8,
+            "nome": "Óleo",
+            "viscosidade": "10w40",
+            "image": "photos/oleos/elaion10w40.png",
+            "marca": "Elaion",
+            "info": "Semi-Sintético",
+            "price": 40,
+            "qtd": 10
+        },
+        {
+            "id": 9,
+            "nome": "zetta",
+            "image": "photos/oleos/mobil5w30.png",
+            "marca": "Mobil",
+            "info": "Sintético",
+            "price": 42.74,
+            "qtd": 10
+        },
+        {
+            "id": 10,
+            "nome": "Óleo",
+            "viscosidade": "15w40",
+            "image": "photos/oleos/mobil15w40-4l.png",
+            "marca": "Mobil",
+            "info": "Mineral",
+            "price": 125,
+            "qtd": 0
+        }
+    ],
+    "baterias": [
+        {
+            "id": 17,
+            "nome": "peroba",
+            "image": "photos/baterias/moura60.png",
+            "marca": "Moura",
+            "price": 515,
+            "qtd": 0
+        },
+        {
+            "id": 18,
+            "nome": "peroba",
+            "image": "photos/baterias/zeta2.png",
+            "marca": "Zetta",
+            "price": 388,
+            "qtd": 0
+        },
+        {
+            "id": 19,
+            "nome": "Batéria",
+            "image": "photos/baterias/zeta2.png",
+            "marca": "Zetta",
+            "info": "50 Ámpere",
+            "price": 315,
+            "qtd": 0
+        },
+        {
+            "id": 21,
+            "nome": "Batéria",
+            "image": "photos/baterias/zetta45.png",
+            "marca": "Zetta",
+            "info": "45 Ámpere",
+            "price": 326,
+            "qtd": 0
+        },
+        {
+            "id": 22,
+            "nome": "Batéria heliar",
+            "image": "photos/baterias/heliar.png",
+            "marca": "Heliar",
+            "price": "500",
+            "qtd": "0"
+        },
+        {
+            "id": 23,
+            "nome": "Batéria",
+            "image": "photos/baterias/america.png",
+            "marca": "America",
+            "info": "50 Ámpere",
+            "price": 325,
+            "qtd": 0
+        },
+        {
+            "id": 24,
+            "nome": "Batéria",
+            "image": "photos/baterias/america.png",
+            "marca": "America",
+            "info": "60 Ámpere",
+            "price": 315,
+            "qtd": 0
+        }
+    ],
+    "fluidos": [
+        {
+            "id": 25,
+            "nome": "Fluido freio",
+            "image": "photos/oleos/fluido-freio.png",
+            "marca": "Lubrax",
+            "price": "16",
+            "qtd": "0"
+        }
+    ],
+    "filtroOleoSimples": [
+        {
+            "id": 26,
+            "nome": "Filtro de Oleo",
+            "image": "photos/filtros/oleo/filtro619.png",
+            "marca": "Tecfil",
+            "info": "PSL-619",
+            "linha": "GM",
+            "linhaCode": "gm",
+            "code": "2638",
+            "linkApli": "#psl619",
+            "price": "15",
+            "qtd": "1"
+        },
+        {
+            "id": 27,
+            "nome": "adf",
+            "image": "",
+            "marca": "lolla",
+            "info": "99",
+            "linha": "VWS",
+            "linhaCode": "vws",
+            "secundLineCode": "citroen",
+            "code": "19",
+            "linkApli": "#vini",
+            "price": "99",
+            "qtd": "100",
+            "aplicacoes": [
+                {
+                    "codeApli": "vini",
+                    "montadora": "VWS",
+                    "carros": [
+                        "jadjl"
+                    ],
+                    "anoApli": [
+                        "343"
+                    ]
+                }
+            ],
+            "aplicacoesTwo": [
+                {
+                    "montadora": "CITROEN",
+                    "carros": [
+                        "oo"
+                    ],
+                    "anoApli": [
+                        "3"
+                    ]
+                }
+            ]
+        }
+    ]
+}

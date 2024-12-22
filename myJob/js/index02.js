@@ -157,7 +157,7 @@ async function addCardsOleo(){
         let oleoCards = document.createElement('div')
         oleoCards.classList.add('col-md-3')
         oleoCards.classList.add('card')
-        // oleoCards.classList.add('fade-in-active')
+
         oleoCards.classList.add('projeto-oleo')
         oleoCards.classList.add(dadosOleo[i].marca)
         oleoCards.id = dadosOleo[i].id
@@ -172,7 +172,7 @@ async function addCardsOleo(){
 
         <img src="${dadosOleo[i].image}" alt="" class="img-fluid">
         <div class="card-body">
-            <h5 class="card-title">${dadosOleo[i].nome} ${dadosOleo[i].marca} ${dadosOleo[i].viscosidade}</h5>
+            <h5 class="card-title">${dadosOleo[i].nome} ${dadosOleo[i].marca}</h5>
             <p class="card-text" title="${oleoCards.id}" >${dadosOleo[i].info}</p>
         </div>
         <div class='card-footer' >
@@ -443,10 +443,9 @@ async function addBattery(){
         }
 
         newDiv.innerHTML = `
-        <img src="${dadoBatery[i].image}" alt="${dadoBatery[i].info}" class="img-fluid">
+        <img src="${dadoBatery[i].image}" alt="${dadoBatery[i].nome}" class="img-fluid">
         <div class="card-body">
             <h5 class="card-title" title="${newDiv.id}">${dadoBatery[i].nome}</h5>
-            <p class="card-text">${dadoBatery[i].info}</p>
         </div>
         <div class='card-footer'>
             <button class="btnBuyAlone">
@@ -499,7 +498,7 @@ async function addOleo2(){
 
         <img src="${dadosOleo[i].image}" alt="" class="img-fluid">
         <div class="card-body">
-            <h5 class="card-title">${dadosOleo[i].nome} ${dadosOleo[i].marca} ${dadosOleo[i].viscosidade}</h5>
+            <h5 class="card-title">${dadosOleo[i].nome} ${dadosOleo[i].marca}</h5>
             <p class="card-text" title="${oleoCards.id}">${dadosOleo[i].info}</p>
         </div>
         <div class='card-footer'>
@@ -756,8 +755,8 @@ async function addFluidos(){
         }
 
         newDiv.innerHTML = `
-        <img src="${dadoFluido[i].image}" alt="${dadoFluido[i].viscosidade}" class="img-fluid">
-        <h5 class="card-title" title="${newDiv.id}">${dadoFluido[i].nome} ${dadoFluido[i].viscosidade}</h5>
+        <img src="${dadoFluido[i].image}" alt="${dadoFluido[i].nome}" class="img-fluid">
+        <h5 class="card-title" title="${newDiv.id}">${dadoFluido[i].nome}</h5>
 
         <div class='card-footer'>
             <button class="btnBuyAlone" id="${i}">
@@ -16587,7 +16586,7 @@ sistemaProduct.addEventListener('change', (event) =>{
         
         <label for="">Departamento</label>
         <select name="" id="departamento">
-            <option value="0" disabled selected>Escolha o Departamento<option>
+            <option value="0" disabled selected>Escolha o Departamento</option>
             <option value="oleoMotor">Óleo Motor</option>
             <option value="fluidoFreio">Fluido Freio</option>
         </select>
@@ -16671,8 +16670,7 @@ sistemaProduct.addEventListener('change', (event) =>{
             }
 
 
-            // dados
-
+            // postando produto
             let formPost = document.querySelector('.formPost')
             formPost.addEventListener('click', async (event) =>{
                 event.preventDefault()       
@@ -16696,10 +16694,9 @@ sistemaProduct.addEventListener('change', (event) =>{
                         "image": formData.imgProduto,
                         "marca": formData.marcaProduto,
                         "info": tipoOleo,
-                        "price": formData.precoProduto,
-                        "qtd": formData.qtdProduto
+                        "price": Number(formData.precoProduto),
+                        "qtd": Number(formData.qtdProduto)
                     }
-
                     postingProduct(endpoint, obj)
 
 
@@ -16709,14 +16706,38 @@ sistemaProduct.addEventListener('change', (event) =>{
                         "nome": formData.nomeProduto,
                         "image": formData.imgProduto,
                         "marca": formData.marcaProduto,
-                        "price": formData.precoProduto,
-                        "qtd": formData.qtdProduto
+                        "price": Number(formData.precoProduto),
+                        "qtd": Number(formData.qtdProduto)
                     }                   
                     postingProduct(endpoint, obj)
                     
                 }
 
             })
+
+            // limpando form
+            let formDelete = document.querySelector('.formDelete')
+            formDelete.addEventListener('click', (e) =>{
+
+                e.preventDefault()
+                let nomeProduto = document.querySelector('.nomeProduto')
+                let imgProduto = document.querySelector('.imgProduto')
+                let marcaProduto = document.querySelector('.marcaProduto')
+                let tipoOleo = document.querySelector('.tipoOleo')
+                let precoProduto = document.querySelector('.precoProduto')
+                let qtdProduto = document.querySelector('.qtdProduto')
+
+                nomeProduto.value = ''
+                nomeProduto.focus()
+                imgProduto.value = ''
+                marcaProduto.value = ''
+                precoProduto.value = ''
+                qtdProduto.value = ''
+                if(tipoOleo){tipoOleo.value = 0}
+            })
+            
+
+
 
         })
         
@@ -16776,10 +16797,29 @@ sistemaProduct.addEventListener('change', (event) =>{
                 "nome": formData.nomeProduto,
                 "image": formData.imgProduto,
                 "marca": formData.marcaProduto,
-                "price": formData.precoProduto,
-                "qtd": formData.qtdProduto
+                "price": Number(formData.precoProduto),
+                "qtd": Number(formData.qtdProduto)
             }
             postingProduct(endpoint, obj)
+        })
+
+        // limpando form
+        let formDelete = document.querySelector('.formDelete')
+        formDelete.addEventListener('click', (e) =>{
+
+            e.preventDefault()
+            let nomeProduto = document.querySelector('.nomeProduto')
+            let imgProduto = document.querySelector('.imgProduto')
+            let marcaProduto = document.querySelector('.marcaProduto')
+            let precoProduto = document.querySelector('.precoProduto')
+            let qtdProduto = document.querySelector('.qtdProduto')
+
+            nomeProduto.value = ''
+            nomeProduto.focus()
+            imgProduto.value = ''
+            marcaProduto.value = ''
+            precoProduto.value = ''
+            qtdProduto.value = ''
         })
 
 
@@ -16795,7 +16835,7 @@ sistemaProduct.addEventListener('change', (event) =>{
         
         <label for="">Departamento</label>
         <select name="" id="departamento">
-            <option value="" disabled selected>Escolha o Departamento<option>
+            <option value="" disabled selected>Escolha o Departamento</option>
             <option value="filtroSimples">Filtro Óleo Simples</option>
             <option value="filtroPesado">Filtro Óleo Pesado</option>
         </select>
@@ -17045,10 +17085,10 @@ sistemaProduct.addEventListener('change', (event) =>{
                         "info": formData.referencia,
                         "linha": formData.linhaCarro.toUpperCase(),
                         "linhaCode": formData.linhaCarro.toLowerCase(),
-                        "code": formData.codigo,
+                        "code": Number(formData.codigo),
                         "linkApli": '#'+formData.linkApli,
-                        "price": formData.precoProduto,
-                        "qtd": formData.qtdProduto,
+                        "price": Number(formData.precoProduto),
+                        "qtd": Number(formData.qtdProduto),
                         "aplicacoes": [
                             {
                                 "codeApli": formData.linkApli,
@@ -17127,10 +17167,10 @@ sistemaProduct.addEventListener('change', (event) =>{
                         "linha": formData.linhaCarro.toUpperCase(),
                         "linhaCode": formData.linhaCarro.toLowerCase(),
                         "secundLineCode": formData.linhaCarro2.toLowerCase(),
-                        "code": formData.codigo,
+                        "code": Number(formData.codigo),
                         "linkApli": '#'+formData.linkApli,
-                        "price": formData.precoProduto,
-                        "qtd": formData.qtdProduto,
+                        "price": Number(formData.precoProduto),
+                        "qtd": Number(formData.qtdProduto),
                         "aplicacoes": [
                             {
                                 "codeApli": formData.linkApli,
@@ -17237,10 +17277,10 @@ sistemaProduct.addEventListener('change', (event) =>{
                         "linhaCode": formData.linhaCarro.toLowerCase(),
                         "secundLineCode": formData.linhaCarro2.toLowerCase(),
                         "thirdLineCode": formData.linhaCarro3.toLowerCase(),
-                        "code": formData.codigo,
+                        "code": Number(formData.codigo),
                         "linkApli": '#'+formData.linkApli,
-                        "price": formData.precoProduto,
-                        "qtd": formData.qtdProduto,
+                        "price": Number(formData.precoProduto),
+                        "qtd": Number(formData.qtdProduto),
                         "aplicacoes": [
                             {
                                 "codeApli": formData.linkApli,
@@ -17266,6 +17306,52 @@ sistemaProduct.addEventListener('change', (event) =>{
                     }
 
                     postingProduct(endpoint, obj)
+
+                })
+
+
+                // limpando form
+                let formDelete = document.querySelector('.formDelete')
+                formDelete.addEventListener('click', (e) =>{
+
+                    e.preventDefault()
+                    let nomeProduto = document.querySelector('.nomeProduto')
+                    let imgProduto = document.querySelector('.imgProduto')
+                    let marcaProduto = document.querySelector('.marcaProduto')
+                    let precoProduto = document.querySelector('.precoProduto')
+                    let qtdProduto = document.querySelector('.qtdProduto')
+
+                    let referencia = document.querySelector('.referencia')
+                    let linhaCarro = document.querySelector('.linhaCarro')
+                    let firstRadio = document.querySelector('#firstRadio')
+                    let secundRadio = document.querySelector('#secundRadio')
+                    let thirdRadio = document.querySelector('#thirdRadio')
+
+                    // radios
+                    let segundLine = document.querySelector('.segundLine')
+                    let thirdLine = document.querySelector('.thirdLine')
+
+
+                    nomeProduto.value = ''
+                    nomeProduto.focus()
+                    imgProduto.value = ''
+                    marcaProduto.value = ''
+                    precoProduto.value = ''
+                    qtdProduto.value = ''
+
+                    referencia.value = ''
+                    linhaCarro.value = 0
+
+                    firstRadio.checked = false
+                    firstFormAplication.style.display="none"
+
+                    secundRadio.checked = false
+                    segundLine.style.display="none"
+                    secundFormAplication.style.display="none"
+
+                    thirdRadio.checked = false
+                    thirdLine.style.display="none"
+                    thirdFormAplication.style.display="none"
 
                 })
 
@@ -17475,10 +17561,10 @@ sistemaProduct.addEventListener('change', (event) =>{
                         "info": formData.referencia,
                         "linha": formData.linhaCarro.toUpperCase(),
                         "linhaCode": formData.linhaCarro.toLowerCase(),
-                        "code": formData.codigo,
+                        "code": Number(formData.codigo),
                         "linkApli": '#'+formData.linkApli,
-                        "price": formData.precoProduto,
-                        "qtd": formData.qtdProduto,
+                        "price": Number(formData.precoProduto),
+                        "qtd": Number(formData.qtdProduto),
                         
                     }
 
@@ -17508,10 +17594,10 @@ sistemaProduct.addEventListener('change', (event) =>{
                         "info": formData.referencia,
                         "linha": formData.linhaCarro.toUpperCase(),
                         "linhaCode": formData.linhaCarro.toLowerCase(),
-                        "code": formData.codigo,
+                        "code": Number(formData.codigo),
                         "linkApli": '#'+formData.linkApli,
-                        "price": formData.precoProduto,
-                        "qtd": formData.qtdProduto,
+                        "price": Number(formData.precoProduto),
+                        "qtd": Number(formData.qtdProduto),
                         
                     }
 
@@ -17541,10 +17627,10 @@ sistemaProduct.addEventListener('change', (event) =>{
                         "info": formData.referencia,
                         "linha": formData.linhaCarro.toUpperCase(),
                         "linhaCode": formData.linhaCarro.toLowerCase(),
-                        "code": formData.codigo,
+                        "code": Number(formData.codigo),
                         "linkApli": '#'+formData.linkApli,
-                        "price": formData.precoProduto,
-                        "qtd": formData.qtdProduto,
+                        "price": Number(formData.precoProduto),
+                        "qtd": Number(formData.qtdProduto),
                         
                     }
 
@@ -17567,6 +17653,7 @@ sistemaProduct.addEventListener('change', (event) =>{
 
 
 
+
 // EDIT METHOD
 let sistemaProductEdit = document.querySelector('#sistemaProductEdit')
 
@@ -17574,8 +17661,8 @@ let sistemaProductEdit = document.querySelector('#sistemaProductEdit')
 
 // funcao PUT 
 async function updateProduct(endpoint, id, dataUpdated){
-
     
+    debugger
     try {
         const response = await fetch(`http://localhost:3000/${endpoint}/${id}`, {
             method: 'PUT',
@@ -17606,7 +17693,6 @@ async function updateProduct(endpoint, id, dataUpdated){
 // buscando produto por id
 async function gettingProductById(endpoint, id){
 
-    // const response = await fetch(`http://localhost:3000/${endpoint}/${id}`);
     try {
         const response = await fetch(`http://localhost:3000/${endpoint}/${id}`, {
 
@@ -17626,6 +17712,7 @@ async function gettingProductById(endpoint, id){
 
     } catch(error){
         console.error('Erro ao buscar dados por ID:', error);
+        alert('Produto não encontrado!')
         throw error;
 
     }
@@ -17633,35 +17720,35 @@ async function gettingProductById(endpoint, id){
 
 }
 
+
+
+
 let boxIDPRODUCT = document.querySelector('.boxIDPRODUCT')
 let boxAtualizacaoProduct = document.querySelector('.boxAtualizacaoProduct')
-// let boxBtnSearchProduct = document.querySelector('.boxBtnSearchProduct')
+let boxBtnSearchProduct = document.querySelector('.boxBtnSearchProduct')
 
 
-//<div class="boxBtnSearchProduct">
-    //<button class="btnSearchProduct">Buscar</button>
-//</div>
 
+// acao change do select
 sistemaProductEdit.addEventListener('change', (event) =>{
-
     let selectedProduct = event.target.value
+    boxBtnSearchProduct.innerHTML = ''
 
     boxIDPRODUCT.style.display="flex"
+
     let IDPRODUCT = document.querySelector('#IDPRODUCT')
-    
     IDPRODUCT.value = ''
     IDPRODUCT.focus()
 
     if(selectedProduct == 'oleos'){
         boxAtualizacaoProduct.innerHTML = ''
 
-        let boxBtnSearchProduct = document.createElement('div')
-        boxBtnSearchProduct.classList.add('boxBtnSearchProduct')
+        let button = document.createElement('button')
+        button.textContent = 'Buscar'
+        button.classList.add('btnSearchProduct')
 
-        boxBtnSearchProduct.innerHTML = `
-        <button class="btnSearchProduct">Buscar</button>
-        `
-        boxIDPRODUCT.appendChild(boxBtnSearchProduct)
+        boxBtnSearchProduct.appendChild(button)
+
         
         let btnSearchProduct = document.querySelector('.btnSearchProduct')
 
@@ -17676,7 +17763,7 @@ sistemaProductEdit.addEventListener('change', (event) =>{
                 if(item){
                     boxAtualizacaoProduct.innerHTML = ''
 
-                    console.log(item)
+                    // console.log(item)
                     let divUpdate = document.createElement('div')
                     divUpdate.innerHTML = `
                     <div class="dadosForm">
@@ -17721,16 +17808,16 @@ sistemaProductEdit.addEventListener('change', (event) =>{
                             qtdProduto: document.querySelector('.qtdProduto').value,
                             precoProduto: document.querySelector('.precoProduto').value
                         }
-
+                        
                         const obj = {
                             "nome": formData.nomeProduto,
                             "marca": formData.marcaProduto,
                             "info": formData.tipoOleo,
-                            "price": formData.precoProduto,
-                            "qtd": formData.qtdProduto
+                            "price": Number(formData.precoProduto),
+                            "qtd": Number(formData.qtdProduto)
                         }
-
-                        // updateProduct(selectedProduct, idDigitado, obj)
+                        
+                        updateProduct(selectedProduct, idDigitado, obj)
                     })
                     
 
@@ -17746,8 +17833,17 @@ sistemaProductEdit.addEventListener('change', (event) =>{
 
     }
 
+
     if(selectedProduct == 'baterias'){
         boxAtualizacaoProduct.innerHTML = ''
+
+        let button = document.createElement('button')
+        button.textContent = 'Buscar'
+        button.classList.add('btnSearchProduct')
+
+        boxBtnSearchProduct.appendChild(button)
+
+        let btnSearchProduct = document.querySelector('.btnSearchProduct')
 
         btnSearchProduct.addEventListener('click', (e) =>{
             e.preventDefault()
@@ -17759,7 +17855,7 @@ sistemaProductEdit.addEventListener('change', (event) =>{
                 if(item){
                     boxAtualizacaoProduct.innerHTML = ''
 
-                    console.log(item)
+                    // console.log(item)
                     let divUpdate = document.createElement('div')
                     divUpdate.innerHTML = `
                     <div class="dadosForm">
@@ -17799,77 +17895,8 @@ sistemaProductEdit.addEventListener('change', (event) =>{
                         const obj = {
                             "nome": formData.nomeProduto,
                             "marca": formData.marcaProduto,
-                            "price": formData.precoProduto,
-                            "qtd": formData.qtdProduto
-                        }
-
-                        // updateProduct(selectedProduct, idDigitado, obj)
-                    })
-                    
-                }else{
-                    alert('Produto não encontrado!')
-                }
-            })
-        })
-
-
-    }
-
-    if(selectedProduct == 'fluidos'){
-        boxAtualizacaoProduct.innerHTML = ''
-
-        btnSearchProduct.addEventListener('click', (e) =>{
-            e.preventDefault()
-            let idDigitado = IDPRODUCT.value
-
-            // chamando o fetch
-            gettingProductById(selectedProduct, idDigitado).then(item =>{
-
-                if(item){
-                    boxAtualizacaoProduct.innerHTML = ''
-
-                    console.log(item)
-                    let divUpdate = document.createElement('div')
-                    divUpdate.innerHTML = `
-                    <div class="dadosForm">
-                        <label>Nome Produto</label>
-                        <input type="text" placeholder="Produto" value="${item.nome}" class="newName">
-
-                        <label>Marca</label>
-                        <input type="text" placeholder="Marca do Produto" class="marcaProduto" value="${item.marca}">
-
-                        <label>Valor do Produto</label>
-                        <input type="number" placeholder="Valor" class="precoProduto" value="${item.price}">
-
-                        <label>Quantidade</label>
-                        <input type="text" placeholder="Qtd.." class="qtdProduto" value="${item.qtd}">
-
-                    </div>
-
-                    <button class="atualizarProduto">Atualizar</button>
-                    `
-                    boxAtualizacaoProduct.appendChild(divUpdate)
-
-
-                    // criando o novo form! para dá update!
-
-                    let btnAtualizarProduto = document.querySelector('.atualizarProduto')
-                    
-                    btnAtualizarProduto.addEventListener('click', (e) =>{
-                        e.preventDefault()
-
-                        const formData = {
-                            nomeProduto: document.querySelector('.newName').value,
-                            marcaProduto: document.querySelector('.marcaProduto').value,
-                            qtdProduto: document.querySelector('.qtdProduto').value,
-                            precoProduto: document.querySelector('.precoProduto').value
-                        }
-
-                        const obj = {
-                            "nome": formData.nomeProduto,
-                            "marca": formData.marcaProduto,
-                            "price": formData.precoProduto,
-                            "qtd": formData.qtdProduto
+                            "price": Number(formData.precoProduto),
+                            "qtd": Number(formData.qtdProduto)
                         }
 
                         updateProduct(selectedProduct, idDigitado, obj)
@@ -17884,9 +17911,17 @@ sistemaProductEdit.addEventListener('change', (event) =>{
 
     }
 
-    if(selectedProduct == 'filtrosoleosimples'){
 
+    if(selectedProduct == 'fluidos'){
         boxAtualizacaoProduct.innerHTML = ''
+
+        let button = document.createElement('button')
+        button.textContent = 'Buscar'
+        button.classList.add('btnSearchProduct')
+
+        boxBtnSearchProduct.appendChild(button)
+
+        let btnSearchProduct = document.querySelector('.btnSearchProduct')
 
         btnSearchProduct.addEventListener('click', (e) =>{
             e.preventDefault()
@@ -17898,7 +17933,86 @@ sistemaProductEdit.addEventListener('change', (event) =>{
                 if(item){
                     boxAtualizacaoProduct.innerHTML = ''
 
-                    console.log(item)
+                    // console.log(item)
+                    let divUpdate = document.createElement('div')
+                    divUpdate.innerHTML = `
+                    <div class="dadosForm">
+                        <label>Nome Produto</label>
+                        <input type="text" placeholder="Produto" value="${item.nome}" class="newName">
+
+                        <label>Marca</label>
+                        <input type="text" placeholder="Marca do Produto" class="marcaProduto" value="${item.marca}">
+
+                        <label>Valor do Produto</label>
+                        <input type="number" placeholder="Valor" class="precoProduto" value="${item.price}">
+
+                        <label>Quantidade</label>
+                        <input type="text" placeholder="Qtd.." class="qtdProduto" value="${item.qtd}">
+
+                    </div>
+
+                    <button class="atualizarProduto">Atualizar</button>
+                    `
+                    boxAtualizacaoProduct.appendChild(divUpdate)
+
+
+                    // criando o novo form! para dá update!
+
+                    let btnAtualizarProduto = document.querySelector('.atualizarProduto')
+                    
+                    btnAtualizarProduto.addEventListener('click', (e) =>{
+                        e.preventDefault()
+
+                        const formData = {
+                            nomeProduto: document.querySelector('.newName').value,
+                            marcaProduto: document.querySelector('.marcaProduto').value,
+                            qtdProduto: document.querySelector('.qtdProduto').value,
+                            precoProduto: document.querySelector('.precoProduto').value
+                        }
+
+                        const obj = {
+                            "nome": formData.nomeProduto,
+                            "marca": formData.marcaProduto,
+                            "price": Number(formData.precoProduto),
+                            "qtd": Number(formData.qtdProduto)
+                        }
+
+                        updateProduct(selectedProduct, idDigitado, obj)
+                    })
+                    
+                }else{
+                    alert('Produto não encontrado!')
+                }
+            })
+        })
+
+
+    }
+
+    
+    if(selectedProduct == 'filtrosoleosimples'){
+
+        boxAtualizacaoProduct.innerHTML = ''
+
+        let button = document.createElement('button')
+        button.textContent = 'Buscar'
+        button.classList.add('btnSearchProduct')
+
+        boxBtnSearchProduct.appendChild(button)
+
+        let btnSearchProduct = document.querySelector('.btnSearchProduct')
+
+        btnSearchProduct.addEventListener('click', (e) =>{
+            e.preventDefault()
+            let idDigitado = IDPRODUCT.value
+
+            // chamando o fetch
+            gettingProductById(selectedProduct, idDigitado).then(item =>{
+
+                if(item){
+                    boxAtualizacaoProduct.innerHTML = ''
+
+                    // console.log(item)
                     let divUpdate = document.createElement('div')
                     divUpdate.innerHTML = `
                     <div class="dadosForm">
@@ -17946,10 +18060,10 @@ sistemaProductEdit.addEventListener('change', (event) =>{
                         const obj = {
                             "nome": formData.nomeProduto,
                             "marca": formData.marcaProduto,
-                            "price": formData.precoProduto,
+                            "price": Number(formData.precoProduto),
                             "info": formData.referencia,
-                            "code": formData.codigo,
-                            "qtd": formData.qtdProduto
+                            "code": Number(formData.codigo),
+                            "qtd": Number(formData.qtdProduto)
                         }
                         
                         updateProduct(selectedProduct, idDigitado, obj)
@@ -18120,7 +18234,7 @@ tooltip.textContent = tooltipTarget.getAttribute('data-tooltip');
 boxTitleEditCrud.appendChild(tooltip);
 
 // ativando no hover
-tooltipTarget.addEventListener('mouseenter', (e) => {
+tooltipTarget.addEventListener('mouseenter', () => {
     const rect = tooltipTarget.getBoundingClientRect();
     tooltip.style.top = `${rect.bottom + window.scrollY}px`;
     tooltip.style.left = `${rect.left + rect.width / 2 - tooltip.offsetWidth / 2}px`;
@@ -18141,12 +18255,12 @@ let boxTitleDeleteFormCrud = document.querySelector('.titleDeleteFormCrud')
 let tooltipTarget2 = document.querySelector('.tooltip-target2')
 
 let tooltip2 = document.createElement('div')
-tooltip2.classList.add('tooltip')
-tooltip2.textContent = tooltipTarget.getAttribute('data-tooltip');
+tooltip2.classList.add('tooltip2')
+tooltip2.textContent = tooltipTarget2.getAttribute('data-tooltip');
 boxTitleDeleteFormCrud.appendChild(tooltip2)
 
 // ativando no hover
-tooltipTarget2.addEventListener('mouseenter', (e) => {
+tooltipTarget2.addEventListener('mouseenter', () => {
     const rect = tooltipTarget2.getBoundingClientRect();
     tooltip2.style.top = `${rect.bottom + window.scrollY}px`;
     tooltip2.style.left = `${rect.left + rect.width / 2 - tooltip2.offsetWidth / 2}px`;

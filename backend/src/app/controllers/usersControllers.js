@@ -5,14 +5,14 @@ import { readFileSync, writeFileSync } from "fs"
 
 // ler
 const readFile = () =>{
-    const content = readFileSync('../myJob/testando.json', "utf-8")
+    const content = readFileSync('../myJob/allpeaces.json', "utf-8")
     return(JSON.parse(content))
 }
 
 // salva
 const writeFile = (content) =>{
     const updateFile = JSON.stringify(content)
-    writeFileSync('../myJob/testando.json', updateFile, 'utf-8')
+    writeFileSync('../myJob/allpeaces.json', updateFile, 'utf-8')
 }
 
 
@@ -210,13 +210,17 @@ class usersControllers{
     
         const id = req.params.id
         const {nome, image, marca, info, price, qtd } = req.body
-    
+        
+        
+
         const currentContent = readFile()
     
         const selectedItem = currentContent.oleos.findIndex(item => item.id == id)
         
-        const {id: cId, nome: cNome, image: cImage, marca: cMarca, info: cInfo, price: cPrice, qtd: cQtd } = currentContent.oleos[selectedItem]
+        const {id: cId, nome: cNome, image: cImage, marca: cMarca, info: cInfo, price: cPrice} = currentContent.oleos[selectedItem]
+
     
+
         const newObj = {
             id: cId,
             nome: nome ? nome: cNome,
@@ -224,13 +228,15 @@ class usersControllers{
             marca: marca ? marca: cMarca,
             info: info ? info: cInfo,
             price: price ? price: cPrice,
-            qtd: qtd ? qtd: cQtd
+            qtd: qtd 
         }
+
         currentContent.oleos[selectedItem] = newObj
-    
+
         
         writeFile(currentContent)
         res.send(newObj)
+        // console.log(currentContent.oleos[selectedItem].qtd)
     }
 
     updateBateria(req, res){
@@ -242,7 +248,7 @@ class usersControllers{
     
         const selectedItem = currentContent.baterias.findIndex(item => item.id == id)
         
-        const {id: cId, nome: cNome, image: cImage, marca: cMarca, price: cPrice, qtd: cQtd } = currentContent.baterias[selectedItem]
+        const {id: cId, nome: cNome, image: cImage, marca: cMarca, price: cPrice} = currentContent.baterias[selectedItem]
     
         const newObj = {
             id: cId,
@@ -250,8 +256,9 @@ class usersControllers{
             image: image ? image: cImage,
             marca: marca ? marca: cMarca,
             price: price ? price: cPrice,
-            qtd: qtd ? qtd: cQtd
+            qtd: qtd 
         }
+
         currentContent.baterias[selectedItem] = newObj
 
         writeFile(currentContent)
@@ -264,7 +271,7 @@ class usersControllers{
         const currentContent = readFile()
         const selectedItem = currentContent.fluidos.findIndex(item => item.id == id)
         
-        const {id: cId, nome: cNome, image: cImage, marca: cMarca, price: cPrice, qtd: cQtd } = currentContent.fluidos[selectedItem]
+        const {id: cId, nome: cNome, image: cImage, marca: cMarca, price: cPrice} = currentContent.fluidos[selectedItem]
     
         const newObj = {
             id: cId,
@@ -272,7 +279,7 @@ class usersControllers{
             image: image ? image: cImage,
             marca: marca ? marca: cMarca,
             price: price ? price: cPrice,
-            qtd: qtd ? qtd: cQtd
+            qtd: qtd
         }
         currentContent.fluidos[selectedItem] = newObj
         
@@ -282,10 +289,6 @@ class usersControllers{
 
     updateFiltroOleo(req, res){
         const id = req.params.id
-        
-        // const {aplicacoes} = req.body
-        // const {aplicacoesTwo} = req.body
-        // const {aplicacoesThree} = req.body
 
         
         const {nome, image, marca, info, linha, linhaCode, code, linkApli, price, qtd} = req.body
@@ -294,7 +297,7 @@ class usersControllers{
         const selectedItem = currentContent.filtroOleoSimples.findIndex(item => item.id == id)
                                             // <>
 
-        const {id: cId, nome: cNome, image: cImage, marca: cMarca, info: cInfo, linha: cLinha, linhaCode: cLinhaCode, code: cCode, linkApli: cLinkApli, price: cPrice, qtd: cQtd} = currentContent.filtroOleoSimples[selectedItem]
+        const {id: cId, nome: cNome, image: cImage, marca: cMarca, info: cInfo, linha: cLinha, linhaCode: cLinhaCode, code: cCode, linkApli: cLinkApli, price: cPrice} = currentContent.filtroOleoSimples[selectedItem]
                                     // <>
         const newObj = {
             id: cId,
@@ -307,7 +310,7 @@ class usersControllers{
             code: code ? code: cCode,
             linkApli: linkApli ? linkApli: cLinkApli,
             price: price ? price: cPrice,
-            qtd: qtd ? qtd: cQtd,
+            qtd: qtd ,
         }
 
         currentContent.filtroOleoSimples[selectedItem] = newObj
