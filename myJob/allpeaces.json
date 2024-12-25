@@ -232,8 +232,8 @@
             "linhaCode": "gm",
             "code": 2638,
             "linkApli": "#psl619",
-            "price": 15,
             "qtd": 1,
+            "price": 15,
             "aplicacoes": [
                 {
                     "codeApli": "psl619",
@@ -279,7 +279,6 @@
             "info": "WO-133",
             "linha": "GM/JEEP/FIAT",
             "linhaCode": "gm",
-            "secundLineCode": "fiat",
             "code": "Sem",
             "linkApli": "#wo133",
             "price": 0,
@@ -904,8 +903,8 @@
             "linhaCode": "ford-pesado",
             "code": 1833,
             "linkApli": "#wo280",
+            "qtd": 1,
             "price": 38,
-            "qtd": 0,
             "aplicacoes": [
                 {
                     "codeApli": "wo280",
@@ -958,7 +957,6 @@
             "info": "PSL-962",
             "linha": "Ford/GM/VW",
             "linhaCode": "ford-pesado",
-            "secundLineCode": "gm-pesado",
             "code": 1139,
             "linkApli": "#psl962",
             "price": 33,

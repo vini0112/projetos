@@ -16429,16 +16429,15 @@ let sistemaProduct = document.querySelector('#sistemaProduct')
 
 
 let formCrud = document.querySelector('#formCrud')
-
 let departamentoEscolhido = document.querySelector('.departamentoEscolhido')
 let produtoEscolhido = document.querySelector('.produtoEscolhido')
 
 
 // FUNCAO DE POST 
 async function postingProduct(endpoint, obj){
-
+    debugger
     try{
-                        
+        
         const response = await fetch(`http://localhost:3000/${endpoint}`, {
             method: 'POST',
             headers: {
@@ -16825,6 +16824,85 @@ sistemaProduct.addEventListener('change', (event) =>{
 
     }
 
+    else if(valorSelecionado == "fluidos"){
+        departamentoEscolhido.innerHTML = ''
+        produtoEscolhido.innerHTML = ''
+
+        // desativando aplications form
+        let aplicationStructure = document.querySelector('.aplicationStructure')
+        aplicationStructure.style.display="none"
+
+        let divBoxForms = document.createElement('form')
+        divBoxForms.classList.add('dadosForm')
+        divBoxForms.innerHTML = `
+        <label>Nome</label>
+        <input type="text" placeholder="Nome do Produto" class="nomeProduto">
+
+        <label>Imagem do Produto</label>
+        <input type="file" class="imgProduto">
+
+        <label>Marca</label>
+        <input type="text" placeholder="Marca do Produto" class="marcaProduto">
+
+        <label>Preço</label>
+        <input type="text" placeholder="Preço do Produto" class="precoProduto">
+
+        <label>Quantidade</label>
+        <input type="text" placeholder="Qtd.." class="qtdProduto">
+
+        <div class="boxBtnPost">
+            <button class="btnForm formPost">Postar</button>
+            <button class="btnForm formDelete">Apagar Tudo</button>
+        </div>
+
+        `
+        produtoEscolhido.appendChild(divBoxForms)
+
+        // enviando para backend
+        let formPost = document.querySelector('.formPost')
+        formPost.addEventListener('click', async (event) =>{
+            event.preventDefault()       
+            // pegando valores 
+            const formData = {
+                nomeProduto: document.querySelector('.nomeProduto').value,
+                imgProduto: document.querySelector('.imgProduto').value,
+                marcaProduto: document.querySelector('.marcaProduto').value,
+                qtdProduto: document.querySelector('.qtdProduto').value,
+                precoProduto: document.querySelector('.precoProduto').value
+            }
+
+            let endpoint = 'fluidos'
+            const obj = {
+                "nome": formData.nomeProduto,
+                "image": formData.imgProduto,
+                "marca": formData.marcaProduto,
+                "price": Number(formData.precoProduto),
+                "qtd": Number(formData.qtdProduto)
+            }
+            postingProduct(endpoint, obj)
+        })
+
+        // limpando form
+        let formDelete = document.querySelector('.formDelete')
+        formDelete.addEventListener('click', (e) =>{
+
+            e.preventDefault()
+            let nomeProduto = document.querySelector('.nomeProduto')
+            let imgProduto = document.querySelector('.imgProduto')
+            let marcaProduto = document.querySelector('.marcaProduto')
+            let precoProduto = document.querySelector('.precoProduto')
+            let qtdProduto = document.querySelector('.qtdProduto')
+
+            nomeProduto.value = ''
+            nomeProduto.focus()
+            imgProduto.value = ''
+            marcaProduto.value = ''
+            precoProduto.value = ''
+            qtdProduto.value = ''
+        })
+
+    }
+
     else if(valorSelecionado == 'filtroOleo'){
         departamentoEscolhido.innerHTML = ''
         produtoEscolhido.innerHTML = ''
@@ -16858,6 +16936,7 @@ sistemaProduct.addEventListener('change', (event) =>{
             if(valorSelecionado == 'filtroSimples'){
                 produtoEscolhido.innerHTML = ''
                 aplicationStructure.style.display="none"
+                let endpoint = 'filtroOleoSimples'
 
 
                 creatingForm2()
@@ -17042,7 +17121,6 @@ sistemaProduct.addEventListener('change', (event) =>{
                 formPost[0].addEventListener('click', (e) =>{
                     e.preventDefault()
 
-                    let endpoint = 'filtrosOleoSimples'
 
                     let carros = document.querySelectorAll('.inputCarro')
                     let inputAnoApli = document.querySelectorAll('.inputAnoApli')
@@ -17105,7 +17183,6 @@ sistemaProduct.addEventListener('change', (event) =>{
 
                 formPost[1].addEventListener('click', (e) =>{
                     e.preventDefault()
-                    let endpoint = 'filtrosOleoSimples'
 
                     let carros = document.querySelectorAll('.inputCarro')
                     let carros2 = document.querySelectorAll('.inputCarro2')
@@ -17195,7 +17272,6 @@ sistemaProduct.addEventListener('change', (event) =>{
 
                 formPost[2].addEventListener('click', (e) =>{
                     e.preventDefault()
-                    let endpoint = 'filtrosOleoSimples'
                     
                     let carros = document.querySelectorAll('.inputCarro')
                     let carros2 = document.querySelectorAll('.inputCarro2')
@@ -17357,10 +17433,11 @@ sistemaProduct.addEventListener('change', (event) =>{
 
             }
 
-            else if(valorSelecionado == 'filtroPesado'){
+            if(valorSelecionado == 'filtroPesado'){
                 produtoEscolhido.innerHTML = ''
                 aplicationStructure.style.display="none"
-                
+                let endpoint = 'filtroOleoPesado'
+
 
                 creatingForm2()
 
@@ -17392,7 +17469,7 @@ sistemaProduct.addEventListener('change', (event) =>{
                     }
                     // se segundo
                     else if(radioSelected == 'radio2'){
-                        // console.log(2)
+
                         let segundLine = document.querySelector('.segundLine')
                         let thirdLine = document.querySelector('.thirdLine')
                         segundLine.style.display="flex"
@@ -17537,10 +17614,10 @@ sistemaProduct.addEventListener('change', (event) =>{
                 
                 //     // FORMULARIO
                 let formPost = document.querySelectorAll('.formPost')
-
+                
                 formPost[0].addEventListener('click', (e) =>{
                     e.preventDefault()
-                    console.log('btn one')
+                    
                     const formData = {
                         nomeProduto: document.querySelector('.nomeProduto').value,
                         imgProduto: document.querySelector('.imgProduto').value,
@@ -17567,12 +17644,12 @@ sistemaProduct.addEventListener('change', (event) =>{
                         "qtd": Number(formData.qtdProduto),
                         
                     }
+                    postingProduct(endpoint, obj)
 
                 })
 
                 formPost[1].addEventListener('click', (e) =>{
                     e.preventDefault()
-                    console.log('btn two')
 
                     const formData = {
                         nomeProduto: document.querySelector('.nomeProduto').value,
@@ -17600,12 +17677,13 @@ sistemaProduct.addEventListener('change', (event) =>{
                         "qtd": Number(formData.qtdProduto),
                         
                     }
+                    postingProduct(endpoint, obj)
 
                 })
 
                 formPost[2].addEventListener('click', (e) =>{
                     e.preventDefault()
-                    console.log('btn three')
+                    
 
                     const formData = {
                         nomeProduto: document.querySelector('.nomeProduto').value,
@@ -17633,6 +17711,7 @@ sistemaProduct.addEventListener('change', (event) =>{
                         "qtd": Number(formData.qtdProduto),
                         
                     }
+                    postingProduct(endpoint, obj)
 
                 })
 
@@ -17662,6 +17741,7 @@ let sistemaProductEdit = document.querySelector('#sistemaProductEdit')
 // funcao PUT 
 async function updateProduct(endpoint, id, dataUpdated){
     
+    console.log(dataUpdated)
     debugger
     try {
         const response = await fetch(`http://localhost:3000/${endpoint}/${id}`, {
@@ -17672,17 +17752,17 @@ async function updateProduct(endpoint, id, dataUpdated){
             body: JSON.stringify(dataUpdated),
         });
 
-        if (!response.ok) {
+        if(!response.ok) {
             const error = await response.json();
             console.error('Erro:', error.message);
             return;
         }
 
         const data = await response.json();
+        console.log('updated ', data)
         alert('Sucesso na Atualização!')
-        console.log('Item atualizado:', data);
 
-    } catch (error) {
+    } catch(error) {
         console.error('Erro na requisição:', error);
         alert('Erro na Atualização!')
     }
@@ -17692,7 +17772,7 @@ async function updateProduct(endpoint, id, dataUpdated){
 
 // buscando produto por id
 async function gettingProductById(endpoint, id){
-
+    
     try {
         const response = await fetch(`http://localhost:3000/${endpoint}/${id}`, {
 
@@ -17730,7 +17810,7 @@ let boxBtnSearchProduct = document.querySelector('.boxBtnSearchProduct')
 
 
 // acao change do select
-sistemaProductEdit.addEventListener('change', (event) =>{
+sistemaProductEdit.addEventListener('change', async(event) =>{
     let selectedProduct = event.target.value
     boxBtnSearchProduct.innerHTML = ''
 
@@ -17834,7 +17914,7 @@ sistemaProductEdit.addEventListener('change', (event) =>{
     }
 
 
-    if(selectedProduct == 'baterias'){
+    else if(selectedProduct == 'baterias'){
         boxAtualizacaoProduct.innerHTML = ''
 
         let button = document.createElement('button')
@@ -17912,7 +17992,7 @@ sistemaProductEdit.addEventListener('change', (event) =>{
     }
 
 
-    if(selectedProduct == 'fluidos'){
+    else if(selectedProduct == 'fluidos'){
         boxAtualizacaoProduct.innerHTML = ''
 
         let button = document.createElement('button')
@@ -17990,8 +18070,7 @@ sistemaProductEdit.addEventListener('change', (event) =>{
     }
 
     
-    if(selectedProduct == 'filtrosoleosimples'){
-
+    else if(selectedProduct == 'filtroOleoSimples'){
         boxAtualizacaoProduct.innerHTML = ''
 
         let button = document.createElement('button')
@@ -18001,6 +18080,7 @@ sistemaProductEdit.addEventListener('change', (event) =>{
         boxBtnSearchProduct.appendChild(button)
 
         let btnSearchProduct = document.querySelector('.btnSearchProduct')
+        
 
         btnSearchProduct.addEventListener('click', (e) =>{
             e.preventDefault()
@@ -18008,20 +18088,19 @@ sistemaProductEdit.addEventListener('change', (event) =>{
 
             // chamando o fetch
             gettingProductById(selectedProduct, idDigitado).then(item =>{
-
+                
                 if(item){
+                    
                     boxAtualizacaoProduct.innerHTML = ''
 
                     // console.log(item)
-                    let divUpdate = document.createElement('div')
+                    let divUpdate = document.createElement('div') 
                     divUpdate.innerHTML = `
+
                     <div class="dadosForm">
                         <label>Nome Produto</label>
                         <input type="text" placeholder="Produto" value="${item.nome}" class="newName">
-
-                        <label>Marca</label>
-                        <input type="text" placeholder="Marca do Produto" class="marcaProduto" value="${item.marca}">
-
+                    
                         <label>Referência do Producto</label>
                         <input type="text" placeholder="Referência" class="referencia" value="${item.info}">
 
@@ -18030,21 +18109,27 @@ sistemaProductEdit.addEventListener('change', (event) =>{
 
                         <label>Código do Produto</label>
                         <input type="number" placeholder="Código.." class="codigo" value="${item.code}">
+                        
+                        <label>Marca</label>
+                        <input type="text" placeholder="Marca do Produto" class="marcaProduto" value="${item.marca}">
 
                         <label>Quantidade</label>
                         <input type="text" placeholder="Qtd.." class="qtdProduto" value="${item.qtd}">
-                    </div>
 
+                        
+
+                    </div>
                     <button class="atualizarProduto">Atualizar</button>
                     `
+                    
                     boxAtualizacaoProduct.appendChild(divUpdate)
 
 
                     // criando o novo form! para dá update!
-
                     let btnAtualizarProduto = document.querySelector('.atualizarProduto')
                     
                     btnAtualizarProduto.addEventListener('click', (e) =>{
+                        
                         e.preventDefault()
 
                         const formData = {
@@ -18054,7 +18139,6 @@ sistemaProductEdit.addEventListener('change', (event) =>{
                             precoProduto: document.querySelector('.precoProduto').value,
                             referencia: document.querySelector('.referencia').value,
                             codigo: document.querySelector('.codigo').value,
-
                         }
 
                         const obj = {
@@ -18187,8 +18271,9 @@ sistemaProductDelete.addEventListener('click', (e) =>{
 
     }
 
-    else if(selectedProduct == 'filtrosoleosimples'){
+    else if(selectedProduct == 'filtroOleoSimples'){
         boxIDPRODUCTDELETE.style.display="flex"
+
 
         let InputIDPRODUCTDELETE = document.querySelector('#IDPRODUCTDELETE')
         let btnSearchProduct2 = document.querySelector('.btnSearchProduct2')
