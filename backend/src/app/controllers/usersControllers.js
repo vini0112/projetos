@@ -162,63 +162,6 @@ class usersControllers{
         
     }
 
-    postFiltroOleoPesado(req, res){
-
-        const {aplicacoes} = req.body
-        const {aplicacoesTwo} = req.body
-        const {aplicacoesThree} = req.body
-        
-
-        if(aplicacoes && !aplicacoesTwo){
-            const {nome, image, marca, info, linha, linhaCode, code, linkApli,price, qtd, aplicacoes} = req.body
-
-            const currentContent = readFile()
-            const extraindoArrays = Object.values(currentContent)
-            const achatandoArrays = extraindoArrays.flat()
-        
-            // definindo ID
-            const id = Math.max(...achatandoArrays.map((item) => item.id)) + 1
-        
-            // salvando         <>
-            currentContent.filtroOleoPesado.push({id, nome, image, marca, info, linha, linhaCode, code, linkApli, price, qtd, aplicacoes})
-            writeFile(currentContent)
-        }
-
-        else if(aplicacoesTwo && !aplicacoesThree){
-
-            const {nome, image, marca, info, linha, linhaCode, secundLineCode, code, linkApli,price, qtd, aplicacoes, aplicacoesTwo} = req.body
-
-            const currentContent = readFile()
-            const extraindoArrays = Object.values(currentContent)
-            const achatandoArrays = extraindoArrays.flat()
-        
-            // definindo ID
-            const id = Math.max(...achatandoArrays.map((item) => item.id)) + 1
-        
-            // salvando     <>
-            currentContent.filtroOleoPesado.push({id, nome, image, marca, info, linha, linhaCode, secundLineCode, code, linkApli, price, qtd, aplicacoes, aplicacoesTwo})
-            writeFile(currentContent)
-        }
-        
-        else if(aplicacoesThree){
-            const {nome, image, marca, info, linha, linhaCode, secundLineCode, thirdLineCode, code, linkApli,price, qtd, aplicacoes, aplicacoesTwo, aplicacoesThree} = req.body
-
-            const currentContent = readFile()
-            const extraindoArrays = Object.values(currentContent)
-            const achatandoArrays = extraindoArrays.flat()
-        
-            // definindo ID
-            const id = Math.max(...achatandoArrays.map((item) => item.id)) + 1
-        
-            // salvando     <>
-            currentContent.filtroOleoPesado.push({id, nome, image, marca, info, linha, linhaCode, secundLineCode, thirdLineCode, code, linkApli, price, qtd, aplicacoes, aplicacoesTwo, aplicacoesThree})
-            writeFile(currentContent)
-        }
-
-        
-        res.send("Criado com sucesso!")
-    }
-
 
 
 
@@ -250,16 +193,18 @@ class usersControllers{
         // console.log(currentContent.oleos[selectedItem].qtd)
     }
 
-    updateBateria(req, res){
+    updateBateriaYfluido(req, res){
     
         const id = req.params.id
         const {nome, image, marca, price, qtd } = req.body
+
+        const path = req.path.replace(/\/\d+$/, '')
+        const cleanPath = path.split('/').filter(segment => isNaN(segment)).join('/')
     
         const currentContent = readFile()
-    
-        const selectedItem = currentContent.baterias.findIndex(item => item.id == id)
+        const selectedItem = currentContent[cleanPath].findIndex(item => item.id == id)
         
-        const {id: cId, nome: cNome, image: cImage, marca: cMarca, price: cPrice} = currentContent.baterias[selectedItem]
+        const {id: cId, nome: cNome, image: cImage, marca: cMarca, price: cPrice} = currentContent[cleanPath][selectedItem]
     
         const newObj = {
             id: cId,
@@ -270,49 +215,31 @@ class usersControllers{
             qtd: qtd 
         }
 
-        currentContent.baterias[selectedItem] = newObj
+        currentContent[cleanPath][selectedItem] = newObj
 
         writeFile(currentContent)
         res.send(newObj)
     }
 
-    updateFluido(req, res){
-        const id = req.params.id
-        const {nome, image, marca, price, qtd } = req.body
-        const currentContent = readFile()
-        const selectedItem = currentContent.fluidos.findIndex(item => item.id == id)
-        
-        const {id: cId, nome: cNome, image: cImage, marca: cMarca, price: cPrice} = currentContent.fluidos[selectedItem]
-    
-        const newObj = {
-            id: cId,
-            nome: nome ? nome: cNome,
-            image: image ? image: cImage,
-            marca: marca ? marca: cMarca,
-            price: price ? price: cPrice,
-            qtd: qtd
-        }
-        currentContent.fluidos[selectedItem] = newObj
-        
-        writeFile(currentContent)
-        res.send(newObj)
-    }
 
-    updateFiltroOleo(req, res){
+    updateEstruturaAplicacoes(req, res){
         const id = req.params.id
         const {nome, marca, info, price, code, qtd} = req.body
+
+        const path = req.path.replace(/\/\d+$/, '')
+        const cleanPath = path.split('/').filter(segment => isNaN(segment)).join('/')
         // 
         const currentContent = readFile()
-        const selectedItem = currentContent.filtroOleoSimples.findIndex(item => item.id == id)
-                                        // <>
+        const selectedItem = currentContent[cleanPath].findIndex(item => item.id == id)
+                                            // <>
         
-        const {id: cId, nome: cNome, marca: cMarca, info: cInfo,  code: cCode,  price: cPrice, linkApli: cLinkApli,linhaCode: cLinhaCode, linha: cLinha, image: cImage} = currentContent.filtroOleoSimples[selectedItem]
-                // <>
+        const {id: cId, nome: cNome, marca: cMarca, info: cInfo,  code: cCode,  price: cPrice, linkApli: cLinkApli,linhaCode: cLinhaCode, linha: cLinha, image: cImage} = currentContent[cleanPath][selectedItem]
+                                                                                // <>
 
-        let justApliOne = currentContent.filtroOleoSimples[selectedItem].aplicacoes
-        let apliTwo = currentContent.filtroOleoSimples[selectedItem].aplicacoesTwo
-        let apliThree = currentContent.filtroOleoSimples[selectedItem].aplicacoesThree
-
+        let justApliOne = currentContent[cleanPath][selectedItem].aplicacoes
+        let apliTwo = currentContent[cleanPath][selectedItem].aplicacoesTwo
+        let apliThree = currentContent[cleanPath][selectedItem].aplicacoesThree
+                                        // <>
         if(justApliOne && !apliTwo){
             const newObj = {
                 id: cId,
@@ -329,7 +256,8 @@ class usersControllers{
                 aplicacoes: justApliOne
             }
 
-            currentContent.filtroOleoSimples[selectedItem] = newObj
+            currentContent[cleanPath][selectedItem] = newObj
+                            // <>
             writeFile(currentContent)
             res.send(newObj)
         }
@@ -352,7 +280,8 @@ class usersControllers{
                 aplicacoesTwo: apliTwo
             }
 
-            currentContent.filtroOleoSimples[selectedItem] = newObj
+            currentContent[cleanPath][selectedItem] = newObj
+                            // <>
             writeFile(currentContent)
             res.send(newObj)
 
@@ -377,7 +306,8 @@ class usersControllers{
                 aplicacoesThree: apliThree
             }
 
-            currentContent.filtroOleoSimples[selectedItem] = newObj
+            currentContent[cleanPath][selectedItem] = newObj
+                            // <>
             writeFile(currentContent)
             res.send(newObj)
 
@@ -475,62 +405,21 @@ class usersControllers{
 
 
 
-    // DELETE
-    deleteOleo(req, res){
+    // DELETE ALL
+    deleting(req, res){
         const currentContent = readFile()    
     
         const {id} = req.params
+        const path = req.path.replace(/\/\d+$/, '')
+        const cleanPath = path.split('/').filter(segment => isNaN(segment)).join('/')
         
-        const selectedItem = currentContent.oleos.findIndex((item) => item.id == id)
-        currentContent.oleos.splice(selectedItem, 1)
+        const selectedItem = currentContent[cleanPath].findIndex((item) => item.id == id)
+        currentContent[cleanPath].splice(selectedItem, 1)
     
         writeFile(currentContent)
-        res.send(currentContent.oleos[selectedItem])
+        res.send(currentContent[cleanPath][selectedItem])
     }
 
-    deleteBateria(req, res){
-        const currentContent = readFile()    
-    
-        const {id} = req.params
-        
-        const selectedItem = currentContent.baterias.findIndex((item) => item.id == id)
-        currentContent.baterias.splice(selectedItem, 1)
-    
-        writeFile(currentContent)
-        res.send(currentContent.baterias[selectedItem])
-    }
-
-    deleteFluido(req, res){
-        const currentContent = readFile()    
-        const {id} = req.params
-        const selectedItem = currentContent.fluidos.findIndex((item) => item.id == id)
-        currentContent.fluidos.splice(selectedItem, 1)
-    
-        writeFile(currentContent)
-        res.send(currentContent.fluidos[selectedItem])
-    }
-
-    deleteFiltroOleo(req, res){
-        const currentContent = readFile()    
-        const {id} = req.params
-        const selectedItem = currentContent.filtroOleoSimples.findIndex((item) => item.id == id)
-                                        // <>
-        currentContent.filtroOleoSimples.splice(selectedItem, 1)
-                        // <>
-        writeFile(currentContent)
-        res.send(currentContent.filtroOleoSimples[selectedItem])
-    }
-
-    deleteFiltroOleoPesado(req, res){
-        const currentContent = readFile()    
-        const {id} = req.params
-        const selectedItem = currentContent.filtroOleoPesado.findIndex((item) => item.id == id)
-                                            // <>
-        currentContent.filtroOleoPesado.splice(selectedItem, 1)
-                        // <>
-        writeFile(currentContent)
-        res.send("Deletado com sucesso!")
-    }
 
 
 }
