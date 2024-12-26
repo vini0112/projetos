@@ -97,7 +97,6 @@ class usersControllers{
         
     }
 
-    
     postEstruturaAplicacoes(req, res){
 
         const {aplicacoes} = req.body
@@ -162,6 +161,64 @@ class usersControllers{
         
     }
 
+    postBarrasAxiais(req, res){
+        const {aplicacoes} = req.body
+        const {aplicacoesTwo} = req.body
+        const {aplicacoesThree} = req.body
+        
+
+        // console.log(cleanPath)
+        if(aplicacoes && !aplicacoesTwo){
+            const {nome, image, marca, info, linha, linhaCode, code, linkApli,price, qtd, sistema, aplicacoes} = req.body
+
+            const currentContent = readFile()
+            const extraindoArrays = Object.values(currentContent)
+            const achatandoArrays = extraindoArrays.flat()
+        
+            // definindo ID
+            const id = Math.max(...achatandoArrays.map((item) => item.id)) + 1
+        
+            // salvando
+            currentContent.barrasAxiais.push({id, nome, image, marca, info, linha, linhaCode, code, linkApli, price, qtd, sistema, aplicacoes})
+            writeFile(currentContent)
+            res.send(currentContent)
+        }
+
+        else if(aplicacoesTwo && !aplicacoesThree){
+
+            const {nome, image, marca, info, linha, linhaCode, secundLineCode, code, linkApli,price, qtd, sistema, aplicacoes, aplicacoesTwo} = req.body
+
+            const currentContent = readFile()
+            const extraindoArrays = Object.values(currentContent)
+            const achatandoArrays = extraindoArrays.flat()
+        
+            // definindo ID
+            const id = Math.max(...achatandoArrays.map((item) => item.id)) + 1
+        
+            // salvando
+            currentContent.barrasAxiais.push({id, nome, image, marca, info, linha, linhaCode, secundLineCode, code, linkApli, price, qtd, sistema, aplicacoes, aplicacoesTwo})
+            writeFile(currentContent)
+            res.send(currentContent)
+
+        }
+        
+        else if(aplicacoesThree){
+            const {nome, image, marca, info, linha, linhaCode, secundLineCode, thirdLineCode, code, linkApli,price, qtd, sistema, aplicacoes, aplicacoesTwo, aplicacoesThree} = req.body
+
+            const currentContent = readFile()
+            const extraindoArrays = Object.values(currentContent)
+            const achatandoArrays = extraindoArrays.flat()
+        
+            // definindo ID
+            const id = Math.max(...achatandoArrays.map((item) => item.id)) + 1
+        
+            // salvando
+            currentContent.barrasAxiais.push({id, nome, image, marca, info, linha, linhaCode, secundLineCode, thirdLineCode, code, linkApli, price, qtd, sistema, aplicacoes, aplicacoesTwo, aplicacoesThree})
+            writeFile(currentContent)
+            res.send(currentContent)
+
+        }
+    }
 
 
 

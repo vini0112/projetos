@@ -246,9 +246,9 @@
     display: none;
 }
 
-#area-form{
+/* #area-form{
     display: none;
-}
+} */
 
 
 /* btns do CRUD */
@@ -388,6 +388,12 @@
 .dadosForm{
     display: flex;
     flex-direction: column;
+}
+
+.especialDiv div{
+    display: flex;
+    flex-direction: column;
+    margin-top: .4rem;
 }
 
 /* btns do form post */
