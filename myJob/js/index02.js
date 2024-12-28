@@ -53751,6 +53751,7 @@ sistemaProductDelete.addEventListener('click', (e) =>{
 
     }
     
+    // direcao
     else if(selectedProduct == 'terminaisDirecao'){
         boxIDPRODUCTDELETE.style.display="flex"
 
@@ -53821,6 +53822,1117 @@ sistemaProductDelete.addEventListener('click', (e) =>{
     }
 
     else if(selectedProduct == 'BuchaCaixaDirecao'){
+        boxIDPRODUCTDELETE.style.display="flex"
+
+        let InputIDPRODUCTDELETE = document.querySelector('#IDPRODUCTDELETE')
+        let btnSearchProduct2 = document.querySelector('.btnSearchProduct2')
+
+        btnSearchProduct2.addEventListener('click', (e) =>{
+            e.preventDefault()
+            let idDigitado = InputIDPRODUCTDELETE.value
+
+            gettingProductById(selectedProduct, idDigitado).then(item =>{
+                if(item){
+                    deletingProduct(selectedProduct, idDigitado)
+
+                }else{
+                    alert('Produto não encontrado!')
+                }
+            
+            })
+        })
+
+    }
+
+    // suspensao
+    else if(selectedProduct == 'batedores'){
+        boxIDPRODUCTDELETE.style.display="flex"
+
+        let InputIDPRODUCTDELETE = document.querySelector('#IDPRODUCTDELETE')
+        let btnSearchProduct2 = document.querySelector('.btnSearchProduct2')
+
+        btnSearchProduct2.addEventListener('click', (e) =>{
+            e.preventDefault()
+            let idDigitado = InputIDPRODUCTDELETE.value
+
+            gettingProductById(selectedProduct, idDigitado).then(item =>{
+                if(item){
+                    deletingProduct(selectedProduct, idDigitado)
+
+                }else{
+                    alert('Produto não encontrado!')
+                }
+            
+            })
+        })
+
+    }
+
+    else if(selectedProduct == 'pivos'){
+        boxIDPRODUCTDELETE.style.display="flex"
+
+        let InputIDPRODUCTDELETE = document.querySelector('#IDPRODUCTDELETE')
+        let btnSearchProduct2 = document.querySelector('.btnSearchProduct2')
+
+        btnSearchProduct2.addEventListener('click', (e) =>{
+            e.preventDefault()
+            let idDigitado = InputIDPRODUCTDELETE.value
+
+            gettingProductById(selectedProduct, idDigitado).then(item =>{
+                if(item){
+                    deletingProduct(selectedProduct, idDigitado)
+
+                }else{
+                    alert('Produto não encontrado!')
+                }
+            
+            })
+        })
+
+    }
+
+    else if(selectedProduct == 'amortecedores'){
+        boxIDPRODUCTDELETE.style.display="flex"
+
+        let InputIDPRODUCTDELETE = document.querySelector('#IDPRODUCTDELETE')
+        let btnSearchProduct2 = document.querySelector('.btnSearchProduct2')
+
+        btnSearchProduct2.addEventListener('click', (e) =>{
+            e.preventDefault()
+            let idDigitado = InputIDPRODUCTDELETE.value
+
+            gettingProductById(selectedProduct, idDigitado).then(item =>{
+                if(item){
+                    deletingProduct(selectedProduct, idDigitado)
+
+                }else{
+                    alert('Produto não encontrado!')
+                }
+            
+            })
+        })
+
+    }
+
+    else if(selectedProduct == 'buchaSusp'){
+        boxIDPRODUCTDELETE.style.display="flex"
+
+        let InputIDPRODUCTDELETE = document.querySelector('#IDPRODUCTDELETE')
+        let btnSearchProduct2 = document.querySelector('.btnSearchProduct2')
+
+        btnSearchProduct2.addEventListener('click', (e) =>{
+            e.preventDefault()
+            let idDigitado = InputIDPRODUCTDELETE.value
+
+            gettingProductById(selectedProduct, idDigitado).then(item =>{
+                if(item){
+                    deletingProduct(selectedProduct, idDigitado)
+
+                }else{
+                    alert('Produto não encontrado!')
+                }
+            
+            })
+        })
+
+    }
+
+    else if(selectedProduct == 'coxinsAmort'){
+        boxIDPRODUCTDELETE.style.display="flex"
+
+        let InputIDPRODUCTDELETE = document.querySelector('#IDPRODUCTDELETE')
+        let btnSearchProduct2 = document.querySelector('.btnSearchProduct2')
+
+        btnSearchProduct2.addEventListener('click', (e) =>{
+            e.preventDefault()
+            let idDigitado = InputIDPRODUCTDELETE.value
+
+            gettingProductById(selectedProduct, idDigitado).then(item =>{
+                if(item){
+                    deletingProduct(selectedProduct, idDigitado)
+
+                }else{
+                    alert('Produto não encontrado!')
+                }
+            
+            })
+        })
+
+    }
+
+    else if(selectedProduct == 'bieletas'){
+        boxIDPRODUCTDELETE.style.display="flex"
+
+        let InputIDPRODUCTDELETE = document.querySelector('#IDPRODUCTDELETE')
+        let btnSearchProduct2 = document.querySelector('.btnSearchProduct2')
+
+        btnSearchProduct2.addEventListener('click', (e) =>{
+            e.preventDefault()
+            let idDigitado = InputIDPRODUCTDELETE.value
+
+            gettingProductById(selectedProduct, idDigitado).then(item =>{
+                if(item){
+                    deletingProduct(selectedProduct, idDigitado)
+
+                }else{
+                    alert('Produto não encontrado!')
+                }
+            
+            })
+        })
+
+    }
+
+    // freios
+    else if(selectedProduct == 'pastilhaFreio'){
+        boxIDPRODUCTDELETE.style.display="flex"
+
+        let InputIDPRODUCTDELETE = document.querySelector('#IDPRODUCTDELETE')
+        let btnSearchProduct2 = document.querySelector('.btnSearchProduct2')
+
+        btnSearchProduct2.addEventListener('click', (e) =>{
+            e.preventDefault()
+            let idDigitado = InputIDPRODUCTDELETE.value
+
+            gettingProductById(selectedProduct, idDigitado).then(item =>{
+                if(item){
+                    deletingProduct(selectedProduct, idDigitado)
+
+                }else{
+                    alert('Produto não encontrado!')
+                }
+            
+            })
+        })
+
+    }
+
+    else if(selectedProduct == 'discosFreio'){
+        boxIDPRODUCTDELETE.style.display="flex"
+
+        let InputIDPRODUCTDELETE = document.querySelector('#IDPRODUCTDELETE')
+        let btnSearchProduct2 = document.querySelector('.btnSearchProduct2')
+
+        btnSearchProduct2.addEventListener('click', (e) =>{
+            e.preventDefault()
+            let idDigitado = InputIDPRODUCTDELETE.value
+
+            gettingProductById(selectedProduct, idDigitado).then(item =>{
+                if(item){
+                    deletingProduct(selectedProduct, idDigitado)
+
+                }else{
+                    alert('Produto não encontrado!')
+                }
+            
+            })
+        })
+
+    }
+
+    else if(selectedProduct == 'sapatasFreio'){
+        boxIDPRODUCTDELETE.style.display="flex"
+
+        let InputIDPRODUCTDELETE = document.querySelector('#IDPRODUCTDELETE')
+        let btnSearchProduct2 = document.querySelector('.btnSearchProduct2')
+
+        btnSearchProduct2.addEventListener('click', (e) =>{
+            e.preventDefault()
+            let idDigitado = InputIDPRODUCTDELETE.value
+
+            gettingProductById(selectedProduct, idDigitado).then(item =>{
+                if(item){
+                    deletingProduct(selectedProduct, idDigitado)
+
+                }else{
+                    alert('Produto não encontrado!')
+                }
+            
+            })
+        })
+
+    }
+
+    else if(selectedProduct == 'cilindros'){
+        boxIDPRODUCTDELETE.style.display="flex"
+
+        let InputIDPRODUCTDELETE = document.querySelector('#IDPRODUCTDELETE')
+        let btnSearchProduct2 = document.querySelector('.btnSearchProduct2')
+
+        btnSearchProduct2.addEventListener('click', (e) =>{
+            e.preventDefault()
+            let idDigitado = InputIDPRODUCTDELETE.value
+
+            gettingProductById(selectedProduct, idDigitado).then(item =>{
+                if(item){
+                    deletingProduct(selectedProduct, idDigitado)
+
+                }else{
+                    alert('Produto não encontrado!')
+                }
+            
+            })
+        })
+
+    }
+
+    else if(selectedProduct == 'tamboresFreio'){
+        boxIDPRODUCTDELETE.style.display="flex"
+
+        let InputIDPRODUCTDELETE = document.querySelector('#IDPRODUCTDELETE')
+        let btnSearchProduct2 = document.querySelector('.btnSearchProduct2')
+
+        btnSearchProduct2.addEventListener('click', (e) =>{
+            e.preventDefault()
+            let idDigitado = InputIDPRODUCTDELETE.value
+
+            gettingProductById(selectedProduct, idDigitado).then(item =>{
+                if(item){
+                    deletingProduct(selectedProduct, idDigitado)
+
+                }else{
+                    alert('Produto não encontrado!')
+                }
+            
+            })
+        })
+
+    }
+
+    else if(selectedProduct == 'reparosFreio'){
+        boxIDPRODUCTDELETE.style.display="flex"
+
+        let InputIDPRODUCTDELETE = document.querySelector('#IDPRODUCTDELETE')
+        let btnSearchProduct2 = document.querySelector('.btnSearchProduct2')
+
+        btnSearchProduct2.addEventListener('click', (e) =>{
+            e.preventDefault()
+            let idDigitado = InputIDPRODUCTDELETE.value
+
+            gettingProductById(selectedProduct, idDigitado).then(item =>{
+                if(item){
+                    deletingProduct(selectedProduct, idDigitado)
+
+                }else{
+                    alert('Produto não encontrado!')
+                }
+            
+            })
+        })
+
+    }
+
+    else if(selectedProduct == 'cabosEflexiveis'){
+        boxIDPRODUCTDELETE.style.display="flex"
+
+        let InputIDPRODUCTDELETE = document.querySelector('#IDPRODUCTDELETE')
+        let btnSearchProduct2 = document.querySelector('.btnSearchProduct2')
+
+        btnSearchProduct2.addEventListener('click', (e) =>{
+            e.preventDefault()
+            let idDigitado = InputIDPRODUCTDELETE.value
+
+            gettingProductById(selectedProduct, idDigitado).then(item =>{
+                if(item){
+                    deletingProduct(selectedProduct, idDigitado)
+
+                }else{
+                    alert('Produto não encontrado!')
+                }
+            
+            })
+        })
+
+    }
+
+    else if(selectedProduct == 'acessoriosFreio'){
+        boxIDPRODUCTDELETE.style.display="flex"
+
+        let InputIDPRODUCTDELETE = document.querySelector('#IDPRODUCTDELETE')
+        let btnSearchProduct2 = document.querySelector('.btnSearchProduct2')
+
+        btnSearchProduct2.addEventListener('click', (e) =>{
+            e.preventDefault()
+            let idDigitado = InputIDPRODUCTDELETE.value
+
+            gettingProductById(selectedProduct, idDigitado).then(item =>{
+                if(item){
+                    deletingProduct(selectedProduct, idDigitado)
+
+                }else{
+                    alert('Produto não encontrado!')
+                }
+            
+            })
+        })
+
+    }
+
+    // ignicao
+    else if(selectedProduct == 'cabosDvela'){
+        boxIDPRODUCTDELETE.style.display="flex"
+
+        let InputIDPRODUCTDELETE = document.querySelector('#IDPRODUCTDELETE')
+        let btnSearchProduct2 = document.querySelector('.btnSearchProduct2')
+
+        btnSearchProduct2.addEventListener('click', (e) =>{
+            e.preventDefault()
+            let idDigitado = InputIDPRODUCTDELETE.value
+
+            gettingProductById(selectedProduct, idDigitado).then(item =>{
+                if(item){
+                    deletingProduct(selectedProduct, idDigitado)
+
+                }else{
+                    alert('Produto não encontrado!')
+                }
+            
+            })
+        })
+
+    }
+
+    else if(selectedProduct == 'velas'){
+        boxIDPRODUCTDELETE.style.display="flex"
+
+        let InputIDPRODUCTDELETE = document.querySelector('#IDPRODUCTDELETE')
+        let btnSearchProduct2 = document.querySelector('.btnSearchProduct2')
+
+        btnSearchProduct2.addEventListener('click', (e) =>{
+            e.preventDefault()
+            let idDigitado = InputIDPRODUCTDELETE.value
+
+            gettingProductById(selectedProduct, idDigitado).then(item =>{
+                if(item){
+                    deletingProduct(selectedProduct, idDigitado)
+
+                }else{
+                    alert('Produto não encontrado!')
+                }
+            
+            })
+        })
+
+    }
+
+    else if(selectedProduct == 'bobinasIgnicao'){
+        boxIDPRODUCTDELETE.style.display="flex"
+
+        let InputIDPRODUCTDELETE = document.querySelector('#IDPRODUCTDELETE')
+        let btnSearchProduct2 = document.querySelector('.btnSearchProduct2')
+
+        btnSearchProduct2.addEventListener('click', (e) =>{
+            e.preventDefault()
+            let idDigitado = InputIDPRODUCTDELETE.value
+
+            gettingProductById(selectedProduct, idDigitado).then(item =>{
+                if(item){
+                    deletingProduct(selectedProduct, idDigitado)
+
+                }else{
+                    alert('Produto não encontrado!')
+                }
+            
+            })
+        })
+
+    }
+
+    else if(selectedProduct == 'modulosIgnicao'){
+        boxIDPRODUCTDELETE.style.display="flex"
+
+        let InputIDPRODUCTDELETE = document.querySelector('#IDPRODUCTDELETE')
+        let btnSearchProduct2 = document.querySelector('.btnSearchProduct2')
+
+        btnSearchProduct2.addEventListener('click', (e) =>{
+            e.preventDefault()
+            let idDigitado = InputIDPRODUCTDELETE.value
+
+            gettingProductById(selectedProduct, idDigitado).then(item =>{
+                if(item){
+                    deletingProduct(selectedProduct, idDigitado)
+
+                }else{
+                    alert('Produto não encontrado!')
+                }
+            
+            })
+        })
+
+    }
+
+// sistema carga
+    else if(selectedProduct == 'tensoresCorreia'){
+        boxIDPRODUCTDELETE.style.display="flex"
+
+        let InputIDPRODUCTDELETE = document.querySelector('#IDPRODUCTDELETE')
+        let btnSearchProduct2 = document.querySelector('.btnSearchProduct2')
+
+        btnSearchProduct2.addEventListener('click', (e) =>{
+            e.preventDefault()
+            let idDigitado = InputIDPRODUCTDELETE.value
+
+            gettingProductById(selectedProduct, idDigitado).then(item =>{
+                if(item){
+                    deletingProduct(selectedProduct, idDigitado)
+
+                }else{
+                    alert('Produto não encontrado!')
+                }
+            
+            })
+        })
+
+    }
+
+    else if(selectedProduct == 'correiaAlternador'){
+        boxIDPRODUCTDELETE.style.display="flex"
+
+        let InputIDPRODUCTDELETE = document.querySelector('#IDPRODUCTDELETE')
+        let btnSearchProduct2 = document.querySelector('.btnSearchProduct2')
+
+        btnSearchProduct2.addEventListener('click', (e) =>{
+            e.preventDefault()
+            let idDigitado = InputIDPRODUCTDELETE.value
+
+            gettingProductById(selectedProduct, idDigitado).then(item =>{
+                if(item){
+                    deletingProduct(selectedProduct, idDigitado)
+
+                }else{
+                    alert('Produto não encontrado!')
+                }
+            
+            })
+        })
+
+    }
+
+    else if(selectedProduct == 'correiasDentada'){
+        boxIDPRODUCTDELETE.style.display="flex"
+
+        let InputIDPRODUCTDELETE = document.querySelector('#IDPRODUCTDELETE')
+        let btnSearchProduct2 = document.querySelector('.btnSearchProduct2')
+
+        btnSearchProduct2.addEventListener('click', (e) =>{
+            e.preventDefault()
+            let idDigitado = InputIDPRODUCTDELETE.value
+
+            gettingProductById(selectedProduct, idDigitado).then(item =>{
+                if(item){
+                    deletingProduct(selectedProduct, idDigitado)
+
+                }else{
+                    alert('Produto não encontrado!')
+                }
+            
+            })
+        })
+
+    }
+
+    else if(selectedProduct == 'reguladorVolt'){
+        boxIDPRODUCTDELETE.style.display="flex"
+
+        let InputIDPRODUCTDELETE = document.querySelector('#IDPRODUCTDELETE')
+        let btnSearchProduct2 = document.querySelector('.btnSearchProduct2')
+
+        btnSearchProduct2.addEventListener('click', (e) =>{
+            e.preventDefault()
+            let idDigitado = InputIDPRODUCTDELETE.value
+
+            gettingProductById(selectedProduct, idDigitado).then(item =>{
+                if(item){
+                    deletingProduct(selectedProduct, idDigitado)
+
+                }else{
+                    alert('Produto não encontrado!')
+                }
+            
+            })
+        })
+
+    }
+
+    else if(selectedProduct == 'estatores'){
+        boxIDPRODUCTDELETE.style.display="flex"
+
+        let InputIDPRODUCTDELETE = document.querySelector('#IDPRODUCTDELETE')
+        let btnSearchProduct2 = document.querySelector('.btnSearchProduct2')
+
+        btnSearchProduct2.addEventListener('click', (e) =>{
+            e.preventDefault()
+            let idDigitado = InputIDPRODUCTDELETE.value
+
+            gettingProductById(selectedProduct, idDigitado).then(item =>{
+                if(item){
+                    deletingProduct(selectedProduct, idDigitado)
+
+                }else{
+                    alert('Produto não encontrado!')
+                }
+            
+            })
+        })
+
+    }
+
+    else if(selectedProduct == 'bendix'){
+        boxIDPRODUCTDELETE.style.display="flex"
+
+        let InputIDPRODUCTDELETE = document.querySelector('#IDPRODUCTDELETE')
+        let btnSearchProduct2 = document.querySelector('.btnSearchProduct2')
+
+        btnSearchProduct2.addEventListener('click', (e) =>{
+            e.preventDefault()
+            let idDigitado = InputIDPRODUCTDELETE.value
+
+            gettingProductById(selectedProduct, idDigitado).then(item =>{
+                if(item){
+                    deletingProduct(selectedProduct, idDigitado)
+
+                }else{
+                    alert('Produto não encontrado!')
+                }
+            
+            })
+        })
+
+    }
+
+    else if(selectedProduct == 'portaEscovas'){
+        boxIDPRODUCTDELETE.style.display="flex"
+
+        let InputIDPRODUCTDELETE = document.querySelector('#IDPRODUCTDELETE')
+        let btnSearchProduct2 = document.querySelector('.btnSearchProduct2')
+
+        btnSearchProduct2.addEventListener('click', (e) =>{
+            e.preventDefault()
+            let idDigitado = InputIDPRODUCTDELETE.value
+
+            gettingProductById(selectedProduct, idDigitado).then(item =>{
+                if(item){
+                    deletingProduct(selectedProduct, idDigitado)
+
+                }else{
+                    alert('Produto não encontrado!')
+                }
+            
+            })
+        })
+
+    }
+
+    else if(selectedProduct == 'acessoriosMotorPart'){
+        boxIDPRODUCTDELETE.style.display="flex"
+
+        let InputIDPRODUCTDELETE = document.querySelector('#IDPRODUCTDELETE')
+        let btnSearchProduct2 = document.querySelector('.btnSearchProduct2')
+
+        btnSearchProduct2.addEventListener('click', (e) =>{
+            e.preventDefault()
+            let idDigitado = InputIDPRODUCTDELETE.value
+
+            gettingProductById(selectedProduct, idDigitado).then(item =>{
+                if(item){
+                    deletingProduct(selectedProduct, idDigitado)
+
+                }else{
+                    alert('Produto não encontrado!')
+                }
+            
+            })
+        })
+
+    }
+
+    // arrefecimento
+    else if(selectedProduct == 'bombasDgua'){
+        boxIDPRODUCTDELETE.style.display="flex"
+
+        let InputIDPRODUCTDELETE = document.querySelector('#IDPRODUCTDELETE')
+        let btnSearchProduct2 = document.querySelector('.btnSearchProduct2')
+
+        btnSearchProduct2.addEventListener('click', (e) =>{
+            e.preventDefault()
+            let idDigitado = InputIDPRODUCTDELETE.value
+
+            gettingProductById(selectedProduct, idDigitado).then(item =>{
+                if(item){
+                    deletingProduct(selectedProduct, idDigitado)
+
+                }else{
+                    alert('Produto não encontrado!')
+                }
+            
+            })
+        })
+
+    }
+
+    else if(selectedProduct == 'reservatorioDagua'){
+        boxIDPRODUCTDELETE.style.display="flex"
+
+        let InputIDPRODUCTDELETE = document.querySelector('#IDPRODUCTDELETE')
+        let btnSearchProduct2 = document.querySelector('.btnSearchProduct2')
+
+        btnSearchProduct2.addEventListener('click', (e) =>{
+            e.preventDefault()
+            let idDigitado = InputIDPRODUCTDELETE.value
+
+            gettingProductById(selectedProduct, idDigitado).then(item =>{
+                if(item){
+                    deletingProduct(selectedProduct, idDigitado)
+
+                }else{
+                    alert('Produto não encontrado!')
+                }
+            
+            })
+        })
+
+    }
+
+    else if(selectedProduct == 'valvulasTermo'){
+        boxIDPRODUCTDELETE.style.display="flex"
+
+        let InputIDPRODUCTDELETE = document.querySelector('#IDPRODUCTDELETE')
+        let btnSearchProduct2 = document.querySelector('.btnSearchProduct2')
+
+        btnSearchProduct2.addEventListener('click', (e) =>{
+            e.preventDefault()
+            let idDigitado = InputIDPRODUCTDELETE.value
+
+            gettingProductById(selectedProduct, idDigitado).then(item =>{
+                if(item){
+                    deletingProduct(selectedProduct, idDigitado)
+
+                }else{
+                    alert('Produto não encontrado!')
+                }
+            
+            })
+        })
+
+    }
+
+    else if(selectedProduct == 'eletroventiladores'){
+        boxIDPRODUCTDELETE.style.display="flex"
+
+        let InputIDPRODUCTDELETE = document.querySelector('#IDPRODUCTDELETE')
+        let btnSearchProduct2 = document.querySelector('.btnSearchProduct2')
+
+        btnSearchProduct2.addEventListener('click', (e) =>{
+            e.preventDefault()
+            let idDigitado = InputIDPRODUCTDELETE.value
+
+            gettingProductById(selectedProduct, idDigitado).then(item =>{
+                if(item){
+                    deletingProduct(selectedProduct, idDigitado)
+
+                }else{
+                    alert('Produto não encontrado!')
+                }
+            
+            })
+        })
+
+    }
+
+    else if(selectedProduct == 'canosDagua'){
+        boxIDPRODUCTDELETE.style.display="flex"
+
+        let InputIDPRODUCTDELETE = document.querySelector('#IDPRODUCTDELETE')
+        let btnSearchProduct2 = document.querySelector('.btnSearchProduct2')
+
+        btnSearchProduct2.addEventListener('click', (e) =>{
+            e.preventDefault()
+            let idDigitado = InputIDPRODUCTDELETE.value
+
+            gettingProductById(selectedProduct, idDigitado).then(item =>{
+                if(item){
+                    deletingProduct(selectedProduct, idDigitado)
+
+                }else{
+                    alert('Produto não encontrado!')
+                }
+            
+            })
+        })
+
+    }
+
+    else if(selectedProduct == 'tubosDagua'){
+        boxIDPRODUCTDELETE.style.display="flex"
+
+        let InputIDPRODUCTDELETE = document.querySelector('#IDPRODUCTDELETE')
+        let btnSearchProduct2 = document.querySelector('.btnSearchProduct2')
+
+        btnSearchProduct2.addEventListener('click', (e) =>{
+            e.preventDefault()
+            let idDigitado = InputIDPRODUCTDELETE.value
+
+            gettingProductById(selectedProduct, idDigitado).then(item =>{
+                if(item){
+                    deletingProduct(selectedProduct, idDigitado)
+
+                }else{
+                    alert('Produto não encontrado!')
+                }
+            
+            })
+        })
+
+    }
+
+    else if(selectedProduct == 'resistenciaEletro'){
+        boxIDPRODUCTDELETE.style.display="flex"
+
+        let InputIDPRODUCTDELETE = document.querySelector('#IDPRODUCTDELETE')
+        let btnSearchProduct2 = document.querySelector('.btnSearchProduct2')
+
+        btnSearchProduct2.addEventListener('click', (e) =>{
+            e.preventDefault()
+            let idDigitado = InputIDPRODUCTDELETE.value
+
+            gettingProductById(selectedProduct, idDigitado).then(item =>{
+                if(item){
+                    deletingProduct(selectedProduct, idDigitado)
+
+                }else{
+                    alert('Produto não encontrado!')
+                }
+            
+            })
+        })
+
+    }
+
+    else if(selectedProduct == 'diversasArrefeci'){
+        boxIDPRODUCTDELETE.style.display="flex"
+
+        let InputIDPRODUCTDELETE = document.querySelector('#IDPRODUCTDELETE')
+        let btnSearchProduct2 = document.querySelector('.btnSearchProduct2')
+
+        btnSearchProduct2.addEventListener('click', (e) =>{
+            e.preventDefault()
+            let idDigitado = InputIDPRODUCTDELETE.value
+
+            gettingProductById(selectedProduct, idDigitado).then(item =>{
+                if(item){
+                    deletingProduct(selectedProduct, idDigitado)
+
+                }else{
+                    alert('Produto não encontrado!')
+                }
+            
+            })
+        })
+
+    }
+
+    else if(selectedProduct == 'bicosInjecao'){
+        boxIDPRODUCTDELETE.style.display="flex"
+
+        let InputIDPRODUCTDELETE = document.querySelector('#IDPRODUCTDELETE')
+        let btnSearchProduct2 = document.querySelector('.btnSearchProduct2')
+
+        btnSearchProduct2.addEventListener('click', (e) =>{
+            e.preventDefault()
+            let idDigitado = InputIDPRODUCTDELETE.value
+
+            gettingProductById(selectedProduct, idDigitado).then(item =>{
+                if(item){
+                    deletingProduct(selectedProduct, idDigitado)
+
+                }else{
+                    alert('Produto não encontrado!')
+                }
+            
+            })
+        })
+    }
+
+    else if(selectedProduct == 'bombaCombust'){
+        boxIDPRODUCTDELETE.style.display="flex"
+
+        let InputIDPRODUCTDELETE = document.querySelector('#IDPRODUCTDELETE')
+        let btnSearchProduct2 = document.querySelector('.btnSearchProduct2')
+
+        btnSearchProduct2.addEventListener('click', (e) =>{
+            e.preventDefault()
+            let idDigitado = InputIDPRODUCTDELETE.value
+
+            gettingProductById(selectedProduct, idDigitado).then(item =>{
+                if(item){
+                    deletingProduct(selectedProduct, idDigitado)
+
+                }else{
+                    alert('Produto não encontrado!')
+                }
+            
+            })
+        })
+
+    }
+
+    else if(selectedProduct == 'flangeBombaCombust'){
+        boxIDPRODUCTDELETE.style.display="flex"
+
+        let InputIDPRODUCTDELETE = document.querySelector('#IDPRODUCTDELETE')
+        let btnSearchProduct2 = document.querySelector('.btnSearchProduct2')
+
+        btnSearchProduct2.addEventListener('click', (e) =>{
+            e.preventDefault()
+            let idDigitado = InputIDPRODUCTDELETE.value
+
+            gettingProductById(selectedProduct, idDigitado).then(item =>{
+                if(item){
+                    deletingProduct(selectedProduct, idDigitado)
+
+                }else{
+                    alert('Produto não encontrado!')
+                }
+            
+            })
+        })
+
+    }
+
+    else if(selectedProduct == 'acessoriosCombust'){
+        boxIDPRODUCTDELETE.style.display="flex"
+
+        let InputIDPRODUCTDELETE = document.querySelector('#IDPRODUCTDELETE')
+        let btnSearchProduct2 = document.querySelector('.btnSearchProduct2')
+
+        btnSearchProduct2.addEventListener('click', (e) =>{
+            e.preventDefault()
+            let idDigitado = InputIDPRODUCTDELETE.value
+
+            gettingProductById(selectedProduct, idDigitado).then(item =>{
+                if(item){
+                    deletingProduct(selectedProduct, idDigitado)
+
+                }else{
+                    alert('Produto não encontrado!')
+                }
+            
+            })
+        })
+
+    }
+
+    // transmissao
+    else if(selectedProduct == 'discosEmbreagem'){
+        boxIDPRODUCTDELETE.style.display="flex"
+
+        let InputIDPRODUCTDELETE = document.querySelector('#IDPRODUCTDELETE')
+        let btnSearchProduct2 = document.querySelector('.btnSearchProduct2')
+
+        btnSearchProduct2.addEventListener('click', (e) =>{
+            e.preventDefault()
+            let idDigitado = InputIDPRODUCTDELETE.value
+
+            gettingProductById(selectedProduct, idDigitado).then(item =>{
+                if(item){
+                    deletingProduct(selectedProduct, idDigitado)
+
+                }else{
+                    alert('Produto não encontrado!')
+                }
+            
+            })
+        })
+
+    }
+
+    else if(selectedProduct == 'reparoCambioTrabulador'){
+        boxIDPRODUCTDELETE.style.display="flex"
+
+        let InputIDPRODUCTDELETE = document.querySelector('#IDPRODUCTDELETE')
+        let btnSearchProduct2 = document.querySelector('.btnSearchProduct2')
+
+        btnSearchProduct2.addEventListener('click', (e) =>{
+            e.preventDefault()
+            let idDigitado = InputIDPRODUCTDELETE.value
+
+            gettingProductById(selectedProduct, idDigitado).then(item =>{
+                if(item){
+                    deletingProduct(selectedProduct, idDigitado)
+
+                }else{
+                    alert('Produto não encontrado!')
+                }
+            
+            })
+        })
+
+    }
+
+    // rolagem
+    else if(selectedProduct == 'cubosRoda'){
+        boxIDPRODUCTDELETE.style.display="flex"
+
+        let InputIDPRODUCTDELETE = document.querySelector('#IDPRODUCTDELETE')
+        let btnSearchProduct2 = document.querySelector('.btnSearchProduct2')
+
+        btnSearchProduct2.addEventListener('click', (e) =>{
+            e.preventDefault()
+            let idDigitado = InputIDPRODUCTDELETE.value
+
+            gettingProductById(selectedProduct, idDigitado).then(item =>{
+                if(item){
+                    deletingProduct(selectedProduct, idDigitado)
+
+                }else{
+                    alert('Produto não encontrado!')
+                }
+            
+            })
+        })
+
+    }
+
+    else if(selectedProduct == 'juntasHomocinetica'){
+        boxIDPRODUCTDELETE.style.display="flex"
+
+        let InputIDPRODUCTDELETE = document.querySelector('#IDPRODUCTDELETE')
+        let btnSearchProduct2 = document.querySelector('.btnSearchProduct2')
+
+        btnSearchProduct2.addEventListener('click', (e) =>{
+            e.preventDefault()
+            let idDigitado = InputIDPRODUCTDELETE.value
+
+            gettingProductById(selectedProduct, idDigitado).then(item =>{
+                if(item){
+                    deletingProduct(selectedProduct, idDigitado)
+
+                }else{
+                    alert('Produto não encontrado!')
+                }
+            
+            })
+        })
+
+    }
+
+    else if(selectedProduct == 'rolamentosRoda'){
+        boxIDPRODUCTDELETE.style.display="flex"
+
+        let InputIDPRODUCTDELETE = document.querySelector('#IDPRODUCTDELETE')
+        let btnSearchProduct2 = document.querySelector('.btnSearchProduct2')
+
+        btnSearchProduct2.addEventListener('click', (e) =>{
+            e.preventDefault()
+            let idDigitado = InputIDPRODUCTDELETE.value
+
+            gettingProductById(selectedProduct, idDigitado).then(item =>{
+                if(item){
+                    deletingProduct(selectedProduct, idDigitado)
+
+                }else{
+                    alert('Produto não encontrado!')
+                }
+            
+            })
+        })
+
+    }
+
+    else if(selectedProduct == 'rolamentoDiversos'){
+        boxIDPRODUCTDELETE.style.display="flex"
+
+        let InputIDPRODUCTDELETE = document.querySelector('#IDPRODUCTDELETE')
+        let btnSearchProduct2 = document.querySelector('.btnSearchProduct2')
+
+        btnSearchProduct2.addEventListener('click', (e) =>{
+            e.preventDefault()
+            let idDigitado = InputIDPRODUCTDELETE.value
+
+            gettingProductById(selectedProduct, idDigitado).then(item =>{
+                if(item){
+                    deletingProduct(selectedProduct, idDigitado)
+
+                }else{
+                    alert('Produto não encontrado!')
+                }
+            
+            })
+        })
+
+    }
+
+// escapes
+    else if(selectedProduct == 'bojosTras'){
+        boxIDPRODUCTDELETE.style.display="flex"
+
+        let InputIDPRODUCTDELETE = document.querySelector('#IDPRODUCTDELETE')
+        let btnSearchProduct2 = document.querySelector('.btnSearchProduct2')
+
+        btnSearchProduct2.addEventListener('click', (e) =>{
+            e.preventDefault()
+            let idDigitado = InputIDPRODUCTDELETE.value
+
+            gettingProductById(selectedProduct, idDigitado).then(item =>{
+                if(item){
+                    deletingProduct(selectedProduct, idDigitado)
+
+                }else{
+                    alert('Produto não encontrado!')
+                }
+            
+            })
+        })
+
+    }
+
+    else if(selectedProduct == 'canosIntermediario'){
+        boxIDPRODUCTDELETE.style.display="flex"
+
+        let InputIDPRODUCTDELETE = document.querySelector('#IDPRODUCTDELETE')
+        let btnSearchProduct2 = document.querySelector('.btnSearchProduct2')
+
+        btnSearchProduct2.addEventListener('click', (e) =>{
+            e.preventDefault()
+            let idDigitado = InputIDPRODUCTDELETE.value
+
+            gettingProductById(selectedProduct, idDigitado).then(item =>{
+                if(item){
+                    deletingProduct(selectedProduct, idDigitado)
+
+                }else{
+                    alert('Produto não encontrado!')
+                }
+            
+            })
+        })
+
+    }
+
+    else if(selectedProduct == 'coxinsEscap'){
+        boxIDPRODUCTDELETE.style.display="flex"
+
+        let InputIDPRODUCTDELETE = document.querySelector('#IDPRODUCTDELETE')
+        let btnSearchProduct2 = document.querySelector('.btnSearchProduct2')
+
+        btnSearchProduct2.addEventListener('click', (e) =>{
+            e.preventDefault()
+            let idDigitado = InputIDPRODUCTDELETE.value
+
+            gettingProductById(selectedProduct, idDigitado).then(item =>{
+                if(item){
+                    deletingProduct(selectedProduct, idDigitado)
+
+                }else{
+                    alert('Produto não encontrado!')
+                }
+            
+            })
+        })
+
+    }
+
+    else if(selectedProduct == 'acessoriosEscap'){
         boxIDPRODUCTDELETE.style.display="flex"
 
         let InputIDPRODUCTDELETE = document.querySelector('#IDPRODUCTDELETE')
