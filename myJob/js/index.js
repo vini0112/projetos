@@ -418,3 +418,24 @@ function carouselBanners(){
 }
 
 
+// loggin page 
+let loginFormEntrar = document.querySelector('.login-form')
+let registerForm = document.querySelector('.register-form')
+
+let btnLoginEntrar = document.querySelector('.btnLoginEntrar')
+let btnLoginCadastrar = document.querySelector('.btnLoginCadastrar')
+
+btnLoginCadastrar.addEventListener('click', (e) =>{
+    e.preventDefault()
+    loginFormEntrar.style.display="none"
+    registerForm.style.display="block"
+})
+
+btnLoginEntrar.addEventListener('click', (e) =>{
+    e.preventDefault()
+    registerForm.style.display="none"
+    loginFormEntrar.style.display="block"
+})
+
+
+

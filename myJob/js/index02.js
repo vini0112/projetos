@@ -125,7 +125,7 @@ document.addEventListener('DOMContentLoaded', () =>{
 })
 
 // API REQUEST
-const api = 'allpeaces.json'
+const api = 'https://store-api-rxgw.onrender.com/'
 
 
 async function gettingApi(){
@@ -16439,7 +16439,7 @@ async function postingProduct(endpoint, obj){
     // debugger
 
     try{
-        const response = await fetch(`http://localhost:3000/${endpoint}`, {
+        const response = await fetch(`${api}${endpoint}`, {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',
@@ -47630,10 +47630,9 @@ let sistemaProductEdit = document.querySelector('#sistemaProductEdit')
 // funcao PUT 
 async function updateProduct(endpoint, id, dataUpdated){
     
-    // console.log(dataUpdated)
-    // debugger
+    
     try {
-        const response = await fetch(`http://localhost:3000/${endpoint}/${id}`, {
+        const response = await fetch(`${api}${endpoint}/${id}`, {
             method: 'PUT',
             headers: {
                 'Content-Type': 'application/json',
@@ -47663,7 +47662,7 @@ async function updateProduct(endpoint, id, dataUpdated){
 async function gettingProductById(endpoint, id){
     
     try {
-        const response = await fetch(`http://localhost:3000/${endpoint}/${id}`, {
+        const response = await fetch(`${api}${endpoint}/${id}`, {
 
             method: 'GET',
             headers: {
@@ -53497,7 +53496,7 @@ let sistemaProductDelete = document.querySelector('#sistemaProductDelete')
 async function deletingProduct(endpoint, id){
 
     try {
-        const response = await fetch(`http://localhost:3000/${endpoint}/${id}`, {
+        const response = await fetch(`${api}${endpoint}/${id}`, {
             method: 'DELETE',
         });
 
