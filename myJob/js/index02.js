@@ -135,7 +135,8 @@ async function gettingApi(){
 
 }
 
-gettingApi()
+// gettingApi()
+
 
 
 // SESSÃO 00 
@@ -16435,8 +16436,7 @@ let produtoEscolhido = document.querySelector('.produtoEscolhido')
 
 // FUNCAO DE POST 
 async function postingProduct(endpoint, obj){
-    // console.log(obj)
-    // debugger
+
 
     try{
         const response = await fetch(`${api}${endpoint}`, {

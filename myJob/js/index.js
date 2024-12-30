@@ -13,7 +13,6 @@ document.addEventListener('DOMContentLoaded', () =>{
             allSessoes[c].style.display=`none`
             allSessoes[0].style.display=`block`
         }
-        location.reload()
     })
 
 
@@ -252,17 +251,13 @@ function mostrarInfoFastSearch(){
 
     let loginBtn = document.querySelector('#loginBtn')
 
-    // loginBtn.addEventListener('click', () =>{
-    //     for(let c = 0;c < allSessoes.length;c++){
-    //         allSessoes[c].style.display=`none`
-    //         allSessoes[16].style.display=`block`
-
-    //         // if(allLinksFiltros[0]){
-    //         //     window.location.href = '#area-filtros'
-    //         // }
+    loginBtn.addEventListener('click', () =>{
+        for(let c = 0;c < allSessoes.length;c++){
+            allSessoes[c].style.display=`none`
+            allSessoes[16].style.display=`block`
             
-    //     }
-    // })
+        }
+    })
 
 }
 
@@ -438,4 +433,129 @@ btnLoginEntrar.addEventListener('click', (e) =>{
 })
 
 
+// verificao de login
 
+// API REQUEST
+const apiUrl = 'https://store-api-rxgw.onrender.com/'
+
+
+// dados
+async function gettingUsers(){
+    const resp = await fetch(apiUrl) //
+    const dado = await resp.json()
+    const allUsers = await dado.users
+    return allUsers
+}
+
+
+async function entrarValidation(formdata){
+
+    const users = await gettingUsers()
+    
+    const seJaExiste = users.some(user => user.username == formdata.nome && user.password == formdata.senha)
+
+    if(!seJaExiste){
+        alert('Usuario/Senha errado!')
+        return false
+    }
+
+    console.log('sucesso no login!')
+    return true
+}
+
+
+// ENTRAR
+let btnEntrar = document.querySelector('.btnEntrar')
+btnEntrar.addEventListener('click', (e) =>{
+    e.preventDefault()
+
+    const formdata = {
+        nome: document.querySelector('.usernameInput').value,
+        senha: document.querySelector('.passwordInput').value
+    }
+    entrarValidation(formdata)
+})
+
+
+
+
+// CADASTRAR
+
+
+    
+// FUNCAO DE POST creatingUser(formData)
+async function creatingUser(obj){
+    debugger
+    try{
+        const response = await fetch(`${apiUrl}addingUser`, {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json',
+            },
+            body: JSON.stringify(obj)
+        })
+
+        if (response.ok) {
+            const data = response.json();
+            console.log('Resposta do servidor:', data);
+            alert('Usuario Criado com sucesso!');
+        } else {
+            console.error('Erro ao criar usuario:', response.statusText);
+            alert('Erro ao criar usuario!.');
+        }
+
+    } catch (error) {
+        console.error('Erro na requisição:', error);
+        alert('Erro ao enviar o formulário.');
+    }
+
+
+}
+
+
+async function cadastroValidation(formdata){
+
+    const users = await gettingUsers()
+    debugger
+    
+    const seExiste = users.some(usuario => usuario.email === formdata.email)
+
+    if(seExiste){
+        alert('Email já cadastrado!')
+        return false
+    }
+    
+    creatingUser(formdata)
+    return true
+}
+
+
+let btnCadastrar = document.querySelector('.btnCadastrar')
+btnCadastrar.addEventListener('click', (e) =>{
+    e.preventDefault()
+    const formdata = {
+        username: document.querySelector('.userNameCad').value,
+        email: document.querySelector('.emailCad').value,
+        password: document.querySelector('.passwordCad').value
+    }
+
+    cadastroValidation(formdata)
+
+    let userNameCad = document.querySelector('.userNameCad')
+    let emailCad = document.querySelector('.emailCad')
+    let passwordCad = document.querySelector('.passwordCad')
+
+    userNameCad.value = ''
+    emailCad.value = ''
+    passwordCad.value = ''
+    userNameCad.focus()
+    
+})
+
+
+
+
+
+
+
+    

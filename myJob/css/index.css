@@ -302,13 +302,24 @@ body{
 
 #loginBtn{
     text-shadow: 2px 2px 2px black;
-    font-size: 2.1rem;
+    font-size: 2rem;
     margin-right: 15px;
     color: white;
     padding: 5px;
     cursor: pointer;
 }
 
+
+/* user edit icon */
+#btnUserEdit{
+    display: none;
+    text-shadow: 2px 2px 2px black;
+    font-size: 2rem;
+    margin-right: 15px;
+    color: white;
+    padding: 5px;
+    cursor: pointer;
+}
 
 
 /* fast search */

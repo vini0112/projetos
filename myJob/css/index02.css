@@ -163,7 +163,7 @@
 
 /* primeira pagina */
 #inicial{
-    display: non;
+    /* display: none; */
 }
 
 /* area oleos */
@@ -254,7 +254,7 @@
 
 /* sessao logins */
 #area-login{
-    height: 80vh;
+    height: 70vh;
     display: none;
     align-items: center;
     justify-content: center;
@@ -810,10 +810,12 @@ footer{
 /* LOGGIN PAGE */
 @import url(https://fonts.googleapis.com/css?family=Roboto:300);
 
+
+
 .login-page {
     width: 360px;
     padding: 8% 0 0;
-    margin: auto;
+    
 }
 .form{
     position: relative;
@@ -862,12 +864,15 @@ footer{
     text-decoration: none;
 }
 
-
-.logginContainer:before, .logginContainer:after {
-    content: "";
-    display: block;
-    clear: both;
+.logginContainer{
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;   
+    
 }
+
+
 .logginContainer .info {
     margin: 50px auto;
     text-align: center;
@@ -897,13 +902,6 @@ footer{
 }
 
 
-.boxToolsImg{
-    
-}
-
-.boxToolsImg img{
-    width: 100%;
-}
 
 
 

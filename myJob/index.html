@@ -45,8 +45,8 @@
                         <i class="fa-solid fa-cart-shopping" id="cartShop"></i>
                         <span class="qtdPecas">0</span>
                     </div>
-                    <!-- <i class="fa-solid fa-user" id="loginBtn"></i> -->
-
+                    <a href="#loginStruruteLink" class="setLink"><i class="fa-solid fa-user" id="loginBtn"></i></a>
+                    <a href=""><i class="fa-solid fa-user-pen" id="btnUserEdit" ></i></a>
                 </div>
                 
                 <!-- side bar -->
@@ -1879,29 +1879,27 @@
             
             <div class="logginContainer">
 
-                <div class="login-page">
+                <div class="login-page" id="loginStruruteLink">
                     <div class="form">
+                        
                         <form class="register-form">
-                            <input type="text" placeholder="Nome usuario"/>
-                            <input type="password" placeholder="Senha"/>
-                            <input type="text" placeholder="Email"/>
-                            <button>Cadastrar</button>
+                            <input type="text" placeholder="Nome usuario" class="userNameCad"/>
+                            <input type="password" placeholder="Senha" class="passwordCad"/>
+                            <input type="email" placeholder="Email" class="emailCad"/>
+                            <button class="btnCadastrar">Cadastrar</button>
                             <p class="message">Já é cadastrado? <a href="#" class="btnLoginEntrar">Entrar</a></p>
                         </form>
                 
                         <form class="login-form">
-                            <input type="text" placeholder="Nome usuario"/>
-                            <input type="password" placeholder="Senha"/>
-                            <button>Entrar</button>
+                            <input type="text" placeholder="Nome usuario" class="usernameInput"/>
+                            <input type="password" placeholder="Senha" class="passwordInput" />
+                            <button class="btnEntrar">Entrar</button>
                             <p class="message">Não é cadastrado? <a href="#" class="btnLoginCadastrar">Cadastre-se</a></p>
                         </form>
 
                     </div>
                 </div>
 
-                <div class="boxToolsImg">
-                    <img src="photos/banners/original-tools.jpg" alt="">
-                </div>
 
             </div>
 
