@@ -464,22 +464,40 @@ async function entrarValidation(formdata){
     const users = await gettingUsers()
     const seJaExiste = users.some(user => user.username == formdata.nome && user.password == formdata.senha)
 
-    
+    const devToken = 'dev_token_access'
+    const userToken = 'user_token_access'
+
+
+    let areaFormPage = document.querySelector('#area-form')
+    let areaLoginPage = document.querySelector('#area-login')
+    let loginBtn = document.querySelector('#loginBtn')
+    let btnDevEdit = document.querySelector('#btnDevEdit')
+    let btnLogOut = document.querySelector('#btnLogOut')
+
     if(formdata.nome == 'vinicius' && formdata.senha == 'vini10'){
         console.log('Welcome Vini')
-        let areaFormPage = document.querySelector('#area-form')
-        let areaLoginPage = document.querySelector('#area-login')
-        let loginBtn = document.querySelector('#loginBtn')
-        let btnDevEdit = document.querySelector('#btnDevEdit')
 
         areaLoginPage.style.display="none"
         loginBtn.style.display="none"
         areaFormPage.style.display="block"
         btnDevEdit.style.display="block"
+        btnLogOut.style.display="block"
 
+        // setting token
+        localStorage.setItem('authDevToken', devToken)
     }
     else if(seJaExiste){
         console.log('Login feito com Sucesso!')
+
+        let inicialPage = document.querySelector('#inicial')
+
+        loginBtn.style.display="none"
+        areaLoginPage.style.display="none"
+        btnLogOut.style.display="block"
+        inicialPage.style.display="block"
+
+        // setting token
+        localStorage.setItem('authUserToken', userToken)
     }
     else if(!seJaExiste){
         alert('Email/Senha errado!')
@@ -496,7 +514,14 @@ btnEntrar.addEventListener('click', (e) =>{
         nome: document.querySelector('.usernameInput').value.trim(),
         senha: document.querySelector('.passwordInput').value.trim()
     }
+
     entrarValidation(formdata)
+
+    let nome = document.querySelector('.usernameInput')
+    let senha = document.querySelector('.passwordInput')
+    nome.value = ''
+    senha.value = ''
+
 })
 
 
@@ -505,7 +530,6 @@ btnEntrar.addEventListener('click', (e) =>{
 // CADASTRAR
 
 
-    
 // FUNCAO DE POST creatingUser(formData)
 async function creatingUser(obj){
     
@@ -601,7 +625,60 @@ btnCadastrar.addEventListener('click', (e) =>{
 
 
 
+// LOG OUT
+let btnLogOut = document.querySelector('#btnLogOut')
+
+btnLogOut.addEventListener('click', () =>{
+    const devToken = localStorage.getItem("authDevToken");
+    const userToken = localStorage.getItem('authUserToken')
+
+    let loginBtn = document.querySelector('#loginBtn')
+    let btnDevEdit = document.querySelector('#btnDevEdit')
+
+    if(devToken){
+        localStorage.removeItem('authDevToken')
+        console.log('DEV LOGGED OUT!')
+
+        btnLogOut.style.display="none"
+        btnDevEdit.style.display="none"
+        loginBtn.style.display="block"
+
+    }else if(userToken){
+        localStorage.removeItem('authUserToken')
+        console.log('USER LOGGED OUT!')
+
+        btnLogOut.style.display="none"
+        loginBtn.style.display="block"
+    }
+})
 
 
+// verificando se ainda esta logado ou nao dps do load
+window.addEventListener('load', () =>{
+    const devToken = localStorage.getItem("authDevToken");
+    const userToken = localStorage.getItem('authUserToken')
+
+    let loginBtn = document.querySelector('#loginBtn')
+    let btnLogOut = document.querySelector('#btnLogOut')
+    let btnDevEdit = document.querySelector('#btnDevEdit')
+
+    if(devToken){
+        console.log("Desenvolvedor ainda está logado!");
+        
+        loginBtn.style.display="none"
+        btnDevEdit.style.display="block"
+        btnLogOut.style.display="block"
+
+    } else if(userToken){
+        console.log("Usuario ainda está logado!");
+
+        loginBtn.style.display="none"
+        btnLogOut.style.display="block"
+
+    }
+    else {
+        console.log("Usuário não está logado.");
+    }
+})
 
     

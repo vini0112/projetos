@@ -126,8 +126,8 @@ body{
 
 .qtdPecas{
     background-color: red;
-    height: 22px;
-    width: 22px;
+    height: 20px;
+    width: 20px;
     border-radius: 50%;
     font-weight: bold;
     font-size: 1rem;
@@ -146,7 +146,7 @@ body{
     color: white;
     margin-right: 10px;
     text-shadow: 2px 2px 2px black;
-    font-size: 2.2rem;
+    font-size: 2rem;
     padding: 4px;
 }
 
@@ -315,7 +315,17 @@ body{
     display: none;
     text-shadow: 2px 2px 2px black;
     font-size: 2rem;
-    margin-right: 15px;
+    margin-right: 10px;
+    color: white;
+    padding: 5px;
+    cursor: pointer;
+}
+
+#btnLogOut{
+    display: none;
+    text-shadow: 2px 2px 2px black;
+    font-size: 1.8rem;
+    margin-right: 10px;
     color: white;
     padding: 5px;
     cursor: pointer;

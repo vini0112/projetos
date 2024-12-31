@@ -16460,6 +16460,7 @@ async function postingProduct(endpoint, obj){
             const data = response.json();
             console.log('Resposta do servidor:', data);
             alert('Formulário enviado com sucesso!');
+            location.reload()
         } else {
             console.error('Erro ao enviar o formulário:', response.statusText);
             alert('Erro ao enviar o formulário.');
@@ -47632,14 +47633,12 @@ sistemaProduct.addEventListener('change', (event) =>{
 
 
 
-
 // EDIT METHOD
 let sistemaProductEdit = document.querySelector('#sistemaProductEdit')
 
 
 // funcao PUT 
 async function updateProduct(endpoint, id, dataUpdated){
-    
     
     try {
         const response = await fetch(`${api}${endpoint}/${id}`, {
@@ -47659,6 +47658,8 @@ async function updateProduct(endpoint, id, dataUpdated){
         const data = await response.json();
         console.log('updated ', data)
         alert('Sucesso na Atualização!')
+        location.reload()
+
 
     } catch(error) {
         console.error('Erro na requisição:', error);
@@ -47752,9 +47753,9 @@ sistemaProductEdit.addEventListener('change', async(event) =>{
                         <label>Tipo do Óleo</label>
                         <select class="tipoOleo">
                             <option value="${item.info}" selected>${item.info}</option>
-                            <option value="mineral">Mineral</option>
-                            <option value="sintetico">Sintético</option>
-                            <option value="semisintetico">Semi-Sintético</option>
+                            <option value="Mineral">Mineral</option>
+                            <option value="Sintético">Sintético</option>
+                            <option value="Semi-Sintético">Semi-Sintético</option>
                         </select>
 
                         <label>Marca</label>
@@ -47764,7 +47765,7 @@ sistemaProductEdit.addEventListener('change', async(event) =>{
                         <input type="number" placeholder="Valor" class="precoProduto" value="${item.price}">
 
                         <label>Quantidade</label>
-                        <input type="text" placeholder="Qtd.." class="qtdProduto" value="${item.qtd}">
+                        <input type="number" placeholder="Qtd.." class="qtdProduto" value="${item.qtd}">
 
                     </div>
 
@@ -47848,7 +47849,7 @@ sistemaProductEdit.addEventListener('change', async(event) =>{
                         <input type="number" placeholder="Valor" class="precoProduto" value="${item.price}">
 
                         <label>Quantidade</label>
-                        <input type="text" placeholder="Qtd.." class="qtdProduto" value="${item.qtd}">
+                        <input type="number" placeholder="Qtd.." class="qtdProduto" value="${item.qtd}">
 
                     </div>
 
@@ -47926,7 +47927,7 @@ sistemaProductEdit.addEventListener('change', async(event) =>{
                         <input type="number" placeholder="Valor" class="precoProduto" value="${item.price}">
 
                         <label>Quantidade</label>
-                        <input type="text" placeholder="Qtd.." class="qtdProduto" value="${item.qtd}">
+                        <input type="number" placeholder="Qtd.." class="qtdProduto" value="${item.qtd}">
 
                     </div>
 
@@ -48013,7 +48014,7 @@ sistemaProductEdit.addEventListener('change', async(event) =>{
                         <input type="text" placeholder="Marca do Produto" class="marcaProduto" value="${item.marca}">
 
                         <label>Quantidade</label>
-                        <input type="text" placeholder="Qtd.." class="qtdProduto" value="${item.qtd}">
+                        <input type="number" placeholder="Qtd.." class="qtdProduto" value="${item.qtd}">
 
                         
 
@@ -48107,7 +48108,7 @@ sistemaProductEdit.addEventListener('change', async(event) =>{
                         <input type="text" placeholder="Marca do Produto" class="marcaProduto" value="${item.marca}">
 
                         <label>Quantidade</label>
-                        <input type="text" placeholder="Qtd.." class="qtdProduto" value="${item.qtd}">
+                        <input type="number" placeholder="Qtd.." class="qtdProduto" value="${item.qtd}">
 
                         
 
@@ -48202,7 +48203,7 @@ sistemaProductEdit.addEventListener('change', async(event) =>{
                         <input type="text" placeholder="Marca do Produto" class="marcaProduto" value="${item.marca}">
 
                         <label>Quantidade</label>
-                        <input type="text" placeholder="Qtd.." class="qtdProduto" value="${item.qtd}">
+                        <input type="number" placeholder="Qtd.." class="qtdProduto" value="${item.qtd}">
 
                         
                     </div>
@@ -48294,7 +48295,7 @@ sistemaProductEdit.addEventListener('change', async(event) =>{
                         <input type="text" placeholder="Marca do Produto" class="marcaProduto" value="${item.marca}">
 
                         <label>Quantidade</label>
-                        <input type="text" placeholder="Qtd.." class="qtdProduto" value="${item.qtd}">
+                        <input type="number" placeholder="Qtd.." class="qtdProduto" value="${item.qtd}">
 
                         
                     </div>
@@ -48387,7 +48388,7 @@ sistemaProductEdit.addEventListener('change', async(event) =>{
                         <input type="text" placeholder="Marca do Produto" class="marcaProduto" value="${item.marca}">
 
                         <label>Quantidade</label>
-                        <input type="text" placeholder="Qtd.." class="qtdProduto" value="${item.qtd}">
+                        <input type="number" placeholder="Qtd.." class="qtdProduto" value="${item.qtd}">
 
                         
                     </div>
@@ -48479,7 +48480,7 @@ sistemaProductEdit.addEventListener('change', async(event) =>{
                         <input type="text" placeholder="Marca do Produto" class="marcaProduto" value="${item.marca}">
 
                         <label>Quantidade</label>
-                        <input type="text" placeholder="Qtd.." class="qtdProduto" value="${item.qtd}">
+                        <input type="number" placeholder="Qtd.." class="qtdProduto" value="${item.qtd}">
 
                         
                     </div>
@@ -48570,7 +48571,7 @@ sistemaProductEdit.addEventListener('change', async(event) =>{
                         <input type="text" placeholder="Marca do Produto" class="marcaProduto" value="${item.marca}">
 
                         <label>Quantidade</label>
-                        <input type="text" placeholder="Qtd.." class="qtdProduto" value="${item.qtd}">
+                        <input type="number" placeholder="Qtd.." class="qtdProduto" value="${item.qtd}">
 
                         
                     </div>
@@ -48661,7 +48662,7 @@ sistemaProductEdit.addEventListener('change', async(event) =>{
                         <input type="text" placeholder="Marca do Produto" class="marcaProduto" value="${item.marca}">
 
                         <label>Quantidade</label>
-                        <input type="text" placeholder="Qtd.." class="qtdProduto" value="${item.qtd}">
+                        <input type="number" placeholder="Qtd.." class="qtdProduto" value="${item.qtd}">
 
                         
                     </div>
@@ -48751,7 +48752,7 @@ sistemaProductEdit.addEventListener('change', async(event) =>{
                         <input type="text" placeholder="Marca do Produto" class="marcaProduto" value="${item.marca}">
 
                         <label>Quantidade</label>
-                        <input type="text" placeholder="Qtd.." class="qtdProduto" value="${item.qtd}">
+                        <input type="number" placeholder="Qtd.." class="qtdProduto" value="${item.qtd}">
 
                         
                     </div>
@@ -48841,7 +48842,7 @@ sistemaProductEdit.addEventListener('change', async(event) =>{
                         <input type="text" placeholder="Marca do Produto" class="marcaProduto" value="${item.marca}">
 
                         <label>Quantidade</label>
-                        <input type="text" placeholder="Qtd.." class="qtdProduto" value="${item.qtd}">
+                        <input type="number" placeholder="Qtd.." class="qtdProduto" value="${item.qtd}">
 
                         
                     </div>
@@ -48931,7 +48932,7 @@ sistemaProductEdit.addEventListener('change', async(event) =>{
                         <input type="text" placeholder="Marca do Produto" class="marcaProduto" value="${item.marca}">
 
                         <label>Quantidade</label>
-                        <input type="text" placeholder="Qtd.." class="qtdProduto" value="${item.qtd}">
+                        <input type="number" placeholder="Qtd.." class="qtdProduto" value="${item.qtd}">
 
                         
                     </div>
@@ -49022,7 +49023,7 @@ sistemaProductEdit.addEventListener('change', async(event) =>{
                         <input type="text" placeholder="Marca do Produto" class="marcaProduto" value="${item.marca}">
 
                         <label>Quantidade</label>
-                        <input type="text" placeholder="Qtd.." class="qtdProduto" value="${item.qtd}">
+                        <input type="number" placeholder="Qtd.." class="qtdProduto" value="${item.qtd}">
 
                         
                     </div>
@@ -49112,7 +49113,7 @@ sistemaProductEdit.addEventListener('change', async(event) =>{
                         <input type="text" placeholder="Marca do Produto" class="marcaProduto" value="${item.marca}">
 
                         <label>Quantidade</label>
-                        <input type="text" placeholder="Qtd.." class="qtdProduto" value="${item.qtd}">
+                        <input type="number" placeholder="Qtd.." class="qtdProduto" value="${item.qtd}">
 
                         
                     </div>
@@ -49202,7 +49203,7 @@ sistemaProductEdit.addEventListener('change', async(event) =>{
                         <input type="text" placeholder="Marca do Produto" class="marcaProduto" value="${item.marca}">
 
                         <label>Quantidade</label>
-                        <input type="text" placeholder="Qtd.." class="qtdProduto" value="${item.qtd}">
+                        <input type="number" placeholder="Qtd.." class="qtdProduto" value="${item.qtd}">
 
                         
                     </div>
@@ -49292,7 +49293,7 @@ sistemaProductEdit.addEventListener('change', async(event) =>{
                         <input type="text" placeholder="Marca do Produto" class="marcaProduto" value="${item.marca}">
 
                         <label>Quantidade</label>
-                        <input type="text" placeholder="Qtd.." class="qtdProduto" value="${item.qtd}">
+                        <input type="number" placeholder="Qtd.." class="qtdProduto" value="${item.qtd}">
 
                         
                     </div>
@@ -49382,7 +49383,7 @@ sistemaProductEdit.addEventListener('change', async(event) =>{
                         <input type="text" placeholder="Marca do Produto" class="marcaProduto" value="${item.marca}">
 
                         <label>Quantidade</label>
-                        <input type="text" placeholder="Qtd.." class="qtdProduto" value="${item.qtd}">
+                        <input type="number" placeholder="Qtd.." class="qtdProduto" value="${item.qtd}">
 
                         
                     </div>
@@ -49472,7 +49473,7 @@ sistemaProductEdit.addEventListener('change', async(event) =>{
                         <input type="text" placeholder="Marca do Produto" class="marcaProduto" value="${item.marca}">
 
                         <label>Quantidade</label>
-                        <input type="text" placeholder="Qtd.." class="qtdProduto" value="${item.qtd}">
+                        <input type="number" placeholder="Qtd.." class="qtdProduto" value="${item.qtd}">
 
                         
                     </div>
@@ -49563,7 +49564,7 @@ sistemaProductEdit.addEventListener('change', async(event) =>{
                         <input type="text" placeholder="Marca do Produto" class="marcaProduto" value="${item.marca}">
 
                         <label>Quantidade</label>
-                        <input type="text" placeholder="Qtd.." class="qtdProduto" value="${item.qtd}">
+                        <input type="number" placeholder="Qtd.." class="qtdProduto" value="${item.qtd}">
 
                         
                     </div>
@@ -49653,7 +49654,7 @@ sistemaProductEdit.addEventListener('change', async(event) =>{
                         <input type="text" placeholder="Marca do Produto" class="marcaProduto" value="${item.marca}">
 
                         <label>Quantidade</label>
-                        <input type="text" placeholder="Qtd.." class="qtdProduto" value="${item.qtd}">
+                        <input type="number" placeholder="Qtd.." class="qtdProduto" value="${item.qtd}">
 
                         
                     </div>
@@ -49743,7 +49744,7 @@ sistemaProductEdit.addEventListener('change', async(event) =>{
                         <input type="text" placeholder="Marca do Produto" class="marcaProduto" value="${item.marca}">
 
                         <label>Quantidade</label>
-                        <input type="text" placeholder="Qtd.." class="qtdProduto" value="${item.qtd}">
+                        <input type="number" placeholder="Qtd.." class="qtdProduto" value="${item.qtd}">
 
                         
                     </div>
@@ -49833,7 +49834,7 @@ sistemaProductEdit.addEventListener('change', async(event) =>{
                         <input type="text" placeholder="Marca do Produto" class="marcaProduto" value="${item.marca}">
 
                         <label>Quantidade</label>
-                        <input type="text" placeholder="Qtd.." class="qtdProduto" value="${item.qtd}">
+                        <input type="number" placeholder="Qtd.." class="qtdProduto" value="${item.qtd}">
 
                         
                     </div>
@@ -49923,7 +49924,7 @@ sistemaProductEdit.addEventListener('change', async(event) =>{
                         <input type="text" placeholder="Marca do Produto" class="marcaProduto" value="${item.marca}">
 
                         <label>Quantidade</label>
-                        <input type="text" placeholder="Qtd.." class="qtdProduto" value="${item.qtd}">
+                        <input type="number" placeholder="Qtd.." class="qtdProduto" value="${item.qtd}">
 
                         
                     </div>
@@ -50013,7 +50014,7 @@ sistemaProductEdit.addEventListener('change', async(event) =>{
                         <input type="text" placeholder="Marca do Produto" class="marcaProduto" value="${item.marca}">
 
                         <label>Quantidade</label>
-                        <input type="text" placeholder="Qtd.." class="qtdProduto" value="${item.qtd}">
+                        <input type="number" placeholder="Qtd.." class="qtdProduto" value="${item.qtd}">
 
                         
                     </div>
@@ -50103,7 +50104,7 @@ sistemaProductEdit.addEventListener('change', async(event) =>{
                         <input type="text" placeholder="Marca do Produto" class="marcaProduto" value="${item.marca}">
 
                         <label>Quantidade</label>
-                        <input type="text" placeholder="Qtd.." class="qtdProduto" value="${item.qtd}">
+                        <input type="number" placeholder="Qtd.." class="qtdProduto" value="${item.qtd}">
 
                         
                     </div>
@@ -50193,7 +50194,7 @@ sistemaProductEdit.addEventListener('change', async(event) =>{
                         <input type="text" placeholder="Marca do Produto" class="marcaProduto" value="${item.marca}">
 
                         <label>Quantidade</label>
-                        <input type="text" placeholder="Qtd.." class="qtdProduto" value="${item.qtd}">
+                        <input type="number" placeholder="Qtd.." class="qtdProduto" value="${item.qtd}">
 
                         
                     </div>
@@ -50285,7 +50286,7 @@ sistemaProductEdit.addEventListener('change', async(event) =>{
                         <input type="text" placeholder="Marca do Produto" class="marcaProduto" value="${item.marca}">
 
                         <label>Quantidade</label>
-                        <input type="text" placeholder="Qtd.." class="qtdProduto" value="${item.qtd}">
+                        <input type="number" placeholder="Qtd.." class="qtdProduto" value="${item.qtd}">
 
                         
                     </div>
@@ -50375,7 +50376,7 @@ sistemaProductEdit.addEventListener('change', async(event) =>{
                         <input type="text" placeholder="Marca do Produto" class="marcaProduto" value="${item.marca}">
 
                         <label>Quantidade</label>
-                        <input type="text" placeholder="Qtd.." class="qtdProduto" value="${item.qtd}">
+                        <input type="number" placeholder="Qtd.." class="qtdProduto" value="${item.qtd}">
 
                         
                     </div>
@@ -50465,7 +50466,7 @@ sistemaProductEdit.addEventListener('change', async(event) =>{
                         <input type="text" placeholder="Marca do Produto" class="marcaProduto" value="${item.marca}">
 
                         <label>Quantidade</label>
-                        <input type="text" placeholder="Qtd.." class="qtdProduto" value="${item.qtd}">
+                        <input type="number" placeholder="Qtd.." class="qtdProduto" value="${item.qtd}">
 
                         
                     </div>
@@ -50555,7 +50556,7 @@ sistemaProductEdit.addEventListener('change', async(event) =>{
                         <input type="text" placeholder="Marca do Produto" class="marcaProduto" value="${item.marca}">
 
                         <label>Quantidade</label>
-                        <input type="text" placeholder="Qtd.." class="qtdProduto" value="${item.qtd}">
+                        <input type="number" placeholder="Qtd.." class="qtdProduto" value="${item.qtd}">
 
                         
                     </div>
@@ -50646,7 +50647,7 @@ sistemaProductEdit.addEventListener('change', async(event) =>{
                         <input type="text" placeholder="Marca do Produto" class="marcaProduto" value="${item.marca}">
 
                         <label>Quantidade</label>
-                        <input type="text" placeholder="Qtd.." class="qtdProduto" value="${item.qtd}">
+                        <input type="number" placeholder="Qtd.." class="qtdProduto" value="${item.qtd}">
 
                         
                     </div>
@@ -50736,7 +50737,7 @@ sistemaProductEdit.addEventListener('change', async(event) =>{
                         <input type="text" placeholder="Marca do Produto" class="marcaProduto" value="${item.marca}">
 
                         <label>Quantidade</label>
-                        <input type="text" placeholder="Qtd.." class="qtdProduto" value="${item.qtd}">
+                        <input type="number" placeholder="Qtd.." class="qtdProduto" value="${item.qtd}">
 
                         
                     </div>
@@ -50826,7 +50827,7 @@ sistemaProductEdit.addEventListener('change', async(event) =>{
                         <input type="text" placeholder="Marca do Produto" class="marcaProduto" value="${item.marca}">
 
                         <label>Quantidade</label>
-                        <input type="text" placeholder="Qtd.." class="qtdProduto" value="${item.qtd}">
+                        <input type="number" placeholder="Qtd.." class="qtdProduto" value="${item.qtd}">
 
                         
                     </div>
@@ -50916,7 +50917,7 @@ sistemaProductEdit.addEventListener('change', async(event) =>{
                         <input type="text" placeholder="Marca do Produto" class="marcaProduto" value="${item.marca}">
 
                         <label>Quantidade</label>
-                        <input type="text" placeholder="Qtd.." class="qtdProduto" value="${item.qtd}">
+                        <input type="number" placeholder="Qtd.." class="qtdProduto" value="${item.qtd}">
 
                         
                     </div>
@@ -51006,7 +51007,7 @@ sistemaProductEdit.addEventListener('change', async(event) =>{
                         <input type="text" placeholder="Marca do Produto" class="marcaProduto" value="${item.marca}">
 
                         <label>Quantidade</label>
-                        <input type="text" placeholder="Qtd.." class="qtdProduto" value="${item.qtd}">
+                        <input type="number" placeholder="Qtd.." class="qtdProduto" value="${item.qtd}">
 
                         
                     </div>
@@ -51096,7 +51097,7 @@ sistemaProductEdit.addEventListener('change', async(event) =>{
                         <input type="text" placeholder="Marca do Produto" class="marcaProduto" value="${item.marca}">
 
                         <label>Quantidade</label>
-                        <input type="text" placeholder="Qtd.." class="qtdProduto" value="${item.qtd}">
+                        <input type="number" placeholder="Qtd.." class="qtdProduto" value="${item.qtd}">
 
                         
                     </div>
@@ -51188,7 +51189,7 @@ sistemaProductEdit.addEventListener('change', async(event) =>{
                         <input type="text" placeholder="Marca do Produto" class="marcaProduto" value="${item.marca}">
 
                         <label>Quantidade</label>
-                        <input type="text" placeholder="Qtd.." class="qtdProduto" value="${item.qtd}">
+                        <input type="number" placeholder="Qtd.." class="qtdProduto" value="${item.qtd}">
 
                         
                     </div>
@@ -51278,7 +51279,7 @@ sistemaProductEdit.addEventListener('change', async(event) =>{
                         <input type="text" placeholder="Marca do Produto" class="marcaProduto" value="${item.marca}">
 
                         <label>Quantidade</label>
-                        <input type="text" placeholder="Qtd.." class="qtdProduto" value="${item.qtd}">
+                        <input type="number" placeholder="Qtd.." class="qtdProduto" value="${item.qtd}">
 
                         
                     </div>
@@ -51368,7 +51369,7 @@ sistemaProductEdit.addEventListener('change', async(event) =>{
                         <input type="text" placeholder="Marca do Produto" class="marcaProduto" value="${item.marca}">
 
                         <label>Quantidade</label>
-                        <input type="text" placeholder="Qtd.." class="qtdProduto" value="${item.qtd}">
+                        <input type="number" placeholder="Qtd.." class="qtdProduto" value="${item.qtd}">
 
                         
                     </div>
@@ -51460,7 +51461,7 @@ sistemaProductEdit.addEventListener('change', async(event) =>{
                         <input type="text" placeholder="Marca do Produto" class="marcaProduto" value="${item.marca}">
 
                         <label>Quantidade</label>
-                        <input type="text" placeholder="Qtd.." class="qtdProduto" value="${item.qtd}">
+                        <input type="number" placeholder="Qtd.." class="qtdProduto" value="${item.qtd}">
 
                         
                     </div>
@@ -51550,7 +51551,7 @@ sistemaProductEdit.addEventListener('change', async(event) =>{
                         <input type="text" placeholder="Marca do Produto" class="marcaProduto" value="${item.marca}">
 
                         <label>Quantidade</label>
-                        <input type="text" placeholder="Qtd.." class="qtdProduto" value="${item.qtd}">
+                        <input type="number" placeholder="Qtd.." class="qtdProduto" value="${item.qtd}">
 
                         
                     </div>
@@ -51640,7 +51641,7 @@ sistemaProductEdit.addEventListener('change', async(event) =>{
                         <input type="text" placeholder="Marca do Produto" class="marcaProduto" value="${item.marca}">
 
                         <label>Quantidade</label>
-                        <input type="text" placeholder="Qtd.." class="qtdProduto" value="${item.qtd}">
+                        <input type="number" placeholder="Qtd.." class="qtdProduto" value="${item.qtd}">
 
                         
                     </div>
@@ -51730,7 +51731,7 @@ sistemaProductEdit.addEventListener('change', async(event) =>{
                         <input type="text" placeholder="Marca do Produto" class="marcaProduto" value="${item.marca}">
 
                         <label>Quantidade</label>
-                        <input type="text" placeholder="Qtd.." class="qtdProduto" value="${item.qtd}">
+                        <input type="number" placeholder="Qtd.." class="qtdProduto" value="${item.qtd}">
 
                         
                     </div>
@@ -51820,7 +51821,7 @@ sistemaProductEdit.addEventListener('change', async(event) =>{
                         <input type="text" placeholder="Marca do Produto" class="marcaProduto" value="${item.marca}">
 
                         <label>Quantidade</label>
-                        <input type="text" placeholder="Qtd.." class="qtdProduto" value="${item.qtd}">
+                        <input type="number" placeholder="Qtd.." class="qtdProduto" value="${item.qtd}">
 
                         
                     </div>
@@ -51910,7 +51911,7 @@ sistemaProductEdit.addEventListener('change', async(event) =>{
                         <input type="text" placeholder="Marca do Produto" class="marcaProduto" value="${item.marca}">
 
                         <label>Quantidade</label>
-                        <input type="text" placeholder="Qtd.." class="qtdProduto" value="${item.qtd}">
+                        <input type="number" placeholder="Qtd.." class="qtdProduto" value="${item.qtd}">
 
                         
                     </div>
@@ -52000,7 +52001,7 @@ sistemaProductEdit.addEventListener('change', async(event) =>{
                         <input type="text" placeholder="Marca do Produto" class="marcaProduto" value="${item.marca}">
 
                         <label>Quantidade</label>
-                        <input type="text" placeholder="Qtd.." class="qtdProduto" value="${item.qtd}">
+                        <input type="number" placeholder="Qtd.." class="qtdProduto" value="${item.qtd}">
 
                         
                     </div>
@@ -52090,7 +52091,7 @@ sistemaProductEdit.addEventListener('change', async(event) =>{
                         <input type="text" placeholder="Marca do Produto" class="marcaProduto" value="${item.marca}">
 
                         <label>Quantidade</label>
-                        <input type="text" placeholder="Qtd.." class="qtdProduto" value="${item.qtd}">
+                        <input type="number" placeholder="Qtd.." class="qtdProduto" value="${item.qtd}">
 
                         
                     </div>
@@ -52182,7 +52183,7 @@ sistemaProductEdit.addEventListener('change', async(event) =>{
                         <input type="text" placeholder="Marca do Produto" class="marcaProduto" value="${item.marca}">
 
                         <label>Quantidade</label>
-                        <input type="text" placeholder="Qtd.." class="qtdProduto" value="${item.qtd}">
+                        <input type="number" placeholder="Qtd.." class="qtdProduto" value="${item.qtd}">
 
                         
                     </div>
@@ -52272,7 +52273,7 @@ sistemaProductEdit.addEventListener('change', async(event) =>{
                         <input type="text" placeholder="Marca do Produto" class="marcaProduto" value="${item.marca}">
 
                         <label>Quantidade</label>
-                        <input type="text" placeholder="Qtd.." class="qtdProduto" value="${item.qtd}">
+                        <input type="number" placeholder="Qtd.." class="qtdProduto" value="${item.qtd}">
 
                         
                     </div>
@@ -52362,7 +52363,7 @@ sistemaProductEdit.addEventListener('change', async(event) =>{
                         <input type="text" placeholder="Marca do Produto" class="marcaProduto" value="${item.marca}">
 
                         <label>Quantidade</label>
-                        <input type="text" placeholder="Qtd.." class="qtdProduto" value="${item.qtd}">
+                        <input type="number" placeholder="Qtd.." class="qtdProduto" value="${item.qtd}">
 
                         
                     </div>
@@ -52452,7 +52453,7 @@ sistemaProductEdit.addEventListener('change', async(event) =>{
                         <input type="text" placeholder="Marca do Produto" class="marcaProduto" value="${item.marca}">
 
                         <label>Quantidade</label>
-                        <input type="text" placeholder="Qtd.." class="qtdProduto" value="${item.qtd}">
+                        <input type="number" placeholder="Qtd.." class="qtdProduto" value="${item.qtd}">
 
                         
                     </div>
@@ -52544,7 +52545,7 @@ sistemaProductEdit.addEventListener('change', async(event) =>{
                         <input type="text" placeholder="Marca do Produto" class="marcaProduto" value="${item.marca}">
 
                         <label>Quantidade</label>
-                        <input type="text" placeholder="Qtd.." class="qtdProduto" value="${item.qtd}">
+                        <input type="number" placeholder="Qtd.." class="qtdProduto" value="${item.qtd}">
 
                         
                     </div>
@@ -52634,7 +52635,7 @@ sistemaProductEdit.addEventListener('change', async(event) =>{
                         <input type="text" placeholder="Marca do Produto" class="marcaProduto" value="${item.marca}">
 
                         <label>Quantidade</label>
-                        <input type="text" placeholder="Qtd.." class="qtdProduto" value="${item.qtd}">
+                        <input type="number" placeholder="Qtd.." class="qtdProduto" value="${item.qtd}">
 
                         
                     </div>
@@ -52725,7 +52726,7 @@ sistemaProductEdit.addEventListener('change', async(event) =>{
                         <input type="text" placeholder="Marca do Produto" class="marcaProduto" value="${item.marca}">
 
                         <label>Quantidade</label>
-                        <input type="text" placeholder="Qtd.." class="qtdProduto" value="${item.qtd}">
+                        <input type="number" placeholder="Qtd.." class="qtdProduto" value="${item.qtd}">
 
                         
                     </div>
@@ -52815,7 +52816,7 @@ sistemaProductEdit.addEventListener('change', async(event) =>{
                         <input type="text" placeholder="Marca do Produto" class="marcaProduto" value="${item.marca}">
 
                         <label>Quantidade</label>
-                        <input type="text" placeholder="Qtd.." class="qtdProduto" value="${item.qtd}">
+                        <input type="number" placeholder="Qtd.." class="qtdProduto" value="${item.qtd}">
 
                         
                     </div>
@@ -52905,7 +52906,7 @@ sistemaProductEdit.addEventListener('change', async(event) =>{
                         <input type="text" placeholder="Marca do Produto" class="marcaProduto" value="${item.marca}">
 
                         <label>Quantidade</label>
-                        <input type="text" placeholder="Qtd.." class="qtdProduto" value="${item.qtd}">
+                        <input type="number" placeholder="Qtd.." class="qtdProduto" value="${item.qtd}">
 
                         
                     </div>
@@ -52995,7 +52996,7 @@ sistemaProductEdit.addEventListener('change', async(event) =>{
                         <input type="text" placeholder="Marca do Produto" class="marcaProduto" value="${item.marca}">
 
                         <label>Quantidade</label>
-                        <input type="text" placeholder="Qtd.." class="qtdProduto" value="${item.qtd}">
+                        <input type="number" placeholder="Qtd.." class="qtdProduto" value="${item.qtd}">
 
                         
                     </div>
@@ -53085,7 +53086,7 @@ sistemaProductEdit.addEventListener('change', async(event) =>{
                         <input type="text" placeholder="Marca do Produto" class="marcaProduto" value="${item.marca}">
 
                         <label>Quantidade</label>
-                        <input type="text" placeholder="Qtd.." class="qtdProduto" value="${item.qtd}">
+                        <input type="number" placeholder="Qtd.." class="qtdProduto" value="${item.qtd}">
 
                         
                     </div>
@@ -53176,7 +53177,7 @@ sistemaProductEdit.addEventListener('change', async(event) =>{
                         <input type="text" placeholder="Marca do Produto" class="marcaProduto" value="${item.marca}">
 
                         <label>Quantidade</label>
-                        <input type="text" placeholder="Qtd.." class="qtdProduto" value="${item.qtd}">
+                        <input type="number" placeholder="Qtd.." class="qtdProduto" value="${item.qtd}">
 
                         
                     </div>
@@ -53266,7 +53267,7 @@ sistemaProductEdit.addEventListener('change', async(event) =>{
                         <input type="text" placeholder="Marca do Produto" class="marcaProduto" value="${item.marca}">
 
                         <label>Quantidade</label>
-                        <input type="text" placeholder="Qtd.." class="qtdProduto" value="${item.qtd}">
+                        <input type="number" placeholder="Qtd.." class="qtdProduto" value="${item.qtd}">
 
                         
                     </div>
@@ -53356,7 +53357,7 @@ sistemaProductEdit.addEventListener('change', async(event) =>{
                         <input type="text" placeholder="Marca do Produto" class="marcaProduto" value="${item.marca}">
 
                         <label>Quantidade</label>
-                        <input type="text" placeholder="Qtd.." class="qtdProduto" value="${item.qtd}">
+                        <input type="number" placeholder="Qtd.." class="qtdProduto" value="${item.qtd}">
 
                         
                     </div>
@@ -53446,7 +53447,7 @@ sistemaProductEdit.addEventListener('change', async(event) =>{
                         <input type="text" placeholder="Marca do Produto" class="marcaProduto" value="${item.marca}">
 
                         <label>Quantidade</label>
-                        <input type="text" placeholder="Qtd.." class="qtdProduto" value="${item.qtd}">
+                        <input type="number" placeholder="Qtd.." class="qtdProduto" value="${item.qtd}">
 
                         
                     </div>
@@ -53514,6 +53515,7 @@ async function deletingProduct(endpoint, id){
 
         if (response.ok) {
             alert(`Item ${id} deletado com sucesso!`);
+            location.reload()
 
         } else {
             alert('Erro ao deletar o item!');
