@@ -45,13 +45,12 @@
                         <i class="fa-solid fa-cart-shopping" id="cartShop"></i>
                         <span class="qtdPecas">0</span>
                     </div>
-                    <a href="#loginStruruteLink" class="setLink"><i class="fa-solid fa-user" id="loginBtn"></i></a>
-                    <a href=""><i class="fa-solid fa-user-pen" id="btnUserEdit" ></i></a>
+                    <a href="#loginStruruteLink"><i class="fa-solid fa-user" id="loginBtn"></i></a>
+
+                    <a href="#area-form"><i class="fa-solid fa-user-pen" id="btnDevEdit"></i></a>
                 </div>
                 
                 <!-- side bar -->
-                
-
             </nav>
             
             <!-- navegação rapida -->
@@ -1883,17 +1882,19 @@
                     <div class="form">
                         
                         <form class="register-form">
-                            <input type="text" placeholder="Nome usuario" class="userNameCad"/>
-                            <input type="password" placeholder="Senha" class="passwordCad"/>
-                            <input type="email" placeholder="Email" class="emailCad"/>
-                            <button class="btnCadastrar">Cadastrar</button>
+                            <input type="text" placeholder="Nome usuario" class="userNameCad" name="username" required minlength="4"/>
+
+                            <input type="password" placeholder="Senha" class="passwordCad" name="password" required minlength="4"/>
+
+                            <input type="email" placeholder="Email" class="emailCad" name="email" required/>
+                            <button class="btnCadastrar" type="submit">Cadastrar</button>
                             <p class="message">Já é cadastrado? <a href="#" class="btnLoginEntrar">Entrar</a></p>
                         </form>
                 
                         <form class="login-form">
-                            <input type="text" placeholder="Nome usuario" class="usernameInput"/>
-                            <input type="password" placeholder="Senha" class="passwordInput" />
-                            <button class="btnEntrar">Entrar</button>
+                            <input type="text" placeholder="Nome usuario" class="usernameInput" name="username" required/>
+                            <input type="password" placeholder="Senha" class="passwordInput" name="password" required />
+                            <button class="btnEntrar" type="submit">Entrar</button>
                             <p class="message">Não é cadastrado? <a href="#" class="btnLoginCadastrar">Cadastre-se</a></p>
                         </form>
 

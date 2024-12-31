@@ -16397,27 +16397,36 @@ let btnsDev = document.querySelector('.btnsDev')
 btnsDev.addEventListener('click', (e) =>{
     e.preventDefault()
     let selectedBtn = e.target.classList.value
+    let aplicationStructure = document.querySelector('.aplicationStructure')
 
     // pages forms
     let PostFormCrud = document.querySelector('#PostFormCrud')
     let editFormCrud = document.querySelector('#editFormCrud')
     let deleteFormCrud = document.querySelector('#deleteFormCrud')
     
+    
     if(selectedBtn == 'postCrud'){
         editFormCrud.style.display="none"
         deleteFormCrud.style.display="none"
         PostFormCrud.style.display="block"
-        
+        aplicationStructure.style.display="none"
 
-    }else if(selectedBtn == 'editCrud'){
+    }
+    else if(selectedBtn == 'editCrud'){
         PostFormCrud.style.display="none"
         deleteFormCrud.style.display="none"
         editFormCrud.style.display="block"
+        aplicationStructure.style.display="none"
 
-    }else if(selectedBtn == 'deleteCrud'){
+    }
+    else if(selectedBtn == 'deleteCrud'){
         PostFormCrud.style.display="none"
         deleteFormCrud.style.display="block"
         editFormCrud.style.display="none"
+        aplicationStructure.style.display="none"
+
+        
+
     }
 
 })
@@ -17400,11 +17409,12 @@ sistemaProduct.addEventListener('change', (event) =>{
 
                     let referencia = document.querySelector('.referencia')
                     let linhaCarro = document.querySelector('.linhaCarro')
-                    let firstRadio = document.querySelector('#firstRadio')
+                    
                     let secundRadio = document.querySelector('#secundRadio')
                     let thirdRadio = document.querySelector('#thirdRadio')
 
                     // radios
+                    let firstRadio = document.querySelector('#firstRadio')
                     let segundLine = document.querySelector('.segundLine')
                     let thirdLine = document.querySelector('.thirdLine')
 
@@ -47706,6 +47716,8 @@ sistemaProductEdit.addEventListener('change', async(event) =>{
     let IDPRODUCT = document.querySelector('#IDPRODUCT')
     IDPRODUCT.value = ''
     IDPRODUCT.focus()
+
+
 
     if(selectedProduct == 'oleos'){
         boxAtualizacaoProduct.innerHTML = ''

@@ -250,11 +250,20 @@ function mostrarInfoFastSearch(){
     // acao da pagina login
 
     let loginBtn = document.querySelector('#loginBtn')
+    let btnDevEdit = document.querySelector('#btnDevEdit')
 
     loginBtn.addEventListener('click', () =>{
         for(let c = 0;c < allSessoes.length;c++){
             allSessoes[c].style.display=`none`
             allSessoes[16].style.display=`block`
+            
+        }
+    })
+
+    btnDevEdit.addEventListener('click', () =>{
+        for(let c = 0;c < allSessoes.length;c++){
+            allSessoes[c].style.display=`none`
+            allSessoes[17].style.display=`block`
             
         }
     })
@@ -448,30 +457,44 @@ async function gettingUsers(){
 }
 
 
+// ENTRAR
+
 async function entrarValidation(formdata){
 
     const users = await gettingUsers()
-    
     const seJaExiste = users.some(user => user.username == formdata.nome && user.password == formdata.senha)
 
-    if(!seJaExiste){
-        alert('Usuario/Senha errado!')
-        return false
-    }
+    
+    if(formdata.nome == 'vinicius' && formdata.senha == 'vini10'){
+        console.log('Welcome Vini')
+        let areaFormPage = document.querySelector('#area-form')
+        let areaLoginPage = document.querySelector('#area-login')
+        let loginBtn = document.querySelector('#loginBtn')
+        let btnDevEdit = document.querySelector('#btnDevEdit')
 
-    console.log('sucesso no login!')
-    return true
+        areaLoginPage.style.display="none"
+        loginBtn.style.display="none"
+        areaFormPage.style.display="block"
+        btnDevEdit.style.display="block"
+
+    }
+    else if(seJaExiste){
+        console.log('Login feito com Sucesso!')
+    }
+    else if(!seJaExiste){
+        alert('Email/Senha errado!')
+    }
+    
 }
 
 
-// ENTRAR
 let btnEntrar = document.querySelector('.btnEntrar')
 btnEntrar.addEventListener('click', (e) =>{
     e.preventDefault()
 
     const formdata = {
-        nome: document.querySelector('.usernameInput').value,
-        senha: document.querySelector('.passwordInput').value
+        nome: document.querySelector('.usernameInput').value.trim(),
+        senha: document.querySelector('.passwordInput').value.trim()
     }
     entrarValidation(formdata)
 })
@@ -485,7 +508,7 @@ btnEntrar.addEventListener('click', (e) =>{
     
 // FUNCAO DE POST creatingUser(formData)
 async function creatingUser(obj){
-    debugger
+    
     try{
         const response = await fetch(`${apiUrl}addingUser`, {
             method: 'POST',
@@ -516,7 +539,6 @@ async function creatingUser(obj){
 async function cadastroValidation(formdata){
 
     const users = await gettingUsers()
-    debugger
     
     const seExiste = users.some(usuario => usuario.email === formdata.email)
 
@@ -524,6 +546,8 @@ async function cadastroValidation(formdata){
         alert('Email já cadastrado!')
         return false
     }
+
+
     
     creatingUser(formdata)
     return true
@@ -534,9 +558,31 @@ let btnCadastrar = document.querySelector('.btnCadastrar')
 btnCadastrar.addEventListener('click', (e) =>{
     e.preventDefault()
     const formdata = {
-        username: document.querySelector('.userNameCad').value,
-        email: document.querySelector('.emailCad').value,
-        password: document.querySelector('.passwordCad').value
+        username: document.querySelector('.userNameCad').value.trim(),
+        email: document.querySelector('.emailCad').value.trim(),
+        password: document.querySelector('.passwordCad').value.trim()
+    }    
+
+
+    const regexEmail = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    if(formdata.username == ''){
+        alert('Preencha o nome!')
+        return false
+    }
+
+    if(formdata.username.length < 4){
+        alert('Username precisa ter mais de 3 caracteres!')
+        return false
+    }
+    
+    if (!regexEmail.test(formdata.email)){
+        alert('Digite um email válido!')
+        return false
+    }
+
+    if(formdata.password.length < 4){
+        alert('Senha precisa ter mais de 3 caracteres!')
+        return false
     }
 
     cadastroValidation(formdata)
