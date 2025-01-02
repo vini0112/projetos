@@ -16576,6 +16576,26 @@ function creatingForm2(){
 
 }
 
+async function uploadingImg(file){
+    debugger
+    try {
+        const response = await fetch(`${api}upload`, {
+            method: 'POST',
+            body: file,
+        });
+
+        if (response.ok) {
+            const data = await response.json();
+            console.log('Upload realizado com sucesso!');
+            
+        } else {
+            alert('Erro ao enviar o arquivo.');
+        }
+    } catch(error) {
+            console.error('Erro:', error);
+            alert('Erro ao fazer upload.');
+        }
+}
 
 
 // METHOD post
@@ -16621,7 +16641,7 @@ sistemaProduct.addEventListener('change', (event) =>{
                 <input type="text" placeholder="Nome do Produto" class="nomeProduto">
 
                 <label>Imagem do Produto</label>
-                <input type="file" class="imgProduto" accept="image/*">
+                <input type="file" class="imgProduto" accept="image/*" name="image">
 
                 <label>Marca</label>
                 <input type="text" placeholder="Marca do Produto" class="marcaProduto">
@@ -16699,14 +16719,11 @@ sistemaProduct.addEventListener('change', (event) =>{
                     return
                 }
 
-                
 
-                
 
                 // pegando valores 
                 const formData = {
                     nomeProduto: document.querySelector('.nomeProduto').value,
-                    imgProduto: file,
                     marcaProduto: document.querySelector('.marcaProduto').value,
                     qtdProduto: document.querySelector('.qtdProduto').value,
                     precoProduto: document.querySelector('.precoProduto').value
@@ -16720,7 +16737,6 @@ sistemaProduct.addEventListener('change', (event) =>{
 
                     const obj = {
                         "nome": formData.nomeProduto,
-                        "image": formData.imgProduto,
                         "marca": formData.marcaProduto,
                         "info": tipoOleo,
                         "price": Number(formData.precoProduto),
@@ -16729,13 +16745,13 @@ sistemaProduct.addEventListener('change', (event) =>{
 
                     const formdata = new FormData()
                     formdata.append('nome', formData.nomeProduto)
-                    formdata.append('image', file)
                     formdata.append('marca', formData.marcaProduto)
                     formdata.append('info', tipoOleo)
                     formdata.append('price', Number(formData.precoProduto))
                     formdata.append("qtd", Number(formData.qtdProduto))
 
-                    postingProduct(endpoint, formdata)
+                    uploadingImg(file)
+                    // postingProduct(endpoint, formdata)
                     // console.log(obj)
 
 
