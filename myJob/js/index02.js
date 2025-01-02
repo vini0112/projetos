@@ -16728,30 +16728,31 @@ sistemaProduct.addEventListener('change', (event) =>{
                     qtdProduto: document.querySelector('.qtdProduto').value,
                     precoProduto: document.querySelector('.precoProduto').value
                 }
-                // console.log(formData)
+                
                 
                 // enviando form para o backend!
                 if(valorSelecionado == 'oleoMotor'){
                     let tipoOleo = document.querySelector('.tipoOleo').value
                     let endpoint = 'oleos'
 
-                    const obj = {
-                        "nome": formData.nomeProduto,
-                        "marca": formData.marcaProduto,
-                        "info": tipoOleo,
-                        "price": Number(formData.precoProduto),
-                        "qtd": Number(formData.qtdProduto)
-                    }
+                    // const obj = {
+                    //     "nome": formData.nomeProduto,
+                    //     "marca": formData.marcaProduto,
+                    //     "info": tipoOleo,
+                    //     "price": Number(formData.precoProduto),
+                    //     "qtd": Number(formData.qtdProduto)
+                    // }
 
                     const formdata = new FormData()
                     formdata.append('nome', formData.nomeProduto)
                     formdata.append('marca', formData.marcaProduto)
+                    formdata.append('image', file)
                     formdata.append('info', tipoOleo)
                     formdata.append('price', Number(formData.precoProduto))
                     formdata.append("qtd", Number(formData.qtdProduto))
 
-                    uploadingImg(file)
-                    // postingProduct(endpoint, formdata)
+                    // uploadingImg(file)
+                    postingProduct(endpoint, formdata)
                     // console.log(obj)
 
 
