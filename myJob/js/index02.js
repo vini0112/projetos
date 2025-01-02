@@ -16719,7 +16719,7 @@ sistemaProduct.addEventListener('change', (event) =>{
                     return
                 }
 
-
+                // uploadingImg(file)
 
                 // pegando valores 
                 const formData = {
@@ -16751,9 +16751,9 @@ sistemaProduct.addEventListener('change', (event) =>{
                     formdata.append('price', Number(formData.precoProduto))
                     formdata.append("qtd", Number(formData.qtdProduto))
 
-                    // uploadingImg(file)
+
                     postingProduct(endpoint, formdata)
-                    // console.log(obj)
+                    // console.log(formdata.values)
 
 
                 }else{
