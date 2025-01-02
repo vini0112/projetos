@@ -16621,7 +16621,7 @@ sistemaProduct.addEventListener('change', (event) =>{
                 <input type="text" placeholder="Nome do Produto" class="nomeProduto">
 
                 <label>Imagem do Produto</label>
-                <input type="file" class="imgProduto">
+                <input type="file" class="imgProduto" accept="image/*">
 
                 <label>Marca</label>
                 <input type="text" placeholder="Marca do Produto" class="marcaProduto">
@@ -16638,7 +16638,7 @@ sistemaProduct.addEventListener('change', (event) =>{
                 <input type="number" placeholder="Valor" class="precoProduto">
 
                 <label>Quantidade</label>
-                <input type="text" placeholder="Qtd.." class="qtdProduto">
+                <input type="number" placeholder="Qtd.." class="qtdProduto">
 
                 <div class="boxBtnPost">
                     <button class="btnForm formPost">Postar</button>
@@ -16646,6 +16646,8 @@ sistemaProduct.addEventListener('change', (event) =>{
                 </div>
 
                 `
+                
+
                 produtoEscolhido.appendChild(divBoxForms)
 
             }
@@ -16668,7 +16670,7 @@ sistemaProduct.addEventListener('change', (event) =>{
                 <input type="text" placeholder="Preço do Produto" class="precoProduto">
 
                 <label>Quantidade</label>
-                <input type="text" placeholder="Qtd.." class="qtdProduto">
+                <input type="number" placeholder="Qtd.." class="qtdProduto">
 
                 <div class="boxBtnPost">
                     <button class="btnForm formPost">Postar</button>
@@ -16680,20 +16682,36 @@ sistemaProduct.addEventListener('change', (event) =>{
                 
             }
 
+            
+
 
             // postando produto
             let formPost = document.querySelector('.formPost')
             formPost.addEventListener('click', async (event) =>{
                 event.preventDefault()       
+
+                const inputImg = document.querySelector('.imgProduto')
+                // debugger
+                const file = inputImg.files[0]
+
+                if(!file){
+                    alert('Selecione uma Imagem!')
+                    return
+                }
+
+                
+
+                
+
                 // pegando valores 
                 const formData = {
                     nomeProduto: document.querySelector('.nomeProduto').value,
-                    imgProduto: document.querySelector('.imgProduto').value,
+                    imgProduto: file,
                     marcaProduto: document.querySelector('.marcaProduto').value,
                     qtdProduto: document.querySelector('.qtdProduto').value,
                     precoProduto: document.querySelector('.precoProduto').value
                 }
-                
+                // console.log(formData)
                 
                 // enviando form para o backend!
                 if(valorSelecionado == 'oleoMotor'){
@@ -16708,7 +16726,17 @@ sistemaProduct.addEventListener('change', (event) =>{
                         "price": Number(formData.precoProduto),
                         "qtd": Number(formData.qtdProduto)
                     }
-                    postingProduct(endpoint, obj)
+
+                    const formdata = new FormData()
+                    formdata.append('nome', formData.nomeProduto)
+                    formdata.append('image', file)
+                    formdata.append('marca', formData.marcaProduto)
+                    formdata.append('info', tipoOleo)
+                    formdata.append('price', Number(formData.precoProduto))
+                    formdata.append("qtd", Number(formData.qtdProduto))
+
+                    postingProduct(endpoint, formdata)
+                    // console.log(obj)
 
 
                 }else{
