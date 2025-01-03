@@ -16475,7 +16475,7 @@ async function postingProduct(endpoint, obj){
 }
 
 async function newPosting(endpoint, formdata){
-
+    debugger
     try{
         const response = await fetch(`${api}${endpoint}`, {
             method: 'POST',
@@ -16602,26 +16602,7 @@ function creatingForm2(){
 
 }
 
-async function uploadingImg(file){
-    debugger
-    try {
-        const response = await fetch(`${api}upload`, {
-            method: 'POST',
-            body: file,
-        });
 
-        if (response.ok) {
-            const data = await response.json();
-            console.log('Upload realizado com sucesso!');
-            
-        } else {
-            alert('Erro ao enviar o arquivo.');
-        }
-    } catch(error) {
-            console.error('Erro:', error);
-            alert('Erro ao fazer upload.');
-        }
-}
 
 
 // METHOD post
@@ -16744,6 +16725,7 @@ sistemaProduct.addEventListener('change', (event) =>{
                 }
 
                 
+                
 
                 // pegando valores 
                 const form = {
@@ -16780,7 +16762,7 @@ sistemaProduct.addEventListener('change', (event) =>{
                     formdata.append('price', form.precoProduto)
                     formdata.append("qtd", form.qtdProduto)   
 
-                    postingProduct(endpoint, formdata)
+                    newPosting(endpoint, formdata)
                     
                 }
 
@@ -16883,7 +16865,7 @@ sistemaProduct.addEventListener('change', (event) =>{
             formdata.append('price', form.precoProduto)
             formdata.append("qtd", form.qtdProduto) 
 
-            postingProduct(endpoint, formdata)
+            newPosting(endpoint, formdata)
         })
 
         // limpando form
@@ -16923,7 +16905,7 @@ sistemaProduct.addEventListener('change', (event) =>{
         <input type="text" placeholder="Nome do Produto" class="nomeProduto">
 
         <label>Imagem do Produto</label>
-        <input type="file" class="imgProduto">
+        <input type="file" class="imgProduto" accept="image/*" name="image">
 
         <label>Marca</label>
         <input type="text" placeholder="Marca do Produto" class="marcaProduto">
@@ -16973,7 +16955,7 @@ sistemaProduct.addEventListener('change', (event) =>{
             formdata.append('price', form.precoProduto)
             formdata.append("qtd", form.qtdProduto) 
 
-            postingProduct(endpoint, formdata)
+            newPosting(endpoint, formdata)
 
 
         })
