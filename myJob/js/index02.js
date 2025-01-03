@@ -16446,7 +16446,7 @@ let produtoEscolhido = document.querySelector('.produtoEscolhido')
 // FUNCAO DE POST 
 async function postingProduct(endpoint, obj){
 
-
+    
     try{
         const response = await fetch(`${api}${endpoint}`, {
             method: 'POST',
@@ -16454,6 +16454,32 @@ async function postingProduct(endpoint, obj){
                 'Content-Type': 'application/json',
             },
             body: JSON.stringify(obj)
+        })
+
+        if (response.ok) {
+            const data = response.json();
+            console.log('Resposta do servidor:', data);
+            alert('Formulário enviado com sucesso!');
+            location.reload()
+        } else {
+            console.error('Erro ao enviar o formulário:', response.statusText);
+            alert('Erro ao enviar o formulário.');
+        }
+
+    } catch (error) {
+        console.error('Erro na requisição:', error);
+        alert('Erro ao enviar o formulário.');
+    }
+
+
+}
+
+async function newPosting(endpoint, formdata){
+
+    try{
+        const response = await fetch(`${api}${endpoint}`, {
+            method: 'POST',
+            body: formdata
         })
 
         if (response.ok) {
@@ -16722,7 +16748,7 @@ sistemaProduct.addEventListener('change', (event) =>{
                 // uploadingImg(file)
 
                 // pegando valores 
-                const formData = {
+                const form = {
                     nomeProduto: document.querySelector('.nomeProduto').value,
                     marcaProduto: document.querySelector('.marcaProduto').value,
                     qtdProduto: document.querySelector('.qtdProduto').value,
@@ -16735,24 +16761,16 @@ sistemaProduct.addEventListener('change', (event) =>{
                     let tipoOleo = document.querySelector('.tipoOleo').value
                     let endpoint = 'oleos'
 
-                    // const obj = {
-                    //     "nome": formData.nomeProduto,
-                    //     "marca": formData.marcaProduto,
-                    //     "info": tipoOleo,
-                    //     "price": Number(formData.precoProduto),
-                    //     "qtd": Number(formData.qtdProduto)
-                    // }
-
                     const formdata = new FormData()
-                    formdata.append('nome', formData.nomeProduto)
-                    formdata.append('marca', formData.marcaProduto)
+                    formdata.append('nome', form.nomeProduto)
+                    formdata.append('marca', form.marcaProduto)
                     formdata.append('image', file)
                     formdata.append('info', tipoOleo)
-                    formdata.append('price', Number(formData.precoProduto))
-                    formdata.append("qtd", Number(formData.qtdProduto))
+                    formdata.append('price', form.precoProduto)
+                    formdata.append("qtd", form.qtdProduto) 
 
 
-                    postingProduct(endpoint, formdata)
+                    newPosting(endpoint, formdata)
                     // console.log(formdata.values)
 
 
