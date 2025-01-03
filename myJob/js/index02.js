@@ -16693,7 +16693,6 @@ sistemaProduct.addEventListener('change', (event) =>{
 
                 `
                 
-
                 produtoEscolhido.appendChild(divBoxForms)
 
             }
@@ -16707,7 +16706,7 @@ sistemaProduct.addEventListener('change', (event) =>{
                 <input type="text" placeholder="Nome do Produto" class="nomeProduto">
 
                 <label>Imagem do Produto</label>
-                <input type="file" class="imgProduto">
+                <input type="file" class="imgProduto" accept="image/*" name="image">
 
                 <label>Marca</label>
                 <input type="text" placeholder="Marca do Produto" class="marcaProduto">
@@ -16737,7 +16736,6 @@ sistemaProduct.addEventListener('change', (event) =>{
                 event.preventDefault()       
 
                 const inputImg = document.querySelector('.imgProduto')
-                // debugger
                 const file = inputImg.files[0]
 
                 if(!file){
@@ -16745,7 +16743,7 @@ sistemaProduct.addEventListener('change', (event) =>{
                     return
                 }
 
-                // uploadingImg(file)
+                
 
                 // pegando valores 
                 const form = {
@@ -16771,19 +16769,18 @@ sistemaProduct.addEventListener('change', (event) =>{
 
 
                     newPosting(endpoint, formdata)
-                    // console.log(formdata.values)
-
 
                 }else{
                     let endpoint = 'fluido'
-                    const obj = {
-                        "nome": formData.nomeProduto,
-                        "image": formData.imgProduto,
-                        "marca": formData.marcaProduto,
-                        "price": Number(formData.precoProduto),
-                        "qtd": Number(formData.qtdProduto)
-                    }                   
-                    postingProduct(endpoint, obj)
+                    
+                    const formdata = new FormData()
+                    formdata.append('nome', form.nomeProduto)
+                    formdata.append('marca', form.marcaProduto)
+                    formdata.append('image', file)
+                    formdata.append('price', form.precoProduto)
+                    formdata.append("qtd", form.qtdProduto)   
+
+                    postingProduct(endpoint, formdata)
                     
                 }
 
@@ -16833,16 +16830,16 @@ sistemaProduct.addEventListener('change', (event) =>{
         <input type="text" placeholder="Nome do Produto" class="nomeProduto">
 
         <label>Imagem do Produto</label>
-        <input type="file" class="imgProduto">
+        <input type="file" class="imgProduto" accept="image/*" name="image">
 
         <label>Marca</label>
         <input type="text" placeholder="Marca do Produto" class="marcaProduto">
 
         <label>Preço</label>
-        <input type="text" placeholder="Preço do Produto" class="precoProduto">
+        <input type="number" placeholder="Preço do Produto" class="precoProduto">
 
         <label>Quantidade</label>
-        <input type="text" placeholder="Qtd.." class="qtdProduto">
+        <input type="number" placeholder="Qtd.." class="qtdProduto">
 
         <div class="boxBtnPost">
             <button class="btnForm formPost">Postar</button>
@@ -16856,9 +16853,20 @@ sistemaProduct.addEventListener('change', (event) =>{
         // enviando para backend
         let formPost = document.querySelector('.formPost')
         formPost.addEventListener('click', async (event) =>{
-            event.preventDefault()       
+            event.preventDefault()    
+            
+            const inputImg = document.querySelector('.imgProduto')
+                // debugger
+
+            const file = inputImg.files[0]
+
+            if(!file){
+                alert('Selecione uma Imagem!')
+                return
+            }
+            
             // pegando valores 
-            const formData = {
+            const form = {
                 nomeProduto: document.querySelector('.nomeProduto').value,
                 imgProduto: document.querySelector('.imgProduto').value,
                 marcaProduto: document.querySelector('.marcaProduto').value,
@@ -16867,14 +16875,15 @@ sistemaProduct.addEventListener('change', (event) =>{
             }
 
             let endpoint = 'baterias'
-            const obj = {
-                "nome": formData.nomeProduto,
-                "image": formData.imgProduto,
-                "marca": formData.marcaProduto,
-                "price": Number(formData.precoProduto),
-                "qtd": Number(formData.qtdProduto)
-            }
-            postingProduct(endpoint, obj)
+            
+            const formdata = new FormData()
+            formdata.append('nome', form.nomeProduto)
+            formdata.append('marca', form.marcaProduto)
+            formdata.append('image', file)
+            formdata.append('price', form.precoProduto)
+            formdata.append("qtd", form.qtdProduto) 
+
+            postingProduct(endpoint, formdata)
         })
 
         // limpando form
@@ -16920,10 +16929,10 @@ sistemaProduct.addEventListener('change', (event) =>{
         <input type="text" placeholder="Marca do Produto" class="marcaProduto">
 
         <label>Preço</label>
-        <input type="text" placeholder="Preço do Produto" class="precoProduto">
+        <input type="number" placeholder="Preço do Produto" class="precoProduto">
 
         <label>Quantidade</label>
-        <input type="text" placeholder="Qtd.." class="qtdProduto">
+        <input type="number" placeholder="Qtd.." class="qtdProduto">
 
         <div class="boxBtnPost">
             <button class="btnForm formPost">Postar</button>
@@ -16936,25 +16945,37 @@ sistemaProduct.addEventListener('change', (event) =>{
         // enviando para backend
         let formPost = document.querySelector('.formPost')
         formPost.addEventListener('click', async (event) =>{
-            event.preventDefault()       
+            event.preventDefault()     
+            
+            const inputImg = document.querySelector('.imgProduto')
+            const file = inputImg.files[0]
+
+            if(!file){
+            alert('Selecione uma Imagem!')
+                return
+            }  
+
             // pegando valores 
-            const formData = {
+            const form = {
                 nomeProduto: document.querySelector('.nomeProduto').value,
-                imgProduto: document.querySelector('.imgProduto').value,
                 marcaProduto: document.querySelector('.marcaProduto').value,
                 qtdProduto: document.querySelector('.qtdProduto').value,
                 precoProduto: document.querySelector('.precoProduto').value
             }
 
             let endpoint = 'fluidos'
-            const obj = {
-                "nome": formData.nomeProduto,
-                "image": formData.imgProduto,
-                "marca": formData.marcaProduto,
-                "price": Number(formData.precoProduto),
-                "qtd": Number(formData.qtdProduto)
-            }
-            postingProduct(endpoint, obj)
+            
+            
+            const formdata = new FormData()
+            formdata.append('nome', form.nomeProduto)
+            formdata.append('marca', form.marcaProduto)
+            formdata.append('image', file)
+            formdata.append('price', form.precoProduto)
+            formdata.append("qtd", form.qtdProduto) 
+
+            postingProduct(endpoint, formdata)
+
+
         })
 
         // limpando form
