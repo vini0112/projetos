@@ -16475,7 +16475,7 @@ async function postingProduct(endpoint, obj){
 }
 
 async function newPosting(endpoint, formdata){
-    debugger
+    
     try{
         const response = await fetch(`${api}${endpoint}`, {
             method: 'POST',
@@ -16511,7 +16511,7 @@ function creatingForm2(){
     <input type="text" placeholder="Nome do Produto" class="nomeProduto">
 
     <label>Imagem do Produto</label>
-    <input type="file" class="imgProduto">
+    <input type="file" class="imgProduto" accept="image/*" name="image">
 
     <label>Marca</label>
     <input type="text" placeholder="Marca do Produto" class="marcaProduto">
@@ -16850,7 +16850,6 @@ sistemaProduct.addEventListener('change', (event) =>{
             // pegando valores 
             const form = {
                 nomeProduto: document.querySelector('.nomeProduto').value,
-                imgProduto: document.querySelector('.imgProduto').value,
                 marcaProduto: document.querySelector('.marcaProduto').value,
                 qtdProduto: document.querySelector('.qtdProduto').value,
                 precoProduto: document.querySelector('.precoProduto').value
