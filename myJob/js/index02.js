@@ -129,6 +129,7 @@ const api = 'https://store-api-rxgw.onrender.com/'
 const apiTest = './allpeaces.json'
 
 
+
 async function gettingApi(){
     const resp = await fetch(apiTest)
     const dado = await resp.json()
