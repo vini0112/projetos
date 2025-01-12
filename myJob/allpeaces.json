@@ -2187,9 +2187,7 @@
                     ]
                 }
             ]
-        }
-    ],
-    "filtroArCabine": [
+        },
         {
             "id": 73,
             "nome": "Filtro Ar Cabine",

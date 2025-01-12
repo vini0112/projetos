@@ -29,7 +29,6 @@ document.addEventListener('DOMContentLoaded', () =>{
     // SESSAO 04
 
     filtroArMotor()
-    filtroArCabine()
     mangotesAr()
 
     // SESSAO 05
@@ -139,22 +138,26 @@ async function gettingApi(){
 
 // gettingApi()
 
+let loading = document.querySelectorAll('.loading')
 
 
 // SESSÃO 00 
 const estruturaOleo = document.querySelector('#row-inicio-oleos')
 const estruturaBatery = document.querySelector('#row-inicio-baterias')
+let containerInicial = document.querySelector('.container_inicial')
 
 
 // adding oleos
 async function addCardsOleo(){
     const dados = await gettingApi()
     const dadosOleo = dados.oleos
-
-    // console.log(dadosOleo)
-    // console.log(dadosOleo.length)
+    
 
     for(let i = 0;i < dadosOleo.length;i++){
+        
+        loading[0].style.display="flex"
+        containerInicial.style.display="none"
+        
         listCards.push(dadosOleo[i])
 
         let oleoCards = document.createElement('div')
@@ -186,11 +189,11 @@ async function addCardsOleo(){
         </div>
 
         `
-
         
         estruturaOleo.appendChild(oleoCards)
-        
     }
+
+    
 
     filtroIniciar()
 }
@@ -426,12 +429,10 @@ function filtroIniciar(){
 async function addBattery(){
     const dado = await gettingApi()
     const dadoBatery = dado.baterias
-    // console.log(dadoBatery)
 
 
     for(let i = 0;i < dadoBatery.length;i++){
         listCards.push(dadoBatery[i])
-
 
         let newDiv = document.createElement('div')
         newDiv.classList.add('col-md-3')
@@ -462,7 +463,9 @@ async function addBattery(){
         estruturaBatery.appendChild(newDiv)
 
     }
-
+    
+    loading[0].style.display="none"
+    containerInicial.style.display="block"
 
 }
 
@@ -473,6 +476,7 @@ async function addBattery(){
 // SESSAO 01
 const estrutura2Oleo = document.querySelector('#row-oleos')
 const estruturaFluido = document.querySelector('#row-fluido-oleo')
+let containerOleos = document.querySelector('.container_oleos')
 
 // adding oleo 2
 async function addOleo2(){
@@ -480,10 +484,11 @@ async function addOleo2(){
     const dados = await gettingApi()
     const dadosOleo = dados.oleos
 
-    // console.log(dadosOleo)
-    // console.log(dadosOleo.length)
 
     for(let i = 0;i < dadosOleo.length;i++){
+
+        loading[1].style.display="flex"
+        containerOleos.style.display="none"
 
         let oleoCards = document.createElement('div')
         oleoCards.classList.add('col-md-3')
@@ -774,6 +779,9 @@ async function addFluidos(){
 
     }
 
+    loading[1].style.display="none"
+    containerOleos.style.display="block"
+
 }
 
 
@@ -784,6 +792,7 @@ let rowFiltroPesado = document.querySelector('#row-filtros-pesados')
 let rowFiltroCombustSimples = document.querySelector('#row-filtro-combus-simples')
 let rowFiltroCombustPesado = document.querySelector('#row-filtro-combus')
 
+let containerFiltrosOleo = document.querySelector('.container_filtros_oleo')
 
 
 // adding filtros oleo simples
@@ -800,6 +809,8 @@ async function addFiltroOleoSimp(){
     for(let i = 0;i < dados.length;i++){
         listCards.push(dados[i])
 
+        loading[2].style.display="flex"
+        containerFiltrosOleo.style.display="none"
 
         let newDiv = document.createElement('div')
         newDiv.classList.add('col-md-3')
@@ -1137,9 +1148,8 @@ async function dialogoOleoSimples(){
         
         body.append(modalDialog)
 
-
+        
     }
-
 
     carsEapli1(dados)
     
@@ -1536,12 +1546,10 @@ function filtrandoPesados(){
 async function dialogFiltrosOleoPesado(){
     const dado = await gettingApi()
     const dados = dado.filtroOleoPesado
-    // console.log(dados)
-
+    
 
     for(let i = 0;i < dados.length;i++){
 
-        // console.log(dados.length)
 
         // dados especificos
         code = await dados[i].aplicacoes[0].codeApli
@@ -1586,10 +1594,10 @@ async function dialogFiltrosOleoPesado(){
     `
         
         body.append(modalDialog)
-
-
     }
 
+    loading[2].style.display="none"
+    containerFiltrosOleo.style.display="block"
     carsEapli2(await dados)
 }
 
@@ -1755,6 +1763,7 @@ async function carsEapli2(dados){
 
 // SESSAO 03
 
+let containerFiltrosCombust = document.querySelector('.container_filtros_combust')
 
 
 // adding filtro combust simples
@@ -1767,6 +1776,9 @@ async function filtroCombustSimples() {
 
     for(let i = 0;i < dados.length;i++){
         listCards.push(dados[i])
+
+        loading[3].style.display="flex"
+        containerFiltrosCombust.style.display="none"
 
 
         let newDiv = document.createElement('div')
@@ -2450,6 +2462,8 @@ async function dialogFiltroCombustPesado(){
         body.append(modalDialog)
 
     }
+    loading[3].style.display="none"
+    containerFiltrosCombust.style.display="block"
 
     carsEapli4(dados)
 }
@@ -2620,6 +2634,8 @@ let rowFiltroArMotor = document.querySelector('#row-filtros-ar-motor')
 let rowFiltroArCabine = document.querySelector('#row-filtros-ar-cabine')
 let rowMangotesAr = document.querySelector('#row-mangotesAr')
 
+let containerFiltrosAr = document.querySelector('.container_filtros_ar')
+
 
 // adding filtro de Ar motor
 async function filtroArMotor(){
@@ -2632,6 +2648,8 @@ async function filtroArMotor(){
     for(let i = 0;i < dados.length;i++){
         listCards.push(dados[i])
 
+        loading[4].style.display="block"
+        containerFiltrosAr.style.display="none"
 
         let newDiv = document.createElement('div')
         newDiv.classList.add('col-md-3')
@@ -2936,6 +2954,7 @@ async function dialogFiltroArMotor(){
 
     }
 
+    
     // especificaçoes
     carsEapli5(dados)
 
@@ -3039,175 +3058,6 @@ async function carsEapli5(dados){
 
         }
 
-
-
-    }
-}
-
-
-
-
-// adding filtro de ar cabine
-async function filtroArCabine(){
-
-    const dado = await gettingApi()
-    const dados = dado.filtroArCabine
-    // console.log(dados)
-
-
-
-    for(let i = 0;i < dados.length;i++){
-        listCards.push(dados[i])
-
-
-        let newDiv = document.createElement('div')
-        newDiv.classList.add('col-md-3')
-        newDiv.classList.add('card')
-        newDiv.classList.add(dados[i].linhaCode)
-        newDiv.id = dados[i].id
-
-
-        if(dados[i].qtd == 0){
-            newDiv.classList.add('acabou')
-        }
-
-
-        newDiv.innerHTML = `
-        <img src="${dados[i].image}" alt="${dados[i].info}" class="img-fluid">
-        <div class="card-body">
-            <h5 class="card-title">${dados[i].nome}</h5>
-            <h5 class="card-title">${dados[i].info}</h5>
-            <p class="card-text">Linha ${dados[i].linha}</p>
-        </div>
-
-        <div class='card-footer'>
-            <button type="button" class="padraoBtn" data-bs-toggle="modal" data-bs-target="${dados[i].linkApli}"><span class="btnTxtAplicacoes">Aplicações</span></button>
-
-            <button class="btnBuy">
-                <span class="priceBuy">${dados[i].price.toFixed(2).replace('.',',')}</span>
-                <span class="txtBuy">Comprar</span>
-            </button>
-        </div>
-        
-        `
-
-        rowFiltroArCabine.appendChild(newDiv)
-
-    }
-
-    // chamando dialog
-    dialogFiltroArCabine()
-
-}
-
-// adding dialog filtros de ar cabine
-async function dialogFiltroArCabine(){
-    const dado = await gettingApi()
-    const dados = dado.filtroArCabine
-    // console.log(dados)
-
-    for(let i = 0;i < dados.length;i++){
-        // console.log(dados.length)
-
-        // dados especificos
-        code = await dados[i].aplicacoes[0].codeApli
-        montadora = await dados[i].aplicacoes[0].montadora
-        nameProduct = await dados[i].info
-        marcaProduct = await dados[i].marca
-        codeProduct = await dados[i].code
-        montadora = await dados[i].aplicacoes[0].montadora
-        idProduct = await dados[i].id
-
-        let modalDialog = document.createElement('div')
-
-        modalDialog.innerHTML = `
-
-    <div class="modal fade thisModal" id="${code}" aria-hidden="true" aria-labelledby="modal-filtro-label" tabindex="-1" >
-        <div class="modal-dialog modal-dialog-scrollable">
-
-            <div class="modal-content" id="modal-content">
-
-                <div class="modal-header">
-                    <h2>Aplicações</h2>
-                    <button class="btn-close" type="button" data-bs-dismiss="modal" aria-label="close"></button>
-                </div>
-                <div class="modal-body">
-                    <h5 title="${idProduct}">${nameProduct}</h5>   
-
-                    <ul id="lista-aplicacoes" class="filtroArCabine">
-                        <li class="montadora">${montadora}:</li>
-
-                    </ul>
-
-                </div>
-                <div class="modal-footer">
-                    <p><span class="carro">Marca:</span> <span class="marcas">${marcaProduct}</span></p>
-                    <p class="carro">C-${codeProduct}</p>
-                </div>
-            </div>
-        </div>
-    </div>
-    
-    `
-        
-        body.append(modalDialog)
-
-    }
-
-    // adding aplications
-    carsEapli6(dados)
-
-}
-
-// adding cars and aplications in dialog
-async function carsEapli6(dados){
-    // console.log(dados) filtroArCabine
-
-    let allModalBody = document.querySelectorAll('.modal-body .filtroArCabine')
-    // console.log(allModalBody)
-
-    let cont = 0
-
-    for(let i = 0;i < dados.length;i++){
-
-        // APLICAÇÕES
-        let aplicacao = await dados[i].aplicacoes[0].anoApli
-        // let aplicacoesTwo = await dados[i].aplicacoesTwo
-        // let aplicacoesThree = await dados[i].aplicacoesThree
-
-
-        // ADDING CARROS 1
-         let carros = await dados[i].aplicacoes[0].carros
-
-         carros.map((carro, index) =>{
-
-             
-            let liLista = document.createElement('li')
-            liLista.classList.add(`listCars`)
- 
-            liLista.innerHTML = `
-              <span class="carro">${carro}: </span>
- 
-                 `
-            //  console.log(liLista)
-
-            allModalBody[i].appendChild(liLista)
-                
-         })
-
-         
-         // ADDING APLICACOES 1
-        let allLis = document.querySelectorAll(`.modal-body .filtroArCabine .listCars`)
-        // console.log(allLis.length)
-        
-        aplicacao.forEach((apli) =>{
-            cont += 1
-
-            let spanLi = document.createElement('span')
-            spanLi.innerHTML = `${apli}`
-            // console.log(cont)
-            allLis[cont - 1].append(spanLi)
-        })
 
 
     }
@@ -3321,7 +3171,8 @@ async function dialogMangoteAr(){
         body.append(modalDialog)
 
     }
-    
+    loading[4].style.display="none"
+    containerFiltrosAr.style.display="block"
     // adding aplications
     carsEapli7(dados)
 
@@ -3391,6 +3242,8 @@ let rowBarraAxiais = document.querySelector('#row-axiais')
 let rowEstabilizadores = document.querySelector('#row-estabilizadores')
 let rowBuchaCaixaDir = document.querySelector('#row-buchas-reparos')
 
+let containerTerminais = document.querySelector('.container_terminais')
+
 
 // adding terminais direção
 async function terminaisDirecao(){
@@ -3402,6 +3255,8 @@ async function terminaisDirecao(){
     for(let i = 0;i < dados.length;i++){
         listCards.push(dados[i])
 
+        loading[5].style.display="flex"
+        containerTerminais.style.display="none"
 
         let newDiv = document.createElement('div')
         newDiv.classList.add('col-md-3')
@@ -4526,6 +4381,8 @@ async function dialogBuchaCaixaDir(){
         body.append(modalDialog)
 
     }
+    loading[5].style.display="none"
+    containerTerminais.style.display="block"
 
     // aplications 
     carsEapli11(dados)
