@@ -445,7 +445,7 @@ btnLoginEntrar.addEventListener('click', (e) =>{
 // verificao de login
 
 // API REQUEST
-const apiUrl = 'https://store-api-rxgw.onrender.com/'
+const apiUrl = ''
 
 
 // dados
@@ -509,13 +509,14 @@ async function entrarValidation(formdata){
 let btnEntrar = document.querySelector('.btnEntrar')
 btnEntrar.addEventListener('click', (e) =>{
     e.preventDefault()
-
+    alert('Funcão não disponível!')
     const formdata = {
         nome: document.querySelector('.usernameInput').value.trim(),
         senha: document.querySelector('.passwordInput').value.trim()
     }
 
-    entrarValidation(formdata)
+
+    // entrarValidation(formdata)
 
     let nome = document.querySelector('.usernameInput')
     let senha = document.querySelector('.passwordInput')
@@ -559,7 +560,6 @@ async function creatingUser(obj){
 
 }
 
-
 async function cadastroValidation(formdata){
 
     const users = await gettingUsers()
@@ -586,6 +586,7 @@ btnCadastrar.addEventListener('click', (e) =>{
         email: document.querySelector('.emailCad').value.trim(),
         password: document.querySelector('.passwordCad').value.trim()
     }    
+    alert('Funcão não disponível!')
 
 
     const regexEmail = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
@@ -609,7 +610,7 @@ btnCadastrar.addEventListener('click', (e) =>{
         return false
     }
 
-    cadastroValidation(formdata)
+    // cadastroValidation(formdata)
 
     let userNameCad = document.querySelector('.userNameCad')
     let emailCad = document.querySelector('.emailCad')

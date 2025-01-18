@@ -136,7 +136,6 @@ async function gettingApi(){
 
 }
 
-// gettingApi()
 
 let loading = document.querySelectorAll('.loading')
 
@@ -464,8 +463,7 @@ async function addBattery(){
 
     }
     
-    loading[0].style.display="none"
-    containerInicial.style.display="block"
+    
 
 }
 
@@ -487,8 +485,6 @@ async function addOleo2(){
 
     for(let i = 0;i < dadosOleo.length;i++){
 
-        loading[1].style.display="flex"
-        containerOleos.style.display="none"
 
         let oleoCards = document.createElement('div')
         oleoCards.classList.add('col-md-3')
@@ -521,6 +517,7 @@ async function addOleo2(){
         estrutura2Oleo.appendChild(oleoCards)
 
     }
+    
     filtrarMarcas()
 }
 
@@ -779,9 +776,8 @@ async function addFluidos(){
 
     }
 
-    loading[1].style.display="none"
-    containerOleos.style.display="block"
-
+    loading[0].style.display="none"
+    containerInicial.style.display="block"
 }
 
 
@@ -802,10 +798,6 @@ async function addFiltroOleoSimp(){
     const dado = await gettingApi()
     const dados = dado.filtroOleoSimples
     
-    
-    // console.log(dados)
-
-
     for(let i = 0;i < dados.length;i++){
         listCards.push(dados[i])
 
@@ -2648,7 +2640,7 @@ async function filtroArMotor(){
     for(let i = 0;i < dados.length;i++){
         listCards.push(dados[i])
 
-        loading[4].style.display="block"
+        loading[4].style.display="flex"
         containerFiltrosAr.style.display="none"
 
         let newDiv = document.createElement('div')
@@ -3449,10 +3441,8 @@ function filtroTerminais(){
 async function dialogTerminaisDirecao(){
     const dado = await gettingApi()
     const dados = dado.terminaisDirecao
-    // console.log(dados)
 
     for(let i = 0;i < dados.length;i++){
-        // console.log(dados.length)
 
         // dados especificos
         code = await dados[i].aplicacoes[0].codeApli
@@ -3985,9 +3975,7 @@ async function estabilazadores(){
 
     const dado = await gettingApi()
     const dados = dado.estabilizadores
-    // console.log(dados)
-
-
+    
 
     for(let i = 0;i < dados.length;i++){
         listCards.push(dados[i])
@@ -4456,6 +4444,8 @@ let rowBuchas = document.querySelector('#row-buchas')
 let rowCoxinsAmort = document.querySelector('#row-coxins-amort')
 let rowBieleta = document.querySelector('#row-bieleta')
 
+let containerSusp = document.querySelector('.container-susp')
+
 
 // adding batedores
 async function batedores(){
@@ -4465,6 +4455,9 @@ async function batedores(){
     // console.log(dados)
 
     for(let i = 0;i < dados.length;i++){
+        loading[6].style.display="flex"
+        containerSusp.style.display="none"
+
         listCards.push(dados[i])
 
 
@@ -5983,6 +5976,8 @@ async function dialogBieletas(){
 
     }
 
+    loading[6].style.display="none"
+    containerSusp.style.display="block"
     // aplications
     carsEapli17(dados)
 
@@ -6057,6 +6052,7 @@ let rowReparosFreio = document.querySelector('#row-reparos')
 let rowCabos = document.querySelector('#row-cabos')
 let rowAcessoriosFreio = document.querySelector('#row-acessorios-freio')
 
+let containerFreios = document.querySelector('.container-freios')
 
 
 // adding pastilhas
@@ -6064,10 +6060,11 @@ async function pastilhasFreio(){
 
     const dado = await gettingApi()
     const dados = dado.pastilhaFreio
-    // console.log(dados)
 
 
     for(let i = 0;i < dados.length;i++){
+        loading[7].style.display="flex"
+        containerFreios.style.display="none"
         listCards.push(dados[i])
 
 
@@ -8282,6 +8279,8 @@ async function dialogAcessorioFreio(){
 
     }
 
+    loading[7].style.display="none"
+    containerFreios.style.display="block"
     // aplications
     carsEapli25(dados)
 }
@@ -8351,6 +8350,7 @@ let rowCabosVela = document.querySelector('#row-cabo-vela')
 let rowVelaIgnicao = document.querySelector('#row-vela-ignicao')
 let rowBobinas = document.querySelector('#row-bobinas')
 let rowModoloIgnicao = document.querySelector('#row-modolo-ignicao')
+let containerIgnicao = document.querySelector('.container-ignicao')
 
 
 
@@ -8359,9 +8359,10 @@ let rowModoloIgnicao = document.querySelector('#row-modolo-ignicao')
 async function cabosVela(){
     const dado = await gettingApi()
     const dados = dado.cabosDvela
-    // console.log(dados)
 
     for(let i = 0;i < dados.length;i++){
+        loading[8].style.display="flex"
+        containerIgnicao.style.display="none"
         listCards.push(dados[i])
 
 
@@ -9030,7 +9031,6 @@ async function dialogIgnicao(){
     // console.log(dados)
 
     for(let i = 0;i < dados.length;i++){
-        // console.log(dados.length)
 
         // dados especificos
         code = await dados[i].aplicacoes[0].codeApli
@@ -9078,6 +9078,8 @@ async function dialogIgnicao(){
 
     }
 
+    loading[8].style.display="none"
+    containerIgnicao.style.display="block"
     // aplications
     carsEapli29(dados)
 
@@ -9150,6 +9152,7 @@ let rowCorreiaAlter = document.querySelector('#row-correia-alter')
 let rowCorreiaDent = document.querySelector('#row-correia-dent')
 let rowRegVolt = document.querySelector('#row-reg-volt')
 let rowEstator = document.querySelector('#row-estatores')
+let containerCarga = document.querySelector('.container-carga')
 
 
 // adding tensores correia
@@ -9159,6 +9162,8 @@ async function tensores(){
     // console.log(dados)
 
     for(let i = 0;i < dados.length;i++){
+        loading[9].style.display="flex"
+        containerCarga.style.display="none"
         listCards.push(dados[i])
 
 
@@ -10247,10 +10252,8 @@ async function dialogEstatores(){
 
     const dado = await gettingApi()
     const dados = dado.estatores
-    // console.log(dados)
 
     for(let i = 0;i < dados.length;i++){
-        // console.log(dados.length)
 
         // dados especificos
         code = await dados[i].aplicacoes[0].codeApli
@@ -10298,6 +10301,8 @@ async function dialogEstatores(){
 
     }
 
+    loading[9].style.display="none"
+    containerCarga.style.display="block"
     // aplications
     carsEapli34(dados)
 }
@@ -10412,6 +10417,7 @@ async function carsEapli34(dados){
 let rowImpulsores = document.querySelector('#row-impulsores')
 let rowPortaEscovas = document.querySelector('#row-porta-escova')
 let rowAcessoriosPart = document.querySelector('#row-acessorios-partida')
+let containerPartida = document.querySelector('.container-partida')
 
 
 // adding inpulsores (bendix)
@@ -10421,6 +10427,8 @@ async function inpulsores(){
     // console.log(dados)
 
     for(let i = 0;i < dados.length;i++){
+        loading[10].style.display="flex"
+        containerPartida.style.display="none"
         listCards.push(dados[i])
 
 
@@ -10958,10 +10966,8 @@ async function dialogMotorPartida(){
 
     const dado = await gettingApi()
     const dados = dado.acessoriosMotorPart
-    // console.log(dados)
 
     for(let i = 0;i < dados.length;i++){
-        // console.log(dados.length)
 
         // dados especificos
         code = await dados[i].aplicacoes[0].codeApli
@@ -11009,6 +11015,8 @@ async function dialogMotorPartida(){
 
     }
 
+    loading[10].style.display="none"
+    containerPartida.style.display="block"
     // aplications
     carsEapli37(dados)
 }
@@ -11128,6 +11136,7 @@ let rowCanos = document.querySelector('#row-canos')
 let rowTubos = document.querySelector('#row-tubos')
 let rowResistencia = document.querySelector('#row-resistencia')
 let rowAcessoriosArref = document.querySelector('#row-acessorios')
+let containerArrefe = document.querySelector('.container-arrefe')
 
 
 
@@ -11135,9 +11144,10 @@ let rowAcessoriosArref = document.querySelector('#row-acessorios')
 async function bombasDagua(){
     const dado = await gettingApi()
     const dados = dado.bombasDgua
-    // console.log(dados)
     
     for(let i = 0;i < dados.length;i++){
+        loading[11].style.display="flex"
+        containerArrefe.style.display="none"
         listCards.push(dados[i])
 
 
@@ -12678,6 +12688,8 @@ async function dialogAcessoriosArref(){
 
     }
 
+    loading[11].style.display="none"
+    containerArrefe.style.display="block"
     // aplications
     carsEapli45(dados)
 
@@ -12751,6 +12763,7 @@ let rowBicos = document.querySelector('#row-bicos')
 let rowBombaCombust = document.querySelector('#row-bomba-combust')
 let rowFlange = document.querySelector('#row-flange')
 let rowAcessoriosCombust = document.querySelector('#row-acessocios-combust')
+let containerCombust = document.querySelector('.container-combust')
 
 
 
@@ -12763,6 +12776,8 @@ async function bicos(){
 
 
     for(let i = 0;i < dados.length;i++){
+        loading[12].style.display="flex"
+        containerCombust.style.display="none"
         listCards.push(dados[i])
 
 
@@ -13539,7 +13554,8 @@ async function dialogAcessoriosCombust(){
         body.append(modalDialog)
 
     }
-
+    loading[12].style.display="none"
+    containerCombust.style.display="block"
     // aplications
     carsEapli49(dados)
 
@@ -13609,6 +13625,7 @@ async function carsEapli49(dados){
 
 let rowDiscosEmbre = document.querySelector('#row-discos-embre')
 let rowReparosCeT = document.querySelector('#row-reparos-CeT')
+let containerTransmi = document.querySelector('.container-transmi')
 
 
 
@@ -13621,6 +13638,8 @@ async function discosEmbre(){
     // console.log(dados)
 
     for(let i = 0;i < dados.length;i++){
+        loading[13].style.display="flex"
+        containerTransmi.style.display="none"
         listCards.push(dados[i])
 
 
@@ -13845,10 +13864,9 @@ async function dialogReparosTrambCambio(){
 
     const dado = await gettingApi()
     const dados = dado.reparoCambioTrabulador
-    // console.log(dados)
+
 
     for(let i = 0;i < dados.length;i++){
-        // console.log(dados.length)
 
         // dados especificos
         code = await dados[i].aplicacoes[0].codeApli
@@ -13896,6 +13914,8 @@ async function dialogReparosTrambCambio(){
 
     }
 
+    loading[13].style.display="none"
+    containerTransmi.style.display="block"
     // aplications 
     carsEapli51(dados)
 
@@ -13971,6 +13991,7 @@ let rowPontas = document.querySelector('#row-pontas')
 let rowJuntas = document.querySelector('#row-juntas')
 let rowRolamentosRoda = document.querySelector('#row-rolamento-roda')
 let rowRolamentosDiversos = document.querySelector('#row-rolamento-diversos')
+let containerRodagem = document.querySelector('.container-rodagem')
 
 
 
@@ -13982,6 +14003,8 @@ async function cubosRoda(){
     // console.log(dados)
 
     for(let i = 0;i < dados.length;i++){
+        loading[14].style.display="flex"
+        containerRodagem.style.display="none"
         listCards.push(dados[i])
 
 
@@ -14982,6 +15005,8 @@ async function dialogRolamentDiver(){
 
     }
 
+    loading[14].style.display="none"
+    containerRodagem.style.display="block"
     // aplications
     carsEapli56(dados)
 }
@@ -15053,8 +15078,7 @@ let rowBojos = document.querySelector('#row-bojos')
 let rowInter = document.querySelector('#row-inter')
 let rowCoxinsEscap = document.querySelector('#row-coxin-escap')
 let rowAcessoriosEscap = document.querySelector('#row-acessorios-escap')
-
-
+let containerEscapes = document.querySelector('.container-escapes')
 
 
 
@@ -15067,6 +15091,8 @@ async function bojos(){
 
 
     for(let i = 0;i < dados.length;i++){
+        loading[15].style.display="flex"
+        containerEscapes.style.display="none"
         listCards.push(dados[i])
 
 
@@ -15887,6 +15913,8 @@ async function dialogConxinsEscap(){
 
     }
 
+    loading[15].style.display="none"
+    containerEscapes.style.display="block"
     // aplications
     carsEapli59(dados)
 }
@@ -16042,8 +16070,8 @@ async function acessoriosEscap(){
         `
 
         rowAcessoriosEscap.appendChild(newDiv)
-
     }
+    
 }
 
 

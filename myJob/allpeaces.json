@@ -15149,13 +15149,6 @@
             "price": 7.5,
             "qtd": 1
         }
-    ],
-    "users": [
-        {
-            "id": 1,
-            "username": "vinicius",
-            "email": "viniciuseloi10@gmail.com",
-            "password": "vini10"
-        }
     ]
+    
 }
