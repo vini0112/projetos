@@ -10,7 +10,7 @@
 ## 🚀 Getting Started
 ### 1. 📥 Clone the Repository 
   ```
-  git clone https://github.com/vini0112/angular-projects.git
+  git clone https://github.com/vini0112/projetos.git
   ```
 ### 2. Run it using live server
  
