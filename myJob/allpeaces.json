@@ -13,7 +13,7 @@
             "id": 2,
             "nome": "Óleo 0w20",
             "image": "photos/oleos/lubrax0w20.png",
-            "marca": "Lubrax",
+            "marca": "lubrax",
             "info": "Sintético",
             "price": 45,
             "qtd": 10
@@ -22,7 +22,7 @@
             "id": 3,
             "nome": "Óleo 15w40",
             "image": "photos/oleos/lubrax15w40.png",
-            "marca": "Lubrax",
+            "marca": "lubrax",
             "info": "Semi-Sintético",
             "price": 35,
             "qtd": 0
@@ -31,7 +31,7 @@
             "id": 4,
             "nome": "Óleo 15w40",
             "image": "photos/oleos/lubrax-extraturbo.png",
-            "marca": "Lubrax",
+            "marca": "lubrax",
             "info": "Mineral Extra Turbo",
             "price": 115,
             "qtd": 10
@@ -40,7 +40,7 @@
             "id": 5,
             "nome": "Óleo 5w30",
             "image": "photos/oleos/seleniakpower5w30.png",
-            "marca": "Selenia",
+            "marca": "selenia",
             "info": "Sintético",
             "price": 36,
             "qtd": 1
@@ -49,7 +49,7 @@
             "id": 6,
             "nome": "Óleo 15w40",
             "image": "photos/oleos/selenia15w40.png",
-            "marca": "Selenia",
+            "marca": "selenia",
             "info": "Semi-Sintético",
             "price": 33,
             "qtd": 10
@@ -58,7 +58,7 @@
             "id": 7,
             "nome": "Óleo 5w40",
             "image": "photos/oleos/elaion5w40.png",
-            "marca": "Elaion",
+            "marca": "elaion",
             "info": "Sintético",
             "price": 46,
             "qtd": 0
@@ -67,7 +67,7 @@
             "id": 8,
             "nome": "Óleo 10w40",
             "image": "photos/oleos/elaion10w40.png",
-            "marca": "Elaion",
+            "marca": "elaion",
             "info": "Semi-Sintético",
             "price": 40,
             "qtd": 10
@@ -76,7 +76,7 @@
             "id": 9,
             "nome": "Óleo 5w30",
             "image": "photos/oleos/mobil5w30.png",
-            "marca": "Mobil",
+            "marca": "mobil",
             "info": "Sintético",
             "price": 42.74,
             "qtd": 10
@@ -85,7 +85,7 @@
             "id": 10,
             "nome": "Óleo 15w40",
             "image": "photos/oleos/mobil15w40-4l.png",
-            "marca": "Mobil",
+            "marca": "mobil",
             "info": "Mineral",
             "price": 125,
             "qtd": 0
@@ -94,7 +94,7 @@
             "id": 11,
             "nome": "Óleo 15w40",
             "image": "photos/oleos/mobil15w40-20l.png",
-            "marca": "Mobil",
+            "marca": "mobil",
             "info": "Mineral",
             "price": 596.26,
             "qtd": 1
@@ -103,7 +103,7 @@
             "id": 12,
             "nome": "Óleo 15w40",
             "image": "photos/oleos/lube15w40-semi.png",
-            "marca": "Lubel",
+            "marca": "lubel",
             "info": "Semi-Sintético",
             "price": 35,
             "qtd": 10
@@ -112,7 +112,7 @@
             "id": 13,
             "nome": "Óleo 20w50",
             "image": "photos/oleos/lubel20w50-mine.png",
-            "marca": "Lubel",
+            "marca": "lubel",
             "info": "Mineral",
             "price": 26.6,
             "qtd": 10
@@ -121,7 +121,7 @@
             "id": 14,
             "nome": "Óleo 15w40",
             "image": "photos/oleos/lubel15w40-mine.png",
-            "marca": "Lubel",
+            "marca": "lubel",
             "info": "Mineral",
             "price": 28.56,
             "qtd": 10
@@ -130,7 +130,7 @@
             "id": 15,
             "nome": "Óleo 20w50",
             "image": "photos/oleos/classicLine.png",
-            "marca": "Classic-Line",
+            "marca": "classic-Line",
             "info": "Mineral",
             "price": 26.46,
             "qtd": 0
@@ -139,7 +139,7 @@
             "id": 16,
             "nome": "Óleo 5w40",
             "image": "photos/oleos/bproauto.png",
-            "marca": "BProAuto",
+            "marca": "bProAuto",
             "info": "Sintético",
             "price": 36.84,
             "qtd": 1
@@ -7643,7 +7643,7 @@
             "id": 234,
             "nome": "Reparo Parcial Freio Diant.",
             "image": "photos/freios/reparos/rpp407.png",
-            "marca": "Freio Piau",
+            "marca": "Freio-Piau",
             "info": "RPP407",
             "linha": "Fiat/Ford",
             "linhaCode": "fiat",
@@ -11922,7 +11922,7 @@
             "id": 358,
             "nome": "Bico Injeção",
             "image": "photos/sist-combust/bicos/mbdz111.png",
-            "marca": "Meca Brasil",
+            "marca": "Meca-Brasil",
             "info": "MBDZ111",
             "linha": "GM",
             "linhaCode": "gm",
@@ -11974,7 +11974,7 @@
             "id": 360,
             "nome": "Bico Injeção",
             "image": "photos/sist-combust/bicos/stkm176.png",
-            "marca": "Rainha da Sete",
+            "marca": "Rainha-Sete",
             "info": "STKM176",
             "linha": "Volkswagen",
             "linhaCode": "vws",

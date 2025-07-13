@@ -23,7 +23,6 @@
     <script src="js/index02.js" defer></script>
     <script src="js/index.js" defer></script>
     
-
 </head>
 
 <body>
@@ -35,7 +34,7 @@
             <!-- navbar principal -->
             <nav class="navbar navbar-expand-lg" id="navbar">
 
-                <a href="#" class="navbar-brand" id="title-princ">
+                <a href="#inicial" class="navbar-brand" id="title-princ" onclick="goToSection('inicial')" >
                     <img src="photos/banners/logo.png" alt="Logo" id="logo">amião Auto Peças
                 </a>
 
@@ -51,7 +50,6 @@
                     <i class="fa-solid fa-right-from-bracket" id="btnLogOut" ></i>
                 </div>
                 
-                <!-- side bar -->
             </nav>
             
             <!-- navegação rapida -->
@@ -66,9 +64,10 @@
                         
                         <ul class="dropdown-menu">
 
-
-                            <!-- DROPS NO-MOBILE area-sistema-direcao-->
-                            <li class="dropdown-item no-mobile"><a href="#area-sistema-direcao" class="setLink">Sistema Direção</a></li>
+                            <!-- DROPS NO-MOBILE -->
+                            <li class="dropdown-item no-mobile" >
+                                <a onclick="goToSection('area-sistema-direcao')" href="#area-sistema-direcao" class="setLink">Sistema Direção</a>
+                            </li>
 
                             <li class="dropdown-item no-mobile"><a href="#area-sistema-suspensao" class="setLink">Sistema Suspensão</a></li>
 
@@ -96,24 +95,32 @@
 
                     
 
-                      <!-- dropdown filtros -->
+                    <!-- dropdown filtros -->
                     <li class="nav-item estrutura-drop dropdown" id="drop-filtro">
 
                         <a href="#" class="nav-link dropdown-toggle word-shadow" role="button" data-bs-toggle="dropdown" aria-expanded="false">Filtros</a>
 
                         <ul class="dropdown-menu">
-                            <li class="dropdown-item btnFiltros dropdown-link"><a href="#area-filtros" class="">Filtro Óleo</a></li>
+                            <li class="dropdown-item btnFiltros dropdown-link">
+                                <a href="#area-filtros" onclick="goToSection('area-filtros')" class="">Filtro Óleo</a>
+                            </li>
 
-                            <li class="dropdown-item btnFiltros dropdown-link"><a href="#row-filtro-combus-simples" class="">Filtro Combustível</a></li>
+                            <li class="dropdown-item btnFiltros dropdown-link">
+                                <a href="#row-filtro-combus-simples" onclick="goToSection('area-filtro-combus')">Filtro Combustível</a>
+                            </li>
 
-                            <li class="dropdown-item btnFiltros dropdown-link"><a href="#area-filtro-ar" class="">Filtros de Ar</a></li>
+                            <li class="dropdown-item btnFiltros dropdown-link">
+                                <a href="#area-filtro-ar" onclick="goToSection('area-filtro-ar')">Filtros de Ar</a>
+                            </li>
                         </ul>
 
                     </li>
 
 
                     <!-- oleos -->
-                    <li class="nav-item estrutura word-shadow" id="link-oleos"><a href="#area-oleos" class="nav-link">Óleos</a></li>
+                    <li class="nav-item estrutura word-shadow" id="link-oleos">
+                        <a onclick="goToSection('area-oleos')" href="#area-oleos" class="nav-link">Óleos</a>
+                    </li>
                     
 
                 </ul>
@@ -139,7 +146,7 @@
                             <h5>Precisando de uma Batéria Nova?!</h5>
                             <p>Temos as Melhores Marcas do Mercado pra você!</p>
                             
-                            <a href="#row-inicio-baterias" class="link-banner">Conferir</a>
+                            <a href="#row-inicio-baterias" onclick="goToSection('inicial')" class="link-banner">Conferir</a>
                         </div>
                     </div>
 
@@ -150,7 +157,7 @@
                         <div class="carousel-caption">
                             <h5>Já fez sua troca de óleo?</h5>
                             <p>Confira os óleos lubrificantes e filtros disponiveis na nossa loja!</p>
-                            <a href="#row-inicio-oleos" class="link-banner">Conferir</a>
+                            <a href="#row-inicio-oleos" onclick="goToSection('inicial')" class="link-banner">Conferir</a>
                         </div>
                     </div>
 
@@ -167,7 +174,6 @@
             </div>
         </div>
 
-        
 
 
         <!-- 0 -->
@@ -181,7 +187,7 @@
 
                 
                 <!-- OLEOS DE MOTOR -->
-                <div class="row espaco-card space-around-card" id="row-inicio-oleos">
+                <div class="row espaco-card space-around-card" id="row-inicio-oleos"><!--  -->
                     
 
                     <div class="col-md-12">
@@ -203,7 +209,7 @@
 
                 
                 <!-- BATERIAS -->
-                <div class="row espaco-card space-around-card" id="row-inicio-baterias">
+                <div class="row espaco-card space-around-card" id="row-baterias">
 
                     <div class="col-md-12 bannerBaterias">
                         <h2 class="titles-sessoes espacamento-title">Batérias</h2>
@@ -222,14 +228,11 @@
         <!-- 1 -->
         <!-- sessao de oleos  -->
         <div id="area-oleos" class="sessao">
-            <div class="loading">
-                <div class="spinner"></div>
-            </div>
+            
             <div class="container container_oleos">
 
                 <!-- OLEOS DE MOTOR -->
                 <div class="row espaco-card space-around-card" id="row-oleos">
-                    
 
                     <div class="col-md-12">
                         <h2 class="titles-sessoes espacamento-title">Óleos de Motor</h2>
@@ -246,13 +249,11 @@
                         <button class="design-btn">Lubel</button>                
                     </div>
 
-
-
                 </div>
 
 
                 <!-- fluidos de freio -->
-                <div class="row espaco-card space-around-card" id="row-fluido-oleo">
+                <div class="row espaco-card space-around-card" id="row-fluidos">
 
                     <div class="col-12">
                         <h2 class="titles-sessoes espacamento-title">Fluidos de Freio</h2>
@@ -274,15 +275,13 @@
         <!-- 2 -->
         <!-- sessao filtros oleo  -->
         <div id="area-filtros" class="sessao">
-            <div class="loading">
-                <div class="spinner"></div>
-            </div>
+            
 
             <div class="container container_filtros_oleo">
                 
 
                 <!-- filtros simples  -->
-                <div class="row espaco-card space-around-card" id="row-filtros">
+                <div class="row espaco-card space-around-card" id="row-filtroOleoSimples">
 
                     <div class="col-md-12">
                         <h2 class="titles-sessoes espacamento-title">Filtros de Óleo</h2>
@@ -293,7 +292,7 @@
                         <button class="design-btn active">Todos</button>
                         <button class="design-btn">Fiat</button>
                         <button class="design-btn">GM</button>
-                        <button class="design-btn">Volskwage</button>
+                        <button class="design-btn">Volkswagen</button>
                         <button class="design-btn">Toyota</button>
                         <button class="design-btn">Renault</button>
                         <button class="design-btn">Ford</button>
@@ -306,7 +305,7 @@
 
 
                 <!-- filtros pesados  -->
-                <div class="row espaco-card space-around-card" id="row-filtros-pesados">
+                <div class="row espaco-card space-around-card" id="row-filtroOleoPesado">
 
                     <div class="col-md-12" style="margin: 40px 0px;">
                         <h2 class="titles-sessoes espacamento-title">Filtros Pesados</h2>
@@ -333,13 +332,11 @@
         <!-- 3 -->
         <!-- sessao filtros combustivel -->
         <div id="area-filtro-combus" class="sessao">
-            <div class="loading">
-                <div class="spinner"></div>
-            </div>
+            
             <div class="container container_filtros_combust">
 
                 <!-- SIMPLES -->
-                <div class="row espaco-card space-around-card" id="row-filtro-combus-simples">
+                <div class="row espaco-card space-around-card" id="row-filtroCombustSimples">
                     <div class="col-12">
                         <h2 class="titles-sessoes espacamento-title">Filtros de combustível (simples)</h2>
                     </div>
@@ -349,7 +346,7 @@
                         <button class="design-btn btn-filtro-combus-simples active">Todos</button>
                         <button class="design-btn btn-filtro-combus-simples">GM</button>
                         <button class="design-btn btn-filtro-combus-simples">Fiat</button>
-                        <button class="design-btn btn-filtro-combus-simples">Volkswage</button>
+                        <button class="design-btn btn-filtro-combus-simples">Volkswagen</button>
                         <button class="design-btn btn-filtro-combus-simples">Ford</button>
                     </div>
 
@@ -358,7 +355,7 @@
 
 
                 <!-- PESADOS  -->
-                <div class="row espaco-card space-around-card" id="row-filtro-combus">
+                <div class="row espaco-card space-around-card" id="row-filtroCombustPesado">
                     <div class="col-12">
                         <h2 class="titles-sessoes espacamento-title">Filtros de Combustível (Pesados)</h2>
                     </div>
@@ -385,9 +382,7 @@
         <!-- 4 -->
             <!-- sessao filtros de ar -->
         <div id="area-filtro-ar" class="sessao">
-            <div class="loading">
-                <div class="spinner"></div>
-            </div>
+            
             <div class="container container_filtros_ar">
 
 
@@ -442,7 +437,7 @@
 
 
                 <!-- FILTROS DE AR DO MOTOR -->
-                <div class="row espaco-card space-around-card" id="row-filtros-ar-motor">
+                <div class="row espaco-card space-around-card" id="row-filtroArMotor">
                     <div class="col-12">
                         <h2 class="titles-sessoes espacamento-title">Filtros de Ar do Motor</h2>
                     </div>
@@ -452,7 +447,7 @@
                     <div class="col-12 btn-mobile-wrap" id="all-btns-filtro-ar-motor">
                         <button class="design-btn active">Todos</button>
                         <button class="design-btn">GM</button>
-                        <button class="design-btn">Volskwage</button>
+                        <button class="design-btn">Volkswagen</button>
                         <button class="design-btn">Fiat</button>
                         <button class="design-btn">Ford</button>
                         <button class="design-btn">Renault</button>
@@ -464,7 +459,7 @@
 
 
                 <!-- mangotes de ar -->
-                <div class="row espaco-card space-around-card" id="row-mangotesAr">
+                <div class="row espaco-card space-around-card" id="row-mangoteAR">
 
 
                     <div class="col-12">
@@ -483,9 +478,8 @@
         <!-- 5 -->
         <!-- sessao do sistema de direcao -->
         <div id="area-sistema-direcao" class="sessao">
-            <div class="loading">
-                <div class="spinner"></div>
-            </div>
+            
+
             <div class="container container_terminais">
 
                 <!-- parte do header do sistema  -->
@@ -531,7 +525,7 @@
 
 
                 <!-- TERMINAIS DE DIREÇÃO  -->
-                <div class="row espaco-card space-around-card" id="row-terminais">
+                <div class="row espaco-card space-around-card" id="row-terminaisDirecao">
                     <div class="col-12">
                         <h2 class="titles-sessoes espacamento-title">Terminais de Direção</h2>
                     </div>
@@ -540,7 +534,7 @@
                     <div class="col-12 btn-mobile-wrap" id="btns-terminais">
                         <button class="design-btn active">Todos</button>
                         <button class="design-btn">Fiat</button>
-                        <button class="design-btn">Volskwage</button>
+                        <button class="design-btn">Volkswagen</button>
                         <button class="design-btn">GM</button>
                         <button class="design-btn">Nissan</button>
                     </div>
@@ -551,7 +545,7 @@
 
 
                 <!-- BARRAS AXIAIS -->
-                <div class="row espaco-card space-around-card" id="row-axiais">
+                <div class="row espaco-card space-around-card" id="row-barrasAxiais">
 
                     <div class="col-12">
                         <h2 class="titles-sessoes espacamento-title">Barras Axiais</h2>
@@ -561,7 +555,7 @@
                     <div class="col-12 btn-mobile-wrap" id="sistema-btns">
                         <button class="design-btn active">Todos</button>
                         <button class="design-btn">Fiat</button>
-                        <button class="design-btn">Volskwage</button>
+                        <button class="design-btn">Volkswagen</button>
                         <button class="design-btn">GM</button>
                         <button class="design-btn">Ford</button>
                     </div>
@@ -582,7 +576,7 @@
                     <div class="col-12 btn-mobile-wrap" id="btn-estabili">
                         <button class="design-btn active">Todos</button>
                         <button class="design-btn">Fiat</button>
-                        <button class="design-btn">Volskwage</button>
+                        <button class="design-btn">Volkswagen</button>
                         <button class="design-btn">GM</button>
                     </div>
 
@@ -592,7 +586,7 @@
                 
 
                 <!-- bucha caixa direcao  -->
-                <div class="row espaco-card space-around-card" id="row-buchas-reparos">
+                <div class="row espaco-card space-around-card" id="row-BuchaCaixaDirecao">
                     <div class="col-12">
                         <h2 class="titles-sessoes espacamento-title">Buchas e Reparos</h2>
                     </div>
@@ -611,9 +605,7 @@
         <!-- 6 -->
         <!-- sessao do sistema de suspensao -->
         <div id="area-sistema-suspensao" class="sessao">
-            <div class="loading">
-                <div class="spinner"></div>
-            </div>
+            
             <div class="container container-susp">
 
                 <!-- parte do header  -->
@@ -676,7 +668,7 @@
                     <div class="col-12 btn-mobile-wrap" id="btns-batedores">
                         <button class="design-btn active">Todos</button>
                         <button class="design-btn">Fiat</button>
-                        <button class="design-btn">Volskwage</button>
+                        <button class="design-btn">Volkswagen</button>
                         <button class="design-btn">GM</button>
                     </div>
 
@@ -696,7 +688,7 @@
                     <div class="col-12 btn-mobile-wrap" id="btns-pivos">
                         <button class="design-btn active">Todos</button>
                         <button class="design-btn">Fiat</button>
-                        <button class="design-btn">Volskwage</button>
+                        <button class="design-btn">Volkswagen</button>
                         <button class="design-btn">GM</button>
                         <button class="design-btn">Ford</button>
                     </div>
@@ -717,7 +709,7 @@
 
 
                 <!-- Buchas -->
-                <div class="row espaco-card space-around-card" id="row-buchas">
+                <div class="row espaco-card space-around-card" id="row-buchaSusp">
 
                     
                     <div class="col-12">
@@ -729,7 +721,7 @@
                     <div class="col-12 btn-mobile-wrap" id="btns-buchas">
                         <button class="design-btn active">Todos</button>
                         <button class="design-btn">Fiat</button>
-                        <button class="design-btn">Volskwage</button>
+                        <button class="design-btn">Volkswagen</button>
                         <button class="design-btn">GM</button>
                         <button class="design-btn">Ford</button>
                     </div>
@@ -741,7 +733,7 @@
 
 
                 <!-- coxins motor -->
-                <div class="row espaco-card space-around-card" id="row-coxins-amort">
+                <div class="row espaco-card space-around-card" id="row-coxinsAmort">
 
                     
                     <div class="col-12">
@@ -753,7 +745,7 @@
 
 
                 <!-- bieletas -->
-                <div class="row espaco-card space-around-card" id="row-bieleta">
+                <div class="row espaco-card space-around-card" id="row-bieletas">
 
                     
                     <div class="col-12">
@@ -772,9 +764,7 @@
         <!-- 7 -->
         <!-- sessao do sistema de freios  -->
         <div id="area-sistema-freios" class="sessao">
-            <div class="loading">
-                <div class="spinner"></div>
-            </div>
+            
             <div class="container container-freios">
             
 
@@ -832,7 +822,7 @@
 
 
                 <!-- PASTILHAS -->
-                <div class="row espaco-card space-around-card" id="row-pastilhas">
+                <div class="row espaco-card space-around-card" id="row-pastilhaFreio">
 
                     <div class="col-12">
                         <h2 class="titles-sessoes" style="margin-bottom: 50px;">Pastilhas De Freio</h2>
@@ -843,7 +833,7 @@
                     <div class="col-12 btn-mobile-wrap" id="btns-pastilha">
                         <button class="design-btn active">Todos</button>
                         <button class="design-btn">Fiat</button>
-                        <button class="design-btn">Volskwagen</button>
+                        <button class="design-btn">Volkswagen</button>
                         <button class="design-btn">GM</button>
                         <button class="design-btn">Toyota</button>
                         <button class="design-btn">Ford</button>
@@ -855,7 +845,7 @@
 
 
                 <!-- DISCOS DE FREIO -->
-                <div class="row espaco-card space-around-card" id="row-discos">
+                <div class="row espaco-card space-around-card" id="row-discosFreio">
 
                     <div class="col-12">
                         <h2 class="titles-sessoes espacamento-title" >Discos De Freio</h2>
@@ -866,7 +856,7 @@
 
 
                 <!-- SAPATAS -->
-                <div class="row espaco-card space-around-card" id="row-sapatas">
+                <div class="row espaco-card space-around-card" id="row-sapatasFreio">
 
                     <div class="col-12">
                         <h2 class="titles-sessoes espacamento-title">Sapatas de Freio</h2>
@@ -890,7 +880,7 @@
 
 
                 <!-- TAMBORES DE FREIO -->
-                <div class="row espaco-card space-around-card" id="row-tambores">
+                <div class="row espaco-card space-around-card" id="row-tamboresFreio">
 
                     <div class="col-12">
                         <h2 class="titles-sessoes espacamento-title">Tambores de Freio</h2>
@@ -904,7 +894,7 @@
 
 
                 <!-- REPAROS -->
-                <div class="row espaco-card space-around-card" id="row-reparos">
+                <div class="row espaco-card space-around-card" id="row-reparosFreio">
 
                     <div class="col-12">
                         <h2 class="titles-sessoes espacamento-title">Reparos</h2>
@@ -915,7 +905,7 @@
                     <div class="col-12 btn-mobile-wrap" id="btns-reparos">
                         <button class="design-btn active">Todos</button>
                         <button class="design-btn">Fiat</button>
-                        <button class="design-btn">Volskwagen</button>
+                        <button class="design-btn">Volkswagen</button>
                         <button class="design-btn">GM</button>
                         <button class="design-btn">Ford</button>
                         <button class="design-btn">Renault</button>
@@ -927,7 +917,7 @@
 
 
                 <!-- CABOS -->
-                <div class="row espaco-card space-around-card" id="row-cabos">
+                <div class="row espaco-card space-around-card" id="row-cabosEflexiveis">
 
                     <div class="col-12">
                         <h2 class="titles-sessoes espacamento-title">Cabos e Flexiveis</h2>
@@ -938,7 +928,7 @@
                     <div class="col-12 btn-mobile-wrap" id="btns-cabos">
                         <button class="design-btn active">Todos</button>
                         <button class="design-btn">Fiat</button>
-                        <button class="design-btn">Volskwagen</button>
+                        <button class="design-btn">Volkswagen</button>
                         <button class="design-btn">GM</button>
                     </div>
 
@@ -947,7 +937,7 @@
 
 
                 <!-- acessorios -->
-                <div class="row espaco-card space-around-card" id="row-acessorios-freio">
+                <div class="row espaco-card space-around-card" id="row-acessoriosFreio">
 
                     <div class="col-12">
                         <h2 class="titles-sessoes espacamento-title">Acessórios</h2>
@@ -964,9 +954,7 @@
         <!-- 8 -->
         <!-- sessao do sistema de ignição -->
         <div id="area-sistema-ignicao" class="sessao">
-            <div class="loading">
-                <div class="spinner"></div>
-            </div>
+            
             <div class="container container-ignicao">
 
 
@@ -1021,7 +1009,7 @@
 
                 
                 <!-- cabos de vela -->
-                <div class="row espaco-card space-around-card" id="row-cabo-vela">
+                <div class="row espaco-card space-around-card" id="row-cabosDvela">
 
                     <div class="col-12">
                         <h2 class="titles-sessoes" style="margin-bottom: 50px;">Cabos de Vela</h2>
@@ -1032,7 +1020,7 @@
 
 
                 <!-- velas ignicao -->
-                <div class="row espaco-card space-around-card" id="row-vela-ignicao">
+                <div class="row espaco-card space-around-card" id="row-velas">
 
                     <div class="col-12">
                         <h2 class="titles-sessoes espacamento-title">Velas de Ignição</h2>
@@ -1043,7 +1031,7 @@
 
 
                     <!-- Bobinas -->
-                <div class="row espaco-card space-around-card" id="row-bobinas">
+                <div class="row espaco-card space-around-card" id="row-bobinasIgnicao">
 
                     <div class="col-12">
                         <h2 class="titles-sessoes espacamento-title">Bobinas de Ignição</h2>
@@ -1054,7 +1042,7 @@
 
 
                 <!-- modulos de ignicao -->
-                <div class="row espaco-card space-around-card" id="row-modolo-ignicao">
+                <div class="row espaco-card space-around-card" id="row-modulosIgnicao">
 
                     <div class="col-12">
                         <h2 class="titles-sessoes espacamento-title">Modulos de Ignição</h2>
@@ -1072,9 +1060,7 @@
         <!-- 9 -->
         <!-- sessao sistema de carga -->
         <div id="area-sistema-carga" class="sessao">
-            <div class="loading">
-                <div class="spinner"></div>
-            </div>
+            
             <div class="container container-carga">
 
 
@@ -1129,7 +1115,7 @@
 
 
                 <!-- tensores -->
-                <div class="row espaco-card space-around-card" id="row-tensores">
+                <div class="row espaco-card space-around-card" id="row-tensoresCorreia">
 
                     <div class="col-12">
                         <h2 class="titles-sessoes" style="margin-bottom: 50px;">Tensores das Correias</h2>
@@ -1140,7 +1126,7 @@
 
 
                 <!-- correia alternador -->
-                <div class="row espaco-card space-around-card" id="row-correia-alter">
+                <div class="row espaco-card space-around-card" id="row-correiaAlternador">
 
                     <div class="col-12">
                         <h2 class="titles-sessoes espacamento-title">Correias do Alternador</h2>
@@ -1152,7 +1138,7 @@
                         <button class="design-btn active">Todos</button>
                         <button class="design-btn">Fiat</button>
                         <button class="design-btn">GM</button>
-                        <button class="design-btn">Volskwagen</button>
+                        <button class="design-btn">Volkswagen</button>
                         <button class="design-btn">Ford</button>
                     </div>
 
@@ -1161,7 +1147,7 @@
 
 
                 <!-- correia dentada-->
-                <div class="row espaco-card space-around-card" id="row-correia-dent">
+                <div class="row espaco-card space-around-card" id="row-correiasDentada">
 
                     <div class="col-12">
                         <h2 class="titles-sessoes espacamento-title">Correias Dentada</h2>
@@ -1172,7 +1158,7 @@
 
 
                 <!-- Reguladores voltagem -->
-                <div class="row espaco-card space-around-card" id="row-reg-volt">
+                <div class="row espaco-card space-around-card" id="row-reguladorVolt">
 
                     <div class="col-12">
                         <h2 class="titles-sessoes espacamento-title">Reguladores Voltagem</h2>
@@ -1200,9 +1186,7 @@
         <!-- 10 -->
         <!-- sessao sistema de partida -->
         <div id="area-sistema-partida" class="sessao">
-            <div class="loading">
-                <div class="spinner"></div>
-            </div>
+            
             <div class="container container-partida">
 
                 <!-- parte do header  -->
@@ -1261,7 +1245,7 @@
 
 
                 <!-- Impulsores -->
-                <div class="row espaco-card space-around-card" id="row-impulsores">
+                <div class="row espaco-card space-around-card" id="row-bendix">
 
                     <div class="col-12">
                         <h2 class="titles-sessoes espacamento-title">Bendix Motor de Partida</h2>
@@ -1271,7 +1255,7 @@
 
 
                 <!-- porta escovas -->
-                <div class="row espaco-card space-around-card" id="row-porta-escova">
+                <div class="row espaco-card space-around-card" id="row-portaEscovas">
 
                     <div class="col-12">
                         <h2 class="titles-sessoes espacamento-title">Porta-Escova Motor de Partida</h2>
@@ -1282,7 +1266,7 @@
 
 
                 <!-- acessorios motor partida -->
-                <div class="row espaco-card space-around-card" id="row-acessorios-partida">
+                <div class="row espaco-card space-around-card" id="row-acessoriosMotorPart">
 
                     <div class="col-12">
                         <h2 class="titles-sessoes espacamento-title">Acessórios Motor Partida</h2>
@@ -1299,9 +1283,7 @@
         <!-- 11 -->
         <!-- sessao sistema arrefecimento -->
         <div id="area-arrefecimento" class="sessao">
-            <div class="loading">
-                <div class="spinner"></div>
-            </div>
+            
             <div class="container container-arrefe">
 
 
@@ -1361,7 +1343,7 @@
 
 
                 <!-- Bombas d'agua -->
-                <div class="row espaco-card space-around-card" id="row-bombas-dagua">
+                <div class="row espaco-card space-around-card" id="row-bombasDgua">
 
                     <div class="col-12">
                         <h2 class="titles-sessoes espacamento-title">Bombas D'Agua</h2>
@@ -1371,7 +1353,7 @@
 
 
                 <!-- reservatorios de agua -->
-                <div class="row espaco-card space-around-card" id="row-reservatorios">
+                <div class="row espaco-card space-around-card" id="row-reservatorioDagua">
 
                     <div class="col-12">
                         <h2 class="titles-sessoes espacamento-title">Reservatórios D'Agua</h2>
@@ -1381,7 +1363,7 @@
 
 
                 <!-- valvulas termostaticas -->
-                <div class="row espaco-card space-around-card" id="row-valvulas">
+                <div class="row espaco-card space-around-card" id="row-valvulasTermo">
 
                     <div class="col-12">
                         <h2 class="titles-sessoes espacamento-title">Válvulas Termostáticas</h2>
@@ -1391,7 +1373,7 @@
 
 
                 <!-- ventoinhas -->
-                <div class="row espaco-card space-around-card" id="row-ventoinha">
+                <div class="row espaco-card space-around-card" id="row-eletroventiladores">
 
                     <div class="col-12">
                         <h2 class="titles-sessoes espacamento-title">Ventoinhas</h2>
@@ -1402,7 +1384,7 @@
                 
 
                  <!-- canos d'agua -->
-                 <div class="row espaco-card space-around-card" id="row-canos">
+                 <div class="row espaco-card space-around-card" id="row-canosDagua">
 
                     <div class="col-12">
                         <h2 class="titles-sessoes espacamento-title">Canos D'Agua</h2>
@@ -1422,7 +1404,7 @@
 
 
                 <!-- tubos d'agua -->
-                <div class="row espaco-card space-around-card" id="row-tubos">
+                <div class="row espaco-card space-around-card" id="row-tubosDagua">
 
                     <div class="col-12">
                         <h2 class="titles-sessoes espacamento-title">Tubos D'Agua</h2>
@@ -1433,7 +1415,7 @@
 
 
                 <!-- resistencia -->
-                <div class="row espaco-card space-around-card" id="row-resistencia">
+                <div class="row espaco-card space-around-card" id="row-resistenciaEletro">
 
                     <div class="col-12">
                         <h2 class="titles-sessoes espacamento-title">Resistência Eletroventilador</h2>
@@ -1445,7 +1427,7 @@
 
 
                 <!-- acessorios arrefecimento -->
-                <div class="row espaco-card space-around-card" id="row-acessorios">
+                <div class="row espaco-card space-around-card" id="row-diversasArrefeci">
 
                     <div class="col-12">
                         <h2 class="titles-sessoes espacamento-title">Diversas</h2>
@@ -1464,9 +1446,7 @@
         <!-- 12 -->
         <!-- sessao sistema combustivel -->
         <div id="area-combustivel" class="sessao">
-            <div class="loading">
-                <div class="spinner"></div>
-            </div>
+            
             <div class="container container-combust">
             
 
@@ -1523,7 +1503,7 @@
 
 
                 <!-- bicos injetores -->
-                <div class="row espaco-card space-around-card" id="row-bicos">
+                <div class="row espaco-card space-around-card" id="row-bicosInjecao">
 
                     <div class="col-12">
                         <h2 class="titles-sessoes espacamento-title">Bicos de Injeção</h2>
@@ -1534,7 +1514,7 @@
 
 
                 <!-- bomba combustivel -->
-                <div class="row espaco-card space-around-card" id="row-bomba-combust">
+                <div class="row espaco-card space-around-card" id="row-bombaCombust">
 
                     <div class="col-12">
                         <h2 class="titles-sessoes espacamento-title">Bomba de Combustível</h2>
@@ -1545,7 +1525,7 @@
 
 
                 <!-- flange bomba -->
-                <div class="row espaco-card space-around-card" id="row-flange">
+                <div class="row espaco-card space-around-card" id="row-flangeBombaCombust">
 
                     <div class="col-12">
                         <h2 class="titles-sessoes espacamento-title">Flange Bomba Combustível</h2>
@@ -1556,7 +1536,7 @@
 
 
                 <!-- acessorios -->
-                <div class="row espaco-card space-around-card" id="row-acessocios-combust">
+                <div class="row espaco-card space-around-card" id="row-acessoriosCombust">
 
                     <div class="col-12">
                         <h2 class="titles-sessoes espacamento-title">Acessórios</h2>
@@ -1574,9 +1554,7 @@
         <!-- 13 -->
         <!-- sessao sistema transmissao -->
         <div id="area-transmissao" class="sessao">
-            <div class="loading">
-                <div class="spinner"></div>
-            </div>
+            
             <div class="container container-transmi">
 
 
@@ -1630,7 +1608,7 @@
 
 
                 <!-- discos embreagem -->
-                <div class="row espaco-card space-around-card" id="row-discos-embre">
+                <div class="row espaco-card space-around-card" id="row-discosEmbreagem">
 
                     <div class="col-12">
                         <h2 class="titles-sessoes espacamento-title">Discos de Embreagem</h2>
@@ -1641,7 +1619,7 @@
 
 
                 <!-- reparos -->
-                <div class="row espaco-card space-around-card" id="row-reparos-CeT">
+                <div class="row espaco-card space-around-card" id="row-reparoCambioTrabulador">
 
                     <div class="col-12">
                         <h2 class="titles-sessoes espacamento-title">Reparos Câmbio e Trabulador</h2>
@@ -1660,9 +1638,7 @@
         <!-- 14 -->
         <!-- sessao sistema rodagem -->
         <div id="area-rodagem" class="sessao">  
-            <div class="loading">
-                <div class="spinner"></div>
-            </div>
+            
             <div class="container container-rodagem">
 
 
@@ -1717,7 +1693,7 @@
 
 
                  <!-- cubos roda -->
-                 <div class="row espaco-card space-around-card" id="row-cubos">
+                 <div class="row espaco-card space-around-card" id="row-cubosRoda">
 
                     <div class="col-12">
                         <h2 class="titles-sessoes espacamento-title">Cubos de Roda</h2>
@@ -1729,7 +1705,7 @@
 
 
                 <!-- pontas eixo -->
-                <div class="row espaco-card space-around-card" id="row-pontas">
+                <div class="row espaco-card space-around-card" id="row-pontasEixo">
 
                     <div class="col-12">
                         <h2 class="titles-sessoes espacamento-title">Pontas do Eixo</h2>
@@ -1740,7 +1716,7 @@
 
 
                 <!-- juntas homocineticas -->
-                <div class="row espaco-card space-around-card" id="row-juntas">
+                <div class="row espaco-card space-around-card" id="row-juntasHomocinetica">
 
                     <div class="col-12">
                         <h2 class="titles-sessoes espacamento-title">Juntas Homocinética</h2>
@@ -1750,7 +1726,7 @@
 
 
                 <!-- rolamentos roda -->
-                <div class="row espaco-card space-around-card" id="row-rolamento-roda">
+                <div class="row espaco-card space-around-card" id="row-rolamentosRoda">
 
                     <div class="col-12">
                         <h2 class="titles-sessoes espacamento-title">Rolamentos da Roda</h2>
@@ -1761,7 +1737,7 @@
 
 
                 <!-- rolamentos diversos -->
-                <div class="row espaco-card space-around-card" id="row-rolamento-diversos">
+                <div class="row espaco-card space-around-card" id="row-rolamentoDiversos">
 
                     <div class="col-12">
                         <h2 class="titles-sessoes espacamento-title">Rolamentos Diversos</h2>
@@ -1779,9 +1755,7 @@
         <!-- 15 -->
         <!-- sessao escapamento -->
         <div id="area-escapamento" class="sessao">
-            <div class="loading">
-                <div class="spinner"></div>
-            </div>
+           
             <div class="container container-escapes">
 
 
@@ -1838,7 +1812,7 @@
 
 
                 <!-- bojos -->
-                <div class="row espaco-card space-around-card" id="row-bojos">
+                <div class="row espaco-card space-around-card" id="row-bojosTras">
 
                     <div class="col-12">
                         <h2 class="titles-sessoes espacamento-title">Bojos Traseiro</h2>
@@ -1849,7 +1823,7 @@
                         <button class="design-btn active">Todos</button>
                         <button class="design-btn">Fiat</button>
                         <button class="design-btn">GM</button>
-                        <button class="design-btn">Volskwagen</button>
+                        <button class="design-btn">Volkswagen</button>
                     </div>
 
 
@@ -1858,7 +1832,7 @@
 
 
                 <!-- intermediarios -->
-                <div class="row espaco-card space-around-card" id="row-inter">
+                <div class="row espaco-card space-around-card" id="row-canosIntermediario">
 
                     <div class="col-12">
                         <h2 class="titles-sessoes espacamento-title">Intermediarios</h2>
@@ -1869,7 +1843,7 @@
                         <button class="design-btn active">Todos</button>
                         <button class="design-btn">Fiat</button>
                         <button class="design-btn">GM</button>
-                        <button class="design-btn">Volskwagen</button>
+                        <button class="design-btn">Volkswagen</button>
                     </div>
 
                 </div>
@@ -1877,7 +1851,7 @@
 
 
                 <!-- coxins escapamentos -->
-                <div class="row espaco-card space-around-card" id="row-coxin-escap">
+                <div class="row espaco-card space-around-card" id="row-coxinsEscap">
 
                     <div class="col-12">
                         <h2 class="titles-sessoes espacamento-title">Coxins Escapamento</h2>
@@ -1889,7 +1863,7 @@
                         <button class="design-btn active">Todos</button>
                         <button class="design-btn">Fiat</button>
                         <button class="design-btn">GM</button>
-                        <button class="design-btn">Volskwagen</button>
+                        <button class="design-btn">Volkswagen</button>
                     </div>
 
                 </div>
@@ -1897,7 +1871,7 @@
 
 
                 <!-- acessorios -->
-                <div class="row espaco-card space-around-card" id="row-acessorios-escap">
+                <div class="row espaco-card space-around-card" id="row-acessoriosEscap">
 
                     <div class="col-12">
                         <h2 class="titles-sessoes espacamento-title">Acessórios</h2>
@@ -2339,4 +2313,5 @@
     
 
 </body>
+
 </html>
