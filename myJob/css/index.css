@@ -395,29 +395,32 @@ body{
 
 
 /* carousel */
-
-#img-carousel{
+.carousel-item{
+    position: relative;
     height: 75vh;
+}
+
+picture img{
+    width: 100%;
+    height: 100%;
 }
 
 
 .carousel-caption{
     display: flex;
     flex-direction: column;
-    height: 60%;
-    
+    justify-content: space-evenly;
+    align-items: center;   
+    padding: 0; 
 }
-.carousel-caption p{
-    font-size: 1rem;
-    font-weight: bold;
-}
+
+
 
 
 .carousel-caption a{
     max-width: 120px;
     width: 100%;
     height: 40px;
-    margin: 1rem auto;
     border: none;
     background-color: #234d8b;
     color: white;
@@ -444,13 +447,30 @@ body{
     color: white;
     text-shadow: 3px 3px 3px black;
     letter-spacing: 1px;
+    margin: 0;
+
 }
 .carousel-caption p{
     color: white;
     text-shadow: 3px 3px 3px black;
     letter-spacing: 1px;
+    font-size: 1rem;
+    font-weight: bold;
+    margin: 0;
 }
 
+
+
+
+#captions-moura{
+    position: absolute;
+    left: 15%;
+    top: 30%;
+
+    max-width: 400px;
+    width: 100%;
+    height: 200px;   
+}
 
 #captions-moura h5{
     color: #f9d003;
@@ -476,6 +496,17 @@ body{
 
 
 
+.secondSlideCaption{
+    height: 200px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 0;
+    margin-bottom: 8rem;
+    max-width: 450px;
+    width: 100%;
+}
 
 
 
@@ -642,15 +673,32 @@ body{
 
 
 /* media do banner moura */
-@media(min-width: 1100px){
+@media(max-width: 1100px){
+    .carousel-item{
+        position: relative;
+        height: 45vh;
+    }
+
     #captions-moura{
-        max-width: 350px;
+        max-width: 450px;
         width: 100%;
         height: 200px;
         position: absolute;
-        top: 30%;
-        left: 15%;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
     }
+
+    .secondSlideCaption{
+        height: 200px;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        padding: 0;
+        margin-bottom: 8rem;
+    }
+
 }
 
 /* DIMINUINDO OS BTNS APLICACAO E BUY PARA TABLET */
@@ -730,3 +778,36 @@ body{
 
 }
 
+@media screen and (max-width: 490px){
+    .carousel-item{
+        position: relative;
+        height: 50vh;
+    }
+
+    #captions-moura{
+        width: 300px;
+        height: 200px;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+
+    .secondSlideCaption{
+        width: 300px;
+        height: 200px;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        padding: 0;
+        margin-bottom: 8rem;
+    }
+}
+
+@media screen and (orientation: landscape) and (max-height: 480px){
+    .carousel-item{
+        position: relative;
+        height: 80vh;
+    }
+}

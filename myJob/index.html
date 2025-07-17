@@ -20,13 +20,12 @@
     <link rel="stylesheet" href="css/index02.css">
 
     <!-- js local  -->
-    <script src="js/index02.js" defer></script>
     <script src="js/index.js" defer></script>
     
 </head>
 
 <body>
-    <!-- header  -->
+    
     <header> 
         
         <div class="container-fluid p-0">
@@ -44,10 +43,7 @@
                         <i class="fa-solid fa-cart-shopping" id="cartShop"></i>
                         <span class="qtdPecas">0</span>
                     </div>
-                    <a href="#loginStruruteLink"><i class="fa-solid fa-user" id="loginBtn"></i></a>
-
-                    <a href="#area-form"><i class="fa-solid fa-user-pen" id="btnDevEdit"></i></a>
-                    <i class="fa-solid fa-right-from-bracket" id="btnLogOut" ></i>
+                    
                 </div>
                 
             </nav>
@@ -141,7 +137,17 @@
 
                     <!-- slide 01  -->
                     <div class="carousel-item active">
-                        <img src="photos/banners/bannerMoura02.jpg" alt="revisao" class="w-100" id="img-carousel">
+
+                        <picture>
+                            <source media="(max-width: 600px)" srcset="photos/banners/bannerMoura02_mobile.png" type="image/png">
+                            <source media="(max-width: 992px)" srcset="photos/banners/bannerMoura_tablet.png" type="image/png">
+
+                            <source srcset="photos/banners/bannerMoura02.jpg" type="image/jpg">
+
+                            <img src="photos/banners/bannerMoura02.jpg"  alt="revisao"  >
+                        </picture>
+
+
                         <div class="carousel-caption" id="captions-moura">
                             <h5>Precisando de uma Batéria Nova?!</h5>
                             <p>Temos as Melhores Marcas do Mercado pra você!</p>
@@ -153,8 +159,17 @@
 
                     <!-- slide 02 -->
                     <div class="carousel-item">
-                        <img src="photos/banners/banner-troca-oleo.jpg" alt="troca de oleo" class="w-100" id="img-carousel">
-                        <div class="carousel-caption">
+                        
+                        <picture>
+                            <source media="(max-width: 600px)" srcset="photos/banners/banner-troca-oleo_mobile.png" type="image/png">
+                            <source media="(max-width: 992px)" srcset="photos/banners/banner-troca-oleo_tablet.png" type="image/png">
+
+                            <source srcset="photos/banners/banner-troca-oleo.png" type="image/png">
+
+                            <img src="photos/banners/banner-troca-oleo.png" alt="">
+                        </picture>
+
+                        <div class="carousel-caption secondSlideCaption" >
                             <h5>Já fez sua troca de óleo?</h5>
                             <p>Confira os óleos lubrificantes e filtros disponiveis na nossa loja!</p>
                             <a href="#row-inicio-oleos" onclick="goToSection('inicial')" class="link-banner">Conferir</a>

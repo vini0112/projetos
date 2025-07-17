@@ -1,7 +1,6 @@
 
 // SECTION NAVIGATIONS
 let allSessoes = document.querySelectorAll('main .sessao')
-
 let currSectionId = 'inicial'
 
 
@@ -35,7 +34,6 @@ dropdownMenuLinks.addEventListener('click', function(event){
 
 
 
-
 // OFFCANVAS  
 document.addEventListener('DOMContentLoaded', () =>{
 
@@ -61,268 +59,546 @@ document.addEventListener('DOMContentLoaded', () =>{
 
 
 
+// PRODUCTS PART
+
+
+let body = document.querySelector('body')
+let loading = document.querySelector('.loading')
+let containerInicial = document.querySelector('.container_inicial')
+
+
+const listCards = []
+const apiTest = './allpeaces.json'
 
 
 
-
-// loggin page 
-let loginFormEntrar = document.querySelector('.login-form')
-let registerForm = document.querySelector('.register-form')
-
-let btnLoginEntrar = document.querySelector('.btnLoginEntrar')
-let btnLoginCadastrar = document.querySelector('.btnLoginCadastrar')
-
-btnLoginCadastrar.addEventListener('click', (e) =>{
-    e.preventDefault()
-    loginFormEntrar.style.display="none"
-    registerForm.style.display="block"
-})
-
-btnLoginEntrar.addEventListener('click', (e) =>{
-    e.preventDefault()
-    registerForm.style.display="none"
-    loginFormEntrar.style.display="block"
-})
-
-
-
-
-
-
-
-
-// DUMMY 
-
-
-// ENTRAR
-
-async function entrarValidation(formdata){
-
-    const users = '' // dummy only
-    const seJaExiste = users.some(user => user.username == formdata.nome && user.password == formdata.senha)
-
-    const devToken = 'dev_token_access'
-    const userToken = 'user_token_access'
-
-
-    let areaFormPage = document.querySelector('#area-form')
-    let areaLoginPage = document.querySelector('#area-login')
-    let loginBtn = document.querySelector('#loginBtn')
-    let btnDevEdit = document.querySelector('#btnDevEdit')
-    let btnLogOut = document.querySelector('#btnLogOut')
-
-    if(formdata.nome == 'vinicius' && formdata.senha == 'vini10'){
-        console.log('Welcome Vini')
-
-        areaLoginPage.style.display="none"
-        loginBtn.style.display="none"
-        areaFormPage.style.display="block"
-        btnDevEdit.style.display="block"
-        btnLogOut.style.display="block"
-
-        // setting token
-        localStorage.setItem('authDevToken', devToken)
-    }
-    else if(seJaExiste){
-        console.log('Login feito com Sucesso!')
-
-        let inicialPage = document.querySelector('#inicial')
-
-        loginBtn.style.display="none"
-        areaLoginPage.style.display="none"
-        btnLogOut.style.display="block"
-        inicialPage.style.display="block"
-
-        // setting token
-        localStorage.setItem('authUserToken', userToken)
-    }
-    else if(!seJaExiste){
-        alert('Email/Senha errado!')
-    }
-    
+async function getAllProducts(){
+    const resp = await fetch(apiTest)
+    const dado = await resp.json()
+    return dado
 }
 
 
-let btnEntrar = document.querySelector('.btnEntrar')
-btnEntrar.addEventListener('click', (e) =>{
-    e.preventDefault()
-    alert('Funcão não disponível!')
-    const formdata = {
-        nome: document.querySelector('.usernameInput').value.trim(),
-        senha: document.querySelector('.passwordInput').value.trim()
+publishingAllCards()
+
+async function publishingAllCards(){
+    const data = await getAllProducts()
+    
+    loading.style.display="flex"
+    containerInicial.style.display="none"
+
+    for(let category in data){
+        
+        const products = data[category]
+
+        for(let i = 0;i < products.length;i++){
+            const product = products[i]
+            listCards.push(product) // keeping track of all the products
+
+            // create cart elements
+            let card = document.createElement('div')
+            card.classList.add('col-md-3', 'card')
+            if(product.marca != ''){
+                card.classList.add(product.marca)
+            }
+            card.id = product.id;
+
+
+            if(product.qtd == 0){
+                card.classList.add('acabou')
+            }
+
+            if(product.linhaCode){
+                card.classList.add(product.linhaCode)
+            }
+            if(product.secundLineCode){
+                card.classList.add(product.secundLineCode)
+            }
+            if(product.thirdLineCode){
+                card.classList.add(product.thirdLineCode)
+            }
+
+
+            card.innerHTML = `
+            <img src="${product.image}" alt="" class="img-fluid">
+            <div class="card-body">
+                <h5 class="card-title">${product.nome} ${product.marca}</h5>
+                <p class="card-text" title="${card.id}">${product.info != undefined ? product.info : ''}</p>
+                <p class="card-text">${product.linha != undefined ? 'Linha '+product.linha : ''}</p>
+            </div>
+
+            <div class='card-footer'>
+
+                <button style="display: ${product.aplicacoes ? 'block' : 'none'}" type="button" class="padraoBtn" data-bs-toggle="modal" data-bs-target="${product.linkApli}"><span class="btnTxtAplicacoes">Aplicações</span></button>
+
+                <button class="btnBuyAlone">
+                    <span class="priceBuy">${product.price.toFixed(2).replace('.',',')}</span>
+                    <span class="txtBuy">Comprar</span>
+                </button>
+            </div>  `
+
+            if(product.aplicacoes){
+                generateDialogs(product)
+            }
+
+            const structure = document.getElementById('row-'+category)
+
+            if(category === 'oleos'){
+                const estruturaOleo = document.querySelector('#row-inicio-oleos')
+                const estrutura2Oleo = document.querySelector('#row-oleos')
+
+                let cardCloned = card.cloneNode(true)
+                
+                estruturaOleo.appendChild(card)
+                estrutura2Oleo.appendChild(cardCloned)
+            }
+            
+            else if(structure){
+                structure.appendChild(card)
+            }else{
+                console.warn(`Element with ID 'row-${category}' not found.`)
+            }
+            
+        }
     }
 
+    getAllFilterBtns()
 
-    // entrarValidation(formdata)
-
-    let nome = document.querySelector('.usernameInput')
-    let senha = document.querySelector('.passwordInput')
-    nome.value = ''
-    senha.value = ''
-
-})
+    loading.style.display="none"
+    containerInicial.style.display="block"
+    console.log('Data loaded!')
+}
 
 
 
-
-// CADASTRAR
-
-
-// FUNCAO DE POST creatingUser(formData)
-async function creatingUser(obj){
+// DIALOGS
+function generateDialogs(product){
     
-    try{
-        const response = await fetch(`${apiUrl}addingUser`, {
-            method: 'POST',
-            headers: {
-                'Content-Type': 'application/json',
-            },
-            body: JSON.stringify(obj)
+    let modalDialog = document.createElement('div')
+
+    modalDialog.innerHTML = `
+
+    <div class="modal fade thisModal" id="${product.aplicacoes[0].codeApli}" aria-hidden="true" aria-labelledby="modal-filtro-label" tabindex="-1" >
+        <div class="modal-dialog modal-dialog-scrollable">
+
+            <div class="modal-content" id="modal-content">
+
+                <div class="modal-header">
+                    <h2>Aplicações</h2>
+                    <button class="btn-close" type="button" data-bs-dismiss="modal" aria-label="close"></button>
+                </div>
+                <div class="modal-body">
+                    <h5 title="${product.id}">${product.info}</h5>   
+
+                    <ul id="lista-aplicacoes" class="ulListas id-${product.linkApli.replace(/[\/-]/g,'').replace('#', '')}">
+                        <li class="montadora">${product.aplicacoes[0].montadora}:</li>
+
+                    </ul>
+
+                </div>
+                <div class="modal-footer">
+                    <p><span class="carro">Marca:</span> <span class="marcas">${product.marca}</span></p>
+                    <p class="carro">C-${product.code}</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    `
+    body.append(modalDialog)
+
+    addCarAplications(product)
+}
+
+
+
+function addCarAplications(product){
+    
+    let uniqueClass = `id-${product.linkApli.replace(/[\/-]/g,'').replace('#', '')}`
+
+    let allModalBody = document.querySelector(`.modal-body .${uniqueClass}`)
+
+    
+    let cont = 0
+    
+
+    let aplicacao = product.aplicacoes[0].anoApli 
+    let aplicacoesTwo = product.aplicacoesTwo
+    let aplicacoesThree = product.aplicacoesThree
+
+
+    // adding carros 1
+    let carros = product.aplicacoes[0].carros
+    
+    carros.forEach(carro =>{
+
+        let liLista = document.createElement('li')
+        liLista.classList.add(`listCars`)
+
+        liLista.innerHTML = `<span class="carro">${carro}: </span>`
+        
+        allModalBody.appendChild(liLista)        
+    })
+
+
+    // ADDING APLICACOES 1
+
+    let allLis = document.querySelectorAll(`.modal-body .${uniqueClass} .listCars`)
+    
+    aplicacao.forEach(apli =>{
+        cont += 1
+
+        let spanLi = document.createElement('span')
+        spanLi.innerHTML = `${apli}`
+        allLis[cont - 1].append(spanLi)
+    })
+
+
+    // SE EXISTIER APLICACAO DOIS
+    if(aplicacoesTwo){
+
+        let montadoraTwo = aplicacoesTwo[0].montadora
+        let carrosTwo = aplicacoesTwo[0].carros
+        let anoApliTwo = aplicacoesTwo[0].anoApli
+
+    //   ADDING MONTADORA 2
+        let liMontTwo = document.createElement('li')
+        liMontTwo.classList.add(`montadora`)
+        liMontTwo.innerHTML = `
+        <li class="montadora">${montadoraTwo}:</li>
+        `
+        allModalBody.appendChild(liMontTwo)
+
+
+        // ADDING CARROS 2
+        carrosTwo.map(carroTwo =>{
+
+            let liListaTwo = document.createElement('li')
+            liListaTwo.classList.add(`listCars`)
+            liListaTwo.innerHTML = `
+            <span class="carro">${carroTwo}: </span>
+            `
+            allModalBody.appendChild(liListaTwo)
         })
 
-        if (response.ok) {
-            const data = response.json();
-            console.log('Resposta do servidor:', data);
-            alert('Usuario Criado com sucesso!');
-        } else {
-            console.error('Erro ao criar usuario:', response.statusText);
-            alert('Erro ao criar usuario!.');
+
+        // ADDING APLICAÇAO 2
+        let allLisTwo = document.querySelectorAll(`.modal-body .${uniqueClass} .listCars`)
+
+        anoApliTwo.forEach(apliTwo =>{
+
+            cont += 1
+            let spanLiTwo = document.createElement('span')
+            spanLiTwo.innerHTML = `${apliTwo}`
+            allLisTwo[cont - 1].append(spanLiTwo)
+        })
+
+    }
+
+
+    if(aplicacoesThree){
+    
+        let montadoraThree = aplicacoesThree[0].montadora
+        let carrosThree = aplicacoesThree[0].carros
+        let anoApliThree = aplicacoesThree[0].anoApli
+
+
+        //  ADDING MONTADORA 3
+        let liMontThree = document.createElement('li')
+        liMontThree.classList.add(`montadora`)
+        liMontThree.innerHTML = `
+            <li class="montadora">${montadoraThree}:</li>
+            `
+        allModalBody.appendChild(liMontThree)
+
+
+        // ADDING CARROS 3
+        carrosThree.map((carroThree) =>{
+
+            let liListaThree = document.createElement('li')
+            liListaThree.classList.add(`listCars`)
+            liListaThree.innerHTML = `
+            <span class="carro">${carroThree}: </span>
+                `
+            allModalBody.appendChild(liListaThree)
+        })
+
+
+        // ADDING APLICAÇAO 3
+        let allLisThree = document.querySelectorAll(`.modal-body .${uniqueClass} .listCars`)
+
+        anoApliThree.forEach((apliThree) =>{
+
+            cont += 1
+            let spanLiThree = document.createElement('span')
+            spanLiThree.innerHTML = `${apliThree}`
+            allLisThree[cont - 1].append(spanLiThree)
+        })
+
+    }
+
+
+}
+
+
+
+
+
+// FILTER BUTTONS
+let btnMobileWrap = document.querySelectorAll('.btn-mobile-wrap')
+
+function getAllFilterBtns(){
+    let res = []
+    
+    btnMobileWrap.forEach(parentEl =>{
+        res.push(document.querySelectorAll(`#${parentEl.id} button`))
+    }) 
+    return res
+}
+
+
+let nodeListArr = getAllFilterBtns()
+
+let allBtns = nodeListArr.flatMap(nodeList => Array.from(nodeList))
+
+allBtns.forEach((btn) => {
+    btn.addEventListener('click', (e) => {
+
+        e.preventDefault();
+        allBtns.forEach(b => b.classList.remove('active'));
+        btn.classList.add('active');
+
+        const btnText = btn.textContent.trim().toLowerCase()
+        
+        let currBlockId = btn.parentElement.parentElement.id
+        let allCards = document.querySelectorAll(`#${currBlockId} .card`)
+        
+
+        allCards.forEach(card =>{
+            card.classList.remove('fade-in-active', 'fade-out-active', 'positionAbsolute')
+
+            if(btnText === 'todos'){
+                card.classList.add('fade-in-active')
+            }else{
+
+                if(card.classList.contains(btnText) || btnText === 'volkswagen' && card.classList.contains('vws')){
+                    card.classList.add('fade-in-active')
+                }else {
+                    // No match — hide with animation
+                    card.classList.add('fade-out-active');
+                    setTimeout(() => {
+                        card.classList.add('positionAbsolute');
+                    }, 100); // fade-out animation
+                }
+            }
+
+        })
+    });
+});
+
+
+
+        
+
+
+
+
+
+
+
+// CART SHOPPING
+
+let carts = []
+let cartsPrice = [] // SEGUNDO CART ARRAY PARA USAR NA FUNCAO DE DENTRO DO CART
+
+
+
+let cartPart = document.querySelector('.boxCart')
+let closeShopping = document.querySelector('.closeShopping')
+
+
+
+// ativando e desativando cart shop list
+cartPart.addEventListener('click', () =>{
+    body.classList.toggle('activingCart')
+
+    // tirando o scroll y do mobile
+    if(window.innerWidth <= 480){
+        body.style.overflowY="hidden"
+    }
+
+})
+
+closeShopping.addEventListener('click', () =>{
+    body.classList.toggle('activingCart')
+    body.style.overflowY="scroll"
+
+})
+
+
+
+
+
+// INSIDE cart shopping
+let listaDoCart = document.querySelector('.listCart')
+let iconQtdPecas = document.querySelector('.qtdPecas')
+let valorCompra = document.querySelector('.valorCompra')
+
+
+// Capturando ID E PRICE dos produtos
+document.addEventListener('click', (event) =>{
+    let positionClicked = event.target
+
+    let seAcabouProduct = positionClicked.closest('.acabou')
+    let btnBuyAloneClicked = positionClicked.classList.contains('btnBuyAlone')
+    let btnBuyClicked = positionClicked.classList.contains('btnBuy')
+
+    if(btnBuyClicked && seAcabouProduct || btnBuyAloneClicked && seAcabouProduct){
+        // mostrar notifications toast
+        const toastBody = document.querySelector('#liveToast')
+
+        const toast = new bootstrap.Toast(toastBody, {
+            delay: 3000 // Tempo em milissegundos
+        });
+        toast.show()
+    }
+    else if(btnBuyAloneClicked || btnBuyClicked){
+
+        const product_id = positionClicked.closest('.card').id
+        const priceTxt = positionClicked.querySelector('.priceBuy').textContent.replace(',','.')
+
+        const priceFloatString = parseFloat(priceTxt).toFixed(2)
+        const priceNum = Number(priceFloatString)
+
+        addToCart(product_id, priceNum)
+    }
+})
+
+
+
+// definindo quantidade se ja existir ou nao
+function addToCart(product_id, priceNum){
+    let positionThisProductInCart = carts.findIndex((value) => value.product_id == product_id)
+
+    
+    if(carts.length <= 0){
+        carts = [
+            {
+                product_id: product_id,
+                quantity: 1,
+                price: priceNum
+            }
+        ]
+
+        cartsPrice = [
+            {
+                product_id: product_id,
+                quantity: 1,
+                price: priceNum
+            }
+        ]
+        
+        // console.log(cartsPrice)
+    }else if(positionThisProductInCart < 0){
+        carts.push(
+            {
+                product_id: product_id,
+                quantity: 1,
+                price: priceNum
+            }
+        )
+
+        cartsPrice.push(
+            {
+                product_id: product_id,
+                quantity: 1,
+                price: priceNum
+            }
+        )
+        // console.log(cartsPrice)
+
+    }else{
+        carts[positionThisProductInCart].quantity = carts[positionThisProductInCart].quantity + 1
+        carts[positionThisProductInCart].price = carts[positionThisProductInCart].quantity * priceNum
+
+        // CART PRICE
+        cartsPrice[positionThisProductInCart].quantity = cartsPrice[positionThisProductInCart].quantity + 1
+
+    }
+
+    
+    addToCartHtml()
+}
+
+// adding structure html inside the cart
+function addToCartHtml(){
+    listaDoCart.innerHTML = ''
+    let totalQtd = 0
+    let totalPrice = 0
+
+    
+    carts.forEach((card, key) => {
+
+        totalQtd += card.quantity
+        totalPrice += card.price
+        
+        
+        let positionProduct = listCards.findIndex((value) => value.id == card.product_id)
+        let info = listCards[positionProduct]
+        // console.log(info)
+
+
+        if(carts.length > 0){
+
+            let liCart = document.createElement('li')
+            liCart.dataset.id = card.product_id
+
+            liCart.innerHTML = `
+                <img src="${info.image}" alt="" class="imgOfCart"> <span>${info.nome} ${info.info}</span> <div class="itemQtd"> <button onclick="changeQtd(${key}, ${card.quantity + 1})"><i class="fa-solid fa-plus"></i></button> <span class="cartQtdNum">${card.quantity}</span> <button class="minus" onclick="changeQtd(${key}, ${card.quantity - 1})"><i class="fa-solid fa-minus"></i></button></div>
+
+            `
+            listaDoCart.appendChild(liCart)
+
         }
 
-    } catch (error) {
-        console.error('Erro na requisição:', error);
-        alert('Erro ao enviar o formulário.');
-    }
-
-
-}
-
-async function cadastroValidation(formdata){
-
-    const users = await gettingUsers()
+    })
     
-    const seExiste = users.some(usuario => usuario.email === formdata.email)
 
-    if(seExiste){
-        alert('Email já cadastrado!')
-        return false
-    }
-
-
-    
-    creatingUser(formdata)
-    return true
+    iconQtdPecas.innerHTML = totalQtd
+    valorCompra.innerHTML = totalPrice.toFixed(2).replace('.',',')
 }
 
 
-let btnCadastrar = document.querySelector('.btnCadastrar')
-btnCadastrar.addEventListener('click', (e) =>{
-    e.preventDefault()
-    const formdata = {
-        username: document.querySelector('.userNameCad').value.trim(),
-        email: document.querySelector('.emailCad').value.trim(),
-        password: document.querySelector('.passwordCad').value.trim()
-    }    
-    alert('Funcão não disponível!')
+// somando e deletando de acordo com os btns
+// UTILIZANDO O CART PRICE AQUI
+function changeQtd(key, quantity){
 
 
-    const regexEmail = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-    if(formdata.username == ''){
-        alert('Preencha o nome!')
-        return false
-    }
-
-    if(formdata.username.length < 4){
-        alert('Username precisa ter mais de 3 caracteres!')
-        return false
-    }
-    
-    if (!regexEmail.test(formdata.email)){
-        alert('Digite um email válido!')
-        return false
-    }
-
-    if(formdata.password.length < 4){
-        alert('Senha precisa ter mais de 3 caracteres!')
-        return false
-    }
-
-    // cadastroValidation(formdata)
-
-    let userNameCad = document.querySelector('.userNameCad')
-    let emailCad = document.querySelector('.emailCad')
-    let passwordCad = document.querySelector('.passwordCad')
-
-    userNameCad.value = ''
-    emailCad.value = ''
-    passwordCad.value = ''
-    userNameCad.focus()
-    
-})
-
-
-
-
-// LOG OUT
-let btnLogOut = document.querySelector('#btnLogOut')
-
-btnLogOut.addEventListener('click', () =>{
-    const devToken = localStorage.getItem("authDevToken");
-    const userToken = localStorage.getItem('authUserToken')
-
-    let loginBtn = document.querySelector('#loginBtn')
-    let btnDevEdit = document.querySelector('#btnDevEdit')
-
-    if(devToken){
-        localStorage.removeItem('authDevToken')
-        console.log('DEV LOGGED OUT!')
-
-        btnLogOut.style.display="none"
-        btnDevEdit.style.display="none"
-        loginBtn.style.display="block"
-
-    }else if(userToken){
-        localStorage.removeItem('authUserToken')
-        console.log('USER LOGGED OUT!')
-
-        btnLogOut.style.display="none"
-        loginBtn.style.display="block"
-    }
-})
-
-
-// verificando se ainda esta logado ou nao dps do load
-window.addEventListener('load', () =>{
-    const devToken = localStorage.getItem("authDevToken");
-    const userToken = localStorage.getItem('authUserToken')
-
-    let loginBtn = document.querySelector('#loginBtn')
-    let btnLogOut = document.querySelector('#btnLogOut')
-    let btnDevEdit = document.querySelector('#btnDevEdit')
-
-    if(devToken){
-        console.log("Desenvolvedor ainda está logado!");
+    if(quantity == 0){
+        carts.splice(key, 1)
+    }else{
         
-        loginBtn.style.display="none"
-        btnDevEdit.style.display="block"
-        btnLogOut.style.display="block"
-
-    } else if(userToken){
-        console.log("Usuario ainda está logado!");
-
-        loginBtn.style.display="none"
-        btnLogOut.style.display="block"
-
+        carts[key].quantity = quantity
+        carts[key].price = quantity * cartsPrice[key].price
     }
-    else {
-        console.log("Usuário não está logado.");
-    }
+
+    addToCartHtml()
+}
+
+
+// se clicado no btn finalizar dentro do cart listCards[id - 1].price
+let btnTotal = document.querySelector('.total')
+
+btnTotal.addEventListener('click', () =>{
+
+    const toastBody2 = document.querySelector('#liveToast2')
+
+    const toast2 = new bootstrap.Toast(toastBody2, {
+        delay: 3000 // Tempo em milissegundos
+    });
+
+    toast2.show()
 })
-
-    
-
-
-
 
 
 
