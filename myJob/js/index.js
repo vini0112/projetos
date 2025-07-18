@@ -118,24 +118,11 @@ async function publishingAllCards(){
                 card.classList.add(product.thirdLineCode)
             }
 
+            
 
-            card.innerHTML = `
-            <img src="${product.image}" alt="" class="img-fluid">
-            <div class="card-body">
-                <h5 class="card-title">${product.nome} ${product.marca}</h5>
-                <p class="card-text" title="${card.id}">${product.info != undefined ? product.info : ''}</p>
-                <p class="card-text">${product.linha != undefined ? 'Linha '+product.linha : ''}</p>
-            </div>
+            createHTMLCard(card, product)
 
-            <div class='card-footer'>
 
-                <button style="display: ${product.aplicacoes ? 'block' : 'none'}" type="button" class="padraoBtn" data-bs-toggle="modal" data-bs-target="${product.linkApli}"><span class="btnTxtAplicacoes">Aplicações</span></button>
-
-                <button class="btnBuyAlone">
-                    <span class="priceBuy">${product.price.toFixed(2).replace('.',',')}</span>
-                    <span class="txtBuy">Comprar</span>
-                </button>
-            </div>  `
 
             if(product.aplicacoes){
                 generateDialogs(product)
@@ -168,6 +155,31 @@ async function publishingAllCards(){
     containerInicial.style.display="block"
     console.log('Data loaded!')
 }
+
+function createHTMLCard(card, product){
+
+    return card.innerHTML = `
+            <img src="${product.image}" alt="" class="img-fluid">
+            <div class="card-body">
+                <h5 class="card-title">${product.nome} ${product.marca}</h5>
+                <p class="card-text" title="${card.id}">${product.info != undefined ? product.info : ''}</p>
+                <p class="card-text">${product.linha != undefined ? 'Linha '+product.linha : ''}</p>
+            </div>
+
+            <div class='card-footer'>
+
+                <button style="display: ${product.aplicacoes ? 'block' : 'none'}" type="button" class="padraoBtn" data-bs-toggle="modal" data-bs-target="${product.linkApli}"><span class="btnTxtAplicacoes">Aplicações</span></button>
+
+                <button class="btnBuyAlone">
+                    <span class="priceBuy">${product.price.toFixed(2).replace('.',',')}</span>
+                    <span class="txtBuy">Comprar</span>
+                </button>
+            </div> `
+}
+
+
+
+
 
 
 
@@ -211,25 +223,20 @@ function generateDialogs(product){
 }
 
 
-
 function addCarAplications(product){
     
     let uniqueClass = `id-${product.linkApli.replace(/[\/-]/g,'').replace('#', '')}`
-
     let allModalBody = document.querySelector(`.modal-body .${uniqueClass}`)
-
-    
     let cont = 0
-    
 
-    let aplicacao = product.aplicacoes[0].anoApli 
     let aplicacoesTwo = product.aplicacoesTwo
     let aplicacoesThree = product.aplicacoesThree
 
-
-    // adding carros 1
     let carros = product.aplicacoes[0].carros
+    let anoApliOne = product.aplicacoes[0].anoApli
     
+
+    // adding cars
     carros.forEach(carro =>{
 
         let liLista = document.createElement('li')
@@ -240,12 +247,9 @@ function addCarAplications(product){
         allModalBody.appendChild(liLista)        
     })
 
-
-    // ADDING APLICACOES 1
-
     let allLis = document.querySelectorAll(`.modal-body .${uniqueClass} .listCars`)
-    
-    aplicacao.forEach(apli =>{
+    // adding applications
+    anoApliOne.forEach(apli =>{ 
         cont += 1
 
         let spanLi = document.createElement('span')
@@ -254,45 +258,14 @@ function addCarAplications(product){
     })
 
 
-    // SE EXISTIER APLICACAO DOIS
+    
     if(aplicacoesTwo){
 
         let montadoraTwo = aplicacoesTwo[0].montadora
         let carrosTwo = aplicacoesTwo[0].carros
         let anoApliTwo = aplicacoesTwo[0].anoApli
 
-    //   ADDING MONTADORA 2
-        let liMontTwo = document.createElement('li')
-        liMontTwo.classList.add(`montadora`)
-        liMontTwo.innerHTML = `
-        <li class="montadora">${montadoraTwo}:</li>
-        `
-        allModalBody.appendChild(liMontTwo)
-
-
-        // ADDING CARROS 2
-        carrosTwo.map(carroTwo =>{
-
-            let liListaTwo = document.createElement('li')
-            liListaTwo.classList.add(`listCars`)
-            liListaTwo.innerHTML = `
-            <span class="carro">${carroTwo}: </span>
-            `
-            allModalBody.appendChild(liListaTwo)
-        })
-
-
-        // ADDING APLICAÇAO 2
-        let allLisTwo = document.querySelectorAll(`.modal-body .${uniqueClass} .listCars`)
-
-        anoApliTwo.forEach(apliTwo =>{
-
-            cont += 1
-            let spanLiTwo = document.createElement('span')
-            spanLiTwo.innerHTML = `${apliTwo}`
-            allLisTwo[cont - 1].append(spanLiTwo)
-        })
-
+        addingCarsAndAppliences(montadoraTwo, carrosTwo, anoApliTwo, uniqueClass, allModalBody, cont)
     }
 
 
@@ -302,41 +275,47 @@ function addCarAplications(product){
         let carrosThree = aplicacoesThree[0].carros
         let anoApliThree = aplicacoesThree[0].anoApli
 
-
-        //  ADDING MONTADORA 3
-        let liMontThree = document.createElement('li')
-        liMontThree.classList.add(`montadora`)
-        liMontThree.innerHTML = `
-            <li class="montadora">${montadoraThree}:</li>
-            `
-        allModalBody.appendChild(liMontThree)
-
-
-        // ADDING CARROS 3
-        carrosThree.map((carroThree) =>{
-
-            let liListaThree = document.createElement('li')
-            liListaThree.classList.add(`listCars`)
-            liListaThree.innerHTML = `
-            <span class="carro">${carroThree}: </span>
-                `
-            allModalBody.appendChild(liListaThree)
-        })
-
-
-        // ADDING APLICAÇAO 3
-        let allLisThree = document.querySelectorAll(`.modal-body .${uniqueClass} .listCars`)
-
-        anoApliThree.forEach((apliThree) =>{
-
-            cont += 1
-            let spanLiThree = document.createElement('span')
-            spanLiThree.innerHTML = `${apliThree}`
-            allLisThree[cont - 1].append(spanLiThree)
-        })
+        addingCarsAndAppliences(montadoraThree, carrosThree, anoApliThree, uniqueClass, allModalBody, cont)
 
     }
 
+
+}
+
+
+function addingCarsAndAppliences(montadora, carros, anoApli, uniqueClass, allModalBody, cont){
+
+    //   ADDING MONTADORA 
+        let liMontadora = document.createElement('li')
+        liMontadora.classList.add(`montadora`)
+        liMontadora.innerHTML = `
+        <li class="montadora">${montadora}:</li>
+        `
+        allModalBody.appendChild(liMontadora)
+
+
+        // ADDING CARs
+        carros.map(carro =>{
+
+            let liListCars = document.createElement('li')
+            liListCars.classList.add(`listCars`)
+            liListCars.innerHTML = `
+            <span class="carro">${carro}: </span>
+            `
+            allModalBody.appendChild(liListCars)
+        })
+
+
+        // ADDING APLICATIONS
+        let allListApli = document.querySelectorAll(`.modal-body .${uniqueClass} .listCars`)
+
+        anoApli.forEach(apli =>{
+
+            cont += 1
+            let spanLine = document.createElement('span')
+            spanLine.innerHTML = `${apli}`
+            allListApli[cont - 1].append(spanLine)
+        })
 
 }
 
