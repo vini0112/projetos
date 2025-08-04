@@ -139,8 +139,6 @@ body{
     padding: 25px 0px;
     display: flex;
     justify-content: space-between;
-    
-
 }
 
 
@@ -246,7 +244,6 @@ body{
     scrollbar-width: none;
 }
 .listCart::-webkit-scrollbar {
-    
     display: none; /*Chrome, Safari e Edge */
 }
 
@@ -536,8 +533,6 @@ picture img{
     border: none;
     padding: 0.2rem 1rem;
     background-color: var(--btnApli);
-    border-top-left-radius: 5px;
-    border-bottom-left-radius: 5px;
     width: 100%;
 }
 .padraoBtn:hover{
@@ -570,7 +565,6 @@ picture img{
     color: white;
     font-weight: bold;
     font-size: 1rem;
-    border-radius: 5px;
     background-color: var(--btnApli);
 
     display: flex;
